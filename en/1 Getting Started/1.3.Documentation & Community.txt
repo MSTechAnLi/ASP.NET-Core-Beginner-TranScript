@@ -1,0 +1,155 @@
+So we looked at how to build our very first console application.
+And one of the great things about the .NET community is
+about the documentation that we have right now.
+>> There's a lot of great docs and I know it's silly sometimes
+to talk about how great the docs are.
+But really the docs are very, very good.
+If you go to docs.microsoft.com we can click on .NET, or
+you can go /.NET, there's a ton of documentation here.
+There's the .NET Core Guide, which will have tutorials, it'll
+talk about ASP.NET Core that we're gonna talk about as well.
+And it's worth pointing out the difference between the .NET
+Core Guide and then the language guides.
+>> Yep and then you'll see there are different language guides.
+We have VB, we have C#, we have F#.
+>> Right, so
+these are the guides that will give you understanding of
+the syntax of the language.
+>> Yep.
+>> And how to call the methods, and
+then the .NET core framework itself.
+And all of those methods are available from C#,
+F# and in Visual Basic.
+>> And it's really important for
+people to actually learn the language a little bit more,
+before they start looking at the platform itself.
+>> Absolutely, absolutely.
+And we did a hello world, I installed the .NET core SDK.
+>> And I ran it from the command line, and
+then I opened it up in Visual Studio code.
+Do I have to install that stuff to say hello world?
+>> No you don't anymore,
+we actually have something right in the documentation.
+If you go over to Quick Starts under C#.
+So C#,
+Quick Starts, it will drop you right into the Quick Start page.
+And this shows you from the hello world experience,
+how to get started with numbers in C#, declaring variables.
+It shows you some really fun examples that you can start
+playing around to it, so if you, >> I've got
+a .NET editor here in my browser.
+>> Yeah.
+I'll go and copy Console.WriteLine over here.
+>> Yep, or you can just click on the Copy as well.
+>> Okay, click on Copy, hit Run.
+And now it's running in the cloud, and
+it brought the result over here.
+So the .NET SDK is not installed on my machine.
+>> No. >> It's happening right here.
+>> Exactly and you can go in, and edit that and maybe.
+>> Mm-hm so I can make changes to this kind of code.
+I can do whatever I want and
+then the output will appear down here.
+>> Absolutely.
+>> And I can mess with,
+look at this I can do all kinds of fancy stuffs.
+So if I bring in really complicated code and
+mess with strings.
+>> Yeah. >> And do that, and
+follow through with some online challenges.
+>> So it's actually designed as a complete challenge,
+that's supposed to take 20 minutes at the very most.
+Step by steps,
+gives you examples of what needs to be done.
+The editor that's working in the browser right now is in preview.
+So if people see any bugs, we're really excited for
+you guys to give us any feedback then.
+>> Sure and then you can report those on the GitHub repository.
+>> Yeah. >> And speaking of GitHub,
+in fact all of .NET is open source so
+it's important to remember that it is all on GitHub.
+So if you go to github.com/dotnet,
+you'll come here to .NET foundation and
+it is within there that all the source code is there.
+Now as a beginner you might not necessarily care about that
+source code, but it's just nice to now it's there.
+Yeah, and they also do have samples within most of
+the repos, so they can start playing around.
+>> Actually that is a good point.
+It's all there, you can go and look at the, coreclr and
+the docs themselves are also open-source.
+>> Yes they are, so if you see any typos, if you see any
+options as you'd like to look at, you could do that.
+So if you click on the edit over there.
+>> So I'm here on, for example, getting started with .NET Core.
+>> Yeah. >> And you said click on Edit,
+where do I end up at?
+Well I end up at GitHub.
+>> Yep.
+>> So I can be a contributor to open source
+by even fixing a spelling error.
+Or changing a bit of code that may be incorrect.
+>> Exactly. >> All right.
+All of this is under the .NET Foundation GitHub.
+And you can also check out the .NET Foundation at
+www.dotnetfoundation.org.
+There you are.
+>> There I am. >> You just flew by there.
+So the .NET Foundation is a non-profit, an independent
+non-profit, that tries to support the .NET ecosystem.
+All right?
+There's lots of open source projects that are within it.
+You can set up a local Meetup or find a local Meetup near you.
+We've got Meetups all over the world.
+>> Wow.
+Literally all over the world.
+>> We really do, actually.
+And There's one on every continent and
+you also have a show.
+>> Yep. >> Called code conversation.
+>> Yeah, the weird thing about code conversations, is it's five
+to ten minute videos, that we seat down with engineers or
+people working in different open source projects.
+And they tell us a little bit of how to get started on
+that project.
+>> Mm-hm.
+So you can check that out, that's on YouTube and
+also on Channel 9, which is our TV channel.
+And again I wanna encourage people to check
+out the meet ups.
+There's about 1200 different meet ups locally,
+user groups they're not locally, rather world wide.
+You can learn open source, you can sit and find friends to
+code with, you can pair up, you can do all kinds of things.
+And if there is no one nearby you,
+you could even potentially Skype people.
+>> That's actually a good idea.
+A Skype meet up.
+>> I do that all of the time.
+I have lots of different opportunities where I sit with
+people and learn code, and pair, but what we do remotely.
+>> And you can do that with Skype interviews as well?
+>> That's true, all right.
+So just a reminder, you can go to docs.microsoft.com, check out
+the Quick Starts to run your C# programs in the browser.
+Also a great way to maybe introduce your young people or
+new programmers to coding in C#.
+And then if you start at either GitHub or the .NET Foundation,
+you can jump off to all of these different locations.
+And then one other thing worth pointing out,
+As I just saw it fly by, was a .NET Conf.
+>> [CROSSTALK] Yep,
+there is a lot of great content that came out of .NET Conf.
+>> Mm-hm.
+This was a conference in 2017.
+And you can go and check out the sessions for
+.NET Conf up here at dotnetconf.net.
+There were 45 different sessions.
+About 45 hours of content
+that you can learn some of the more advanced techniques.
+>> Yeah. >> So
+when you're done here at Microsoft Virtual Academy,
+you can maybe dig into that more advanced stuff.
+>> Exactly. >> All right,
+take a quick break, we'll come back and make a web application.
+>> Yes we will.
