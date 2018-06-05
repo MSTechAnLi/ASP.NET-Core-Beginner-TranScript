@@ -1,0 +1,918 @@
+﻿So let's build our first app Scott do you trust me?
+所以让我们构建我们的第一个程序，Scott你信任我吗?
+>> I do trust you.
+> >当然了
+>> Okay. >> All right so
+> >好吧。> >好了，那么
+I've installed the .Net Core SDK, I just downloaded this and
+我安装. net core SDK,我只需要下载它，还有
+I went through the installer.
+我已经安装好了程序。
+>> So you've done this so
+> >你也需要做
+it's one of these things, we did it in the past.
+的这些东西,我们已经做过了。
+>> But how do I know it worked?
+> >但我怎么知道它工作吗?
+>> Okay so go over on to your command line,
+> >好的,打开你的命令行,
+>> Okay.
+> >好
+>> And type dotnet-version.
+> > 输入dotnet -version
+You already did it.
+哦~你已经做了呀。
+>> Well I just typed dotnet by itself.
+> >我刚才直接输入了dotnet
+>> So it actually shows that it exists.
+> >这说明dotnet已经生效了
+Otherwise you would have got some error.
+否则是会报错的
+>> That's a good point.
+> >这是一个很好的开始
+And actually I can type where dotnet, and it'll tell me not
+事实上我可以输入 where dotnet,它会告诉我
+only that it exists- >> Where it is.
+dotnet 被安装到哪里了
+>> But where it is on the disc.
+> >但是只有磁盘的位置
+You see it's in program files.
+你看到它在编程文件里。
+>> Okay.
+>> Okay.
+>> Okay? >> So
+>> Okay? >> 那么
+let's make sure that you're using the right version.
+让我们确保您使用了正确的版本。
+So we're on 2.0.
+是2.0的版本
+So dotnet-version.
+输入 dotnet --version
+>> Okay.
+>> Okay.
+>> Okay. >> And I got 202.
+>> Okay. >> 我们会得到2.0.2
+You'll get 2.0.something.
+你会得到2.0.X的版本
+>> Yeah.
+>> Yeah.
+>> And this is a patch version.
+> >这是一个补丁版本。
+It's like a.
+就像一个。
+>> Like some minor changes have happened.
+> >像是会在新版本中发布一些小的变化
+>> Mm-hm. >> But 2.0 is what matters.
+> >嗯嗯。> >但2.0这部分是不会变的。
+>> Okay.
+>> Okay.
+>> Okay, so I've done that, what else can I do?
+> >好的,我们已经知道了,我还能做什么?
+>> So let's, some people are comfortable,
+> >有些人会想知道
+let's do a dotnet help because it's always good for
+当我们运行 dotnet help时，因为这对于
+people to know that there's a place where they can go and
+想要知道在某些地方可能会发生什么问题的的人
+see what's happening.
+是很有帮助的
+So if you type dotnet help, let's just see what happens.
+所以如果你输入dotnet help，让我们看看会发生什么。
+>> Right, so I can type dotnet-- help, and
+> >对,所以我可以输入dotnet——help,
+any of these commands have help.
+所有的这些命令都是帮助提示
+There's help through the whole time.
+通过整个过程的帮助。
+There's help through the whole time.
+>> Everything.
+通过整个过程的帮助。
+>> 每件事
+So it tells you, if you want to do something new,
+它能告诉你,如果你想做一些新的事情,
+restore packages, run them.
+新建一个工程，运行它
+This is a good rundown of everything you need to know,
+这是一个很好的有所有你需要知道的所有内容的说明书
+that you can use with a .NET command.
+您可以使用.NET命令
+>> Now a lot of this might not be familiar.
+> >现在有很多部分可能还没有完善
+Some of it might be confusing.
+其中一些可能会让人困惑。
+But we're gonna focus kind of on basics and
+但我们要关注基础知识
+I think that making stuff and running stuff and
+我觉得我们开始的时候可能只会需要
+building stuff is probably where we'll start for this.
+编写、运行或者编译
+>> That's where we would be right now.
+> >这就是我们目前要做的
+>> That's where we would be right now.
+>> For this module.
+> >这就是我们目前要做的
+> >这个模块里
+>> For this module.
+> >这个模块里
+>> That's where we'll be right now.
+>> For this module.
+> >这就是我们目前要做的
+> >这个模块里
+>> That's where we'll be right now.
+> >这就是我们目前要做的
+>> Okay. >> One of the cool things
+> >好吧。> >一个很酷的东西
+especially with dot.net 2.0 is the number of the templates that
+尤其是现在dotnet 2.0在命令行中
+have come out of the box in the command line.
+的环境下有着数量可观的模板
+>> Okay, what is a template?
+> >好的,模板是什么?
+>> So a template is, I think of it as a starting ground.
+> >模板,我认为它就像一个开始的环境
+Something that gives you a form or
+给你一个形式的东西
+structure that helps you write your code eventually.
+结构,最终帮助你编写代码。
+So for those of you who are out there and
+所以,这有点像类似于
+you've used PowerPoint and PowerPoint
+你使用PowerPoint幻灯片
+has different templates that gives you styles and guidelines.
+有不同的模板,让你的风格和指导方针。
+Think about this as your PowerPoint for your code.
+想想吧，作为代码的幻灯片。
+>> Okay, so I've got, console apps, and web apps, and
+> >好的,所以我们有控制台应用程序,和web应用程序
+test apps, and all different flavors.
+测试应用程序,很多不同的类型。
+>> Different kinds of actions we will actually have a look at.
+> >不同的各种方式,我们会看一看。
+So should we go and see what kind of apps they give us?
+所以我们应该去看看dotnet能带给我们什么样的程序?
+>> All right, let's do it.
+> >好的,让我们看看
+>> So let's have a look at dotnet new.
+> >让我们看看dotnet new
+That's what I always type.
+这是我们常用的类型。
+>> Dotnet new, all right, I get a nice table.
+> > Dotnet new,好的,我得到一个看起来很赞的列表。
+And actually some stuff scroll by.
+事实上有些东西是滚动的
+So these are options for dotnet new and it's worth pointing out
+这些也是dotnet new的选项
+that we've got help again which is actually help for new and
+注意，我们再次看到help，而这与刚才的help不同
+this is little interesting thing to point out very briefly,
+这是一个很有趣的事情，简单地说
+when I type dotnet --help, I get top level help.
+当我键入dotnet help时，我会得到最高级别的帮助
+When I type dotnet new --help I get help for new.
+当我输入dotnet new --help时，我会得到关于new命令的帮助。
+>> That is actually the first time.
+> >这实际上是第一次。
+I've done this all the time but I've never noticed that.
+我所做的这一切,但我从来没有注意到。
+>> Isn't that great?
+> >那不是很好吗?
+Well, what's also interest is if I type dotnet new something,
+哇，有趣的是如果我输入dotnet new
+I can get the help for that template.
+我能得到的帮助模板。
+>> Could you run that, and we could see?
+> >你能运行嘛,我们可以看一下?
+So this is the console application template.
+这是一个控制台应用程序模板。
+And here's help options specifically for the console.
+这是专门为控制台提供帮助的选项。
+And why this is useful is, let's say that I go and
+为什么可以这样用呢,假设我去
+get a third party template,
+获取一个第三方的模板,
+I get a template from somewhere else, That template might have
+我从别的地方得到一个模板,这个模板
+a lot complicated options and switches of its own.
+自己的很多复杂的选择和开关。
+So dotnet --help is top level.
+那么 dotnet --help 是全局的help.
+Dotnet new --help is help for new.
+Dotnet new --help 是new命令的help
+And then if I put --help for a specific template name,
+然后如果我来 --help特定的模板名称,
+I'm gonna get a help for that.
+我会得到对此模板的帮助。
+It's pretty cool.
+这很酷呢
+>> That is pretty cool.
+> >这是很酷。
+>> That is pretty cool.
+>> All right.
+> >这是很酷。
+>> 好的
+>> I have literary found that out during this recording.
+>> All right.
+> >我发现这跟文学记录很相似呢
+>> 好的
+>> I have literary found that out during this recording.
+> >我发现这跟文学记录很相似呢
+>> I have literary found that out during this recording.
+>> See and
+> >我发现这跟文学记录很相似呢
+>> 观察一下
+I'm gonna learn from you and you're gonna learn from me.
+>> See and
+我要向你学习，你也向我学习
+>> 观察一下
+I'm gonna learn from you and you're gonna learn from me.
+我要向你学习，你也向我学习
+We're gonna have a great time.
+我们会有一段美好的时光
+So I just went back to what you told me dotnet new.
+所以我回到你告诉我的Dotnet new
+I see a list of templates, I see a list of short names.
+我看到一个模板列表，和名字简写的列表
+>> Names, and you also see a different,
+> >好多名字,还可以看到不同的
+languages as well that are supported.
+支持的语言。
+>> Mm-hm, and in this case, C# is in brackets,
+> >嗯嗯,在这种情况下,c#也在支持的语言中,
+that's indicating that it is the default.
+这说明它是被“钦定”的。
+But we can also do F#, which is a great functional language, or
+但是我们也可以使用f#,这是一个优雅的函数式编程语言
+VB, which is a good language for beginners to try out, okay?
+或者VB,这对初学者来说是一个很好的语言尝试,对吧?
+All right so, lets make one, you wanna make a folder then?
+好,让我们创建一个,你想要创建一个文件夹吗？
+>> Yeah, yes, so lets make a folder.
+> >是啊,是的,我们先创建一个文件夹。
+>> Myconsoleapp.
+> > Myconsoleapp。
+All right.
+好吧。
+So I have an empty folder here.
+我这里有一个空的文件夹。
+>> Exactly.
+> >确切地说
+And cuz we're gonna build a contact, dotnet new console.
+因为我们要建立一个联系dotnet的新控制台。
+>> Dotnet new console.
+>> Dotnet new console.
+And a console app is one that just kinda in text mode here.
+和一个控制台应用程序,只是文本模式。
+>> Exactly.
+>> 没错
+So let's have a look at what happen when you type
+当输入完，让我们看看会发生什么
+dotnet new console over there.
+dotnet new console 完成
+>> So it says the template was created.
+> >模板已经创建成功了。
+>> Successfully.
+> >成功。
+>> And then it ran dotnet restore for me.
+> >然后运行了 dotnet restore
+So in the past,
+我在刚刚的时候
+after I typed dotnet new I used to have to say restore.
+输入了dotnet new ，我不得不需要恢复一些东西
+What is it restoring?
+恢复的是什么?
+>> So, it's
+> >那么,它是
+restoring some of the packages which we'll have a look at.
+恢复的是一些包,我们将来看一下
+What comes in there.
+里面是什么
+>> And the packages are those libraries,
+> >这些库里的包文件
+those dependencies, the things that it needs.
+这些依赖关系,它所需要的东西。
+>> To actually be a console app.
+> >是一个控制台应用程序。
+>> And then it generated a file, and
+> >然后生成了一个文件
+told me that it took a certain numbers of millisecond.
+还告诉了我,用了多长时间去进行。
+So we got a Program.cs, and we got a csproj, or C# project.
+所以我们有一个Program.cs文件，还有一个cs proj,或c#项目。
+>> And the C# project is that's where all our packages are?
+> > c#项目里面有我们需要的包
+>> That's where our references to those packages are,
+> >这些就是我们引用包,
+so let's go and just look at that.
+所以让我们来看看
+I'm just gonna say Type.
+我只是想说Type。
+>> Okay. >> And
+>> Okay
+output that cuz this is a very small file.
+因为这是一个非常小的文件的输出。
+>> It's really small.
+> >真小。
+>> It says that it's using the .NET.Sdk,
+> >它显示，Microsoft.NET.SDK
+the software development kit.
+软件开发工具包。
+It's an executable and it's a .NET2 app and
+这是一个可执行的.NET 2.0 app
+it doesn't have any dependencies beyond the basics.
+它没有任何超越基础的依赖
+It does have some dependencies.
+它有一些依赖项。
+For outputting to the console, and things like that, but for
+输出到控制台之类的,但是
+the most part, it includes the .Sdk,
+大多数情况下,它包括SDK
+and we have no additional references.
+我们没有额外的引用。
+>> Okay. >> Okay.
+>> Okay. >> Okay.
+So, how do I do something with this,
+所以,接下来我们该怎么做,
+like what does it actually do let's see it with the code?
+我们能够看到他的代码吗？
+like what does it actually do let's see it with the code?
+>> Yeah, so let's run it, okay.
+我们能够看到他的代码吗？
+> >是啊,让我们来运行它。
+>> Yeah, so let's run it, okay.
+> >是啊,让我们来运行它。
+>> Here's the code, Hello World.
+>> Yeah, so let's run it, okay.
+> >这是代码,Hello World。
+> >是啊,让我们来运行它。
+>> Here's the code, Hello World.
+> >这是代码,Hello World。
+Pretty straight forward.
+很直接。
+So do a quick run.
+做一个快速运行。
+Is that okay? Yeah, that sounds good.
+是,好吗?是的,听起来不错。
+>> Alright, now there's a moment here.
+> >好的,现在在这里需要一点时间
+One one thousand, two one thousand, three.
+一秒，两秒，三···
+Do you know what I was doing?
+你知道我在干了什么吗?
+Why did it take 3 seconds to say 'hello world'?
+为什么需要3秒说“hello world”?
+>> This is the first time you're running the application.
+> >这是第一次你运行应用程序。
+>> It's got to build it >> Yes.
+> >需要时间去编译> >是的。
+>> I've been doing this at the command line.
+> >我这样在命令行做
+We don't want to spend a lot of time with the command line.
+我们不想花很多时间在命令行上
+>> No.
+>> No.
+So shall we look at it at code?
+所以我们要看代码?
+>> So we'll use Visual Studio Code.
+> >我们将使用Visual Studio Code
+It's worth pointing out if I zoom in down here,
+值得说明的是如果我下面放大
+that I've got both Visual Studio 2017 which is a Windows IDE.
+可以看到我有一个Windows IDE：Visual Studio 2017
+And I've got Visual Studio Code which is across platform IDE.
+以及我有 新的跨平台IDE Visual Studio Code
+If you're on a Mac it's a text editor, it's a code editor.
+如果你在Mac上它是一个文本编辑器 也是一个代码编辑器。
+>> Yeah. >> It's a little bit less stuff
+> >是啊。> >它有很少的组成部分
+but it's very light weight and
+和很轻的量级
+it's crossed platforms so we use that.
+他可以跨平台，因此我们使用它
+Now I'm gonna type code., and dot is the current folder.
+现在我要输入code. 在文件夹的路径下
+>> And, it's actually built in now, right, correct?
+> >,它会在这编译,对的？
+>> Yeah, I'll show you actually.
+> >是啊,我现在将向你展示。
+We'll go ahead and run that.
+我们将继续运行。
+And then there's a command inside of Visual Studio Code
+然后在Visual Studio Code中调用命令
+that adds it to the path.
+将其添加到路径。
+So it's something that you wanna do after you've run code
+这就是运行代码后将要做的事情
+the first time.
+这已经不是第一次了。
+So we'll go ahead and run that.
+我们会继续运行。
+Okay, Visual Studio code opens that up, and then this is
+Okay, Visual Studio code打开了，接下来
+interesting Visual Studio code pops up a warning here, hey,
+有趣的是 Visual Studio Code会弹出一个警告,嘿,
+stuff I need to build this is missing,
+我需要获取一些没有的东西
+do you want me to add them?
+你想让我获取他们吗?
+And then it's got a yes and no over here.
+然后它有一个“是”和“不是”。
+So watch on the left side here where it says bin and obj.
+看一下左边这一列 出现了bin和obj文件夹
+I'm gonna hit yes, but you're gonna watch here on the left.
+点击是的,但是你要看着左边一点呀。
+>> There it is.
+> >在这里。
+>> See?
+>> 看到了吗?
+So, this is just some stuff that .vscode created for itself.
+所以,这只些东西.vscode是IDE为自己创建的。
+It's not about C#, just about .vscode.
+这不是关于c#,只是对于.vscode。
+In order to be able to launch this app,
+为了能够启动这个程序,
+these are just configuration files.
+这些只是配置文件。
+So you don't need to worry about those.
+所以你不需要担心这些。
+But that is something that you want to say yes to.
+但关于这些你可能想说
+>> So if someone's doing this for
+> >如果有人这样做了
+the first time, say yes, but don't touch?
+在第一次的时候,问你yse的时候,如果不要碰的话?
+>> Don't touch, don't worry about it.
+> >不要碰,别担心。
+Nothing you need to do in there.
+你需要做的。
+And then you had mentioned about the path.
+你要记得你的项目路径
+If you hit Ctrl+P.
+如果你摁 Ctrl+P.
+I think it's Cmd+P or fancy macintosh button p
+我觉得如果用的Mac可能是需要摁Cmd+P
+>> [LAUGH] It is Cmd+P.
+>> [LAUGH] 就是 Cmd+P.
+>> Cmd+P, is that what it's called?
+> > Cmd + P,确实是这个吗?
+>> Cmd+P, is that what it's called?
+>> Yeah.
+> > Cmd + P,确实是这个吗?
+>> Yeah.
+>> There's a bunch of actions, so that brings up this palette.
+> >有很多快捷键,能够唤出这个提示盘
+I just think P for pallet, and
+我只是记得P可以唤出来
+then if you say what is this here?
+然后，该怎么说呢?
+The greater than symbol.
+这是一个非常好的标志
+>> Yeah. >> I think it's called,
+> >是啊。> >我觉得要输入
+is it add path?
+添加路径吗?
+Where is it?
+在哪里?
+There's a bunch of commands in here and
+在这里,有很多命令
+one of them adds code to the path.
+其中一个将代码添加到路径。
+Maybe it's happening automatically now, but
+现在也许是自动发生的,但
+I did that once.
+我这样做一次。
+You can see also here that there's other options like your
+在这里你也可以看到其他喜欢你的选择
+color theme and the default shell and things like that.
+颜色主题和默认的shell之类的东西。
+>> Yeah, and the VS code website has really good documentation
+> >是啊,VSCode网站有很多好的文档
+about all the little bitty internals that are happening
+关于在编辑器中的很多
+on the editor.
+细碎的内容说明
+>> Yeah, it's incredibly easy to edit, to modify,
+> >是啊,会让它非常容易编辑、修改,
+to change the colors, the behavior.
+改变颜色,行为。
+So yeah, feel free to explore.
+所以,随意探索。
+That's beyond the scope of what we're gonna do.
+这就超出了我们要宣讲的范围了
+I'm just gonna double-click, though, on Program.cs,
+不过,我要双击Program.cs,
+and I'll zoom in a little bit.
+我要放大一点。
+And we've got our application right here.
+我们还有我们的应用程序在这呢！
+>> And I think it's always good for
+> >我觉得大家可能对
+people to play around with the Console.WriteLine.
+Console.WriteLine很熟悉哈
+Put your name in it.
+把你的名字协写上
+Run it again.
+再运行一下
+Remove the semicolon and see what kind of errors you get.
+先删除分号，看看到你得到什么样的错误。
+It's a really good way to get comfortable with the language.
+这真是一个熟悉语言的好方法。
+>> Now I can make a change, hit Ctrl+S.
+> >现在我可以做出改变,点击Ctrl + S。
+I could Alt+Tab back over to here, type dotnet run again.
+我可以Alt + Tab切回到这里来,再次输入 dotnet run
+It will build, there's that pause.
+它将编译,停了下来
+Then it runs, says Hello Scott.
+然后它运行,你好斯科特说。
+Then I could Alt+Tab back over here, but
+然后我可以Alt + Tab回来这里,但是
+that can get a little tedious.
+可能大家都知道了
+>> Yeah, so is there something in Visual Studio Code that
+> >是啊,所以在Visual Studio Code里可以
+people can use now?
+直接执行运行吗?
+>> Remember when I was over here,
+> >请记住我在这里的时候,
+one of the options was Terminal: Select Default Shell.
+其中一个选项是终端:选择默认的Shell。
+>> Yeah.
+>> Yeah.
+>> I can hit Ctrl and I think it's called the tilde.
+> >摁着Ctrl，我觉得这叫做波浪号吧。
+>> Yeah, you mean the squiggly thing?
+> >啊，你是说弯弯曲曲的东西?
+>> The squiggly thing. >> Yeah, it's a tilde.
+> >就是你说的这个> >是啊,这是一个波浪号。
+>> [LAUGH] >> I always called it
+> > > >[haha]我总是叫它
+the squiggly thing until I saw it in a documentation.
+弯弯曲曲地的东西,直到我在一个文档看到它。
+>> I think our Spanish friends would not call it that.
+> >我认为我们的西班牙朋友不会这么称呼它。
+But yes- >> [LAUGH]
+但，还真是！- > >[笑]
+>> The character that goes over
+>> 性格太直爽了
+the top of the enye.
+在顶部
+>> Yeah. >> So, you hit Ctrl+~ and
+>> Yeah. >>那么 摁着 Ctrl+~
+you can, of course- >> Select your shell.
+当然你可以- > >选择您的shell。
+>> Select that your own way, you can pick your own shell.
+> >选择你自己的方式,你可以选择你自己的shell。
+I am using PowerShell in this case.
+在这种情况下我用PowerShell
+Now I'm actually in a little command line prompt within
+现在我会用一些命令行提示符来
+Visual Studio Code itself.
+表示Visual Studio Code 自身.
+So now, rather than having to go and say, Alt+Tab, and
+所以现在,不必再去Alt + Tab
+then do that, I can do it all from here, okay?
+这样做,我能做的一切都从这里开始,好吗?
+So there's my Hello Scott right there, okay?
+所以让我们“你好斯科特”,okey?
+That's one way to do it,
+这是一种操作的方法,
+but still I'd like to do some interactive debugging.
+但是我想做一些交互式的调试。
+I'd like to do something a little bit more sophisticated
+来做一些更复杂的
+than that, wouldn't I?
+那么, 我们能做些什么呢?
+>> Yeah.
+>> Yeah.
+>> So I'm just gonna move the mouse over in the left hand,
+> >我要移动鼠标到左边
+you see this red dot.
+你看到这个红点。
+>> Yeah, that's a breakpoint.
+> >是,这是一个断点。
+>> Yeah, and I click on it and make a break point right here.
+> >是啊,我点击它,来打断他。
+And then I'm gonna go and click on the little bug.
+然后我要去点击Debug。
+>> Well, that's pretty intuitive actually.
+> >嗯,很直观。
+>> I think so because there's going to be bugs,
+> >我是这样感觉的,因为会有错误,
+I know that for a fact.
+这是一个事实。
+>> [LAUGH] >> Now this text right here,
+[笑]> > > >在这个文本框这
+this .NET Core launch,
+选择 .NET Core launch,
+the way that it knows to do that is because I said yes earlier.
+它知道我们要干什么，因为我们已经配置了
+>> To the launch.
+>> 选择了 launch.
+>> If I didn't say yes, I would not be able to do the debugging.
+> >如果我不答应,我将无法进行调试。
+Okay, and Visual Studio Code can do other languages as well,
+好,Visual Studio Code可以使用其他语言,
+like Node and Python and things like that.
+像Node和Python之类
+So that file will be different depending on what
+文件的不同这取决于
+language you're using.
+你使用的语言。
+All right, so I'll hit Start Debugging.
+好的,我会开始调试。
+And then it's gonna go and build it.
+然后它会去编译它。
+And it's thinking, and it's thinking, and there you go.
+运行中，运行中，然后他就会跑起来啦
+So now we have stopped the application
+现在我们的应用程序在显示
+before we said Hello World.
+Hello World之前就会停掉
+It's just sitting right here, and
+程序会直接停在这里
+I can hover over different variables.
+我可以看到不同的变量。
+I can see if there's any local variables.
+我可以看到如果有任何局部变量。
+Actually, we can do this real quick.
+我们就可以很方便的查看。
+Let's hit Stop.
+让我们停一下
+We'll say var i = "Maria", var j = 9.
+让我们写上 var i = "Maria", var j = 9.
+Hit Debug again.
+再次点击调试。
+See?
+看到了吗?
+>> Yeah. >> And
+>> Yeah
+then we've got debugging, can look at our call stack and
+我们在调试中可以看到我们的调用堆栈
+it's a whole interactive experience.
+这提供了一个完整的互动体验。
+>> It's pretty rich.
+> >很丰富
+>> It is pretty rich, okay,
+>> 确实是很丰富的, okay,
+given that it is a cross platform code editor,
+考虑到这是一个跨平台的代码编辑器,
+it's pretty fantastic.
+这是非常神奇的
+And it's also worth pointing out not just the squigglies
+说明一下哈，这不仅能给我们
+that it's giving us, if we look here.
+提示,如果我们看这里
+There's some warnings like is it saying, well, you used i but
+比如它会提示有一些错误,你使用一个变量
+you never did anything with it?
+但是你却从没用它作过什么？
+But also sometimes you can get, what's the word,
+但有时这种事也时可以被允许,这个变量的属性
+what is this here, what's that called?
+这是什么,应该怎么命名?
+>> The light bulb.
+> >灯泡提示
+>> The light bulb.
+>> 灯泡提示
+So I can go and say, I wanna extract that method or
+所以我可以去说,我想获取方法或
+remove that variable, right?
+删除该变量,对吧?
+So you can do little refactorings.
+所以你可以进行小的重构。
+It's going and saying, well, this is really use for nothing.
+它会说,嗯,这确实是没有使用。
+There's no reason for that line to be there.
+这条线没有理由存在。
+And I can click on this and it will fix it.
+我可以点击,它会解决它。
+And in this case, it will fix it by removing you entirely.
+在这种情况下,它将通过删除这个变量解决它。
+>> [LAUGH] >> Sorry.
+>> [LAUGH] >> Sorry.
+>> That sounded rather intentional.
+> >听起来,而有意为之。
+>> That was not intentional.
+> >那不是故意的。
+>> [LAUGH] >> All right, so
+[笑]> > > >好的,
+Visual Studio Code will be what we'll use for a little while and
+我们将使用一会儿Visual Studio Code
+then we'll eventually graduate to Visual Studio proper.
+然后 我们会适当的结束Visual Studio这部分。
+>> Yeah. >> Which has even more
+> >是啊。> >还有更多的
+features, all right?
+特性呢,对吧?
+So that gives you a sense of, and actually, I'm sorry.
+所以给你的感觉上,欸~,我很抱歉。
+We never talked about IntelliSense.
+我们还没有谈论智能感知呢
+>> Yes so, let's add a read line, cuz one of the first
+> >是的,让我们添加一个行,因为第一行
+things that you do is input and output, right?
+你做的是输入和输出,对吧?
+>> Uh-huh, so WriteLine is our output.
+> >嗯,所以WriteLine是我们的输出。
+>> Yeah. >> I'll start typing Console and
+> >是啊。> >我们们需要打上Console
+you'll notice that it's- >> Some, yeah, Console.
+你会发现它能够出现 - > >Console。
+>> It's giving me IntelliSense.
+> >给我们智能感知。
+>> Not only that, it's also for beginners.
+> >不仅如此,它能够帮助初学者
+It's great to see, it also shows you what that means.
+显示语句是什么意思。
+>> Yeah, you're getting like a little bit of
+> >是啊,这有点看起来像是
+documentation there, that's right.
+文档,对吧
+It will say Console., see this is nice.
+它会打出Console。,看到这个。
+And you said Read line, and this is coming out of the docs here
+你说读一行,这是这里的文档
+and it will tell you the things that could go wrong.
+它会告诉你程序可能出错。
+ReadLine, reads the next characters from the input
+从输入ReadLine,读取下一个字符
+stream.
+下一个字符流
+Yeah, and notice the squiggly, expected a,
+是的,注意这里
+semicolon, go like that, cool, and
+分号,就像这样,很酷
+then I'll do this from the command line over here.
+然后我会从命令行这样做
+I'll say dotnet run.
+让dotnet 跑起来
+One 1,000, two 1,000, three, and
+一秒,两秒,3,
+now it's paused right cuz it's waiting for me to read the line.
+现在停了下来因为它在等我输入。
+>> And it did.
+> >,它做了
+>> Okay, so you've got IntelliSense,
+> >好的,所以你有智能感知功能,
+you've got debugging.
+你有调试功能。
+All of that, of course, being driven by this here.
+所有的这些，当然,是在这里使用的。
+And just very briefly,
+而且非常简单
+cuz it's nice to see some of the internals.
+看到一些内部的操作是很友好的。
+When we clicked here, remember that this text here,
+当我们点击这里,记住这个文本,
+.NET Core Launch, comes out of this config file right here.
+.NET Core Launch出现的这个配置文件
+>> Right, the reason I'm showing you that is it's important to
+> >真的，我给你展示这个的原因是很重要的
+know that there's no magic.
+要明白这并不是魔术。
+We are not hiding anything from you, all right?
+我们没有对你隐藏任何东西,对吧?
+You might not necessarily ever wanna change that, but
+你未必被这些东西感冒啦,但是
+it's nice to know that the thing that drives
+明白一些关于这些的事是很好的
+the drives the debugger underneath is just a text file.
+像这个调试器的运作只是依据一个文本文件。
+And here it's going to go and run our program.
+这里会运行我们的程序。
+When we say dotnet run, our program is really here,
+当我们执行 dotnet run,我们的程序会在这里准备好
+myconsoleapp.dll.
+myconsoleapp.dll.
+And it's gonna go and call that.
+它会去调用。
+And then if we wanna go and
+如果我们想要
+attach to the debugger, there's also the ability to run the app.
+获得调试,还有运行应用程序的能力。
+And then after the fact, attach to it and
+就需要连接到它
+then debug it once it's already running.
+一旦完成，就可以运行调试
+All of that is possible with Visual Studio Code.
+这一切在Visual Studio Code都是可能的
+>> I think it's also worth showing the audience where
+> >我认为值得向观众展示的地方
+to go and
+就是
+read more about what's happening with Visual Studio Code.
+了解有关Visual Studio Code更多的事情。
+>> So Visual Studio Code is up at code.visualstudio.com.
+> >Visual Studio Code可以在code.visualstudio.com中访问
+And this is a really rich marketplace as well for
+这里有一个非常丰富的插件
+extensions.
+扩展商店
+There's lots of stuff.
+有很多东西。
+So you can Visual Studio for C# like we are, or
+我们可以为c#和Visual Studio,或
+Python or C++ or Go or a million different things, and
+Python或c++或Go或不同的语言,还有
+their docs are really lovely.
+他们的文档也是很丰富的
+There's lots of different things you can learn about.
+有很多不同的东西可以学习。
+You can change styles, you can change behavior.
+你可以改变风格,改变行为。
+You can integrate it with your source control like Git or DSTS.
+你可以把它与你的Git或DSTS这种源代码控制相互结合
+>> You can create your own extensions as well?
+> >您可以创建您自己的扩展吗?
+>> Yep, there's a whole section here,
+> >当然,这里是一个整体部分
+exactly, on extension authoring.
+没错,可以自己开发拓展插件
+>> I think my favorite extension would have to be
+> >我想我最喜欢的扩展需要
+the Slides Extension.
+Slides的扩展。
+Have you seen that one?
+你见过那个吗?
+>> Slides? I like the one with
+> >Slides?我喜欢的一个
+the funky icons.
+时髦的图标。
+>> [LAUGH] >> This one here gives you fun
+> >[笑]> >这能给你一个
+icons for all of your- >> I think they've moved some of
+有趣的图标- > >我认为他们已经移走了一些
+those experiences into actual Visual Studio now.
+这些体验现在融入了Visual Studio。
+>> Some of these
+> >这些所有
+extensions end up becoming a part of Visual Studio itself.
+最终扩展成为一个Visual Studio本身的一部分。
+So what's the one you like, slides?
+所以你觉得怎么样,Slides?
+>> Yeah, so, you can actually write your PowerPoint slides.
+> >是啊,所以,你可以写下你的Slides。
+>> Where'd it go?
+> >哪里去了?
+>> I don't know.
+> >我不知道。
+>> Uh-oh.
+>> Uh-oh.
+The one I like is Git Lens, G-I-T-L-E-N-S.
+我喜欢的是Git Lens,G-I-T-L-E-N-S。
+So that's weird.
+好奇怪呀。
+Maybe their search isn't working today.
+今天的搜索这是不工作了嘛？
+It's actually Git Lens, with a space in between.
+其实Git Lens在中间啦
+So Git Lens is a great one that lets you have
+Git Lens 非常非常好用的的！
+annotations of who changed your code and when.
+让你知道什么时候，谁改动了你的代码
+>> Okay. So
+>> Okay. 那么
+similar to how you can do it in Visual Studio where you can
+类似于如何在VisualStudio中这样做
+actually look at everyone.
+在那里你可以真正地观察每个人
+>> Yeah, like blame, if you wanna see whose fault it was.
+> >是的，就像责备一样，如果你想知道是谁的错
+So here you can see that it was Eric's fault two days ago, and
+。所以两天前你可以看到这是埃里克的错
+he made a change from this to this.
+他改变了这一点
+>> Yeah, I've seen your name on a couple of those, too.
+> >是啊,我也看到你的名字了
+I'm kidding.
+我在开玩笑。
+I have not.
+我没有。
+The one I was talking about was reveal.
+我刚才说的那个是显示的
+>> Reveal?
+> >显示?
+>> So if anyone sort of revealed JS, it enables you to actually
+> >如果任何人透露JS,实际上它让你
+have a slide experience in the browser, so.
+在浏览器中会有一个slide的记录。
+>> Yeah, so you've got the ability to edit, markdown,
+> >是啊,所以你有编辑,获取拓展插件
+do all kinds of things.
+做各种事的能力
+>> Exactly.
+> >是的
+>> So really can't recommend VS Code enough.
+> >并不是有理由 必须要用VS Code
+But if you're just getting started like we are today,
+但是如果你今天像我们一样刚刚开始
+Visual Studio Code is gonna be your best bet for
+Visual Studio Code将是你
+your editing and your debugging experience.
+编辑和调试体验的最佳选择
+>> And it is.
+> >是的
+>> All right. >> All right.
+> >好吧。> >好吧。
+>> We'll take a short break and we'll be right back.
+> >我们将一个短暂的休息,我们马上就回来。
