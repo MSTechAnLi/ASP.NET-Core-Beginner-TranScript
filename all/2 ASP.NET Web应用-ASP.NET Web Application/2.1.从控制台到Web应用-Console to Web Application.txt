@@ -1,0 +1,668 @@
+Hey, friends!
+嘿，朋友们！
+All right, so we have made a console app.
+总之，我们制作了一个控制台应用程序。
+>> Yep.
+>> 嗯。
+>> We have explored the documentation.
+>> 我们已经探索了文档。
+We've installed the .NET Core SDK and Visual Studio Code.
+我们已经安装了.NET Core SDK和Visual Studio Code。
+>> Yes.
+>> 是的。
+>> All right, next, let's make a Web Application.
+>> 好的，接下来，让我们来制作一个Web应用。
+>> Exactly.
+>> 没错。
+>> All right, so if we look at my screen here,
+>> 好的，让我们在这里看向我的屏幕，
+we have the folder that I have my console app.
+我们有我的控制台应用的文件夹。
+>> And so let's so we have to create a brand new folder.
+>> 所以我们必须创建一个全新的文件夹。
+>> All right. >> Yeah.
+>> 对的。 >> 嗯。
+>> I just wanna point out that
+>> 我只想指出
+all that did was a WriteLine, and it output it to the console,
+它所做的只是一个WriteLine，并将其输出到控制台，
+not particularly impressive, there's no web browser here.
+不是特别令人印象深刻，这里也没有用到浏览器。
+There's just, Hello Scott.
+这只是，Hello Scott。
+>> Yeah, we need to,
+>> 嗯，我们需要，
+when you're learning about a Web Framework, you want to do
+当你正在学习Web框架时，你想
+something on the web. >> Absolutely,
+通过Web做一些事 >> 当然，
+[CROSSTALK] >> So let's do it.
+[CROSSTALK] >> 所以让我们来做吧。
+>> I just wanna juxtapose
+>> 我只是想要对比
+the difference between the two, so let's take a look at that,
+两者的区别，让我们来看看那个，
+all right? >> Yeah.
+好吗？ >> 好的。
+>> So what do you want me to do?
+>> 那么你想让我做什么？
+>> So can I teach you
+>> 所以我可以教你
+a new trick? >> Let's do it.
+一个新的技巧？ >> 让我们来试试吧。
+>> That you can create
+>> 你可以在同时创建
+your web application and
+你的web应用和
+a directory at the same time? >> Are you sure?
+一个目录吗？ >> 你确定吗？
+>> I can do it.
+>> 我可以做到。
+>> Cuz I like making directories.
+>> 因为我喜欢创建目录。
+>> I know, I know, but
+>> 我知道，但
+like try something new. >> All right, all right.
+（你应当）喜欢尝试新的东西。 >> 好的吧。
+>> Try something
+>> 尝试一下
+new, okay. >> I'll try.
+新的，行嘛。 >> 我会尝试的。
+>> So dotnet new web -o.
+>> dotnet new -o。
+>> -o.
+>> -o。
+>> Yeah.
+>> 是的。
+And let's call it mywebapp.
+让我们把它称为mywebapp。
+So we, in the previous video,
+所以我们在之前的视频中
+we looked at the different .NET templates that are available.
+我们查看了可用的各类.N​​ET模板。
+Web is just one of
+Web只是其中的一个
+the templates. So we looked at console,
+模板。让我们看一下控制台，
+and now we're looking at web, just for people who might
+现在我们正在看着web，为了那些可能
+be tuning in now. >> Okay.
+现在还在调整的人。 >> 好的。
+>> So hit Enter.
+>> 敲下Enter键。
+>> So it says,
+>> 所以它说，
+the template core empty, been created successfully, and it put
+模板ASP.NET Core Empty，已成功创建，并放在了
+in a folder called mywebapp. So I like to go and
+名为mywebapp的文件夹中。我喜欢
+make the directory, and then go into the directory, and you're
+先创建目录，然后进入目录，但你
+saying I can go -o, it'll make the folder and name the thing,
+说我可以使用-o，它会同时创建文件夹，
+all at the same time >> At the same time.
+和同名项目 >> 是的，在同一时间。
+And if you think about it,
+但你考虑一下，
+if somebody's following this outside of Windows,
+如果有人在Windows之外使用这种方法，
+the way they created directory there might be a different.
+他们创建目录的方式可能会有所不同。
+>> That is a valid point,
+>> 这是一个有效的观点，（误）
+you're right cuz I said, md and they might say, mkdir
+你是对的，因为我说，md，他们可能会说，mkdir
+>> Yeah.
+>> 是的。
+>> And that's a good point.
+>> 说得好。
+>> All right, and
+>> 好的，
+when I did that, just as you said, we did a .NET new web.
+当我这样做时，就像你说的，我们完成了一个新的.NET网站。
+>> Yeah.
+>> 嗯。
+>> Which is this one,
+>> 这是哪一个，
+this is an empty one. Anyway,
+这是一个空的。尽管，
+there's different web options that we'll explore later.
+那有不同的网页选项，我们稍后会探讨。
+But right now we made
+但现在我们做了
+the simplest possible web application.
+最简单的Web应用程序。
+>> Exactly, just like the step,
+>> 确切的说，就像这一步，
+just above
+就在控制台
+a console right at the line. >> Okay.
+的上面一行。 >> 好的。
+>> Just right above it.
+>> 就在它的上方。
+>> We can go into,
+>> 我们可以进入，
+let's go into the mywebapp, and
+让我们进入mywebapp，然后
+I see a csproj which makes sense, I see a Program.cs,
+我看到一个csproj，这是合理的，我看到一个Program.cs，
+which I had before. >> But
+这我之前就见过。 >> 但是
+this is something different. >> I see a Startup.cs and
+这些是不同的。 >> 我看到一个Startup.cs和
+a wwwroot. Now,
+一个wwwroot。现在，
+we could poke around here at the command line, but you showed me
+我们可以在命令行中试一下，但是若能看到
+that VS code is better. >> It's pretty good.
+VS Code就更好。 >> 很好。
+>> It is better, so
+>> 完美，这样
+let's go into there.
+让我们进入那（目录）。
+Now, this is interesting, by the way, I tagged code dot,
+现在，这就很有趣，顺便说一下，我键入了code . ，
+it opened up my web application.
+它打开了我的Web应用程序。
+It's worth pointing out that if you notice in the background
+值得指出的是，如果你注意到背景
+there, it also opened my previous windows.
+在那里，它也打开了我以前的窗户。
+VS code likes to put things back the way it was so
+VS Code喜欢把事情恢复到原来的样子
+it's restoring my session.
+它正在恢复我的会话。
+I'm gonna go and close the console app from earlier.
+我要去关闭之前的控制台应用。
+And we'll just say, there's that warning again,
+我们就这样说，它会再次出现这种警告，
+required assets to build, it's totally okay to say yes, because
+为构建添加所需的资源，这毫无疑问的选yes，因为
+we wanna be able to debug our web application, all right.
+我们希望能够调试我们的Web应用程序，对吧。
+>> So I noticed you have a couple of things down there,
+>> 我注意到你在右下角有一些额外的东西，
+are those additional- >> Yeah, that's a great point.
+是那些额外的 >> 对，这是一个值得关注的地方。
+So down here, I've got some extensions,
+在这里，我有一些扩展，
+these are like a little accordion extensions.
+这些像小手风琴一样的扩展。
+If I want to play with Docker, or if I'm gonna be using Git, so
+如果我想玩Docker，或者如果我要使用Git，那么
+GitLens and Docker are extensions.
+GitLens和Docker是（所需的）扩展。
+If I click here on the left, you can see my installed extensions,
+如果我点击左边这里，你可以看到我的安装扩展，
+and recommended extensions.
+和推荐的扩展。
+And I could go and search for
+我可以在这里搜索
+extensions here as opposed to using the web.
+扩展，而不是使用Web。
+>> All right.
+>> 嗯。
+>> Cuz I was just moving them out of the way.
+>> 这里我只是把他们移开了。
+>> All right, cuz I just noticed something different, so
+>> 好的，因为我刚注意到一些不同的东西，所以
+I was asking questions for the people at home.
+我在为大家提问。
+>> Definitely useful.
+>> 不错的提问。
+So let's just move that out of the way, here we go.
+所以就让我们把它移开，我们继续吧。
+So Program.cs, this is a little bit bigger than it was before.
+Program.cs，这比以前的稍大一些。
+>> Cuz it's bringing a bunch of stuff that if we look at
+>> 因为它多了一堆东西，如果我们对比一下
+the previous one,
+前一个，
+while we putting much only had using systems and maybe IO.
+---以下部分只为机翻，还未确认---
+>> Actually, that's a good point, let's open up the csproj.
+而我们把很多只使用系统和IO。
+>> Yeah. >> If you recall earlier,
+>>其实，这是一个很好的观点，我们来打开csproj。
+our SDK was Microsoft.NET.Sdk.Web,
+>>是的。 >>如果您早点回忆，
+this is a web application.
+我们的SDK是Microsoft.NET.Sdk.Web，
+This is new, indicating that there as a folder called,
+这是一个Web应用程序。
+wwwroot, that we'll talk about in a little bit.
+这是新的，表明有一个文件夹叫做，
+And we have our first package reference, Asp.NetCore,
+wwwroot，我们稍后再谈。
+specifically .All.
+我们有我们的第一个软件包参考，Asp.NetCore，
+>> So literary everything?
+特别是。
+>> Right.
+>>所以文学的一切？
+Now, it could in fact be listed one item at a time,
+>>对。
+ASP.NET's broken up in a lot of different pieces.
+现在，它实际上可以一次列出一个项目，
+So it's kind of a cafeteria plan.
+ASP.NET分成许多​​不同的部分。
+>> Okay. >> This is a package of
+所以这是一个自助餐厅的计划。
+packages, so rather than having a list of dozens of different
+>>好的。 >>这是一个包
+packages, and having to pick ones I want, ones I don't want,
+包，而不是有几十个不同的列表
+this makes it much, much simpler.
+包，并不得不挑选我想要的，我不想要的，
+It just gives me everything by default.
+这使得它非常简单得多。
+So for learning, it's easier for getting started, it's easier.
+它只是给了我默认的一切。
+If you're familiar with ASP.NET,
+所以对于学习来说，入门更容易，更容易。
+it's easier because everything you expect is there.
+如果您熟悉ASP.NET，
+>> I was also, one thing I've also noticed,
+这很容易，因为你期望的一切都在那里。
+it is one version now.
+>>我也是，我也注意到了一件事，
+>> It's nice and simple, you just say, I want 2.0 and
+现在是一个版本。
+it brings in everything that hangs off of it.
+>>这很好，很简单，你只是说，我想要2.0和
+>> Of 2.0, okay.
+它带来的一切都悬而未决。
+>> I call it a metapackage or a package of packages.
+>> 2.0，好吧。
+>> I like that term, packages of packages.
+>>我称之为元包或一揽子软件包。
+>> Yeah, nice and simple.
+>>我喜欢这个词，包裹包。
+So if we go into Program.cs, you saw before we had Using System
+>>是的，很好很简单。
+>> Yep.
+所以如果我们进入Program.cs，你在使用System之前就看到了
+>> And when we say Using System, that was what allowed us to type
+>>是的。
+Console.writeline cuz system.console.writeline.
+>>当我们说使用系统时，这是我们输入的内容
+But here this is a web application, and
+Console.writeline cuz system.console.writeline。
+we have other stuff, we've brought in some threading and
+但是这里是一个Web应用程序，并且
+some IO stuff, but this is the Asp.net stuff that's added.
+我们还有其他的东西，我们引入了一些线程和
+What's worth pointing out those,
+一些IO的东西，但这是添加的Asp.net的东西。
+our main here is different than our console main.
+值得指出的是，
+Before we had a console.writeline,
+我们的主要区别在于我们的主控台。
+and that was it.
+在我们有一个console.writeline之前，
+>> Yep.
+就是这样。
+>> And actually, this is totally off-script,
+>>是的。
+which implies of course, that we actually have a script, right?
+>>其实，这完全是脚本，
+>> [LAUGH] >> I wonder if I could do this.
+这当然意味着我们确实有一个脚本，对吧？
+Okay, I just have a main,
+>> [笑声] >>我不知道我能否做到这一点。
+and I've commented out all the web stuff.
+好吧，我只是有一个主要的，
+>> So, what would happen?
+我已经评论了所有的网络资料。
+>> Let's find out.
+>>那么，会发生什么？
+I wonder if it'll work.
+>>让我们来找出答案。
+Remember I've typed, control~?
+我想知道它是否会起作用。
+>> I think it's tilda.
+记得我已经打字，控制〜？
+I think if you say, tildi,
+>>我认为这是蒂尔达。
+you might have an accent of some sort, yeah.
+我想如果你说，tildi，
+>> I think it would be an accent that is completely and
+你可能有某种口音，是的。
+totally incorrect.
+>>我认为这将是一个彻底和彻底的口音
+>> Yes.
+完全不正确。
+>> Yes.
+>>是的。
+>> Okay,
+>>是的。
+so it actually switched it over to a Console Application.
+>>好的，
+>> Right. Well, it didn't really switch it
+所以它实际上将它切换到控制台应用程序。
+over because it always was a Console Application.
+>>对。那么，它并没有真正改变它
+>> Yes [LAUGH].
+因为它总是一个控制台应用程序。
+>> The idea being that they are the same thing, right?
+>>是[LAUGH]。
+A .NET application has a main entry point, and
+>>这个想法是他们是同一件事，对吗？
+then it does some stuff.
+.NET应用程序有一个主要入口点，并且
+And I just wanted to kinda juxtapose that it can do some
+那么它会做一些事情。
+consoley stuff or it can do some webby stuff.
+我只是想说明它可以做一些事情
+>> So let's do some webby stuff.
+consoley的东西，或者它可以做一些webby的东西。
+Like what would it look like out of the box?
+>>所以，让我们来做一些webby的东西。
+>> Yeah, well, that's a good point.
+就像现成的盒子一样？
+So let's go back, dotnet run,
+>>是的，这很好。
+this time having changed it to say BuildWebHost.
+所以让我们回去，dotnet运行，
+And it's gonna run and build.
+这一次改变它说BuildWebHost。
+And it says a couple of things.
+它会运行并建立。
+It's running in production.
+它说了几件事。
+It's listening on localhost 5000, so
+它正在生产中运行。
+we have started a little web server.
+它在localhost 5000上监听，所以
+>> Okay.
+我们开始了一个小型的网络服务器。
+>> Now it says, listening at localhost:5000.
+>>好的。
+Let's open up browser, and let's localhost:5000 it.
+>>现在它说，在本地主机听：5000。
+>> Can't you also just click on the link within the terminal?
+让我们打开浏览器，让我们localhost：5000它。
+>> Yeah, that is a good point.
+>>你也不能只是点击终端内的链接？
+I guess I could [LAUGH] or not.
+>>是的，这是一个很好的观点。
+>> Or not, okay.
+我想我可以[笑]或不。
+>> I don't know, yes.
+>>或不，好吧。
+>> [LAUGH] It should.
+>>我不知道，是的。
+>> It should work.
+>> [笑声]应该。
+>> Except that's Hello World!
+>>它应该工作。
+>> That's Hello World!, exactly.
+>>除了Hello World！
+>> So where is that, Hello World, coming from?
+>>这就是Hello World！，完全是。
+Where is?
+>>那么，Hello World来自哪里？
+>> Where is that text?
+哪里？
+>> There's the text itself, so.
+>>文字在哪里？
+>> Yeah, let's find out, so let's follow it through.
+>>有文本本身，所以。
+So BuildWebHost passes these arguments in and says .Run.
+>>是的，让我们来看看，让我们一起来看看。
+What does BuildWebHost do?
+所以BuildWebHost将这些参数传入并说.Run。
+That's right here.
+BuildWebHost做什么？
+>> Yep.
+就在这里。
+>> Looks like it CreatesDefaultBuilder, and
+>>是的。
+then it says, UseStartup.
+>>看起来像CreatesDefaultBuilder，和
+And then- >> And
+然后它说，UseStartup。
+you can see here that the Startup text here is in blue,
+然后 - >>然后
+that means it's not a, it's a keyword basically.
+你可以在这里看到这里的启动文本是蓝色的，
+This here, these word, Startup, is telling it used this class.
+这意味着它不是一个，它基本上是一个关键字。
+This class's name is not magic,
+在这里，这个词Startup告诉它使用这个类。
+if I changed it to Foo, >> It would not-
+这个班的名字并不神奇，
+>> Well, let's find out.
+如果我将它改为Foo，>>它不会 - 
+Let's go ahead and change it to Foo,
+>>好吧，让我们来找出答案。
+hit dotnet run, See what happens.
+让我们继续并将其更改为Foo，
+The type or name Startup could not be found, okay?
+打dotnet运行，看看会发生什么。
+But what if I change this to Foo?
+类型或名称启动无法找到，好吗？
+>> There we go.
+但是如果我将这个改为Foo呢？
+>> Pause, runs just fine.
+>>我们走了。
+The point there being that the name Startup isn't magic.
+>>暂停，运行得很好。
+>> It isn't magic. >> Right.
+有一点是，Startup这个名字并不神奇。
+>> It does not have to be Startup.
+>>这不是魔术。 >>对。
+>> Nope, what it's saying is, again if we look at the docs,
+>>它不一定非要启动。
+and this is what's nice with Visual Studio code,
+>>不，它的意思是，如果我们再看看文档，
+it says specify the startup type to be used by the web host.
+这对于Visual Studio代码来说很不错，
+So it's just saying go and use this class.
+它表示指定要由Web主机使用的启动类型。
+And this class here that we called Startup or Foo, or
+所以它只是说去和使用这个类。
+whatever, has to be just be shaped a certain way,
+这里我们称之为Startup或Foo的这个类，或者
+it has to look a certain way.
+无论如何，都必须以某种方式形成，
+>> Okay, so you could call it Beyonce,
+它必须以某种方式看待。
+you could call it anything.
+>>好的，你可以称它为碧昂丝，
+>> Yeah, it has to be a Beyonce.
+你可以称它为任何东西。
+>> [LAUGH] I am afraid I should probably have [FOREIGN],
+>>是的，它必须是碧昂丝。
+but we'll just have Beyonce without an accent.
+>> [笑]恐怕我应该有[FOREIGN]，
+And it should work just fine.
+但我们只是没有口音而拥有碧昂丝。
+Beyonce should be a key word.
+它应该工作得很好。
+>> It should be.
+碧昂斯应该是一个关键词。
+>> A reserved word.
+>>应该是。
+>> It should be, it should be. >> But its not, sadly.
+>>保留字。
+>> So this is an important point though.
+>>应该是，应该是。 >>但它并不可悲，
+It's saying use this startup type.
+>>所以这是一个重要的观点。
+And that startup type has to have certain methods.
+这是说使用这种启动类型。
+So Beyonce, in this case, has to have a method
+并且该启动类型必须具有某些方法。
+called ConfigureServices and one called Configure.
+所以碧昂丝在这种情况下必须有一种方法
+>> Okay.
+称为ConfigureServices，另一个称为Configure。
+>> And that's the requirements for Beyonce in this context for
+>>好的。
+the startup class.
+>>这就是Beyonce在这方面的要求
+So what's going on in these?
+启动班。
+We've got- >> And you have the nice
+那么这些是怎么回事？
+little instructions at the top, which I've always appreciated.
+我们已经得到了 - >>而且你很好
+>> Yeah, I like it when templates include a little bit
+顶端的小指令，我一直赞赏。
+of instruction, a little bit of comments.
+>>是的，当模板包含一点​​点时，我喜欢它
+So this method it's called by the runtime and
+的指导，一点评论。
+it adds services to a collection called the ServiceCollection.
+所以这个方法是由运行时调用的
+And services are just stuff you might wanna use
+它将服务添加到名为ServiceCollection的集合中。
+later in your app.
+而服务只是你可能想要使用的东西
+>> So it could be things like authentication,
+稍后在你的应用程序。
+so using a service like Facebook or Google, like which we'll
+>>所以这可能是认证，
+look at later dates, but- >> So if I just type services.,
+所以使用像Facebook或Google这样的服务，就像我们会这样做
+you've got AddAuthentication, AddCaching,
+看看以后的日期，但 - >>所以，如果我只是输入服务。，
+AddIdentity, AddLogin, AddMemory, add whatever.
+你有AddAuthentication，AddCaching，
+And even things that don't appear like you pointed out.
+AddIdentity，AddLogin，AddMemory，添加任何内容。
+Like maybe Facebook authentication,
+甚至不像你指出的那样。
+different kinds of those are all other third party things that
+就像Facebook认证一样，
+could be added on as well.
+不同类型的这些都是其他第三方的东西
+So those services get configured here,
+也可以添加。
+get added to this collection.
+所以这些服务在这里配置，
+>> Yeah. >> And it's a little confusing
+被添加到这个集合。
+because you've got ConfigureServices.
+>>是的。 >>这有点令人困惑
+>> And then you have Configure.
+因为你有配置服务。
+Like that is something that confused me when I first
+>>然后你有配置。
+started.
+就像我第一次那样让我困惑
+>> Yeah, it is confusing.
+开始。
+This is the get everything ready,
+>>是的，这很混乱。
+load up the collection of stuff I want to play with.
+这是一切准备就绪，
+>> Yeah.
+加载我想玩的东西的集合。
+>> And then configure them.
+>>是的。
+Set them up.
+>>然后配置它们。
+Like you could've maybe, maybe they could've named it add
+设置它们。
+services or DoTheStuffWithTheServices.
+就像你可能有可能，也许他们可能已经命名它添加
+>> [LAUGH] Okay.
+服务或DoTheStuffWithTheServices。
+>> [LAUGH] And then configure them.
+>> [笑声]好的。
+>> Yeah, okay.
+>> [LAUGH]然后配置它们。
+>> But the point is one is prep your environment, and
+>>是的，好吧。
+then do specific things to set your environment up.
+>>但重点在于准备好你的环境，并且
+Like, in this case, if we are doing development,
+然后做特定的事情来设置你的环境。
+not production,
+就像在这种情况下，如果我们正在开发，
+then when you get an exception you'd like a nice friendly page.
+不生产，
+>> Okay, not a page of horror.
+那么当你得到一个异常时，你会喜欢一个友好的页面。
+>> Yes, not the scary page.
+>>好吧，不是一页恐怖片。
+This here is the app.Run,
+>>是的，不是可怕的页面。
+this is the default cuz you said we wanted to do empty.
+这里是应用程序。运行，
+And you asked where Hello World!, was.
+这是你说我们想做空的默认因素。
+>> And there it is.
+你问了Hello World！是哪里的。
+>> There it is.
+>>它就在那里。
+So we've change that text, and dotnet run.
+>>它是。
+It should still run.
+所以我们已经改变了这个文本，并且运行了dotnet。
+Now if I come back over here, and
+它应该仍然运行。
+notice it still says Hello World!
+现在，如果我回到这里，并且
+>> Yeah.
+注意它仍然说Hello World！
+>> That's because we haven't hit refresh.
+>>是的。
+And there it is.
+>>这是因为我们没有刷新。
+>> Yeah, that's a good one.
+就在那里。
+>> You like that?
+>>是的，这是一个很好的。
+>> Yeah.
+>>你喜欢那样吗？
+>> Excellent. >> I think the Beyhive
+>>是的。
+would be happy.
+>>很好。 >>我认为Beyhive
+>> They would be.
+会很高兴。
+Alright, cool.
+>>他们会。
+>> This is cool. >> Mm-hm.
+好，很酷。
+>> One of the things that, when you are working, so
+>>这很酷。 >> Mm-hm。
+we've seen hello world or hello beehive in honor of Beyonce.
+>>当你工作时，其中一件事情如此
+But as a person who's building their webpage for
+为了纪念碧昂斯，我们已经看到了你好世界或你好蜂巢。
+the very first time, you want to see a page.
+但是，作为一个正在构建他们的网页的人
+Like, you actually want to see something that's a little bit
+第一次，你想看到一个页面。
+more than just- >> A string.
+就像，你实际上想看到一点点
+>> Just a string.
+不仅仅是 - >>一个字符串。
+>> Right, and certainly, having a string,
+>>只是一个字符串。
+like doing all of your work inside of a Response.Write is
+>>对，当然，有一个字符串，
+gonna break down pretty quickly.
+就像在Response.Write里面做你所有的工作一样
+>> Yeah. >> Right.
+会很快分解。
+So in the next section, we're going to go an add some pages
+>>是的。 >>对。
+and build, take this, and we're gonna start from empty, though.
+所以在下一节中，我们将添加一些页面
+>> Yeah. >> We're not gonna cheat,
+并建立，采取这一点，但我们将从空虚开始。
+we're gonna build on top of empty.
+>>是的。 >>我们不会作弊，
+So we've seen a console app,
+我们要建立在空洞之上。
+we've seen an app that does a single string,
+所以我们见过一个控制台应用程序，
+next section we'll do pages.
+我们已经看到一个应用程序可以执行单个字符串，
+>> Yes we will.
+下一节我们会做页面。
