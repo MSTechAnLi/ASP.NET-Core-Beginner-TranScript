@@ -14,7 +14,7 @@
 
 ### 2. ASP.NET Web应用
 
-- [ ] 从控制台到Web应用 - 翻译中
+- [X] 从控制台到Web应用
 - [ ] Dynamically Rendered HTML
 - [ ] Configuration
 
