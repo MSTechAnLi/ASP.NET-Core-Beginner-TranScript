@@ -291,12 +291,12 @@ If you go to docs.microsoft.com and your country of choice.
 59
 00:02:37,000 --> 00:02:39,000
 This docs right here is got all the different docs through all
-就可以看到这里有好多文档，所有的文档！
+在这的文档包括了各类有关不同的
 
 60
 00:02:39,000 --> 00:02:41,000
 the different Microsoft properties.
-有好多不同微软特性的技术
+微软技术的所有文档
 
 61
 00:02:41,000 --> 00:02:45,000
