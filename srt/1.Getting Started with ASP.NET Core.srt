@@ -1,0 +1,434 @@
+﻿1
+00:00:01,000 --> 00:00:02,000
+Hey friends, I'm Scott Hanselman.
+Hey 大家好，我是 Scott Hanselman.
+
+2
+00:00:02,000 --> 00:00:04,000
+And I'm Maria Naggaga.
+我是 Maria Naggaga
+
+3
+00:00:04,000 --> 00:00:06,000
+And this is Microsoft Virtual Academy.
+这里是微软虚拟学院
+
+4
+00:00:06,000 --> 00:00:09,000
+We're gonna be talking about ASP.NET Core 2.
+我们将会讨论有关 ASP.NET Core 2.0 的内容
+
+5
+00:00:09,000 --> 00:00:10,000
+>> Yes, we are.
+是的
+
+6
+00:00:10,000 --> 00:00:13,000
+Right, we've got three days of great content for you
+好的，我们将用三天的时间给你展现精彩的内容
+
+7
+00:00:13,000 --> 00:00:16,000
+This is the beginner day, we're gonna have beginner
+这是第一天，我们会从初学者开始
+
+8
+00:00:16,000 --> 00:00:19,000
+getting started, a little bit about .NET and C#, and
+开始前，你需要一点有关
+
+9
+00:00:19,000 --> 00:00:21,000
+the resources that you'll need.
+.NET 和 C# 的资源
+
+10
+00:00:21,000 --> 00:00:24,000
+Maria and I will explore creating a web application.
+Maria 与我将会探索创建一个 Web 应用
+
+11
+00:00:24,000 --> 00:00:27,000
+And by the end of these three days, you should be ready to go
+当这三天结束后，你应当能够准备好
+
+12
+00:00:27,000 --> 00:00:29,000
+and make a web application for yourself.
+为自己制作一个 Web 应用程序
+
+13
+00:00:29,000 --> 00:00:32,000
+Exactly, and a good place to get started here is for
+准确的说，这是一个让你们知道在哪里
+
+14
+00:00:32,000 --> 00:00:35,000
+people to figure out where to get the tools they need
+可以找到你们所需要工具的
+
+15
+00:00:35,000 --> 00:00:37,000
+to get started   Yeah, so if you go to
+好地方！            是的，如果你进入
+
+16
+00:00:37,000 --> 00:00:43,000
+dot.net, we made a little fun domain for you here d-o-t.net.
+"http://dot.net",我们为你们制作了一个有趣的域名
+
+17
+00:00:43,000 --> 00:00:45,000
+Or if you go out there and
+或者 如果你离开这里
+
+18
+00:00:45,000 --> 00:00:48,000
+search with your favorite search engine for learn C# or
+通过你最喜爱的搜索引擎去索引 "C#" 或者
+
+19
+00:00:48,000 --> 00:00:52,000
+download .NET you will probably end up showing up here.
+"下载.NET"，你也会找到这个网址
+
+20
+00:00:52,000 --> 00:00:54,000
+The page might look something like this,
+页面可能看起来可能与这个很相似
+
+21
+00:00:54,000 --> 00:00:59,000
+might be a little different by the time time has passed.
+也许也会随着时间的推移有所改变吧
+
+22
+00:00:59,000 --> 00:01:01,000
+But you'll click on Download and
+但是，你点击下载
+
+23
+00:01:01,000 --> 00:01:05,000
+you're gonna see three different .NETs to choose from.
+你会看到不同的三个 .NET 选项
+
+24
+00:01:05,000 --> 00:01:08,000
+There is the .NET Framework, that comes with Windows.
+这是 .NET Framework ，它运行在 Windows 上
+
+25
+00:01:08,000 --> 00:01:12,000
+There is Xamarin, which let's you make IOS, and Android, and
+这是 Xamarin ，它能让你制作 iOS，Android，以及
+
+26
+00:01:12,000 --> 00:01:14,000
+Windows applications.
+Windows 平台应用
+
+27
+00:01:14,000 --> 00:01:17,000
+We're gonna be focusing on .NET Core, aren't we?
+但我们要把重心放在 .NET Core 上，是吧？
+
+28
+00:01:17,000 --> 00:01:17,500
+>> Yes, we are.
+是呀！
+
+29
+00:01:17,500 --> 00:01:20,000
+So if you click on that it should show you a couple
+所以，如果你点击这他的话，应该会给你展示几个
+
+30
+00:01:20,000 --> 00:01:22,000
+of options on how to get started.
+关于如何开始的选项
+
+31
+00:01:22,000 --> 00:01:24,000
+And then a lot of things that come up, especially for
+然后，很多内容出现了，值得注意的是
+
+32
+00:01:24,000 --> 00:01:27,000
+new people to our platform, is do they download the SDK or
+对于我们平台的新人来说，选择下载 SDK 呢
+
+33
+00:01:27,000 --> 00:01:28,000
+the runtime?
+还是 RunTime 呢？
+
+34
+00:01:28,000 --> 00:01:31,000
+Right, so the SDK, that's the tools, the compiler, the stuff I
+是的，像 SDK ，其实是种工具和编译器，
+
+35
+00:01:31,000 --> 00:01:35,000
+need as a developer because it's the software development kit
+是作为开发人员所必需的东西，它是软件开发的工具包
+
+36
+00:01:35,000 --> 00:01:35,500
+Yeah.
+对的
+
+37
+00:01:35,500 --> 00:01:38,000
+So you probably will never want the runtime unless you're
+所以，你可能永远不需要运行时 RunTime ，除非你
+
+38
+00:01:38,000 --> 00:01:40,000
+gonna put that into production.
+要把它投入特定生产环境中
+
+39
+00:01:40,000 --> 00:01:43,000
+And then if you really want more information, you can follow step
+然后，如果你真的想要更多的信息，你可以按照
+
+40
+00:01:43,000 --> 00:01:45,000
+by step instructions down here at the bottom.
+下面的一步一步的说明去探索。
+
+41
+00:01:45,000 --> 00:01:47,000
+Yeah, and we should actually click on one of those.
+是的，我们应该点击其中的一个
+
+42
+00:01:47,000 --> 00:01:51,000
+Click on the Windows one and you should see not only a step
+点击一下 Windows ，你不仅可以看到一个清晰的步骤
+
+43
+00:01:51,000 --> 00:01:53,000
+by step, but also a few videos in between.
+而且还能看到中间有说明的视频。
+
+44
+00:01:53,000 --> 00:01:56,000
+Right, so we've got a little video, this is very very short
+是的，所以我们可以看到一些短视频，他们非常的短
+
+45
+00:01:56,000 --> 00:01:59,000
+two or three minutes, not as fun as this video, but still.
+有两到三分钟，虽然不像这部视频这么有趣，但也差不多~
+
+46
+00:01:59,000 --> 00:02:01,000
+By you download the .NET SDK,
+你下载了 .NET SDK 之后
+
+47
+00:02:01,000 --> 00:02:02,000
+it will pick the right version for you.
+它将自动为您选择所需的版本
+
+48
+00:02:02,000 --> 00:02:04,000
+And then by the end of this little three or
+然后通过这最后在这三个或
+
+49
+00:02:04,000 --> 00:02:07,000
+four step process, you will have written your first .NET app,
+四个步骤，你就可以编写你的第一个 .NET 应用程序了
+
+50
+00:02:07,000 --> 00:02:09,000
+which I think we will do in a little bit.
+我想我们会在这上面做一点的
+
+51
+00:02:09,000 --> 00:02:11,000
+All right, so you can also of course,
+好的，其实你也可以
+
+52
+00:02:11,000 --> 00:02:15,000
+get your different versions of Linux, you can do it on a Mac,
+获取不同的版本，你像 Linux ，你也可以在 Mac 上面运行它
+
+53
+00:02:15,000 --> 00:02:18,000
+and you can also use Docker, so there's a lot of options.
+甚至还可以部署在 Docker 上，所以是有好多选择的！
+
+54
+00:02:18,000 --> 00:02:20,000
+.NET Core runs everywhere.
+.NET Core 可以跑在任何地方（微软大法好）
+
+55
+00:02:20,000 --> 00:02:23,000
+Everywhere, and you can get this to run in ten minutes.
+还有，你可以在十分钟内让它跑起来
+
+56
+00:02:23,000 --> 00:02:25,000
+Or less, really.
+哇，真的太棒了
+
+57
+00:02:25,000 --> 00:02:28,000
+So the other thing that you might want to think about is our documentation.
+还有，你可能会考虑有关我们的文档的事情
+
+58
+00:02:28,000 --> 00:02:37,000
+If you go to docs.microsoft.com and your country of choice.
+如果你去 "docs.microsoft.com" 并且选好你所在的国家
+
+59
+00:02:37,000 --> 00:02:39,000
+This docs right here is got all the different docs through all
+就可以看到这里有好多文档，所有的文档！
+
+60
+00:02:39,000 --> 00:02:41,000
+the different Microsoft properties.
+有好多不同微软特性的技术
+
+61
+00:02:41,000 --> 00:02:45,000
+So Azure and Xamarian and bots and all kinds of fun stuff.
+像 Azure Xamarian 还有 Bot Framework 各种各样的类型
+
+62
+00:02:45,000 --> 00:02:47,000
+When you go to .NET, there's a ton of great things and
+当你进入到 .NET ，有很多很棒的事情
+
+63
+00:02:47,000 --> 00:02:49,000
+we're gonna go through this a little bit more and
+我们会深入了解一下
+
+64
+00:02:49,000 --> 00:02:51,000
+show you some of the fun things inside.
+并向你展示一些有趣的东西
+
+65
+00:02:51,000 --> 00:02:55,000
+But remember, we're focusing on .NET Core, C# and ASP.NET.
+但是请记住，我们关注的是 .Net Core C# 和 ASP.NET
+
+66
+00:02:55,000 --> 00:02:56,000
+That's what we're doing.
+这就是我们正在做的
+
+67
+00:02:56,000 --> 00:02:58,000
+All right, and
+是的
+
+68
+00:02:58,000 --> 00:03:01,000
+the last thing that you wanna think about is Visual Studio.
+还有最后一件事是 Visual Studio
+
+69
+00:03:01,000 --> 00:03:03,000
+And there are Visual Studio options.
+还有 Visual Studio 选项
+
+70
+00:03:03,000 --> 00:03:06,000
+So you have Visual Studio IDE which is on Windows, right?
+你在 Windows 上有 Visual Studio IDE 对吧？
+
+71
+00:03:06,000 --> 00:03:08,000
+And if you scroll across just a little bit,
+只要稍稍移动一下屏幕
+
+72
+00:03:08,000 --> 00:03:10,000
+there's Visual Studio Code.
+就可以看到 Visual Studio Code 了
+
+73
+00:03:10,000 --> 00:03:12,000
+And if you scroll just a little bit down on to the next level,
+如果稍稍向下滚动一点
+
+74
+00:03:12,000 --> 00:03:14,000
+you'll see the different options.
+你会看到另外的选择
+
+75
+00:03:14,000 --> 00:03:16,000
+You have Visual Studio for Mac now as well, and
+你现在也可以获取 Visual Studio for Mac 了
+
+76
+00:03:16,000 --> 00:03:18,000
+you can build your ASP.NET Core application there.
+你可以在 Mac 上创建 ASP.NET Core  应用
+
+77
+00:03:18,000 --> 00:03:20,000
+So anything that we're doing today,
+所以，我们今天所做的任何事情
+
+78
+00:03:20,000 --> 00:03:23,000
+people can do this on their Mac.
+人们都可以在他们的 Mac 上完成
+
+79
+00:03:23,000 --> 00:03:25,000
+Good point, so even though I'm on a Surface book,
+这是很好的一点，所以即使我用的是运行着Windows的
+
+80
+00:03:25,000 --> 00:03:27,000
+I'm running Windows, literally every single thing that we're
+Surface Book，但我想展示的是
+
+81
+00:03:27,000 --> 00:03:31,000
+gonna show you today, you should be able to follow along on your Mac
+我们可以方便的的做到相同的事，不论是在你的 Mac 上
+
+82
+00:03:31,000 --> 00:03:34,000
+on your Ubuntu machine, on your Windows machine.
+Ubuntu 设备上或者 Windows 设备上
+
+83
+00:03:34,000 --> 00:03:36,000
+I will be using Visual Studio code a little bit
+我将更多的使用 Visual Studio Code
+
+84
+00:03:36,000 --> 00:03:38,000
+I'll be using Visual Studio a little bit, but you should be
+因为 Visual Studio Code 太棒了，但是呢
+
+85
+00:03:38,000 --> 00:03:41,000
+able to follow along in your favorite editor, all right?
+如果你愿意，你也可以用别的，好吧？
+
+86
+00:03:41,000 --> 00:03:42,000
+Yeah.
+是的
+
+87
+00:03:42,000 --> 00:03:45,000
+Cool, we'll take a quick pause and we'll come back with the next module.
+太棒啦，我们将快速休整一下，进入下一个模块
