@@ -15,7 +15,7 @@
 ### 2. ASP.NET Web应用
 
 - [X] 从控制台到Web应用
-- [ ] Dynamically Rendered HTML
+- [ ] 动态渲染HTML - yiluomyt 翻译中
 - [ ] Configuration
 
 ### 3. Razor Pages and CRUD
