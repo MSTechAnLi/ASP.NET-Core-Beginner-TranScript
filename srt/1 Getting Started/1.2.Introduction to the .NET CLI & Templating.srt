@@ -1,7 +1,7 @@
 ﻿1
 00:00:01,152 --> 00:00:03,520
 So let's build our first app Scott do you trust me?
-所以让我们构建我们的第一个程序，Scott 你信任我吗?
+让我们构建我们的第一个程序，Scott 你信任我吗?
 
 2
 00:00:03,520 --> 00:00:04,672
@@ -9,14 +9,14 @@ I do trust you.
 当然了
 
 3
-00:00:04,672 --> 00:00:05,888
-Okay. All right so
-好吧。好了，那么
+00:00:04,672 --> 00:00:05,225
+Okay
+好的
 
 4
-00:00:05,888 --> 00:00:08,320
-I've installed the .Net Core SDK, I just downloaded this and
-我安装 .NET Core SDK,我只需要下载它，还有
+00:00:05,225 --> 00:00:08,320
+All right so I've installed the .Net Core SDK, I just downloaded this and
+那么我已经安装了 .NET Core SDK ,我只需要下载它，还有
 
 5
 00:00:08,320 --> 00:00:09,600
@@ -26,22 +26,22 @@ I went through the installer.
 6
 00:00:09,600 --> 00:00:11,392
 So you've done this so
-你也需要做
+你也已经完成这些步骤
 
 7
 00:00:11,456 --> 00:00:12,736
 it's one of these things, we did it in the past.
-的这些东西,我们已经做过了
+这些步骤，我们在过去也做过
 
 8
 00:00:12,736 --> 00:00:13,888
 But how do I know it worked?
-但我怎么知道它工作吗?
+但我怎么知道它是否起作用呢?
 
 9
 00:00:13,888 --> 00:00:15,552
 Okay so go over on to your command line,
-好的,打开你的命令行, 
+好的,打开你的命令行,
 
 10
 00:00:15,552 --> 00:00:16,640
@@ -56,7 +56,7 @@ And type dotnet-version.
 12
 00:00:20,864 --> 00:00:21,952
 You already did it.
-哦~你已经做了呀
+哦~你已经完成了
 
 13
 00:00:21,952 --> 00:00:23,488
@@ -81,37 +81,37 @@ That's a good point.
 17
 00:00:27,456 --> 00:00:29,568
 And actually I can type where dotnet, and it'll tell me not
-事实上我可以输入 where dotnet,它会告诉我
+事实上我可以输入 where dotnet ,它会告诉我
 
 18
 00:00:29,568 --> 00:00:31,424
-only that it exists- >> Where it is.
+only that it exists,Where it is.
 dotnet 被安装到哪里了
 
 19
 00:00:31,424 --> 00:00:32,576
 But where it is on the disc.
-但是只有磁盘的位置
+但是它到底在磁盘什么位置
 
 20
 00:00:32,576 --> 00:00:33,600
 You see it's in program files.
-你看到它在编程文件里。
+你可以在编程文件里找到答案。
 
 21
 00:00:33,600 --> 00:00:34,432
 Okay.
-Okay.
+好的.
 
 22
 00:00:34,432 --> 00:00:35,328
-Okay?  So
-Okay?  那么
+Okay? So
+好的? 那么
 
 23
 00:00:35,328 --> 00:00:37,504
 let's make sure that you're using the right version
-让我们确保您使用了正确的版本
+确保您使用了正确的版本
 
 24
 00:00:37,504 --> 00:00:38,912
@@ -121,17 +121,17 @@ So we're on 2.0
 25
 00:00:38,976 --> 00:00:40,925
 So dotnet-version.
-输入 dotnet --version 
+输入 dotnet --version
 
 26
 00:00:41,300 --> 00:00:42,277
 Okay.
-Okay.
+好.
 
 27
 00:00:42,277 --> 00:00:44,175
-Okay.   And I got 202
-Okay.   我们会得到 2.0.2
+Okay. And I got 202
+然后. 我们会得到 2.0.2
 
 28
 00:00:44,175 --> 00:00:45,775
@@ -140,8 +140,8 @@ You'll get 2.0.something
 
 29
 00:00:45,824 --> 00:00:46,525
-Yeah.
-Yeah.
+Yeah
+是的
 
 30
 00:00:46,525 --> 00:00:48,384
@@ -160,13 +160,13 @@ Like some minor changes have happened.
 
 33
 00:00:51,709 --> 00:00:53,885
-Mm-hm.   But 2.0 is what matters
-嗯嗯。   但 2.0 这部分是不会变的
+Mm-hm. But 2.0 is what matters
+嗯嗯。但 2.0 这部分是不会变的
 
 34
 00:00:53,885 --> 00:00:54,461
 Okay
-Okay
+好的
 
 35
 00:00:54,461 --> 00:00:57,725
@@ -181,12 +181,12 @@ So let's, some people are comfortable
 37
 00:01:00,470 --> 00:01:02,425
 let's do a dotnet help because it's always good for
-当我们运行 dotnet help 时，因为这对于
+当我们运行 dotnet help 时，会发生什么
 
 38
 00:01:02,425 --> 00:01:04,473
 people to know that there's a place where they can go and
-想要知道在某些地方可能会发生什么问题的的人
+这对解答大家对此的疑问
 
 39
 00:01:04,473 --> 00:01:05,369
@@ -196,12 +196,12 @@ see what's happening
 40
 00:01:05,369 --> 00:01:06,825
 So if you type dotnet help, let's just see what happens
-所以如果你输入 dotnet help，让我们看看会发生什么
+所以如果你输入 dotnet help ，让我们看看会发生什么
 
 41
 00:01:06,825 --> 00:01:09,373
 Right, so I can type dotnet-- help, and
-对,所以我可以输入 dotnet——help
+对,所以我可以输入 dotnet --help
 
 42
 00:01:09,373 --> 00:01:11,800
@@ -215,8 +215,8 @@ There's help through the whole time
 
 44
 00:01:13,197 --> 00:01:13,675
-There's help through the whole time.    Everything
-通过整个过程的帮助  每件事
+Everything
+每件事
 
 45
 00:01:13,675 --> 00:01:15,373
@@ -231,7 +231,7 @@ restore packages, run them.
 47
 00:01:16,525 --> 00:01:19,846
 This is a good rundown of everything you need to know
-这是一个很好的有所有你需要知道的所有内容的说明书
+这是一个能回答你任何问题的说明书
 
 48
 00:01:19,846 --> 00:01:22,237
@@ -256,12 +256,12 @@ But we're gonna focus kind of on basics and
 52
 00:01:28,004 --> 00:01:30,929
 I think that making stuff and running stuff and
-我觉得我们开始的时候可能只会需要
+我觉得我们开始的时候只会需要到
 
 53
 00:01:30,929 --> 00:01:32,925
 building stuff is probably where we'll start for this.
- 编写、运行或者编译
+编写、运行或者编译
 
 54
 00:01:32,925 --> 00:01:33,850
@@ -270,8 +270,8 @@ That's where we would be right now.
 
 55
 00:01:33,850 --> 00:01:34,446
-That's where we would be right now.For this module.
-这就是我们目前要做的    这个模块里
+For this module.
+这个模块里
 
 56
 00:01:34,446 --> 00:01:34,490
@@ -279,1971 +279,1930 @@ For this module.
 这个模块里
 
 57
-00:01:34,490 --> 00:01:35,050
+00:01:34,490 --> 00:01:35,632
 That's where we'll be right now.
-For this module.
 这就是我们目前要做的
-这个模块里
 
 58
-00:01:35,050 --> 00:01:35,632
-That's where we'll be right now.
-这就是我们目前要做的
-
-59
 00:01:35,663 --> 00:01:38,240
 Okay. One of the cool things
 好吧。一个很酷的东西
 
-60
+59
 00:01:38,240 --> 00:01:42,425
 especially with dot.net 2.0 is the number of the templates that
 尤其是现在 dotnet 2.0 在命令行中
 
-61
+60
 00:01:42,469 --> 00:01:44,645
 have come out of the box in the command line.
 的环境下有着数量可观的模板
 
-62
+61
 00:01:44,645 --> 00:01:46,053
 Okay, what is a template?
 好的,模板是什么?
 
-63
+62
 00:01:46,053 --> 00:01:49,061
 So a template is, I think of it as a starting ground.
 模板,我认为它就像一个开始的环境
 
-64
+63
 00:01:49,061 --> 00:01:51,941
 Something that gives you a form or
 给你一个形式的东西
 
-65
+64
 00:01:51,941 --> 00:01:54,400
 structure that helps you write your code eventually.
 结构,最终帮助你编写代码。
 
-66
+65
 00:01:54,400 --> 00:01:57,150
 So for those of you who are out there and
 所以,这有点像类似于
 
-67
+66
 00:01:57,150 --> 00:01:58,503
 you've used PowerPoint and PowerPoint
 你使用 PowerPoint 幻灯片
 
-68
+67
 00:01:58,543 --> 00:02:00,783
 has different templates that gives you styles and guidelines.
-有不同的模板,让你的风格和指导方针
+有不同的模板,模板有不同的风格和指导方式
 
-69
+68
 00:02:00,783 --> 00:02:03,663
 Think about this as your PowerPoint for your code.
 想想吧，作为代码的幻灯片
 
-70
+69
 00:02:03,663 --> 00:02:06,863
 Okay, so I've got, console apps, and web apps, and
-好的,所以我们有控制台应用程序,和web应用程序
+好的,所以我们有控制台应用程序,和 web 应用程序
 
-71
+70
 00:02:06,863 --> 00:02:08,655
 test apps, and all different flavors.
-测试应用程序,很多不同的类型
+测试应用程序,等很多不同的类型
 
-72
+71
 00:02:08,655 --> 00:02:10,925
 Different kinds of actions we will actually have a look at.
 不同的各种方式,我们会看一看
 
-73
+72
 00:02:10,925 --> 00:02:12,400
 So should we go and see what kind of apps they give us?
-所以我们应该去看看dotnet能带给我们什么样的程序?
+所以我们应该去看看 dotnet 能带给我们什么样的程序?
 
-74
+73
 00:02:12,400 --> 00:02:13,125
 All right, let's do it
 好的,让我们看看
 
-75
+74
 00:02:13,125 --> 00:02:15,759
 So let's have a look at dotnet new
-让我们看看dotnet new 
+让我们看看 dotnet new
 
-76
+75
 00:02:15,759 --> 00:02:17,551
 That's what I always type
 这是我们常用的类型
 
-77
+76
 00:02:17,551 --> 00:02:19,663
-Dotnet new, all right, I get a nice table
-Dotnet new,好的,我得到一个看起来很赞的列表
+d、otnet new, all right, I get a nice table
+dotnet new ,好的,我得到一个看起来很赞的列表
 
-78
+77
 00:02:19,663 --> 00:02:21,071
 And actually some stuff scroll by
 事实上有些东西是滚动的
 
-79
+78
 00:02:21,071 --> 00:02:25,950
 So these are options for dotnet new and it's worth pointing out
 这些也是 dotnet new 的选项
 
-80
+79
 00:02:25,950 --> 00:02:31,719
 that we've got help again which is actually help for new and
-注意，我们再次看到 help，而这与刚才的 help 不同
+注意，我们再次看到 help ，而这与刚才的 help 不同
 
-81
+80
 00:02:31,719 --> 00:02:34,063
 this is little interesting thing to point out very briefly,
 这是一个很有趣的事情，简单地说
 
-82
+81
 00:02:34,063 --> 00:02:38,585
 when I type dotnet --help, I get top level help.
 当我键入 dotnet help 时，我会得到最高级别的帮助
 
-83
+82
 00:02:38,585 --> 00:02:45,689
 When I type dotnet new --help I get help for new.
 当我输入 dotnet new --help 时，我会得到关于 new 命令的帮助。
 
-84
+83
 00:02:45,699 --> 00:02:47,747
 That is actually the first time
 这实际上是第一次
 
-85
+84
 00:02:47,747 --> 00:02:51,331
 I've done this all the time but I've never noticed that.
 我所做的这一切,但我从来没有注意到
 
-86
+85
 00:02:51,331 --> 00:02:52,419
 Isn't that great?
 那不是很好吗?
 
-87
+86
 00:02:52,419 --> 00:02:54,403
 Well, what's also interest is if I type dotnet new something
 哇，有趣的是如果我输入 dotnet new
 
-88
+87
 00:02:54,467 --> 00:02:57,219
 I can get the help for that template.
 我能得到的帮助模板
 
-89
+88
 00:02:57,219 --> 00:02:59,459
 Could you run that, and we could see?
 你能运行嘛,我们可以看一下?
 
-90
+89
 00:03:00,825 --> 00:03:03,107
 So this is the console application template
 这是一个控制台应用程序模板
 
-91
+90
 00:03:03,107 --> 00:03:08,675
 And here's help options specifically for the console
 这是专门为控制台提供帮助的选项
 
-92
+91
 00:03:08,675 --> 00:03:11,300
 And why this is useful is, let's say that I go and
 为什么可以这样用呢,假设我去
 
-93
+92
 00:03:11,300 --> 00:03:12,725
 get a third party template
 获取一个第三方的模板
 
-94
+93
 00:03:12,832 --> 00:03:17,056
 I get a template from somewhere else, That template might have
 我从别的地方得到一个模板,这个模板
 
-95
+94
 00:03:17,056 --> 00:03:19,616
 a lot complicated options and switches of its own
-自己的很多复杂的选择和开关
+本身就已经做好了复杂的配置
 
-96
+95
 00:03:19,616 --> 00:03:22,048
 So dotnet --help is top level.
-那么 dotnet --help 是全局的 help.
+那么 dotnet --help 是全局的 help
+
+96
+00:03:22,048 --> 00:03:24,800
+dotnet new --help is help for new.
+dotnet new --help 是 new 命令的 help
 
 97
-00:03:22,048 --> 00:03:24,800
-Dotnet new --help is help for new.
-Dotnet new --help 是 new 命令的 help
-
-98
 00:03:24,800 --> 00:03:29,856
 And then if I put --help for a specific template name,
 然后如果我来 --help 特定的模板名称
 
-99
+98
 00:03:29,856 --> 00:03:31,200
 I'm gonna get a help for that.
-我会得到对此模板的帮助。
+我会得到对此模板的帮助
 
-100
+99
 00:03:31,200 --> 00:03:32,480
 It's pretty cool.
 这很酷呢
 
-101
+100
 00:03:32,480 --> 00:03:33,568
 That is pretty cool.
-这是很酷。
+这是很酷
+
+101
+00:03:33,568 --> 00:03:33,850
+All right.
+好的
 
 102
-00:03:33,568 --> 00:03:33,850
-That is pretty cool.    All right.
-这是很酷   好的
-
-103
-00:03:33,850 --> 00:03:34,272
-I have literary found that out during this recording.   All right.
-我发现这跟文学记录很相似呢  好的
-
-104
-00:03:34,272 --> 00:03:36,150
+00:03:33,850 --> 00:03:36,150
 I have literary found that out during this recording.
 我发现这跟文学记录很相似呢
 
-105
-00:03:36,150 --> 00:03:36,448
-I have literary found that out during this recording.   See and
-我发现这跟文学记录很相似呢  观察一下
+103
+00:03:36,150 --> 00:03:38,870
+I'm gonna learn from you and you're gonna learn from me. See and
+我要向你学习，你也向我学习，看一下
 
-106
-00:03:36,448 --> 00:03:37,152
-I'm gonna learn from you and you're gonna learn from me.    See and
-我要向你学习，你也向我学习  观察一下
-
-107
-00:03:37,152 --> 00:03:38,870
-I'm gonna learn from you and you're gonna learn from me.
-我要向你学习，你也向我学习
-
-108
+104
 00:03:38,870 --> 00:03:39,638
 We're gonna have a great time.
 我们会有一段美好的时光
 
-109
+105
 00:03:39,671 --> 00:03:41,847
 So I just went back to what you told me dotnet new.
-所以我回到你告诉我的 dotnet new
+所以回到你告诉我的 dotnet new
 
-110
+106
 00:03:41,847 --> 00:03:45,879
 I see a list of templates, I see a list of short names.
 我看到一个模板列表，和名字简写的列表
 
-111
+107
 00:03:45,879 --> 00:03:48,055
 Names, and you also see a different,
 好多名字,还可以看到不同的
 
-112
+108
 00:03:48,055 --> 00:03:49,975
 languages as well that are supported
 支持的语言
 
-113
+109
 00:03:49,975 --> 00:03:52,377
 Mm-hm, and in this case, C# is in brackets
-嗯嗯,在这种情况下,C#也在支持的语言中
+嗯嗯,在这种情况下, C# 也在支持的语言中
 
-114
+110
 00:03:52,514 --> 00:03:54,882
 that's indicating that it is the default
 这说明它是被“钦定”的
 
-115
+111
 00:03:54,882 --> 00:03:59,042
 But we can also do F#, which is a great functional language, or
-但是我们也可以使用f#,这是一个优雅的函数式编程语言
+但是我们也可以使用 F# ,这是一个优雅的函数式编程语言
 
-116
+112
 00:03:59,106 --> 00:04:01,282
 VB, which is a good language for beginners to try out, okay?
-或者VB,这对初学者来说是一个很好的语言尝试,对吧?
+或者 VB ,这对初学者来说是一个很好的语言尝试,对吧?
 
-117
-00:04:01,282 --> 00:04:05,698
+113
+00:04:01,650 --> 00:04:05,698
 All right so, lets make one, you wanna make a folder then?
 好,让我们创建一个,你想要创建一个文件夹吗？
 
-118
+114
 00:04:05,698 --> 00:04:07,490
 Yeah, yes, so lets make a folder
 是啊,是的,我们先创建一个文件夹
 
-119
+115
 00:04:07,490 --> 00:04:09,474
 Myconsoleapp
 Myconsoleapp
 
-120
-00:04:09,474 --> 00:04:12,226
+116
+00:04:11,400 --> 00:04:12,226
 All right.
 好吧
 
-121
+117
 00:04:12,290 --> 00:04:13,570
 So I have an empty folder here
 我这里有一个空的文件夹
 
-122
+118
 00:04:13,570 --> 00:04:14,338
->> Exactly
-> >确切地说
+Exactly
+确切地说
 
-123
+119
 00:04:14,338 --> 00:04:17,763
 And cuz we're gonna build a contact, dotnet new console
-因为我们要建立一个联 系dotnet 的新控制台
+因为我们要建立一个联系 dotnet 的新控制台
 
-124
+120
 00:04:17,763 --> 00:04:19,714
->> dotnet new console.
->> dotnet new console.
+dotnet new console.
+dotnet new console.
 
-125
+121
 00:04:19,714 --> 00:04:22,096
 And a console app is one that just kinda in text mode here
 和一个控制台应用程序,只是文本模式
 
-126
+122
 00:04:22,096 --> 00:04:22,941
->> Exactly
->> 没错
+Exactly
+没错
 
-127
+123
 00:04:22,941 --> 00:04:25,595
 So let's have a look at what happen when you type
 当输入完，让我们看看会发生什么
 
-128
+124
 00:04:25,595 --> 00:04:26,939
 dotnet new console over there.
 dotnet new console 完成
 
-129
+125
 00:04:26,939 --> 00:04:29,883
 So it says the template was created.
 模板已经创建成功了
 
-130
+126
 00:04:29,883 --> 00:04:30,779
 Successfully.
 成功
 
-131
+127
 00:04:30,779 --> 00:04:33,467
 And then it ran dotnet restore for me
 然后运行了 dotnet restore
 
-132
+128
 00:04:33,467 --> 00:04:35,323
 So in the past
 我在刚刚的时候
 
-133
+129
 00:04:35,323 --> 00:04:39,099
 after I typed dotnet new I used to have to say restore.
 输入了 dotnet new ，我不得不需要恢复一些东西
 
-134
+130
 00:04:39,099 --> 00:04:40,059
 What is it restoring?
 恢复的是什么?
 
-135
+131
 00:04:40,059 --> 00:04:42,171
 So, it's
-它
+它是
 
-136
+132
 00:04:42,171 --> 00:04:44,027
 restoring some of the packages which we'll have a look at.
 恢复的是一些包,我们将来看一下
 
-137
+133
 00:04:44,027 --> 00:04:45,371
 What comes in there.
 里面是什么
 
-138
+134
 00:04:45,371 --> 00:04:46,875
 And the packages are those libraries,
 这些库里的包文件
 
-139
+135
 00:04:46,875 --> 00:04:49,150
 those dependencies, the things that it needs.
 这些依赖关系,它所需要的东西
 
-140
+136
 00:04:49,150 --> 00:04:51,975
 To actually be a console app.
 是一个控制台应用程序
 
-141
+137
 00:04:51,975 --> 00:04:55,550
 And then it generated a file, and
 然后生成了一个文件
 
-142
+138
 00:04:55,550 --> 00:04:57,475
 told me that it took a certain numbers of millisecond.
 还告诉了我,用了多长时间去进行
 
-143
+139
 00:04:57,475 --> 00:05:04,250
 So we got a Program.cs, and we got a csproj, or C# project.
-所以我们有一个 Program.cs 文件，还有一个 csproj,或 C# 项目。
+所以我们有一个 Program.cs 文件，还有一个 csproj ,或 C# 项目。
 
-144
+140
 00:05:04,250 --> 00:05:08,250
 And the C# project is that's where all our packages are?
 C# 项目里面有我们需要的包
 
-145
+141
 00:05:08,250 --> 00:05:10,206
->> That's where our references to those packages are
-> >这些就是我们引用包,
+That's where our references to those packages are
+这些就是我们引用包,
 
-146
+142
 00:05:10,206 --> 00:05:11,236
 so let's go and just look at that.
 所以让我们来看看
 
-147
+143
 00:05:11,236 --> 00:05:13,365
 I'm just gonna say Type.
 我只是想说 Type
 
-148
+144
 00:05:13,365 --> 00:05:14,100
 Okay. And
 Okay
 
-149
+145
 00:05:14,100 --> 00:05:16,050
 output that cuz this is a very small file.
 因为这是一个非常小的文件的输出
 
-150
+146
 00:05:16,050 --> 00:05:17,300
 It's really small.
 真小
 
-151
+147
 00:05:17,300 --> 00:05:20,425
 It says that it's using the .NET.Sdk,
 它显示，Microsoft.NET.SDK
 
-152
+148
 00:05:20,425 --> 00:05:21,825
 the software development kit
 软件开发工具包
 
-153
+149
 00:05:21,825 --> 00:05:25,628
 It's an executable and it's a .NET2 app and
 这是一个可执行的 .NET 2.0 应用
 
-154
+150
 00:05:25,628 --> 00:05:30,800
 it doesn't have any dependencies beyond the basics.
 它没有任何超越基础的依赖
 
-155
+151
 00:05:30,800 --> 00:05:32,800
 It does have some dependencies.
 它有一些依赖项
 
-156
+152
 00:05:32,800 --> 00:05:35,725
 For outputting to the console, and things like that, but for
 输出到控制台之类的,但是
 
-157
+153
 00:05:35,725 --> 00:05:38,250
 the most part, it includes the .Sdk
-大多数情况下,它包括SDK
+大多数情况下,它包括 SDK
 
-158
+154
 00:05:38,250 --> 00:05:40,450
 and we have no additional references
 我们没有额外的引用
 
-159
+155
 00:05:40,450 --> 00:05:41,425
 Okay. Okay
 Okay.Okay
 
-160
+156
 00:05:41,425 --> 00:05:43,525
 So, how do I do something with this
 所以,接下来我们该怎么做
 
-161
-00:05:43,525 --> 00:05:44,325
+157
+00:05:43,525 --> 00:05:46,400
 like what does it actually do let's see it with the code?
 我们能够看到他的代码吗？
 
-162
-00:05:44,325 --> 00:05:45,775
-like what does it actually do let's see it with the code?   Yeah, so let's run it, okay.
-我们能够看到他的代码吗？    是啊,让我们来运行它。
-
-163
-00:05:45,775 --> 00:05:46,125
-Yeah, so let's run it, okay
-是啊,让我们来运行它
-
-164
-00:05:46,125 --> 00:05:46,400
-Here's the code, Hello World.   Yeah, so let's run it, okay
-这是代码,Hello World    是啊,让我们来运行它
-
-165
+158
 00:05:46,400 --> 00:05:48,378
 Here's the code, Hello World.
-这是代码,Hello World
+这是代码, Hello World
 
-166
+159
 00:05:48,378 --> 00:05:49,275
 Pretty straight forward.
 很直接
 
-167
+160
 00:05:49,275 --> 00:05:51,101
 So do a quick run.
 做一个快速运行
 
-168
+161
 00:05:51,101 --> 00:05:52,500
-Is that okay?   Yeah, that sounds good.
-是,好吗?    是的,听起来不错
+Is that okay? Yeah, that sounds good.
+是,好吗? 是的,听起来不错
 
-169
+162
 00:05:53,300 --> 00:05:54,825
 Alright, now there's a moment here.
 好的,现在在这里需要一点时间
 
-170
+163
 00:05:54,825 --> 00:05:57,025
 One one thousand, two one thousand, three.
 一秒，两秒，三···
 
-171
-00:05:57,138 --> 00:05:59,124
+164
+00:05:58,200 --> 00:05:59,124
 Do you know what I was doing?
 你知道我在干了什么吗?
 
-172
+165
 00:05:59,124 --> 00:06:00,786
 Why did it take 3 seconds to say 'hello world'?
 为什么需要3秒说 "hello world"?
 
-173
+166
 00:06:00,786 --> 00:06:02,657
 This is the first time you're running the application.
 这是第一次你运行应用程序
 
-174
+167
 00:06:02,657 --> 00:06:04,001
-It's got to build it    Yes
-需要时间去编译  是的
+It's got to build it Yes
+需要时间去编译，是的
 
-175
+168
 00:06:04,001 --> 00:06:06,849
 I've been doing this at the command line
 我这样在命令行做
 
-176
+169
 00:06:06,849 --> 00:06:08,417
 We don't want to spend a lot of time with the command line
 我们不想花很多时间在命令行上
 
-177
+170
 00:06:08,417 --> 00:06:08,641
 No.
-No.
+No
 
-178
+171
 00:06:08,641 --> 00:06:10,625
 So shall we look at it at code?
 所以我们要看代码?
 
-179
+172
 00:06:10,625 --> 00:06:12,212
 So we'll use Visual Studio Code.
 我们将使用 Visual Studio Code
 
-180
+173
 00:06:12,212 --> 00:06:14,369
 It's worth pointing out if I zoom in down here,
 值得说明的是如果我下面放大
 
-181
+174
 00:06:14,369 --> 00:06:19,777
 that I've got both Visual Studio 2017 which is a Windows IDE
-可以看到我有一个 Windows IDE：Visual Studio 2017
+可以看到我有一个 Windows IDE:Visual Studio 2017
 
-182
+175
 00:06:19,777 --> 00:06:23,393
 And I've got Visual Studio Code which is across platform IDE
-以及我有 新的跨平台 IDE: Visual Studio Code
+以及我有新的跨平台 IDE: Visual Studio Code
 
-183
+176
 00:06:23,393 --> 00:06:26,834
 If you're on a Mac it's a text editor, it's a code editor
-如果你在 Mac 上它是一个文本编辑器 也是一个代码编辑器
+如果你在 Mac 上它是一个文本编辑器，也是一个代码编辑器
 
-184
+177
 00:06:26,834 --> 00:06:28,418
-Yeah.   It's a little bit less stuff
-是啊。  它有很少的组成部分
+Yeah. It's a little bit less stuff
+是啊。 它有很少的组成部分
 
-185
+178
 00:06:28,418 --> 00:06:30,338
 but it's very light weight and
 和很轻的量级
 
-186
+179
 00:06:30,338 --> 00:06:31,970
 it's crossed platforms so we use that.
 他可以跨平台，因此我们使用它
 
-187
+180
 00:06:31,970 --> 00:06:37,730
 Now I'm gonna type code., and dot is the current folder.
 现在我要输入 "code." 在文件夹的路径下
 
-188
+181
 00:06:37,730 --> 00:06:40,946
 And, it's actually built in now, right, correct?
 它会在这编译,对的？
 
-189
+182
 00:06:40,946 --> 00:06:41,800
 Yeah, I'll show you actually.
 是啊,我现在将向你展示。
 
-190
+183
 00:06:41,800 --> 00:06:43,079
 We'll go ahead and run that
 我们将继续运行
 
-191
+184
 00:06:43,079 --> 00:06:46,409
 And then there's a command inside of Visual Studio Code
 然后在 Visual Studio Code 中调用命令
 
-192
+185
 00:06:46,409 --> 00:06:48,281
 that adds it to the path.
 将其添加到路径
 
-193
+186
 00:06:48,281 --> 00:06:51,257
 So it's something that you wanna do after you've run code
 这就是运行代码后将要做的事情
 
-194
+187
 00:06:51,257 --> 00:06:52,313
 the first time.
 这已经不是第一次了
 
-195
+188
 00:06:52,313 --> 00:06:54,281
 So we'll go ahead and run that.
 我们会继续运行
 
-196
-00:06:54,281 --> 00:07:00,377
+189
+00:06:56,400 --> 00:07:00,377
 Okay, Visual Studio code opens that up, and then this is
 Okay, Visual Studio code 打开了，接下来
 
-197
+190
 00:07:00,377 --> 00:07:01,961
 interesting Visual Studio code pops up a warning here, hey,
 有趣的是 Visual Studio Code 会弹出一个警告,嘿
 
-198
+191
 00:07:01,961 --> 00:07:07,112
 stuff I need to build this is missing,
 我需要获取一些没有的东西
 
-199
+192
 00:07:07,112 --> 00:07:09,416
 do you want me to add them?
 你想让我获取他们吗?
 
-200
+193
 00:07:09,416 --> 00:07:11,096
 And then it's got a yes and no over here.
-然后它有一个“是”和“不是”
+然后它有一个 yes 和 no
 
-201
+194
 00:07:11,096 --> 00:07:16,884
 So watch on the left side here where it says bin and obj.
-看一下左边这一列  出现了 bin 和 obj 文件夹
+看一下左边这一列 出现了 bin 和 obj 文件夹
 
-202
+195
 00:07:16,884 --> 00:07:19,154
 I'm gonna hit yes, but you're gonna watch here on the left.
 点击是的,但是你要看着左边一点呀
 
-203
+196
 00:07:21,625 --> 00:07:22,418
 There it is.
 在这里。
 
-204
+197
 00:07:22,418 --> 00:07:22,898
 See?
 看到了吗?
 
-205
+198
 00:07:22,898 --> 00:07:27,074
 So, this is just some stuff that .vscode created for itself.
 所以,这只些东西 .vscode 是 IDE 为自己创建的
 
-206
+199
 00:07:27,074 --> 00:07:29,282
 It's not about C#, just about .vscode.
-这不是关于 C#,只是对于 .vscode
+这不是关于 C# ,只是对于 .vscode
 
-207
+200
 00:07:29,282 --> 00:07:33,266
 In order to be able to launch this app,
 为了能够启动这个程序
 
-208
+201
 00:07:33,266 --> 00:07:34,850
 these are just configuration files
 这些只是配置文件
 
-209
+202
 00:07:34,850 --> 00:07:37,106
 So you don't need to worry about those
 所以你不需要担心这些
 
-210
+203
 00:07:37,154 --> 00:07:39,355
 But that is something that you want to say yes to
 但关于这些你可能想说
 
-211
+204
 00:07:39,355 --> 00:07:40,841
 So if someone's doing this for
 如果有人这样做了
 
-212
+205
 00:07:40,841 --> 00:07:43,529
 the first time, say yes, but don't touch?
 在第一次的时候,问你 yse 的时候,如果不要碰的话?
 
-213
+206
 00:07:43,529 --> 00:07:45,161
 Don't touch, don't worry about it.
 不要碰,别担心
 
-214
+207
 00:07:45,161 --> 00:07:46,553
 Nothing you need to do in there.
 你需要做的
 
-215
+208
 00:07:46,553 --> 00:07:48,473
 And then you had mentioned about the path.
 你要记得你的项目路径
 
-216
+209
 00:07:48,473 --> 00:07:51,689
 If you hit Ctrl+P.
 如果你摁 Ctrl+P
 
-217
-00:07:51,689 --> 00:07:57,401
+210
+00:07:53,433 --> 00:07:57,401
 I think it's Cmd+P or fancy macintosh button p
-我觉得如果用的Mac可能是需要摁Cmd+P
+我觉得如果用的 Mac 可能是需要摁 Cmd+P
 
-218
+211
 00:07:57,401 --> 00:08:00,281
 It is Cmd+P
 就是 Cmd+P
 
-219
+212
 00:08:00,281 --> 00:08:01,625
 Cmd+P, is that what it's called?
-Cmd + P,确实是这个吗?
+Cmd+P ,确实是这个吗?
 
-220
+213
 00:08:01,625 --> 00:08:02,393
-Cmd+P, is that what it's called?
-Yeah.
-Cmd + P,确实是这个吗?
-Yeah
+Cmd+P, is that what it's called?Yeah.
+Cmd + P,确实是这个吗?是的~
 
-221
+214
 00:08:02,393 --> 00:08:04,529
 There's a bunch of actions, so that brings up this palette.
 有很多快捷键,能够唤出这个提示盘
 
-222
+215
 00:08:04,529 --> 00:08:06,641
 I just think P for pallet, and
 我只是记得P可以唤出来
 
-223
+216
 00:08:06,641 --> 00:08:10,625
 then if you say what is this here?
 然后，该怎么说呢?
 
-224
+217
 00:08:10,625 --> 00:08:11,585
 The greater than symbol
 这是一个非常好的标志
 
-225
+218
 00:08:11,911 --> 00:08:14,167
 Yeah. I think it's called
 是啊。我觉得要输入
 
-226
+219
 00:08:14,975 --> 00:08:17,972
 is it add path?
 添加路径吗?
 
-227
+220
 00:08:20,925 --> 00:08:21,750
 Where is it?
 在哪里?
 
-228
+221
 00:08:21,750 --> 00:08:23,146
 There's a bunch of commands in here and
 在这里,有很多命令
 
-229
+222
 00:08:23,146 --> 00:08:26,850
 one of them adds code to the path
 其中一个将代码添加到路径
 
-230
+223
 00:08:27,600 --> 00:08:29,274
 Maybe it's happening automatically now, but
 现在也许是自动发生的,但
 
-231
+224
 00:08:29,274 --> 00:08:29,983
 I did that once
 我这样做一次
 
-232
+225
 00:08:29,983 --> 00:08:32,150
 You can see also here that there's other options like your
 在这里你也可以看到其他喜欢你的选择
 
-233
+226
 00:08:32,150 --> 00:08:35,734
 color theme and the default shell and things like that
 颜色主题和默认的 shell 之类的东西
 
-234
+227
 00:08:35,734 --> 00:08:39,158
 Yeah, and the VS code website has really good documentation
-是啊,VSCode 网站有很多好的文档
+是啊, VSCode 网站有很多好的文档
 
-235
+228
 00:08:39,190 --> 00:08:42,646
 about all the little bitty internals that are happening
 关于在编辑器中的很多
 
-236
+229
 00:08:42,646 --> 00:08:45,014
 on the editor
 细碎的内容说明
 
-237
+230
 00:08:45,046 --> 00:08:48,278
->> Yeah, it's incredibly easy to edit, to modify
-> >是啊,会让它非常容易编辑、修改
+Yeah, it's incredibly easy to edit, to modify
+是啊,会让它非常容易编辑、修改
 
-238
+231
 00:08:48,438 --> 00:08:50,422
 to change the colors, the behavior
 改变颜色,行为
 
-239
+232
 00:08:50,422 --> 00:08:52,662
 So yeah, feel free to explore
 所以,随意探索
 
-240
+233
 00:08:52,694 --> 00:08:54,262
 That's beyond the scope of what we're gonna do.
 这就超出了我们要宣讲的范围了
 
-241
+234
 00:08:54,262 --> 00:08:57,825
 I'm just gonna double-click, though, on Program.cs,
 不过,我要双击 Program.cs
 
-242
+235
 00:08:57,825 --> 00:08:59,393
 and I'll zoom in a little bit
 我要放大一点
 
-243
+236
 00:08:59,393 --> 00:09:02,209
 And we've got our application right here.
 我们还有我们的应用程序在这呢！
 
-244
+237
 00:09:02,209 --> 00:09:03,585
 And I think it's always good for
 我觉得大家可能对
 
-245
+238
 00:09:03,585 --> 00:09:05,793
 people to play around with the Console.WriteLine.
 Console.WriteLine() 很熟悉哈
 
-246
+239
 00:09:05,825 --> 00:09:07,361
 Put your name in it.
 把你的名字协写上
 
-247
+240
 00:09:07,393 --> 00:09:08,225
 Run it again
 再运行一下
 
-248
+241
 00:09:08,289 --> 00:09:12,865
 Remove the semicolon and see what kind of errors you get
 先删除分号，看看到你得到什么样的错误
 
-249
+242
 00:09:12,865 --> 00:09:15,201
 It's a really good way to get comfortable with the language
 这真是一个熟悉语言的好方法
 
-250
+243
 00:09:15,233 --> 00:09:18,273
 Now I can make a change, hit Ctrl+S
-现在我可以做出改变,点击Ctrl + S
+现在我可以做出改变,点击 Ctrl + S
 
-251
+244
 00:09:18,305 --> 00:09:26,081
 I could Alt+Tab back over to here, type dotnet run again
-我可以Alt + Tab切回到这里来,再次输入 dotnet run
+我可以 Alt+Tab 切回到这里来,再次输入 dotnet run
 
-252
+245
 00:09:26,113 --> 00:09:28,321
 It will build, there's that pause
 它将编译,停了下来
 
-253
+246
 00:09:28,353 --> 00:09:30,273
 Then it runs, says Hello Scott
 然后它运行,显示 "Hello Scott"
 
-254
+247
 00:09:30,273 --> 00:09:33,089
 Then I could Alt+Tab back over here, but
 然后我可以 Alt + Tab 回来这里,但是
 
-255
+248
 00:09:33,121 --> 00:09:34,209
 that can get a little tedious.
 可能大家都知道了
 
-256
+249
 00:09:34,305 --> 00:09:37,441
 Yeah, so is there something in Visual Studio Code that
 是啊,所以在 Visual Studio Code 里可以
 
-257
+250
 00:09:37,441 --> 00:09:38,049
 people can use now?
 直接执行运行吗?
 
-258
+251
 00:09:38,049 --> 00:09:39,585
 Remember when I was over here,
 请记住我在这里的时候
 
-259
+252
 00:09:39,585 --> 00:09:43,553
 one of the options was Terminal: Select Default Shell.
-其中一个选项是终端:选择默认的Shell
+其中一个选项是终端:选择默认的 Shell
 
-260
+253
 00:09:43,585 --> 00:09:43,969
 Yeah
 Yeah
 
-261
+254
 00:09:43,969 --> 00:09:47,937
 I can hit Ctrl and I think it's called the tilde
-摁着Ctrl，我觉得这叫做波浪号吧
+摁着 Ctrl，我觉得这叫做波浪号吧
 
-262
+255
 00:09:47,937 --> 00:09:50,657
 Yeah, you mean the squiggly thing?
 啊，你是说弯弯曲曲的东西?
 
-263
+256
 00:09:50,657 --> 00:09:52,321
-The squiggly thing  Yeah, it's a tilde
-就是你说的这个  是啊,这是一个波浪号
+The squiggly thing Yeah, it's a tilde
+就是你说的这个 是啊,这是一个波浪号
 
-264
+257
 00:09:52,321 --> 00:09:54,017
 I always called it
 我总是叫它
 
-265
+258
 00:09:54,017 --> 00:09:55,745
 the squiggly thing until I saw it in a documentation
 弯弯曲曲地的东西,直到我在一个文档看到它
 
-266
+259
 00:09:55,745 --> 00:09:57,843
 I think our Spanish friends would not call it that
 我认为我们的西班牙朋友不会这么称呼它
 
-267
+260
 00:09:57,843 --> 00:09:59,571
 But yes-
 但，还真是！
 
-268
+261
 00:09:59,571 --> 00:10:01,395
 The character that goes over
 性格太直爽了
 
-269
+262
 00:10:01,395 --> 00:10:02,323
 the top of the enye.
 在顶部
 
-270
+263
 00:10:02,323 --> 00:10:04,659
 Yeah. So, you hit Ctrl+~ and
-Yeah. 那么 摁着 Ctrl+~ 
+Yeah. 那么 摁着 Ctrl+~
 
-271
+264
 00:10:04,691 --> 00:10:07,635
-you can, of course  Select your shell.
-当然你可以  选择您的 shell
+you can, of course Select your shell.
+当然你可以 选择您的 shell
 
-272
+265
 00:10:07,635 --> 00:10:09,715
 Select that your own way, you can pick your own shell.
 选择你自己的方式,你可以选择你自己的 shell。
 
-273
+266
 00:10:09,715 --> 00:10:11,027
 I am using PowerShell in this case.
 在这种情况下我用 PowerShell
 
-274
+267
 00:10:11,027 --> 00:10:16,925
 Now I'm actually in a little command line prompt within
 现在我会用一些命令行提示符来
 
-275
+268
 00:10:16,925 --> 00:10:18,355
 Visual Studio Code itself
 表示 Visual Studio Code 自身
 
-276
+269
 00:10:18,355 --> 00:10:24,481
 So now, rather than having to go and say, Alt+Tab, and
 所以现在,不必再去 Alt + Tab
 
-277
+270
 00:10:24,481 --> 00:10:26,545
 then do that, I can do it all from here, okay?
 这样做,我能做的一切都从这里开始,好吗?
 
-278
+271
 00:10:26,545 --> 00:10:30,305
 So there's my Hello Scott right there, okay?
 所以让我们 "Hello Scott",okey?
 
-279
+272
 00:10:31,361 --> 00:10:32,306
 That's one way to do it,
 这是一种操作的方法
 
-280
+273
 00:10:32,306 --> 00:10:36,161
 but still I'd like to do some interactive debugging
 但是我想做一些交互式的调试
 
-281
+274
 00:10:36,161 --> 00:10:37,700
 I'd like to do something a little bit more sophisticated
 来做一些更复杂的
 
-282
+275
 00:10:37,700 --> 00:10:38,468
 than that, wouldn't I?
 那么, 我们能做些什么呢?
 
-283
+276
 00:10:38,468 --> 00:10:39,764
 Yeah.
 Yeah.
 
-284
+277
 00:10:39,764 --> 00:10:41,200
 So I'm just gonna move the mouse over in the left hand,
 我要移动鼠标到左边
 
-285
+278
 00:10:41,200 --> 00:10:42,611
 you see this red dot.
 你看到这个红点
 
-286
+279
 00:10:43,667 --> 00:10:44,963
 Yeah, that's a breakpoint.
 是,这是一个断点
 
-287
+280
 00:10:44,963 --> 00:10:47,987
 Yeah, and I click on it and make a break point right here.
 是啊,我点击它,来打断他
 
-288
+281
 00:10:47,987 --> 00:10:50,819
 And then I'm gonna go and click on the little bug.
 然后我要去点击 Debug
 
-289
+282
 00:10:50,819 --> 00:10:54,419
 Well, that's pretty intuitive actually.
 嗯,很直观
 
-290
+283
 00:10:54,467 --> 00:10:56,100
 I think so because there's going to be bugs,
 我是这样感觉的,因为会有错误
 
-291
+284
 00:10:56,275 --> 00:10:58,306
 I know that for a fact.
 这是一个事实
 
-292
+285
 00:10:58,306 --> 00:11:00,203
 Now this text right here,
 在这个文本框这
 
-293
+286
 00:11:00,203 --> 00:11:01,643
 this .NET Core launch,
 选择 .NET Core launch
 
-294
+287
 00:11:01,643 --> 00:11:06,107
 the way that it knows to do that is because I said yes earlier.
 它知道我们要干什么，因为我们已经配置了
 
-295
+288
 00:11:06,107 --> 00:11:07,115
 To the launch.
 选择了 launch.
 
-296
+289
 00:11:07,115 --> 00:11:11,051
 If I didn't say yes, I would not be able to do the debugging.
 如果我不答应,我将无法进行调试。
 
-297
+290
 00:11:11,051 --> 00:11:14,699
 Okay, and Visual Studio Code can do other languages as well,
-好,Visual Studio Code 可以使用其他语言,
+好,Visual Studio Code 可以使用其他语言
 
-298
+291
 00:11:14,699 --> 00:11:16,427
 like Node and Python and things like that.
 像 Node 和 Python 之类
 
-299
+292
 00:11:16,427 --> 00:11:18,375
 So that file will be different depending on what
 文件的不同这取决于
 
-300
+293
 00:11:18,375 --> 00:11:19,571
 language you're using.
 你使用的语言
 
-301
+294
 00:11:19,571 --> 00:11:21,155
 All right, so I'll hit Start Debugging.
 好的,我会开始调试
 
-302
+295
 00:11:21,155 --> 00:11:25,283
 And then it's gonna go and build it.
 然后它会去编译它
 
-303
+296
 00:11:25,283 --> 00:11:32,291
 And it's thinking, and it's thinking, and there you go.
 运行~ 运行~ 然后他就会跑起来啦
 
-304
+297
 00:11:32,291 --> 00:11:34,835
 So now we have stopped the application
 现在我们的应用程序在显示
 
-305
+298
 00:11:34,835 --> 00:11:36,707
 before we said Hello World.
 Hello World 之前就会停掉
 
-306
+299
 00:11:37,375 --> 00:11:38,771
 It's just sitting right here, and
 程序会直接停在这里
 
-307
+300
 00:11:38,819 --> 00:11:42,611
 I can hover over different variables.
 我可以看到不同的变量
 
-308
+301
 00:11:42,611 --> 00:11:44,003
 I can see if there's any local variables.
 我可以看到如果有任何局部变量
 
-309
+302
 00:11:44,003 --> 00:11:45,347
 Actually, we can do this real quick.
 我们就可以很方便的查看
 
-310
+303
 00:11:45,347 --> 00:11:46,259
 Let's hit Stop.
 让我们停一下
 
-311
-00:11:46,259 --> 00:11:51,539
+304
+00:11:46,259 --> 00:11:54,625
 We'll say var i = "Maria", var j = 9
 让我们写上 var i = "Maria", var j = 9
 
-312
-00:11:51,587 --> 00:11:59,411
+305
+00:11:57,875 --> 00:11:59,411
 Hit Debug again.
 再次点击调试
 
-313
-00:11:59,411 --> 00:12:05,555
+306
+00:12:04,665 --> 00:12:05,555
 See?
 看到了吗?
 
-314
+307
 00:12:05,555 --> 00:12:06,611
 Yeah. And
 Yeah
 
-315
+308
 00:12:06,611 --> 00:12:09,923
 then we've got debugging, can look at our call stack and
 我们在调试中可以看到我们的调用堆栈
 
-316
+309
 00:12:09,971 --> 00:12:11,747
 it's a whole interactive experience.
 这提供了一个完整的互动体验
 
-317
+310
 00:12:11,747 --> 00:12:13,187
 It's pretty rich.
 很丰富
 
-318
+311
 00:12:13,235 --> 00:12:14,243
 It is pretty rich, okay,
 确实是很丰富的, okay
 
-319
+312
 00:12:14,243 --> 00:12:16,595
 given that it is a cross platform code editor,
 考虑到这是一个跨平台的代码编辑器
 
-320
+313
 00:12:16,595 --> 00:12:17,747
 it's pretty fantastic.
 这是非常神奇的
 
-321
+314
 00:12:17,747 --> 00:12:22,355
 And it's also worth pointing out not just the squigglies
 说明一下哈，这不仅能给我们
 
-322
+315
 00:12:22,355 --> 00:12:24,035
 that it's giving us, if we look here.
 提示,如果我们看这里
 
-323
+316
 00:12:24,035 --> 00:12:29,363
 There's some warnings like is it saying, well, you used i but
 比如它会提示有一些错误,你使用一个变量
 
-324
+317
 00:12:29,363 --> 00:12:30,371
 you never did anything with it?
 但是你却从没用它作过什么？
 
-325
+318
 00:12:30,371 --> 00:12:35,363
 But also sometimes you can get, what's the word,
 但有时这种事也时可以被允许,这个变量的属性
 
-326
+319
 00:12:35,363 --> 00:12:39,635
 what is this here, what's that called?
 这是什么,应该怎么命名?
 
-327
+320
 00:12:39,635 --> 00:12:40,835
 The light bulb.
 灯泡提示
 
-328
+321
 00:12:40,835 --> 00:12:41,507
 The light bulb.
 灯泡提示
 
-329
+322
 00:12:41,507 --> 00:12:44,579
 So I can go and say, I wanna extract that method or
 所以我可以去说,我想获取方法或
 
-330
+323
 00:12:44,579 --> 00:12:47,651
 remove that variable, right?
 删除该变量,对吧?
 
-331
+324
 00:12:47,651 --> 00:12:49,283
 So you can do little refactorings.
 所以你可以进行小的重构
 
-332
+325
 00:12:49,283 --> 00:12:52,259
 It's going and saying, well, this is really use for nothing.
 它会说,嗯,这确实是没有使用
 
-333
+326
 00:12:52,259 --> 00:12:54,371
 There's no reason for that line to be there.
 这条线没有理由存在。
 
-334
+327
 00:12:54,371 --> 00:12:56,819
 And I can click on this and it will fix it.
 我可以点击,它会解决它
 
-335
+328
 00:12:56,819 --> 00:12:58,499
 And in this case, it will fix it by removing you entirely.
 在这种情况下,它将通过删除这个变量解决它
 
-336
+329
 00:12:58,547 --> 00:12:59,411
 Sorry.
 Sorry.
 
-337
+330
 00:13:00,467 --> 00:13:03,107
 That sounded rather intentional.
 听起来,而有意为之
 
-338
+331
 00:13:03,107 --> 00:13:05,699
 That was not intentional.
 那不是故意的
 
-339
+332
 00:13:05,699 --> 00:13:07,763
 All right, so
-好的,
+好的
 
-340
+333
 00:13:07,811 --> 00:13:10,115
 Visual Studio Code will be what we'll use for a little while and
 我们将使用一会儿 Visual Studio Code
 
-341
+334
 00:13:10,115 --> 00:13:13,379
 then we'll eventually graduate to Visual Studio proper.
-然后 我们会适当的结束Visual Studio这部分
+然后 我们会适当的结束 Visual Studio 这部分
 
-342
+335
 00:13:13,379 --> 00:13:14,627
-Yeah.  Which has even more
+Yeah. Which has even more
 是啊。还有更多的
 
-343
+336
 00:13:14,627 --> 00:13:15,683
 features, all right?
 特性呢,对吧?
 
-344
+337
 00:13:15,683 --> 00:13:18,659
 So that gives you a sense of, and actually, I'm sorry.
 所以给你的感觉上,欸~,我很抱歉
 
-345
+338
 00:13:18,707 --> 00:13:19,811
 We never talked about IntelliSense.
 我们还没有谈论智能感知呢
 
-346
+339
 00:13:19,859 --> 00:13:23,315
 Yes so, let's add a read line, cuz one of the first
 是的,让我们添加一个行,因为第一行
 
-347
+340
 00:13:23,315 --> 00:13:25,235
 things that you do is input and output, right?
 你做的是输入和输出,对吧?
 
-348
+341
 00:13:25,235 --> 00:13:27,731
 Uh-huh, so WriteLine is our output.
-嗯,所以 WriteLine 是我们的输出
+嗯,所以 WriteLine() 是我们的输出
 
-349
+342
 00:13:27,731 --> 00:13:30,227
-Yeah.   I'll start typing Console and
-是啊。  我们们需要打上 Console 
+Yeah. I'll start typing Console and
+是啊。 我们们需要打上 Console
 
-350
+343
 00:13:30,275 --> 00:13:32,483
-you'll notice that it's    Some, yeah, Console.
-你会发现它能够出现  Console
+you'll notice that it's Some, yeah, Console.
+你会发现它能够出现 Console
 
-351
+344
 00:13:32,483 --> 00:13:33,971
 It's giving me IntelliSense
 给我们智能感知
 
-352
+345
 00:13:33,971 --> 00:13:35,699
 Not only that, it's also for beginners.
 不仅如此,它能够帮助初学者
 
-353
+346
 00:13:35,699 --> 00:13:37,907
 It's great to see, it also shows you what that means.
 显示语句是什么意思
 
-354
+347
 00:13:37,907 --> 00:13:39,971
 Yeah, you're getting like a little bit of
 是啊,这有点看起来像是
 
-355
+348
 00:13:39,971 --> 00:13:40,787
 documentation there, that's right.
 文档,对吧
 
-356
-00:13:40,835 --> 00:13:43,907
-It will say Console., see this is nice.
-它会打出Console。,看到这个
+349
+00:13:40,825 --> 00:13:40,835
+它会打出 Console ,看到这个
 
-357
+350
+00:13:40,835 --> 00:13:43,897
+It will say Console., see this is nice.
+它会打出 Console ,看到这个
+
+351
+00:13:43,897 --> 00:13:43,907
+It will say Console., see this is nice.
+
+352
 00:13:43,907 --> 00:13:49,187
 And you said Read line, and this is coming out of the docs here
 你说读一行,这是这里的文档
 
-358
+353
 00:13:49,187 --> 00:13:51,155
 and it will tell you the things that could go wrong.
 它会告诉你程序可能出错
 
-359
+354
 00:13:51,155 --> 00:13:55,331
 ReadLine, reads the next characters from the input
-从输入 ReadLine,读取下一个字符
+从输入 ReadLine ,读取下一个字符
 
-360
+355
 00:13:55,331 --> 00:13:55,955
 stream.
 下一个字符流
 
-361
-00:13:56,003 --> 00:14:01,571
-Yeah, and notice the squiggly, expected a,
-是的,注意这里
+356
+00:13:56,003 --> 00:14:02,375
+Yeah, and notice the squiggly, expected a semicolon, go like that, cool
+是的,注意这里的分号
 
-362
-00:14:01,571 --> 00:14:06,035
-semicolon, go like that, cool, and
-分号,就像这样,很酷
-
-363
-00:14:06,035 --> 00:14:08,195
-then I'll do this from the command line over here.
+357
+00:14:03,846 --> 00:14:08,195
+and then I'll do this from the command line over here.
 然后我会从命令行这样做
 
-364
+358
 00:14:08,195 --> 00:14:09,011
-I'll say dotnet run.
-让dotnet 跑起来
+I'll say dotnet run
+让 dotnet 跑起来
 
-365
+359
 00:14:09,059 --> 00:14:12,899
 One 1,000, two 1,000, three, and
 一秒,两秒,3···
 
-366
+360
 00:14:12,947 --> 00:14:16,643
 now it's paused right cuz it's waiting for me to read the line.
 现在停了下来因为它在等我输入
 
-367
+361
 00:14:16,643 --> 00:14:17,507
 And it did
 它做了
 
-368
+362
 00:14:17,507 --> 00:14:20,531
 Okay, so you've got IntelliSense,
 好的,所以你有智能感知功能
 
-369
+363
 00:14:20,531 --> 00:14:21,539
 you've got debugging.
 你有调试功能
 
-370
+364
 00:14:21,539 --> 00:14:24,755
 All of that, of course, being driven by this here.
 所有的这些，当然,是在这里使用的
 
-371
+365
 00:14:24,755 --> 00:14:25,763
 And just very briefly,
 而且非常简单
 
-372
+366
 00:14:25,811 --> 00:14:27,587
 cuz it's nice to see some of the internals.
-看到一些内部的操作是很友好的
+可以看到这些内部的操作是很友好的
 
-373
-00:14:28,650 --> 00:14:32,650
+367
+00:14:28,250 --> 00:14:32,650
 When we clicked here, remember that this text here,
 当我们点击这里,记住这个文本
 
-374
+368
 00:14:32,650 --> 00:14:37,920
 .NET Core Launch, comes out of this config file right here.
-.NET Core Launch出现的这个配置文件
+.NET Core Launch 出现的这个配置文件
 
-375
+369
 00:14:41,275 --> 00:14:43,636
 Right, the reason I'm showing you that is it's important to
 真的，我给你展示这个的原因是很重要的
 
-376
+370
 00:14:43,636 --> 00:14:44,788
 know that there's no magic
 要明白这并不是魔术
 
-377
+371
 00:14:44,788 --> 00:14:46,324
 We are not hiding anything from you, all right?
 我们没有对你隐藏任何东西,对吧?
 
-378
+372
 00:14:46,372 --> 00:14:50,644
 You might not necessarily ever wanna change that, but
-你未必被这些东西感冒啦,但是
+你未必对这些东西感冒啦,但是
 
-379
+373
 00:14:50,692 --> 00:14:52,800
 it's nice to know that the thing that drives
 明白一些关于这些的事是很好的
 
-380
+374
 00:14:52,800 --> 00:14:57,016
 the drives the debugger underneath is just a text file.
 像这个调试器的运作只是依据一个文本文件
 
-381
+375
 00:14:57,016 --> 00:15:00,700
 And here it's going to go and run our program.
 这里会运行我们的程序
 
-382
+376
 00:15:00,712 --> 00:15:05,600
 When we say dotnet run, our program is really here,
-当我们执行 dotnet run,我们的程序会在这里准备好
+当我们执行 dotnet run ,我们的程序会在这里准备好
 
-383
+377
 00:15:05,600 --> 00:15:08,055
 myconsoleapp.dll
 myconsoleapp.dll
 
-384
+378
 00:15:08,975 --> 00:15:10,900
 And it's gonna go and call that.
 它会去调用
 
-385
+379
 00:15:11,000 --> 00:15:11,776
 And then if we wanna go and
 如果我们想要
 
-386
+380
 00:15:11,776 --> 00:15:15,520
 attach to the debugger, there's also the ability to run the app.
 获得调试,还有运行应用程序的能力
 
-387
+381
 00:15:15,520 --> 00:15:18,352
 And then after the fact, attach to it and
 就需要连接到它
 
-388
+382
 00:15:18,400 --> 00:15:19,984
 then debug it once it's already running.
 一旦完成，就可以运行调试
 
-389
+383
 00:15:19,984 --> 00:15:23,344
 All of that is possible with Visual Studio Code.
 这一切在 Visual Studio Code 都是可能的
 
-390
-00:15:23,344 --> 00:15:26,597
+384
+00:15:23,344 --> 00:15:26,869
 I think it's also worth showing the audience where
 我认为值得向观众展示的地方
 
-391
-00:15:26,597 --> 00:15:27,365
-to go and
-就是
+385
+00:15:26,869 --> 00:15:29,375
+to go and read more about what's happening with Visual Studio Code.
+就是了解有关 Visual Studio Code 更多的事情
 
-392
-00:15:27,365 --> 00:15:29,375
-read more about what's happening with Visual Studio Code.
-了解有关Visual Studio Code更多的事情
-
-393
+386
 00:15:29,376 --> 00:15:39,312
 So Visual Studio Code is up at code.visualstudio.com.
-Visual Studio Code可以在code.visualstudio.com中访问
+Visual Studio Code 可以在 code.visualstudio.com 中访问
 
-394
+387
 00:15:39,312 --> 00:15:43,920
 And this is a really rich marketplace as well for
 这里有一个非常丰富的插件
 
-395
+388
 00:15:43,920 --> 00:15:44,880
 extensions.
 扩展商店
 
-396
+389
 00:15:44,880 --> 00:15:45,408
 There's lots of stuff.
 有很多东西
 
-397
+390
 00:15:45,408 --> 00:15:47,376
 So you can Visual Studio for C# like we are, or
-我们可以为C#和Visual Studio,或
+我们可以为 C# 和 Visual Studio ,或
 
-398
+391
 00:15:47,376 --> 00:15:52,421
 Python or C++ or Go or a million different things, and
-Python或c++或Go或不同的语言,还有
+Python 或 c++ 或 Go 或不同的语言,还有
 
-399
+392
 00:15:52,421 --> 00:15:53,573
 their docs are really lovely.
 他们的文档也是很丰富的
 
-400
+393
 00:15:53,573 --> 00:15:56,597
 There's lots of different things you can learn about.
-有很多不同的东西可以学习
+有很多有趣的东西可以学习
 
-401
+394
 00:15:56,597 --> 00:16:01,013
 You can change styles, you can change behavior.
 你可以改变风格,改变行为
 
-402
+395
 00:16:01,013 --> 00:16:04,229
 You can integrate it with your source control like Git or DSTS.
-你可以把它与你的Git或DSTS这种源代码控制相互结合
+你可以把它与你的 Git 或 DSTS 这种源代码控制相互结合
 
-403
+396
 00:16:04,229 --> 00:16:07,781
 You can create your own extensions as well?
 您可以创建您自己的扩展吗?
 
-404
+397
 00:16:07,829 --> 00:16:09,173
 Yep, there's a whole section here,
 当然,这里是一个整体部分
 
-405
+398
 00:16:09,173 --> 00:16:11,237
 exactly, on extension authoring.
 没错,可以自己开发拓展插件
 
-406
+399
 00:16:11,237 --> 00:16:14,021
 I think my favorite extension would have to be
 我想我最喜欢的扩展需要
 
-407
+400
 00:16:14,021 --> 00:16:14,693
 the Slides Extension.
-Slides的扩展
+Slides 的扩展
 
-408
+401
 00:16:14,693 --> 00:16:15,413
 Have you seen that one?
 你见过那个吗?
 
-409
+402
 00:16:15,413 --> 00:16:16,613
-Slides?     I like the one with
-Slides?     我喜欢的一个
+Slides? I like the one with
+Slides? 我喜欢的一个
 
-410
+403
 00:16:16,613 --> 00:16:17,093
 the funky icons.
 时髦的图标
 
-411
-00:16:17,093 --> 00:16:20,487
+404
+00:16:17,093 --> 00:16:21,200
 This one here gives you fun
 这能给你一个
 
-412
-00:16:20,487 --> 00:16:24,850
-icons for all of your      I think they've moved some of
-有趣的图标     我认为他们已经移走了一些
+405
+00:16:21,200 --> 00:16:24,900
+icons for all of your I think they've moved some of
+有趣的图标 我认为他们已经移走了一些
 
-413
+406
 00:16:24,900 --> 00:16:27,960
 those experiences into actual Visual Studio now.
-这些体验现在融入了 Visual Studio。
+这些体验现在融入了 Visual Studio
 
-414
+407
 00:16:27,960 --> 00:16:28,440
 Some of these
 这些所有
 
-415
+408
 00:16:28,440 --> 00:16:31,638
 extensions end up becoming a part of Visual Studio itself.
-最终扩展成为一个 Visual Studio 本身的一部分。
+最终扩展成为一个 Visual Studio 本身的一部分
 
-416
+409
 00:16:31,638 --> 00:16:33,558
 So what's the one you like, slides?
-所以你觉得怎么样,Slides?
+所以你觉得怎么样, Slides?
 
-417
+410
 00:16:33,558 --> 00:16:36,975
 Yeah, so, you can actually write your PowerPoint slides.
 是啊,所以,你可以写下你的 Slides
 
-418
+411
 00:16:40,250 --> 00:16:42,085
 Where'd it go?
 哪里去了?
 
-419
+412
 00:16:42,085 --> 00:16:42,613
 I don't know.
 我不知道
 
-420
+413
 00:16:42,613 --> 00:16:43,189
 Uh-oh.
 Uh-oh.
 
-421
+414
 00:16:43,189 --> 00:16:48,133
 The one I like is Git Lens, G-I-T-L-E-N-S.
 我喜欢的是 Git Lens,G-I-T-L-E-N-S
 
-422
+415
 00:16:48,133 --> 00:16:49,813
 So that's weird.
 好奇怪呀
 
-423
+416
 00:16:49,861 --> 00:16:54,421
 Maybe their search isn't working today.
 今天的搜索这是不工作了嘛？
 
-424
+417
 00:16:54,421 --> 00:16:57,781
 It's actually Git Lens, with a space in between.
 其实 Git Lens 在中间啦
 
-425
+418
 00:16:57,781 --> 00:17:01,189
 So Git Lens is a great one that lets you have
 Git Lens 非常非常好用的的！
 
-426
+419
 00:17:01,189 --> 00:17:04,501
 annotations of who changed your code and when.
 让你知道什么时候，谁改动了你的代码
 
-427
+420
 00:17:04,501 --> 00:17:06,133
 Okay. So
 Okay. 那么
 
-428
+421
 00:17:06,133 --> 00:17:08,677
 similar to how you can do it in Visual Studio where you can
-类似于如何在VisualStudio中这样做
+类似于如何在 Visual Studio 中这样做
 
-429
+422
 00:17:08,677 --> 00:17:09,541
 actually look at everyone.
 在那里你可以真正地观察每个人
 
-430
+423
 00:17:09,541 --> 00:17:13,813
 Yeah, like blame, if you wanna see whose fault it was.
-是的，就像责备一样，如果你想知道是谁的错
+是的，就像监察一样，如果你想知道是谁的错
 
-431
+424
 00:17:13,813 --> 00:17:16,453
 So here you can see that it was Eric's fault two days ago, and
 所以两天前你可以看到这是埃里克的错
 
-432
+425
 00:17:16,453 --> 00:17:18,901
 he made a change from this to this.
 他改变了这一点
 
-433
+426
 00:17:18,901 --> 00:17:21,349
 Yeah, I've seen your name on a couple of those, too.
 是啊,我也看到你的名字了
 
-434
+427
 00:17:21,349 --> 00:17:21,778
 I'm kidding.
 我在开玩笑
 
-435
+428
 00:17:21,778 --> 00:17:22,605
 I have not.
-我没有
+没关系啦
 
-436
+429
 00:17:22,605 --> 00:17:25,200
 The one I was talking about was reveal.
 我刚才说的那个是显示的
 
-437
+430
 00:17:25,200 --> 00:17:26,132
 Reveal?
 显示?
 
-438
+431
 00:17:26,132 --> 00:17:30,303
 So if anyone sort of revealed JS, it enables you to actually
 如果任何人透露 JS,实际上它让你
 
-439
+432
 00:17:30,303 --> 00:17:33,508
-have a slide experience in the browser, so.      
-在浏览器中会有一个slide的记录
+have a slide experience in the browser, so.
+在浏览器中会有一个 slide 的记录
 
-440
+433
 00:17:33,508 --> 00:17:37,204
 Yeah, so you've got the ability to edit, markdown,
 是啊,所以你有编辑,获取拓展插件
 
-441
+434
 00:17:37,204 --> 00:17:37,876
 do all kinds of things.
 做各种事的能力
 
-442
+435
 00:17:37,876 --> 00:17:38,212
 Exactly
 是的
 
-443
+436
 00:17:38,212 --> 00:17:40,612
 So really can't recommend VS Code enough.
 并不是有理由 必须要用 VS Code
 
-444
+437
 00:17:40,612 --> 00:17:42,676
 But if you're just getting started like we are today,
 但是如果你今天像我们一样刚刚开始
 
-445
+438
 00:17:42,676 --> 00:17:45,076
 Visual Studio Code is gonna be your best bet for
 Visual Studio Code 将是你
 
-446
+439
 00:17:45,076 --> 00:17:47,092
 your editing and your debugging experience.
 编辑和调试体验的最佳选择
 
-447
+440
 00:17:47,092 --> 00:17:47,668
 And it is.
 是的
 
-448
+441
 00:17:47,716 --> 00:17:49,108
-All right.  All right.
-好吧。  好吧。
+All right. All right.
+好吧。 好吧
 
-449
+442
 00:17:49,108 --> 00:17:50,644
 We'll take a short break and we'll be right back.
-我们将一个短暂的休息,我们马上就回来。
+我们休息一会儿马上回来~
 
