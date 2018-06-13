@@ -6,12 +6,12 @@ So we looked at how to build our very first console application.
 2
 00:00:03,963 --> 00:00:07,755
 And one of the great things about the .NET community is
-另外有一好消息，我们在.NET社区中
+另外有一好消息，我们在 .NET 社区中
 
 3
 00:00:07,755 --> 00:00:10,107
 about the documentation that we have right now.
-已经有了相关的文档。
+已经有了相关的文档
 
 4
 00:00:10,155 --> 00:00:13,323
@@ -66,7 +66,7 @@ Yep and then you'll see there are different language guides.
 14
 00:00:38,475 --> 00:00:40,779
 We have VB, we have C#, we have F#.
-比如 VB, C#, 以及 F#
+比如 VB,C#, 以及 F#
 
 15
 00:00:40,827 --> 00:00:41,375
@@ -96,17 +96,17 @@ And how to call the methods, and
 20
 00:00:48,411 --> 00:00:50,235
 then the .NET core framework itself.
-以及.NET Core这个框架本身
+以及 .NET Core 这个框架本身
 
 21
 00:00:50,283 --> 00:00:53,451
 And all of those methods are available from C#,
-所有的这些方法都可以在C#,F#
+所有的这些方法都可以在 C#,F#
 
 22
 00:00:53,595 --> 00:00:55,275
 F# and in Visual Basic
-以及Visual Basic中调用
+以及 Visual Basic 中调用
 
 23
 00:00:55,323 --> 00:00:56,427
@@ -116,7 +116,7 @@ And it's really important for
 24
 00:00:56,427 --> 00:00:57,867
 people to actually learn the language a little bit more,
-人们实际上更多地学习语言
+我们一般是先学习某一语言
 
 25
 00:00:57,867 --> 00:01:00,891
@@ -141,20 +141,20 @@ And I ran it from the command line, and
 29
 00:01:07,899 --> 00:01:10,059
 then I opened it up in Visual Studio code.
-然后我通过Visual Studio Code打开这个项目
+然后我通过 Visual Studio Code 打开这个项目
 
 30
 00:01:10,107 --> 00:01:13,179
 Do I have to install that stuff to say hello world?
-我必须安装那些东西才能说Hello World吗？
+我必须安装那些东西才能出现 "Hello World" 吗？
 
 31
-00:01:13,323 --> 00:01:14,715
+00:01:13,179 --> 00:01:14,450
 No you don't anymore
 不，你不必这样了
 
 32
-00:01:14,715 --> 00:01:16,827
+00:01:14,450 --> 00:01:16,827
 we actually have something right in the documentation.
 实际上，在文档中我们已经有正确的方式
 
@@ -171,7 +171,7 @@ So C#
 35
 00:01:20,989 --> 00:01:23,927
 Quick Starts, it will drop you right into the Quick Start page.
-Quick Starts，它会直接进入 Quick Starts 的页面
+Quick Starts, 它会直接进入 Quick Starts 的页面
 
 36
 00:01:24,425 --> 00:01:26,750
@@ -191,7 +191,7 @@ It shows you some really fun examples that you can start
 39
 00:01:34,051 --> 00:01:35,683
 playing around to it, so if you, I've got
-从这里开始体验，如果你  我已经
+从这里开始体验，如果你 我已经
 
 40
 00:01:35,683 --> 00:01:38,131
@@ -216,7 +216,7 @@ Yep, or you can just click on the Copy as well.
 44
 00:01:43,795 --> 00:01:44,803
 Okay, click on Copy, hit Run.
-好吧，点击 Copy，点击 Run
+好吧，点击 Copy 点击 Run
 
 45
 00:01:44,851 --> 00:01:49,411
@@ -231,17 +231,17 @@ it brought the result over here.
 47
 00:01:50,659 --> 00:01:54,019
 So the .NET SDK is not installed on my machine.
-所以，.NET SDK 并没有安装在我的电脑上
+所以 .NET SDK 并没有安装在我的电脑上
 
 48
 00:01:54,019 --> 00:01:55,747
-No.     It's happening right here.
-没有    可它正在这里运行。
+No. It's happening right here.
+没有 可它正在这里运行。
 
 49
 00:01:55,747 --> 00:01:59,923
 Exactly and you can go in, and edit that and maybe.
-确切地说，你可以进去，编辑它，也许（误）
+确切地说，你可以进去，编辑它
 
 50
 00:01:59,923 --> 00:02:01,747
@@ -266,7 +266,7 @@ Absolutely
 54
 00:02:05,395 --> 00:02:06,979
 And I can mess with,
-我还可以更复杂一些（误）
+我还可以更复杂一些
 
 55
 00:02:07,027 --> 00:02:08,611
@@ -306,7 +306,7 @@ that's supposed to take 20 minutes at the very most.
 62
 00:02:23,059 --> 00:02:24,643
 Step by steps,
-一步一步来，
+一步一步来
 
 63
 00:02:24,643 --> 00:02:26,707
@@ -321,7 +321,7 @@ The editor that's working in the browser right now is in preview.
 65
 00:02:31,027 --> 00:02:35,443
 So if people see any bugs, we're really excited for
-所以如果人们发现任何错误，我们真的非常
+所以如果人们发现任何错误，我们真的很
 
 66
 00:02:35,443 --> 00:02:37,231
@@ -362,7 +362,7 @@ So if you go to github.com/dotnet
 73
 00:02:53,225 --> 00:02:54,750
 you'll come here to .NET foundation and
-你会看到.NET基金会以及
+你会看到 .NET 基金会以及
 
 74
 00:02:54,822 --> 00:02:57,750
@@ -397,7 +397,7 @@ Actually that is a good point
 80
 00:03:07,416 --> 00:03:12,054
 It's all there, you can go and look at the, coreclr and
-所有的东西都在那儿，你可以去看coreclr和
+所有的东西都在那儿，你可以去看 coreclr 和
 
 81
 00:03:12,102 --> 00:03:14,118
@@ -462,7 +462,7 @@ Or changing a bit of code that may be incorrect
 93
 00:03:39,414 --> 00:03:41,910
 Exactly. All right.
-没错   好的
+没错 好的
 
 94
 00:03:41,910 --> 00:03:45,558
@@ -537,7 +537,7 @@ We really do, actually
 108
 00:04:09,521 --> 00:04:13,121
 And There's one on every continent and
-而且每个大陆都有一个
+而且每个大洲都有一个
 
 109
 00:04:13,169 --> 00:04:15,233
@@ -546,8 +546,8 @@ you also have a show.
 
 110
 00:04:15,281 --> 00:04:17,921
-Yep     Called code conversation.
-是的     叫做 Code Conversation
+Yep Called code conversation.
+是的 叫做 Code Conversation
 
 111
 00:04:17,921 --> 00:04:20,273
@@ -577,7 +577,7 @@ that project
 116
 00:04:28,625 --> 00:04:29,105
 Mm-hm
-Mm-hm
+嗯
 
 117
 00:04:29,153 --> 00:04:31,169
@@ -607,7 +607,7 @@ There's about 1200 different meet ups locally
 122
 00:04:39,281 --> 00:04:42,065
 user groups they're not locally, rather world wide.
-参会者不光是本地的，而是来自全世界的
+参会者不光是来自本地的，而是来自全世界
 
 123
 00:04:42,113 --> 00:04:46,337
@@ -627,7 +627,7 @@ And if there is no one nearby you
 126
 00:04:50,225 --> 00:04:52,337
 you could even potentially Skype people.
-你甚至可以通过 Skype 参与（误）
+你甚至可以通过 Skype 参与
 
 127
 00:04:52,337 --> 00:04:53,537
@@ -677,7 +677,7 @@ the Quick Starts to run your C# programs in the browser.
 136
 00:05:12,833 --> 00:05:16,433
 Also a great way to maybe introduce your young people or
-这也是一个很好的方式介绍萌新（误）或者
+这也是一个很好的方式来介绍小白或者
 
 137
 00:05:16,433 --> 00:05:18,113
@@ -692,12 +692,12 @@ And then if you start at either GitHub or the .NET Foundation,
 139
 00:05:21,377 --> 00:05:23,297
 you can jump off to all of these different locations.
-你可以跳转到所有这些不同的页面。
+你可以跳转到所有这些不同的页面
 
 140
 00:05:23,297 --> 00:05:25,697
 And then one other thing worth pointing out,
-还有一件事值得指出，
+还有一件事值得指出
 
 141
 00:05:25,697 --> 00:05:30,833
@@ -717,7 +717,7 @@ there is a lot of great content that came out of .NET Conf.
 144
 00:05:36,161 --> 00:05:37,025
 Mm-hm
-Mm-hm
+嗯
 
 145
 00:05:37,025 --> 00:05:39,521
@@ -751,8 +751,8 @@ that you can learn some of the more advanced techniques.
 
 151
 00:05:53,537 --> 00:05:54,065
-Yeah     So
-是的     那么
+Yeah So
+是的 那么
 
 152
 00:05:54,113 --> 00:05:56,609
@@ -772,7 +772,7 @@ Exactly. All right
 155
 00:06:01,225 --> 00:06:02,705
 take a quick break, we'll come back and make a web application.
-快点休息一下，我们会回来做一个 Web 应用
+稍作休息，我们会回来做一个 Web 应用
 
 156
 00:06:02,705 --> 00:06:04,001
