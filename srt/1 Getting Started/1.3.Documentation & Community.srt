@@ -331,7 +331,6 @@ you guys to give us any feedback then.
 67
 00:02:37,231 --> 00:02:37,267
 Sure and then you can report those on the GitHub repository.
-期待你们给我们的任何反馈
 当然，然后你可以在 GitHub 存储库上报告
 
 68
