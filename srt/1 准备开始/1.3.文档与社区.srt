@@ -329,451 +329,446 @@ you guys to give us any feedback then.
 期待你们给我们的任何反馈
 
 67
-00:02:37,231 --> 00:02:37,267
-Sure and then you can report those on the GitHub repository.
-当然，然后你可以在 GitHub 存储库上报告
-
-68
 00:02:37,267 --> 00:02:39,823
 Sure and then you can report those on the GitHub repository
 当然，然后你可以在 GitHub 存储库上报告
 
-69
+68
 00:02:39,823 --> 00:02:41,900
 Yeah. And speaking of GitHub
 是的。谈到 GitHub
 
-70
+69
 00:02:41,900 --> 00:02:44,191
 in fact all of .NET is open source so
 事实上 .NET 的所有都是开源的
 
-71
+70
 00:02:44,191 --> 00:02:47,565
 it's important to remember that it is all on GitHub.
 这一切都在 GitHub 上，记住这点很重要
 
-72
+71
 00:02:47,565 --> 00:02:53,225
 So if you go to github.com/dotnet
 所以如果你去 github.com/dotnet
 
-73
+72
 00:02:53,225 --> 00:02:54,750
 you'll come here to .NET foundation and
 你会看到 .NET 基金会以及
 
-74
+73
 00:02:54,822 --> 00:02:57,750
 it is within there that all the source code is there.
 所有源代码都在那里
 
-75
+74
 00:02:57,750 --> 00:03:00,246
 Now as a beginner you might not necessarily care about that
 现在作为初学者，你可能不需要关心
 
-76
+75
 00:03:00,246 --> 00:03:02,070
 source code, but it's just nice to now it's there.
 源代码，但开源终究是件好事
 
-77
+76
 00:03:02,070 --> 00:03:04,806
 Yeah, and they also do have samples within most of
 对的，在大部分的代码库中都有示例
 
-78
+77
 00:03:04,854 --> 00:03:06,438
 the repos, so they can start playing around
 所以大家从这儿开始
 
-79
+78
 00:03:06,438 --> 00:03:07,416
 Actually that is a good point
 的确，这是一个好主意
 
-80
+79
 00:03:07,416 --> 00:03:12,054
 It's all there, you can go and look at the, coreclr and
 所有的东西都在那儿，你可以去看 coreclr 和
 
-81
+80
 00:03:12,102 --> 00:03:14,118
 the docs themselves are also open-source.
 文档本身也是开源的
 
-82
+81
 00:03:14,118 --> 00:03:19,302
 Yes they are, so if you see any typos, if you see any
 是的，所以如果你看到任何错别字，以及
 
-83
+82
 00:03:19,302 --> 00:03:22,230
 options as you'd like to look at, you could do that
 你想看看的选项，你可以这样做
 
-84
+83
 00:03:22,278 --> 00:03:23,862
 So if you click on the edit over there
 如果你点击那边的编辑
 
-85
+84
 00:03:23,862 --> 00:03:27,510
 So I'm here on, for example, getting started with .NET Core.
 我在这个页面，例如，开始使用.NET Core
 
-86
+85
 00:03:27,510 --> 00:03:29,046
 Yeah. And you said click on Edit
 嗯。 你说过点击编辑
 
-87
+86
 00:03:29,046 --> 00:03:29,958
 where do I end up at?
 我最终在哪里？
 
-88
+87
 00:03:29,958 --> 00:03:31,775
 Well I end up at GitHub
 那么我最终在GitHub页面上
 
-89
+88
 00:03:31,775 --> 00:03:32,408
 Yep
 是的
 
-90
+89
 00:03:32,408 --> 00:03:35,142
 So I can be a contributor to open source
 所以我可以成为开源的贡献者
 
-91
+90
 00:03:35,142 --> 00:03:37,014
 by even fixing a spelling error
 甚至修复拼写错误
 
-92
+91
 00:03:37,014 --> 00:03:39,414
 Or changing a bit of code that may be incorrect
 或者改写一些可能不正确的代码
 
-93
+92
 00:03:39,414 --> 00:03:41,910
 Exactly. All right.
 没错 好的
 
-94
+93
 00:03:41,910 --> 00:03:45,558
 All of this is under the .NET Foundation GitHub.
 所有这些都在GitHub的.NET基金会下
 
-95
+94
 00:03:45,558 --> 00:03:48,547
 And you can also check out the .NET Foundation at
 你也可以在 www.dotnetfoundation.org 上
 
-96
+95
 00:03:48,547 --> 00:03:50,052
 www.dotnetfoundation.org.
 查看 .NET 基金会
 
-97
+96
 00:03:50,052 --> 00:03:51,050
 There you are.
 看，你在这
 
-98
+97
 00:03:51,050 --> 00:03:52,896
 There I am. You just flew by there.
 哦，这是我。 你刚刚从那里飞过。
 
-99
+98
 00:03:53,175 --> 00:03:56,465
 So the .NET Foundation is a non-profit, an independent
 所以 .NET 基金会是一个非盈利的，独立的
 
-100
+99
 00:03:56,465 --> 00:03:58,337
 non-profit, that tries to support the .NET ecosystem.
 它正支持着 .NET 的生态。
 
-101
+100
 00:03:58,337 --> 00:03:59,105
 All right?
 嗯？
 
-102
+101
 00:03:59,153 --> 00:04:01,313
 There's lots of open source projects that are within it.
 其中有很多开源项目
 
-103
+102
 00:04:01,313 --> 00:04:04,529
 You can set up a local Meetup or find a local Meetup near you.
 你可以举办本地聚会或在你附近找到本地聚会
 
-104
+103
 00:04:04,529 --> 00:04:06,353
 We've got Meetups all over the world.
 我们也在世界各地举办了聚会
 
-105
+104
 00:04:06,353 --> 00:04:07,313
 Wow
 Wow
 
-106
+105
 00:04:07,313 --> 00:04:08,801
 Literally all over the world.
 差不多遍布全世界
 
-107
+106
 00:04:08,849 --> 00:04:09,473
 We really do, actually
 实际上，我们真的这样做了
 
-108
+107
 00:04:09,521 --> 00:04:13,121
 And There's one on every continent and
 而且每个大洲都有一个
 
-109
+108
 00:04:13,169 --> 00:04:15,233
 you also have a show.
 你也有一个节目
 
-110
+109
 00:04:15,281 --> 00:04:17,921
 Yep Called code conversation.
 是的 叫做 Code Conversation
 
-111
+110
 00:04:17,921 --> 00:04:20,273
 Yeah, the weird thing about code conversations, is it's five
 对，关于 Code Conversation 的特别之处是
 
-112
+111
 00:04:20,273 --> 00:04:23,537
 to ten minute videos, that we seat down with engineers or
 它是五到十分钟的视频，我们与工程师或者
 
-113
+112
 00:04:23,537 --> 00:04:25,313
 people working in different open source projects.
 在不同的开源项目中的人一起坐下来
 
-114
+113
 00:04:25,313 --> 00:04:27,857
 And they tell us a little bit of how to get started on
 他们会告诉我们一些如何开始
 
-115
+114
 00:04:27,857 --> 00:04:28,625
 that project
 项目的经历
 
-116
+115
 00:04:28,625 --> 00:04:29,105
 Mm-hm
 嗯
 
-117
+116
 00:04:29,153 --> 00:04:31,169
 So you can check that out, that's on YouTube and
 所以你可以来看看，这会在在 YouTube 上放送
 
-118
+117
 00:04:31,169 --> 00:04:34,049
 also on Channel 9, which is our TV channel
 当然 Channel 9 也会有，这是我们的电视频道
 
-119
+118
 00:04:34,049 --> 00:04:36,593
 And again I wanna encourage people to check
 再次，我想鼓励大家
 
-120
+119
 00:04:36,593 --> 00:04:37,649
 out the meet ups
 都来看看这个会议
 
-121
+120
 00:04:37,649 --> 00:04:39,281
 There's about 1200 different meet ups locally
 在各地约有1200种不同的聚会
 
-122
+121
 00:04:39,281 --> 00:04:42,065
 user groups they're not locally, rather world wide.
 参会者不光是来自本地的，而是来自全世界
 
-123
+122
 00:04:42,113 --> 00:04:46,337
 You can learn open source, you can sit and find friends to
 你可以学习开源（项目），坐下来找个朋友
 
-124
+123
 00:04:46,337 --> 00:04:48,929
 code with, you can pair up, you can do all kinds of things
 一起写代码，组队，做各种事情
 
-125
+124
 00:04:48,929 --> 00:04:50,177
 And if there is no one nearby you
 如果你附近没有聚会
 
-126
+125
 00:04:50,225 --> 00:04:52,337
 you could even potentially Skype people.
 你甚至可以通过 Skype 参与
 
-127
+126
 00:04:52,337 --> 00:04:53,537
 That's actually a good idea
 这真是一个好主意
 
-128
+127
 00:04:53,537 --> 00:04:55,121
 A Skype meet up
 一个 Skype 聚会
 
-129
+128
 00:04:55,121 --> 00:04:56,177
 I do that all of the time.
 我一直这么做
 
-130
+129
 00:04:56,177 --> 00:04:58,241
 I have lots of different opportunities where I sit with
 我有很多不同的机会来和人们坐在一起
 
-131
+130
 00:04:58,241 --> 00:05:01,793
 people and learn code, and pair, but what we do remotely.
 学习代码，组队，但我们远程该怎么做
 
-132
+131
 00:05:01,841 --> 00:05:04,049
 And you can do that with Skype interviews as well?
 你也可以通过 Skype 访谈来做到这一点？
 
-133
+132
 00:05:04,049 --> 00:05:05,633
 That's true, all right
 没错，好
 
-134
+133
 00:05:05,633 --> 00:05:09,617
 So just a reminder, you can go to docs.microsoft.com, check out
 所以只是提醒一下，你可以去 docs.microsoft.com，看看
 
-135
+134
 00:05:09,617 --> 00:05:12,833
 the Quick Starts to run your C# programs in the browser.
 快速入门，且在浏览器中运行 C＃ 程序
 
-136
+135
 00:05:12,833 --> 00:05:16,433
 Also a great way to maybe introduce your young people or
 这也是一个很好的方式来介绍小白或者
 
-137
+136
 00:05:16,433 --> 00:05:18,113
 new programmers to coding in C#.
 刚入门的程序员来使用 C＃ 编写代码
 
-138
+137
 00:05:18,113 --> 00:05:21,377
 And then if you start at either GitHub or the .NET Foundation,
 然后，如果您从 GitHub 或 .NET Foundation 开始，
 
-139
+138
 00:05:21,377 --> 00:05:23,297
 you can jump off to all of these different locations.
 你可以跳转到所有这些不同的页面
 
-140
+139
 00:05:23,297 --> 00:05:25,697
 And then one other thing worth pointing out,
 还有一件事值得指出
 
-141
+140
 00:05:25,697 --> 00:05:30,833
 As I just saw it fly by, was a .NET Conf.
 我刚刚看到它飞过，是 .NET Conf
 
-142
+141
 00:05:30,833 --> 00:05:31,937
 Yep
 是的
 
-143
+142
 00:05:31,985 --> 00:05:36,161
 there is a lot of great content that came out of .NET Conf.
 .NET Conf 上会有很多很棒的内容
 
-144
+143
 00:05:36,161 --> 00:05:37,025
 Mm-hm
 嗯
 
-145
+144
 00:05:37,025 --> 00:05:39,521
 This was a conference in 2017
 这是2017年的一次会议
 
-146
+145
 00:05:39,521 --> 00:05:42,977
 And you can go and check out the sessions for
 你可以去看看 .NET Conf 的活动
 
-147
+146
 00:05:42,977 --> 00:05:45,905
 .NET Conf up here at dotnetconf.net
 在 dotnetconf.net 上可以找到
 
-148
+147
 00:05:45,905 --> 00:05:47,921
 There were 45 different sessions
 有45个不同的会议
 
-149
+148
 00:05:47,921 --> 00:05:50,849
 About 45 hours of content
 大约45小时的内容
 
-150
+149
 00:05:50,849 --> 00:05:53,537
 that you can learn some of the more advanced techniques.
 你可以学习一些更先进的技术
 
-151
+150
 00:05:53,537 --> 00:05:54,065
 Yeah So
 是的 那么
 
-152
+151
 00:05:54,113 --> 00:05:56,609
 when you're done here at Microsoft Virtual Academy,
 当您在微软虚拟学院完成此任务时
 
-153
+152
 00:05:56,609 --> 00:05:58,721
 you can maybe dig into that more advanced stuff.
 你可以去发掘更先进的东西了
 
-154
+153
 00:05:58,721 --> 00:06:00,775
 Exactly. All right
 没错。 好的
 
-155
+154
 00:06:01,225 --> 00:06:02,705
 take a quick break, we'll come back and make a web application.
 稍作休息，我们会回来做一个 Web 应用
 
-156
+155
 00:06:02,705 --> 00:06:04,001
 Yes we will.
 是的，我们会的
