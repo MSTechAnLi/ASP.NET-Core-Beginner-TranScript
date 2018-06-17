@@ -1,386 +1,383 @@
-So we're back, and we're going to be looking at pages.
+﻿So we're back, and we're going to be looking at pages.
 In the previous module,
 we looked at building our very first empty web application.
 But it didn't really do much, right?
 It just returned a string.
 And when I think about building a page,
 I don't know if you think about this the same way.
->> Actually I do.
->> I want to see some HTML.
+Actually I do.
+I want to see some HTML.
 I want to see a physical page structure, and
 if you actually go back to the project folder
 like all the files that we have, I don't see a single page.
->> Right, this is not page focused right now,
+Right, this is not page focused right now,
 it's string focused.
 And while I could go in and maybe bold face,
 Beyonce, it's gonna break down very quickly.
->> Yeah.
->> So, we need a page-focused framework.
->> We do.
+Yeah.
+So, we need a page-focused framework.
+We do.
 And just to bring it back even just a little bit more,
-you talked about configuring services and configure.
->> Mm-hm. >> And
+you talked about ConfigureServices and Configure.
+Mm-hm.    >> And
 we're gonna configure our first service here.
->> Right.
->> Yeah, so, if you type services.add MVC.
->> So if I type services.Add,
-I get all these choices- >> Yeah.
->> That we saw before.
+Right.
+Yeah, so, if you type services.AddMVC.
+So if I type services.Add,
+I get all these choices-    >> Yeah.
+That we saw before.
 And these are all the different things that can be layered on
 top of our application.
->> Yes.
->> And it's important to understand, like we talked about
-before, when we pop back out to programs.
-This is just a main, remember we did a console app a second ago,
+Yes.
+And it's important to understand, like we talked about
+before, when we pop back out to Program.cs.
+This is just a Main, remember we did a console app a second ago,
 but we're building up this pipeline of services.
 So what service do you want me to add?
->> MVC.
->> Add MVC.
+MVC.
+AddMVC.
 So this is gonna add all the model view controller services
 that I would potentially want to use.
->> Exactly.
->> Okay, now I added it.
+Exactly.
+Okay, now I added it.
 There was a squiggle, and then the squiggle was gone.
 Did it just magically become Mvcf?
->> No, cuz remember, we configure our services, and
-then we need to configure.
+No, cuz remember, we configure our services,
+and then we need to configure.
 So we actually have to use it.
->> Have to use them.
+Have to use them.
 We add them and then we use them.
->> Yeah.
->> Okay.
->> So we app.UseMvc?
+Yeah.
+Okay.
+So we app.UseMvc?
 And I don't think we need.
->> It's worth pointing out all the different use stuff.
->> A lot of them.
->> There's your Facebook, your Google.
->> Mm-hm.
->> Your different, what's called middle ware,
-you'll here about middle ware during the advanced stuff,
-but this where making some middle ware right now.
+It's worth pointing out all the different use stuff.
+A lot of them.
+There's your Facebook, your Google.
+Mm-hm.
+Your different, what's called middleware,
+you'll here about middleware during the advanced stuff,
+but this where making some middleware right now.
 There's two options there, the default route or
 the regular UseMvc, we're just gonna say UseMvc by itself.
 There's a bunch of options you can pass in.
 We'll talk a little bit about routing later.
 So, I say UseMvc.
 So, now Mvc is in the pipeline.
->> Yeah, so we can start taking advantage of it.
+Yeah, so we can start taking advantage of it.
 I don't think you would need the last lines though.
->> Well, let's find out if it still runs.
-All we've done is add MVC, and UseMvc.
+Well, let's find out if it still runs.
+All we've done is AddMVC, and UseMvc.
 Does Hello Beyhive still happen? Yes.
 Now it's bold,
 because I bold-faced it.
->> [LAUGH] >> Okay?
+[LAUGH]    >> Okay?
 Right.
 So that points out that it's in the pipeline but
 it didn't change the behavior of anything.
->> Yeah, cuz it hasn't been used at this point.
->> Well, we havent added any pages.
->> Yeah.
->> Okay. >> So, I do not think,
-since we're going to be using MVC I don't think we need
-app.Run any more.
->> I wanna keep it in there, though.
->> Okay. >> If you don't mind,
+Yeah, cuz it hasn't been used at this point.
+Well, we havent added any pages.
+Yeah.
+Okay.    >> So, I do not think,
+since we're going to be using MVC,
+I don't think we need app.Run any more.
+I wanna keep it in there, though.
+Okay.    >> If you don't mind,
 because when we add our pages, I wanna see the relationship
 between this, which is now called the default route.
->> Okay.
->> The default route.
+Okay.
+The default route.
 This is the thing that happens, if this doesn't happen.
->> Okay.
->> In the sense of, it runs in order.
->> Yes.
->> Does that make sense?
->> Yeah.
->> So let's do the pages you wanna add,
+Okay.
+In the sense of, it runs in order.
+Yes.
+Does that make sense?
+Yeah.
+So let's do the pages you wanna add,
 and see if Beyonce shows up randomly.
->> Yeah, and you mentioned something pretty significant for
+Yeah, and you mentioned something pretty significant for
 a lot of newbies.
 Is that the order in which a code is written matters?
->> It's very much does,
+It's very much does,
 especially when you're adding and using things in turn order.
-I believe that, if we went and move Mvc down here,
+I believe that, if we went and move MVC down here,
 we will have a very different experience.
->> Exactly.
->> And we can maybe experiment with that once we
+Exactly.
+And we can maybe experiment with that once we
 add a few things.
->> Yeah, that's add in.
->> Okay.
->> Okay, so first thing I wanna do is add a new folder.
->> All right.
->> Yeah.
->> So I'm over here in a Visual Studio code, and I can right
-click, and say New Folder, or I can click these buttons.
+Yeah, that's add in.
+Okay.
+Okay, so first thing I wanna do is add a new folder.
+All right.
+Yeah.
+So I'm over here in a Visual Studio code, and I can right click, 
+and say New Folder, or I can click these buttons.
 I'm gonna right click and say a New Folder, because I have found
-that depending on what's currently clicked
-on, when you say New Folder- >> You might end up
-somewhere else?
->> It can sometimes be like one folder down, so
-just gonna watch out for that.
+that depending on what's currently clicked on, 
+when you say New Folder-    >> You might end up somewhere else?
+It can sometimes be like one folder down,
+so just gonna watch out for that.
 So, I'm confirming that my Pages folder, you had me add,
 is at the same level and not accidentally-
->> In wwwroot?
->> Or in the end or wherever.
+In wwwroot?
+Or in the end or wherever.
 So, it can be a little confusing, all right?
 So, I have a Pages folder.
->> Okay, and now we actually had to need to add a page.
-So if you add New File, and
-we're going to add a Index.cshtml.
->> C# HTML.
->> Yes, so I always call it C# HTML, but
-I was told that that wasn't right.
->> It's not, it's just a RAZOR PAGE.
->> It's just a RAZOR PAGE, yes.
->> Okay, ignore that extension.
->> Okay.
->> That's so clearly says, yes HTML.
->> Okay.
-[LAUGH] >> All right?
->> It does.
+Okay, and now we actually had to need to add a page.
+So if you add New File,
+and we're going to add a Index.cshtml.
+C# HTML.
+Yes, so I always call it C# HTML,
+but I was told that that wasn't right.
+It's not, it's just a RAZOR PAGE.
+It's just a RAZOR PAGE, yes.
+Okay, ignore that extension.
+Okay.
+That's so clearly says, yes HTML.
+Okay.
+[LAUGH]    >> All right?
+It does.
 So first thing I wanna do is add a page directive.
 So it'd be @page.
->> Okay so, @page, so directive starts with @.
->> Yeah.
->> Okay.
->> And we'll be seeing a couple of those throughout the day, and
-seeing what you can do with that.
->> All right.
->> We're just gonna write some HTML, so let's just use a h1.
->> Okay, h, I get IntelliSense, which is nice.
->> Hello Beyonce.
->> Cool.
->> Imagine if Beyonce actually learns how code on one of these
-videos.
->> And I don't have a fancy keyboard.
->> You wanna make sure you- >> I gotta respect her.
->> You gotta respect the Bey.
->> There we go.
->> She will appreciate that when one day,
-when she does watch this video.
->> When she does watch this and
-invite me to her house for lunch.
->> When she does watch this video.
-[LAUGH] Okay.
->> All right, do I need to do anything else?
->> Yeah, did you save it?
->> Yeah.
->> So let's just see what happens, let's run this.
->> All right.
-Do, do, do, gonna go and run it.
-It's gonna fire up local host 5000.
+Okay so, @page, so directive starts with @.
+Yeah.
+Okay.
+And we'll be seeing a couple of those throughout the day,
+and seeing what you can do with that.
 All right.
->> Wow.
->> That's interesting.
+We're just gonna write some HTML, so let's just use a h1.
+Okay, h, I get IntelliSense, which is nice.
+Hello Beyonce.
+Cool.
+Imagine if Beyonce actually learns how code on one of these videos.
+And I don't have a fancy keyboard.
+You wanna make sure you-    >> I gotta respect her.
+You gotta respect the Bey.
+There we go.
+She will appreciate that when one day,
+when she does watch this video.
+When she does watch this and
+invite me to her house for lunch.
+When she does watch this video.
+[LAUGH] Okay.
+All right, do I need to do anything else?
+Yeah, did you save it?
+Yeah.
+So let's just see what happens, let's run this.
+All right.
+Do, do, do, gonna go and run it.
+It's gonna fire up localhost:5000.
+All right.
+Wow.
+That's interesting.
 So Index.cshtml appears to be the default.
->> Yes.
->> And I wonder if I change its name Okay?
->> Let's give it a try >> And then just hit Refresh.
->> No,
-you'd actually now have to- >> No, look,
-where does that string come from?
->> It came from line, go back.
+Yes.
+And I wonder if I change its name Okay?
+Let's give it a try    >> And then just hit Refresh.
+No, you'd actually now have to-
+No, look, where does that string come from?
+It came from line, go back.
 Yeah, it came from line 31.
->> Right, so the point here is that, use MVC,
+Right, so the point here is that, UseMvc,
 added some default routing, some behavior.
->> Yeah.
->> When we say routing it's like when the URL comes in,
+Yeah.
+When we say routing it's like when the URL comes in,
 it has to make a decision about who's handling this.
->> Exactly, so if you went back to your page, and
-you did /fred ,would it pop up?
->> That's a good question.
-Slash, Fred.
+Exactly, so if you went back to your page,
+and you did /fred ,would it pop up?
+That's a good question.
+/Fred.
 Yes, okay so
 now we are starting to learn a little bit about the behavior.
->> So by default, just because its' called index, some magic,
+So by default, just because it's called Index, some magic,
 not magic with MVC defaults it adds as the a default route.
->> Right, right.
->> Okay, so if we added another page, and
-maybe we're going a bit too crazy here.
->> Mm-hm, want to add another named page?
->> Named page, yeah.
->> Okay, what do you want to call it?
+Right, right.
+Okay, so if we added another page,
+and maybe we're going a bit too crazy here.
+Mm-hm, want to add another named page?
+Named page, yeah.
+Okay, what do you want to call it?
 Solange?
->> Yeah, or Rihanna, or if, whatever you want.
->> All right, so, okay here's another one.
->> This page is at I'm thinking it's at-
->> /Solange, right?
->> That's right.
->> Yeah.
->> So, we'll just put that in the paragraph tag to be correct.
+Yeah, or Rihanna, or if, whatever you want.
+All right, so, okay here's another one.
+This page is at I'm thinking it's at-
+/Solange, right?
+That's right.
+Yeah.
+So, we'll just put that in the paragraph tag to be correct.
 See how Visual Studio code is trying to be helpful?
-I should have just opened up my IP to start with.
+I should have just opened up my P to start with.
 There we go.
->> So if you- >> So there is our default.
+So if you-    >> So there is our default.
 Did I not run it again?
->> I don't think you did.
+I don't think you did.
 Okay, so I dotnet run.
 So, there's our default.
 And.
 That one is not showing up.
->> It is not.
->> Why don't we put it in a folder.
->> Within a folder? Okay.
->> And then, call it index.
->> So, it would have to be Solange/index then.
->> No, cuz index is the default.
->> Interesting.
->> Hello Beyhive.
+It is not.
+Why don't we put it in a folder.
+Within a folder? Okay.
+And then, call it Index.
+So, it would have to be Solange/Index then.
+No, cuz Index is the default.
+Interesting.
+Hello Beyhive.
 [CROSSTALK] Let's think about this.
->> Okay. >> What are we doing wrong?
+Okay.    >> What are we doing wrong?
 This is good though, because we are doing a-
->> We are doing an experiment.
->> Doing an experiment here and in the process.
+We are doing an experiment.
+Doing an experiment here and in the process.
 We are learning how things work and doing things wrong, right?
 We are gonna do things together.
 So, I've just changed that real quick, we did Fred before.
->> Yeah. >> I know what it is.
->> Tell me. >> All right, check this,
+Yeah.    >> I know what it is.
+Tell me.    >> All right, check this,
 friends, out lets go back put it back to Solange this is.
-Okay, so here's index.
->> Yeah.
->> Look very carefully, there's only a couple lines.
->> Yes.
->> Here's Solange.
->> We did not put the page directive.
+Okay, so here's Index.
+Yeah.
+Look very carefully, there's only a couple lines.
+Yes.
+Here's Solange.
+We did not put the page directive.
 Yay.
->> Okay.
->> Very interesting.
->> Interesting, so- >> It is that that makes it
-magic, actually it runs if it doesn't see
-the page directive and it's never going to.
->> That's not the way it needs to go.
->> Doesn't have to work that way.
-So, that interesting did not know that I knew it, but
-like I knew it intuitively.
->> But this is something
+Okay.
+Very interesting.
+Interesting, so-    >> It is that that makes it magic,
+actually it runs if it doesn't see the page directive
+and it's never going to.
+That's not the way it needs to go.
+Doesn't have to work that way.
+So, that interesting did not know that I knew it,
+but like I knew it intuitively.
+But this is something
 that someone at home is going to encounter.
->> Yeah, yeah, it absolutely is.
->> It's definitely something that you're going to encounter
+Yeah, yeah, it absolutely is.
+It's definitely something that you're going to encounter
 like we hit it, and it was the first thing I told you to do
 was to add a page directive.
->> Yep, absolutely.
+Yep, absolutely.
 And this actually brings up an interesting point about
 Visual Studio versus Visual Studio code.
->> Yeah. >> When we switch over to Visual
-Code later we gonna add up using the template that are built in.
+Yeah.    >> When we switch over to Visual Studio later
+we gonna add up using the template that are built in.
 So, we gonna go and say file new razor page.
->> Exactly. >> And
-we will get some stuff for free, because we are just making these
-texts files by ourselves we bump into these kind of mistakes, so
-that's really interesting.
+Exactly.
+And we will get some stuff for free, 
+because we are just making these texts files by ourselves
+we bump into these kind of mistakes,
+so that's really interesting.
 That does bring up the question about the folder thing though,
 why don't we try that?
->> Okay. >> Let's make a folder before
-that, and then we'll move this here.
->> Exactly.
->> And then, change it to index, which appears to be the default.
->> So, if you refresh the page.
->> Yes, same page [CROSSTALK].
->> But if I change it here.
+Okay.    >> Let's make a folder before that,
+and then we'll move this here.
+Exactly.
+And then, change it to Index, which appears to be the default.
+So, if you refresh the page.
+Yes, same page [CROSSTALK].
+But if I change it here.
 So, just explore this for a second, it looks like that is
 not necessary the name of the file, but the path.
 So, your default route would be path and then another path,
 in this case the default page right there, you see?
->> Yeah, so the route is the file structure then?
->> The route is the file structure.
-Which for
-a page focused framework is a really nice experience.
->> It makes total sense to me.
->> Right. >> Like when you build your
-first HTML page ever it has the same experience.
+Yeah, so the route is the file structure then?
+The route is the file structure.
+Which for a page focused framework is a really nice experience.
+It makes total sense to me.
+Right.
+Like when you build your first HTML page ever
+it has the same experience.
 Yeah, that page within a folder.
->> And that means that when we go later on and make customers,
+And that means that when we go later on and make customers,
 and products, and things like that,
 it's gonna be really clear about how to do that.
 This is just static HTML though.
->> Yeah. >> We should probably add
-something dynamic before we move on to the next section.
+Yeah.
+We should probably add something dynamic
+before we move on to the next section.
 So, let's give Solange some more information.
->> So, I hear she has a concert today.
->> Okay, let's assume that it's always now,
+So, I hear she has a concert today.
+Okay, let's assume that it's always now,
 there is always a Solange concert.
->> There is always a- >> At any moment.
->> Exactly.
->> So, we'll have bold thing and what should we say?
-The concert starts at, I don't know, 3pm,
-right?, but I wanna have that be dynamic.
->> Okay.
->> How can I make that now.
->> At DateTime.
->> So, I say, @, again.
->> Yeah.
->> DateTime, which is like system.DateTime
->> .Now.
->> .Now.
+There is always a-    >> At any moment.
+Exactly.
+So, we'll have bold thing and what should we say?
+The concert starts at, I don't know, 3pm, right?
+but I wanna have that be dynamic.
+Okay.
+How can I make that now.
+@DateTime.
+So, I say, @, again.
+Yeah.
+DateTime, which is like System.DateTime
+.Now.
 All right, come back, hit refresh, then hit refresh again.
->> I'm late I gotta go.
->> You gotta go, it's happening.
->> It's happening right now.
->> Now, it's important to point out that,
+I'm late I gotta go.
+You gotta go, it's happening.
+It's happening right now.
+Now, it's important to point out that,
 notice the difference between me making a change.
->> Yep.
->> Control + S + L + Tab refresh.
+Yep.
+Control + S, Alt + Tab, refresh.
 I'm not having to build.
->> No. >> Right.
+No.     >> Right.
 With razor pages the page is being built when it changes,
 and it gets hit for the very first time,
-if I change the C sharp files I need to then go and rebuild.
->> Okay, but
-within the page itself you do not need to do that.
->> So, the razor pages, these CSH developed pages.
+if I change the C# files I need to then go and rebuild.
+Okay, but within the page itself you do not need to do that.
+So, the razor pages, these CSH developed pages.
 They get copied to the host and
 they are part of the source code.
 But these .cs files don't get copied to the host,
 in fact the DLL that they build into does.
->> Okay. >> Right,
-that's just a little important thing to point out, and
-you can see that if you go and say, dotnet build.
+Okay.
+Right，that's just a little important thing to point out,
+and you can see that if you go and say, dotnet build.
 We've been saying dotnet run.
->> Yeah.
->> See?
+Yeah.
+See?
 See how it actually points to your web app?
 It says, mywebapp is right there.
->> So, I have a question for you.
+So, I have a question for you.
 If someone on this, who's watching us right now.
 Like what is that dll thing that he is talking about,
 where they can learn more about that?
->> All right, so that's called an assembly it's a dynamic link
-library if you wanted to learn about
+All right, so that's called an assembly
+it's a dynamic link library if you wanted to learn about
 the details of how assembly's works some things like that.
-You can go and take a look at some of the intermediate
-sections on the job.
->> Okay.
->> Okay.
-I just wanted to point out that when I go and
-publish my application, like I'm meaning to say it's time for
+You can go and take a look at some of
+the intermediate sections on the job.
+Okay.
+Okay.
+I just wanted to point out that
+when I go and publish my application,
+like I'm meaning to say it's time for 
 my app to go out into the world.
-We're gonna get- >> And just to be clear for
+We're gonna get-    >> And just to be clear for
 some people who are watching this.
-Publish it doesn't necessarily mean that you're going to hit
-.NET publish and
+Publish it doesn't necessarily mean that
+you're going to hit dotnet publish and
 somehow it's gonna magically appear on the website.
->> Right. >> Yeah, I like-
->> I just mean that
+Right.    >> Yeah, I like-
+I just mean that
 I need people to understand the difference between
-the source code that's in the C sharp files, and the razor
-pages that are gonna be copied up through the final location.
+the source code that's in the C sharp files,
+and the razor pages that are gonna be copied up through the final location.
 Cool, so this is a little bit of C sharp right here.
->> It is.
->> Right, I wonder if I could cheat.
->> How much do you wanna cheat?
->> Well, we can write C sharp here, right?
+It is.
+Right, I wonder if I could cheat.
+How much do you wanna cheat?
+Well, we can write C sharp here, right?
 Can I say, 2+2?
 What am I allowed to say in there?
->> Broke it? >> All right, so
-that got an error, right?
+Broke it?
+All right, so that got an error, right?
 So, it doesn't like that.
 What are the rules about what you can put in there.
 We will kind of explore that a little bit earlier,
 as we can say at, and then put chunks of code.
->> Okay.
->> All right, cool.
+Okay.
+All right, cool.
 So, that is dynamic, there's a concert starting immediately.
-And then, we'll come back a little bit and
-look at configuration.
->> All right.
+And then, we'll come back a little bit and look at configuration.
+All right.
