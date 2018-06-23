@@ -7,11 +7,10 @@ namespace FileC
     {
         static void Main(string[] args)
         {
-            Program pg = new Program();
-            pg.Merge();
-            pg.DeleSpace();
+            Merge();
+            DeleSpace();
         }
-        public void Merge()//负责合并中英文txt文件
+        public static Merge()//负责合并中英文txt文件
         {
             string line1,line2,
                    usFile=@"英文txt文件路径",
@@ -32,7 +31,7 @@ namespace FileC
             file2.Close();
             file3.Close();
         }
-        public void DeleSpace()//删除初步编辑后的空格
+        public static DeleSpace()//删除初步编辑后的空格
         {
             int count = 0;
             string line;
