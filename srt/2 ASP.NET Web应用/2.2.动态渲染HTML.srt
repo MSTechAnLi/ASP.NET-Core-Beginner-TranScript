@@ -21,7 +21,7 @@ It just returned a string.
 5
 00:00:13,312 --> 00:00:17,792
 And when I think about building a page,I don't know if you think about this the same way.
-当我考虑构建一个页面时，我不知道你是否以同样的方式思考这个问题
+当我考虑构建一个页面时，不知道你是不是跟我一样这么想哈~
 
 6
 00:00:17,792 --> 00:00:18,432
@@ -31,7 +31,7 @@ Actually I do.
 7
 00:00:18,432 --> 00:00:20,352
 I want to see some HTML.
-我想看到一些 HTML
+我想看到一些 HTML页面
 
 8
 00:00:20,352 --> 00:00:27,136
@@ -74,12 +74,12 @@ And just to bring it back even just a little bit more,you talked about Configure
 现在让我们往上回滚一小部分，你谈到了 ConfigureServices 和 Configure ( Method )
 
 16
-00:00:55,296 --> 00:00:56,768
+00:00:56,150 --> 00:01:00,025
 And we're gonna configure our first service here.
 然后我们要在这里配置我们的第一个服务
 
 17
-00:00:56,768 --> 00:01:00,544
+00:01:00,025 --> 00:01:00,544
 Right.
 对
 
@@ -104,12 +104,12 @@ And these are all the different things that can be layered on top of our applica
 这些不同的选项都会在 VS Code 上弹出显示（指代码提示）
 
 22
-00:01:14,048 --> 00:01:21,856
+00:01:14,048 --> 00:01:21,125
 And it's important to understand, like we talked about before, when we pop back out to Program.cs.
-所以重要的是要理解，就像我们之前所说的那样，当我们回到 Program.cs （文件）
+所以重要的是要理解，就像我们之前所说的那样，当我们回到 Program.cs
 
 23
-00:01:21,856 --> 00:01:25,504
+00:01:21,125 --> 00:01:25,504
 This is just a Main, remember we did a console app a second ago,
 这只是一个 Main 函数，记得我们之前做过一个控制台应用程序
 
@@ -131,10 +131,10 @@ MVC AddMVC
 27
 00:01:30,368 --> 00:01:36,768
 So this is gonna add all the model view controller services that I would potentially want to use.
-这将添加所有可能想要用的 MVC 服务 （ M - 模型， V - 页面， C - 控制器）
+这将添加所有可能想要用的 MVC 服务（译者注：M-模型 V-页面 C-控制器）
 
 28
-00:01:36,768 --> 00:01:39,968
+00:01:38,725 --> 00:01:39,968
 Okay, now I added it.
 好的，现在我已经把它添加上了
 
@@ -144,7 +144,7 @@ There was a squiggle, and then the squiggle was gone.
 有一个波浪，然后波浪消失了
 
 30
-00:01:41,696 --> 00:01:44,384
+00:01:42,250 --> 00:01:44,384
 Did it just magically become Mvcf?
 它是不是神奇地变成了 MVC 框架？
 
@@ -159,1383 +159,1333 @@ So we actually have to use it.
 实际上，我们必须使用它
 
 33
-00:01:50,464 --> 00:01:51,296
+00:01:50,464 --> 00:01:50,950
 Have to use them.
 对的
 
 34
-00:01:51,296 --> 00:01:52,000
+00:01:50,950 --> 00:01:52,250
 We add them and then we use them.
 我们添加它们，然后我们使用它们
 
 35
-00:01:52,000 --> 00:01:52,640
-Yeah.
-嗯
-
-36
-00:01:52,640 --> 00:01:53,216
-Okay.
-好的
-
-37
-00:01:53,216 --> 00:01:54,496
+00:01:52,675 --> 00:01:54,496
 So we app.UseMvc?
 我们键入 app.UseMvc ？
 
-38
-00:01:54,496 --> 00:01:57,952
+36
+00:01:56,080 --> 00:01:57,952
 And I don't think we need.
 我认为我们不需要
 
-39
-00:01:57,952 --> 00:02:00,320
+37
+00:01:57,952 --> 00:01:59,775
 It's worth pointing out all the different use stuff.
 值得指出的是，在这有所有不同的用途的 Use
 
-40
-00:02:00,320 --> 00:02:00,960
+38
+00:01:59,775 --> 00:02:00,415
 A lot of them.
 确实有很多
 
-41
-00:02:00,960 --> 00:02:02,112
+39
+00:02:00,415 --> 00:02:02,025
 There's your Facebook, your Google.
 这有你的 Facebook ，你的 Google
 
-42
-00:02:02,112 --> 00:02:02,816
-Mm-hm.
-嗯哼
-
-43
-00:02:02,816 --> 00:02:04,480
+40
+00:02:02,325 --> 00:02:04,480
 Your different, what's called middleware,
 各类不同的，所谓的中间件
 
-44
+41
 00:02:04,480 --> 00:02:07,040
 you'll here about middleware during the advanced stuff,
 你会在这里的高级内容了解中间件
 
-45
+42
 00:02:07,040 --> 00:02:09,152
 but this where making some middleware right now.
 但是现在先让我们来使用一些中间件
 
-46
+43
 00:02:09,152 --> 00:02:14,592
 There's two options there, the default route or the regular UseMvc, we're just gonna say UseMvc by itself.
 有两个选项，默认路由或经常使用的 UseMvc ，我们在这就使用 UseMvc （ Method ）
 
-47
+44
 00:02:14,592 --> 00:02:18,112
 There's a bunch of options you can pass in.
 有很多选项可以传入
 
-48
+45
 00:02:18,112 --> 00:02:20,480
 We'll talk a little bit about routing later.
 稍后我们会谈谈一些关于路由的问题
 
-49
+46
 00:02:20,480 --> 00:02:22,720
 So, I say UseMvc.
 看下 UseMvc
 
-50
+47
 00:02:22,720 --> 00:02:25,920
 So, now Mvc is in the pipeline.
 所以，现在 Mvc 在管道中
 
-51
-00:02:25,920 --> 00:02:28,288
+48
+00:02:25,920 --> 00:02:27,975
 Yeah, so we can start taking advantage of it.
 嗯，所以我们可以开始利用它
 
-52
-00:02:28,288 --> 00:02:30,656
+49
+00:02:27,975 --> 00:02:30,656
 I don't think you would need the last lines though.
 我不认为你会需要最后一行
 
-53
-00:02:30,656 --> 00:02:32,448
+50
+00:02:30,656 --> 00:02:31,925
 Well, let's find out if it still runs.
 好吧，让我们来看看它是否还能运行
 
-54
-00:02:32,448 --> 00:02:35,264
+51
+00:02:31,925 --> 00:02:35,264
 All we've done is AddMVC, and UseMvc.
 我们所做的只是 AddMVC 和 UseMvc
 
-55
-00:02:35,456 --> 00:02:40,896
-Does Hello Beyhive still happen? Yes.
-Hello Beyhive 还会在吗？是的
+52
+00:02:35,264 --> 00:02:40,704
+Does Hello Beyhive still happen?
+Hello Beyhive 还会在吗？
 
-56
+53
 00:02:41,024 --> 00:02:42,816
 Now it's bold,because I bold-faced it.
 现在它被加粗了，因为我把它加粗了
 
-57
-00:02:42,816 --> 00:02:50,240
+54
+00:02:44,750 --> 00:02:50,240
 So that points out that it's in the pipeline but it didn't change the behavior of anything.
 因此，可以指出的是它正在管道中，但是它什么都没有改变
 
-58
+55
 00:02:50,240 --> 00:02:52,416
 Yeah, cuz it hasn't been used at this point.
 是的，因为在这里它没有被使用
 
-59
+56
 00:02:52,416 --> 00:02:53,632
 Well, we havent added any pages.
 好吧，我们还没有添加任何页面
 
-60
+57
 00:02:53,632 --> 00:02:56,448
 I do not think,
 所以，我并不这样想
 
-61
+58
 00:02:56,448 --> 00:03:01,056
 since we're going to be using MVC,I don't think we need app.Run any more.
 因为我们将要使用 MVC 我并不认为我们会需要 app.Run
 
-62
+59
 00:03:01,056 --> 00:03:03,168
 I wanna keep it in there, though.
 不过，我想保留在那里
 
-63
+60
 00:03:03,168 --> 00:03:04,128
 If you don't mind,
 如果你不介意的话
 
-64
+61
 00:03:04,128 --> 00:03:11,616
 because when we add our pages, I wanna see the relationship between this, which is now called the default route.
 因为当我们添加我们的网页时，在默认路由的情况下，我想看到页面与此之间的关系
 
-65
+62
 00:03:11,616 --> 00:03:13,152
 The default route.
 至于默认路由
 
-66
+63
 00:03:13,152 --> 00:03:16,928
 This is the thing that happens, if this doesn't happen.
 如何默认路由不起作用，那么这些将被执行
 
-67
+64
 00:03:16,928 --> 00:03:19,680
 In the sense of, it runs in order.
 就其意义而言，它将按顺序运行
 
-68
+65
 00:03:19,680 --> 00:03:20,320
 Yes.
 是的
 
-69
+66
 00:03:20,320 --> 00:03:21,152
 Does that make sense?
 这有合理吗？
 
-70
-00:03:21,152 --> 00:03:21,664
-Yeah.
-是啊
-
-71
-00:03:21,728 --> 00:03:23,264
+67
+00:03:21,152 --> 00:03:23,264
 So let's do the pages you wanna add,
 那么，让我们来完成你想添加的页面，
 
-72
+68
 00:03:23,264 --> 00:03:27,872
 and see if Beyonce shows up randomly.
 看看 Beyonce 是否会随机出现
 
-73
+69
 00:03:27,872 --> 00:03:32,160
 Yeah, and you mentioned something pretty significant for a lot of newbies.
 对，你提到了一件对很多新手来说非常重要的事情
 
-74
+70
 00:03:32,160 --> 00:03:35,552
 Is that the order in which a code is written matters?
 这是代码的编写顺序吗？
 
-75
+71
 00:03:35,552 --> 00:03:41,120
 It's very much does,especially when you're adding and using things in turn order.
 这很重要，特别是当您依次添加和使用事物时
 
-76
+72
 00:03:41,120 --> 00:03:46,560
 I believe that, if we went and move MVC down here,we will have a very different experience.
 我相信，如果我们把 MVC 放在这里，我们将有非常不同的体验
 
-77
+73
 00:03:46,560 --> 00:03:47,072
 Exactly.
 没错
 
-78
+74
 00:03:47,072 --> 00:03:49,184
 And we can maybe experiment with that once we add a few things.
 我们可以尝试添加一些东西
 
-79
+75
 00:03:49,184 --> 00:03:49,760
 Yeah, that's add in.
 是的，再补充一些东西
 
-80
+76
 00:03:49,760 --> 00:03:50,400
 Okay.
 好的
 
-81
+77
 00:03:50,400 --> 00:03:54,944
 Okay, so first thing I wanna do is add a new folder.
 好吧，我想要做的第一件事就是添加一个新文件夹
 
-82
+78
 00:03:54,944 --> 00:03:55,776
 All right.
 对的
 
-83
+79
 00:03:55,776 --> 00:03:56,288
 Yeah.
 嗯
 
-84
+80
 00:03:56,288 --> 00:04:01,856
 So I'm over here in a Visual Studio code, and I can right click, and say New Folder, or I can click these buttons.
 在 Visual Studio Code 中的这个区域，我可以右击，然后新建文件夹，或者我可以点击这些按钮
 
-85
+81
 00:04:01,856 --> 00:04:10,624
-I'm gonna right click and say a New Folder, because I have found that depending  on what's currently clicked on,
+I'm gonna right click and say a New Folder, because I have found that depending on what's currently clicked on,
 当右击的时候会出现 New Folder，是因为在当前点击的地方可以新建文件夹
 
-86
+82
 00:04:10,624 --> 00:04:13,312
-when you see New Folder-    >> You might end up somewhere else?
-当你看到显示 New Folder  -            >> 你要在别的地方建文件夹嘛？
+-when you see New Folder -You might end up somewhere else?
+-当你看到显示 New Folder -你要在别的地方建文件夹嘛？
 
-87
+83
 00:04:13,312 --> 00:04:17,216
 It can sometimes be like one folder down,so just gonna watch out for that.
 它有时可能会在某个文件夹里面，要注意这一点
 
-88
+84
 00:04:17,216 --> 00:04:26,880
 So, I'm confirming that my Pages folder, you had me add,is at the same level and not accidentally In wwwroot
 所以，我确认了我的 Pages 文件夹，你要求我添加，在同一级目录而不是在wwwroot中
 
-89
+85
 00:04:26,944 --> 00:04:28,992
 Or in the end or wherever.
 或者任何其他地方
 
-90
+86
 00:04:28,992 --> 00:04:31,168
 So, it can be a little confusing, all right?
 它可能有点混乱，是吗？
 
-91
+87
 00:04:31,168 --> 00:04:32,128
 So, I have a Pages folder.
 所以，我有一个Pages文件夹
 
-92
+88
 00:04:32,128 --> 00:04:35,648
 Okay, and now we actually had to need to add a page.
 好的，现在我们实际上需要添加一个页面
 
-93
+89
 00:04:35,648 --> 00:04:41,088
 So if you add New File,and we're going to add a Index.cshtml.
 所以如果你添加新文件，我们将添加一个Index.cshtml
 
-94
+90
 00:04:41,088 --> 00:04:42,368
 C# HTML.
 C# HTML
 
-95
+91
 00:04:42,368 --> 00:04:46,080
 Yes, so I always call it C# HTML,
 是的，我总是称它为 C# HTML ，
 
-96
+92
 00:04:46,080 --> 00:04:47,232
 but I was told that that wasn't right.
 但是我被告知这是不对的
 
-97
+93
 00:04:47,232 --> 00:04:49,536
 It's not, it's just a RAZOR PAGE.
 这没什么，它只是一个 RAZOR 页面
 
-98
+94
 00:04:49,536 --> 00:04:50,816
 It's just a RAZOR PAGE, yes.
 这只是一个 RAZOR 页面，是的
 
-99
+95
 00:04:50,816 --> 00:04:52,480
 Okay, ignore that extension.
 好的，忽略这个扩展拓展名
 
-100
+96
 00:04:52,480 --> 00:04:53,120
 Okay.
 嗯
 
-101
+97
 00:04:53,184 --> 00:04:54,976
 That's so clearly says, yes HTML.
 很明显，这就是 HTML
 
-102
+98
 00:04:54,976 --> 00:04:55,872
 Okay.
 好的
 
-103
+99
 00:04:55,872 --> 00:04:58,112
 -All right? -It does.
 -是吗？ -的确如此
 
-104
+100
 00:04:58,112 --> 00:05:01,824
 So first thing I wanna do is add a page directive.
 我想要做的第一件事就是添加一个页面指令
 
-105
+101
 00:05:01,824 --> 00:05:03,424
 So it'd be @page.
 所以应该是 @page
 
-106
+102
 00:05:03,424 --> 00:05:06,368
 Okay so, @page, so directive starts with @.
 好吧， @page ，所以指令以@开始
 
-107
+103
 00:05:06,368 --> 00:05:07,328
 -Yeah -Okay.
 -好 -是的
 
-108
+104
 00:05:07,328 --> 00:05:11,168
 And we'll be seeing a couple of those throughout the day,and seeing what you can do with that.
 我们将在今天看到其中的好几个（指令），并且了解你可以用它们做什么
 
-109
+105
 00:05:11,168 --> 00:05:11,680
 All right.
 好滴
 
-110
+106
 00:05:11,744 --> 00:05:16,032
 We're just gonna write some HTML, so let's just use a h1.
 我们只是要写一些 HTML ，所以我们只需要使用 h1
 
-111
+107
 00:05:16,032 --> 00:05:20,064
 Okay, h, I get IntelliSense, which is nice.
 好，我看到了非常棒的智能感知（ IntelliSense ）
 
-112
+108
 00:05:20,064 --> 00:05:22,112
 Hello Beyonce.
 Hello Beyonce
 
-113
+109
 00:05:28,512 --> 00:05:31,008
 Imagine if Beyonce actually learns how code on one of these videos.
 想象一下， Beyonce 是否真的通过这些视频学习了如何编程
 
-114
+110
 00:05:32,352 --> 00:05:36,896
 And I don't have a fancy keyboard.
 我键盘上没有这些特殊符号
 
-115
+111
 00:05:38,752 --> 00:05:40,160
 You wanna make sure you
 你想确保你
 
-116
+112
 00:05:40,416 --> 00:05:41,440
 I gotta respect her.
 我得尊重她
 
-117
+113
 00:05:41,440 --> 00:05:42,272
 You gotta respect the Bey.
 你必须尊重 Bey
 
-118
+114
 00:05:42,272 --> 00:05:43,232
 There we go.
 让我们继续吧
 
-119
+115
 00:05:43,424 --> 00:05:47,008
 She will appreciate that when one day,when she does watch this video.
 有一天，她会感激你的，当她看这个视频
 
-120
+116
 00:05:47,008 --> 00:05:49,568
 When she does watch this and invite me to her house for lunch.
 当她看到这个后邀请我到她家吃午饭
 
-121
+117
 00:05:49,568 --> 00:05:52,000
 All right, do I need to do anything else?
 好了，我还需要做其他事吗？
 
-122
+118
 00:05:52,000 --> 00:05:52,896
 Yeah, did you save it?
 嗯哼，你保存了吗？
 
-123
-00:05:52,960 --> 00:05:53,536
+119
+00:05:52,960 --> 00:05:53,425
 Yeah.
 是的
 
-124
-00:05:53,536 --> 00:05:55,840
+120
+00:05:53,425 --> 00:05:55,729
 So let's just see what happens, let's run this.
 让我们看看会发生什么，让我们来运行这个
 
-125
-00:05:58,592 --> 00:05:59,232
-All right.
-好的
-
-126
+121
 00:06:00,960 --> 00:06:03,584
 Do, do, do, gonna go and run it.
 加油，继续，让我看到它运行起来
 
-127
+122
 00:06:03,584 --> 00:06:05,504
 It's gonna fire up localhost:5000.
 它会监听 localhost:5000
 
-128
-00:06:10,112 --> 00:06:11,840
+123
+00:06:10,112 --> 00:06:11,100
 All right.
 嗯哼
 
-129
-00:06:12,416 --> 00:06:12,800
+124
+00:06:11,100 --> 00:06:11,725
 Wow.
 哇
 
-130
-00:06:12,800 --> 00:06:13,120
+125
+00:06:12,525 --> 00:06:13,376
 That's interesting.
 这很棒
 
-131
+126
 00:06:13,376 --> 00:06:18,752
 So Index.cshtml appears to be the default.
 所以 Index.cshtml 似乎是默认的（页面）
 
-132
+127
 00:06:18,944 --> 00:06:19,520
 Yes.
 是的
 
-133
+128
 00:06:19,584 --> 00:06:26,752
 And I wonder if I change its name Okay?
 我想知道我是否可以改名？
 
-134
+129
 00:06:26,752 --> 00:06:27,648
 Let's give it a try
 让我们试试看
 
-135
+130
 00:06:27,648 --> 00:06:29,888
 And then just hit Refresh.
 然后点击刷新
 
-136
+131
 00:06:30,848 --> 00:06:33,408
 No, you'd actually now have to-
 哦不，你现在实际上应该-
 
-137
+132
 00:06:33,408 --> 00:06:35,520
 No, look, where does that string come from?
 不不不，快看，该字符串是从哪里来的？
 
-138
+133
 00:06:35,520 --> 00:06:40,512
 It came from line, go back.
 它来自那行，让我们倒回去
 
-139
+134
 00:06:40,512 --> 00:06:43,072
 Yeah, it came from line 31.
 是的，它来自第31行
 
-140
+135
 00:06:43,072 --> 00:06:50,368
 Right, so the point here is that, UseMvc,added some default routing, some behavior.
 对，所以这里要说的是 UseMvc 添加了一些默认路由及一些行为
 
-141
+136
 00:06:50,368 --> 00:06:50,944
 Yeah.
 是的
 
-142
+137
 00:06:50,944 --> 00:06:54,848
 When we say routing it's like when the URL comes in,it has to make a decision about who's handling this.
 我们所说的路由，就像是有 URL 进来一样，它必须决定谁来处理这件事
 
-143
+138
 00:06:54,848 --> 00:07:01,760
 Exactly, so if you went back to your page,and you did /fred ,would it pop up?
 没错，如果你回到你的页面，并且你添加了 /fred ，它会显示什么？
 
-144
+139
 00:07:01,760 --> 00:07:02,720
 That's a good question.
 这是个很好的问题
 
-145
+140
 00:07:02,720 --> 00:07:11,680
 Yes, okay so now we are starting to learn a little bit about the behavior.
 对，好吧 现在我们开始对这种行为有所了解了
 
-146
+141
 00:07:11,680 --> 00:07:16,608
 So by default, just because it's called Index, some magic,
 所以默认情况下，它被叫做 Index 这是一个特别的名称
 
-147
+142
 00:07:16,608 --> 00:07:22,752
 not magic with MVC defaults it adds as the a default route.
 而 MVC 在默认情况下，则会将它作为默认路由
 
-148
+143
 00:07:22,752 --> 00:07:23,712
 Right, right.
 对对
 
-149
+144
 00:07:23,712 --> 00:07:28,832
 Okay, so if we added another page,and maybe we're going a bit too crazy here.
 好的，如果我们添加了另一个页面，也许我们这里太疯狂了
 
-150
+145
 00:07:28,832 --> 00:07:32,608
 Mm-hm, want to add another named page?
 Mm-hm，想添加另一个被命名的页面？
 
-151
-00:07:32,608 --> 00:07:34,336
-Named page, yeah.
-是的，被命名的页面
-
-152
-00:07:34,336 --> 00:07:37,472
+146
+00:07:33,275 --> 00:07:35,325
 Okay, what do you want to call it?
 好吧，你想把它叫作什么？
 
-153
-00:07:37,472 --> 00:07:37,984
+147
+00:07:35,325 --> 00:07:36,024
 Solange?
 Solange?
 
-154
-00:07:37,984 --> 00:07:39,072
+148
+00:07:36,625 --> 00:07:38,000
 Yeah, or Rihanna, or if, whatever you want.
 可以，或者 Rihanna ，都可以啦
 
-155
-00:07:39,072 --> 00:07:45,152
+149
+00:07:38,000 --> 00:07:43,875
 All right, so, okay here's another one.
 好吧，这里有另一个
 
-156
+150
 00:07:45,152 --> 00:07:49,888
 This page is at I'm thinking it's at-/Solange, right?
 我认为这个页面会出现在 /Solange 对吗？
 
-157
+151
 00:07:49,888 --> 00:07:50,656
 That's right.
 没错
 
-158
+152
 00:07:50,656 --> 00:07:51,360
 Yeah.
 嗯哼
 
-159
+153
 00:07:51,360 --> 00:07:55,456
 So, we'll just put that in the paragraph tag to be correct.
-所以，我们只需将它放在段落标记（ <p></p> ）中即可
+所以，我们只需将它放在段落标记（ ）中即可
 
-160
+154
 00:07:55,456 --> 00:08:03,328
 See how Visual Studio code is trying to be helpful?
 看到 Visual Studio Code 是怎么帮助你的了吗？
 
-161
+155
 00:08:03,328 --> 00:08:06,784
 I should have just opened up my P to start with.
-我应该在一开始就键入段落标记的开头 (<p>)
+我应该在一开始就键入段落标记的开头 ( )
 
-162
+156
 00:08:06,784 --> 00:08:07,744
 There we go.
 继续吧
 
-163
+157
 00:08:09,024 --> 00:08:12,864
 So there is our default.
 我们所有都是默认的
 
-164
+158
 00:08:16,064 --> 00:08:17,600
 Did I not run it again?
 我没有重新运行它吗？
 
-165
+159
 00:08:17,792 --> 00:08:19,520
 I don't think you did.
 我想你没有
 
-166
+160
 00:08:23,232 --> 00:08:24,768
 Okay, so I dotnet run.
 好吧，键入 dotnet run
 
-167
+161
 00:08:33,984 --> 00:08:35,264
 So, there's our default.
 这是我们的默认页面
 
-168
+162
 00:08:49,344 --> 00:08:52,096
 And.That one is not showing up.
 另一个没有出现
 
-169
+163
 00:08:53,312 --> 00:08:54,272
 It is not.
 这并不是
 
-170
+164
 00:08:56,768 --> 00:08:59,584
 Why don't we put it in a folder.
 为什么我们不把它放在一个文件夹中
 
-171
+165
 00:09:00,672 --> 00:09:02,336
 Within a folder? Okay.
 放在一个文件夹中？好吧
 
-172
+166
 00:09:02,784 --> 00:09:04,256
 And then, call it Index.
 然后，将其称为 Index
 
-173
+167
 00:09:11,104 --> 00:09:14,688
 So, it would have to be Solange/Index then.
 所以，它必须是 Solange/Index 吗？
 
-174
+168
 00:09:14,688 --> 00:09:16,800
 No, cuz Index is the default.
 不，因为 Index 是默认值
 
-175
+169
 00:09:20,640 --> 00:09:23,008
 Interesting.
 有意思
 
-176
+170
 00:09:23,008 --> 00:09:23,712
 Hello Beyhive.
 Hello Beyhive
 
-177
+171
 00:09:23,712 --> 00:09:24,736
 Let's think about this.
 让我们来思考一下
 
-178
+172
 00:09:24,736 --> 00:09:26,656
 What are we doing wrong?
 我们做错了什么？
 
-179
+173
 00:09:26,656 --> 00:09:31,392
 This is good though, because we are doing a- We are doing an experiment.
 没关系，因为我们正在做一个做一个实验
 
-180
+174
 00:09:31,456 --> 00:09:33,248
 Doing an experiment here and in the process.
 在这过程中进行实验
 
-181
+175
 00:09:33,248 --> 00:09:39,200
 We are learning how things work and doing things wrong, right?
 我们正在了解这些如何运作，可哪里出错了，对吗？
 
-182
+176
 00:09:39,200 --> 00:09:40,352
 We are gonna do things together.
 我们一起来解决它吧
 
-183
-00:09:40,352 --> 00:09:44,512
+177
+00:09:40,352 --> 00:09:42,870
 So, I've just changed that real quick, we did Fred before.
 所以，我刚刚改变了这里，我们之前做过 Fred
 
-184
-00:09:44,512 --> 00:09:46,816
+178
+00:09:45,725 --> 00:09:46,816
 I know what it is.
 我知道哪里错了
 
-185
+179
 00:09:46,816 --> 00:09:51,872
 -Tell me -All right, check this,friends, out lets go back put it back to Solange this is.
 -快告诉我 -好吧，检查一下，朋友们，让我们回去把它改回 Solange
 
-186
+180
 00:09:51,872 --> 00:09:55,392
 Okay, so here's Index.
 好的，这里是 Index
 
-187
-00:09:55,392 --> 00:09:59,360
+181
+00:09:56,775 --> 00:09:59,360
 Look very carefully, there's only a couple lines.
 仔细看，这里只有几行
 
-188
+182
 00:09:59,360 --> 00:10:01,152
 Here's Solange.
 这是 Solange
 
-189
+183
 00:10:01,152 --> 00:10:04,288
 We did not put the page directive.
 我们没有放置页面指令
 
-190
+184
 00:10:04,288 --> 00:10:05,760
 Yay.
 好极了
 
-191
+185
 00:10:05,760 --> 00:10:06,912
 Okay.
 对的
 
-192
-00:10:06,912 --> 00:10:11,776
+186
+00:10:10,300 --> 00:10:11,776
 Very interesting.
 非常有趣
 
-193
-00:10:11,840 --> 00:10:17,280
+187
+00:10:11,840 --> 00:10:16,875
 -Interesting, so -It is that that makes it magic,actually it runs if it doesn't see the page directive
 -有趣，那么 -实际上在程序运行时候它神奇地完成了这一切，如果没有这个页面指令
 
-194
-00:10:17,280 --> 00:10:18,816
+188
+00:10:16,875 --> 00:10:18,120
 and it's never going to.
 这个页面将永远不会显示
 
-195
-00:10:18,816 --> 00:10:20,416
+189
+00:10:18,120 --> 00:10:19,875
 That's not the way it needs to go.
 这意味着它没必要显示
 
-196
-00:10:20,416 --> 00:10:21,376
+190
+00:10:19,875 --> 00:10:20,835
 Doesn't have to work that way.
 不必通过这样执行
 
-197
-00:10:21,376 --> 00:10:27,200
+191
+00:10:21,125 --> 00:10:27,200
 So, that interesting did not know that I knew it,but like I knew it intuitively.
 所以，这个坑我之前并不知道，但我凭直觉猜到了就是这样
 
-198
+192
 00:10:27,200 --> 00:10:28,160
 But this is something
 可这一些东西
 
-199
+193
 00:10:28,160 --> 00:10:30,016
 that someone at home is going to encounter.
 总会有初学者会遇到
 
-200
+194
 00:10:30,016 --> 00:10:31,168
 Yeah, yeah, it absolutely is.
 是的，绝对会有的
 
-201
+195
 00:10:31,168 --> 00:10:32,576
 It's definitely something that you're going to encounter
 这绝对是你将会遇到的
 
-202
+196
 00:10:32,576 --> 00:10:37,696
 like we hit it, and it was the first thing I told you to do was to add a page directive.
 就像我们被它坑到一样，所以，我告诉你，要做的第一件事就是添加页面指令
 
-203
+197
 00:10:37,696 --> 00:10:38,400
 Yep, absolutely.
 是的，一定要记住
 
-204
+198
 00:10:38,400 --> 00:10:43,328
 And this actually brings up an interesting point about Visual Studio versus Visual Studio code.
 这实际上也是一个有关 Visual Studio 与 Visual Studio Code 有趣的地方
 
-205
+199
 00:10:43,328 --> 00:10:45,760
 When we switch over to Visual Studio later
 在稍后我们使用 Visual Studio
 
-206
+200
 00:10:45,760 --> 00:10:49,600
 we gonna add up using the template that are built in.
 我们将使用内置的模板来添加内容
 
-207
+201
 00:10:49,600 --> 00:10:53,760
 So, we gonna go and say file new razor page.
 我们只需要创建一个新的 Razor Page 文件
 
-208
+202
 00:10:53,760 --> 00:10:54,336
 Exactly.
 没错
 
-209
+203
 00:10:54,336 --> 00:10:59,072
 And we will get some stuff for free, because we are just making these texts files by ourselves
 而且（模板）将会完成一部分的代码，因为我们仅是通过自己来完成这些文本文件
 
-210
+204
 00:10:59,072 --> 00:11:01,248
 we bump into these kind of mistakes,so that's really interesting.
 才碰到了这种错误，所以这真的很坑
 
-211
-00:11:01,248 --> 00:11:06,112
+205
+00:11:01,950 --> 00:11:06,112
 That does bring up the question about the folder thing though,why don't we try that?
 这确实提出了有关文件夹的问题，我们为什么不尝试一下呢？
 
-212
+206
 00:11:06,176 --> 00:11:13,408
 Let's make a folder before that,and then we'll move this here.
 让我们在那先创建一个文件夹，然后我们把它移动到这
 
-213
+207
 00:11:13,408 --> 00:11:13,984
 Exactly.
 没错
 
-214
+208
 00:11:13,984 --> 00:11:18,144
 And then, change it to Index, which appears to be the default.
 然后，将其重命名为默认值 Index
 
-215
+209
 00:11:18,144 --> 00:11:21,856
 So, if you refresh the page.
 那么，如果你刷新页面的话
 
-216
+210
 00:11:21,856 --> 00:11:23,648
 Yes, same page
 没错，是同一页面
 
-217
+211
 00:11:23,648 --> 00:11:26,336
 But if I change it here.
 但是如果我在这里改变它
 
-218
-00:11:26,400 --> 00:11:41,312
+212
+00:11:37,225 --> 00:11:41,312
 So, just explore this for a second, it looks like that is
 只需探索一下，看起来就是这样
 
-219
+213
 00:11:41,312 --> 00:11:43,680
 not necessary the name of the file, but the path.
 没有什么文件名是必须的，除了路径会不一样
 
-220
+214
 00:11:43,680 --> 00:11:50,656
 So, your default route would be path and then another path,in this case the default page right there, you see?
 所以，你的默认路由将是由路径，然后是另一条路径所组成，在这种情况下，默认页面就在那里，你看到了吗？
 
-221
+215
 00:11:50,656 --> 00:11:54,496
 Yeah, so the route is the file structure then?
 是的，所以说路由就是文件夹结构喽？
 
-222
+216
 00:11:54,496 --> 00:11:56,160
 The route is the file structure.
 对，路由就是文件结构
 
-223
+217
 00:11:56,160 --> 00:11:59,680
 Which for a page focused framework is a really nice experience.
 一个专注于页面的框架是一个非常好的体验
 
-224
+218
 00:11:59,680 --> 00:12:02,176
 It makes total sense to me.
 这对我来说意义重大
 
-225
-00:12:02,176 --> 00:12:02,816
-Right.
-对啊
-
-226
-00:12:02,816 --> 00:12:06,208
+219
+00:12:02,176 --> 00:12:06,208
 Like when you build your first HTML page ever it has the same experience.
 就像你建立你的第一个 HTML 页面一样，这会是相同的体验
 
-227
+220
 00:12:06,208 --> 00:12:08,384
 Yeah, that page within a folder.
 是的，一个在文件夹中的页面
 
-228
+221
 00:12:08,448 --> 00:12:13,822
 And that means that when we go later on and make customers,and products, and things like that
 这意味着，我们在稍后会做类似消费者，生产者，以及物品的（应用）
 
-229
-00:12:13,822 --> 00:12:16,925
+222
+00:12:13,822 --> 00:12:16,200
 it's gonna be really clear about how to do that.
 这一思路应该是非常清晰的
 
-230
-00:12:16,925 --> 00:12:18,808
+223
+00:12:16,500 --> 00:12:18,808
 This is just static HTML though.
 而这仅仅的静态的 HTML
 
-231
+224
 00:12:18,808 --> 00:12:20,797
 We should probably add something dynamic
 我们应该再添加一些动态的东西
 
-232
+225
 00:12:20,797 --> 00:12:22,397
 before we move on to the next section.
 在我们进入下一节之前
 
-233
+226
 00:12:22,397 --> 00:12:25,138
 So, let's give Solange some more information.
 那么，让我们来给予 Solange 更多的信息
 
-234
+227
 00:12:25,138 --> 00:12:25,150
 So, I hear she has a concert today.
 那么，让我们来给予 Solange 更多的信息
 我听说她在今天有一个音乐会
 
-235
-00:12:25,150 --> 00:12:28,274
+228
+00:12:25,150 --> 00:12:27,975
 So, I hear she has a concert today.
 我听说她在今天有一个音乐会
 
-236
-00:12:28,338 --> 00:12:32,626
+229
+00:12:27,975 --> 00:12:32,626
 Okay, let's assume that it's always now,there is always a Solange concert.
 哦好，让我们假设在当前时刻，总是会有 Solange 的音乐会
 
-237
+230
 00:12:32,626 --> 00:12:33,906
 -There is always a -At any moment.
 -那总有一个 -在任何时候
 
-238
+231
 00:12:33,906 --> 00:12:34,674
 Exactly.
 好的吧
 
-239
+232
 00:12:34,674 --> 00:12:36,658
 So, we'll have bold thing and what should we say?
 我们将会加粗这一信息，我们该怎么说呢？
 
-240
+233
 00:12:36,658 --> 00:12:46,450
 The concert starts at, I don't know, 3pm, right?
 音乐会将在什么时候开始，我不知道，下午3点可以吗？
 
-241
+234
 00:12:46,450 --> 00:12:47,922
 but I wanna have that be dynamic.
 但我希望它可以是动态的
 
-242
+235
 00:12:47,922 --> 00:12:48,498
 Okay.
 好吧
 
-243
+236
 00:12:48,498 --> 00:12:50,290
 How can I make that now.
 我应该怎么样让它显示现在的时刻
 
-244
+237
 00:12:50,290 --> 00:12:51,826
 @DateTime.
 @DateTime
 
-245
+238
 00:12:51,826 --> 00:12:53,554
 So, I say, @, again.
 好吧，我再次用了 @
 
-246
-00:12:53,554 --> 00:12:54,386
-Yeah.
-对的
-
-247
-00:12:54,386 --> 00:12:57,074
+239
+00:12:53,825 --> 00:12:57,074
 DateTime, which is like System.DateTime
 DateTime ，就像是 System.DateTime
 
-248
+240
 00:12:57,074 --> 00:12:58,482
 .Now
 .Now
 
-249
+241
 00:12:58,482 --> 00:13:04,434
 All right, come back, hit refresh, then hit refresh again.
 很好，让我们回来看看，点击刷新，然后再次刷新
 
-250
+242
 00:13:05,714 --> 00:13:07,314
 I'm late I gotta go.
 要迟到了，我得走了
 
-251
+243
 00:13:07,314 --> 00:13:09,298
 You gotta go, it's happening.
 你确实得走了，它刚开始
 
-252
+244
 00:13:09,298 --> 00:13:10,322
 It's happening right now.
 它现在刚开始
 
-253
+245
 00:13:10,322 --> 00:13:17,874
 Now, it's important to point out that,notice the difference between me making a change.
 现在需要指出的是，注意我这样做的区别
 
-254
-00:13:19,346 --> 00:13:19,602
-Yep.
-好的
-
-255
+246
 00:13:21,010 --> 00:13:25,042
 Control + S, Alt + Tab, refresh.
 保存，切换窗口，刷新
 
-256
+247
 00:13:25,938 --> 00:13:27,538
 I'm not having to build.
 我不需要构建
 
-257
+248
 00:13:27,538 --> 00:13:28,434
 -No -Right.
 -确实没有 -对吧
 
-258
+249
 00:13:28,434 --> 00:13:35,922
 With razor pages the page is being built when it changes,and it gets hit for the very first time,
 对 Razor 页面来说，当它在改变后将会自动构建，而且能很快的响应
 
-259
+250
 00:13:35,922 --> 00:13:39,954
 if I change the C# files I need to then go and rebuild.
 可如果我改变了 C# 文件，那我就需要重新构建项目
 
-260
+251
 00:13:40,018 --> 00:13:44,050
 Okay, but within the page itself you do not need to do that.
 对的，但如果是页面自身发生了变化，你就不需要这样做
 
-261
+252
 00:13:44,050 --> 00:13:46,866
 So, the razor pages, these CSH developed pages.
 这些使用 C# HTML 开发的 Razor 页面
 
-262
+253
 00:13:46,930 --> 00:13:49,362
 They get copied to the host and
 他们可以被复制到 host （运行应用程序的主机，或称宿主）
 
-263
+254
 00:13:49,362 --> 00:13:50,706
 they are part of the source code.
 他们也可以是源码的一部分
 
-264
+255
 00:13:50,706 --> 00:13:55,954
 But these .cs files don't get copied to the host,
 但是这些 .cs 文件没有被复制到 host
 
-265
+256
 00:13:55,954 --> 00:13:58,450
 in fact the DLL that they build into does.
 事实上，他们被构建为 DLL 文件
 
-266
+257
 00:13:58,450 --> 00:13:59,026
 Okay.
 好吧
 
-267
+258
 00:13:59,090 --> 00:14:01,074
 Right，that's just a little important thing to point out,
 对，这还有一个值得指出的要点
 
-268
+259
 00:14:01,074 --> 00:14:04,786
 and you can see that if you go and say, dotnet build.
 你可以看到这一过程，通过 dotnet build
 
-269
-00:14:04,786 --> 00:14:06,514
+260
+00:14:04,786 --> 00:14:05,925
 We've been saying dotnet run.
 我们在之前用的都是 dotnet run
 
-270
-00:14:06,514 --> 00:14:07,346
+261
+00:14:05,925 --> 00:14:06,757
 Yeah.
 对
 
-271
-00:14:07,410 --> 00:14:08,434
+262
+00:14:06,757 --> 00:14:07,781
 See?
 看到了吗？
 
-272
-00:14:08,434 --> 00:14:10,354
+263
+00:14:08,050 --> 00:14:10,354
 See how it actually points to your web app?
 看到它是如何指向你的 Web 应用了吗？
 
-273
+264
 00:14:10,354 --> 00:14:14,258
 It says, mywebapp is right there.
 这样说吧， mywebapp 就在这里
 
-274
+265
 00:14:14,258 --> 00:14:16,178
 So, I have a question for you.
 等下，我有一个问题问你
 
-275
+266
 00:14:16,178 --> 00:14:18,802
 If someone on this, who's watching us right now.
-如果有人正在看我们的视频，
+如果有人正在看我们的视频
 
-276
+267
 00:14:18,802 --> 00:14:22,578
 Like what is that dll thing that he is talking about,
-就像他正在讲的 dll 这类东西，
+就像他正在讲的 dll 这类东西
 
-277
+268
 00:14:22,578 --> 00:14:23,730
 where they can learn more about that?
 在哪可以让我们的观众了解更多？
 
-278
+269
 00:14:23,730 --> 00:14:25,330
 All right, so that's called an assembly
 好的，这被叫做程序集
 
-279
+270
 00:14:25,330 --> 00:14:27,378
 it's a dynamic link library if you wanted to learn about
 这是一个动态链接库，如果你想知道
 
-280
+271
 00:14:27,378 --> 00:14:29,682
 the details of how assembly's works some things like that.
-程序集是怎样工作的细节的话
+程序集是怎样工作的细节方面
 
-281
+272
 00:14:29,682 --> 00:14:31,666
 You can go and take a look at some of
 你可以去看一些
 
-282
+273
 00:14:31,666 --> 00:14:33,010
 the intermediate sections on the job.
 中间步骤
 
-283
-00:14:33,010 --> 00:14:37,234
+274
+00:14:33,010 --> 00:14:35,818
 I just wanted to point out that
 对此我想说的是
 
-284
-00:14:37,234 --> 00:14:42,610
+275
+00:14:35,818 --> 00:14:42,300
 when I go and publish my application,like I'm meaning to say it's time for my app to go out into the world.
 当我准备发布我的应用程序时，或者说当我准备让其他人来使用我的应用时
 
-285
-00:14:42,610 --> 00:14:48,242
--We're gonna get -And just to be clear for
--我们将会得到 -就会清楚的知道
+276
+00:14:42,610 --> 00:14:45,375
+-We're gonna get
+-我们将会得到
 
-286
-00:14:48,242 --> 00:14:49,778
-some people who are watching this.
-谁看了这个视频
+277
+00:14:47,150 --> 00:14:49,778
+And just to be clear for some people who are watching this.
+就会清楚的知道谁看了这个视频
 
-287
+278
 00:14:49,778 --> 00:14:53,426
 Publish it doesn't necessarily mean that you're going to hit dotnet publish and
 发布应用并不意味着你只需键入 dotnet publish
 
-288
+279
 00:14:53,426 --> 00:14:55,922
 somehow it's gonna magically appear on the website.
 然后它就会神奇的出现在某个网站上
 
-289
+280
 00:14:55,922 --> 00:14:57,010
 -Right -Yeah, I like
 -是的 -对，我希望
 
-290
+281
 00:14:57,010 --> 00:15:00,466
 I just mean that I need people to understand the difference between
 我只是我希望大家能理解以下两者之间的不同
 
-291
+282
 00:15:00,466 --> 00:15:09,362
 the source code that's in the C sharp files,and the razor pages that are gonna be copied up through the final location.
 通过 C# 所写的源代码，与将被拷贝到最终位置的 Razor 页面
 
-292
+283
 00:15:09,362 --> 00:15:12,882
 Cool, so this is a little bit of C sharp right here.
 很好，这是一小部分的 C# （代码）
 
-293
+284
 00:15:12,882 --> 00:15:13,522
 It is.
 是的
 
-294
+285
 00:15:13,522 --> 00:15:16,210
 Right, I wonder if I could cheat.
 那我想知道我是否能够这样做
 
-295
+286
 00:15:16,210 --> 00:15:18,706
 How much do you wanna cheat?
 怎么样？
 
-296
+287
 00:15:18,706 --> 00:15:21,650
 Well, we can write C sharp here, right?
 我们在这写了 C# 代码，不是吗？
 
-297
+288
 00:15:21,650 --> 00:15:24,786
 Can I say, 2+2?
 那么，2 + 2 会可行吗？
 
-298
+289
 00:15:24,786 --> 00:15:28,050
 What am I allowed to say in there?
 我将会在这里得到什么？
 
-299
+290
 00:15:29,650 --> 00:15:30,802
 Broke it?
 出错了？
 
-300
+291
 00:15:30,802 --> 00:15:32,658
 All right, so that got an error, right?
 好吧，这将导致一个错误，是吧？
 
-301
+292
 00:15:32,658 --> 00:15:36,370
 So, it doesn't like that.
 所以，这并不像我想象的那样
 
-302
+293
 00:15:36,370 --> 00:15:38,802
 What are the rules about what you can put in there.
 那在这里添加 C# 代码的规则是什么
 
-303
+294
 00:15:38,802 --> 00:15:44,690
 We will kind of explore that a little bit earlier,as we can say at, and then put chunks of code.
 我们会稍微探讨一下，正如我们所做的这样，然后把大量的代码放在这里面。
 
-304
+295
 00:15:44,690 --> 00:15:45,394
 Okay.
 嗯嗯
 
-305
+296
 00:15:45,394 --> 00:15:46,738
 All right, cool.
 太棒了
 
-306
+297
 00:15:46,738 --> 00:15:51,026
 So, that is dynamic, there's a concert starting immediately.
-这是动态的，有一场音乐将马上开始。
+这是动态的，有一场音乐将马上开始
 
-307
+298
 00:15:51,090 --> 00:15:54,930
 And then, we'll come back a little bit and look at configuration.
 我们将在稍后回来，再来聊一聊如何配置
-
-308
-00:15:54,930 --> 00:15:55,762
-All right.
-稍后见
 
