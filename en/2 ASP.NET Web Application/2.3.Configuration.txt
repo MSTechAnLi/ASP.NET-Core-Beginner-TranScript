@@ -1,0 +1,208 @@
+Hey friends, we're gonna talk a little bit about configuration.
+But before we do, briefly I got an error before and I wanna fix that.
+And it was kind of annoying.
+I was goofing around here, if you look at our Razor, and this is incorrect.
+I was being silly and goofing around, and when I was trying to do some math, inside of my Razor Page, cuz I'm experimenting.
+I kept getting this 500 error, this is the kind of error that you'd get in production.
+And it's annoying and it's scary, but it's not really helpful to me, is it?
+Well remember I'm running in production right now.
+Because over here in startup we said, if environment is development show this developer exception page.
+You're gonna show me later how to change from development to production but I just wanted to briefly show that of course I can comment things out.
+Just like before when we commented out starting a web app and instead changed it back to a console app.
+What I want to do is make sure that this DeveloperExceptionPage You want to see it, right?
+I want to see it, because I don't want a 500 error,I want a real error.
+I want to know what's going on.
+So by removing that line you should be able to then see the mistake.
+RIght, now, the right thing to do is to switch to development mode, but we are going to see that a little bit later okay?
+Now I'll go back here, I'm gonna hit refresh.
+And now I'm getting a development page.
+You don't want to see this in production.
+But it's showing me that well, this is not valid,this is not valid Razor, and it gives me the line of code.
+So now I actually know what's going on.
+And I'll go back over here.
+Could you go back to your home page?
+If you hit on the + button.
+Okay, give me a little context.
+Of where it is in the page.
+Because if it was thousands of lines,I might not know exactly where that was.
+Good point, all right.
+So instead of doing my 2+2 there I am going to say @ and I gonna open a little block here.
+And we'll just make a variable like i,I'll do my 2+2 and then I will say ipm.
+Make sense?
+So if I made a mistake in here.
+Forget to put the var.
+It should give you an error.
+It should say i does not exist and tell me the line.
+So it's compiling that Razor Page the second that I hit refresh, all right?
+Interesting.
+Good reminder.
+It is a good reminder.
+So I'm just goofing around there.
+What we'll learn about a little bit later is how to set this environment so that it is in development, so I don't have to comment that line out.
+So out of curiosity this isn't something that people would want to do in practice would they?
+Like by ejecting bits of C# everywhere into their code?
+Well it depends, that's good point.
+So we'll talk a little bit when we get a little further on the day about the responsibilities of a Razor Page vs the responsibilities of the page model or the code behind.
+It is okay to do calculations in what's called the view,if they are view based calculations if they're stuff that's not business logic.
+For example,I don't think I would wanna calculate tax rates and shopping for values in here from a responsibilities perspective.
+But certainly I can chop up strings and do different kinds of stuff so it is okay to inject little bits of C# in here.
+It's more about is it gonna be maintainable for the rest of the team.
+So we talked earlier, you had me talk about the difference between configure services and configure.
+I'm afraid we're going to insert another word that sounds like configure.
+I know, it's just like it's configuration, configure,configure it more, and configure it a little bit more.
+That is software engineering, isn't it?
+It's mostly configuring things and running things.
+Yeah, and they all have around the same names, so yeah.
+So this module's configuration,what are we configuring in this context?
+So I wanna show you how to add configuration into your application.
+That means like switches, options, things that you would,configuration for your app.
+That is different from setting up your services.
+-Exactly -Okay, all right.
+So if you open up, are we in startup?
+We are in startup.
+-Yes, we are -We call it Beyonce,which is probably gonna confuse people.
+I know, should we still call it Beyonce?
+We should probably change it back to startup because we don't want to lose our jobs.
+Let's just change it back to startup.
+Okay, we're in the startup class.
+Cool, and we want to pull information out of a config file.
+-Yes we do -Where is the config file?
+In iconfiguration.
+Yeah but the name, the file itself, the settings for the application.
+You actually have to add, you mean you add your app json?
+Is that what you're looking for?
+Your app settings right, so let's do that first.
+So appsettings.json.
+That's the default name for settings for your app.
+Now I can put anything in here right,
+as long as it's json it's totally up,whatever configuration information I want right?
+So we'll have like some message.
+Yeah it can be like friendly call from Beehive or hello from.
+Yeah, here's a greeting.
+-From the config -And you're configuration it
+really can be anything that is application specific,any name value pair.
+Exactly, so you could have logging over there as well,could you not?
+Yeah, we'll see a little bit later we'll have the logging levels.
+It can be, there'll be a place to put connection strings and all kind of stuff.
+And we'll talk about the differences between where user secrets go, where connection strings go and where non secret things go.
+So just for reference for people who are going to be watching this, when I've been using the app settings I've been using it mainly for configuration of my database.
+Okay, so it depends on whether the configuration for your database is a secret.
+It's a secret.
+-Or not -It should be a secret.
+Yes, it should probably not put your connection string in there.
+It should not have been there,do not do this, although it's defaulted in the template.
+-But as someone -Well let's take a look at the template.
+But as someone who has put apps into production,what are some of the most common things that you have actually used something like this for?
+So let's say maybe like someone's email address,or I might have if I'm writing a blog number of posts on homepage, ten, whatever.
+It could be anything that is a quick little switch or change that you might want to pop in a config file and update.
+And what's nice aboutconfiguration as it's configurable we're using json it could be an i in i file,it could be an XML file.
+It could be a database somewhere.
+Any of the kinds of options that you want show ads on the homepage.
+I was just thinking about things that I do on my blog,that kind of stuff.
+Cuz I think people see and they just what is that about and they think it's important to understand
+Showing messages is a silly kind of generic kind of thing.
+Like these are some real world examples.
+Yeah, like if you were having paging,page size before I hit next, next or whatever.
+So if I have 100 blogs post,maybe my page size is gonna be 10.
+These are the kinds of things you wanna have in a config file somewhere that you can then pull out in your code.
+So we're gonna figure out how to pull that out, all right.
+So let's go back to startup and configuration is a service.
+-Yes it is -It's a thing like logging is a service, you had MVC as a service so we need to make sure that we can inject that service.
+That's a dependency that we're gonna inject into our system okay.
+Dependency injection how much do you wanna talk about that?
+I'm going to talk about that a little bit more in a different one.
+So for now we will just assume that we'll give you a little bit of background before we get deeper into it later.
+So I'm gonna just make a constructor, right,my startup constructor here.
+And whatever parameters the startup constructor has will be given to me automatically by the system.
+They'll be injected directly to the system.
+So I need the ability to have an IConfiguration, and this is a little trickier, let's watch this very careful.
+I'm gonna type IConfiguration, and at the end of it,see it how it's all squiggly.
+-Yeah -I'm gonna hit Ctrl+dot.
+And it gives you the options.
+And it says, well, do you make one of these?
+Or is it the one, do you mean this one here?
+We mean that one there.
+Right, and there's actually two options.
+You can add the using statement.
+-Okay -Or fully express it almost like a path like C:/, whatever, whatever, whatever.
+It's that full path, to IConfiguration.
+That wouldn't make it available to the entire program.
+And we'd have to do that every single time we used it.
+-Yeah. -Exactly, good point.
+So we'll say using, and then watch up here on line 8, so watch at line 8.
+Ta-da, yeah.
+So it just drops in there automatically.
+So Startup, our start up class, is gonna need IConfiguration,and we can call it whatever, call config.
+And then we're gonna store it away,cuz they're gonna pass it in to us, they're gonna make one.
+And this is important, we'll talk about dependency injection later, but the part that you need to remember is that you don't need to make one, you just ask for it.
+And by asking for it, we put it in as a parameter.
+So we don't actually go and say new, whatever.
+So I'll say public IConfiguration,and we can name it Configuration.
+-Yeah. -And this is gonna be a property.
+Yeah, so have a get in the set.
+Get in the set, excellent.
+And then, we just squirrel it away as they say.
+Configuration = config.
+So they pass it in when we start up, and we stick it over here,which then presumably means I can use it, right?
+Yes, you can so you should be able to use it right from your page.
+I can use it wherever.
+It should be sitting around, so I could be down here, oops,I was gonna say this.Configuration., and then those are all the things one can do.
+Now that is within my C# a pplication.
+My C# code, my startup at CS, but if we go back over here, let's go to our index one, our Beyonce RAZOR PAGE.
+You said I can use it from within here directly.
+Yes, but we need to inject it first.
+Okay, so just like it was, inject it in,it was made available.
+Mm-hm.
+Inject is kind of an intense word.
+I know.
+I asked for it, and they gave it to me.
+Yes.
+I think eject is a little intense, but-
+Please.
+So I'll say h2, h2.
+Can I just go and say, Config?
+No, can I say @Config?
+Yes you can, @Config would, yeah.
+But I can't, because it hasn't been injected yet.
+No, you actually have to have @ inject configuration.
+Okay, so up here where it says page
+Yeah,you need a new directive.
+I need another directive, I need to go inject, okay?
+And then, when I say IConfiguration, though,it's not gonna work.
+Yeah, because we can still need to inject the using statement.
+We have to add the using statement, so using and a bit later on we'll see how to do this for every page, instead of having to do it on one page, but I'm gonna say using.
+Then I will say inject IConfigaration,and we will just call it Configuration.
+So this is asking for it.
+-Yes. -Okay, and then down here, I could say Configuration and we called it
+We called a whole bunch of things.
+We say message.
+-Okay. -Message.
+Cuz it's just a bag, a bag of stuff.
+Oops, I can do it on multiple lines, I'll do it on one line.
+All right, let's see if that breaks.
+That's my positive attitude speaking.
+-Keeping it real. -Yeah, let's see if that breaks,that's the attitude of the developer.
+I think it'll be okay.
+-Breaking things is fun, then you get to fix them, right? -That is true.
+So that's our Solange page, let's look at our home page,here it go, here's a greeting from the config file.
+Let's go back and change that.
+-To another greeting? -Yeah.
+All right, so that's coming out of that config file,we changed the config file, and the value changed,we did not change the code, all right?
+-Yeah -That's pretty cool.
+It's worth pointing out a couple of things, though.
+First, we have a using statement in our RAZOR PAGE,just like we did over in our CS.
+I wonder.
+Could I do this?
+-It should be a dot, right?
+-Right, thank you.
+So fully qualified path, yes -It worked.
+Well, it worked and that it didn't break
+Okay, it worked.
+-Alright -Yeah, it worked in quotes.
+So that's interesting, I can back out of that, and then I later on we'll see how we could make that configuration available ever with.
+-Yes. -Cuz I don't wanna
+have to keep adding.
+Cuz always could have to add it to every single page that you have.
+Yeah, I have got three lines of directives here and we got two lines of HTML, so that's real fun.
+-Yeah. -Okay, so I think we'll take a break and then we'll graduate to Visual Studio Proper.
+Yes, we are. -Very cool.
