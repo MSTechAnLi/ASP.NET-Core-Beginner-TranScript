@@ -16,7 +16,7 @@
 
 - [X] 从控制台到Web应用
 - [X] 动态渲染HTML
-- [ ] Configuration
+- [ ] Configuration（翻译中）
 
 ### 3. Razor Pages and CRUD
 

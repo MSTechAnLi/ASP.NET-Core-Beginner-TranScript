@@ -25,7 +25,7 @@ If you hit on the + button.
 Okay, give me a little context.
 Of where it is in the page.
 Because if it was thousands of lines,I might not know exactly where that was.
-Good point, all right.
+-Good point, -all right.
 So instead of doing my 2+2 there I am going to say @ and I gonna open a little block here.
 And we'll just make a variable like i,I'll do my 2+2 and then I will say ipm.
 Make sense?
@@ -34,8 +34,7 @@ Forget to put the var.
 It should give you an error.
 It should say i does not exist and tell me the line.
 So it's compiling that Razor Page the second that I hit refresh, all right?
-Interesting.
-Good reminder.
+-Interesting. -Good reminder.
 It is a good reminder.
 So I'm just goofing around there.
 What we'll learn about a little bit later is how to set this environment so that it is in development, so I don't have to comment that line out.
