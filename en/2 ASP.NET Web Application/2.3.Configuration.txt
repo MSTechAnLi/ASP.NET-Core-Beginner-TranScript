@@ -1,4 +1,4 @@
-Hey friends, we're gonna talk a little bit about configuration.
+﻿Hey friends, we're gonna talk a little bit about configuration.
 But before we do, briefly I got an error before and I wanna fix that.
 And it was kind of annoying.
 I was goofing around here, if you look at our Razor, and this is incorrect.
@@ -73,13 +73,12 @@ Is that what you're looking for?
 Your app settings right, so let's do that first.
 So appsettings.json.
 That's the default name for settings for your app.
-Now I can put anything in here right,
-as long as it's json it's totally up,whatever configuration information I want right?
+Now I can put anything in here right,as long as it's json it's totally up,whatever configuration information I want right?
 So we'll have like some message.
 Yeah it can be like friendly call from Beehive or hello from.
 Yeah, here's a greeting.
--From the config -And you're configuration it
-really can be anything that is application specific,any name value pair.
+From the config
+And you're configuration it really can be anything that is application specific,any name value pair.
 Exactly, so you could have logging over there as well,could you not?
 Yeah, we'll see a little bit later we'll have the logging levels.
 It can be, there'll be a place to put connection strings and all kind of stuff.
@@ -88,7 +87,6 @@ So just for reference for people who are going to be watching this, when I've be
 Okay, so it depends on whether the configuration for your database is a secret.
 It's a secret.
 -Or not -It should be a secret.
-Yes, it should probably not put your connection string in there.
 It should not have been there,do not do this, although it's defaulted in the template.
 -But as someone -Well let's take a look at the template.
 But as someone who has put apps into production,what are some of the most common things that you have actually used something like this for?
@@ -156,11 +154,10 @@ Inject is kind of an intense word.
 I know.
 I asked for it, and they gave it to me.
 Yes.
-I think eject is a little intense, but-
-Please.
+I think eject is a little intense, but-Please.
 So I'll say h2, h2.
-Can I just go and say, Config?
 No, can I say @Config?
+Can I just go and say, Config?
 Yes you can, @Config would, yeah.
 But I can't, because it hasn't been injected yet.
 No, you actually have to have @ inject configuration.
@@ -199,8 +196,7 @@ Well, it worked and that it didn't break
 Okay, it worked.
 -Alright -Yeah, it worked in quotes.
 So that's interesting, I can back out of that, and then I later on we'll see how we could make that configuration available ever with.
--Yes. -Cuz I don't wanna
-have to keep adding.
+-Yes. -Cuz I don't wanna have to keep adding.
 Cuz always could have to add it to every single page that you have.
 Yeah, I have got three lines of directives here and we got two lines of HTML, so that's real fun.
 -Yeah. -Okay, so I think we'll take a break and then we'll graduate to Visual Studio Proper.
