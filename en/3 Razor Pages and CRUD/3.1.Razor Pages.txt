@@ -1,0 +1,201 @@
+Hi, and welcome back.
+We're gonna have a look at Razor Pages in this model.
+We had a look at it a bit before where we introduced you to the concept of a page.
+And now we are gonna have a look at it outside of Visual Studio Code and the command line, we are gonna get started on Visual Studio.
+Right, so we are even doing our stuff in Visual Studio Code, you can see here, we goofed around a little bit and we made a couple of pages.
+You remember though that we started from an empty template.
+Yeah.
+So we went from nothing, we went from a Hello World console app into something with pages.
+I'm gonna close Visual Studio Code and I am going to go out here to Visual Studio proper, Visual Studio for Windows.
+>> Yep. >> You might be on Visual Studio for Mac if you're on a Mac.
+And in this particular case I'm gonna be using Visual Studio 2017 Community, you can go and get this at VisualStudio.com
+For free.
+For free, it works just nice, it's great, Visual Studio Community has a couple of small restrictions based on the size of your company.
+But if you're doing this as an open source person or as a person who's learning, Visual Studio Community is effectively pro.
+Okay.
+It's effectively the pro version, let's you have extensions, it's great little tool.
+All right, so what I wanna do is, you can see just to familiarize yourself with the UI here I've got some recents and things, I've got New Project.
+You can say, Create New Project, on the left hand side you may see different stuff depending on what you installed.
+When I ran the installer for Visual Studio, I set up for the web for workload it's called the Workload.
+You might have Android you might not, but you wanna make sure that you have the .Net core web workload.
+Quick question, you mentioned the Visual Studio installer, that does come when you download Visual Studio?
+Yeah, good point, let me bring that up, when you install it you're gonna get this application, this is Visual Studio installer coming up here, one moment.
+And the installer is modular, so it'll come up like this.
+And if I say Modify, you can run the installer multiple times, you can run installer after you've installed Visual Studio if you wanted to add other stuff.
+See look, even the installer itself wants to update, so right now just coincidentally, the installer has new stuff that it wants to give me.
+So it's gonna go and update itself, while it's doing that, you download this thing called a bootstrapper.
+It's a tiny little installer that goes and gets the things that you want.
+Visual Studio could be quite large if you installed everything or it could install in 20 minutes if you just wanted to do web apps or you just wanted to do Windows apps.
+So this allows you to customize your install.
+Exactly, and the things that you customize them with are called workloads, like the cloud workload or the mobile device workload.
+There you go, it just updated itself, you can see that I have at the time of this recording, Visual Studio Community 15.4.
+You should make sure that you have at least that or higher.
+If I click on Modify it's gonna give me some more choices.
+And I'm doing this of course after the fact I picked Universal Windows, I picked .NET desktop I picked ASP.Net
+But you can see so many other options, you have Python, Node, Data Science.
+And I could add these things afterwards, so if I wanted to do Linux development C++ I would click that and it will update and tell me.
+Right now, it's thinking about how much more it needs to download in order to get me that stuff.
+And then from within that you can go into individual components and pick on the specific things that you want, so you see, I've selected #F as well.
+This can be run multiple times and I just wanted to point out that I ran it and installed the web workload.
+So installing the web workload when went, File > New Project is what gives me this choice here for saying, Web pages.
+So Visual C#, Web pages, and I've got the ASP.NET Web Applications using the .NET Framework, the full framework that comes with Windows.
+Or ASP.NET Core Web Apps, which work on of course Linux and Mac, and Windows, which is what we're doing today.
+>> All right. >> Good stuff,
+I'm gonna double-click on that, I've said File > New Project and it's gonna pop up a dialogue here.
+You're gonna wanna double check this dropdown, you might have its default to core 1.0 or 1.1, you're gonna wanna be 2.0 or higher.
+You'll notice that the icons change based on what you pick, I could make Angular apps, React js apps, I could make full Model View Controller applications.
+We're just gonna say Web App, which is the default, this gives us both Razor Pages that we're doing today.
+And of course, Razor Pages are a part of or built on top of Model View Controller, so it's really the best choice for everybody, the most recent project template.
+And if you were doing that from the command line, do you remember what the command was for that?
+>> Razor. >> .Net new razor, exactly.
+Okay, so I'll double click on that.
+And when we create that, we're gonna watch the right-hand side over here where it says Solution Explorer.
+This will get you the same output as if you had said, .NET new razor, this is important that .NET new web or .NET new MVC.
+It's the same experience.
+It's the same experience, you don't wanna have a different experience for Visual Studio code people than you do for Visual Studio proper people.
+But templating does match cuz before you had to use a bit of yeomen over in one place.
+Right, all templating is matched and it's nice and clean.
+Here's a little helper page that shows up there, but we're gonna zoom over here and see how Visual Studio for Windows expresses itself.
+You can see we've got a couple more pages than before, we've got an About and a Contact page.
+And where would those pads be, given what we learned about Razor pads?
+/about, /context, /error, /Index would be default.
+Index would be default, exactly, right, now interestingly, these have something underneath them.
+Yeah.
+Sothese are the code behinds or the page models, that's the page and that's the page model and they've nested those.
+This is an important little thing to point out, let's look at this in Windows Explorer just to make sure, if I say open in Windows Explorer.
+It should appear as two separate files?
+They are two separate files.
+So here's Index and Index.cshtml, they are clearly two separate files.
+But it's convenient and it gives you a sense of the relationship between the files that the Solution Explorer in Visual Studio will go and nest them.
+So could you think about as the car and then the engine?
+Yeah, you could do that, anything that is any hierarchy, and then beneath that .CS, it gets even more interesting, it turns into a class explorer.
+Okay.
+These are not files, of course that's a property and that's a method.
+But now we're blurring the lines and now you're really looking at conceptual bits of things, as you make change those will update.
+So that's something that you see in Visual Studio that you don't see in Visual Studio Code, I can do that with all my C# classes.
+So remember before startup and configure services and all that.
+Yeah.
+Same kinda deal, also things like our app settings json which we used earlier in the previous module for configuration.
+If there is something that has an environment, like appsettings.production.json or appsettings.json, that's something we didn't yet talk about.
+No.
+Remember before when I did that I commented that line out so that I could see the-
+The exception page, yeah.
+Exceptions, where was that, do you remember where that was?
+Yeah, I believe it was in your startup.
+>> There it is. >> Yeah.
+So here's UseDeveloperExceptionPage and if you recall, it was if you're in development do that.
+Every time we ran the thing it kept saying we were in production.
+Yes.
+I grew frustrated.
+>> [LAUGH] >> And I went just like that, which got me past that problem but isn't correct.
+Okay.
+We're going right click, properties, and is it build or is it debug?
+>> Go to- >> Debug.
+>> There we go and then you add it.
+>> Yeah, so the environment variable ASPNETCORE_ENVIRONMENT equals development is the thing that makes the difference.
+So tying that back to configuration, you can have different configuration options.
+You can have appsettings.
+Whatever.
+And whatever, literally whatever, like foo.
+Anything.
+Testing, staging.
+Okay.
+Right, whatever makes you happy.
+So in this case here, one app settings, JSON, has some stuff in it.
+Looks like it's got, oops, wrong button.
+Some logging that we'll learn about a little later.
+And then development.
+Look at the difference between the two.
+One is set for warnings and one is set for debug.
+Wow, okay.
+Right, so a little bit of information there.
+So more sophisticated than what we had originally set up.
+Let's return over to startup and see what else is different.
+So we've got that configuration that we did before.
+We've got services.add mvc.
+Here's an exception here, this is an interesting little bit of code right here.
+So if we're in development, show the exception page that I like as a developer.
+Or if you're in production or really anything but development, we're just gonna show the error.
+That way we don't give away our source code and show people stuff.
+Now you had me use USeMVC before.
+Yes.
+This one has a little bit more information with different routes.
+We'll talk about that another time.
+And then we've also got static files in case you wanted to pick a file.
+Remember that couple of times we tried to pick up a file and it was skipping right past it cuz we didn't put the at page?
+Yes.
+It would have served that file if it found it on disk, if we had said StaticFiles.
+So if we had added that line of code into the previous experiment it would have just worked?
+It wouldn't have worked.
+It would have picked the file up and served it to us.
+But it would have picked it up as a static file.
+And that didn't work like it intended, okay.
+And not as a razor page and actually executed the code.
+So the order of these things matter.
+And also whether or not you want to run that or pick it up as a static file, like a gif or an html page, all right?
+So that's a little bit of a tour.
+Am I missing anything?
+I think that sounds good.
+That's good.
+Actually one other point.
+Underneath wwwroot, that's where your static things go.
+We've got our images there and our css.
+The pages, the static things are served out of root.
+And then the pages for our razor pages app, it's located in pages.
+But when I wanna have an image like slash images, slash something, it's served out of wwwroot.
+So, there is one thing that's new, is the view imports, layouts.
+Good point.
+So, remember when we were goofing around earlier, and over here we had our @page and we had @inject, and that wasn't enough, and then we needed an @using?
+And then suddenly we have more directives, than we had code?
+Yeah.
+That was a little weird.
+Well, you can do a thing called Viewimports which is all of that things that you want every page to have.
+Right, so we want every page to use this namespace.
+And every other one to, this is using a name space and this is the name space of those pages themselves.
+There's also a thing called tag helpers that we'll talk about in the intermediate today.
+Yes we will.
+And then ViewStart is a piece of code, multiple lines.
+>> [LAUGH] >> As many as you like, that runs for every view.
+Okay.
+All right. So if every view needed to check someone's name, or check for cookies or whatever.
+It depends how you want to do things.
+But these are the imports, all the different injects, all the different usings.
+And this is the little bit of code you want.
+In this case here, it's setting a layout.
+That's like the main page, that every other page wraps around.
+So here, Layout.cshtml is a razor page that has the top level HTML, it has the head, it has the CSS.
+Probably has a footer somewhere.
+Yep, footer's down here.
+There's some Bootstrap and some different JavaScript.
+And then your razor page is called the Body.
+And it's rendered right there.
+It's rendered right there.
+So this is a good point actually.
+Let me do this.
+BEGIN BODY, END BODY, okay?
+Okay.
+Let's run this.
+So this one is a little bigger of course than our previous application.
+So it might take a moment to fire up.
+Okay and if you go to another one of the pages, let's say the homepage.
+Good point.
+This is the home page, let's go to About.
+Yeah it should be on hook.
+Okay.
+So that's everything that's outside, and
+this bit here would be-
+Everything coming from the page.
+Right here.
+Yeah.
+So START MY PAGE, END MY PAGE.
+Make sense?
+Yeah.
+All right, cool.
+So I'm just undoing all of that, little control z, and we will come back in a moment, and try to build something.
+>> Yeah. >> That is nontrivial.
+Exactly.
+And we'll probably make a couple mistakes.
+And it happens.
+And hopefully we will learn.
+And we appreciate you learning with us.
+Thank you.
