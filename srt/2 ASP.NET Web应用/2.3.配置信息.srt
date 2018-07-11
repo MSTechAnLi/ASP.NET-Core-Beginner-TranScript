@@ -1,0 +1,804 @@
+1
+00:00:01,216 --> 00:00:04,288
+Hey friends, we're gonna talk a little bit about configuration.
+嗨，朋友们，我们接下来谈一谈配置吧
+2
+00:00:04,288 --> 00:00:08,896
+But before we do, briefly I got an error before and I wanna fix that.
+但是在做之前，我想先纠正一下之前的一个错误
+3
+00:00:08,896 --> 00:00:10,240
+And it was kind of annoying.
+这有点烦人
+4
+00:00:10,240 --> 00:00:14,976
+I was goofing around here, if you look at our Razor, and this is incorrect.
+如果你看一下 Razor ，我这样做其实并不正确
+5
+00:00:14,976 --> 00:00:24,192
+I was being silly and goofing around, and when I was trying to do some math, inside of my Razor Page, cuz I'm experimenting.
+我现在不是很有思路，我在 Razor 页面里想尝试通过数学公式来解决这个问题
+6
+00:00:24,192 --> 00:00:28,544
+I kept getting this 500 error, this is the kind of error that you'd get in production.
+可我一直得到错误代码为500的错误，这是你在生产环境中经常会遇到的那种错误
+7
+00:00:28,544 --> 00:00:33,152
+And it's annoying and it's scary, but it's not really helpful to me, is it?
+这很烦人可怕，并且对我来说并没有什么帮助，是吧？
+8
+00:00:33,152 --> 00:00:37,952
+Well remember I'm running in production right now.
+还好我意识到现在正在 Production 配置中运行
+9
+00:00:37,952 --> 00:00:44,480
+Because over here in startup we said, if environment is development show this developer exception page.
+因为在 Startup 的这里我们说过，如果环境是 Development 将会显示这个开发者调试页面
+10
+00:00:44,480 --> 00:00:54,080
+You're gonna show me later how to change from development to production but I just wanted to briefly show that of course I can comment things out.
+以后会讨论如何从开发转到生产环境，但我只想简单地说一下这个事情
+11
+00:00:54,080 --> 00:00:59,456
+Just like before when we commented out starting a web app and instead changed it back to a console app.
+就像以前一样，当我们讨论的是一个 Web 应用，而不是控制台应用
+12
+00:00:59,456 --> 00:01:04,128
+What I want to do is make sure that this DeveloperExceptionPage You want to see it, right?
+我想要做的是确保这个 DeveloperExceptionPage 能被看到，对吗？
+13
+00:01:04,128 --> 00:01:07,008
+I want to see it, because I don't want a 500 error,I want a real error.
+我想看到它，因为我不想要500错误，我想知道真正的错误
+14
+00:01:07,008 --> 00:01:07,968
+I want to know what's going on.
+我想知道发生了什么事
+15
+00:01:07,968 --> 00:01:12,320
+So by removing that line you should be able to then see the mistake.
+所以通过删除该行，应该能够看到错误
+16
+00:01:12,320 --> 00:01:18,784
+Right, now, the right thing to do is to switch to development mode, but we are going to see that a little bit later okay?
+现在，正确的做法是切换到开发模式，但我们稍后来讨论这点好吗？
+17
+00:01:18,784 --> 00:01:21,216
+Now I'll go back here, I'm gonna hit refresh.
+回到这里，刷新
+18
+00:01:21,216 --> 00:01:23,968
+And now I'm getting a development page.
+现在我获取了一个开发页面
+19
+00:01:23,968 --> 00:01:25,568
+You don't want to see this in production.
+你不会想在开发环境中看见这些
+20
+00:01:25,568 --> 00:01:32,032
+But it's showing me that well, this is not valid,this is not valid Razor, and it gives me the line of code.
+但它向我展示了这一点，这是无效的，它指出了这一行不是有效的 Razor 代码
+21
+00:01:32,032 --> 00:01:33,312
+So now I actually know what's going on.
+所以现在我知道发生什么了
+22
+00:01:33,312 --> 00:01:34,848
+And I'll go back over here.
+回到这里
+23
+00:01:34,848 --> 00:01:37,536
+Could you go back to your home page?
+你能回到你的主页吗？
+24
+00:01:37,536 --> 00:01:39,136
+If you hit on the + button.
+在这如果你点击 + 按钮
+25
+00:01:39,136 --> 00:01:43,424
+Okay, give me a little context of where it is in the page.
+很好，我看到了它在页面中的一部分上下文
+27
+00:01:43,424 --> 00:01:46,880
+Because if it was thousands of lines,I might not know exactly where that was.
+因为如果它是成千上万行的话，我可能不知道它到底在哪里
+28
+00:01:46,880 --> 00:01:48,736
+-Good point, -all right.
+-好主意， -当然喽
+29
+00:01:48,736 --> 00:01:54,240
+So instead of doing my 2+2 there,I am going to say @ and I gonna open a little block here.
+所以, 我不会在那计算我的 2+2 我会在这输入 @ 加上大括号
+30
+00:01:54,240 --> 00:02:05,440
+And we'll just make a variable like i,I'll do my 2+2 and then I will say i pm.
+然后让我们声明一个用于保存 2+2 的变量，然后这边改成 i pm
+31
+00:02:09,024 --> 00:02:10,816
+Make sense?
+太棒了！
+32
+00:02:10,816 --> 00:02:13,312
+So if I made a mistake in here.
+如果我在这里犯了一个错误
+33
+00:02:13,312 --> 00:02:17,984
+Forget to put the var.
+忘记加入 var
+34
+00:02:18,048 --> 00:02:19,584
+It should give you an error.
+你应该会得到一个错误
+35
+00:02:19,584 --> 00:02:24,064
+It should say i does not exist and tell me the line.
+它会说 i 并不存在，并告诉我错误在哪一行
+36
+00:02:24,064 --> 00:02:30,144
+So it's compiling that Razor Page the second that I hit refresh, all right?
+在我点击刷新之后，它会重新编译 Razor 页面，是的吧？
+37
+00:02:30,144 --> 00:02:32,704
+-Interesting. -Good reminder.
+-有趣 -很好的提示
+38
+00:02:32,704 --> 00:02:34,112
+It is a good reminder.
+这是一个很好的提示
+39
+00:02:34,112 --> 00:02:37,184
+So I'm just goofing around there.
+所以我刚才是偷懒了
+40
+00:02:37,248 --> 00:02:42,176
+What we'll learn about a little bit later is how to set this environment so that it is in development, so I don't have to comment that line out.
+稍后我们将了解到的是如何设置环境为开发环境，从而也就不用把这一行注释掉了
+41
+00:02:42,176 --> 00:02:50,560
+So out of curiosity this isn't something that people would want to do in practice would they?
+所以出于好奇，这不是人们想要在实践中做的事情吗？
+42
+00:02:50,560 --> 00:02:51,840
+Like by ejecting bits of C# everywhere into their code?
+就像他们的代码中无处不在的 C# 一样？
+43
+00:02:51,840 --> 00:02:52,864
+Well it depends, that's good point.
+问得好，这取决于各自的决定
+44
+00:02:52,864 --> 00:03:04,192
+So we'll talk a little bit when we get a little further on the day about the responsibilities of a Razor Page vs the responsibilities of the page model or the code behind.
+我们稍后再谈一点关于 Razor 页面的责任，以及页面模型或代码背后的责任
+45
+00:03:04,192 --> 00:03:14,240
+It is okay to do calculations in what's called the view,if they are view based calculations if they're stuff that's not business logic.
+在视图中进行计算是可以的，如果它们是基于视图的计算，而不是业务逻辑的话
+46
+00:03:14,240 --> 00:03:19,296
+For example,I don't think I would wanna calculate tax rates and shopping for values in here from a responsibilities perspective.
+例如，从职责的角度来说，我不认为我想在 Razor 页面中计算税率和购买价值
+47
+00:03:19,296 --> 00:03:25,696
+But certainly I can chop up strings and do different kinds of stuff so it is okay to inject little bits of C# in here.
+但是当然，我可以在这里注入一点 C# 用于分割字符串或别的东西
+48
+00:03:25,696 --> 00:03:33,184
+It's more about is it gonna be maintainable for the rest of the team.
+更重要的是它能够为团队的其他成员维护
+49
+00:03:33,184 --> 00:03:43,552
+So we talked earlier, you had me talk about the difference between ConfigureServices and Configure.
+所以我们早些时候谈过 ConfigureServices 和 Configure 之间的区别
+50
+00:03:43,552 --> 00:03:47,328
+I'm afraid we're going to insert another word that sounds like configure.
+恐怕我们会使用另一个听起来像 configure 的词
+51
+00:03:47,328 --> 00:03:51,232
+I know, it's just like it's configuration, configure,configure it more, and configure it a little bit more.
+我知道，听起来像是 configuration ，但 configure 用的多
+52
+00:03:51,232 --> 00:03:52,768
+That is software engineering, isn't it?
+那是软件的工程组件吗？
+53
+00:03:52,768 --> 00:03:54,240
+It's mostly configuring things and running things.
+这些主要掌管着配置和运行工作
+54
+00:03:54,240 --> 00:03:59,040
+Yeah, and they all have around the same names, so yeah.
+是呀，他们的名字都很相像
+55
+00:03:59,040 --> 00:04:01,792
+So this module's configuration,what are we configuring in this context?
+我们在模块配置这方面做了什么？
+56
+00:04:01,792 --> 00:04:08,064
+So I wanna show you how to add configuration into your application.
+等会，我想告诉你如何将配置添加到应用程序中
+57
+00:04:08,064 --> 00:04:13,376
+That means like switches, options, things that you would,configuration for your app.
+这有点像交换机，通过选项来为你的应用进行配置
+58
+00:04:13,376 --> 00:04:16,000
+That is different from setting up your services.
+但这跟设置服务是不同的
+59
+00:04:16,000 --> 00:04:18,304
+-Exactly -Okay, all right.
+ -确实 -好的
+60
+00:04:18,304 --> 00:04:20,352
+So if you open up, are we in startup?
+你打开了嘛，启动了？
+61
+00:04:20,352 --> 00:04:21,312
+We are in startup.
+正在启动呢
+62
+00:04:21,312 --> 00:04:23,744
+-Yes, we are -We call it Beyonce,which is probably gonna confuse people.
+ -好的 - 我们叫它 Beyonce，这听起来是不是怪怪的
+63
+00:04:23,744 --> 00:04:27,840
+I know, should we still call it Beyonce?
+也是哈，那我们还叫它 Beyonce 吗？
+64
+00:04:27,840 --> 00:04:32,000
+We should probably change it back to startup because we don't want to lose our jobs.
+我们应该将其改回到启动阶段，我们可不能因为这个出差错
+65
+00:04:32,000 --> 00:04:36,224
+Let's just change it back to startup.
+让我们把它改回去
+66
+00:04:36,224 --> 00:04:43,392
+Okay, we're in the startup class.
+改回在在启动类上
+67
+00:04:43,392 --> 00:04:45,632
+Cool, and we want to pull information out of a config file.
+酷，我们希望从配置文件中提取信息
+68
+00:04:45,696 --> 00:04:46,784
+-Yes we do -Where is the config file?
+ -来吧 -配置文件在哪里？
+69
+00:04:46,848 --> 00:04:47,680
+In iconfiguration.
+在 iconfiguration 下
+70
+00:04:47,744 --> 00:04:50,944
+Yeah but the name, the file itself, the settings for the application.
+名称，文件本身，应用程序的设置
+71
+00:04:50,944 --> 00:04:54,976
+You actually have to add, you mean you add your app json?
+你是要添加上的，意味着往你的应用程序中添加 json ？
+72
+00:04:54,976 --> 00:04:56,256
+Is that what you're looking for?
+要不然是在找什么？
+73
+00:04:56,256 --> 00:04:57,984
+Your app settings right, so let's do that first.
+你的应用设置是正确的，先做吧
+74
+00:04:57,984 --> 00:05:00,544
+So appsettings.json.
+appsettings.json
+75
+00:05:00,544 --> 00:05:05,152
+That's the default name for settings for your app.
+这是应用设置的默认名称
+76
+00:05:05,152 --> 00:05:11,750
+Now I can put anything in here right,as long as it's json it's totally up,whatever configuration information I want right?
+现在我可以把任何东西放在这里，只要它是json就可以了，无论我想要的配置信息是什么
+77
+00:05:12,384 --> 00:05:14,169
+So we'll have like some message.
+我们会收到一些消息
+78
+00:05:14,169 --> 00:05:19,360
+Yeah it can be like friendly call from Beehive or hello from.
+它从 Beehive 获知 Hello 的友好消息
+79
+00:05:19,360 --> 00:05:23,500
+Yeah, here's a greeting.
+这是一个问候
+80
+00:05:23,500 --> 00:05:25,075
+From the config
+在配置里
+81
+00:05:27,300 --> 00:05:35,615
+And you're configuration it really can be anything that is application specific,any name value pair.
+你可以把它配置为特定应用程序的任意的一对名称值
+82
+00:05:35,615 --> 00:05:39,375
+Exactly, so you could have logging over there as well,could you not?
+确实，所以你也可以在那里登录，能行吗？
+83
+00:05:39,375 --> 00:05:43,009
+Yeah, we'll see a little bit later we'll have the logging levels.
+可以，稍后我们会看到我们的日志系统
+84
+00:05:43,014 --> 00:05:47,622
+It can be, there'll be a place to put connection strings and all kind of stuff.
+它可能会有一个放置连接字符串和其他东西地方
+85
+00:05:47,622 --> 00:05:52,975
+And we'll talk about the differences between where user secrets go, where connection strings go and where non secret things go.
+我们将讨论用户隐私的去向，连接字符串和非隐私事物的区别
+86
+00:05:52,996 --> 00:06:00,996
+So just for reference for people who are going to be watching this, when I've been using the app settings I've been using it mainly for configuration of my database.
+因此，这一点给你们供参考，我配置数据库的时候都会以此进行应用程序设置
+87
+00:06:01,350 --> 00:06:04,446
+Okay, so it depends on whether the configuration for your database is a secret.
+好的，这取决于数据库的配置是否是机密
+88
+00:06:04,446 --> 00:06:05,534
+It's a secret.
+这是一个机密
+89
+00:06:05,534 --> 00:06:07,582
+-Or not -It should be a secret.
+它应该是一个秘密
+90
+00:06:07,582 --> 00:06:13,526
+It should not have been there,do not do this, although it's defaulted in the template.
+它不应该把你的连接字符串放在那里，尽管它在模板中是默认的
+91
+00:06:13,526 --> 00:06:15,894
+-But as someone -Well let's take a look at the template.
+但是有人... - 让我们来看看模板
+92
+00:06:15,894 --> 00:06:20,696
+But as someone who has put apps into production,what are some of the most common things that you have actually used something like this for?
+但是，作为将应用程序投入使用环境的人员，实际上使用类似这样的东西的一些最常见的事情是什么？
+93
+00:06:20,696 --> 00:06:37,700
+So let's say maybe like someone's email address,or I might have if I'm writing a blog number of posts on homepage, ten, whatever.
+因此，让我们假设为别人的电子邮件地址，或者正在博客的主页上撰写帖子
+94
+00:06:37,700 --> 00:06:44,094
+It could be anything that is a quick little switch or change that you might want to pop in a config file and update.
+它可以是快速切换或更改的设备，您可能想要在配置文件中弹出并更新
+95
+00:06:44,094 --> 00:06:51,198
+And what's nice aboutconfiguration as it's configurable we're using json it could be an i in i file,it could be an XML file.
+有什么关于配置的好处，因为它是可配置的，我们使用的是 json ，它可能是 i 文件中的 i ，它可能是一个 XML 文件
+96
+00:06:51,198 --> 00:06:53,182
+It could be a database somewhere.
+它可能是某处的数据库
+97
+00:06:53,182 --> 00:06:59,454
+Any of the kinds of options that you want show ads on the homepage.
+您想要在首页上展示一些广告选项吗
+98
+00:06:59,454 --> 00:07:04,190
+I was just thinking about things that I do on my blog,that kind of stuff.
+我只是想着在我的博客上做些内容
+99
+00:07:04,190 --> 00:07:09,182
+Cuz I think people see and they just what is that about and they think it's important to understand
+因为我认为人们看到他们就是这样，他们认为这很重要
+100
+00:07:09,182 --> 00:07:12,190
+Showing messages is a silly kind of generic kind of thing.
+显示消息给人的体验并不好
+101
+00:07:12,190 --> 00:07:15,518
+Like these are some real world examples.
+这在现实生活中是一些真实的情况
+102
+00:07:15,518 --> 00:07:20,766
+Yeah, like if you were having paging,page size before I hit next, next or whatever.
+是的，就像在进入下个，下下个或其他同样大小的页面之前进行分页一样
+103
+00:07:20,766 --> 00:07:23,646
+So if I have 100 blogs post,maybe my page size is gonna be 10.
+如果我有100个博客发布，也许我的页面大小将是10
+104
+00:07:23,646 --> 00:07:29,790
+These are the kinds of things you wanna have in a config file somewhere that you can then pull out in your code.
+这些是你想要在配置文件中的某些东西，可以在你的代码中取出
+105
+00:07:29,790 --> 00:07:31,710
+So we're gonna figure out how to pull that out, all right.
+我们要弄清楚如何解决这个问题，好吧
+106
+00:07:31,710 --> 00:07:38,878
+So let's go back to startup and configuration is a service.
+所以让我们回到启动，配置这项服务
+107
+00:07:38,942 --> 00:07:49,054
+It's a thing like logging is a service, you had MVC as a service so we need to make sure that we can inject that service.
+日志记录是一种服务，在 MVC 中作为服务，所以我们需要确保把这个服务注入其中
+108
+00:07:49,054 --> 00:07:53,214
+That's a dependency that we're gonna inject into our system okay.
+这是我们要注入系统的依赖关系
+109
+00:07:53,214 --> 00:07:56,094
+Dependency injection how much do you wanna talk about that?
+依赖注入你想谈谈吗？
+110
+00:07:56,094 --> 00:07:58,398
+I'm going to talk about that a little bit more in a different one.
+我将以另外一种方式多说一点
+111
+00:07:58,398 --> 00:08:04,798
+So for now we will just assume that we'll give you a little bit of background before we get deeper into it later.
+我们会在稍后深入研究，之前会给你一点背景知识的
+112
+00:08:04,798 --> 00:08:08,382
+So I'm gonna just make a constructor, right,my startup constructor here.
+所以我会在这里创建一个构造函数，我的启动构造函数
+113
+00:08:08,382 --> 00:08:19,326
+And whatever parameters the startup constructor has will be given to me automatically by the system.
+系统会自动给我的构造函数提供参数
+114
+00:08:19,326 --> 00:08:21,310
+They'll be injected directly to the system.
+他们将直接注入系统
+115
+00:08:21,310 --> 00:08:30,782
+So I need the ability to have an IConfiguration, and this is a little trickier, let's watch this very careful.
+所以我需要能够拥有 IConfiguration ，这有点棘手，让我们仔细观察
+116
+00:08:30,782 --> 00:08:34,110
+I'm gonna type IConfiguration, and at the end of it,see it how it's all squiggly.
+我要输入 IConfiguration ，并在最后看到它产生怎同样的变化
+117
+00:08:34,110 --> 00:08:36,862
+-Yeah -I'm gonna hit Ctrl+dot.
+ -是的 -我要按 Ctrl + .
+118
+00:08:36,862 --> 00:08:38,462
+And it gives you the options.
+它给了你的选择
+119
+00:08:38,462 --> 00:08:41,662
+And it says, well, do you make one of these?
+它说，呃，你点了其中的一个吗？
+120
+00:08:41,662 --> 00:08:44,670
+Or is it the one, do you mean this one here?
+还是那个，你是说这个吗？
+121
+00:08:44,734 --> 00:08:46,718
+We mean that one there.
+我们指的是那里
+122
+00:08:46,718 --> 00:08:49,086
+Right, and there's actually two options.
+对，实际上有两种选择
+123
+00:08:49,086 --> 00:08:55,358
+You can add the using statement.
+你可以添加使用语句
+124
+00:08:55,358 --> 00:08:59,006
+-Okay -Or fully express it almost like a path like C:/, whatever, whatever, whatever.
+ -可以 -这能充分表达它，就像 C:/ 的路径一样，啥都能找到
+125
+00:08:59,006 --> 00:09:01,502
+It's that full path, to IConfiguration.
+这就是 IConfiguration 的完整路径
+126
+00:09:01,502 --> 00:09:03,486
+That wouldn't make it available to the entire program.
+这不会使整个程序都可用
+127
+00:09:03,550 --> 00:09:05,790
+And we'd have to do that every single time we used it.
+我们每次使用它都必须这样做
+128
+00:09:05,790 --> 00:09:07,710
+-Yeah. -Exactly, good point.
+是啊 - 确实，好点
+129
+00:09:07,710 --> 00:09:12,126
+So we'll say using, and then watch up here on line 8, so watch at line 8.
+我们会使用它，然后在第8行这里，看第8行
+130
+00:09:12,126 --> 00:09:14,878
+Ta-da, yeah.
+塔达，是的
+131
+00:09:14,878 --> 00:09:16,350
+So it just drops in there automatically.
+它会自动下降到那里
+132
+00:09:16,350 --> 00:09:23,454
+So Startup, our start up class, is gonna need IConfiguration,and we can call it whatever, call config.
+Startup，我们的启动类需要 IConfiguration ，我们可以调用它，调用配置
+133
+00:09:23,454 --> 00:09:28,318
+And then we're gonna store it away,cuz they're gonna pass it in to us, they're gonna make one.
+然后会把它存储起来，因为它会被传递给我们，他们会创建一个 IConfiguration
+134
+00:09:28,318 --> 00:09:38,622
+And this is important, we'll talk about dependency injection later, but the part that you need to remember is that you don't need to make one, you just ask for it.
+这很重要，因为稍后会讨论依赖注入，但是你需要记住的部分是你不需要创建一个，你只需要用它就可以了
+135
+00:09:38,622 --> 00:09:42,142
+And by asking for it, we put it in as a parameter.
+并通过使用它，把它作为一个参数
+136
+00:09:42,142 --> 00:09:44,830
+So we don't actually go and say new, whatever.
+我们实际上并不去介绍新的东西
+137
+00:09:44,830 --> 00:09:51,678
+So I'll say public IConfiguration,and we can name it Configuration.
+我会说公共 IConfiguration ，我们可以将其命名为 Configuration
+138
+00:09:51,678 --> 00:09:54,110
+-Yeah. -And this is gonna be a property.
+-是啊 -这是一个组成部分
+139
+00:09:54,110 --> 00:09:55,710
+Yeah, so have a get in the set.
+是的，所以有一个设置
+140
+00:09:55,710 --> 00:09:57,758
+Get in the set, excellent.
+进入集合，漂亮
+141
+00:09:57,758 --> 00:10:04,670
+And then, we just squirrel it away as they say.
+然后，我们只是像他们说的那样把它松开
+142
+00:10:04,670 --> 00:10:06,846
+Configuration = config.
+Configuration = config
+143
+00:10:06,846 --> 00:10:16,830
+So they pass it in when we start up, and we stick it over here,which then presumably means I can use it, right?
+他在我们启动的时候通过它，并且我们在这里，大概意味着我可以使用它，对吧？
+144
+00:10:16,830 --> 00:10:21,374
+Yes, you can so you should be able to use it right from your page.
+是的，你可以这样做，并且你应该能够从你的页面中使用它
+145
+00:10:21,374 --> 00:10:22,526
+I can use it wherever.
+可以在任何地方使用它
+146
+00:10:22,526 --> 00:10:35,390
+It should be sitting around, so I could be down here, oops,I was gonna say this.Configuration., and then those are all the things one can do.
+它应该在那里，我可以在这里 根据这个配置，这些都是我们可以做的事情
+147
+00:10:35,390 --> 00:10:39,742
+Now that is within my C# a pplication.
+现在在我的C＃应用程序中
+148
+00:10:39,742 --> 00:10:49,022
+My C# code, my startup at CS, but if we go back over here, let's go to our index one, our Beyonce RAZOR PAGE.
+我的 C＃代码，启动 CS ，但如果我们回到这里，去索引我们的 Beyonce RAZOR 页面
+149
+00:10:49,022 --> 00:10:51,518
+You said I can use it from within here directly.
+你说我可以直接在这里使用它
+150
+00:10:51,518 --> 00:10:53,694
+Yes, but we need to inject it first.
+是的，但我们需要先注入它
+151
+00:10:53,694 --> 00:10:59,326
+Okay, so just like it was, inject it in,it was made available.
+好吧，就这样，注入它，它就可以使用了
+152
+00:10:59,326 --> 00:11:00,926
+Mm-hm.
+嗯
+153
+00:11:00,926 --> 00:11:02,334
+Inject is kind of an intense word.
+注入是一个带劲的词
+154
+00:11:02,334 --> 00:11:03,038
+I know.
+我知道
+155
+00:11:03,038 --> 00:11:05,150
+I asked for it, and they gave it to me.
+我试了一下，然后他们给了我
+156
+00:11:05,150 --> 00:11:05,918
+Yes.
+是
+157
+00:11:05,982 --> 00:11:08,350
+I think eject is a little intense, but-Please.
+我认为弹出有点激烈，但 - 请
+158
+00:11:09,850 --> 00:11:13,854
+So I'll say h2, h2.
+我会说h2，h2
+159
+00:11:14,825 --> 00:11:17,793
+No, can I say @Config?
+我可以输入 @Config 吗？
+160
+00:11:17,793 --> 00:11:19,450
+Can I just go and say, Config?
+我能直接输入 Config ?
+161
+00:11:19,529 --> 00:11:20,681
+Yes you can, @Config would, yeah.
+是的你可以，@Config 可以
+162
+00:11:20,745 --> 00:11:22,537
+But I can't, because it hasn't been injected yet.
+但是我不能，因为它还没有被注入
+163
+00:11:22,537 --> 00:11:26,889
+No, you actually have to have @ inject configuration.
+不，你实际上必须有@注入配置
+164
+00:11:26,889 --> 00:11:29,321
+Okay, so up here where it says page
+好的，在页面上显示的地方
+165
+00:11:29,321 --> 00:11:30,857
+Yeah,you need a new directive.
+是的，你需要一个新的指令
+166
+00:11:30,857 --> 00:11:33,865
+I need another directive, I need to go inject, okay?
+我需要另一个指令，进行注入，好吗？
+167
+00:11:33,865 --> 00:11:38,473
+And then, when I say IConfiguration, though,it's not gonna work.
+当我输入 IConfiguration 时，它没有奏效
+168
+00:11:38,473 --> 00:11:41,225
+Yeah, because we can still need to inject the using statement.
+是的，因为我们仍然需要注入使用声明
+169
+00:11:41,225 --> 00:11:53,257
+We have to add the using statement, so using and a bit later on we'll see how to do this for every page, instead of having to do it on one page, but I'm gonna say using.
+我们必须添加使用语句，以便稍后使用，我们将看到如何为每个页面执行此操作，而不必在一页上完成，但我会使用
+170
+00:11:53,257 --> 00:11:59,401
+Then I will say inject IConfigaration,and we will just call it Configuration.
+然后我会注入 IConfigaration ，我们将其称为配置
+171
+00:11:59,913 --> 00:12:02,921
+So this is asking for it.
+这是要求
+172
+00:12:02,921 --> 00:12:11,160
+-Yes. -Okay, and then down here, I could say Configuration and we called it We called a whole bunch of things.
+-是 -好吧，然后在这里，我可以说配置，这一大堆事的事情
+174
+00:12:11,160 --> 00:12:12,056
+We say message.
+我们 看到 消息
+175
+00:12:12,056 --> 00:12:13,272
+-Okay. -Message.
+-好的-信息
+176
+00:12:13,272 --> 00:12:17,240
+Cuz it's just a bag, a bag of stuff.
+因为它只是一个包，一袋东西
+177
+00:12:17,240 --> 00:12:23,640
+Oops, I can do it on multiple lines, I'll do it on one line.
+哎呀，我可以在多行上做，我会在一行上完成
+178
+00:12:25,880 --> 00:12:27,864
+All right, let's see if that breaks.
+好吧，让我们看看是否会中断
+179
+00:12:28,568 --> 00:12:31,064
+That's my positive attitude speaking.
+这是我积极的态度
+180
+00:12:31,128 --> 00:12:37,464
+-Keeping it real. -Yeah, let's see if that breaks,that's the attitude of the developer.
+ -保持真实 - 是的，让我们看看这是否打破，这是开发者的态度
+181
+00:12:38,424 --> 00:12:39,576
+I think it'll be okay.
+我认为它会好起来的
+182
+00:12:39,768 --> 00:12:42,968
+-Breaking things is fun, then you get to fix them, right? -That is true.
+让事情变得有趣，然后你就可以解决它们，对吧？-那是真实的
+183
+00:12:44,504 --> 00:12:50,456
+So that's our Solange page, let's look at our home page,here it go, here's a greeting from the config file.
+所以这就是我们的 Solange 页面，让我们看看我们的主页，在这里，这里是来自配置文件的问候
+184
+00:12:50,904 --> 00:12:53,208
+Let's go back and change that.
+让我们回去改变它
+185
+00:12:53,208 --> 00:12:54,552
+-To another greeting? -Yeah.
+ -到另一个问候？好啊
+186
+00:13:02,616 --> 00:13:12,600
+All right, so that's coming out of that config file,we changed the config file, and the value changed,we did not change the code, all right?
+好吧，所以这是从配置文件中出来的，我们更改了配置文件，并且值发生了变化，我们没有更改代码，好吗？
+187
+00:13:12,600 --> 00:13:13,624
+-Yeah -That's pretty cool.
+ -对 -这很酷
+188
+00:13:13,624 --> 00:13:16,184
+It's worth pointing out a couple of things, though.
+不过，值得指出一些事情
+189
+00:13:16,184 --> 00:13:20,984
+First, we have a using statement in our RAZOR PAGE,just like we did over in our CS.
+首先，我们在 RAZOR 页面中有一个使用声明，就像我们在 CS 中所做的一样
+190
+00:13:20,984 --> 00:13:22,648
+I wonder.
+我在想
+191
+00:13:24,632 --> 00:13:25,848
+Could I do this?
+我可以这样做吗？
+192
+00:13:29,752 --> 00:13:31,288
+-It should be a dot, right?
+ -它应该是一个点，对吧？
+193
+00:13:31,352 --> 00:13:33,336
+-Right, thank you.
+ -对，谢谢
+194
+00:13:33,336 --> 00:13:37,176
+So fully qualified path, yes -It worked.
+所以完全合格的路径，是的 - 它的工作
+195
+00:13:37,176 --> 00:13:39,224
+Well, it worked and that it didn't break
+那么，它的工作，并没有打破
+196
+00:13:39,224 --> 00:13:40,952
+Okay, it worked.
+好的，它工作
+197
+00:13:40,952 --> 00:13:43,448
+-Alright -Yeah, it worked in quotes.
+ -好吧，它用引号工作
+198
+00:13:43,448 --> 00:13:52,216
+So that's interesting, I can back out of that, and then I later on we'll see how we could make that configuration available ever with.
+这很有趣，我可以退出来，然后我会看到我们如何使配置可用
+199
+00:13:52,216 --> 00:13:54,003
+-Yes. -Cuz I don't wanna have to keep adding.
+-是 -我不得不继续添加
+200
+00:13:54,003 --> 00:13:56,371
+Cuz always could have to add it to every single page that you have.
+总是可以将其添加到您拥有的每一个页面中
+201
+00:13:56,371 --> 00:14:01,427
+Yeah, I have got three lines of directives here and we got two lines of HTML, so that's real fun.
+是的，我在这里有三行指令，我们有两行 HTML ，所以这真的很有趣
+202
+00:14:01,427 --> 00:14:05,976
+-Yeah. -Okay, so I think we'll take a break and then we'll graduate to Visual Studio Proper.
+-是啊 -好吧，所以我认为我们会休息一下，然后我们将连接到 Visual Studio Proper
+203
+00:14:05,976 --> 00:14:07,768
+Yes, we are. -Very cool.
+-是的 -很酷
