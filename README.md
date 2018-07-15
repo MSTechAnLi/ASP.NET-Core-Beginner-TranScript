@@ -16,11 +16,11 @@
 
 - [X] 从控制台到Web应用
 - [X] 动态渲染HTML
-- [ ] Configuration（翻译中）
+- [X] 配置信息
 
-### 3. Razor Pages and CRUD
+### 3. Razor页面与增查改删
 
-- [ ] Razor Pages
+- [ ] Razor页面 - yiluomyt 翻译中
 - [ ] CRUD
 
 ### 4. Logging and Diagnostics
