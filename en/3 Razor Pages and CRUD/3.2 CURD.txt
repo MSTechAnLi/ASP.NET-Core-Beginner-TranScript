@@ -1,0 +1,1346 @@
+Hey friends, we're glad you're still with us here at
+Microsoft Virtual Academy as we do our intro to ASP.NET Core.
+We're learning all about razor pages and our application.
+This module will be a little longer.
+>> Yes it will.
+>> And it will probably have us making some mistakes together,
+and that's okay.
+And we're gonna try not to hide anything from you.
+We are following the documentation as we hope that
+are, and maybe you can follow along.
+Pause, try stuff out, and maybe Google with Bing.
+>> [LAUGH] Google with Bing.
+>> If you have trouble and get stuck.
+>> Yeah, and we will have links to the documentation right
+underneath this recording.
+>> All right, so we're gonna try to make a CRUD page.
+What is CRUD?
+>> Create, [LAUGH] read, update, delete.
+>> All right, so a CRUD application maps
+verbs from CRUD to verbs that we're used to using,
+like get is a get, so it would be like a read.
+And if you're gonna create something, it would be a post.
+So you'd fill out a form, you'd hit submit, and it would post
+the data, that's a create Then you can maybe read it back and
+look at in edit page or then maybe delete it.
+So if we succeed, we'll have the simple form,
+maybe create some customers, put them in a fake database And
+we'll be okay >> Yeah, and
+I will be learning more about databases in the intermediate
+course as well >> Yes,
+well like a whole section on databases.
+So for now, we're gonna be doing it in an in-memory database.
+Okay, so let's do the best we can.
+We're gonna use the same web application one that we created
+before.
+We saw in the previous modules where we added MVC, but
+of course all of that stuff was added for
+us because we went File > New Project,
+and we picked Web Application, all right?
+So here in configure services, we've got AddMvc.
+But we're gonna make our little in-memory database here.
+We're gonna say services.AddDbContext<>
+>> Yeah, and
+give it name, >> And
+we gonna create a thing called AppDbContext.
+We can name it whatever we want to.
+We haven't written this yet, but we will.
+I'm gonna hit Ctrl+dot.
+And it's saying, hey, do you need an AppDbContext?
+Do you wanna go and generate one of those?
+I wanna go ahead and say yes.
+So it's gone and done that, and
+we'll deal with that in a minute.
+And again, I will very likely make mistakes, so
+you'll bear with me I hope.
+I opened up the parentheses there.
+And I'm gonna pass in some options.
+And the option I'm gonna pass in for my database context
+are options.- >> UseInmemory.
+>> Use. >> In.
+>> MemoryDatabase.
+>> Yes, but the reason why that's not showing,
+that perfect.
+We need to add- >> So
+why is that not showing up?
+>> So we need to add the entity framework.
+So we need to use- >> And
+I probably should have added that first, and
+I would have gotten IntelliSense.
+>> True.
+>> Let's try that.
+If we go back up to the top.
+So we add the EntityFrameworkCore beforehand.
+Look, you see that little arrow there that's pointing down?
+That means that this method
+came in was included by the fact that we just did that UseIn.
+That's called an extension method.
+It's along for the ride.
+And you see it actually says extension.
+That wasn't there seconds ago.
+>> No, it wasn't.
+>> Add InMemoryDatabase, some name All right,
+And then we look at the squiggle and we worry.
+Does the squiggle mean something?
+So, here it's saying AddDbContext.
+Well, we never really went and
+did anything with that AddDbContext.
+Let's go over there and fix that.
+I'm gonna right click and say go to definition.
+And let's work on our database context.
+This is kind of standard stuff, so
+don't worry about it too much.
+But basically this is representing the database.
+I'm hitting Ctrl+dot there.
+And I'll say make it an AppDbContext,
+this is an constructor, all right?
+Okay, and we're gonna take in some options.
+ContextOptions.
+>> Oops, optoons.
+>> Options.
+Options, pass up to the base class those options.
+I'm gonna put that.
+What I'm trying to zoom and make it helpful for
+you, I end up making it worse for myself.
+>> Well, at least you have other people in mind.
+>> I do. And then [CROSSTALK]
+>> You have to set it of some
+sort.
+We have a set of, we're gonna say customers?
+So we have a set of customer.
+Customer does not exist here.
+That's why it's squiggled out.
+And then we do a getter, setter, get ; set, okay?
+Customer is squiggled out.
+The type or namespace 'Customer' could not be found.
+Well, that's true cuz we haven't made one yet.
+We had not made it up.
+l could type control dot, but
+l am gonna click show potential fixes.
+This is kind of interesting.
+Here it's saying, well, I can go and make customer for you.
+But look at this here.
+It's suggesting other packages that have the word customer and
+the name customer in it.
+So these are other NuGet packages,
+packages up in the world.
+Yeah, ain't that cool?
+>> That's very cool.
+[CROSSTALK] Package out there that has the word
+customer in it-.
+>> Has the word customer in it.
+No, I don't want those.
+But if I was doing something with JSON or
+doing something with some technology that I knew I will
+need the NuGet packages, later it will go get it for me.
+So I'm gonna say generate in new file, that seems reasonable.
+>> It does.
+>> All right, this generated that.
+Now notice it just appeared.
+>> There it is.
+>> And now I'm gonna right click and say go to definition.
+It is worth pointing out that I could also right click and
+say Peak Definition.
+>> And could you write in there?
+>> I could.
+I think that would be a little weird.
+But then I can click on this little tab right here
+Promote to Document, and now I've jumped into that document.
+So I can peek and then if I type a little bit,
+I was like this is tiresome, then I could jump even higher.
+>> That's pretty smooth.
+>> It is pretty smooth.
+>> All right, I'll show you another smooth tip.
+>> I know it.
+>> Yeah? You wanna suggest?
+>> The tab tab thing?
+>> Yes, ready?
+Prop Tab.
+>> Tab, tab.
+int Tab Id Enter Enter prop Tab Tab string Enter Tab Name.
+>> How cool is that?
+>> [LAUGH] It's cool, and I always forget to use it.
+>> You gotta use it.
+>> I always forget to use it and it's awesome.
+>> There's so much good stuff in there.
+There's also propfull.
+>> What does that do?
+>> That gives you a backing variable.
+There's propa,
+which I don't know what it does but it's crazy.
+>> [LAUGH] >> There's propg for
+a getter with a private setter.
+Yeah, a bunch of stuff.
+>> Have you done a blog post on all the properties-
+>> There's a bunch of snippets,
+I could go all day.
+But I'm just gonna use prop for now.
+So this is customer, so customers have an ID,
+a unique ID.
+And they have a name.
+>> And they could probably have an email,
+they could have all these things.
+Yeah.
+>> We'll start with name for now, but
+should name have some constraints?
+>> It should.
+We have an idea of data annotation.
+>> There's annotation on that data, yes.
+>> So one of the things is that you probably want someone to
+enter their name, right?
+>> We wanna force them.
+>> We wanna force them, so
+we want to make sure it some sort of required, right?
+>> So required, and I'm putting that as a notation here and
+I'm gonna hit Ctrl+dot, again.
+When you learn that these things exist and you're thinking about
+them rather than typing in all this stuff for the using,
+you're just gonna type required.
+Hit Ctrl+dot, and then hit Enter.
+Line 1 just appeared there And
+then we'll force the length as well.
+We'll be silly for a moment, we'll say a length of 10.
+That's not a very good length.
+>> That is not a good length at all.
+>> But that might allow us to do some validation later.
+And then we'll change it to a longer length.
+All right, so let's back up for a second and
+see what we did here.
+So we have in our start up an InMemoryDatabase.
+Not a SQLserver or a.
+Whatever just in memory database.
+We have a beginnings of a customer, unique ID and
+a name Some annotations on it, and
+then a little class here that's kind of empty.
+That is our a list of customers and
+actually what's customer Singular here.
+>> Yeah. >> That should be customers.
+>> Okay, because, you have a set.
+>> This is a set of customers.
+>> So the one thing, how are we going to see this information?
+>> Well, we're going to need to probably put some in
+the database and then,
+once we have them in the database, list them out.
+>> Like how are we going to visually see it?
+>> Yeah, so there's a bit of a chicken and
+the egg problem there.
+Do we make the listing page first and list them out?
+But we really can't cuz we don't have any.
+>> You don't anything, yeah.
+>> Or we make a create page first.
+So it's CRUD.
+We'll do the C first, okay?
+So over in.
+>> The pages folder.
+>> Pages, let's do create.
+Now, we're not going to say new file like we did before.
+>> No, you're going to create a new Razor Page or
+if you go to New File.
+>> Let me do that again.
+Right click and I have two choices I have new.
+>> And then. >> Page or I can say item.
+>> Yeah, New Item.
+And they should be the option to pick Razor Page.
+>> Right, so you got a couple different options here and
+this is all the different things that you could make.
+I'm gonna go and right click and say add Razor page, and
+I wanna point out that I'm not gonna do it for
+this because it will be a little bit cheating but
+after we're all done, first, we make you suffer.
+>> And then we show you
+the easy way [LAUGH] >> And
+then we show you the easy way.
+We could create that model and say Razor page is using entity
+framework CRUD, and then it will then scaffold or generate.
+>> Every single- >> All the hard parts that
+we're about to do.
+But it's more fun to do, no no,
+it's more fun to do it ourselves, don't you think?
+>> All right.
+>> All right, lets do it ourselves.
+People can fast forward if they don't like it.
+>> [LAUGH] The page name would be create.
+>> Uh-huh, and then we're gonna use a layout, we saw that.
+And then, here it says Generate PageModel,
+that's that code behind of that page model.
+We could say no and then do that in line, if we wanted to.
+>> All right. So let's see if that works.
+Thinking, thinking, thinking.
+We're gonna watch in the right hand side here as create should
+appear.
+>> And sticking well because it's doing quite a bit
+of scaffolding.
+>> Well, it's scaffolding up some workforce but it's also
+gonna build the application to see if it still builds.
+And if it's running a scarf-folder.
+And scar folder is something that you can go on a nd
+read about and write your own if you feel like it.
+So here we gotta create.
+>> So let's see what we have in there.
+>> Let's see it gives us a page.
+It gave us a default model, a title, looks
+like a header, and then some validation scripts, and then
+presumably we can just start typing our pages or whatever.
+Let's look at the backend.
+It made a create model that has a get.
+So this is the function that happens when we get stuff.
+>> Okay.
+>> All right, so we're gonna need to make form code.
+>> All right, so form that would have actually just one entry?
+>> Yeah, so we'll say enter your name, figure, all right.
+And who knows if this will work, again, we're gonna learn.
+Now, this is interesting, noticed that when I typed form-
+>> Why is it in purple?
+>> Turns purple, so that is a tag helper, this is some related
+elements that are gonna be on the server for processing so
+the server knows about purple elements, and
+ill do some processing of them.
+Typically when you're in HTML, you have like a P tag or
+an image tag or div, and
+that's just strings that get sent off to the client.
+But when we're generating this stuff on the server side,
+there might be an opportunity for ASP.NET Core to improve it,
+to change it, to add stuff.
+So it knows about form.
+Form is a magic tag and we can go and type things like this,
+you see it says asp colon.
+>> Yeah, so is that indication that that is a tag helper or
+some sort of action?
+>> Right these things aren't html.
+>> No.
+>> Those are tag helpers.
+You'll never see asp hyphen something
+being sent all the way out to the browser.
+>> These are not HTML.
+They're hints to the server.
+>> So if when we run this application, and we go into
+the F12 tools, we will not see- >> You shouldn't see those.
+>> Okay. >> Exactly.
+So we're gonna say form, this is gonna be basic method= a,
+yep see- >> Okay.
+>> Get, post, put, delete.
+We'll say post So we're gonna go and post.
+Here's the end of our form.
+Say div, name, and then we'll need a text box.
+>> Yep so some sort of input tag.
+>> Yep input.
+Now, this is interesting.
+We could do an input tag the way we usually do or
+we could say ASP.NET4.
+>> Okay.
+>> And we're gonna say Customer.Name.
+>> Okay.
+>> See how it's all purple?
+That ASP 4 is gonna look at that model, okay?
+Now, it's saying here, I don't know what a Customer is.
+What's going on with that?
+It's never heard of Customer before.
+We'll come back and fix that in a second.
+Then we'll have an input for submitting that form, okay?
+But we have a problem here,
+where it doesn't know what Customer is.
+What is the model for this page?
+Right, it's the- >> The Create.
+>> CreateModel, so let's go look at that.
+>> Peek into Definition, okay.
+>> I wanna point out how I'm moving around.
+I'm right-clicking and
+saying Go To Definition is also a hotkey for that.
+So this is an important reminder, just as a programmer,
+you don't wanna necessarily find yourself going over and
+looking around all the files all the time.
+You can navigate- >> To it, right?
+>> To it directly, you can navigate logically, as they say.
+Okay, all right.
+>> Did you?
+Cut something out from- >> Yeah.
+>> Okay.
+>> Great.
+>> There we go.
+>> I cut out CreateModel, thank you.
+Right so, our create model is gonna need to know about
+customers, because that's gonna show up on the page.
+So public Customer, that's a type.
+That's a name.
+You can tell by the color.
+It's a little confusing.
+But, the property is called Customer, and
+the type is called Customer.
+And, this is going to need that database context,
+so we are going to make a little Database here.
+>> And this is just being the voice of the person
+doing this at home.
+Why have you made it private read only?
+>> So that's a great point.
+I don't want people who get a hold of create model to be
+poking around and talking directly to the database.
+So, it's gonna be private, just for me where me is CreateModel.
+And it's read only which means I'm gonna assign it once, and
+I don't want anyone to touch it after that.
+>> Yeah. Okay.
+>> So I'm making it just for me and
+making sure I can't mess with it afterwards.
+Excellent, excellent question.
+So then, we'll make our- >> CreateModel
+>> Our constructor.
+And remember how dependency injection works.
+We don't make an AppDbContext we ask for one.
+We ask for it by putting it in our constructor.
+We can have as many of these as we want.
+We can have food and bar, etc, etc, etc.
+This is the one we want for now.
+And then I'm just going to say hey, this one equals this one.
+I'm going to squirrel it away and hang onto it, so
+now I've got one.
+So that says there's this database, and
+I want to know about it.
+This says there's a customer.
+If I go back over to create, I can hover over that and
+see it's getting me probably IntelliSense too.
+Yep, see. >> Now, it is.
+>> So, it knows about customer
+because it's hanging off of the model.
+>> So as we're running the application.
+Technically, I should be able to go to this page,
+hover over customer name and see what names we've put in there?
+>> You should be able to click on that,
+you should be able to have IntelliSense.
+If you did a break point,
+you should be able to stop in here at some point and
+look at that, and we'll do that in a little bit.
+What we need, though, is we need to bind this form.
+We're saying this input for customer name.
+When I hit submit, we need to catch it on the server side.
+>> I call it surviving the journey.
+>> Okay. Yeah, it's a good point.
+It does need to survive the journey.
+So I'm gonna get rid of this OnGet here.
+So we're gonna do a post.
+You can say OnPost.
+You could do it like this but
+the right way to do it is like this.
+>> Async?
+>> Async, which means don't block, and
+we're gonna have a task that returns some action.
+We might be doing something after this and
+I'm gonna say on OnPostAsync.
+And it's giving me a little complaint here saying!
+You didn't do a wait and you haven't returned a value.
+Code paths, not all code paths return a value.
+That's cuz we haven't done anything yet.
+So, when someone posts back, they hit submit,
+and it posts back to here.
+We would really like customer to have stuff in it.
+>> Yes.
+>> And so there's a couple things here.
+And then we need to make sure that the state of that model is
+valid, that someone hasn't messed with it.
+So I'm gonna say if ModelState.IsValid,
+or if it's not, pardon me- >> I was about to say something.
+[LAUGH] >> No I appreciate that.
+Then return the page back to itself to say now I'm done.
+If I hover over page you can see it returns a page result,
+which is a kind of action.
+Returning a page is an action.
+If we get this far, now I'm gonna say db,
+remember when I say db?
+>> Yes.
+>> What is db?
+It is a applicationDB context.
+In there is customers, plural.
+>> And we want to add one.
+>> .Add().
+We'll pass in the customer that we just got handed.
+>> Okay.
+>> And then we'll say, hang out for a minute, await.
+And we'll say, db.SaveChanges.
+And async means don't wait.
+Then we will go and return,
+not a page, because we're on the create page.
+We really wanna return to the list.
+>> Yeah, so you're doing a redirect?
+>> We're gonna do a redirect, exactly.
+And we haven't got a place to go yet.
+But we'll say redirect to page.
+>> Okay. >> And you can see that there's
+options like redirect to page permanent, which would be a 301.
+Http 301.
+>> Okay. >> We're gonna do a 302 because
+this is just a standard kind of redirect.
+Let's just say /Index.
+And I think we should probably just say /,
+but we'll see what happens.
+>> If people wanted to learn more about 301s,
+302s, do you have any recommendations?
+>> The Internet.
+>> Correct. [LAUGH]
+>> Yes.
+I would search around for that kind of stuff.
+Ultimately look at the docs.
+>> Yeah. >> But
+redirect to page is a standard thing and
+again if you hover over it, it says right there Status302Found.
+But if I said RedirectToPagePermanent.
+>> We would change it?
+>> Change it to a 301, which would tell the search engine,
+don't ever come back here and ask me about this again.
+>> [LAUGH] >> Don't ever talk to me again,
+go here.
+>> All right. >> That's what that means.
+I'm paranoid so anyway,
+you never wanna do that when you're doing database work.
+You always wanna be temporary, okay?
+>> Okay. >> All right, and if you really,
+really, really wanna upset your coworkers.
+>> [LAUGH] >> You could move
+your curly braces.
+>> Yeah.
+>> And do stuff like this.
+And if you really wanna be possibly buggy,
+you could even do stuff like this.
+Where that's all one line.
+>> Yeah?
+>> But you might have other stuff that you wanna do.
+>> Okay. >> Some people that really
+bothers them, some people it doesn't.
+For me- >> Does it bother you?
+>> I kinda like it on one line if it's not that big of a deal.
+You know what I mean?
+But as soon as you have an extra line then you're gonna go and
+undo it and take it apart.
+It's stylistic.
+>> So it's not really a best practice for
+someone to know of right now.
+>> No, for right now, I just think it's nice to
+have everything fit on one line like that.
+But using the curly mustaches.
+>> Mm-hm.
+>> Is curly braces,
+they look like a mustache if you turn your head.
+That's a best practice.
+>> It still gets us, that when people say curly braces, and I
+don't know what they're talking about, cuz I use brackets.
+>> What do you call them?
+You call them brackets?
+>> So you have brackets, curly brackets, square brackets, so.
+>> Scandalous.
+Okay.
+>> You're fancy.
+>> That is pretty intense.
+>> Yeah.
+>> Okay, now I'm going to put a break point here.
+>> Okay. >> And we'll see if this works.
+>> All right.
+>> It might very well not work.
+>> Fingers crossed and toes.
+>> No, it's probably not gonna work.
+Lower your expectations now.
+All right.
+>> Okay.
+>> This is in create, right?
+>> Yep. >> So I have to hit /create.
+>> Yeah.
+>> Okay.
+>> Okay.
+Did we bind it?
+>> Yeah see what's happening?
+Nothing.
+>> No. >> And if we go and
+do a view source.
+>> And you go to?
+Okay.
+>> I just want to show the people the form first.
+Some things showed up on the input that's kinda cool.
+That's kinda nice.
+>> That is.
+>> We didn't type that, right, remember?
+So we're getting stuff on the input that we did not expect,
+which is cool.
+>> I bet there's some request verification.
+>> Yeah, they put a request verification token to keep
+people from tampering with our stuff.
+There is your name=Customer.Name.
+And it generated an id for us as well.
+But you can see that nothing's happening.
+On Customer, actually I wanna put a break point a little
+higher up, and then I'll explain to you what's going on.
+>> Okay.
+>> Let's see if we can even get to the post.
+Okay, do a debug session again /create.
+So I would've expected.
+>> To hit that break point.
+>> To hit that break point, so that's concerning.
+But I know that I need to say BindProperty on the customer
+which is to tell it I want this customer object
+filled out with the form information, right?
+>> Yeah.
+>> And right now I don't have that.
+So let's take a look, and try this again.
+The customer is gonna get created and
+filled up with information bound to those form fields.
+If that doesn't work then I've forgotten something and we will
+go and have a little debugging which will be fun as well.
+They say the definition of insanity is doing the same
+thing over and over and expecting a different result.
+>> [LAUGH] >> So let's take a look.
+It's probably something obvious.
+So we've got a form, we've got our input, we've got our method.
+I said post, does it matter if it's all caps?
+That would be odd if it did.
+>> So it doesn't matter.
+>> The tag helper exists already in view imports,
+the form is there.
+The only thing l didn't add is the validation summary, okay?
+>> Okay.
+>> All right, so l am putting in a long name, Fancy Pants, and
+nothing's happening.
+>> No. >> No, and am realizing that
+I've got my form with my input for customer name,
+but I put my validation summary outside the form.
+>> Okay.
+>> So I am gonna put it inside the form,
+cuz it's validating the form.
+And then I'm gonna hit Refresh, Fancy Pants, see and it says
+the Field Name, must be a string with maximum length of 10.
+I'm getting that validation for free, right?
+And where did that 10 come from?
+>> We set it in, yep, right there.
+>> We set it right there.
+So maybe we'll change that to like 25, or something like that.
+>> Some people have really long names like in my country who
+have names which are 50, so maybe 100?
+>> I'll make 49 and then that one 50 person,
+they're gonna suffer.
+>> Man, inclusion. >> But
+the point is it's driven by- >> By them.
+>> By them, okay?
+And then one other thing- >> So it'd be the same if
+someone did entered something that wasn't an email, right?
+>> Yeah, it could be an email, it could be,
+you can put in validation information however you want,
+and you could even put in custom, regular expressions, or
+even write your own custom validators.
+So they could be as sophisticated as you want.
+>> Okay.
+>> You could also, I believe, say, I want a span.
+And say asp-validation-for, and
+you could go and do a field by field validation, okay.
+So here I'm saying this is my summary of all the different
+things, this is a specific validation for Customer Name.
+Okay, let's see what that looks like.
+And that might look a little different, so
+if I come over here, come back over here and hit Refresh,
+oops I actually don't hit Refresh.
+I need to run my app again cuz I stopped it.
+Okay.
+Run that again.
+Go to Create.
+I think we made it really long this time, right?
+And I tab away and
+it says it must be a string with a maximum length of 49.
+>> Okay.
+>> Okay, but I like the main validation stuff so
+we'll leave that like that, okay?
+Now, let's go back to our break points and run our debugger
+this time, and see if we can see the customer get found.
+>> Okay.
+>> We had looked in the F12 developer tools before,
+we could see what's happening on the wire.
+This is a good way to kinda just see what's happening as you
+do your posts.
+>> So when you're looking, so you went to Developer Tools.
+>> Yeah. >> And the network?
+>> I went to dot dot dot Developer Tools and
+we're under Network.
+>> Okay. I will go and probably and
+clear it out, and then we'll put in Maria, okay.
+>> Yep, there we go, so if you hover over that.
+>> If we hover over Customer, see,
+because customer has a name.
+>> Yeah. >> Customer.name, and
+we name the field Customer.name, and we told it, hey,
+bind, we want you to participate.
+You automatically showed up in there.
+>> Okay. >> And I can put a little pin
+there as well.
+If I was gonna do lots of debugging sessions,
+then I can keep you there as a post to note and
+watch customer name change over time.
+>> That's a good one.
+>> We can go and see if the model state is valid, it is.
+>> What is the green button, that's a play like-
+>> Yeah, go to that point.
+Play up to that point, and then stop.
+So here, I'm gonna go and Add that customer to the database.
+Save it to the database,
+which of course is an in-memory database.
+>> Mm-hm. >> And then we'll redirect.
+Now we had put in slash, but I'm not sure that's gonna work.
+>> Should we should we see about their pages, just in case?
+>> Yeah, see?
+>> Okay.
+>> It's says no page / matches this value.
+>> So you have to give the specific name.
+>> I need to say index, which was what our main page is here.
+So index, okay?
+Now we'll confirm if that that works.
+I can hit F5 to go and debug, or I can hit Ctrl+F5,
+which I like to do, cuz it starts up a little faster,
+if I know that I'm not gonna do a debugging session.
+>> But this time you hit F5?
+>> I hit Ctrl+F5 to go faster.
+Okay, so it redirected me to index but of course I haven't
+done anything on index that's interesting yet.
+>> Okay.
+That will be the next part, right.
+>> So you could also probably send a message saying-
+>> I can say customer updated,
+or whatever.
+But let's rip out this whole section here.
+>> Okay, very nice.
+>> And put a list of contents.
+>> Okay.
+>> Is that cool?
+So where's our index?
+So this is all this carousel and all this stuff.
+>> All the fancy bootstrap.
+>> I'm gonna actually collect this.
+>> And then you comment it out?
+>> Actually, no, I'm just gonna be awesome and
+just like toss it.
+>> Wow. >> Yeah, but this is a way,
+if you wanna go hunting for the other side of the div,
+you can just fold these up, see that this matches this.
+Fold it up, select over it and toss it.
+Cool, all right.
+So let's make our form.
+And this will be on the index page, right?
+>> Yep. >> We'll have method="post", and
+this will be a table.
+>> All right.
+It's okay to use tables, if it is a table of data.
+So many people complain about tables being a bad idea.
+I think that's kind of funny.
+[LAUGH] It's a table.
+It's okay to have a table.
+So we'll have a head for our table, and
+we'll have our ID row.
+>> Yep.
+>> Oops, and we'll have ID.
+Then we'll have Name, we don't really need to show the database
+ID but for now let's show it.
+>> All right.
+>> Is that cool? >> So
+do you have to create a tbody, okay yeah,
+you're way ahead of me.
+>> No, it's okay. Table body. >> [LAUGH]
+>> But now I need a row for
+each.
+>> So would you put it in the row, or would you,
+so I am presumed that you need to go for every contact within.
+>> Exactly.
+>> So I'm gonna have like a FOR SOMETHING HERE.
+Then a couple of cells, table cells, and
+then maybe a, I don't know,
+like a link to edit and a delete button.
+>> Yeah.
+>> Okay, you see how I'm kind of sketching it out.
+>> You're sketching it out.
+>> Okay. >> Wild, what's it called?
+Pseudocode or something? >> Pseudocode.
+>> Yeah. It's a little pseudocode here.
+So now I wanna say at.
+>> For each yeah. >> And this is a snippet-
+>> Yeah.
+>> Tab, Tab, and then I'm gonna say for each,
+contact, oops, contact in, in what?
+>> In Model.
+>> Now where is our customers?
+Okay, so remember before when we were doing our create model?
+We needed to have the customers come from somewhere.
+>> Yeah. >> Now we're in a totally
+different page.
+>> Yeah, so we have to have the customers.
+>> We have to have the customers, right?
+>> Yeah. >> So I'm gonna just
+take a break here.
+And I'm gonna jump over to the index model cuz we can't really
+make our table till we have a little bit more, okay?
+>> [LAUGH] >> And I'm gonna break a couple
+of cardinal rules that I'm gonna copy paste a little code,
+because I'm gonna need this similar app database.
+This app db context which is gonna save myself a moment of
+time here.
+So we've got our app context, right?
+We're gonna have our index page model.
+Now before, when we create a customer,
+we create one customer.
+But here our model is different cuz we're gonna have a list
+of customers on this page, right?
+So our model is different.
+And we'll do a get and then a private set so
+that only we can set it.
+All right, and then, in the OnGet, We'll say OnGet.
+>> One line below, OnGetAsync, okay.
+>> OnGetAsync, right?
+We're gonna load up customers.
+Where do we get them from?
+The database and this is right there.
+We're getting them out of customers.
+And then there's this other little bit of thing that you can
+add on to make things a little bit faster.
+You can say AsNoTracking.
+And I'll show you what that means in a second.
+And we're gonna turn these customers into a list of
+customers.
+So we're chaining things together,
+we're saying give me these customers.
+And we're not gonna keep track of them changing.
+You see it says disabling change tracking is useful for
+read-only scenarios.
+Change tracking is watching like keeping a track of all
+the different things you could change so
+that you know how to make a database update.
+So if I had a list of customers, and I wanted to watch all of
+them and change their names, that would give the database
+system entity framework that we're gonna learn about later
+all the information it needs about how to only change
+the bits that change, how to only change the database.
+But we're just getting a list, so
+we're gonna say, don't track these, just give me a list.
+So customers, no tracking, give me a list, so that's cool.
+And I think we'll leave that like that for now.
+We'll go back over to index.
+And now that model, the page behind us has customers.
+Look, customers shows up, see, which is nice.
+So then I think I can put my tr in here.
+And I'm hoping, remember, I said contact, I should say customer.
+Customer singular, foreach customer,
+that means that the customer variable is
+now available to me customer.Id.
+>> Everything's connected.
+>> Yep, cool, let's try that.
+>> Okay. >> And then we'll do the rest,
+cuz I don't know if this is gonna work yet.
+Now I'm using an in-memory database, so
+every time I run this, it's gonna go away.
+>> So it's just a throw away database.
+>> I need to do better.
+I need to maybe make tests later, and
+>> I survived the journey.
+>> You did.
+Let's see, but as soon as I shut you down, it's gonna be gone.
+>> So if you refresh the page- >> You're here,
+you're still there, right?
+You're there until I close it, until I close this browser.
+Or not if I close the browser, pardon me,
+until I stop the web server.
+>> So, okay.
+>> Yeah, thanks, cool, so now we've got create.
+We should probably put a button
+down there at the bottom somewhere.
+We've got some validation, we've got our database,
+looking at our friends >> And
+this is doing a thing called Post Redirect Get.
+So I'm here, I hit a post, we do a redirect, and
+then we do a get, and then we would get this stuff here.
+So this is a PRG, Post Redirect Get.
+There's lots of articles on the Internet about that.
+Now let's make a link to theoretically go and
+edit these things.
+>> Okay.
+>> And then we'll have a button for Delete.
+These things don't exist on the backend yet,
+but we can- >> So yeah,
+so we don't have an edit page yet.
+>> We don't.
+>> Okay. >> We can make a link.
+Now I could go and put in a link, href.
+You've done this before a million times.
+And say /edit and then put in strings and stuff.
+But remember we talked about how great tag helpers are.
+>> Yeah.
+>> What if we went and said asp-page and
+then we could go and say there's an edit page and
+then it would figure out what the URL would look like.
+>> Okay.
+>> All right, and
+then it could even express the route a certain way.
+And we'll talk about routes in a minute.
+I think it's route-id.
+And I think we called it customer.Id.
+So it's gonna take that customer's id so we want to
+basically make a page that looks like /edit/2, /edit/3, right?
+>> And that's the route id that's gonna get added onto
+that.
+>> Okay, so the next thing you have is a button?
+>> Yeah, we'll do a button type="submit" and
+this is going to be handled by the page.
+>> Okay.
+>> Button's gonna be a little different.
+The reason that we're doing a button in an href is so
+you can see the difference between a link,
+and how links behave, and buttons.
+A link is gonna navigate somewhere.
+>> Yep.
+>> And a button's gonna cause a post, right?
+So this will go and be handled by the delete handler.
+But we also need that route information, we need that id
+because we're gonna delete a particular customer.
+>> So you need the content ID, yep.
+>> Customer ID, exactly.
+All right, and then none of this is hooked up.
+>> So you mentioned something, voice of the people at home,
+about the button being a post.
+>> Yes, it is going to post back and then we're gonna need to
+handle that behavior differently than the Create page.
+So then I'll just put a link at the bottom there for Create.
+So I'm just gonna hit Refresh.
+>> So let's see if the Create- >> Here's our Create.
+>> Okay.
+>> That still works.
+>> Okay. >> I hover over that.
+Nothing's happening because we don't have an edit.
+We never made an edit page, and
+I hit Delete >> You should.
+>> It's gonna crash cuz it's like
+I don't know what you're doing, right?
+It's just in the middle of something and
+it's confused cuz that's not what I asked it to do.
+Okay, so we've got some fixing up to do.
+Let's try Delete first.
+>> Okay. >> All right, so
+let's go over here.
+We made an OnGet.
+Let's go and make an OnDelete.
+>> Okay.
+>> Same thing as before with an IActionResult, except now we're
+gonna say on and this is kinda weird, OnPostDelete.
+The verb delete is a real HTTP verb,
+but it's not really often used from a browser's perspective.
+It's usually done as it's piggybacked on post.
+We use post to pass in basically all kinds of information.
+Whenever we hit Submit on a form, we're posting that form.
+We're adding in, I think we said, page-handler delete.
+So that is gonna be here, OnPostDelete.
+And now we're going to say,
+a customer, customer singular.
+And we'll go and get that customer out of the database.
+Before we delete it we gotta go and
+get it to make sure it's there,
+I say find, by that ID that got passed in.
+So now we gotta check to see if that customer's null or
+not, cuz if it's null, then we don't even bother.
+If it's not null, do something.
+And then we can go and Redirect.
+>> To a page.
+>> To a page, exactly, thank you.
+So here, we're gonna remove it from the database.
+And we are doing it in a memory database but it doesn't matter
+because if it was a regular database it would remove it for
+us, as well, that's what's nice about any framework.
+I'm not a very good typer.
+So we remove the customer and then we go and
+we save those changes.
+>> Okay.
+>> And then I would expect it would then redirect to the page,
+the same page.
+>> Yes. >> And I would expect that it
+would disappear from that list because it's going to go back
+to the database and build the list again.
+Does that make sense?
+>> It does, it sure does.
+>> I think that's what it will do.
+So we cross our fingers and hope that it works.
+And if it doesn't, we learn.
+Okay.
+That's not a good name.
+All right, we're deleting you.
+>> Okay, I'm fine with that.
+It does work the way you want.
+>> Yeah, it does work.
+Fire, fire, fire.
+>> Deal, deal, deal.
+>> Fancy pants.
+>> But now if we edit it.
+>> Doesn't work because Edit doesn't exist.
+>> And it is not there.
+>> All right, so let's go and do edit, then.
+So we'll do what you said before, add razor page.
+Call it Edit, now I know you like routing.
+Routing is one of your favorite things about ASP.NET.
+So this Edit page is gonna be the first time that we've ever
+had a page that took in information.
+>> Okay.
+>> Where does that go to pass in the ID?
+So up there at page?
+Right, quote quotes.
+>> Yeah, and curly brackets.
+>> Yeah.
+>> ID.
+I mean int.
+Okay so the ID is of type int.
+>> Yes. >> That's the type hint.
+So this is saying edit slash 3.
+>> So you'd see it in the browser,
+that's what it would look like.
+>> Okay.
+We have our Edit model, and then here, at the top, we might have
+Edit, we could actually add a little bit of text here.
+We could say Edit Customer.
+And then we could say- >> Dash Model?
+>> @Model.Customer, but again, we're not getting IntelliSense,
+why not?
+Because the page model is different for each page.
+>> Exactly.
+>> So let's go look at the one for Edit.
+So I'm gonna.
+>> You're gonna take, yeah.
+>> Borrow again.
+Certainly I could make another class, a base
+class, that would pull that AppDBContext in so I wouldn't
+have to keep copy-pasting that because at some point
+the copy-pasting becomes tedious.
+And you want to keep it dry, right.
+Don't repeat yourself.
+>> You probably want that to survive the journey right?
+Yeah.
+>> Okay.
+>> So we want to survive the journey,
+with bindproperty, okay.
+So I go back over to our page, and let's see if that worked.
+And it did, that's nice.
+>> Yes, it did.
+>> So now we can say, we are Model.Customer.Id, so
+we can say, Edit Customer for, or whatever.
+And then form, and then a form post, and there's some
+lots of cool ways to make your forms easier to write.
+If you find writing forms tedious, there's a really great
+way to write forms that is called Emmet.
+>> What is Emmet?
+>> You've never heard of Emmet?
+E-m-m-e-t, it's like the name, the person's name Emmet.
+>> Okay. >> And
+it's a way of describing what you want like a feel like trt.
+TR TD times three and then you'd hit tab and then it would go and
+expand it, it's a way to write tags for
+HTML really really fast.
+>> Is it built in?
+>> It's built into Visual Studio code but
+it is not built in to Visual Studio yet.
+>> Okay.
+>> Notice how I got this here, soon as I said ASP net four.
+>> Yeah, it gave you [CROSSTALK] >> Input four, rather.
+It got that, this is really nice, right?
+So I can go and fill out these forms really quickly and I don't
+have to worry about that's gonna happen on the server side.
+Okay, so then we'll say a label, and this is a label also for.
+>> The customer.
+>> Customer's name which is nice and then we'll say, give
+you another div, And then within there we'll have an input.
+For Customer.Name.
+>> And then you can do the validation again, right?
+>> Yeah I'll do some, but I can do validation two
+different ways.
+I could do the validation summary or
+we can do it like this, which is nice.
+>> And what are the key differences?
+>> This one is, you have total control of what it looks like.
+You can put it anywhere up or down.
+>> Okay. >> And this is
+just a bulleted list that's a roll up.
+>> Okay. >> Of all of the stuff.
+Totally up to you how you wanna do things.
+This is all inside of a form, right?
+>> So you want to save it, right?
+>> Yeah, we're going to need a save button.
+Exactly.
+So we'll put our button at the bottom,
+and it's just a regular old submit, nothing fancy about it.
+And it'll say save.
+We're going to want to load this up and save it.
+And have validation.
+We've done all that very nicely like this, and
+we just wanna confirm
+like you said on the backend that we do the right thing.
+>> Mm-hm.
+>> So on the get, actually let's do this.
+Let's run it first and then we'll try it again
+because right now we haven't hooked anything up.
+We haven't got it from the database we haven't updated
+from the database.
+But I would expect the links to at least work.
+>> Yeah. >> Cuz now there is
+an Edit page.
+If there's not, then maybe I forgot something.
+Okay, look in the corner there.
+>> Okay.
+>> It's kind of hard for me to do that.
+I can take a screenshot but I can't really take a screenshot.
+Let's do this.
+We'll take a snipping tool.
+Give it a delay of two seconds.
+>> You're that fast? >> I am.
+>> So Edit/1 right,
+so the route got built by the fact that it was in the Edit.
+And then you had added that ID at the top there.
+So this is nice because we didn't have to hard code
+what a link looked like.
+That's really important.
+We said, make me a link that takes me here.
+We didn't say make me a link that looks like this.
+>> Nope.
+That's nice.
+And if we changed our things later, then it would change for
+us, which is nice.
+So here,
+if I click on that, I assume it'll just do, yeah, nothing.
+So it's like, blegh, I don't have anything there.
+It doesn't know about customer yet because we have the bind,
+but we never loaded the customers.
+So let's go and do our stuff again, we're gonna have our
+action result and here we're gonna say OnGet, of course,
+int id, that's gonna get passed in automatically because of
+the way we set up our routes, that's nice.
+By default, will just return to page, but here we'll say
+Customer, the one above Go and get it from the database.
+>> And find it, okay, >> Yeah, so FindAsync, kind of
+a standard thing, you could pass in more complicated queries, and
+get it other ways.
+If it's null, freak out.
+>> [LAUGH] >> Right?
+>> Yeah. >> If (Customers == null),
+I don't know, let's put them back to index.
+>> It's Customer, right?
+>> Yes, pardon me, Customer.
+Okay, RedirectToPage("/Index"); a lot of typing,
+but we don't wanna hide anything from you.
+>> Keeping it 100.
+>> We are absolutely keeping it 100,so this should that up and
+give us a form, with the customer in it.
+Let's see if it does, cuz we added that bind property,
+which you said, what did you call it?
+>> Surviving the journey.
+>> Surviving the journey.
+You saw that interest movie really survive the journey.
+Don't tell me what happens at the end?
+>> So I've been.
+>> I don't wanna know.
+Okay, and then I hit Edit, and then it works.
+>> Exactly. >> Right.
+>> So what happens if you change it around?
+>> If I change it, probably nothing Right,
+cuz we don't have our post.
+>> Exactly.
+>> Exactly, so we've got our get.
+But we don't have our post.
+>> You could kind of copy that.
+>> Yes, I think there's a way to actually link
+that whole thing quickly, but
+we'll say, OnPostAsync All right,
+the very end we will do that Redirect.
+>> To the index page?
+>> To the index page, exactly.
+Okay.
+What do we do?
+Well, we've got that model state valid issue.
+>> Yeah, so if not model.
+>> Not ModelState.IsValid.
+>> Yeah, we want it to return to the page.
+>> Okay.
+Aah, Page.
+See, if you try to type too fast to impress people, and
+it just ends up making you look silly.
+Okay, now this one is an interesting one.
+>> Cuz you want to attach it to the database.
+>> Yeah, so what we're doing is,
+we're modifying something that's all ready in the database.
+So what we're trying to do is take this customer
+that we are recurrently editing.
+>> So it's in a cart state.
+>> Attach that customer in the state of it in the database,
+we're going to mark that as Modified.
+And this bit here.
+>> It shouldn't be there, yeah.
+>> Add the using statement, there we go.
+And now it's turned blue, okay.
+Now, we don't know if it's going to work, because someone else
+could be simultaneously editing at the same time.
+>> Exactly, so you want to do a try and catch.
+>> Can do a try, maybe it'll work, maybe it won't.
+And the exception that we're gonna catch for,
+is called aDbUpdateConcurrencyException.
+>> So just in case someone's doing-
+>> If someone's in there
+at the same time- >> Exactly what it says.
+>> Exactly what it is. >> Okay, so
+you're going to wait for changes?
+>> Go on 'await' and say SaveChangesAsync, and
+presumably that'll work fine.
+If it doesn't- >> We'll have to throw
+an exception?
+>> Now there's different arguments about the right way to
+do this, but for now I'm gonna go and say, Customer, and
+this is kind of cool.
+Customer.Id, see how I'm getting IntelliSense inside the string?
+We can do whatever we want to about that concurrency
+exception, maybe even pass it in as an inner exception.
+But the fact is, actually, that would be a good idea,
+we'll pass that in, along for the ride.
+We wanna give a message to somebody that bad stuff has
+happened.
+All right,
+that should be, I think we always gonna create only.
+>> And we do.
+We've done the create.
+>> Let's go see.
+I think the create was a post.
+>> Yeah.
+>> The read is the for loop.
+>> The delete was also a post, but with a delete sidecar,
+along for the ride.
+So, Create, Dan.
+Break points from before.
+>> Yeah. >> I will remove those.
+>> I think you still have, okay.
+>> Continue, we'll bump into them if we have more.
+Fancy pants.
+>> Beyonce.
+>> That's a good point.
+Edit.
+>> Carter.
+>> Carter Knowles.
+>> Yeah.
+>> Don't get it twisted.
+>> [LAUGH] >> Delete everyone else who is
+not worthy.
+>> [LAUGH] >> So-
+>> See, it works.
+>> It does work.
+>> There you go, taking care of business, cool.
+>> So, let's think about that.
+>> So, that's pretty sweet.
+>> It is.
+>> If we go back, and just kind of review particularly,
+this bit here we've got our edit.
+>> Mm-hm.
+>> With the route id where we did not see-
+>> Where are we reaching
+out right now?
+>> I'm sorry this is index.
+>> Okay.
+>> Right?
+So here we got an edit.
+I wanna point out how it looks in the code, and then compare
+that to how it looks ultimately in the code, right?
+When it makes it all the way back to the browser.
+See?
+>> It's in.
+>> So that came from, this seems like a little more.
+You might be asking yourself,
+why you don't just hard code that?
+But routes change, pages change, things get moved around..
+Now, this one is a little bit more interesting here,
+because you might have multiple buttons on the page that do
+different stuff.
+So then, you can give them a handler name. Right?
+I could have delete.
+I could have bold face Beyonce, I could have all caps, right?
+We could have whatever.
+You're not limited to one button.
+A submit button can have, you could have multiple submits,
+still passing numbers, like in this case id.
+>> Yeah.
+>> And this is an ampersand.
+>> Yeah.
+>> Multiple handlers, delete, promote whatever.
+>> Save.
+>> Save exactly.
+>> Okay.
+>> And what's cool about that, is that then that word delete
+If we look at the behind is this word.
+So I think you could even go like on post "foo" async, or
+whatever, as long as it lines up because you're saying on post
+and then some handler.
+>> Yes.
+>> That cool?
+>> That is cool. >> And the handler is literally
+you could say Let me stop our debugging here.
+>> You gonna try the foo?
+>> Right I can do whatever, it doesn't matter.
+That word is totally up to you.
+So I don't need to test that.
+You just trust me.
+You don't trust me?
+>> Yeah, sure.
+>> All right let's test it then.
+>> [LAUGH] >> Let's test it.
+That gives you a lot of flexibility with buttons, so
+I say foo right there.
+I go over here.
+We say foo.
+And there you go.
+So while that's loading?
+What were you gonna say?
+>> No, no, no, I trust you ish.
+>> Trust you ish?
+>> Yeah.
+>> That's pretty good, I'll take that.
+Let's go and add people.
+>> Okay.
+>> That was foo.
+>> How did f oo know it was delete?
+>> Because it doesn't matter that it was named Foo.
+It's just a handler name.
+And if we confirm it Did I pass it?
+>> Nope.
+>> This is create, sorry.
+There you go there's a delete.
+Okay see it says handler equals foo.
+Yes, okay, yes.
+>> And then, I just happened to name this handler foo also.
+>> Yes, yeah.
+>> So the point is, it lined up.
+And that's how you can have unlimited verbs.
+And then at that point, it just did the thing and
+removed it from the database.
+Cool?
+>> Cool. >> So,
+we saw lots of different handlers, like gets and
+posts, and custom handlers like delete.
+>> Yeah.
+>> We saw some tag helpers, that will generate buttons and
+links for us.
+We saw layout pages.
+>> We saw validation.
+>> We saw validation both summary and individual.
+>> Mm-hm.
+>> And yeah.
+>> Yeah lots of little bit about routing and
+a little bit more detail.
+>> We saw routing,
+and then specifically, actually one important thing we can
+point out about routing as well.
+If I click edit
+Did we, I shut the app down again.
+You had said ID:int.
+>> Yes.
+>> Where int was a number, correct?
+It would be interesting.
+So just confirm that, if we put in
+Submit Query, edit, she is one.
+Put in an ID that is not an int.
+>> You should get a [CROSSTALK] >> You simply get a 404,
+you don't get a 500.
+It's not an error.
+It's a route that doesn't exist.
+We don't have an edit that takes a string.
+So that's another really,
+really important thing to point out about routing, and
+why that little bit up there was so significant?
+And then soon, in the intermediate sections, we will
+learn a little bit more about web APIs, and url, and mixing
+and matching pages as well >> Yeah.
+>> Can we take a break and
+come back with a little bit of logging?
+>> Yes we will.
