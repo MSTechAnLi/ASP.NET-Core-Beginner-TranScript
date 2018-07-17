@@ -2,8 +2,7 @@ Hey friends, we're glad you're still with us here at Microsoft Virtual Academy a
 We're learning all about razor pages and our application.
 This module will be a little longer.
 Yes it will.
-And it will probably have us making some mistakes together,
-and that's okay.
+And it will probably have us making some mistakes together,and that's okay.
 And we're gonna try not to hide anything from you.
 We are following the documentation as we hope that are, and maybe you can follow along.
 Pause, try stuff out, and maybe Google with Bing.
@@ -877,7 +876,7 @@ You had said ID:int
 It would be interesting.
 So just confirm that, if we put in Submit Query, edit, she is one.
 Put in an ID that is not an int.
-You should get a [CROSSTALK] You simply get a 404,you don't get a 500.
+You should get a You simply get a 404,you don't get a 500.
 It's not an error.
 It's a route that doesn't exist.
 We don't have an edit that takes a string.
