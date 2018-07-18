@@ -1,0 +1,332 @@
+﻿1
+00:00:01,043 --> 00:00:07,059
+Hey friends, we're glad you're still with us here at Microsoft Virtual Academy as we do our intro to ASP.NET Core.
+
+2
+00:00:07,123 --> 00:00:08,595
+We're learning all about razor pages and our application.
+
+3
+00:00:08,595 --> 00:00:09,683
+This module will be a little longer.
+
+4
+00:00:09,875 --> 00:00:12,371
+Yes it will.
+
+5
+00:00:12,371 --> 00:00:15,571
+And it will probably have us making some mistakes together,and that's okay.
+
+6
+00:00:15,635 --> 00:00:19,219
+And we're gonna try not to hide anything from you.
+
+7
+00:00:19,219 --> 00:00:24,339
+We are following the documentation as we hope that are, and maybe you can follow along.
+
+8
+00:00:24,339 --> 00:00:27,987
+Pause, try stuff out, and maybe Google with Bing.
+
+9
+00:00:28,051 --> 00:00:28,883
+Google with Bing.
+
+10
+00:00:28,883 --> 00:00:30,547
+If you have trouble and get stuck.
+
+11
+00:00:30,547 --> 00:00:34,323
+Yeah, and we will have links to the documentation right underneath this recording.
+
+12
+00:00:34,323 --> 00:00:39,200
+All right, so we're gonna try to make a CRUD page.
+
+13
+00:00:39,200 --> 00:00:41,000
+What is CRUD?
+
+14
+00:00:41,081 --> 00:00:45,777
+Create,read, update, delete.
+
+15
+00:00:45,777 --> 00:00:54,675
+All right, so a CRUD application maps verbs from CRUD to verbs that we're used to using,like get is a get, so it would be like a read.
+
+16
+00:00:54,675 --> 00:00:57,358
+And if you're gonna create something, it would be a post.
+
+17
+00:00:57,358 --> 00:01:06,126
+So you'd fill out a form, you'd hit submit, and it would post the data, that's a create Then you can maybe read it back and look at in edit page or then maybe delete it.
+
+18
+00:01:06,126 --> 00:01:12,718
+So if we succeed, we'll have the simple form,maybe create some customers, put them in a fake database And we'll be okay
+
+19
+00:01:12,718 --> 00:01:16,878
+Yeah, and I will be learning more about databases in the intermediate course as well 
+
+20
+00:01:16,878 --> 00:01:18,606
+Yes,well like a whole section on databases.
+
+21
+00:01:18,606 --> 00:01:20,846
+So for now, we're gonna be doing it in an in-memory database.
+
+22
+00:01:20,846 --> 00:01:23,598
+Okay, so let's do the best we can.
+
+23
+00:01:23,598 --> 00:01:26,862
+We're gonna use the same web application one that we created before.
+
+24
+00:01:26,862 --> 00:01:36,206
+We saw in the previous modules where we added MVC, but of course all of that stuff was added for us because we went File > New Project,and we picked Web Application, all right?
+
+25
+00:01:36,206 --> 00:01:44,782
+So here in configure services, we've got AddMvc.
+
+26
+00:01:44,782 --> 00:01:48,430
+But we're gonna make our little in-memory database here.
+
+27
+00:01:48,430 --> 00:01:53,358
+We're gonna say services.AddDbContext<>
+
+28
+00:01:53,358 --> 00:01:55,150
+Yeah, and give it name
+
+29
+00:01:55,150 --> 00:01:58,030
+And we gonna create a thing called AppDbContext.
+
+30
+00:01:58,030 --> 00:01:59,630
+We can name it whatever we want to.
+
+31
+00:01:59,630 --> 00:02:02,638
+We haven't written this yet, but we will.
+
+32
+00:02:02,638 --> 00:02:05,902
+I'm gonna hit Ctrl+dot.
+
+33
+00:02:05,902 --> 00:02:10,382
+And it's saying, hey, do you need an AppDbContext?
+
+34
+00:02:10,382 --> 00:02:12,878
+Do you wanna go and generate one of those?
+
+35
+00:02:12,878 --> 00:02:14,670
+I wanna go ahead and say yes.
+
+36
+00:02:14,670 --> 00:02:18,190
+So it's gone and done that, and we'll deal with that in a minute.
+
+37
+00:02:18,190 --> 00:02:22,414
+And again, I will very likely make mistakes, so you'll bear with me I hope.
+
+38
+00:02:22,414 --> 00:02:27,214
+I opened up the parentheses there.
+
+39
+00:02:27,214 --> 00:02:28,942
+And I'm gonna pass in some options.
+
+40
+00:02:28,942 --> 00:02:35,470
+- And the option I'm gonna pass in for my database context are options -UseInmemory.
+
+41
+00:02:35,470 --> 00:02:37,966
+-Use -In.
+
+42
+00:02:38,670 --> 00:02:40,270
+MemoryDatabase.
+
+43
+00:02:40,462 --> 00:02:43,406
+Yes, but the reason why that's not showing,that perfect.
+
+44
+00:02:43,406 --> 00:02:44,942
+-We need to add -why is that not showing up?
+
+45
+00:02:44,942 --> 00:02:47,806
+So we need to add the entity framework.
+
+46
+00:02:47,806 --> 00:02:49,150
+So we need to use
+
+47
+00:02:49,150 --> 00:02:51,006
+And I probably should have added that first, and
+
+48
+00:02:51,006 --> 00:02:52,158
+I would have gotten IntelliSense.
+
+49
+00:02:52,158 --> 00:02:53,758
+-True -Let's try that.
+
+50
+00:02:53,758 --> 00:02:56,254
+If we go back up to the top.
+
+51
+00:03:00,222 --> 00:03:02,590
+So we add the EntityFrameworkCore beforehand.
+
+52
+00:03:02,590 --> 00:03:11,614
+Look, you see that little arrow there that's pointing down?
+
+53
+00:03:11,614 --> 00:03:19,166
+That means that this method came in was included by the fact that we just did that UseIn.
+
+54
+00:03:19,166 --> 00:03:21,918
+That's called an extension method.
+
+55
+00:03:21,918 --> 00:03:23,070
+It's along for the ride.
+
+56
+00:03:23,070 --> 00:03:24,734
+And you see it actually says extension.
+
+57
+00:03:24,734 --> 00:03:26,334
+That wasn't there seconds ago.
+
+58
+00:03:26,334 --> 00:03:27,614
+No, it wasn't.
+
+59
+00:03:27,934 --> 00:03:37,406
+Add InMemoryDatabase, some name All right,And then we look at the squiggle and we worry.
+
+60
+00:03:37,406 --> 00:03:39,582
+Does the squiggle mean something?
+
+61
+00:03:40,542 --> 00:03:43,550
+So, here it's saying AddDbContext.
+
+62
+00:03:43,550 --> 00:03:45,598
+Well, we never really went and did anything with that AddDbContext.
+
+63
+00:03:45,598 --> 00:03:46,750
+Let's go over there and fix that.
+
+64
+00:03:46,750 --> 00:03:48,158
+I'm gonna right click and say go to definition.
+
+65
+00:03:48,158 --> 00:03:51,294
+And let's work on our database context.
+
+66
+00:03:51,294 --> 00:03:55,134
+This is kind of standard stuff, so don't worry about it too much.
+
+67
+00:03:55,134 --> 00:03:58,206
+But basically this is representing the database.
+
+68
+00:03:59,486 --> 00:04:01,278
+I'm hitting Ctrl+dot there.
+
+69
+00:04:01,278 --> 00:04:04,542
+And I'll say make it an AppDbContext,
+
+70
+00:04:04,542 --> 00:04:09,406
+this is an constructor, all right?
+
+71
+00:04:09,406 --> 00:04:14,078
+Okay, and we're gonna take in some options.
+
+72
+00:04:17,790 --> 00:04:18,686
+ContextOptions.
+
+73
+00:04:18,750 --> 00:04:21,438
+-Oops, optoons -Options.
+
+74
+00:04:21,438 --> 00:04:24,126
+Options, pass up to the base class those options.
+
+75
+00:04:24,126 --> 00:04:25,534
+I'm gonna put that.
+
+76
+00:04:25,534 --> 00:04:33,150
+What I'm trying to zoom and make it helpful for you, I end up making it worse for myself.
+
+77
+00:04:34,238 --> 00:04:36,990
+Well, at least you have other people in mind.
+
+78
+00:04:37,438 --> 00:04:41,278
+-I do. And then -You have to set it of some sort.
+
+79
+00:04:41,278 --> 00:04:45,054
+We have a set of, we're gonna say customers?
+
+80
+00:04:45,118 --> 00:04:46,684
+So we have a set of customer.
+
+81
+00:04:46,684 --> 00:04:47,900
+Customer does not exist here.
+
+82
+00:04:47,900 --> 00:04:49,576
+That's why it's squiggled out.
+
+83
+00:04:50,075 --> 00:04:52,193
+And then we do a getter, setter, get ; set, okay?
+
