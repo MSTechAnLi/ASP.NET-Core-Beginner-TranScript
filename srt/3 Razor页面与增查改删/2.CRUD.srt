@@ -1,0 +1,916 @@
+﻿1
+00:00:01,043 --> 00:00:07,059
+Hey friends, we're glad you're still with us here at Microsoft Virtual Academy as we do our intro to ASP.NET Core.
+
+2
+00:00:07,123 --> 00:00:08,595
+We're learning all about razor pages and our application.
+
+3
+00:00:08,595 --> 00:00:09,683
+This module will be a little longer.
+
+4
+00:00:09,875 --> 00:00:12,371
+Yes it will.
+
+5
+00:00:12,371 --> 00:00:15,571
+And it will probably have us making some mistakes together,and that's okay.
+
+6
+00:00:15,635 --> 00:00:19,219
+And we're gonna try not to hide anything from you.
+
+7
+00:00:19,219 --> 00:00:24,339
+We are following the documentation as we hope that are, and maybe you can follow along.
+
+8
+00:00:24,339 --> 00:00:27,987
+Pause, try stuff out, and maybe Google with Bing.
+
+9
+00:00:28,051 --> 00:00:28,883
+Google with Bing.
+
+10
+00:00:28,883 --> 00:00:30,547
+If you have trouble and get stuck.
+
+11
+00:00:30,547 --> 00:00:34,323
+Yeah, and we will have links to the documentation right underneath this recording.
+
+12
+00:00:34,323 --> 00:00:39,200
+All right, so we're gonna try to make a CRUD page.
+
+13
+00:00:39,200 --> 00:00:41,000
+What is CRUD?
+
+14
+00:00:41,081 --> 00:00:45,777
+Create,read, update, delete.
+
+15
+00:00:45,777 --> 00:00:54,675
+All right, so a CRUD application maps verbs from CRUD to verbs that we're used to using,like get is a get, so it would be like a read.
+
+16
+00:00:54,675 --> 00:00:57,358
+And if you're gonna create something, it would be a post.
+
+17
+00:00:57,358 --> 00:01:06,126
+So you'd fill out a form, you'd hit submit, and it would post the data, that's a create Then you can maybe read it back and look at in edit page or then maybe delete it.
+
+18
+00:01:06,126 --> 00:01:12,718
+So if we succeed, we'll have the simple form,maybe create some customers, put them in a fake database And we'll be okay
+
+19
+00:01:12,718 --> 00:01:16,878
+Yeah, and I will be learning more about databases in the intermediate course as well 
+
+20
+00:01:16,878 --> 00:01:18,606
+Yes,well like a whole section on databases.
+
+21
+00:01:18,606 --> 00:01:20,846
+So for now, we're gonna be doing it in an in-memory database.
+
+22
+00:01:20,846 --> 00:01:23,598
+Okay, so let's do the best we can.
+
+23
+00:01:23,598 --> 00:01:26,862
+We're gonna use the same web application one that we created before.
+
+24
+00:01:26,862 --> 00:01:36,206
+We saw in the previous modules where we added MVC, but of course all of that stuff was added for us because we went File > New Project,and we picked Web Application, all right?
+
+25
+00:01:36,206 --> 00:01:44,782
+So here in configure services, we've got AddMvc.
+
+26
+00:01:44,782 --> 00:01:48,430
+But we're gonna make our little in-memory database here.
+
+27
+00:01:48,430 --> 00:01:53,358
+We're gonna say services.AddDbContext<>
+
+28
+00:01:53,358 --> 00:01:55,150
+Yeah, and give it name
+
+29
+00:01:55,150 --> 00:01:58,030
+And we gonna create a thing called AppDbContext.
+
+30
+00:01:58,030 --> 00:01:59,630
+We can name it whatever we want to.
+
+31
+00:01:59,630 --> 00:02:02,638
+We haven't written this yet, but we will.
+
+32
+00:02:02,638 --> 00:02:05,902
+I'm gonna hit Ctrl+dot.
+
+33
+00:02:05,902 --> 00:02:10,382
+And it's saying, hey, do you need an AppDbContext?
+
+34
+00:02:10,382 --> 00:02:12,878
+Do you wanna go and generate one of those?
+
+35
+00:02:12,878 --> 00:02:14,670
+I wanna go ahead and say yes.
+
+36
+00:02:14,670 --> 00:02:18,190
+So it's gone and done that, and we'll deal with that in a minute.
+
+37
+00:02:18,190 --> 00:02:22,414
+And again, I will very likely make mistakes, so you'll bear with me I hope.
+
+38
+00:02:22,414 --> 00:02:27,214
+I opened up the parentheses there.
+
+39
+00:02:27,214 --> 00:02:28,942
+And I'm gonna pass in some options.
+
+40
+00:02:28,942 --> 00:02:35,470
+- And the option I'm gonna pass in for my database context are options -UseInmemory.
+
+41
+00:02:35,470 --> 00:02:37,966
+-Use -In.
+
+42
+00:02:38,670 --> 00:02:40,270
+MemoryDatabase.
+
+43
+00:02:40,462 --> 00:02:43,406
+Yes, but the reason why that's not showing,that perfect.
+
+44
+00:02:43,406 --> 00:02:44,942
+-We need to add -why is that not showing up?
+
+45
+00:02:44,942 --> 00:02:47,806
+So we need to add the entity framework.
+
+46
+00:02:47,806 --> 00:02:49,150
+So we need to use
+
+47
+00:02:49,150 --> 00:02:51,006
+And I probably should have added that first, and
+
+48
+00:02:51,006 --> 00:02:52,158
+I would have gotten IntelliSense.
+
+49
+00:02:52,158 --> 00:02:53,758
+-True -Let's try that.
+
+50
+00:02:53,758 --> 00:02:56,254
+If we go back up to the top.
+
+51
+00:03:00,222 --> 00:03:02,590
+So we add the EntityFrameworkCore beforehand.
+
+52
+00:03:02,590 --> 00:03:11,614
+Look, you see that little arrow there that's pointing down?
+
+53
+00:03:11,614 --> 00:03:19,166
+That means that this method came in was included by the fact that we just did that UseIn.
+
+54
+00:03:19,166 --> 00:03:21,918
+That's called an extension method.
+
+55
+00:03:21,918 --> 00:03:23,070
+It's along for the ride.
+
+56
+00:03:23,070 --> 00:03:24,734
+And you see it actually says extension.
+
+57
+00:03:24,734 --> 00:03:26,334
+That wasn't there seconds ago.
+
+58
+00:03:26,334 --> 00:03:27,614
+No, it wasn't.
+
+59
+00:03:27,934 --> 00:03:37,406
+Add InMemoryDatabase, some name All right,And then we look at the squiggle and we worry.
+
+60
+00:03:37,406 --> 00:03:39,582
+Does the squiggle mean something?
+
+61
+00:03:40,542 --> 00:03:43,550
+So, here it's saying AddDbContext.
+
+62
+00:03:43,550 --> 00:03:45,598
+Well, we never really went and did anything with that AddDbContext.
+
+63
+00:03:45,598 --> 00:03:46,750
+Let's go over there and fix that.
+
+64
+00:03:46,750 --> 00:03:48,158
+I'm gonna right click and say go to definition.
+
+65
+00:03:48,158 --> 00:03:51,294
+And let's work on our database context.
+
+66
+00:03:51,294 --> 00:03:55,134
+This is kind of standard stuff, so don't worry about it too much.
+
+67
+00:03:55,134 --> 00:03:58,206
+But basically this is representing the database.
+
+68
+00:03:59,486 --> 00:04:01,278
+I'm hitting Ctrl+dot there.
+
+69
+00:04:01,278 --> 00:04:04,542
+And I'll say make it an AppDbContext,
+
+70
+00:04:04,542 --> 00:04:09,406
+this is an constructor, all right?
+
+71
+00:04:09,406 --> 00:04:14,078
+Okay, and we're gonna take in some options.
+
+72
+00:04:17,790 --> 00:04:18,686
+ContextOptions.
+
+73
+00:04:18,750 --> 00:04:21,438
+-Oops, optoons -Options.
+
+74
+00:04:21,438 --> 00:04:24,126
+Options, pass up to the base class those options.
+
+75
+00:04:24,126 --> 00:04:25,534
+I'm gonna put that.
+
+76
+00:04:25,534 --> 00:04:33,150
+What I'm trying to zoom and make it helpful for you, I end up making it worse for myself.
+
+77
+00:04:34,238 --> 00:04:36,990
+Well, at least you have other people in mind.
+
+78
+00:04:37,438 --> 00:04:41,278
+-I do. And then -You have to set it of some sort.
+
+79
+00:04:41,278 --> 00:04:45,054
+We have a set of, we're gonna say customers?
+
+80
+00:04:45,118 --> 00:04:46,684
+So we have a set of customer.
+
+81
+00:04:46,684 --> 00:04:47,900
+Customer does not exist here.
+
+82
+00:04:47,900 --> 00:04:49,576
+That's why it's squiggled out.
+
+83
+00:04:50,075 --> 00:04:54,393
+And then we do a getter, setter, get ; set, okay?
+
+84
+00:04:54,648 --> 00:04:56,248
+Customer is squiggled out.
+
+85
+00:04:56,248 --> 00:04:59,192
+The type or namespace 'Customer' could not be found.
+
+86
+00:04:59,192 --> 00:05:01,560
+Well, that's true cuz we haven't made one yet.
+
+87
+00:05:01,624 --> 00:05:02,648
+We had not made it up.
+
+88
+00:05:02,648 --> 00:05:06,424
+l could type control dot, but l am gonna click show potential fixes.
+
+89
+00:05:06,424 --> 00:05:08,664
+This is kind of interesting.
+
+90
+00:05:08,664 --> 00:05:11,224
+Here it's saying, well, I can go and make customer for you.
+
+91
+00:05:11,224 --> 00:05:12,696
+But look at this here.
+
+92
+00:05:12,696 --> 00:05:18,392
+It's suggesting other packages that have the word customer and the name customer in it.
+
+93
+00:05:18,392 --> 00:05:21,784
+So these are other NuGet packages,packages up in the world.
+
+94
+00:05:21,784 --> 00:05:22,744
+Yeah, ain't that cool?
+
+95
+00:05:22,744 --> 00:05:23,448
+That's very cool.
+
+96
+00:05:23,448 --> 00:05:26,275
+-Package out there that has the word customer in it -Has the word customer in it
+
+97
+00:05:26,275 --> 00:05:27,102
+No, I don't want those.
+
+98
+00:05:27,800 --> 00:05:37,464
+But if I was doing something with JSON or doing something with some technology that I knew I will need the NuGet packages, later it will go get it for me.
+
+99
+00:05:37,464 --> 00:05:40,792
+So I'm gonna say generate in new file, that seems reasonable.
+
+100
+00:05:40,792 --> 00:05:43,800
+-It does -All right, this generated that.
+
+101
+00:05:43,800 --> 00:05:45,528
+Now notice it just appeared.
+
+102
+00:05:46,025 --> 00:05:52,225
+-There it is -And now I'm gonna right click and say go to definition
+
+103
+00:05:52,516 --> 00:05:56,975
+It is worth pointing out that I could also right click and say Peak Definition.
+
+104
+00:05:56,975 --> 00:06:00,130
+-And could you write in there? -I could.
+
+105
+00:06:00,130 --> 00:06:01,225
+I think that would be a little weird.
+
+106
+00:06:01,499 --> 00:06:10,300
+But then I can click on this little tab right here Promote to Document, and now I've jumped into that document.
+
+107
+00:06:10,300 --> 00:06:16,175
+So I can peek and then if I type a little bit,I was like this is tiresome, then I could jump even higher.
+
+108
+00:06:16,175 --> 00:06:17,757
+-That's pretty smooth. -It is pretty smooth.
+
+109
+00:06:17,821 --> 00:06:21,405
+-All right, I'll show you another smooth tip. -I know it.
+
+110
+00:06:21,405 --> 00:06:24,413
+-Yeah? You wanna suggest? -The tab tab thing?
+
+111
+00:06:24,413 --> 00:06:27,741
+-Yes, ready? -Prop Tab.
+
+112
+00:06:27,741 --> 00:06:35,196
+-Tab, tab -int Tab Id Enter Enter prop Tab Tab string Enter Tab Name.
+
+113
+00:06:36,325 --> 00:06:40,480
+-How cool is that? -It's cool, and I always forget to use it.
+
+114
+00:06:40,480 --> 00:06:43,296
+-You gotta use it. -I always forget to use it and it's awesome.
+
+115
+00:06:43,296 --> 00:06:46,880
+-There's so much good stuff in there. -There's also propfull.
+
+116
+00:06:46,880 --> 00:06:50,080
+-What does that do? -That gives you a backing variable.
+
+117
+00:06:50,080 --> 00:06:58,550
+There's propa,which I don't know what it does but it's crazy.
+
+118
+00:06:58,825 --> 00:07:02,400
+There's propg for a getter with a private setter.
+
+119
+00:07:02,440 --> 00:07:04,488
+Yeah, a bunch of stuff.
+
+120
+00:07:04,488 --> 00:07:07,624
+-Have you done a blog post on all the properties 
+
+121
+00:07:07,624 --> 00:07:10,312
+There's a bunch of snippets,I could go all day.
+
+122
+00:07:10,312 --> 00:07:12,680
+But I'm just gonna use prop for now.
+
+123
+00:07:12,680 --> 00:07:16,584
+So this is customer, so customers have an ID,a unique ID.
+
+124
+00:07:16,584 --> 00:07:18,184
+And they have a name.
+
+125
+00:07:18,184 --> 00:07:20,552
+And they could probably have an email,they could have all these things.
+
+126
+00:07:20,552 --> 00:07:24,392
+-Yeah. -We'll start with name for now, but should name have some constraints?
+
+127
+00:07:24,392 --> 00:07:28,040
+-It should. -We have an idea of data annotation.
+
+128
+00:07:28,040 --> 00:07:30,088
+There's annotation on that data, yes.
+
+129
+00:07:30,088 --> 00:07:33,096
+So one of the things is that you probably want someone to enter their name, right?
+
+130
+00:07:33,096 --> 00:07:38,408
+-We wanna force them. -We wanna force them, so we want to make sure it some sort of required, right?
+
+131
+00:07:38,408 --> 00:07:43,656
+So required, and I'm putting that as a notation here and I'm gonna hit Ctrl+dot, again.
+
+132
+00:07:43,656 --> 00:07:50,696
+When you learn that these things exist and you're thinking about them rather than typing in all this stuff for the using,you're just gonna type required.
+
+133
+00:07:50,696 --> 00:07:54,600
+Hit Ctrl+dot, and then hit Enter.
+
+134
+00:07:54,600 --> 00:08:00,296
+Line 1 just appeared there And then we'll force the length as well.
+
+135
+00:08:00,296 --> 00:08:05,032
+We'll be silly for a moment, we'll say a length of 10.
+
+136
+00:08:05,032 --> 00:08:06,824
+That's not a very good length.
+
+137
+00:08:06,824 --> 00:08:08,104
+That is not a good length at all.
+
+138
+00:08:08,104 --> 00:08:10,024
+But that might allow us to do some validation later.
+
+139
+00:08:10,024 --> 00:08:12,072
+And then we'll change it to a longer length.
+
+140
+00:08:12,072 --> 00:08:15,592
+All right, so let's back up for a second and see what we did here.
+
+141
+00:08:15,592 --> 00:08:20,520
+So we have in our start up an InMemoryDatabase.
+
+142
+00:08:20,520 --> 00:08:22,824
+Not a SQLserver or a.
+
+143
+00:08:22,824 --> 00:08:25,256
+Whatever just in memory database.
+
+144
+00:08:25,256 --> 00:08:37,401
+We have a beginnings of a customer, unique ID and a name Some annotations on it, and then a little class here that's kind of empty.
+
+145
+00:08:37,401 --> 00:08:43,850
+That is our a list of customers and actually what's customer Singular here.
+
+146
+00:08:43,850 --> 00:08:45,578
+-Yeah. -That should be customers.
+
+147
+00:08:45,578 --> 00:08:51,978
+-Okay, because, you have a set. -This is a set of customers.
+
+148
+00:08:51,978 --> 00:08:54,474
+So the one thing, how are we going to see this information?
+
+149
+00:08:54,474 --> 00:09:01,514
+Well, we're going to need to probably put some in the database and then,once we have them in the database, list them out.
+
+150
+00:09:01,514 --> 00:09:02,922
+Like how are we going to visually see it?
+
+151
+00:09:02,922 --> 00:09:05,610
+Yeah, so there's a bit of a chicken and the egg problem there.
+
+152
+00:09:05,610 --> 00:09:09,898
+Do we make the listing page first and list them out?
+
+153
+00:09:09,898 --> 00:09:12,202
+But we really can't cuz we don't have any.
+
+154
+00:09:12,202 --> 00:09:13,802
+-You don't anything, yeah. -Or we make a create page first.
+
+155
+00:09:13,802 --> 00:09:17,194
+-So it's CRUD. -We'll do the C first, okay?
+
+156
+00:09:17,194 --> 00:09:20,266
+-So over in -The pages folder.
+
+157
+00:09:20,266 --> 00:09:23,274
+Pages, let's do create.
+
+158
+00:09:23,274 --> 00:09:26,282
+Now, we're not going to say new file like we did before.
+
+159
+00:09:26,282 --> 00:09:29,546
+No, you're going to create a new Razor Page or if you go to New File.
+
+160
+00:09:29,546 --> 00:09:30,954
+Let me do that again.
+
+161
+00:09:30,954 --> 00:09:34,026
+Right click and I have two choices I have new.
+
+162
+00:09:34,026 --> 00:09:35,818
+-And then. -Page or I can say item.
+
+163
+00:09:35,818 --> 00:09:36,650
+Yeah, New Item.
+
+164
+00:09:36,650 --> 00:09:39,594
+And they should be the option to pick Razor Page.
+
+165
+00:09:39,594 --> 00:09:43,306
+Right, so you got a couple different options here and this is all the different things that you could make.
+
+166
+00:09:44,077 --> 00:09:56,685
+I'm gonna go and right click and say add Razor page, and I wanna point out that I'm not gonna do it for this because it will be a little bit cheating but after we're all done, first, we make you suffer.
+
+167
+00:09:56,685 --> 00:09:59,053
+-And then we show you the easy way And then we show you the easy way
+
+168
+00:09:59,334 --> 00:10:07,462
+We could create that model and say Razor page is using entity framework CRUD, and then it will then scaffold or generate.
+
+169
+00:10:07,462 --> 00:10:10,342
+-Every single -All the hard parts that we're about to do.
+
+170
+00:10:10,342 --> 00:10:16,550
+But it's more fun to do, no no,it's more fun to do it ourselves, don't you think?
+
+171
+00:10:16,550 --> 00:10:17,958
+-All right. -All right, lets do it ourselves.
+
+172
+00:10:17,958 --> 00:10:20,006
+People can fast forward if they don't like it.
+
+173
+00:10:20,006 --> 00:10:24,294
+The page name would be create.
+
+174
+00:10:24,294 --> 00:10:26,854
+Uh-huh, and then we're gonna use a layout, we saw that.
+
+175
+00:10:26,854 --> 00:10:31,014
+And then, here it says Generate PageModel,that's that code behind of that page model.
+
+176
+00:10:31,014 --> 00:10:34,982
+We could say no and then do that in line, if we wanted to.
+
+177
+00:10:34,982 --> 00:10:36,886
+All right. So let's see if that works.
+
+178
+00:10:37,590 --> 00:10:39,766
+Thinking, thinking, thinking.
+
+179
+00:10:39,766 --> 00:10:42,966
+We're gonna watch in the right hand side here as create should appear.
+
+180
+00:10:42,966 --> 00:10:45,590
+And sticking well because it's doing quite a bit of scaffolding.
+
+181
+00:10:45,654 --> 00:10:50,902
+Well, it's scaffolding up some workforce but it's also gonna build the application to see if it still builds.
+
+182
+00:10:50,902 --> 00:10:54,422
+And if it's running a scarf-folder.
+
+183
+00:10:54,422 --> 00:10:58,262
+And scar folder is something that you can go on a nd read about and write your own if you feel like it.
+
+184
+00:10:58,262 --> 00:11:00,374
+So here we gotta create.
+
+185
+00:11:00,374 --> 00:11:03,574
+So let's see what we have in there.
+
+186
+00:11:03,574 --> 00:11:04,662
+Let's see it gives us a page.
+
+187
+00:11:04,662 --> 00:11:16,438
+It gave us a default model, a title, looks like a header, and then some validation scripts, and then presumably we can just start typing our pages or whatever.
+
+188
+00:11:16,438 --> 00:11:18,230
+Let's look at the backend.
+
+189
+00:11:18,230 --> 00:11:23,478
+It made a create model that has a get.
+
+190
+00:11:23,478 --> 00:11:26,422
+So this is the function that happens when we get stuff.
+
+191
+00:11:26,422 --> 00:11:27,254
+Okay.
+
+192
+00:11:27,254 --> 00:11:30,198
+All right, so we're gonna need to make form code.
+
+193
+00:11:30,262 --> 00:11:35,510
+All right, so form that would have actually just one entry?
+
+194
+00:11:35,510 --> 00:11:41,974
+Yeah, so we'll say enter your name, figure, all right.
+
+195
+00:11:41,974 --> 00:11:44,079
+And who knows if this will work, again, we're gonna learn.
+
+196
+00:11:44,079 --> 00:11:48,431
+Now, this is interesting, noticed that when I typed form Why is it in purple?
+
+197
+00:11:48,431 --> 00:12:02,433
+Turns purple, so that is a tag helper, this is some related elements that are gonna be on the server for processing so the server knows about purple elements, and ill do some processing of them.
+
+198
+00:12:02,433 --> 00:12:12,545
+Typically when you're in HTML, you have like a P tag or an image tag or div, and that's just strings that get sent off to the client.
+
+199
+00:12:12,929 --> 00:12:22,785
+But when we're generating this stuff on the server side,there might be an opportunity for ASP.NET Core to improve it,to change it, to add stuff.
+
+200
+00:12:22,785 --> 00:12:24,385
+So it knows about form.
+
+201
+00:12:24,385 --> 00:12:27,969
+Form is a magic tag and we can go and type things like this,you see it says asp colon.
+
+202
+00:12:28,033 --> 00:12:33,281
+Yeah, so is that indication that that is a tag helper or some sort of action?
+
+203
+00:12:33,281 --> 00:12:35,521
+Right these things aren't html.
+
+204
+00:12:35,521 --> 00:12:36,289
+No.
+
+205
+00:12:36,289 --> 00:12:37,569
+Those are tag helpers.
+
+206
+00:12:37,569 --> 00:12:43,265
+You'll never see asp hyphen something being sent all the way out to the browser.
+
+207
+00:12:43,265 --> 00:12:44,545
+These are not HTML.
+
+208
+00:12:44,545 --> 00:12:45,953
+They're hints to the server.
+
+209
+00:12:45,953 --> 00:12:52,225
+So if when we run this application, and we go into the F12 tools, we will not see- You shouldn't see those.
+
+210
+00:12:52,225 --> 00:12:53,185
+Okay. Exactly.
+
+211
+00:12:53,185 --> 00:12:58,689
+So we're gonna say form, this is gonna be basic method= a,yep see- Okay.
+
+212
+00:12:58,689 --> 00:13:02,017
+Get, post, put, delete.
+
+213
+00:13:02,017 --> 00:13:03,489
+We'll say post So we're gonna go and post.
+
+214
+00:13:03,489 --> 00:13:05,025
+Here's the end of our form.
+
+215
+00:13:05,025 --> 00:13:07,201
+Say div, name, and then we'll need a text box.
+
+216
+00:13:07,201 --> 00:13:09,313
+Yep so some sort of input tag.
+
+217
+00:13:09,313 --> 00:13:10,273
+Yep input.
+
+218
+00:13:10,273 --> 00:13:11,617
+Now, this is interesting.
+
+219
+00:13:11,617 --> 00:13:17,441
+We could do an input tag the way we usually do or we could say ASP.NET4.
+
+220
+00:13:17,441 --> 00:13:18,401
+Okay.
+
+221
+00:13:18,401 --> 00:13:22,817
+And we're gonna say Customer.Name.
+
+222
+00:13:22,817 --> 00:13:23,585
+Okay.
+
+223
+00:13:23,585 --> 00:13:25,313
+See how it's all purple?
+
+224
+00:13:25,313 --> 00:13:30,625
+That ASP 4 is gonna look at that model, okay?
+
+225
+00:13:30,625 --> 00:13:35,425
+Now, it's saying here, I don't know what a Customer is.
+
+226
+00:13:35,489 --> 00:13:37,441
+What's going on with that?
+
+227
+00:13:37,441 --> 00:13:38,465
+It's never heard of Customer before.
+
+228
+00:13:38,875 --> 00:13:40,923
+We'll come back and fix that in a second.
+
+229
+00:13:40,923 --> 00:13:44,875
+Then we'll have an input for submitting that form, okay?
+
