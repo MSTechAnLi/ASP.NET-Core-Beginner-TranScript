@@ -914,3 +914,695 @@ We'll come back and fix that in a second.
 00:13:40,923 --> 00:13:44,875
 Then we'll have an input for submitting that form, okay?
 
+230
+00:13:45,087 --> 00:13:48,735
+But we have a problem here,where it doesn't know what Customer is.
+
+231
+00:13:48,735 --> 00:13:53,875
+What is the model for this page?Right, it's the
+
+232
+00:13:53,875 --> 00:13:54,687
+The Create
+
+233
+00:13:54,687 --> 00:13:57,631
+CreateModel, so let's go look at that.
+
+234
+00:13:57,631 --> 00:13:59,871
+Peek into Definition, okay.
+
+235
+00:13:59,871 --> 00:14:01,343
+I wanna point out how I'm moving around.
+
+236
+00:14:01,343 --> 00:14:04,543
+I'm right-clicking and saying Go To Definition is also a hotkey for that.
+
+237
+00:14:04,543 --> 00:14:11,839
+So this is an important reminder, just as a programmer,you don't wanna necessarily find yourself going over and looking around all the files all the time.
+
+238
+00:14:11,839 --> 00:14:14,719
+You can navigate- To it, right?
+
+239
+00:14:14,719 --> 00:14:18,559
+To it directly, you can navigate logically, as they say.
+
+240
+00:14:18,559 --> 00:14:21,183
+-Okay, all right. -Did you?
+
+241
+00:14:21,183 --> 00:14:23,871
+Cut something out from- Yeah.
+
+242
+00:14:23,871 --> 00:14:25,855
+-Okay -Great.
+
+243
+00:14:25,855 --> 00:14:28,275
+-There we go -I cut out CreateModel, thank you.
+
+244
+00:14:28,550 --> 00:14:36,725
+Right so, our create model is gonna need to know about customers, because that's gonna show up on the page.
+
+245
+00:14:36,982 --> 00:14:39,675
+So public Customer, that's a type.
+
+246
+00:14:40,302 --> 00:14:42,990
+-That's a name -You can tell by the color.
+
+247
+00:14:42,990 --> 00:14:44,334
+It's a little confusing.
+
+248
+00:14:44,334 --> 00:14:49,390
+But, the property is called Customer, and the type is called Customer.
+
+249
+00:14:49,390 --> 00:14:59,822
+And, this is going to need that database context,so we are going to make a little Database here.
+
+250
+00:14:59,822 --> 00:15:03,982
+And this is just being the voice of the person doing this at home.
+
+251
+00:15:03,982 --> 00:15:07,950
+Why have you made it private read only?
+
+252
+00:15:07,950 --> 00:15:09,934
+So that's a great point.
+
+253
+00:15:09,998 --> 00:15:16,782
+I don't want people who get a hold of create model to be poking around and talking directly to the database.
+
+254
+00:15:16,782 --> 00:15:21,774
+So, it's gonna be private, just for me where me is CreateModel.
+
+255
+00:15:21,774 --> 00:15:27,790
+And it's read only which means I'm gonna assign it once, and I don't want anyone to touch it after that.
+
+256
+00:15:27,790 --> 00:15:28,878
+Yeah. Okay.
+
+257
+00:15:28,878 --> 00:15:32,590
+So I'm making it just for me and making sure I can't mess with it afterwards.
+
+258
+00:15:32,590 --> 00:15:34,894
+Excellent, excellent question.
+
+259
+00:15:34,894 --> 00:15:41,934
+So then, we'll make our- CreateModel Our constructor.
+
+260
+00:15:43,662 --> 00:15:46,350
+And remember how dependency injection works.
+
+261
+00:15:46,350 --> 00:15:49,422
+We don't make an AppDbContext we ask for one.
+
+262
+00:15:49,742 --> 00:15:55,054
+We ask for it by putting it in our constructor.
+
+263
+00:15:55,118 --> 00:15:57,678
+We can have as many of these as we want.
+
+264
+00:15:57,678 --> 00:15:58,638
+We can have food and bar, etc, etc, etc.
+
+265
+00:15:58,638 --> 00:16:00,366
+This is the one we want for now.
+
+266
+00:16:00,366 --> 00:16:06,766
+And then I'm just going to say hey, this one equals this one.
+
+267
+00:16:06,766 --> 00:16:10,414
+I'm going to squirrel it away and hang onto it, so now I've got one.
+
+268
+00:16:10,414 --> 00:16:16,878
+So that says there's this database, and I want to know about it.
+
+269
+00:16:16,878 --> 00:16:20,206
+This says there's a customer.
+
+270
+00:16:20,206 --> 00:16:29,934
+If I go back over to create, I can hover over that and see it's getting me probably IntelliSense too.
+
+271
+00:16:29,934 --> 00:16:31,662
+Yep, see. Now, it is.
+
+272
+00:16:31,662 --> 00:16:36,654
+So, it knows about customer because it's hanging off of the model.
+
+273
+00:16:37,870 --> 00:16:40,110
+So as we're running the application.
+
+274
+00:16:40,110 --> 00:16:45,486
+Technically, I should be able to go to this page,hover over customer name and see what names we've put in there?
+
+275
+00:16:45,486 --> 00:16:48,942
+You should be able to click on that,you should be able to have IntelliSense.
+
+276
+00:16:48,942 --> 00:16:54,958
+If you did a break point,you should be able to stop in here at some point and look at that, and we'll do that in a little bit.
+
+277
+00:16:54,958 --> 00:17:01,422
+What we need, though, is we need to bind this form.
+
+278
+00:17:01,422 --> 00:17:04,686
+We're saying this input for customer name.
+
+279
+00:17:04,686 --> 00:17:10,830
+When I hit submit, we need to catch it on the server side.
+
+280
+00:17:10,830 --> 00:17:13,070
+I call it surviving the journey.
+
+281
+00:17:13,070 --> 00:17:14,414
+Okay. Yeah, it's a good point.
+
+282
+00:17:14,414 --> 00:17:15,310
+It does need to survive the journey.
+
+283
+00:17:15,310 --> 00:17:17,038
+So I'm gonna get rid of this OnGet here.
+
+284
+00:17:17,038 --> 00:17:18,574
+So we're gonna do a post.
+
+285
+00:17:19,470 --> 00:17:21,902
+You can say OnPost.
+
+286
+00:17:22,414 --> 00:17:26,126
+You could do it like this but the right way to do it is like this.
+
+287
+00:17:26,126 --> 00:17:36,238
+-Async? -Async, which means don't block, and we're gonna have a task that returns some action.
+
+288
+00:17:36,238 --> 00:17:41,806
+We might be doing something after this and I'm gonna say on OnPostAsync.
+
+289
+00:17:48,750 --> 00:17:50,885
+And it's giving me a little complaint here saying!
+
+290
+00:17:51,293 --> 00:17:53,789
+You didn't do a wait and you haven't returned a value.
+
+291
+00:17:53,789 --> 00:17:59,805
+Code paths, not all code paths return a value.
+
+292
+00:17:59,805 --> 00:18:01,405
+That's cuz we haven't done anything yet.
+
+293
+00:18:02,365 --> 00:18:08,125
+So, when someone posts back, they hit submit,and it posts back to here.
+
+294
+00:18:08,573 --> 00:18:11,709
+We would really like customer to have stuff in it.
+
+295
+00:18:12,861 --> 00:18:14,845
+-Yes -And so there's a couple things here.
+
+296
+00:18:14,845 --> 00:18:18,975
+And then we need to make sure that the state of that model is valid, that someone hasn't messed with it.
+
+297
+00:18:19,450 --> 00:18:30,280
+So I'm gonna say if ModelState.IsValid,or if it's not, pardon me- I was about to say something.
+
+298
+00:18:30,280 --> 00:18:31,560
+No I appreciate that.
+
+299
+00:18:31,560 --> 00:18:36,168
+Then return the page back to itself to say now I'm done.
+
+300
+00:18:36,168 --> 00:18:43,016
+If I hover over page you can see it returns a page result,which is a kind of action.
+
+301
+00:18:43,016 --> 00:18:44,808
+Returning a page is an action.
+
+302
+00:18:44,808 --> 00:18:50,696
+If we get this far, now I'm gonna say db,remember when I say db?
+
+303
+00:18:50,696 --> 00:18:52,040
+-Yes -What is db?
+
+304
+00:18:52,040 --> 00:18:58,440
+It is a applicationDB context.
+
+305
+00:18:58,504 --> 00:19:01,832
+In there is customers, plural.
+
+306
+00:19:01,832 --> 00:19:04,072
+-And we want to add one. -.Add().
+
+307
+00:19:04,136 --> 00:19:08,040
+We'll pass in the customer that we just got handed.
+
+308
+00:19:08,104 --> 00:19:13,160
+And then we'll say, hang out for a minute, await.
+
+309
+00:19:13,160 --> 00:19:17,704
+And we'll say, db.SaveChanges.
+
+310
+00:19:17,704 --> 00:19:20,328
+And async means don't wait.
+
+311
+00:19:20,328 --> 00:19:26,152
+Then we will go and return,not a page, because we're on the create page.
+
+312
+00:19:26,152 --> 00:19:28,264
+We really wanna return to the list.
+
+313
+00:19:28,264 --> 00:19:29,736
+Yeah, so you're doing a redirect?
+
+314
+00:19:29,736 --> 00:19:31,976
+We're gonna do a redirect, exactly.
+
+315
+00:19:31,976 --> 00:19:33,959
+And we haven't got a place to go yet.
+
+316
+00:19:33,959 --> 00:19:36,264
+But we'll say redirect to page.
+
+317
+00:19:36,264 --> 00:19:41,675
+Okay. And you can see that there's options like redirect to page permanent, which would be a 301.
+
+318
+00:19:41,675 --> 00:19:43,437
+Http 301.
+
+319
+00:19:43,437 --> 00:19:47,925
+Okay. We're gonna do a 302 because this is just a standard kind of redirect.
+
+320
+00:19:47,925 --> 00:19:49,112
+Let's just say /Index.
+
+321
+00:19:49,112 --> 00:19:52,988
+And I think we should probably just say /,but we'll see what happens.
+
+322
+00:19:52,988 --> 00:19:56,999
+If people wanted to learn more about 301s,302s, do you have any recommendations?
+
+323
+00:19:56,999 --> 00:19:58,983
+-The Internet. -Correct
+
+324
+00:19:58,983 --> 00:20:01,479
+I would search around for that kind of stuff.
+
+325
+00:20:01,479 --> 00:20:03,143
+Ultimately look at the docs.
+
+326
+00:20:03,143 --> 00:20:12,679
+Yeah. But redirect to page is a standard thing and again if you hover over it, it says right there Status302Found.
+
+327
+00:20:12,679 --> 00:20:18,759
+But if I said RedirectToPagePermanent.
+
+328
+00:20:18,759 --> 00:20:19,975
+We would change it?
+
+329
+00:20:19,975 --> 00:20:25,927
+Change it to a 301, which would tell the search engine,don't ever come back here and ask me about this again.
+
+330
+00:20:25,927 --> 00:20:28,423
+Don't ever talk to me again go here.
+
+331
+00:20:28,423 --> 00:20:31,879
+All right. That's what that means.
+
+332
+00:20:31,879 --> 00:20:35,137
+I'm paranoid so anyway,you never wanna do that when you're doing database work.
+
+333
+00:20:35,137 --> 00:20:37,249
+You always wanna be temporary, okay?
+
+334
+00:20:37,249 --> 00:20:41,729
+Okay. All right, and if you really,really, really wanna upset your coworkers.
+
+335
+00:20:41,729 --> 00:20:47,299
+You could move your curly braces.
+
+336
+00:20:47,299 --> 00:20:48,000
+Yeah.
+
+337
+00:20:48,475 --> 00:20:50,025
+And do stuff like this.
+
+338
+00:20:50,627 --> 00:20:57,027
+And if you really wanna be possibly buggy,you could even do stuff like this.
+
+339
+00:21:00,291 --> 00:21:01,763
+Where that's all one line.
+
+340
+00:21:01,763 --> 00:21:02,403
+Yeah?
+
+341
+00:21:02,403 --> 00:21:05,411
+But you might have other stuff that you wanna do.
+
+342
+00:21:05,411 --> 00:21:08,867
+Okay. Some people that really bothers them, some people it doesn't.
+
+343
+00:21:08,867 --> 00:21:10,979
+For me- Does it bother you?
+
+344
+00:21:10,979 --> 00:21:13,731
+I kinda like it on one line if it's not that big of a deal.
+
+345
+00:21:14,115 --> 00:21:15,587
+You know what I mean?
+
+346
+00:21:15,587 --> 00:21:20,003
+But as soon as you have an extra line then you're gonna go and undo it and take it apart.
+
+347
+00:21:20,003 --> 00:21:21,027
+It's stylistic.
+
+348
+00:21:21,027 --> 00:21:24,227
+So it's not really a best practice for someone to know of right now.
+
+349
+00:21:24,227 --> 00:21:28,579
+No, for right now, I just think it's nice to have everything fit on one line like that.
+
+350
+00:21:28,579 --> 00:21:32,227
+But using the curly mustaches.
+
+351
+00:21:33,250 --> 00:21:37,850
+Is curly braces,they look like a mustache if you turn your head.
+
+352
+00:21:38,150 --> 00:21:38,933
+That's a best practice.
+
+353
+00:21:39,475 --> 00:21:43,059
+It still gets us, that when people say curly braces, and I don't know what they're talking about
+
+354
+00:21:43,059 --> 00:21:43,750
+-What do you call them? -cuz I use brackets
+
+355
+00:21:43,750 --> 00:21:44,902
+You call them brackets?
+
+356
+00:21:44,902 --> 00:21:47,278
+So you have brackets, curly brackets, square brackets, so.
+
+357
+00:21:47,278 --> 00:21:49,600
+-Scandalous -Okay
+
+358
+00:21:50,094 --> 00:21:52,206
+-You're fancy -That is pretty intense.
+
+359
+00:21:52,206 --> 00:21:56,814
+-Yeah -Okay, now I'm going to put a break point here.
+
+360
+00:21:56,814 --> 00:21:59,118
+-Okay. And we'll see if this works -All right.
+
+361
+00:21:59,118 --> 00:22:01,422
+It might very well not work.
+
+362
+00:22:01,422 --> 00:22:04,366
+Fingers crossed and toes.
+
+363
+00:22:04,366 --> 00:22:05,650
+No, it's probably not gonna work.
+
+364
+00:22:05,650 --> 00:22:07,634
+Lower your expectations now.
+
+365
+00:22:09,593 --> 00:22:11,257
+-All right -Okay.
+
+366
+00:22:11,257 --> 00:22:14,457
+This is in create, right?
+
+367
+00:22:14,457 --> 00:22:16,633
+Yep. So I have to hit /create.
+
+368
+00:22:23,043 --> 00:22:23,875
+-Yeah -Okay
+
+369
+00:22:30,787 --> 00:22:33,603
+-Okay -Did we bind it?
+
+370
+00:22:33,603 --> 00:22:35,715
+-Yeah see what's happening? -Nothing.
+
+371
+00:22:35,715 --> 00:22:38,339
+No. And if we go and do a view source.
+
+372
+00:22:38,339 --> 00:22:41,795
+-And you go to? -Okay.
+
+373
+00:22:41,859 --> 00:22:44,419
+I just want to show the people the form first.
+
+374
+00:22:48,195 --> 00:22:51,779
+Some things showed up on the input that's kinda cool.
+
+375
+00:22:55,107 --> 00:22:57,219
+-That's kinda nice -That is
+
+376
+00:22:57,219 --> 00:22:58,755
+We didn't type that, right, remember?
+
+377
+00:22:58,755 --> 00:23:03,363
+So we're getting stuff on the input that we did not expect,which is cool.
+
+378
+00:23:03,427 --> 00:23:05,667
+I bet there's some request verification.
+
+379
+00:23:05,667 --> 00:23:08,611
+Yeah, they put a request verification token to keep people from tampering with our stuff.
+
+380
+00:23:08,611 --> 00:23:12,963
+There is your name=Customer.Name.
+
+381
+00:23:12,963 --> 00:23:15,587
+And it generated an id for us as well.
+
+382
+00:23:16,355 --> 00:23:18,083
+But you can see that nothing's happening.
+
+383
+00:23:20,195 --> 00:23:28,140
+On Customer, actually I wanna put a break point a little higher up, and then I'll explain to you what's going on.
+
+384
+00:23:28,716 --> 00:23:31,020
+-Okay -Let's see if we can even get to the post.
+
+385
+00:23:33,836 --> 00:23:40,556
+Okay, do a debug session again /create.
+
+386
+00:23:47,850 --> 00:23:49,414
+So I would've expected.
+
+387
+00:23:49,798 --> 00:23:51,150
+To hit that break point.
+
+388
+00:23:51,150 --> 00:23:54,606
+To hit that break point, so that's concerning.
+
+389
+00:23:57,840 --> 00:24:13,072
+But I know that I need to say BindProperty on the customer which is to tell it I want this customer object filled out with the form information, right?
+
+390
+00:24:13,072 --> 00:24:15,376
+-Yeah. -And right now I don't have that.
+
+391
+00:24:17,040 --> 00:24:22,352
+So let's take a look, and try this again.
+
+392
+00:24:22,352 --> 00:24:31,312
+The customer is gonna get created and filled up with information bound to those form fields.
+
+393
+00:24:31,312 --> 00:24:44,560
+If that doesn't work then I've forgotten something and we will go and have a little debugging which will be fun as well.
+
+394
+00:24:46,864 --> 00:24:51,728
+They say the definition of insanity is doing the same thing over and over and expecting a different result.
+
+395
+00:24:51,728 --> 00:24:54,352
+So let's take a look.
+
+396
+00:24:54,352 --> 00:24:56,272
+It's probably something obvious.
+
+397
+00:24:59,408 --> 00:25:01,008
+So we've got a form, we've got our input, we've got our method.
+
+398
+00:25:04,272 --> 00:25:06,704
+I said post, does it matter if it's all caps?
+
+399
+00:25:07,856 --> 00:25:09,328
+That would be odd if it did.
+
+400
+00:25:14,384 --> 00:25:15,792
+So it doesn't matter.
+
+401
+00:25:17,392 --> 00:25:23,920
+The tag helper exists already in view imports,the form is there.
+
+402
+00:25:23,920 --> 00:25:28,272
+The only thing l didn't add is the validation summary, okay?
+
