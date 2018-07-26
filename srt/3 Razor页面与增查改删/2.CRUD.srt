@@ -1739,1662 +1739,1594 @@ I hit Ctrl+F5 to go faster.
 Okay, so it redirected me to index but of course I haven't done anything on index that's interesting yet.
 
 436
-00:30:33,566 --> 00:30:34,398
-Okay.
-
-437
-00:30:34,398 --> 00:30:35,294
+00:30:33,850 --> 00:30:35,294
 That will be the next part, right.
 
-438
-00:30:35,294 --> 00:30:36,894
+437
+00:30:35,294 --> 00:30:38,700
 So you could also probably send a message saying
 
-439
-00:30:36,894 --> 00:30:40,670
+438
+00:30:38,700 --> 00:30:40,670
 I can say customer updated,or whatever.
 
-440
+439
 00:30:40,734 --> 00:30:43,486
 But let's rip out this whole section here.
 
-441
+440
 00:30:43,486 --> 00:30:46,046
 -Okay, very nice -And put a list of contents.
 
-442
+441
 00:30:46,046 --> 00:30:47,326
 -Okay -Is that cool?
 
-443
-00:30:47,326 --> 00:30:50,782
+442
+00:30:49,075 --> 00:30:50,782
 So where's our index?
 
-444
-00:30:50,782 --> 00:30:54,558
+443
+00:30:51,975 --> 00:30:54,558
 So this is all this carousel and all this stuff.
 
-445
+444
 00:30:54,558 --> 00:30:55,902
 All the fancy bootstrap.
 
-446
+445
 00:30:55,966 --> 00:30:58,910
 I'm gonna actually collect this.
 
-447
+446
 00:30:58,910 --> 00:31:00,446
 And then you comment it out?
 
-448
+447
 00:31:00,446 --> 00:31:04,030
 Actually, no, I'm just gonna be awesome and just like toss it.
 
-449
+448
 00:31:04,094 --> 00:31:12,800
 Wow. Yeah, but this is a way,if you wanna go hunting for the other side of the div,you can just fold these up, see that this matches this.
 
-450
+449
 00:31:13,769 --> 00:31:17,545
 Fold it up, select over it and toss it.
 
-451
+450
 00:31:21,001 --> 00:31:22,537
 Cool, all right.
 
-452
+451
 00:31:22,537 --> 00:31:24,905
 So let's make our form.
 
-453
+452
 00:31:28,361 --> 00:31:31,433
 And this will be on the index page, right?
 
-454
+453
 00:31:31,433 --> 00:31:37,425
-Yep. We'll have method="post", and this will be a table.
+We'll have method="post", and this will be a table.
 
-455
+454
 00:31:37,900 --> 00:31:39,564
 All right.
 
-456
+455
 00:31:40,450 --> 00:31:43,721
 It's okay to use tables, if it is a table of data.
 
-457
+456
 00:31:43,785 --> 00:31:47,650
 So many people complain about tables being a bad idea.
 
+457
+00:31:48,000 --> 00:31:51,825
+I think that's kind of funny,It's a table,It's okay to have a table.
+
 458
-00:31:48,000 --> 00:31:49,472
-I think that's kind of funny.
-
-459
-00:31:49,472 --> 00:31:51,328
-[LAUGH] It's a table.
-
-460
-00:31:51,328 --> 00:31:52,608
-It's okay to have a table.
-
-461
-00:31:52,608 --> 00:31:56,192
+00:31:52,125 --> 00:31:56,192
 So we'll have a head for our table, and we'll have our ID row.
 
-462
+459
 00:31:57,920 --> 00:32:08,096
 -Yep -Oops, and we'll have ID.
 
-463
-00:32:09,632 --> 00:32:16,352
+460
+00:32:09,632 --> 00:32:14,675
 Then we'll have Name, we don't really need to show the database ID but for now let's show it.
 
-464
-00:32:16,992 --> 00:32:17,952
-All right.
+461
+00:32:15,475 --> 00:32:19,950
+All right,So do you have to create a tbody, okay yeah,you're way ahead of me.
 
-465
-00:32:18,400 --> 00:32:20,896
-Is that cool? So do you have to create a tbody, okay yeah,you're way ahead of me.
-
-466
-00:32:20,896 --> 00:32:22,048
+462
+00:32:19,950 --> 00:32:22,048
 No, it's okay. Table body
 
-467
+463
 00:32:22,048 --> 00:32:26,080
 But now I need a row for each.
 
-468
-00:32:27,040 --> 00:32:34,528
+464
+00:32:27,040 --> 00:32:33,900
 So would you put it in the row, or would you,so I am presumed that you need to go for every contact within.
 
-469
-00:32:34,720 --> 00:32:36,000
+465
+00:32:33,900 --> 00:32:34,555
 Exactly.
 
-470
-00:32:36,000 --> 00:32:40,352
+466
+00:32:34,950 --> 00:32:40,352
 So I'm gonna have like a FOR SOMETHING HERE.
 
-471
-00:32:40,416 --> 00:32:54,240
+467
+00:32:40,416 --> 00:32:53,675
 Then a couple of cells, table cells, and then maybe a, I don't know,like a link to edit and a delete button.
 
-472
-00:32:54,432 --> 00:32:55,264
+468
+00:32:53,675 --> 00:32:54,507
 Yeah.
 
-473
-00:32:55,328 --> 00:32:57,952
-Okay, you see how I'm kind of sketching it out.
+469
+00:32:54,800 --> 00:32:57,952
+-Okay, you see how I'm kind of sketching it out -You're sketching it out
 
-474
-00:32:57,952 --> 00:32:59,680
-You're sketching it out.
+470
+00:32:57,952 --> 00:32:59,448
+-Okay. Wild -what's it called?
 
-475
-00:32:59,680 --> 00:33:00,768
-Okay. Wild, what's it called?
+471
+00:32:59,448 --> 00:33:02,925
+-Pseudocode or something? -Pseudocode,It's a little pseudocode here
 
-476
-00:33:00,768 --> 00:33:02,752
-Pseudocode or something? Pseudocode.
-
-477
-00:33:02,752 --> 00:33:05,696
-Yeah. It's a little pseudocode here.
-
-478
-00:33:05,696 --> 00:33:07,040
+472
+00:33:02,925 --> 00:33:04,050
 So now I wanna say at.
 
-479
-00:33:07,040 --> 00:33:08,896
+473
+00:33:04,525 --> 00:33:08,100
 For each yeah. And this is a snippet-
 
-480
-00:33:08,896 --> 00:33:20,096
+474
+00:33:08,100 --> 00:33:20,096
 -Yeah -Tab, Tab, and then I'm gonna say for each,contact, oops, contact in, in what?
 
-481
+475
 00:33:20,096 --> 00:33:21,056
 In Model.
 
-482
-00:33:21,056 --> 00:33:23,232
+476
+00:33:21,650 --> 00:33:23,232
 Now where is our customers?
 
-483
+477
 00:33:24,768 --> 00:33:31,104
 Okay, so remember before when we were doing our create model?
 
-484
+478
 00:33:31,104 --> 00:33:34,752
 We needed to have the customers come from somewhere.
 
-485
+479
 00:33:34,752 --> 00:33:36,352
 Yeah. Now we're in a totally different page.
 
-486
-00:33:36,352 --> 00:33:38,464
+480
+00:33:36,725 --> 00:33:38,100
 Yeah, so we have to have the customers.
 
-487
-00:33:38,528 --> 00:33:39,680
+481
+00:33:38,100 --> 00:33:39,125
 We have to have the customers, right?
 
-488
-00:33:39,680 --> 00:33:42,112
+482
+00:33:39,125 --> 00:33:41,075
 Yeah. So I'm gonna just take a break here.
 
-489
+483
 00:33:42,112 --> 00:33:49,472
 And I'm gonna jump over to the index model cuz we can't really make our table till we have a little bit more, okay?
 
-490
+484
 00:33:49,536 --> 00:33:59,520
 And I'm gonna break a couple of cardinal rules that I'm gonna copy paste a little code,because I'm gonna need this similar app database.
 
-491
+485
 00:33:59,520 --> 00:34:02,656
 This app db context which is gonna save myself a moment of time here.
 
-492
+486
 00:34:04,064 --> 00:34:08,736
 So we've got our app context, right?
 
-493
+487
 00:34:08,736 --> 00:34:10,976
 We're gonna have our index page model.
 
-494
+488
 00:34:11,360 --> 00:34:15,904
 Now before, when we create a customer,we create one customer.
 
-495
+489
 00:34:16,288 --> 00:34:24,416
 But here our model is different cuz we're gonna have a list of customers on this page, right?
 
-496
+490
 00:34:24,416 --> 00:34:25,504
 So our model is different.
 
-497
+491
 00:34:25,952 --> 00:34:31,136
 And we'll do a get and then a private set so that only we can set it.
 
-498
+492
 00:34:31,712 --> 00:34:40,736
-All right, and then, in the OnGet, We'll say OnGet.
+-All right, and then, in the OnGet, We'll say OnGet -One line below, OnGetAsync, okay
 
-499
-00:34:41,312 --> 00:34:42,848
-One line below, OnGetAsync, okay.
-
-500
-00:34:42,912 --> 00:34:48,480
+493
+00:34:42,450 --> 00:34:48,480
 -OnGetAsync, right? -We're gonna load up customers.
 
-501
+494
 00:34:48,480 --> 00:34:49,568
 Where do we get them from?
 
-502
-00:34:49,696 --> 00:34:51,168
+495
+00:34:50,075 --> 00:34:51,168
 The database and this is right there.
 
-503
-00:34:51,296 --> 00:34:53,984
+496
+00:34:52,650 --> 00:34:54,525
 We're getting them out of customers.
 
-504
-00:34:53,984 --> 00:35:01,400
+497
+00:34:54,525 --> 00:35:01,400
 And then there's this other little bit of thing that you can add on to make things a little bit faster.
 
-505
+498
 00:35:01,400 --> 00:35:05,875
 You can say AsNoTracking.
 
-506
+499
 00:35:08,808 --> 00:35:11,496
 And I'll show you what that means in a second.
 
-507
+500
 00:35:11,496 --> 00:35:16,609
 And we're gonna turn these customers into a list of customers.
 
-508
+501
 00:35:16,609 --> 00:35:19,808
 So we're chaining things together,we're saying give me these customers.
 
-509
+502
 00:35:20,192 --> 00:35:24,032
 And we're not gonna keep track of them changing.
 
-510
+503
 00:35:24,032 --> 00:35:28,960
 You see it says disabling change tracking is useful for read-only scenarios.
 
-511
-00:35:29,024 --> 00:35:37,152
+504
+00:35:29,975 --> 00:35:37,400
 Change tracking is watching like keeping a track of all the different things you could change so that you know how to make a database update.
 
-512
-00:35:37,152 --> 00:35:51,040
+505
+00:35:37,925 --> 00:35:53,575
 So if I had a list of customers, and I wanted to watch all of them and change their names, that would give the database system entity framework that we're gonna learn about later all the information it needs about how to only change the bits that change, how to only change the database.
 
-513
-00:35:51,040 --> 00:35:58,976
+506
+00:35:53,575 --> 00:35:58,976
 But we're just getting a list, so we're gonna say, don't track these, just give me a list.
 
-514
+507
 00:35:58,976 --> 00:36:03,712
 So customers, no tracking, give me a list, so that's cool.
 
-515
+508
 00:36:04,928 --> 00:36:07,424
 And I think we'll leave that like that for now.
 
-516
+509
 00:36:07,744 --> 00:36:09,984
 We'll go back over to index.
 
-517
+510
 00:36:11,968 --> 00:36:17,591
 And now that model, the page behind us has customers.
 
-518
+511
 00:36:17,591 --> 00:36:20,840
 Look, customers shows up, see, which is nice.
 
-519
+512
 00:36:21,400 --> 00:36:24,950
 So then I think I can put my tr in here.
 
-520
+513
 00:36:26,280 --> 00:36:30,120
 And I'm hoping, remember, I said contact, I should say customer.
 
-521
+514
 00:36:31,848 --> 00:36:43,944
 Customer singular, foreach customer,that means that the customer variable is now available to me customer.Id.
 
-522
+515
 00:36:46,025 --> 00:36:50,152
 -Everything's connected -Yep, cool, let's try that.
 
-523
-00:36:50,152 --> 00:36:57,640
+516
+00:36:50,152 --> 00:36:53,550
 Okay. And then we'll do the rest,cuz I don't know if this is gonna work yet.
 
-524
-00:36:57,640 --> 00:36:59,496
+517
+00:36:55,550 --> 00:36:59,496
 Now I'm using an in-memory database, so every time I run this, it's gonna go away.
 
-525
+518
 00:36:59,496 --> 00:37:01,352
 So it's just a throw away database.
 
-526
+519
 00:37:01,352 --> 00:37:10,440
 -I need to do better -I need to maybe make tests later, and I survived the journey.
 
-527
-00:37:10,504 --> 00:37:16,456
+520
+00:37:10,504 --> 00:37:16,000
 -You did -Let's see, but as soon as I shut you down, it's gonna be gone.
 
-528
-00:37:16,456 --> 00:37:19,784
+521
+00:37:16,000 --> 00:37:19,784
 So if you refresh the page- You're here,you're still there, right?
 
-529
+522
 00:37:19,784 --> 00:37:22,920
 You're there until I close it, until I close this browser.
 
-530
-00:37:22,920 --> 00:37:27,464
+523
+00:37:23,375 --> 00:37:27,464
 Or not if I close the browser, pardon me,until I stop the web server.
 
-531
+524
 00:37:27,464 --> 00:37:33,032
 -So, okay -Yeah, thanks, cool, so now we've got create.
 
-532
-00:37:33,032 --> 00:37:36,680
+525
+00:37:33,825 --> 00:37:36,680
 We should probably put a button down there at the bottom somewhere.
 
-533
+526
 00:37:36,680 --> 00:37:49,224
 We've got some validation, we've got our database,looking at our friends And this is doing a thing called Post Redirect Get.
 
-534
-00:37:49,224 --> 00:37:54,792
+527
+00:37:49,875 --> 00:37:54,792
 So I'm here, I hit a post, we do a redirect, and then we do a get, and then we would get this stuff here.
 
-535
-00:37:54,856 --> 00:37:57,800
+528
+00:37:55,400 --> 00:37:57,800
 So this is a PRG, Post Redirect Get.
 
-536
+529
 00:37:57,800 --> 00:38:00,424
 There's lots of articles on the Internet about that.
 
-537
-00:38:00,488 --> 00:38:05,608
+530
+00:38:00,825 --> 00:38:05,608
 Now let's make a link to theoretically go and edit these things.
 
-538
-00:38:05,608 --> 00:38:08,369
+531
+00:38:05,608 --> 00:38:08,050
 -Okay -And then we'll have a button for Delete.
 
-539
-00:38:08,369 --> 00:38:11,139
+532
+00:38:08,050 --> 00:38:10,994
 These things don't exist on the backend yet,but we can- So yeah,so we don't have an edit page yet.
 
-540
-00:38:11,139 --> 00:38:13,089
+533
+00:38:10,994 --> 00:38:13,089
 -We don't -Okay. We can make a link
 
-541
+534
 00:38:13,089 --> 00:38:14,753
 Now I could go and put in a link, href.
 
-542
-00:38:14,753 --> 00:38:16,161
+535
+00:38:14,753 --> 00:38:16,825
 You've done this before a million times.
 
-543
-00:38:16,161 --> 00:38:21,857
+536
+00:38:17,175 --> 00:38:21,857
 And say /edit and then put in strings and stuff.
 
-544
+537
 00:38:21,857 --> 00:38:24,289
 But remember we talked about how great tag helpers are.
 
-545
+538
 00:38:24,289 --> 00:38:34,721
 -Yeah -What if we went and said asp-page and then we could go and say there's an edit page and then it would figure out what the URL would look like.
 
-546
-00:38:34,721 --> 00:38:40,801
+539
+00:38:34,721 --> 00:38:41,450
 -Okay -All right, and then it could even express the route a certain way.
 
-547
-00:38:40,801 --> 00:38:44,385
+540
+00:38:42,875 --> 00:38:44,775
 And we'll talk about routes in a minute.
 
-548
-00:38:46,625 --> 00:38:48,450
+541
+00:38:46,325 --> 00:38:48,450
 I think it's route-id.
 
-549
-00:38:51,297 --> 00:38:53,729
+542
+00:38:51,500 --> 00:38:53,729
 And I think we called it customer.Id.
 
-550
-00:38:53,729 --> 00:39:01,665
+543
+00:38:53,729 --> 00:39:04,000
 So it's gonna take that customer's id so we want to basically make a page that looks like /edit/2, /edit/3, right?
 
-551
-00:39:01,665 --> 00:39:10,369
+544
+00:39:05,175 --> 00:39:11,075
 And that's the route id that's gonna get added onto that.
 
-552
-00:39:10,369 --> 00:39:13,761
+545
+00:39:11,075 --> 00:39:13,761
 Okay, so the next thing you have is a button?
 
-553
-00:39:13,761 --> 00:39:22,465
+546
+00:39:13,761 --> 00:39:22,900
 Yeah, we'll do a button type="submit" and this is going to be handled by the page.
 
-554
-00:39:22,465 --> 00:39:25,409
+547
+00:39:22,900 --> 00:39:25,409
 -Okay -Button's gonna be a little different.
 
-555
+548
 00:39:25,409 --> 00:39:31,937
 The reason that we're doing a button in an href is so you can see the difference between a link,and how links behave, and buttons.
 
-556
+549
 00:39:31,937 --> 00:39:34,177
 A link is gonna navigate somewhere.
 
-557
+550
 00:39:34,177 --> 00:39:36,929
 -Yep -And a button's gonna cause a post, right?
 
-558
-00:39:36,929 --> 00:39:41,665
+551
+00:39:36,929 --> 00:39:42,375
 So this will go and be handled by the delete handler.
 
-559
-00:39:41,665 --> 00:39:48,705
+552
+00:39:42,950 --> 00:39:47,800
 But we also need that route information, we need that id because we're gonna delete a particular customer.
 
-560
-00:39:48,705 --> 00:39:49,985
-So you need the content ID, yep.
+553
+00:39:47,800 --> 00:39:51,009
+-So you need the content ID, yep -Customer ID, exactly
 
-561
-00:39:49,985 --> 00:39:50,945
-Customer ID, exactly.
-
-562
-00:39:51,009 --> 00:39:54,913
+554
+00:39:52,275 --> 00:39:54,913
 All right, and then none of this is hooked up.
 
-563
-00:39:54,977 --> 00:40:00,481
+555
+00:39:54,977 --> 00:40:01,275
 So you mentioned something, voice of the people at home,about the button being a post.
 
-564
-00:40:00,481 --> 00:40:11,041
+556
+00:40:01,700 --> 00:40:11,550
 Yes, it is going to post back and then we're gonna need to handle that behavior differently than the Create page.
 
-565
-00:40:11,041 --> 00:40:13,601
+557
+00:40:11,550 --> 00:40:13,250
 So then I'll just put a link at the bottom there for Create.
 
-566
-00:40:13,601 --> 00:40:14,881
+558
+00:40:13,975 --> 00:40:15,125
 So I'm just gonna hit Refresh.
 
-567
-00:40:14,881 --> 00:40:20,065
+559
+00:40:15,875 --> 00:40:18,725
 So let's see if the Create- Here's our Create.
 
-568
-00:40:21,153 --> 00:40:21,793
-Okay.
-
-569
-00:40:21,857 --> 00:40:22,689
+560
+00:40:21,450 --> 00:40:22,689
 That still works.
 
-570
-00:40:22,689 --> 00:40:25,057
-Okay. I hover over that.
+561
+00:40:22,689 --> 00:40:25,825
+-Okay -I hover over that.
 
-571
-00:40:25,057 --> 00:40:28,449
+562
+00:40:26,125 --> 00:40:28,625
 Nothing's happening because we don't have an edit.
 
-572
-00:40:28,449 --> 00:40:33,505
+563
+00:40:29,600 --> 00:40:33,505
 We never made an edit page, and I hit Delete You should.
 
-573
-00:40:33,505 --> 00:40:37,665
+564
+00:40:33,505 --> 00:40:38,400
 It's gonna crash cuz it's like I don't know what you're doing, right?
 
-574
-00:40:37,857 --> 00:40:43,125
+565
+00:40:38,400 --> 00:40:43,125
 It's just in the middle of something and it's confused cuz that's not what I asked it to do.
 
-575
+566
 00:40:44,125 --> 00:40:46,225
 Okay, so we've got some fixing up to do.
 
-576
+567
 00:40:46,225 --> 00:40:51,460
 -Let's try Delete first -Okay. All right, so let's go over here.
 
-577
+568
 00:40:51,460 --> 00:40:58,450
 -We made an OnGet -Let's go and make an OnDelete.
 
-578
+569
 00:40:58,450 --> 00:41:08,932
 -Okay -Same thing as before with an IActionResult, except now we're gonna say on and this is kinda weird, OnPostDelete.
 
-579
+570
 00:41:09,764 --> 00:41:20,964
 The verb delete is a real HTTP verb,but it's not really often used from a browser's perspective.
 
-580
+571
 00:41:20,964 --> 00:41:25,700
 It's usually done as it's piggybacked on post.
 
-581
+572
 00:41:25,700 --> 00:41:29,732
 We use post to pass in basically all kinds of information.
 
-582
-00:41:29,732 --> 00:41:34,980
+573
+00:41:30,400 --> 00:41:34,980
 Whenever we hit Submit on a form, we're posting that form.
 
-583
+574
 00:41:34,980 --> 00:41:38,884
 We're adding in, I think we said, page-handler delete.
 
-584
+575
 00:41:39,140 --> 00:41:43,492
 So that is gonna be here, OnPostDelete.
 
-585
+576
 00:41:44,388 --> 00:41:53,092
 And now we're going to say,a customer, customer singular.
 
-586
+577
 00:41:53,092 --> 00:41:56,484
 And we'll go and get that customer out of the database.
 
-587
+578
 00:41:57,550 --> 00:42:04,600
 Before we delete it we gotta go and get it to make sure it's there,I say find, by that ID that got passed in.
 
-588
+579
 00:42:05,709 --> 00:42:10,314
 So now we gotta check to see if that customer's null or not, cuz if it's null, then we don't even bother.
 
-589
+580
 00:42:10,634 --> 00:42:12,746
 If it's not null, do something.
 
-590
+581
 00:42:14,410 --> 00:42:17,354
 And then we can go and Redirect.
 
-591
+582
 00:42:17,674 --> 00:42:18,442
 To a page.
 
-592
+583
 00:42:18,634 --> 00:42:20,362
 To a page, exactly, thank you.
 
-593
+584
 00:42:20,490 --> 00:42:24,138
 So here, we're gonna remove it from the database.
 
-594
-00:42:24,138 --> 00:42:32,983
+585
+00:42:24,400 --> 00:42:32,983
 And we are doing it in a memory database but it doesn't matter because if it was a regular database it would remove it for us, as well, that's what's nice about any framework.
 
-595
+586
 00:42:33,495 --> 00:42:34,775
 I'm not a very good typer.
 
-596
+587
 00:42:35,927 --> 00:42:43,543
 So we remove the customer and then we go and we save those changes.
 
-597
+588
 00:42:46,935 --> 00:42:51,159
 -Okay -And then I would expect it would then redirect to the page,the same page.
 
-598
+589
 00:42:51,159 --> 00:42:56,598
 Yes. And I would expect that it would disappear from that list because it's going to go back to the database and build the list again.
 
-599
+590
 00:42:57,150 --> 00:42:59,646
 -Does that make sense? -It does, it sure does.
 
-600
+591
 00:42:59,646 --> 00:43:01,182
 I think that's what it will do.
 
-601
+592
 00:43:03,038 --> 00:43:05,022
 So we cross our fingers and hope that it works.
 
-602
+593
 00:43:07,646 --> 00:43:08,926
 And if it doesn't, we learn.
 
-603
+594
 00:43:10,334 --> 00:43:15,291
 -Okay -That's not a good name.
 
-604
+595
 00:43:20,600 --> 00:43:22,050
 All right, we're deleting you.
 
-605
+596
 00:43:22,050 --> 00:43:24,059
 Okay, I'm fine with that.
 
-606
-00:43:24,400 --> 00:43:26,256
-It does work the way you want.
+597
+00:43:24,400 --> 00:43:27,536
+-It does work the way you want -Yeah, it does work
 
-607
-00:43:26,256 --> 00:43:27,536
-Yeah, it does work
-
-608
+598
 00:43:27,536 --> 00:43:28,808
 -Fire, fire, fire -Deal, deal, deal.
 
-609
+599
 00:43:29,525 --> 00:43:32,700
 -Fancy pants -But now if we edit it.
 
-610
+600
 00:43:32,700 --> 00:43:35,644
 Doesn't work because Edit doesn't exist.
 
-611
+601
 00:43:35,644 --> 00:43:36,796
 And it is not there.
 
-612
-00:43:36,796 --> 00:43:38,268
+602
+00:43:36,796 --> 00:43:38,025
 All right, so let's go and do edit, then.
 
-613
-00:43:38,268 --> 00:43:43,196
+603
+00:43:39,150 --> 00:43:43,196
 So we'll do what you said before, add razor page.
 
-614
-00:43:44,860 --> 00:43:50,172
+604
+00:43:44,860 --> 00:43:49,800
 Call it Edit, now I know you like routing.
 
-615
-00:43:50,172 --> 00:43:52,604
+605
+00:43:49,800 --> 00:43:52,604
 Routing is one of your favorite things about ASP.NET.
 
-616
+606
 00:43:52,604 --> 00:44:00,284
 So this Edit page is gonna be the first time that we've ever had a page that took in information.
 
-617
+607
 00:44:00,284 --> 00:44:03,548
 -Okay -Where does that go to pass in the ID?
 
-618
+608
 00:44:04,124 --> 00:44:10,076
 -So up there at page? -Right, quote quotes.
 
-619
+609
 00:44:10,076 --> 00:44:11,932
 Yeah, and curly brackets.
 
-620
-00:44:11,932 --> 00:44:15,575
+610
+00:44:12,450 --> 00:44:15,575
 -Yeah -ID.
 
-621
+611
 00:44:15,575 --> 00:44:16,919
 I mean int.
 
-622
+612
 00:44:16,919 --> 00:44:19,378
 Okay so the ID is of type int.
 
-623
+613
 00:44:19,378 --> 00:44:21,042
 Yes. That's the type hint.
 
-624
+614
 00:44:21,675 --> 00:44:25,030
 So this is saying edit slash 3.
 
-625
+615
 00:44:25,030 --> 00:44:27,782
 So you'd see it in the browser,that's what it would look like.
 
-626
+616
 00:44:27,782 --> 00:44:28,425
 Okay.
 
-627
+617
 00:44:28,742 --> 00:44:36,125
 We have our Edit model, and then here, at the top, we might have Edit, we could actually add a little bit of text here.
 
-628
+618
 00:44:36,125 --> 00:44:37,341
 We could say Edit Customer.
 
-629
+619
 00:44:38,493 --> 00:44:41,373
-And then we could say- Dash Model?
+And then we could say -Dash Model?
 
-630
+620
 00:44:41,373 --> 00:44:46,045
 @Model.Customer, but again, we're not getting IntelliSense,why not?
 
-631
+621
 00:44:46,045 --> 00:44:49,693
 Because the page model is different for each page.
 
-632
-00:44:49,693 --> 00:44:50,589
-Exactly.
+622
+00:44:49,693 --> 00:44:54,621
+-Exactly -So let's go look at the one for Edit
 
-633
-00:44:50,589 --> 00:44:54,621
-So let's go look at the one for Edit.
-
-634
+623
 00:45:00,125 --> 00:45:01,789
 So I'm gonna.
 
-635
+624
 00:45:01,789 --> 00:45:02,855
 -You're gonna take, yeah -Borrow again
 
-636
+625
 00:45:03,648 --> 00:45:13,440
 Certainly I could make another class, a base class, that would pull that AppDBContext in so I wouldn't have to keep copy-pasting that because at some point the copy-pasting becomes tedious.
 
-637
+626
 00:45:15,875 --> 00:45:18,688
 And you want to keep it dry, right.
 
-638
+627
 00:45:18,688 --> 00:45:20,224
 Don't repeat yourself.
 
-639
-00:45:21,632 --> 00:45:23,488
+628
+00:45:21,632 --> 00:45:24,125
 You probably want that to survive the journey right?
 
-640
-00:45:23,488 --> 00:45:24,448
+629
+00:45:24,425 --> 00:45:24,925
 Yeah.
 
-641
-00:45:24,448 --> 00:45:25,088
+630
+00:45:24,925 --> 00:45:25,404
 Okay.
 
-642
-00:45:25,088 --> 00:45:31,168
+631
+00:45:26,075 --> 00:45:31,168
 So we want to survive the journey,with bindproperty, okay.
 
-643
-00:45:32,512 --> 00:45:38,336
+632
+00:45:32,875 --> 00:45:38,675
 So I go back over to our page, and let's see if that worked.
 
-644
+633
 00:45:39,552 --> 00:45:40,832
 And it did, that's nice.
 
-645
+634
 00:45:40,832 --> 00:45:41,856
 Yes, it did.
 
-646
+635
 00:45:41,856 --> 00:45:51,200
 So now we can say, we are Model.Customer.Id, so we can say, Edit Customer for, or whatever.
 
-647
-00:45:52,925 --> 00:45:59,840
+636
+00:45:52,925 --> 00:46:00,425
 And then form, and then a form post, and there's some lots of cool ways to make your forms easier to write.
 
-648
-00:45:59,840 --> 00:46:06,179
+637
+00:46:00,425 --> 00:46:06,179
 If you find writing forms tedious, there's a really great way to write forms that is called Emmet.
 
-649
+638
 00:46:07,325 --> 00:46:09,123
 -What is Emmet? -You've never heard of Emmet?
 
-650
+639
 00:46:09,450 --> 00:46:14,122
 E-m-m-e-t, it's like the name, the person's name Emmet.
 
-651
+640
 00:46:14,122 --> 00:46:20,027
 Okay. And it's a way of describing what you want like a feel like trt.
 
-652
+641
 00:46:20,027 --> 00:46:30,091
 TR TD times three and then you'd hit tab and then it would go and expand it, it's a way to write tags for HTML really really fast.
 
-653
+642
 00:46:30,091 --> 00:46:37,046
 -Is it built in? -It's built into Visual Studio code but it is not built in to Visual Studio yet.
 
-654
+643
 00:46:37,174 --> 00:46:41,270
 -Okay -Notice how I got this here, soon as I said ASP net four.
 
-655
+644
 00:46:41,270 --> 00:46:44,662
-Yeah, it gave you [CROSSTALK] Input four, rather.
+Yeah, it gave you Input four, rather.
 
-656
+645
 00:46:44,662 --> 00:46:46,774
 It got that, this is really nice, right?
 
-657
+646
 00:46:46,838 --> 00:46:52,342
 So I can go and fill out these forms really quickly and I don't have to worry about that's gonna happen on the server side.
 
-658
+647
 00:46:52,918 --> 00:46:58,294
 Okay, so then we'll say a label, and this is a label also for.
 
-659
+648
 00:46:58,294 --> 00:46:59,574
 The customer.
 
-660
+649
 00:46:59,574 --> 00:47:10,518
 Customer's name which is nice and then we'll say, give you another div, And then within there we'll have an input.
 
-661
-00:47:10,582 --> 00:47:15,638
+650
+00:47:12,700 --> 00:47:15,638
 For Customer.Name.
 
-662
-00:47:18,134 --> 00:47:20,374
+651
+00:47:18,134 --> 00:47:19,650
 And then you can do the validation again, right?
 
-663
-00:47:20,374 --> 00:47:26,646
+652
+00:47:19,650 --> 00:47:21,625
 Yeah I'll do some, but I can do validation two different ways.
 
-664
-00:47:26,646 --> 00:47:27,926
+653
+00:47:21,625 --> 00:47:27,736
 I could do the validation summary or we can do it like this, which is nice.
 
-665
-00:47:27,926 --> 00:47:30,166
+654
+00:47:28,525 --> 00:47:30,166
 And what are the key differences?
 
-666
+655
 00:47:30,166 --> 00:47:32,854
 This one is, you have total control of what it looks like.
 
-667
+656
 00:47:32,854 --> 00:47:34,710
 You can put it anywhere up or down.
 
-668
+657
 00:47:34,710 --> 00:47:37,846
 Okay. And this is just a bulleted list that's a roll up.
 
-669
+658
 00:47:37,846 --> 00:47:39,702
 Okay. Of all of the stuff.
 
-670
+659
 00:47:39,702 --> 00:47:42,262
 Totally up to you how you wanna do things.
 
-671
+660
 00:47:44,182 --> 00:47:46,934
 This is all inside of a form, right?
 
-672
+661
 00:47:46,934 --> 00:47:48,150
 So you want to save it, right?
 
-673
-00:47:48,150 --> 00:47:51,094
+662
+00:47:48,150 --> 00:47:51,775
 Yeah, we're going to need a save button.
 
-674
-00:47:53,526 --> 00:48:04,598
--Exactly -So we'll put our button at the bottom,and it's just a regular old submit, nothing fancy about it.
+663
+00:47:53,526 --> 00:47:58,150
+So we'll put our button at the bottom,and it's just a regular old submit, nothing fancy about it.
 
-675
-00:48:04,662 --> 00:48:05,430
-And it'll say save.
-
-676
-00:48:05,430 --> 00:48:06,454
+664
+00:47:59,800 --> 00:48:01,650
 We're going to want to load this up and save it.
 
-677
-00:48:06,454 --> 00:48:07,606
+665
+00:48:01,650 --> 00:48:02,475
+And it'll say save.
+
+666
+00:48:02,875 --> 00:48:04,475
 And have validation.
 
-678
-00:48:07,606 --> 00:48:14,070
+667
+00:48:04,475 --> 00:48:14,225
 We've done all that very nicely like this, and we just wanna confirm like you said on the backend that we do the right thing.
 
-679
-00:48:14,070 --> 00:48:17,270
+668
+00:48:14,725 --> 00:48:17,270
 So on the get, actually let's do this.
 
-680
+669
 00:48:17,270 --> 00:48:20,598
 Let's run it first and then we'll try it again because right now we haven't hooked anything up.
 
-681
-00:48:20,598 --> 00:48:22,838
+670
+00:48:20,598 --> 00:48:23,050
 We haven't got it from the database we haven't updated from the database.
 
-682
-00:48:22,838 --> 00:48:25,206
+671
+00:48:23,375 --> 00:48:25,925
 But I would expect the links to at least work.
 
-683
-00:48:25,206 --> 00:48:29,366
-Yeah. Cuz now there is an Edit page.
+672
+00:48:27,150 --> 00:48:29,366
+Cuz now there is an Edit page.
 
-684
+673
 00:48:31,670 --> 00:48:33,846
 If there's not, then maybe I forgot something.
 
-685
+674
 00:48:34,294 --> 00:48:36,342
 Okay, look in the corner there.
 
-686
+675
 00:48:36,470 --> 00:48:39,798
 -Okay -It's kind of hard for me to do that.
 
-687
+676
 00:48:39,798 --> 00:48:45,558
 I can take a screenshot but I can't really take a screenshot.
 
-688
+677
 00:48:45,622 --> 00:48:48,502
 -Let's do this -We'll take a snipping tool.
 
-689
+678
 00:48:49,526 --> 00:48:51,894
 Give it a delay of two seconds.
 
-690
+679
 00:48:52,982 --> 00:48:55,478
 You're that fast? I am.
 
-691
+680
 00:48:59,638 --> 00:49:07,382
 So Edit/1 right,so the route got built by the fact that it was in the Edit.
 
-692
+681
 00:49:07,382 --> 00:49:09,878
 And then you had added that ID at the top there.
 
-693
+682
 00:49:09,878 --> 00:49:17,174
 So this is nice because we didn't have to hard code what a link looked like.
 
-694
+683
 00:49:17,174 --> 00:49:18,326
 That's really important.
 
-695
+684
 00:49:18,326 --> 00:49:22,358
 We said, make me a link that takes me here.
 
-696
-00:49:22,358 --> 00:49:25,814
+685
+00:49:23,100 --> 00:49:26,522
 We didn't say make me a link that looks like this.
 
-697
-00:49:25,814 --> 00:49:26,902
-Nope.
-
-698
-00:49:26,902 --> 00:49:27,670
-That's nice.
-
-699
+686
 00:49:27,670 --> 00:49:31,638
 And if we changed our things later, then it would change for us, which is nice.
 
-700
-00:49:31,638 --> 00:49:37,142
+687
+00:49:32,950 --> 00:49:37,142
 So here,if I click on that, I assume it'll just do, yeah, nothing.
 
-701
-00:49:37,142 --> 00:49:40,086
+688
+00:49:37,850 --> 00:49:39,700
 So it's like, blegh, I don't have anything there.
 
-702
-00:49:40,086 --> 00:49:47,638
+689
+00:49:40,325 --> 00:49:47,050
 It doesn't know about customer yet because we have the bind,but we never loaded the customers.
 
-703
-00:49:47,638 --> 00:49:56,982
+690
+00:49:48,275 --> 00:50:02,475
 So let's go and do our stuff again, we're gonna have our action result and here we're gonna say OnGet, of course,int id, that's gonna get passed in automatically because of the way we set up our routes, that's nice.
 
-704
-00:49:56,982 --> 00:50:14,710
+691
+00:50:03,625 --> 00:50:14,710
 By default, will just return to page, but here we'll say Customer, the one above Go and get it from the database.
 
-705
-00:50:14,710 --> 00:50:23,542
-And find it, okay, Yeah, so FindAsync, kind of a standard thing, you could pass in more complicated queries, and get it other ways.
+692
+00:50:15,375 --> 00:50:22,750
+-And find it, okay -Yeah, so FindAsync, kind of a standard thing, you could pass in more complicated queries, and get it other ways.
 
-706
-00:50:23,542 --> 00:50:24,566
+693
+00:50:22,750 --> 00:50:24,566
 If it's null, freak out.
 
-707
-00:50:24,566 --> 00:50:31,926
+694
+00:50:25,400 --> 00:50:31,926
 -Right? -Yeah. If (Customers == null),I don't know, let's put them back to index.
 
-708
-00:50:31,926 --> 00:50:34,486
+695
+00:50:32,975 --> 00:50:34,486
 It's Customer, right?
 
-709
-00:50:34,550 --> 00:50:36,534
+696
+00:50:34,550 --> 00:50:36,825
 Yes, pardon me, Customer.
 
-710
+697
 00:50:38,646 --> 00:50:54,390
 Okay, RedirectToPage("/Index"); a lot of typing,but we don't wanna hide anything from you.
 
-711
+698
 00:50:54,454 --> 00:50:55,670
 Keeping it 100.
 
-712
+699
 00:50:55,670 --> 00:51:05,398
 We are absolutely keeping it 100,so this should that up and give us a form, with the customer in it.
 
-713
+700
 00:51:06,806 --> 00:51:10,966
 Let's see if it does, cuz we added that bind property,which you said, what did you call it?
 
-714
+701
 00:51:10,966 --> 00:51:11,664
 Surviving the journey.
 
-715
-00:51:11,664 --> 00:51:13,584
+702
+00:51:11,664 --> 00:51:13,000
 Surviving the journey.
 
-716
+703
 00:51:14,875 --> 00:51:16,929
 You saw that interest movie really survive the journey.
 
-717
+704
 00:51:16,929 --> 00:51:18,337
 Don't tell me what happens at the end?
 
-718
-00:51:18,337 --> 00:51:18,850
-So I've been.
+705
+00:51:18,337 --> 00:51:19,810
+-So I've been -I don't wanna know
 
-719
-00:51:18,850 --> 00:51:19,810
-I don't wanna know.
-
-720
-00:51:19,810 --> 00:51:21,090
+706
+00:51:19,810 --> 00:51:21,570
 Okay, and then I hit Edit, and then it works.
 
-721
-00:51:21,090 --> 00:51:22,308
-Exactly. Right.
+707
+00:51:21,570 --> 00:51:22,825
+-Exactly -Right.
 
-722
-00:51:22,308 --> 00:51:25,874
+708
+00:51:22,825 --> 00:51:25,874
 -So what happens if you change it around? -If I change it
 
-723
+709
 00:51:25,874 --> 00:51:30,610
 probably nothing Right,cuz we don't have our post.
 
-724
+710
 00:51:30,610 --> 00:51:31,225
 Exactly.
 
-725
+711
 00:51:31,225 --> 00:51:33,050
 Exactly, so we've got our get.
 
-726
-00:51:34,834 --> 00:51:40,146
+712
+00:51:34,834 --> 00:51:39,275
 But we don't have our post.
 
-727
-00:51:40,146 --> 00:51:42,322
+713
+00:51:39,275 --> 00:51:40,616
 You could kind of copy that.
 
-728
-00:51:42,322 --> 00:51:58,642
+714
+00:51:41,768 --> 00:51:58,642
 Yes, I think there's a way to actually link that whole thing quickly, but we'll say, OnPostAsync All right,the very end we will do that Redirect.
 
-729
-00:51:58,642 --> 00:51:59,794
-To the index page?
+715
+00:51:59,000 --> 00:52:01,266
+-To the index page? -To the index page, exactly
 
-730
-00:51:59,794 --> 00:52:01,266
-To the index page, exactly.
-
-731
-00:52:01,330 --> 00:52:07,538
+716
+00:52:03,950 --> 00:52:07,050
 -Okay -What do we do?
 
-732
-00:52:07,538 --> 00:52:09,458
+717
+00:52:07,050 --> 00:52:09,458
 Well, we've got that model state valid issue.
 
-733
+718
 00:52:09,458 --> 00:52:11,314
 Yeah, so if not model.
 
-734
+719
 00:52:11,314 --> 00:52:15,922
 Not ModelState.IsValid.
 
-735
+720
 00:52:15,986 --> 00:52:17,970
 Yeah, we want it to return to the page.
 
-736
+721
 00:52:17,970 --> 00:52:23,474
 -Okay -Aah, Page
 
-737
-00:52:23,474 --> 00:52:28,338
+722
+00:52:23,474 --> 00:52:28,875
 See, if you try to type too fast to impress people, and it just ends up making you look silly.
 
-738
-00:52:28,402 --> 00:52:31,538
+723
+00:52:30,125 --> 00:52:31,538
 Okay, now this one is an interesting one.
 
-739
+724
 00:52:31,538 --> 00:52:33,074
 Cuz you want to attach it to the database.
 
-740
-00:52:33,074 --> 00:52:36,914
+725
+00:52:33,074 --> 00:52:37,700
 Yeah, so what we're doing is,we're modifying something that's all ready in the database.
 
-741
-00:52:36,978 --> 00:52:41,586
+726
+00:52:38,225 --> 00:52:41,586
 So what we're trying to do is take this customer that we are recurrently editing.
 
-742
-00:52:41,586 --> 00:52:43,506
+727
+00:52:42,900 --> 00:52:44,425
 So it's in a cart state.
 
-743
-00:52:43,506 --> 00:52:53,554
+728
+00:52:44,425 --> 00:52:53,925
 Attach that customer in the state of it in the database,we're going to mark that as Modified.
 
-744
-00:52:53,554 --> 00:52:54,770
+729
+00:52:53,925 --> 00:52:55,000
 And this bit here.
 
-745
-00:52:54,770 --> 00:52:56,370
-It shouldn't be there, yeah.
+730
+00:52:55,275 --> 00:52:59,375
+It shouldn't be there, yeah -Add the using statement, there we go.
 
-746
-00:52:56,370 --> 00:53:00,466
-Add the using statement, there we go.
-
-747
-00:53:00,530 --> 00:53:02,898
+731
+00:52:59,375 --> 00:53:01,050
 And now it's turned blue, okay.
 
-748
-00:53:02,898 --> 00:53:12,562
+732
+00:53:01,925 --> 00:53:11,900
 Now, we don't know if it's going to work, because someone else could be simultaneously editing at the same time.
 
-749
-00:53:12,562 --> 00:53:13,586
+733
+00:53:11,900 --> 00:53:14,025
 Exactly, so you want to do a try and catch.
 
-750
-00:53:13,586 --> 00:53:16,530
+734
+00:53:14,025 --> 00:53:16,530
 Can do a try, maybe it'll work, maybe it won't.
 
-751
-00:53:16,530 --> 00:53:24,530
+735
+00:53:16,530 --> 00:53:24,875
 And the exception that we're gonna catch for,is called aDbUpdateConcurrencyException.
 
-752
-00:53:24,530 --> 00:53:26,130
+736
+00:53:25,275 --> 00:53:26,130
 So just in case someone's doing-
 
-753
+737
 00:53:26,130 --> 00:53:27,922
-If someone's in there at the same time- Exactly what it says.
+-If someone's in there at the same time -Exactly what it says.
 
-754
+738
 00:53:27,922 --> 00:53:31,383
-Exactly what it is. Okay, so you're going to wait for changes?
+-Exactly what it is -Okay, so you're going to wait for changes?
 
-755
+739
 00:53:31,383 --> 00:53:38,675
 Go on 'await' and say SaveChangesAsync, and presumably that'll work fine.
 
-756
-00:53:39,200 --> 00:53:41,819
+740
+00:53:39,200 --> 00:53:41,450
 If it doesn't- We'll have to throw an exception?
 
-757
-00:53:41,819 --> 00:53:50,027
+741
+00:53:41,450 --> 00:53:50,027
 Now there's different arguments about the right way to do this, but for now I'm gonna go and say, Customer, and this is kind of cool.
 
-758
+742
 00:53:50,411 --> 00:53:54,750
 Customer.Id, see how I'm getting IntelliSense inside the string?
 
-759
+743
 00:53:59,000 --> 00:54:04,047
 We can do whatever we want to about that concurrency exception, maybe even pass it in as an inner exception.
 
-760
+744
 00:54:04,047 --> 00:54:10,831
 But the fact is, actually, that would be a good idea,we'll pass that in, along for the ride.
 
-761
+745
 00:54:12,687 --> 00:54:16,591
 We wanna give a message to somebody that bad stuff has happened.
 
-762
+746
 00:54:17,807 --> 00:54:23,631
 All right,that should be, I think we always gonna create only.
 
-763
+747
 00:54:23,631 --> 00:54:26,383
 -And we do -We've done the create.
 
-764
+748
 00:54:27,599 --> 00:54:29,903
 -Let's go see -I think the create was a post.
 
-765
+749
 00:54:29,903 --> 00:54:33,359
 -Yeah -The read is the for loop.
 
-766
+750
 00:54:34,127 --> 00:54:39,695
 The delete was also a post, but with a delete sidecar,along for the ride.
 
-767
+751
 00:54:40,399 --> 00:54:48,591
 -So, Create, Dan -Break points from before.
 
-768
+752
 00:54:48,719 --> 00:54:55,759
 -Yeah. I will remove those -I think you still have, okay.
 
-769
+753
 00:54:55,823 --> 00:54:57,231
 Continue, we'll bump into them if we have more.
 
-770
+754
 00:54:57,231 --> 00:54:58,895
 -Fancy pants -Beyonce.
 
-771
+755
 00:54:58,959 --> 00:55:06,703
 -That's a good point -Edit
 
-772
+756
 00:55:08,687 --> 00:55:11,311
 -Carter -Carter Knowles.
 
-773
-00:55:14,511 --> 00:55:16,751
+757
+00:55:14,511 --> 00:55:17,150
 -Yeah -Don't get it twisted.
 
-774
-00:55:16,815 --> 00:55:22,447
+758
+00:55:17,450 --> 00:55:22,447
 -Delete everyone else who is not worthy -So
 
-775
+759
 00:55:22,447 --> 00:55:25,071
 -See, it works -It does work.
 
-776
-00:55:25,135 --> 00:55:30,063
+760
+00:55:25,650 --> 00:55:30,063
 There you go, taking care of business, cool.
 
-777
+761
 00:55:30,063 --> 00:55:34,223
 -So, let's think about that -So, that's pretty sweet.
 
-778
+762
 00:55:34,223 --> 00:55:41,711
 -It is -If we go back, and just kind of review particularly,this bit here we've got our edit.
 
-779
-00:55:41,775 --> 00:55:47,471
+763
+00:55:44,800 --> 00:55:47,471
 With the route id where we did not see
 
-780
+764
 00:55:47,535 --> 00:55:49,135
 -Where are we reaching -out right now?
 
-781
+765
 00:55:49,135 --> 00:55:50,863
 I'm sorry this is index.
 
-782
+766
 00:55:50,863 --> 00:55:52,847
 -Okay -Right?
 
-783
-00:55:52,847 --> 00:55:56,751
+767
+00:55:52,847 --> 00:55:54,975
 So here we got an edit.
 
-784
+768
 00:55:56,815 --> 00:56:06,530
 I wanna point out how it looks in the code, and then compare that to how it looks ultimately in the code, right?
 
-785
-00:56:06,530 --> 00:56:11,075
+769
+00:56:06,900 --> 00:56:11,075
 When it makes it all the way back to the browser.
 
-786
+770
 00:56:13,314 --> 00:56:15,746
 -See? -It's in.
 
-787
-00:56:15,746 --> 00:56:21,314
+771
+00:56:15,746 --> 00:56:20,065
 So that came from, this seems like a little more.
 
-788
-00:56:21,314 --> 00:56:22,338
+772
+00:56:20,065 --> 00:56:22,500
 You might be asking yourself,why you don't just hard code that?
 
-789
-00:56:22,338 --> 00:56:25,794
+773
+00:56:22,875 --> 00:56:26,150
 But routes change, pages change, things get moved around..
 
-790
-00:56:25,794 --> 00:56:35,650
+774
+00:56:26,650 --> 00:56:34,725
 Now, this one is a little bit more interesting here,because you might have multiple buttons on the page that do different stuff.
 
-791
-00:56:35,650 --> 00:56:39,490
-So then, you can give them a handler name. Right?
+775
+00:56:35,650 --> 00:56:37,450
+So then, you can give them a handler name
 
-792
-00:56:39,490 --> 00:56:40,514
-I could have delete.
+776
+00:56:39,225 --> 00:56:40,514
+ Right? I could have delete.
 
-793
+777
 00:56:40,514 --> 00:56:43,778
-I could have bold face Beyonce, I could have all caps, right?
+I could have bold face Beyonce, I could have all caps
 
-794
+778
 00:56:43,842 --> 00:56:44,802
 We could have whatever.
 
-795
+779
 00:56:44,802 --> 00:56:49,026
 You're not limited to one button.
 
-796
-00:56:49,026 --> 00:56:59,010
+780
+00:56:50,725 --> 00:56:59,010
 A submit button can have, you could have multiple submits,still passing numbers, like in this case id.
 
-797
+781
 00:56:59,010 --> 00:57:01,954
 -Yeah -And this is an ampersand.
 
-798
+782
 00:57:01,954 --> 00:57:06,946
 -Yeah -Multiple handlers, delete, promote whatever.
 
-799
+783
 00:57:06,946 --> 00:57:08,162
 -Save -Save exactly
 
-800
+784
 00:57:08,162 --> 00:57:18,530
 -Okay -And what's cool about that, is that then that word delete If we look at the behind is this word.
 
-801
-00:57:18,530 --> 00:57:27,362
+785
+00:57:19,850 --> 00:57:27,362
 So I think you could even go like on post "foo" async, or whatever, as long as it lines up because you're saying on post and then some handler.
 
-802
+786
 00:57:27,362 --> 00:57:29,090
 -Yes -That cool?
 
-803
-00:57:29,090 --> 00:57:37,026
+787
+00:57:29,090 --> 00:57:37,800
 That is cool. And the handler is literally you could say Let me stop our debugging here.
 
-804
-00:57:42,978 --> 00:57:45,090
+788
+00:57:42,978 --> 00:57:44,075
 You gonna try the foo?
 
-805
+789
 00:57:46,375 --> 00:57:48,098
 Right I can do whatever, it doesn't matter.
 
-806
+790
 00:57:48,098 --> 00:57:50,978
 That word is totally up to you.
 
-807
+791
 00:57:50,978 --> 00:57:53,410
 So I don't need to test that.
 
-808
+792
 00:57:54,370 --> 00:57:56,738
 -You just trust me -You don't trust me?
 
-809
+793
 00:57:56,738 --> 00:57:58,466
 -Yeah, sure -All right let's test it then.
 
-810
+794
 00:57:58,466 --> 00:58:05,890
 -Let's test it -That gives you a lot of flexibility with buttons, so I say foo right there.
 
-811
+795
 00:58:05,890 --> 00:58:09,154
 -I go over here -We say foo.
 
-812
-00:58:09,730 --> 00:58:11,138
+796
+00:58:09,975 --> 00:58:10,625
 And there you go.
 
-813
-00:58:11,138 --> 00:58:12,034
-So while that's loading?
+797
+00:58:10,625 --> 00:58:12,275
+So while that's loading? What were you gonna say?
 
-814
-00:58:12,034 --> 00:58:13,058
-What were you gonna say?
-
-815
-00:58:13,058 --> 00:58:15,810
+798
+00:58:14,400 --> 00:58:17,425
 No, no, no, I trust you ish.
 
-816
-00:58:15,874 --> 00:58:17,986
+799
+00:58:17,425 --> 00:58:18,512
 -Trust you ish? -Yeah.
 
-817
-00:58:17,986 --> 00:58:20,802
+800
+00:58:19,350 --> 00:58:20,802
 That's pretty good, I'll take that.
 
-818
+801
 00:58:21,058 --> 00:58:26,498
 Let's go and add people.
 
-819
-00:58:29,826 --> 00:58:31,554
+802
+00:58:29,826 --> 00:58:30,725
 -Okay -That was foo.
 
-820
-00:58:31,554 --> 00:58:33,410
+803
+00:58:31,800 --> 00:58:33,410
 How did f oo know it was delete?
 
-821
+804
 00:58:34,178 --> 00:58:38,658
 Because it doesn't matter that it was named Foo.
 
-822
+805
 00:58:38,722 --> 00:58:40,386
 It's just a handler name.
 
-823
-00:58:41,218 --> 00:58:50,425
+806
+00:58:41,218 --> 00:58:46,475
 And if we confirm it Did I pass it?
 
-824
-00:58:50,882 --> 00:58:52,546
+807
+00:58:49,700 --> 00:58:51,675
 -Nope -This is create, sorry.
 
-825
+808
 00:58:55,170 --> 00:58:56,770
 There you go there's a delete.
 
-826
-00:58:56,770 --> 00:59:00,418
+809
+00:58:57,075 --> 00:58:59,700
 Okay see it says handler equals foo.
 
-827
-00:59:00,418 --> 00:59:06,434
+810
+00:58:59,700 --> 00:59:06,434
 -Yes, okay, yes -And then, I just happened to name this handler foo also.
 
-828
+811
 00:59:06,434 --> 00:59:12,770
 -Yes, yeah -So the point is, it lined up.
 
-829
+812
 00:59:12,770 --> 00:59:14,114
 And that's how you can have unlimited verbs.
 
-830
+813
 00:59:14,114 --> 00:59:17,506
 And then at that point, it just did the thing and removed it from the database.
 
-831
-00:59:17,634 --> 00:59:26,338
+814
+00:59:17,900 --> 00:59:25,725
 -Cool? -Cool. So,we saw lots of different handlers, like gets and posts, and custom handlers like delete.
 
-832
-00:59:26,338 --> 00:59:33,954
+815
+00:59:25,725 --> 00:59:34,600
 -Yeah -We saw some tag helpers, that will generate buttons and links for us.
 
-833
-00:59:33,954 --> 00:59:36,322
+816
+00:59:35,025 --> 00:59:36,322
 -We saw layout pages -We saw validation.
 
-834
+817
 00:59:36,322 --> 00:59:39,842
 We saw validation both summary and individual.
 
-835
-00:59:39,842 --> 00:59:45,730
+818
+00:59:40,875 --> 00:59:45,730
 -And yeah -Yeah lots of little bit about routing and a little bit more detail.
 
-836
-00:59:45,730 --> 00:59:51,490
+819
+00:59:46,275 --> 00:59:50,444
 We saw routing,and then specifically, actually one important thing we can point out about routing as well.
 
-837
-00:59:51,554 --> 01:00:00,578
+820
+00:59:50,750 --> 01:00:00,578
 If I click edit Did we, I shut the app down again.
 
-838
-01:00:00,578 --> 01:00:01,858
+821
+01:00:01,075 --> 01:00:05,175
 You had said ID:int
 
-839
-01:00:01,858 --> 01:00:09,154
+822
+01:00:05,175 --> 01:00:09,154
 -Yes -Where int was a number, correct?
 
-840
-01:00:09,154 --> 01:00:12,418
+823
+01:00:09,625 --> 01:00:11,025
 It would be interesting.
 
-841
-01:00:12,418 --> 01:00:19,010
+824
+01:00:11,700 --> 01:00:19,010
 So just confirm that, if we put in Submit Query, edit, she is one.
 
-842
+825
 01:00:21,442 --> 01:00:24,322
 Put in an ID that is not an int.
 
-843
-01:00:24,322 --> 01:00:31,554
+826
+01:00:24,322 --> 01:00:28,636
 You should get a You simply get a 404,you don't get a 500.
 
-844
-01:00:31,554 --> 01:00:32,770
+827
+01:00:28,636 --> 01:00:29,275
 It's not an error.
 
-845
-01:00:32,770 --> 01:00:33,922
+828
+01:00:29,950 --> 01:00:31,600
 It's a route that doesn't exist.
 
-846
-01:00:33,922 --> 01:00:35,778
+829
+01:00:31,908 --> 01:00:33,525
 We don't have an edit that takes a string.
 
-847
-01:00:35,778 --> 01:00:43,074
+830
+01:00:34,350 --> 01:00:43,074
 So that's another really,really important thing to point out about routing, and why that little bit up there was so significant?
 
-848
-01:00:43,074 --> 01:00:52,226
+831
+01:00:43,074 --> 01:00:51,500
 And then soon, in the intermediate sections, we will learn a little bit more about web APIs, and url, and mixing and matching pages as well Yeah.
 
-849
-01:00:52,226 --> 01:00:54,402
+832
+01:00:51,500 --> 01:00:54,075
 Can we take a break and come back with a little bit of logging?
 
-850
-01:00:54,402 --> 01:00:55,554
+833
+01:00:54,075 --> 01:00:55,227
 Yes we will
 
