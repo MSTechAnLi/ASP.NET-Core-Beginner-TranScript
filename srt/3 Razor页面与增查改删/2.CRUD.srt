@@ -1,6 +1,7 @@
 ﻿1
 00:00:01,043 --> 00:00:07,123
 Hey friends, we're glad you're still with us here at Microsoft Virtual Academy as we do our intro to ASP.NET Core.
+大家好，很高兴你仍然关注我们微软虚拟学院，我们会继续介绍 ASP.NET Core 
 
 2
 00:00:07,123 --> 00:00:08,595
