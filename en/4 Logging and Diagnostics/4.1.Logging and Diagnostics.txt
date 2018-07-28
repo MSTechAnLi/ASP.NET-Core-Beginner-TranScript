@@ -1,0 +1,279 @@
+Alright, we survived the crud.
+Yeah, we did.
+Create, re-update, delete.
+We are going to add in some logging, do a little application insights locally, and then in the process of doing logging, I also want to add a little thing called Temp Data.
+Because I was noticing that when we did the create, it'd be nice to have a little message that said the answer was created or whatever.
+Yeah, that would be nice.
+But that's not really part of the model cuz that brings up some interesting questions.
+So, for example, if we go back to Create and just refamiliarize ourself with that, right?
+We type in the name and we hit submit, and then if we look at the page model behind that, it's pretty straightforward, right?
+We have the customer that as you say with the BindProperty survives-
+Survives the journey.
+Survives the journey but it'd be nice to have a message that would be some temporary piece of data that would say, yeah customer got added,
+Yeah.
+So we could go and have a string and call it message.
+This is interesting though because it's part of the PageModel, but not part of the database.
+Yes.
+This is part of the PageModel which is kinda like a view model.
+This is really a temporary piece of data.
+It's Tempdata and they're gonna have their values stored and then they'll be right back around in the side.
+So it's a side car, it's a little post it note.
+That's a good way to think about those. Yeah.
+Cool, so it's a place to put stuff.
+So I'm gonna save the database, save the data right here like we did before and then- >> You're gonna have a message.
+I'm gonna have a little message, and we'll say hey, customer and this is where you can personalize stuff.
+Customer.Name added.
+It's a message, right?
+And it can come out of whatever you want.
+It can be generated, but here we're mixing and matching text with the data from the form.
+Then scrolling in a way in this message which is not part of the database.
+So by simple fact that you had the TempData said, you're not going into the database.
+Right because I posted, well because I actually never picked it up and put it anywhere near the database.
+If I did not put TempData data on it, that would never get saved and it would be no [CROSSTALK]
+Okay.
+But because it's public and it's on the page model, it's available to me, you know, elsewhere, okay?
+So let's go over to, let me think about this.
+Would you go to your index page?
+Yeah, thank you.
+It took me a second to get my head right.
+So on the index page, we're gonna go and make a message as well.
+That's gonna catch that temp data, right?
+Yep.
+And then here, maybe we'll have some, we'll just take it at the top of the form for now and we'll say, maybe an H3.
+And some sort of message?
+Model.Message.
+>> Okay. >> So it'd be or
+maybe we'd wanna hide it if it wasn't there, there is lots of things that we could could potentially do but for now.
+Now, just a second, we'll be fine but this is just an example where it's not quite database stuff.
+You don't want to stick it in the database temporarily, you just want it to be somewhere temporarily.
+Some sort of acknowledgement for the user.
+Mm-hm, yep and the general idea of being able to, there you go.
+They are.
+And that could look whatever you want it, you can do whatever.
+It could fade in with jQuery or animation, or whatever makes you happy and that's different from there, which is your default state, right?
+So do it again, See?
+Mm-hm.
+And it's because it was called temp data and we had the same name here and where it started.
+So it found its way magically over into the index area as well, which is pretty sweet.
+>> Cool. >> Cool, all right.
+Now we talked a little bit about logging, very, very briefly.
+We didn't really do anything with it.
+Well we looked at this.
+Well we saw it up here.
+We saw it there.
+We saw two different kinds of logging.
+We saw this one and then we saw a little bit more there, so there was warning, and then there was.
+Oops, pardon me.
+It was, yeah there you go.
+There's warning, and then there's debug and then you can have different subsections.
+You can say, I just want information from Microsoft but I want debug from everyone else, right?
+So let's go see if we can figure out how to do logging.
+All right, so we'll go back over to here, and I'm going to try to remember how to do this from scratch.
+Do you can you tell me how?
+You've gotta try to remember?
+Well, you know.
+I just want to do it right, and I don't have all this stuff in my head all the time.
+>> So it should be I logger >> G U?
+Is it I's you probably need to add it as a service.
+Yes, add it as a service.
+Okay, and then we have to use it.
+Yeah, just add logging.
+And then we've got app dot I don't think it's used... 
+Do you put it up so, ILogger?
+Yeah, I think it's ILoggerFactory.
+I think it's, yeah.
+See?
+Yes, you have to add the extension.
+Comes out of extensions, that's good.
+Guesswork makes for the best work.
+Yeah, there you go Okay.
+Then we'll say hey, loggerFactory, And you can say, well if I'm running it at the console, I can add the console.
+Cuz you can log to all kinds of places, right, you can log to files, you can log it into application insights if you will, all kinds of things.
+And if you go and do ApplicationInsights that's going to ask you all kinds of questions as well.
+Right now for now, I'm going to add console, I'm going to add debug.
+Okay.
+Now.
+Do you need the first one any more?
+The console one is if I'm running it from the command line and if I ever want to, I'd think I'd like to have that.
+So it's a choice?
+Well it's a, I'm gonna be doing stuff or someone on my team works on the console and I'd like to be able to spit at them
+To the console when possible.
+So what I'm trying to point out is that you don't need both of them, right?
+No, one, I'm pointing the I'm pointing the logging to multiple locations.
+Okay.
+I could point it out to app insights, I could put it in text file, I could put it in database.
+It'd be weird.
+But I could do that.
+So right now I'm sending logging to two places, pardon me.
+Yeah so yeah it's cool to do that and then, in a place that I might wanna use it, remember how we put everything on one line there before?
+We're gonna take it out and I think I would say, private ILogger And I think it would be of type CreateModel and I'll just say Log, and then we say ILogger CreateModel.
+Log, and then again we squirrel it away.
+Now here I am mixing things, here this person went underscore db, and I said capital L, you should pick a style and stick with it.
+So is the underscore really just a style?
+It's just a style.
+It's like saying this is private or it's read only, or it's internal.
+Lots of people have different styles.
+You tend to use capitals for publics.
+Yeah.
+There is a time when we used to say m_ for secret member.
+Now sometimes people put _ for internal, or read only.
+I'm just, I should be more responsible in the way I name my things.
+Yes you should.
+I should.
+It's sad.
+Okay?
+This string right here.
+I could maybe reuse.
+And then, make it for log, okay?
+And I could say log- >> Label.
+Yeah, I could say LogInformation, LogDebug, LogCritical.
+Let's say, that that's critical.
+It's totally not critical.
+But I could say, that's a bad thing.
+My goodness, customer added.
+Right and then, it might come out red, right?
+And actually that would be cool to try.
+So, if I am a web application.
+And where is my web application?
+It is down here.
+So let's go over to that location.
+Yeah.
+And I'll try dotnet run in the command line.
+This is a good reminder that you can do these things in Visual Studio, or you can jump back out into the command line, that's cool, too.
+So it's giving you- >> 6405.
+Oops, so I put that there, I put this here.
+There it was, critical.
+Aah!
+All right, that's the console one.
+So the idea there is that that information could go lots of different places.
+So let's close that up.
+We can see it in the debug.
+And and let's go and do it in Application Insights.
+Okay.
+Which is cool.
+And you can see the debugger as well, right?
+The point is that, that stream of information is going out into the world, it can go out into the command line, it can go out into a window,
+it can go into Windows Debug text file, totally up to you.
+All right, so, I'm gonna declare tab bankruptcy.
+This is too much, stressed me out.
+Okay, go back over here.
+And I'm gonna right-click, and I'm gonna say, Add > Application Insights.
+Okay.
+And you've done this before many times.
+Here's the trick, though.
+You can do this and sign up in Azure, you can use it for free, you get like what, a gigabyte?
+Something like that.
+There, we'll go and register your app.
+And even though you're running your app locally, send the telemetry up into the cloud.
+We'll do this a bit a little bit later.
+Okay.
+But I wanna point out to people that you don't have to do it that way, okay?
+They would like you to sign up.
+And l think that you would get value if you sign up.
+But, you can also try local only.
+Okay.
+It's a little subtle.
+So you can try local only which means none of your data would be sent up into the cloud.
+But it's a data that you can export and put somewhere else.
+Like, you can send a report to someone.
+Sure, the point is that the cloud can give you a lot more insight, it's gonna apply all the analytics.
+And you have kinda an unlimited amount of space in the cloud.
+I think it's a gig for free.
+And then, beyond that, you can do all kinds of things in the cloud you can't do locally.
+Yeah.
+But the point I'm making is that there's no reason not to try it out locally.
+You can do amazing stuff with it even on an airplane.
+You know what I mean?
+So, lets go and run this.
+And you just added the app inside some-
+Yeah, that's a good point.
+By running that, I just added that package, and it plugged itself into the pipeline, okay?
+So you didn't have to manually add it into your pipeline at all.
+It's automatically added by default?
+Yeah, it's magic.
+I think we can actually look at the, Let's go out to where that was.
+Where is that file located?
+The csproj is here, and we can open it up.
+There it is.
+There, okay.
+So it's just a package.
+And once it gets in there, it's plugged into the pipeline.
+And it's gonna collect all kinds of stuff.
+But now I can go, and really query my application.
+So it's running right now.
+Okay.
+Should be clear.
+Let's go and do our create stuff.
+And I'll come in here, and I'll say look, see the numbers getting higher?
+Yeah.
+Let me do that again.
+So add a new one.
+Yeah, yeah.
+Okay.
+So these events are happening.
+So I can click on that, and this is what you wanna get.
+This is sweet.
+I can see the number of requests, the number of traces.
+You can filter it?
+Yeah, you can filter by, just show me creates, just show me people on this version, just show me people on Chrome, just show me people on Firefox, just show me things that took longer than a second, right?
+You can go through this whole list here.
+And I could look for, look-
+And then it has this really good icons, so you know what's right, yeah.
+See, remember how we made adding a customer a critical.
+Yeah.
+So I can double-click on that individual trace, okay?
+So then, we can see the name of the computer.
+And the operation.
+See, the severity, the operations.
+And I can use, then show me all telemetry for this user.
+So then you could say, well, I've got a bunch of users hitting this.
+This is where the local stuff will fall down at some point and then, you're gonna wanna go into the cloud.
+But one of the great options is, something's occurred.
+Yeah.
+Beyonce has been added.
+Show me telemetry five minutes before and after.
+Okay.
+All right,
+cuz the bug might not be near her, it might be- >> Around her.
+Around her, elsewhere on the elevator.
+Okay?
+Yep.
+Then, I can go and chart these things over time.
+Again, this is all local.
+This is the stuff you get locally.
+And then when you wanna go beyond that, there's all kinds of great stuff in the Application Insights Portal.
+And this would link you, right?
+Link you right there, and you can go and check it out.
+And we will explore a bunch of that stuff in another talk, see?
+Here, when you sign in, you can pick your resource and then, see dependencies, how your application talks to the database, calls another web API.
+Stuff you wouldn't be able to do if you didn't put it in the cloud.
+And here I've just added a filter, and I've said Create.
+I can turn that filter off.
+Just show me the longest ones.
+Filter on those.
+There's the record, there you go.
+One of the requests took a long time, click on that.
+That was the initial get.
+Okay.
+The very first time it compiled that page.
+Isn't that fantastic?
+That is fantastic, that's pretty impressive.
+I really like Application Insights.
+Cool, so, I think that puts us in a pretty good spot, doesn't it?
+We've got a nice little cloud application.
+Basic bootstrap, it's talking to Application Insights, we've got logging.
+I think that's a pretty good beginner start, wouldn't you say?
+Yeah, we've accomplished quiet a bit over the past couple of hours.
+Where should they go now?
+The docs?
+The docs, go to the docs.
+Go to docs.microsoft.com, get started.
+Great samples, great interactive experiences.
+And if you see this, send Hanselman an applause.
+Yeah, say applause to us on Twitter.
+On Twitter.
+Myself and Maria.
+And be sure to explore all the different great courses that are here at Microsoft Virtual Academy.
+This is just beginner ASP.NET Core.
+We've got beginner C#, we've got all sorts of great cloud-based content, there's intermediate and advanced and on and on.
+Thank you so much for spending your day with us here on Microsoft Virtual Academy.
