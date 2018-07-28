@@ -20,21 +20,21 @@
 
 ### 3. Razor页面与增查改删
 
-- [ ] Razor页面 - yiluomyt 翻译中
+- [x] Razor页面
 - [ ] CRUD - WinFanChen 翻译中
 
-### 4. Logging and Diagnostics
+### 4. 日志和诊断
 
-- [ ] Logging and Diagnostics
+- [ ] 日志和诊断 - yiluomyt 翻译中
 
-----------------------------------------------------------------------------
+---
 
-# 优秀 .NET Core 资源推荐
+## 优秀 .NET Core 资源推荐
 
 1. .NET Core 指南
-    - 地址链接：https://docs.microsoft.com/zh-cn/dotnet/core/
+    - 地址链接：[https://docs.microsoft.com/zh-cn/dotnet/core/](https://docs.microsoft.com/zh-cn/dotnet/core/)
     - 推荐理由：这是微软对 .NET Core 做出的官方指导，其重要性就不用我多言了，哈哈
 
 2. 简明 ASP.NET Core 手册
-    - 地址链接：https://windsting.github.io/little-aspnetcore-book/book/
+    - 地址链接：[https://windsting.github.io/little-aspnetcore-book/book/](https://windsting.github.io/little-aspnetcore-book/book/)
     - 推荐理由：面向0基础小白，从头带你熟悉整个MVC框架以及与数据库的交互，能清晰地对了解整个 ASP.NET Core 体系，能对以后的学习打下好的基础
