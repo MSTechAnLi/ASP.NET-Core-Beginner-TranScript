@@ -14,1152 +14,1166 @@ We had a look at it a bit before where we introduced you to the concept of a pag
 在我们向你介绍页面概念之前，让我们来先来看下
 
 4
-00:00:09,728 --> 00:00:14,125
+00:00:09,728 --> 00:00:14,129
 And now we are gonna have a look at it outside of Visual Studio Code and the command line
 除了 Visual Studio Code 和命令行之外的操作方式
 
 5
-00:00:14,125 --> 00:00:14,129
-And now we are gonna have a look at it outside of Visual Studio Code and the command line
-
-6
 00:00:14,129 --> 00:00:15,350
 we are gonna get started on Visual Studio
-我们会使用Visual Studio
+例如使用 Visual Studio
 
-7
+6
 00:00:15,350 --> 00:00:19,300
 Right, so we are even doing our stuff in Visual Studio Code，you can see here
-是的，如果你看到这，应该看到我们已经在 Visual Studio Code 中完成了一些工作
+是的，跟着我们看到这里的小伙伴们应该知道我们已经在 Visual Studio Code 中完成了一些工作
 
-8
-00:00:19,475 --> 00:00:19,600
-我们已经完成了一些页面
-
-9
+7
 00:00:19,600 --> 00:00:22,659
 we goofed around a little bit and we made a couple of pages
-我们已经完成了一些页面
+并且完成了一些页面
 
-10
-00:00:22,659 --> 00:00:22,784
-we goofed around a little bit and we made a couple of pages
-
-11
+8
 00:00:22,784 --> 00:00:25,920
 You remember though that we started from an empty template.
 你还记得我们从一个空模板开始的步骤嘛
 
-12
+9
 00:00:25,920 --> 00:00:26,624
 Yeah.
 当然
 
-13
+10
 00:00:26,624 --> 00:00:31,488
 So we went from nothing, we went from a Hello World console app into something with pages.
-我们从无到有，从一个 Hello World 的控制台应用程序到了包含一些页面的应用
+我们从无到有，从一个 Hello World 的控制台应用程序到一个包含一些页面的应用
 
-14
+11
 00:00:31,552 --> 00:00:38,075
 I'm gonna close Visual Studio Code and I am going to go out here to Visual Studio proper
-我将关闭 Visual Studio Code ，然后在这里可以找到适合的 Visual Studio 版本
+我将关闭 Visual Studio Code 然后在这里可以找到适合的 Visual Studio 版本
 
-15
+12
 00:00:38,075 --> 00:00:39,500
+Visual Studio for Windows
 比如 Visual Studio for Windows
- Visual Studio for Windows 
 
-16
+13
 00:00:39,500 --> 00:00:39,975
 Yep.
 是的
 
-17
+14
 00:00:39,975 --> 00:00:42,700
 You might be on Visual Studio for Mac if you're on a Mac.
 如果你使用的是Mac，也可以使用 Visual Studio for Mac
 
-18
+15
 00:00:43,100 --> 00:00:48,471
 And in this particular case I'm gonna be using Visual Studio 2017 Community
 现在，我将使用 Visual Studio 2017 的社区版
 
-19
+16
 00:00:48,471 --> 00:00:52,608
 you can go and get this at VisualStudio.com
-你可以在 VisualStudio.com 上获取此信息
+你可以在 VisualStudio.com 上获取相关信息
 
-20
+17
 00:00:52,608 --> 00:00:53,248
 For free.
-而且这是免费的
+而且此版本是免费的
 
-21
+18
 00:00:53,248 --> 00:00:57,338
-For free, it works just nice, it's great, Visual Studio Community has a couple 
+For free, it works just nice, it's great, Visual Studio Community has a couple
 免费，这就很棒，可 Visual Studio 的社区版对
 
-22
+19
 00:00:57,338 --> 00:01:00,450
 of small restrictions based on the size of your company.
 公司来说还是有一些小限制
 
-23
+20
 00:01:01,475 --> 00:01:04,375
 But if you're doing this as an open source person or as a person who's learning
 但是，如果你作为开源开发者或用于学习
 
-24
+21
 00:01:05,100 --> 00:01:07,745
 Visual Studio Community is effectively pro.
 Visual Studio 的社区版已经足够专业了
 
-25
+22
 00:01:08,400 --> 00:01:11,616
 It's effectively the pro version, let's you have extensions, it's great little tool.
-它实际上就是专业版，让你可以使用扩展，这是一个很棒的小工具
+它实际上是一个可扩展的专业版，这是一个很棒的小工具
 
-26
+23
 00:01:11,680 --> 00:01:17,300
 All right, so what I wanna do is, you can see just to familiarize yourself with
-好吧，所以我想做的是，你能在这看到一些熟悉的
+所以我想做的是，你能在这看到一些熟悉的
 
-27
+24
 00:01:17,925 --> 00:01:21,792
- the UI here I've got some recents and things, I've got New Project.
+the UI here I've got some recents and things, I've got New Project.
 界面，最近活动、新建项目等
 
-28
+25
 00:01:21,920 --> 00:01:26,175
-You can say, Create New Project, on the left hand side 
+You can say, Create New Project, on the left hand side
 你可以在左侧创建新项目，可能你看到内容会和这里不同
 
-29
+26
 00:01:26,175 --> 00:01:29,344
 you may see different stuff depending on what you installed.
 这取决于你安装的内容
 
-30
+27
 00:01:29,408 --> 00:01:35,725
 When I ran the installer for Visual Studio, I set up for the web for workload it's called the Workload.
 当我运行 Visual Studio 的安装程序时，我把 Web 设置为了工作负载
 
-31
+28
 00:01:36,200 --> 00:01:37,817
-You might have Android you might not, 
-你可能没有Android
+You might have Android you might not,
+你可能没有 Android
 
-32
+29
 00:01:37,817 --> 00:01:40,608
 but you wanna make sure that you have the .Net core web workload.
 但是你应该确保安装了 .Net Core Web 的工作负载
 
-33
+30
 00:01:40,608 --> 00:01:43,375
 Quick question, you mentioned the Visual Studio installer
 问一下，你提到 Visual Studio 安装程序
 
-34
+31
 00:01:43,375 --> 00:01:45,550
- that does come when you download Visual Studio?
+that does come when you download Visual Studio?
 是在下载 Visual Studio 时会用到吗？
 
-35
+32
 00:01:45,550 --> 00:01:52,950
-Yeah, good point, let me bring that up, when you install it you're gonna get this application, 
+Yeah, good point, let me bring that up, when you install it you're gonna get this application,
 问得好，让我把它打开，当你安装后你会看到这个应用程序
 
-36
+33
 00:01:52,950 --> 00:01:55,584
 this is Visual Studio installer coming up here, one moment.
 这是就是 Visual Studio 安装程序
 
-37
+34
 00:01:57,120 --> 00:02:01,856
 And the installer is modular, so it'll come up like this.
-安装程序是模块化的，所以它就会是这样一种形式
+安装程序是模块化的，它会是这样一种形式
 
-38
+35
 00:02:03,904 --> 00:02:09,150
 And if I say Modify, you can run the installer multiple times
 如果点击修改，你就可以多次运行安装程序
 
-39
+36
 00:02:09,150 --> 00:02:14,275
 you can run installer after you've installed Visual Studio if you wanted to add other stuff.
 若你还想添加其他内容，也可以在安装 Visual Studio 后再次运行安装程序
 
-40
+37
 00:02:14,875 --> 00:02:19,939
-See look, even the installer itself wants to update, so right now just coincidentally, 
-看看，即使安装程序本身需要更新，当然现在只是巧合，
+See look, even the installer itself wants to update, so right now just coincidentally
+你看，即使安装程序本身需要更新，当然这只是巧合
 
-41
+38
 00:02:20,675 --> 00:02:24,098
 the installer has new stuff that it wants to give me.
 安装程序也会有一些新东西
 
-42
+39
 00:02:24,098 --> 00:02:26,875
 So it's gonna go and update itself, while it's doing that
-它会自动更新，就像现在这样，
+它会自动更新，就像现在这样
 
-43
+40
 00:02:26,875 --> 00:02:29,248
 you download this thing called a bootstrapper.
 你在下载这个叫做 bootstrapper 的东西
 
-44
+41
 00:02:29,248 --> 00:02:32,875
 It's a tiny little installer that goes and gets the things that you want.
 这是一个小小的安装程序，可以获取你想要的东西
 
-45
+42
 00:02:33,144 --> 00:02:39,400
-Visual Studio could be quite large if you installed everything or it could install in 20 minutes 
+Visual Studio could be quite large if you installed everything or it could install in 20 minutes
 如果你安装了所有内容， Visual Studio 可能会非常大，如果想在在20分钟内完成安装的话
 
-46
+43
 00:02:39,400 --> 00:02:42,250
 if you just wanted to do web apps or you just wanted to do Windows apps.
 只安装 Web 应用程序，或者 Windows 应用程序就可以了
 
-47
+44
 00:02:42,853 --> 00:02:45,025
 So this allows you to customize your install.
 也就是说，它允许你自定义安装
 
-48
-00:02:45,025 --> 00:02:45,029
+45
+00:02:45,025 --> 00:02:49,200
 Exactly, and the things that you customize them with are called workloads
 确切地说，你自定义选择的东西称为工作负载
 
-49
-00:02:45,029 --> 00:02:49,200
-Exactly, and the things that you customize them with are called workloads
-确切地说，你自定义选择的东西称为工作负载
-
-50
+46
 00:02:49,750 --> 00:02:53,435
 like the cloud workload or the mobile device workload.
 如云工作负载或移动设备工作负载
 
-51
+47
 00:02:53,625 --> 00:02:55,575
 There you go, it just updated itself
 让我们继续吧，它已经完成了自动更新
 
-52
+48
 00:02:56,425 --> 00:03:02,250
 you can see that I have at the time of this recording, Visual Studio Community 15.4.
 你可以看到我在录制时，版本号为 Visual Studio Community 15.4
 
-53
+49
 00:03:03,050 --> 00:03:04,741
 You should make sure that you have at least that or higher.
 你应该确保你的版本应该至少比这个更高
 
-54
+50
 00:03:05,075 --> 00:03:09,581
 If I click on Modify it's gonna give me some more choices.
 如果我点击修改它会给我一些更多的选择
 
-55
+51
 00:03:11,200 --> 00:03:19,013
 And I'm doing this of course after the fact I picked Universal Windows, I picked .NET desktop I picked ASP.Net
 在这次课程前，我安装了通用 Windows 应用、 .NET 桌面程序以及 ASP.NET
 
-56
+52
 00:03:19,013 --> 00:03:23,400
 But you can see so many other options, you have Python, Node, Data Science.
 但是你可以看到很多其他的选择，比如说有 Python 、 Node 、 Data Science 之类的
 
-57
+53
 00:03:23,685 --> 00:03:25,575
 And I could add these things afterwards
 我可以在之后再添加这些模块
 
-58
+54
 00:03:25,575 --> 00:03:31,950
 so if I wanted to do Linux development C++ I would click that and it will update and tell me.
 所以如果我想在 Linux 下开发 C++ ，我会选中它，然后就会提示我更新
 
-59
+55
 00:03:31,950 --> 00:03:36,485
 Right now, it's thinking about how much more it needs to download in order to get me that stuff.
 现在，它正在计算下载这些东西需要多少容量
 
-60
+56
 00:03:36,805 --> 00:03:43,550
 And then from within that you can go into individual components and pick on the specific things that you want,
 然后从这里你可以选择单个组件或选择你想要的特定工具
 
-61
+57
 00:03:43,900 --> 00:03:45,701
 so you see, I've selected #F as well.
 所以你看，我也选择了 F#
 
-62
+58
 00:03:47,300 --> 00:03:49,000
-This can be run multiple times 
+This can be run multiple times
 这一流程可以运行多次
 
-63
+59
 00:03:49,400 --> 00:03:54,341
 and I just wanted to point out that I ran it and installed the web workload.
 我只想指出我运行它并安装了 Web 工作负载
 
-64
+60
 00:03:54,341 --> 00:03:57,075
 So installing the web workload when went
 所以在安装好 Web 工作负载之后
 
-65
-00:03:57,075 --> 00:04:01,925
+61
+00:03:57,075 --> 00:04:01,933
 File > New > Project is what gives me this choice here for saying, Web pages.
 你将会在文件 > 新建 > 项目下看到 Web 页面的选项
 
-66
-00:04:01,925 --> 00:04:01,933
-File > New > Project is what gives me this choice here for saying, Web pages.
+62
+00:04:01,933 --> 00:04:10,025
+So Visual C# > Web pages, and I've got the ASP.NET Web Applications using the .NET Framework,
 到 Visual C# > Web 页面，我看到使用 .NET Framework 的 ASP.NET Web 应用程序
 
-67
-00:04:01,933 --> 00:04:10,017
-So Visual C# > Web pages, and I've got the ASP.NET Web Applications using the .NET Framework, 
-到 Visual C# > Web 页面，我看到使用 .NET Framework 的 ASP.NET Web 应用程序
-
-68
-00:04:10,017 --> 00:04:10,025
-So Visual C# > Web pages, and I've got the ASP.NET Web Applications using the .NET Framework, 
-
-69
+63
 00:04:10,025 --> 00:04:11,350
 the full framework that comes with Windows.
 Windows 附带完整的 .NET Framework 框架
 
-70
+64
 00:04:11,350 --> 00:04:16,674
 Or ASP.NET Core Web Apps, which work on of course Linux and Mac
-或者是 ASP.NET Core Web Apps ，它们当然适用于 Linux ， Mac 
+或者是 ASP.NET Core Web Apps ，它们当然适用于 Linux\Mac
 
-71
+65
 00:04:16,674 --> 00:04:18,075
 and Windows, which is what we're doing today
 以及 Windows ，这就是我们今天所要用的
 
-72
+66
 00:04:19,301 --> 00:04:20,600
 -All right -Good stuff
 -好的 -很好
 
-73
+67
 00:04:20,975 --> 00:04:26,570
 I'm gonna double-click on that, I've said File > New Project and it's gonna pop up a dialogue here.
 我要双击它，根据 文件 > 新项目 ，它会在这里弹出对话
 
-74
+68
 00:04:26,570 --> 00:04:29,825
 You're gonna wanna double check this dropdown
 你需要仔细检查这个下拉列表
 
-75
+69
 00:04:29,825 --> 00:04:35,429
 you might have its default to core 1.0 or 1.1, you're gonna wanna be 2.0 or higher.
-你的默认设置可能是 core 1.0 或 1.1，而你需要使用 2.0 或更高
+你的默认设置可能是 core 1.0 或 1.1 ，而你需要使用 2.0 或更高
 
-76
+70
 00:04:36,100 --> 00:04:40,650
 You'll notice that the icons change based on what you pick, I could make Angular apps, React.js apps
 你会注意到这些图标会根据你选择的内容而改变
 
-77
+71
 00:04:40,650 --> 00:04:45,900
 I could make full Model View Controller applications.
 我可以制作 Angular 应用程序， React.js 应用程序，或是完整的 MVC 应用程序
 
-78
+72
 00:04:45,900 --> 00:04:51,775
 We're just gonna say Web App, which is the default, this gives us both Razor Pages that we're doing today.
 这里我们只用 Web App ，这是默认设置，它为我们提供了今天将要用的 Razor Pages
 
-79
+73
 00:04:52,204 --> 00:04:57,250
 And of course, Razor Pages are a part of or built on top of Model View Controller
 当然，Razor Pages 是 MVC 的一部分或者说基于 MVC
 
-80
+74
 00:04:57,250 --> 00:05:02,075
 so it's really the best choice for everybody, the most recent project template.
 所以它会是每个人的最佳选择，即最新的项目模板
 
-81
+75
 00:05:02,892 --> 00:05:06,476
 And if you were doing that from the command line, do you remember what the command was for that?
 如果你是在命令行中执行此操作，你还记得该怎么用吗？
 
-82
+76
 00:05:07,075 --> 00:05:10,124
--Razor -dotnet new razor, exactly
--Razor -dotnet new razor ,很好
+-Razor -dotnet new razor -exactly
+-Razor -dotnet new razor -很好
 
-83
+77
 00:05:10,828 --> 00:05:12,236
 Okay, so I'll double click on that.
 好的，而在这里我只需双击它
 
-84
+78
 00:05:14,156 --> 00:05:18,764
 And when we create that, we're gonna watch the right-hand side over here where it says Solution Explorer.
 当我们创建它时，我们将在右侧看到解决方案资源管理器
 
-85
+79
 00:05:19,775 --> 00:05:24,275
 This will get you the same output as if you had said, dotnet new razor
 这和你使用 dotnet new razor 获得的是相同的效果
 
-86
+80
 00:05:24,900 --> 00:05:28,400
- this is important that dotnet new web or dotnet new mvc.
+this is important that dotnet new web or dotnet new mvc.
 这对 dotnet new web 和 dotnet new mvc 来说是很重要的
 
-87
+81
 00:05:28,400 --> 00:05:29,644
 It's the same experience.
 体验是一致的
 
-88
+82
 00:05:29,644 --> 00:05:32,000
-It's the same experience, you don't wanna have a different experience 
+It's the same experience, you don't wanna have a different experience
 对，这是一样的体验，你不会希望使用 Visual Studio code 的人
 
-89
+83
 00:05:32,000 --> 00:05:35,850
 for Visual Studio code people than you do for Visual Studio proper people.
 拥有与 Visual Studio 的专业人员有不同的体验
 
-90
-00:05:36,201 --> 00:05:41,612
+84
+00:05:36,201 --> 00:05:40,625
 But templating does match cuz before you had to use a bit of yeoman over in one place.
 且输出的模板都是相匹配的，而在之前你需要在某个地方使用 yeoman 来实现
 
-91
-00:05:41,612 --> 00:05:43,596
+85
+00:05:40,625 --> 00:05:43,075
 Right, all templating is matched and it's nice and clean.
 对，所有模板都是匹配的，这样既便利又整洁
 
-92
-00:05:43,596 --> 00:05:53,068
-Here's a little helper page that shows up there, but we're gonna zoom over here and see how Visual Studio for Windows expresses itself.
-在这显示了一个小的帮助页面，但让我们把这里放大，看看 Visual Studio for Windows 是如何展示这个项目的
+86
+00:05:43,350 --> 00:05:48,500
+Here's a little helper page that shows up there, but we're gonna zoom over here
+在这显示了一个小的帮助页面，但让我们把这里放大
 
-93
+87
+00:05:48,500 --> 00:05:53,068
+and see how Visual Studio for Windows expresses itself.
+看看 Visual Studio for Windows 是如何展示这个项目的
+
+88
 00:05:54,476 --> 00:05:59,050
 You can see we've got a couple more pages than before, we've got an About and a Contact page.
 你可以看到我们得到了比以前更多的页面，我们看到有 About 以及 Contact 页面
 
-94
+89
 00:05:59,425 --> 00:06:04,481
 And where would those pads be, given what we learned about Razor pads?
 那根据我们对 Razor 路由的了解，这些页面的路由应该是什么？
 
-95
+90
 00:06:04,850 --> 00:06:09,138
 /About, /Context, /Error, /Index would be default.
 /About ， /Context ， /Error ，其中 /Index 将是默认页面
 
-96
+91
 00:06:09,138 --> 00:06:16,946
 Index would be default, exactly, right, now interestingly, these have something underneath them.
 很好， Index 页面将会是默认页面，现在有趣的是，在这些页面的下方还有东西
 
-97
-00:06:16,946 --> 00:06:17,714
-Yeah.
-嗯？
+92
+00:06:17,275 --> 00:06:20,525
+So these are the code behinds or the page models, that's the page
+这是在页面之后的代码，或者叫做页面模型，这是页面，而这是页面模型
 
-98
-00:06:17,778 --> 00:06:24,370
-So these are the code behinds or the page models, that's the page and that's the page model and they've nested those.
-这是在页面之后的代码，或者叫做页面模型，这是页面，而这是页面模型，它们会镶嵌在一起
+93
+00:06:21,200 --> 00:06:23,550
+and that's the page model and they've nested those.
+它们会镶嵌在一起
 
-99
-00:06:24,370 --> 00:06:31,474
-This is an important little thing to point out, let's look at this in Windows Explorer just to make sure, if I say open in Windows Explorer.
-这里有个细节值得注意一下，让我们在资源管理器中再确认一下这些文件，让我这选择 在资源管理器中打开
+94
+00:06:23,850 --> 00:06:25,925
+This is an important little thing to point out
+这里有个细节值得注意一下
 
-100
+95
+00:06:26,400 --> 00:06:31,474
+let's look at this in Windows Explorer just to make sure, if I say open in Windows Explorer.
+让我们在资源管理器中再确认一下这些文件，让我这选择 在资源管理器中打开
+
+96
 00:06:31,474 --> 00:06:33,010
 It should appear as two separate files?
 它应该显示为两个单独的文件？
 
-101
-00:06:33,010 --> 00:06:35,186
+97
+00:06:33,450 --> 00:06:34,575
 They are two separate files.
 它们是两个独立的文件
 
-102
-00:06:35,186 --> 00:06:42,098
+98
+00:06:34,575 --> 00:06:41,650
 So here's Index and Index.cshtml, they are clearly two separate files.
 这里有 Index 以及 Index.cshtml ，它们显然是两个独立的文件
 
-103
-00:06:42,098 --> 00:06:55,346
-But it's convenient and it gives you a sense of the relationship between the files that the Solution Explorer in Visual Studio will go and nest them.
-但在这却很方便，通过 Visual Studio 中的资源管理器，你可以清楚地看到文件之间的关系并将其隐藏起来
+99
+00:06:42,675 --> 00:06:47,000
+But it's convenient and it gives you a sense of the relationship
+但在这却很方便，通过 Visual Studio 中的资源管理器
 
-104
-00:06:55,346 --> 00:06:58,546
+100
+00:06:47,725 --> 00:06:54,375
+between the files that the Solution Explorer in Visual Studio will go and nest them.
+你可以清楚地看到文件之间的关系并将其隐藏起来
+
+101
+00:06:54,675 --> 00:06:58,050
 So could you think about as the car and then the engine?
 所以你能联想到汽车和发动机之间的关系吗？
 
-105
-00:06:58,610 --> 00:07:08,274
-Yeah, you could do that, anything that is any hierarchy, and then beneath that .cs, it gets even more interesting, it turns into a class explorer.
-是的，你可以这么理解，任何东西都会有层次结构，然后再往 .cs 之下探索将更有趣，它变成了一个类浏览器
+102
+00:06:58,825 --> 00:07:04,475
+Yeah, you could do that, anything that is any hierarchy, and then beneath that .cs
+是的，你可以这么理解，任何东西都会有层次结构，然后再往 .cs 之下探索将更有趣
 
-106
-00:07:08,338 --> 00:07:09,490
+103
+00:07:04,475 --> 00:07:08,575
+it gets even more interesting, it turns into a class explorer.
+它变成了一个类浏览器
+
+104
+00:07:08,575 --> 00:07:09,490
 Okay.
 好的
 
-107
+105
 00:07:09,490 --> 00:07:12,178
 These are not files, of course that's a property and that's a method.
 这些不是文件，显然这是一个属性，而这是一个方法
 
+106
+00:07:14,802 --> 00:07:19,445
+But now we're blurring the lines and now you're really looking at conceptual bits of things
+但现在我们正在逐步深入，你可以看到一些概念性的东西，而当你修改文件之后
+
+107
+00:07:19,825 --> 00:07:22,418
+as you make change those will update.
+这些信息都将会更新
+
 108
-00:07:14,802 --> 00:07:22,418
-But now we're blurring the lines and now you're really looking at conceptual bits of things, as you make change those will update.
-但现在我们正在逐步深入，你可以看到一些概念性的东西，而当你修改文件之后，这些信息都将会更新
+00:07:22,930 --> 00:07:28,527
+So that's something that you see in Visual Studio that you don't see in Visual Studio Code
+因此，你可以在 Visual Studio 中看到一些在 Visual Studio Code 中不曾看到过的东西
 
 109
-00:07:22,930 --> 00:07:31,314
-So that's something that you see in Visual Studio that you don't see in Visual Studio Code, I can do that with all my C# classes.
-因此，你可以在 Visual Studio 中看到一些在 Visual Studio Code 中不曾看到过的东西，且我可以对我所有的 C# 类进行此操作
+00:07:29,300 --> 00:07:31,314
+I can do that with all my C# classes.
+且我可以对我所有的 C# 类进行此操作
 
 110
-00:07:31,378 --> 00:07:36,114
+00:07:31,975 --> 00:07:35,775
 So remember before Startup and ConfigureServices and all that.
 还记得之前的 Startup 和 ConfigureService 以及所有的这些嘛
 
 111
-00:07:36,114 --> 00:07:36,690
-Yeah.
-当然
+00:07:35,775 --> 00:07:37,225
+-Yeah -Same kinda deal
+-当然 -类似的
 
 112
-00:07:36,690 --> 00:07:43,410
-Same kinda deal, also things like our appsettings.json which we used earlier in the previous module for configuration.
-类似的，像我们之前在上一个章节中用于配置的 appsettings.json
+00:07:38,225 --> 00:07:43,410
+also things like our appsettings.json which we used earlier in the previous module for configuration.
+像我们之前在上一个章节中用于配置的 appsettings.json
 
 113
-00:07:45,458 --> 00:07:55,058
-If there is something that has an environment, like appsettings.production.json or appsettings.json, that's something we didn't yet talk about.
-如果在这还标明了环境，比如 appsettings.production.json 或 appsettings.json ，那就是我们还没有谈到的东西
+00:07:45,458 --> 00:07:53,425
+If there is something that has an environment, like appsettings.production.json or appsettings.json
+如果在这还标明了环境，比如 appsettings.production.json 或 appsettings.json
 
 114
-00:07:55,122 --> 00:07:55,698
+00:07:53,425 --> 00:07:54,872
+that's something we didn't yet talk about.
+那就是我们还没有谈到的东西
+
+115
+00:07:54,872 --> 00:07:55,448
 No.
 确实没有
 
-115
-00:07:55,762 --> 00:08:01,970
-Remember before when I did that I commented that line out so that I could see the-
-记得之前，我注释掉了一行，以便看到 -
-
 116
-00:08:01,970 --> 00:08:04,530
+00:07:55,448 --> 00:08:01,970
+Remember before when I did that I commented that line out so that I could see
+记得之前，我注释掉了一行，以便看到
+
+117
+00:08:02,250 --> 00:08:04,530
 The exception page, yeah.
 异常页面，是嘛
 
-117
-00:08:04,594 --> 00:08:06,514
+118
+00:08:04,594 --> 00:08:06,000
 Exceptions, where was that, do you remember where that was?
 异常，那是在哪儿，你记得是什么地方吗？
 
-118
-00:08:06,514 --> 00:08:10,034
+119
+00:08:06,000 --> 00:08:10,034
 Yeah, I believe it was in your Startup.
 嗯，我猜在你的 Startup 里面
 
-119
-00:08:11,442 --> 00:08:12,658
->> There it is. >> Yeah.
->> 它就在那里 >> 是的
-
 120
-00:08:12,658 --> 00:08:19,122
-So here's UseDeveloperExceptionPage and if you recall, it was if you're in development do that.
-所以这里就是 UseDeveloperExceptionPage ，如果你回想一下，它只会在开发环境中执行
+00:08:11,442 --> 00:08:12,325
+-There it is -Yeah
+-它就在那里 -是的
 
 121
-00:08:19,122 --> 00:08:22,450
+00:08:12,325 --> 00:08:16,901
+So here's UseDeveloperExceptionPage and if you recall
+所以这里就是 UseDeveloperExceptionPage ，如果你回想一下
+
+122
+00:08:16,901 --> 00:08:19,122
+it was if you're in development do that.
+它只会在开发环境中执行
+
+123
+00:08:19,122 --> 00:08:22,125
 Every time we ran the thing it kept saying we were in production.
 可每次我们运行的时候，它都是会显示我们正在生产环境中
 
-122
-00:08:22,450 --> 00:08:23,026
+124
+00:08:22,125 --> 00:08:22,725
 Yes.
 是的
 
-123
-00:08:23,026 --> 00:08:24,690
+125
+00:08:23,225 --> 00:08:24,500
 I grew frustrated.
-这让我非常伤心
+这让我非常伤心~
 
-124
-00:08:25,010 --> 00:08:31,026
+126
+00:08:25,010 --> 00:08:30,550
 And I went just like that, which got me past that problem but isn't correct.
 然后我就这样做了，这让我解决了这个问题，但并不是正确的做法
 
-125
-00:08:31,858 --> 00:08:32,370
-Okay.
-行吧
-
-126
+127
 00:08:32,882 --> 00:08:39,282
 We're going right click, properties, and is it build or is it debug?
 让我们右键，属性，它是在构建还是调试中？
 
-127
-00:08:41,266 --> 00:08:43,250
->> Go to- >> Debug.
->> 转到 - >> 调试
-
 128
-00:08:43,250 --> 00:08:45,106
+00:08:41,266 --> 00:08:43,250
+-Go to -Debug
+-转到 -调试
+
+129
+00:08:43,250 --> 00:08:44,575
 There we go and then you add it.
 到这个页面后，你再添加它
 
-129
-00:08:45,170 --> 00:08:51,890
-Yeah, so the environment variable ASPNETCORE_ENVIRONMENT equals Development is the thing that makes the difference.
-是的，所以将环境变量 ASPNETCORE_ENVIRONMENT 设置为 Development 会有所不同
-
 130
-00:08:51,890 --> 00:08:59,186
+00:08:44,850 --> 00:08:48,775
+Yeah, so the environment variable ASPNETCORE_ENVIRONMENT equals Development
+是的，所以将环境变量 ASPNETCORE_ENVIRONMENT 设置为 Development
+
+131
+00:08:49,250 --> 00:08:51,500
+Is the thing that makes the difference.
+会有所不同
+
+132
+00:08:51,890 --> 00:08:58,996
 So tying that back to configuration, you can have different configuration options.
 将其与配置相关联，你可以拥有不同的配置选项
 
-131
+133
 00:08:59,250 --> 00:09:02,386
 You can have appsettings.Whatever.
 你可以有 appsettings.Whatever
 
-132
+134
 00:09:02,450 --> 00:09:04,754
 And whatever, literally whatever, like foo.
 whatever 就真的是任意内容，像 foo 也行
 
-133
+135
 00:09:04,754 --> 00:09:05,458
-Anything.
+Anything
 任何东西
 
-134
+136
 00:09:05,458 --> 00:09:06,418
 Testing, staging.
 测试，分期
 
-135
+137
 00:09:06,418 --> 00:09:07,122
 Okay.
 好的
 
-136
+138
 00:09:07,186 --> 00:09:08,466
 Right, whatever makes you happy.
 嗯，只要你高兴写什么都行
 
-137
+139
 00:09:08,466 --> 00:09:13,074
 So in this case here, one appsettings.json, has some stuff in it.
 在这种情况下，一个 appsettings.json 将包含一些东西
 
-138
+140
 00:09:15,350 --> 00:09:17,980
 Looks like it's got, oops, wrong button.
 看起来它有，哎呀，按错了
 
-139
-00:09:20,092 --> 00:09:21,884
+141
+00:09:19,875 --> 00:09:21,725
 Some logging that we'll learn about a little later.
 我们将在稍后再来了解日志记录
 
-140
-00:09:23,804 --> 00:09:25,788
-And then Development.
-然后是 Development 的配置
-
-141
-00:09:25,788 --> 00:09:26,812
-Look at the difference between the two.
-看看两者之间的区别
-
 142
-00:09:26,812 --> 00:09:29,052
+00:09:23,975 --> 00:09:26,075
+And then Development.Look at the difference between the two.
+然后是 Development 的配置，看看两者之间的区别
+
+143
+00:09:26,075 --> 00:09:29,052
 One is set for Warning and one is set for Debug.
 一个设置为 Warning，一个设置为 Debug
 
-143
-00:09:29,052 --> 00:09:29,756
+144
+00:09:29,052 --> 00:09:30,125
 Wow, okay.
 哇，原来这样啊
 
-144
-00:09:29,756 --> 00:09:32,252
+145
+00:09:30,125 --> 00:09:32,252
 Right, so a little bit of information there.
 对，那还有一些信息
 
-145
-00:09:32,252 --> 00:09:36,220
+146
+00:09:32,252 --> 00:09:36,000
 So more sophisticated than what we had originally set up.
 这比我们最初建立的要更复杂
 
-146
-00:09:36,284 --> 00:09:39,100
+147
+00:09:36,650 --> 00:09:39,100
 Let's return over to Startup and see what else is different.
 让我们回到 Startup ，看看还有什么不同
 
-147
+148
 00:09:41,980 --> 00:09:45,692
 So we've got that configuration that we did before.
 就像我们之前所做的一样，我们有 Configuration 对象
 
-148
-00:09:45,692 --> 00:09:48,828
+149
+00:09:46,000 --> 00:09:48,828
 We've got services.AddMVC.
 我们有 services.AddMVC
 
-149
-00:09:48,828 --> 00:09:52,988
+150
+00:09:49,525 --> 00:09:52,650
 Here's an exception here, this is an interesting little bit of code right here.
 在这有个异常处理，这是一小段有趣的代码
 
-150
-00:09:53,052 --> 00:09:58,620
+151
+00:09:53,475 --> 00:09:58,350
 So if we're in development, show the exception page that I like as a developer.
 如果我们正在开发中，就显示开发人员最喜爱的异常处理页面
 
-151
-00:09:58,620 --> 00:10:06,812
+152
+00:09:59,295 --> 00:10:06,225
 Or if you're in production or really anything but development, we're just gonna show the error.
 或者当你们正处于生产环境或除了开发之外的环境中时，我们将只显示这个错误
 
-152
+153
 00:10:06,812 --> 00:10:09,564
 That way we don't give away our source code and show people stuff.
 这样我们就不会泄露我们的源代码，也不会向外人展示一些东西
 
-153
+154
 00:10:10,780 --> 00:10:13,660
 Now you had me use UseMVC before.
 你在此之前让我用过 UseMVC
 
-154
+155
 00:10:13,660 --> 00:10:14,428
 Yes.
 是的
 
-155
+156
 00:10:14,428 --> 00:10:17,372
 This one has a little bit more information with different routes.
 这里包含了处理不同路由的用法
 
-156
+157
 00:10:18,140 --> 00:10:19,932
 We'll talk about that another time.
 我们会在其他章节中再来讨论
 
-157
-00:10:19,996 --> 00:10:23,772
+158
+00:10:19,996 --> 00:10:23,375
 And then we've also got static files in case you wanted to pick a file.
 然后我们使用了静态文件，以便你想要获取一个文件
 
-158
-00:10:23,836 --> 00:10:28,124
-Remember that couple of times we tried to pick up a file and it was skipping right past it cuz we didn't put the at page?
-请记住，有几次我们试图获取一个文件，但却被跳过了，就是因为我们没有在这使用它？
-
 159
-00:10:28,124 --> 00:10:29,340
+00:10:23,375 --> 00:10:26,525
+Remember that couple of times we tried to pick up a file
+请记住，有几次我们试图获取一个文件，但却被跳过了
+
+160
+00:10:26,525 --> 00:10:28,850
+and it was skipping right past it cuz we didn't put the at page?
+就是因为我们没有在这使用它？
+
+161
+00:10:28,850 --> 00:10:29,340
 Yes.
 是的
 
-160
-00:10:29,404 --> 00:10:35,222
+162
+00:10:30,182 --> 00:10:34,900
 It would have served that file if it found it on disk, if we had said StaticFiles.
 当我们使用了 StaticFiles 后，如果程序能在磁盘上找到这个文件，它就会提供该文件
 
-161
-00:10:35,222 --> 00:10:41,050
+163
+00:10:34,900 --> 00:10:41,050
 So if we had added that line of code into the previous experiment it would have just worked?
 那么，如果我们将这行代码添加到上一个试验中，它是否会起作用？
 
-162
+164
 00:10:41,050 --> 00:10:41,818
 It wouldn't have worked.
 它不会奏效
 
-163
+165
 00:10:41,818 --> 00:10:44,058
 It would have picked the file up and served it to us.
 它会找到文件并将其提供给我们
 
-164
+166
 00:10:44,058 --> 00:10:46,682
 But it would have picked it up as a static file.
 但它会把它当作一个静态文件
 
-165
+167
 00:10:46,682 --> 00:10:48,282
 And that didn't work like it intended, okay.
 好吧，这并不符合预期
 
-166
+168
 00:10:48,346 --> 00:10:50,714
 And not as a Razor page and actually executed the code.
 而不是作为 Razor 页面来执行代码
 
-167
+169
 00:10:51,354 --> 00:10:54,106
 So the order of these things matter.
 所以这些事情的顺序很重要
 
-168
-00:10:54,170 --> 00:11:01,146
-And also whether or not you want to run that or pick it up as a static file, like a gif or an html page, all right?
-比如你是想要运行它还是将其作为静态文件（比如 gif 或 html 页面）来提供，对吗？
+170
+00:10:54,170 --> 00:10:58,312
+And also whether or not you want to run that or pick it up as a static file
+比如你是想要运行它还是将其作为静态文件（比如 gif 或 html 页面）
 
-169
+171
+00:10:58,312 --> 00:11:01,146
+like a gif or an html page, all right?
+来提供，对吗？
+
+172
 00:11:02,618 --> 00:11:03,558
 So that's a little bit of a tour.
 所有在这一次探索过程中
 
-170
+173
 00:11:03,558 --> 00:11:05,030
 Am I missing anything?
 我有漏掉什么吗？
 
-171
+174
 00:11:07,334 --> 00:11:08,425
 I think that sounds good.
 我觉得应该没了
 
-172
+175
 00:11:08,425 --> 00:11:09,321
 That's good.
 那很好
 
-173
+176
 00:11:09,638 --> 00:11:10,500
 Actually one other point.
 其实还有一点
 
-174
+177
 00:11:10,837 --> 00:11:14,357
 Underneath wwwroot, that's where your static things go.
 在 wwwroot 目录下，这些就是静态的文件
 
-175
-00:11:14,421 --> 00:11:17,557
+178
+00:11:14,421 --> 00:11:17,925
 We've got our images there and our css.
 我们有我们的图像和我们的 CSS
 
-176
-00:11:17,557 --> 00:11:22,741
+179
+00:11:18,362 --> 00:11:22,741
 The pages, the static things are served out of root.
 这些页面以及静态文件都是在 root 目录中
 
-177
+180
 00:11:23,381 --> 00:11:28,245
-And then the pages for our razor pages app, it's located in Pages.
+And then the pages for our razor pages app, it's located in Pages
 然后我们的 Razor 页面，将位于 Pages 文件夹
 
-178
-00:11:28,245 --> 00:11:35,816
-But when I wanna have an image like /images, /something, it's served out of wwwroot.
+181
+00:11:28,500 --> 00:11:35,816
+But when I wanna have an image like /images, /something, it's served out of wwwroot
 但是，当我想获得一个图片，比如 /images 或 /something ，这些都将由 wwwroot 提供
 
-179
-00:11:35,816 --> 00:11:40,104
+182
+00:11:35,816 --> 00:11:40,425
 So, there is one thing that's new, is the view imports, layouts.
 然后，这还有一个新的知识点，就是页面导入和布局
 
-180
-00:11:40,104 --> 00:11:41,064
+183
+00:11:40,750 --> 00:11:41,710
 Good point.
 说的好
 
-181
-00:11:41,064 --> 00:11:53,288
-So, remember when we were goofing around earlier, and over here we had our @page and we had @inject, and that wasn't enough, and then we needed an @using?
-还记得在我们早些试验的时候，在这儿我们使用了 @page 以及 @inject ，但这还不够，我们还需要使用 @using
+184
+00:11:42,050 --> 00:11:50,300
+So, remember when we were goofing around earlier, and over here we had our @page and we had @inject
+还记得在我们早些试验的时候，在这儿我们使用了 @page 以及 @inject
 
-182
-00:11:53,288 --> 00:11:57,512
+185
+00:11:50,300 --> 00:11:53,288
+and that wasn't enough, and then we needed an @using?
+但这还不够，我们还需要使用 @using
+
+186
+00:11:53,925 --> 00:11:58,150
 And then suddenly we have more directives, then we had code?
 然后突然我们还有了更多的指令，再然后我们还会有一些代码？
 
-183
-00:11:57,512 --> 00:11:58,152
+187
+00:11:58,150 --> 00:11:58,750
 Yeah.
 是啊
 
-184
-00:11:58,152 --> 00:11:59,624
+188
+00:11:58,750 --> 00:12:00,275
 That was a little weird.
 那有点奇怪
 
-185
-00:11:59,624 --> 00:12:09,544
+189
+00:12:01,172 --> 00:12:09,544
 Well, you can do a thing called Viewimports which is all of that things that you want every page to have.
 好吧，你可以创建一个名为Viewimports的文件，这些就是你希望每个页面都有的东西
 
-186
-00:12:09,544 --> 00:12:13,832
+190
+00:12:10,750 --> 00:12:13,832
 Right, so we want every page to use this namespace.
 是的，所以我们希望每个页面都使用这个命名空间
 
-187
-00:12:13,896 --> 00:12:19,912
+191
+00:12:14,325 --> 00:12:19,912
 And every other one to, this is using a name space and this is the name space of those pages themselves.
 而且对每个页面来说，这是使用名称空间，这是这些页面本身的名称空间
 
-188
-00:12:19,912 --> 00:12:24,904
+192
+00:12:19,912 --> 00:12:25,250
 There's also a thing called tag helpers that we'll talk about in the intermediate today.
 这还有一个叫做标签帮助器的东西，我们将在中间件中讨论
 
-189
-00:12:24,904 --> 00:12:25,736
+193
+00:12:25,250 --> 00:12:26,025
 Yes we will.
 是，我们会的
 
-190
-00:12:25,736 --> 00:12:32,648
+194
+00:12:26,900 --> 00:12:33,725
 And then ViewStart is a piece of code, multiple lines.
 然后 ViewStart 是一段多行代码
 
-191
-00:12:32,648 --> 00:12:36,488
+195
+00:12:33,725 --> 00:12:37,207
 As many as you like, that runs for every view.
 你可以写任意的代码，这些将在每个页面中运行
 
-192
-00:12:36,488 --> 00:12:37,256
+196
+00:12:37,207 --> 00:12:37,700
 Okay.
 好的
 
-193
-00:12:37,256 --> 00:12:41,672
+197
+00:12:37,975 --> 00:12:41,672
 All right. So if every view needed to check someone's name, or check for cookies or whatever.
 好吧，因此，如果每个视图都需要检查某人的姓名，或检查 cookie 或其他什么
 
-194
-00:12:41,672 --> 00:12:43,208
+198
+00:12:41,672 --> 00:12:43,925
 It depends how you want to do things.
 这取决于你想做什么
 
-195
-00:12:43,208 --> 00:12:47,048
+199
+00:12:43,925 --> 00:12:47,672
 But these are the imports, all the different injects, all the different usings.
 但这些就是导入，所有不同的注入，所有不同的引用
 
-196
-00:12:47,048 --> 00:12:48,776
+200
+00:12:47,672 --> 00:12:49,625
 And this is the little bit of code you want.
 这是你想要的一些代码
 
-197
-00:12:48,776 --> 00:12:50,888
+201
+00:12:49,625 --> 00:12:51,750
 In this case here, it's setting a layout.
 在这，它讲设置布局
 
-198
-00:12:50,888 --> 00:12:57,925
+202
+00:12:52,825 --> 00:12:57,925
 That's like the main page, that every other page wraps around.
 这就像主页一样，其他的任意页面都会包含在内
 
-199
+203
 00:12:59,200 --> 00:13:12,801
 So here, _Layout.cshtml is a razor page that has the top level HTML, it has the head, it has the CSS.
 所以在这里， _Layout.cshtml 是一个 Razor 页面，它包含了最外层的 html , head 以及 CSS
 
-200
+204
 00:13:12,801 --> 00:13:14,589
 Probably has a footer somewhere.
 可能在某个地方还有一个页脚
 
-201
+205
 00:13:14,589 --> 00:13:15,613
 Yep, footer's down here.
 是的，页脚在这里
 
-202
+206
 00:13:15,613 --> 00:13:18,045
 There's some Bootstrap and some different JavaScript.
 这有一些 Bootstrap 和一些不同的 JavaScript
 
-203
-00:13:18,365 --> 00:13:22,525
+207
+00:13:18,365 --> 00:13:23,200
 And then your razor page is called the Body.
 然后你的 Razor 页面被叫做 Body
 
-204
-00:13:22,525 --> 00:13:24,189
+208
+00:13:23,200 --> 00:13:24,425
 And it's rendered right there.
 它将会在这被渲染
 
-205
-00:13:24,189 --> 00:13:24,893
+209
+00:13:24,425 --> 00:13:25,414
 It's rendered right there.
 它就在那里呈现
 
-206
-00:13:24,893 --> 00:13:26,941
-So this is a good point actually.
-这实际上是一个好主意
+210
+00:13:25,875 --> 00:13:27,875
+So this is a good point actually.Let me do this.
+这实际上是一个好主意，让我来试下
 
-207
-00:13:26,941 --> 00:13:27,581
-Let me do this.
-让我来试下
-
-208
-00:13:27,581 --> 00:13:34,301
+211
+00:13:28,808 --> 00:13:34,301
 BEGIN BODY, END BODY, okay?
 BEGIN BODY，END BODY，可以吗？
 
-209
-00:13:34,301 --> 00:13:35,197
+212
+00:13:34,301 --> 00:13:35,325
 Okay.
 可以
 
-210
-00:13:35,197 --> 00:13:36,093
+213
+00:13:35,575 --> 00:13:36,093
 Let's run this.
 让我们来运行一下吧
 
-211
+214
 00:13:39,425 --> 00:13:44,303
 So this one is a little bigger of course than our previous application.
 这比我们之前的应用程序要大一些
 
-212
+215
 00:13:44,303 --> 00:13:47,300
 So it might take a moment to fire up.
 所以可能需要一点时间才能启动
 
-213
+216
 00:13:51,934 --> 00:13:55,966
 Okay and if you go to another one of the pages, let's say the homepage.
 好的，如果你转到另一个页面，我们已经看过主页了
 
-214
+217
 00:13:55,966 --> 00:13:56,734
 Good point.
 好主意
 
-215
+218
 00:13:56,734 --> 00:13:58,078
 This is the home page, let's go to About.
 这是主页，我们去关于页面
 
-216
+219
 00:13:58,078 --> 00:13:59,678
 Yeah it should be on hook.
 是的，它应该也是一样
 
-217
+220
 00:13:59,678 --> 00:14:00,318
 Okay.
 对的
 
-218
+221
 00:14:00,382 --> 00:14:06,974
-So that's everything that's outside, and this bit here would be-
+So that's everything that's outside, and this bit here would be
 这就是外面的一切，而且这些将是来自于
 
-219
+222
 00:14:06,974 --> 00:14:08,510
 Everything coming from the page.
 一切都来自页面
 
-220
+223
 00:14:08,574 --> 00:14:09,598
 Right here.
 就在这儿
 
-221
-00:14:09,598 --> 00:14:10,558
+224
+00:14:09,598 --> 00:14:10,050
 Yeah.
-是啊
+是的
 
-222
-00:14:10,558 --> 00:14:13,886
+225
+00:14:10,050 --> 00:14:16,575
 So START MY PAGE, END MY PAGE.
 试下 START MY PAGE ， END MY PAGE
 
-223
-00:14:15,486 --> 00:14:16,766
-Make sense?
-可以吗？
+226
+00:14:19,774 --> 00:14:20,550
+-Make sense? -Yeah
+-可以吗？ -可以
 
-224
-00:14:19,646 --> 00:14:21,054
-Yeah.
-可以
-
-225
-00:14:21,054 --> 00:14:23,934
+227
+00:14:20,933 --> 00:14:23,934
 All right, cool.
 很好，很酷
 
-226
+228
 00:14:25,726 --> 00:14:29,700
 So I'm just undoing all of that, little control z,
 然后我撤消这些，只需 Ctrl + z
 
-227
+229
 00:14:30,250 --> 00:14:34,110
 and we will come back in a moment, and try to build something.
 我们将很快就会回来，然后试着做一些东西
 
-228
+230
 00:14:34,375 --> 00:14:35,911
->> Yeah. >> That is nontrivial.
->> 是的 >> 那是非常重要的
+-Yeah -That is nontrivial.
+-是的 -那是非常重要的
 
-229
+231
 00:14:35,911 --> 00:14:36,743
 Exactly.
 当然啦
 
-230
+232
 00:14:36,743 --> 00:14:38,983
 And we'll probably make a couple mistakes.
 而且我们可能会犯一些错误
 
-231
+233
 00:14:38,983 --> 00:14:40,007
 And it happens.
 它已经发生了
 
-232
+234
 00:14:40,007 --> 00:14:41,415
 And hopefully we will learn.
 希望我们能够学习些知识
 
-233
+235
 00:14:41,415 --> 00:14:43,335
 And we appreciate you learning with us.
 感谢你与我们一起学习
 
-234
+236
 00:14:43,399 --> 00:14:44,807
 Thank you.
 谢谢
