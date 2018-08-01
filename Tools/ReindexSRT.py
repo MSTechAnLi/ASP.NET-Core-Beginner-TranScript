@@ -1,4 +1,4 @@
-# 使用时将所需分割的srt文件路径作为参数
+# 使用时将需要重编号的srt文件路径作为参数
 import sys
 
 path = sys.argv[1]
