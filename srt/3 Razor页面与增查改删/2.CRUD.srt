@@ -141,57 +141,57 @@ And we gonna create a thing called AppDbContext.
 29
 00:01:58,030 --> 00:01:59,630
 We can name it whatever we want to.
-We can name it whatever we want to.
+我们可以把他命名成喜欢的名字
 
 30
 00:01:59,630 --> 00:02:02,638
 We haven't written this yet, but we will.
-We haven't written this yet, but we will.
+我们还没有写这个,但我们以后会的 
 
 31
 00:02:02,638 --> 00:02:05,902
 I'm gonna hit Ctrl+dot.
-I'm gonna hit Ctrl+dot.
+摁下 Ctrl + .
 
 32
 00:02:05,902 --> 00:02:10,382
 And it's saying, hey, do you need an AppDbContext?
-And it's saying, hey, do you need an AppDbContext?
+它会提示,嘿,你需要一个AppDbContext吗?
 
 33
 00:02:10,382 --> 00:02:12,878
 Do you wanna go and generate one of those?
-Do you wanna go and generate one of those?
+你要去生成一个吗?
 
 34
 00:02:12,878 --> 00:02:14,670
 I wanna go ahead and say yes.
-I wanna go ahead and say yes.
+我们选择,是的
 
 35
 00:02:14,670 --> 00:02:18,190
 So it's gone and done that, and we'll deal with that in a minute.
-So it's gone and done that, and we'll deal with that in a minute.
+这样系统会去生成了,我们会在一分钟内处理掉它
 
 36
 00:02:18,190 --> 00:02:22,414
 And again, I will very likely make mistakes, so you'll bear with me I hope.
-And again, I will very likely make mistakes, so you'll bear with me I hope.
+我很有可能再次犯错误,所以我希望你能原谅我
 
 37
 00:02:22,414 --> 00:02:27,214
 I opened up the parentheses there.
-I opened up the parentheses there.
+我在括号中添加内容
 
 38
 00:02:27,214 --> 00:02:28,942
 And I'm gonna pass in some options.
-And I'm gonna pass in some options.
+我将通过一些选项
 
 39
 00:02:28,942 --> 00:02:35,470
-- And the option I'm gonna pass in for my database context are options -UseInmemory.
-- And the option I'm gonna pass in for my database context are options -UseInmemory.
+-And the option I'm gonna pass in for my database context are options -UseInmemory.
+-我要在 options 中进入数据库的上下文 -UseInmemory
 
 40
 00:02:35,470 --> 00:02:37,966
@@ -206,282 +206,282 @@ MemoryDatabase.
 42
 00:02:40,462 --> 00:02:43,406
 Yes, but the reason why that's not showing,that perfect.
-Yes, but the reason why that's not showing,that perfect.
+是的,但这样写肯定是不完全的
 
 43
 00:02:43,406 --> 00:02:44,942
 -We need to add -why is that not showing up?
--We need to add -why is that not showing up?
+-我们需要添加 -为什么没有提示?
 
 44
 00:02:44,942 --> 00:02:47,806
 So we need to add the entity framework.
-So we need to add the entity framework.
+所以我们需要添加 entity framework
 
 45
 00:02:47,806 --> 00:02:49,150
 So we need to use
-So we need to use
+所以我们需要使用
 
 46
 00:02:49,150 --> 00:02:51,006
 And I probably should have added that first, and
-And I probably should have added that first, and
+可能应该说是补充,第一点
 
 47
 00:02:51,006 --> 00:02:52,158
 I would have gotten IntelliSense.
-I would have gotten IntelliSense.
+我们利用智能感知
 
 48
 00:02:52,158 --> 00:02:53,758
 -True -Let's try that.
--True -Let's try that.
+-尝试 -让我们试一下
 
 49
 00:02:53,758 --> 00:02:56,254
 If we go back up to the top.
-If we go back up to the top.
+如果我们回去了
 
 50
 00:03:00,222 --> 00:03:02,590
 So we add the EntityFrameworkCore beforehand.
-So we add the EntityFrameworkCore beforehand.
+所以我们事先添加 Entity Framework Core
 
 51
 00:03:06,300 --> 00:03:11,614
 Look, you see that little arrow there that's pointing down?
-Look, you see that little arrow there that's pointing down?
+看,你看到那个向下的小箭头?
 
 52
 00:03:12,350 --> 00:03:19,166
 That means that this method came in was included by the fact that we just did that UseIn.
-That means that this method came in was included by the fact that we just did that UseIn.
+ 这意味着,该方法包括了我们刚才添加进来的 UseIn
 
 53
 00:03:19,625 --> 00:03:22,425
 That's called an extension method,it's along for the ride.
-That's called an extension method,it's along for the ride.
+这是一个扩展方法,它在其中
 
 54
 00:03:23,070 --> 00:03:26,334
 And you see it actually says extension,that wasn't there seconds ago
-And you see it actually says extension,that wasn't there seconds ago
+你看它实际就是一个拓展，那不是几秒钟之前的事
 
 55
 00:03:26,334 --> 00:03:27,614
 No, it wasn't.
-No, it wasn't.
+不,它不是
 
 56
 00:03:27,934 --> 00:03:37,406
 Add InMemoryDatabase, some name All right,And then we look at the squiggle and we worry.
-Add InMemoryDatabase, some name All right,And then we look at the squiggle and we worry.
+添加 InMemoryDatabase 的名字,下面有一个曲线，真叫人担心
 
 57
 00:03:37,406 --> 00:03:39,582
 Does the squiggle mean something?
-Does the squiggle mean something?
+下划线的意思是什么？
 
 58
 00:03:41,600 --> 00:03:43,550
 So, here it's saying AddDbContext.
-So, here it's saying AddDbContext.
+所以,这里是说 AddDbContext
 
 59
 00:03:43,550 --> 00:03:45,598
 Well, we never really went and did anything with that AddDbContext.
-Well, we never really went and did anything with that AddDbContext.
+好吧,我们从没有真正去引用 AddDbContext。
 
 60
 00:03:45,598 --> 00:03:48,158
 Let's go over there and fix that,I'm gonna right click and say go to definition.
-Let's go over there and fix that,I'm gonna right click and say go to definition.
+我们去修复吧,点击右键去自定义
 
 61
 00:03:49,700 --> 00:03:51,294
 And let's work on our database context.
-And let's work on our database context.
+让我们搭建一个数据库环境
 
 62
 00:03:51,294 --> 00:03:55,134
 This is kind of standard stuff, so don't worry about it too much.
-This is kind of standard stuff, so don't worry about it too much.
+这是有标准对应的东西,所以不要担心太多
 
 63
 00:03:55,134 --> 00:03:58,206
 But basically this is representing the database.
-But basically this is representing the database.
+但基本上这是代表数据库 
 
 64
 00:03:59,486 --> 00:04:01,278
 I'm hitting Ctrl+dot there.
-I'm hitting Ctrl+dot there.
+我现在摁下 Ctrl+.
 
 65
 00:04:01,925 --> 00:04:07,900
 And I'll say make it an AppDbContext,this is an constructor, all right?
-And I'll say make it an AppDbContext,this is an constructor, all right?
+我会让它成为 AppDbContext ,这是一个构造函数,对吧?
 
 66
 00:04:08,225 --> 00:04:14,078
 Okay, and we're gonna take in some options.
-Okay, and we're gonna take in some options.
+好的,我们会通过一些选项
 
 67
 00:04:17,950 --> 00:04:22,375
 -ContextOptions,Oops, optoons -Options?
--ContextOptions,Oops, optoons -Options?
+-ContextOptions optoons -Options?
 
 68
 00:04:22,375 --> 00:04:27,011
 Options, pass up to the base class those options.
-Options, pass up to the base class those options.
+options ,通过 options 的基类
 
 69
 00:04:27,011 --> 00:04:28,419
 I'm gonna put that.
-I'm gonna put that.
+我要把它
 
 70
 00:04:29,075 --> 00:04:33,150
 What I'm trying to zoom and make it helpful for you, I end up making it worse for myself.
-What I'm trying to zoom and make it helpful for you, I end up making it worse for myself.
+我想放的更大一点,让你能看清楚,但是那样我自己就很难受了
 
 71
 00:04:34,238 --> 00:04:36,675
 Well, at least you have other people in mind.
-Well, at least you have other people in mind.
+好吧,至少你有别人
 
 72
 00:04:38,000 --> 00:04:41,278
 -I do. And then -You have to set it of some sort.
--I do. And then -You have to set it of some sort.
+-我这么做了 -你必须这么设置它
 
 73
 00:04:41,278 --> 00:04:45,054
 We have a set of, we're gonna say customers?
-We have a set of, we're gonna say customers?
+我们要设置，我们怎么命名？
 
 74
 00:04:45,118 --> 00:04:46,684
 So we have a set of customer.
-So we have a set of customer.
+我们命名为 Customer
 
 75
 00:04:46,684 --> 00:04:47,900
 Customer does not exist here.
-Customer does not exist here.
+Customer 并不存在
 
 76
 00:04:47,900 --> 00:04:49,576
 That's why it's squiggled out.
-That's why it's squiggled out.
+这就是为什么会出现下划线
 
 77
 00:04:50,075 --> 00:04:54,393
 And then we do a getter, setter, get ; set, okay?
-And then we do a getter, setter, get ; set, okay?
+然后我们做一个控制器和访问器,好吗?
 
 78
 00:04:54,648 --> 00:04:56,248
 Customer is squiggled out.
-Customer is squiggled out.
+Customer 出现波浪线了
 
 79
 00:04:56,248 --> 00:04:59,192
 The type or namespace 'Customer' could not be found.
-The type or namespace 'Customer' could not be found.
+类型或命名空间 "Customer" 不存在
 
 80
 00:04:59,192 --> 00:05:01,560
 Well, that's true cuz we haven't made one yet.
-Well, that's true cuz we haven't made one yet.
+真相是我们还没有去做呢！
 
 81
 00:05:01,624 --> 00:05:02,648
 We had not made it up.
-We had not made it up.
+我们没有做起来
 
 82
 00:05:02,648 --> 00:05:06,424
 l could type control dot, but l am gonna click show potential fixes.
-l could type control dot, but l am gonna click show potential fixes.
+我可以给它控制类型,但我点击显示潜在的修复
 
 83
 00:05:07,300 --> 00:05:08,664
 This is kind of interesting.
-This is kind of interesting.
+这是很有趣的
 
 84
 00:05:08,664 --> 00:05:11,224
 Here it's saying, well, I can go and make customer for you.
-Here it's saying, well, I can go and make customer for you.
+这里显示,我可以去为你去创建 customer
 
 85
 00:05:11,224 --> 00:05:12,696
 But look at this here.
-But look at this here.
+但是看看这个
 
 86
 00:05:12,696 --> 00:05:18,392
 It's suggesting other packages that have the word customer and the name customer in it.
-It's suggesting other packages that have the word customer and the name customer in it.
+建议其他的存在这个词和名称的包
 
 87
 00:05:18,392 --> 00:05:21,784
 So these are other NuGet packages,packages up in the world.
-So these are other NuGet packages,packages up in the world.
+在世界上有其他NuGet包
 
 88
 00:05:21,784 --> 00:05:22,744
 Yeah, ain't that cool?
-Yeah, ain't that cool?
+是的,这不是很棒吗?
 
 89
 00:05:22,744 --> 00:05:23,448
 That's very cool.
-That's very cool.
+这是非常酷的
 
 90
 00:05:23,448 --> 00:05:26,275
 -Package out there that has the word customer in it -Has the word customer in it
--Package out there that has the word customer in it -Has the word customer in it
+-包里面有 "customer" 这个词 -有 "customer"  这个词吗？
 
 91
 00:05:26,275 --> 00:05:27,102
 No, I don't want those.
-No, I don't want those.
+不,我不想要这些
 
 92
 00:05:27,800 --> 00:05:37,464
 But if I was doing something with JSON or doing something with some technology that I knew I will need the NuGet packages, later it will go get it for me.
-But if I was doing something with JSON or doing something with some technology that I knew I will need the NuGet packages, later it will go get it for me.
+但如果我通过 json 或其他一些技术,我知道我需要 NuGet 包,之后它就会把它给我
 
 93
 00:05:37,464 --> 00:05:40,792
 So I'm gonna say generate in new file, that seems reasonable.
-So I'm gonna say generate in new file, that seems reasonable.
+所以我要生成新的文件,似乎是合理的
 
 94
 00:05:40,792 --> 00:05:43,800
 -It does -All right, this generated that.
--It does -All right, this generated that.
+-是的 -那么来生成它吧
 
 95
 00:05:43,800 --> 00:05:45,528
 Now notice it just appeared.
-Now notice it just appeared.
+现在注意到它就出现了
 
 96
 00:05:46,025 --> 00:05:52,225
 -There it is -And now I'm gonna right click and say go to definition
--There it is -And now I'm gonna right click and say go to definition
+-这是 -现在点击右键要去定义
 
 97
 00:05:52,516 --> 00:05:56,975
 It is worth pointing out that I could also right click and say Peak Definition.
-It is worth pointing out that I could also right click and say Peak Definition.
+值得指出的是,我也可以右击然后选择 Peak Definition
 
 98
 00:05:56,975 --> 00:06:00,130
