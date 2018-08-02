@@ -486,342 +486,342 @@ It is worth pointing out that I could also right click and say Peak Definition.
 98
 00:05:56,975 --> 00:06:00,130
 -And could you write in there? -I could.
--And could you write in there? -I could.
+-你可以写在这里吗? -可以啊
 
 99
 00:06:00,130 --> 00:06:01,225
 I think that would be a little weird.
-I think that would be a little weird.
+我觉得会有点奇怪
 
 100
 00:06:01,499 --> 00:06:10,300
 But then I can click on this little tab right here Promote to Document, and now I've jumped into that document.
-But then I can click on this little tab right here Promote to Document, and now I've jumped into that document.
+但我可以点击这个小标签在这里拓展窗口,现在我已经跳转进来了
 
 101
 00:06:10,300 --> 00:06:16,175
 So I can peek and then if I type a little bit,I was like this is tiresome, then I could jump even higher.
-So I can peek and then if I type a little bit,I was like this is tiresome, then I could jump even higher.
+我可以速览内容,如果我输入一点,我觉得这是烦人的,然后我可以跳得更高
 
 102
 00:06:16,175 --> 00:06:17,757
 -That's pretty smooth. -It is pretty smooth.
--That's pretty smooth. -It is pretty smooth.
+-操作起来很流畅 -确实很舒服
 
 103
 00:06:17,821 --> 00:06:21,405
 -All right, I'll show you another smooth tip. -I know it.
--All right, I'll show you another smooth tip. -I know it.
+-好的,我将向你展示另一个提示方式 -我知道是什么
 
 104
 00:06:21,405 --> 00:06:24,413
 -Yeah? You wanna suggest? -The tab tab thing?
--Yeah? You wanna suggest? -The tab tab thing?
+-是吗，你有建议吗? -使用 tab tab
 
 105
 00:06:24,413 --> 00:06:27,741
 -Yes, ready? -Prop Tab.
--Yes, ready? -Prop Tab.
+-是的,准备好了吗? -支持 tab
 
 106
 00:06:27,741 --> 00:06:36,325
--Tab, tab -int Tab Id Enter Enter prop Tab Tab string Enter Tab Name.
--Tab, tab -int Tab Id Enter Enter prop Tab Tab string Enter Tab Name.
+Tab, tab int Tab Id Enter Enter prop Tab Tab string Enter Tab Name.
+Tab, tab int Tab Id 回车 回车 prop Tab Tab string 回车 Tab Name
 
 107
 00:06:36,325 --> 00:06:40,480
 -How cool is that? -It's cool, and I always forget to use it.
--How cool is that? -It's cool, and I always forget to use it.
+-这太酷了,不是吗? -是很酷,我总是忘记
 
 108
-00:06:40,480 --> 00:06:43,296
--You gotta use it. -I always forget to use it and it's awesome.
--You gotta use it. -I always forget to use it and it's awesome.
+00:06:40,480 --> 00:06:43,850
+-You gotta use it,There's so much good stuff in there -I always forget to use it and it's awesome.
+-你必须使用它,在里边有这么好用的东西 -我总是忘记使用它,它太棒了
 
 109
-00:06:43,296 --> 00:06:46,880
--There's so much good stuff in there. -There's also propfull.
--There's so much good stuff in there. -There's also propfull.
+00:06:43,850 --> 00:06:46,880
+There's also propfull.
+还有propfull
 
 110
-00:06:46,880 --> 00:06:50,080
+00:06:47,650 --> 00:06:50,080
 -What does that do? -That gives you a backing variable.
--What does that do? -That gives you a backing variable.
+-这做什么呢? -给你一个支持变量
 
 111
 00:06:50,080 --> 00:06:56,350
 There's propa,which I don't know what it does but it's crazy.
-There's propa,which I don't know what it does but it's crazy.
+还有 propa ,我不太知道,但它太疯狂了。
 
 112
-00:06:58,825 --> 00:07:02,400
+00:06:58,825 --> 00:07:02,750
 There's propg for a getter with a private setter.
-There's propg for a getter with a private setter.
+这个控制器有一个 get 和一个私有的 set
 
 113
-00:07:02,440 --> 00:07:04,488
+00:07:03,200 --> 00:07:04,225
 Yeah, a bunch of stuff.
-Yeah, a bunch of stuff.
+是的,很多东西
 
 114
-00:07:04,488 --> 00:07:07,624
--Have you done a blog post on all the properties
--Have you done a blog post on all the properties
+00:07:04,225 --> 00:07:07,624
+Have you done a blog post on all the properties
+你做了博客的所有属性
 
 115
 00:07:07,624 --> 00:07:10,312
 There's a bunch of snippets,I could go all day.
-There's a bunch of snippets,I could go all day.
+有很多片段,我可以做一整天
 
 116
 00:07:10,312 --> 00:07:12,680
 But I'm just gonna use prop for now.
-But I'm just gonna use prop for now.
+但是现在我要用道具
 
 117
 00:07:12,680 --> 00:07:16,584
 So this is customer, so customers have an ID,a unique ID.
-So this is customer, so customers have an ID,a unique ID.
+这是客户,所以客户有一个ID、一个惟一的ID
 
 118
 00:07:16,584 --> 00:07:18,184
 And they have a name.
-And they have a name.
+他们有一个名称
 
 119
 00:07:18,184 --> 00:07:20,552
 And they could probably have an email,they could have all these things.
-And they could probably have an email,they could have all these things.
+他们可能有一个电子邮件,这些东西都有可能有
 
 120
 00:07:20,939 --> 00:07:24,392
 We'll start with name for now, but should name have some constraints?
-We'll start with name for now, but should name have some constraints?
+我们从名字开始,但名字应该有限制吗?
 
 121
 00:07:24,392 --> 00:07:28,040
 It should,we have an idea of data annotation.
-It should,we have an idea of data annotation.
+应该是有的,我们应该做一个数据的注释
 
 122
 00:07:28,040 --> 00:07:30,088
 There's annotation on that data, yes.
-There's annotation on that data, yes.
+有注释的数据,是的
 
 123
 00:07:30,088 --> 00:07:33,096
 So one of the things is that you probably want someone to enter their name, right?
-So one of the things is that you probably want someone to enter their name, right?
+要做的事情中有一件事就是想让某人输入他们的名字,对吧?
 
 124
 00:07:33,096 --> 00:07:38,408
 -We wanna force them. -We wanna force them, so we want to make sure it some sort of required, right?
--We wanna force them. -We wanna force them, so we want to make sure it some sort of required, right?
+我们想强迫他们，我们想强迫他们,所以我们要确保某种需要,对吗?
 
 125
 00:07:38,408 --> 00:07:43,656
 So required, and I'm putting that as a notation here and I'm gonna hit Ctrl+dot, again.
-So required, and I'm putting that as a notation here and I'm gonna hit Ctrl+dot, again.
+所以需要我把这作为一个符号,点击 Ctrl+. 一下
 
 126
 00:07:43,656 --> 00:07:50,696
 When you learn that these things exist and you're thinking about them rather than typing in all this stuff for the using,you're just gonna type required.
-When you learn that these things exist and you're thinking about them rather than typing in all this stuff for the using,you're just gonna type required.
+当你学习这些东西的存在和你思考他们而不是输入使用所有这些东西,你就需要类型
 
 127
 00:07:50,696 --> 00:07:54,600
 Hit Ctrl+dot, and then hit Enter.
-Hit Ctrl+dot, and then hit Enter.
+点击 Ctrl+. 然后回车
 
 128
 00:07:54,600 --> 00:08:00,296
 Line 1 just appeared there And then we'll force the length as well.
-Line 1 just appeared there And then we'll force the length as well.
+1号线就出现了,然后我们也会迫使长度
 
 129
 00:08:00,296 --> 00:08:05,032
 We'll be silly for a moment, we'll say a length of 10.
-We'll be silly for a moment, we'll say a length of 10.
+我想一会儿,设定长度为10吧
 
 130
 00:08:05,032 --> 00:08:06,824
 That's not a very good length.
-That's not a very good length.
+这不是一个很好的长度
 
 131
 00:08:06,824 --> 00:08:08,104
 That is not a good length at all.
-That is not a good length at all.
+这不是一个合适的长度
 
 132
 00:08:08,104 --> 00:08:10,024
 But that might allow us to do some validation later.
-But that might allow us to do some validation later.
+我们先用它做一些验证
 
 133
 00:08:10,024 --> 00:08:12,072
 And then we'll change it to a longer length.
-And then we'll change it to a longer length.
+然后我们会改变它长的长度
 
 134
 00:08:12,072 --> 00:08:15,592
 All right, so let's back up for a second and see what we did here.
-All right, so let's back up for a second and see what we did here.
+好吧,让我们回到了第二个,看看我们在这里做什么
 
 135
 00:08:15,592 --> 00:08:20,520
 So we have in our start up an InMemoryDatabase.
-So we have in our start up an InMemoryDatabase.
+所以我们在启动一个 InMemoryDatabase
 
 136
-00:08:20,520 --> 00:08:22,824
+00:08:20,825 --> 00:08:22,824
 Not a SQLserver or a.
-Not a SQLserver or a.
+没有 SQL Server
 
 137
 00:08:22,824 --> 00:08:25,256
 Whatever just in memory database.
-Whatever just in memory database.
+无论在内存数据库
 
 138
 00:08:25,256 --> 00:08:37,401
 We have a beginnings of a customer, unique ID and a name Some annotations on it, and then a little class here that's kind of empty.
-We have a beginnings of a customer, unique ID and a name Some annotations on it, and then a little class here that's kind of empty.
+我们有一个客户开始,惟一 ID 和名称一些注释,然后一个小类,是空的
 
 139
 00:08:37,401 --> 00:08:43,850
 That is our a list of customers and actually what's customer Singular here.
-That is our a list of customers and actually what's customer Singular here.
+这是我们的 Customer 列表实际上这里的 Customer 有点奇怪
 
 140
 00:08:43,850 --> 00:08:45,578
 -Yeah. -That should be customers.
--Yeah. -That should be customers.
+-是的. -应该是客户
 
 141
 00:08:45,578 --> 00:08:49,375
 -Okay, because, you have a set. -This is a set of customers.
--Okay, because, you have a set. -This is a set of customers.
+-好吧,因为这必须要去设置 -这是客户的设置
 
 142
 00:08:49,375 --> 00:08:54,474
 So the one thing, how are we going to see this information?
-So the one thing, how are we going to see this information?
+还有一件事,我们怎么看到这个信息?
 
 143
 00:08:54,474 --> 00:09:01,514
 Well, we're going to need to probably put some in the database and then,once we have them in the database, list them out.
-Well, we're going to need to probably put some in the database and then,once we have them in the database, list them out.
+我们可能需要在数据库,然后放一些,一旦我们让他们在数据库列表中显示出来
 
 144
 00:09:01,514 --> 00:09:02,922
 Like how are we going to visually see it?
-Like how are we going to visually see it?
+我们如何直观地看到?
 
 145
 00:09:02,922 --> 00:09:05,610
 Yeah, so there's a bit of a chicken and the egg problem there.
-Yeah, so there's a bit of a chicken and the egg problem there.
+是的,像一个鸡和蛋的问题
 
 146
 00:09:05,610 --> 00:09:09,898
 Do we make the listing page first and list them out?
-Do we make the listing page first and list them out?
+首先我们做清单页面列表出来吗?
 
 147
 00:09:09,898 --> 00:09:12,202
 But we really can't cuz we don't have any.
-But we really can't cuz we don't have any.
+但我们不能，因为我们没有
 
 148
 00:09:12,202 --> 00:09:13,802
 -You don't anything, yeah. -Or we make a create page first.
--You don't anything, yeah. -Or we make a create page first.
+-我们啥都没有呀 -或者我们先做一个页面出来
 
 149
 00:09:13,802 --> 00:09:17,194
 -So it's CRUD. -We'll do the C first, okay?
--So it's CRUD. -We'll do the C first, okay?
+-这是 CRUD. -我们先把创建功能实现
 
 150
 00:09:17,194 --> 00:09:20,266
 -So over in -The pages folder.
--So over in -The pages folder.
+-所以在 -页面文件夹
 
 151
 00:09:20,266 --> 00:09:23,274
 Pages, let's do create.
-Pages, let's do create.
+页面,我们来创建
 
 152
 00:09:23,274 --> 00:09:26,282
 Now, we're not going to say new file like we did before.
-Now, we're not going to say new file like we did before.
+现在,我们不会说像我们之前做的新文件
 
 153
 00:09:26,282 --> 00:09:29,546
 No, you're going to create a new Razor Page or if you go to New File.
-No, you're going to create a new Razor Page or if you go to New File.
+不,你要创建一个新的 Razor 页面或者如果你创建新文件
 
 154
 00:09:29,546 --> 00:09:30,954
 Let me do that again.
-Let me do that again.
+让我做一遍
 
 155
 00:09:30,954 --> 00:09:34,026
 Right click and I have two choices I have new.
-Right click and I have two choices I have new.
+右键点击和我有新有两个选择
 
 156
 00:09:34,026 --> 00:09:35,818
 -And then. -Page or I can say item.
--And then. -Page or I can say item.
+-然后 -页面或者说项目
 
 157
 00:09:35,818 --> 00:09:36,650
 Yeah, New Item.
-Yeah, New Item.
+是的,新项目
 
 158
 00:09:36,650 --> 00:09:39,594
 And they should be the option to pick Razor Page.
-And they should be the option to pick Razor Page.
+他们应该选择 Razor 页面的选项
 
 159
 00:09:39,594 --> 00:09:43,306
 Right, so you got a couple different options here and this is all the different things that you could make.
-Right, so you got a couple different options here and this is all the different things that you could make.
+对,所以你有几个不同的选项,这是你可以做的所有的事情
 
 160
 00:09:44,077 --> 00:09:56,685
 I'm gonna go and right click and say add Razor page, and I wanna point out that I'm not gonna do it for this because it will be a little bit cheating but after we're all done, first, we make you suffer.
-I'm gonna go and right click and say add Razor page, and I wanna point out that I'm not gonna do it for this because it will be a little bit cheating but after we're all done, first, we make you suffer.
+我要和右单击,添加 Razor 页面,我想指出,我不会做这个,因为它将一点欺骗但我们都完成后,首先,我们让你受苦
 
 161
 00:09:56,685 --> 00:09:59,053
 And then we show you the easy way And then we show you the easy way
-And then we show you the easy way And then we show you the easy way
+然后我们告诉你最简单的方法,然后我们告诉你最简单的方法
 
 162
 00:09:59,334 --> 00:10:07,462
 We could create that model and say Razor page is using entity framework CRUD, and then it will then scaffold or generate.
-We could create that model and say Razor page is using entity framework CRUD, and then it will then scaffold or generate.
+我们可以创建模型和 Razor 页面 CRUD是使用实体框架,然后将支架或生成
 
 163
 00:10:07,462 --> 00:10:10,342
 -Every single -All the hard parts that we're about to do.
--Every single -All the hard parts that we're about to do.
+-每一个 -所有困难的部分,我们要做的
 
 164
 00:10:10,342 --> 00:10:14,825
 But it's more fun to do, no no,it's more fun to do it ourselves, don't you think?
-But it's more fun to do, no no,it's more fun to do it ourselves, don't you think?
+但它更有趣,不不,是更有趣的做自己,你不觉得吗?
 
 165
 00:10:15,575 --> 00:10:17,958
 -All right. -All right, lets do it ourselves.
--All right. -All right, lets do it ourselves.
+-好吧 -好吧,让我们自己做吧
 
 166
 00:10:17,958 --> 00:10:20,006
