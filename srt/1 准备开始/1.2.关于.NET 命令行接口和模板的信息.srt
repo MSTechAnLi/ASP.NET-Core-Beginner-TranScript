@@ -761,7 +761,7 @@ Alright, now there's a moment here.
 153
 00:05:54,825 --> 00:05:57,025
 One one thousand, two one thousand, three.
-一秒，两秒，三···
+一秒，两秒，三
 
 154
 00:05:58,200 --> 00:05:59,124
