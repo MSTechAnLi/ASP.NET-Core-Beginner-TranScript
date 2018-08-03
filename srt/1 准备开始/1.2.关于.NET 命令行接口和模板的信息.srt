@@ -76,7 +76,7 @@ That's a good point.
 16
 00:00:27,456 --> 00:00:29,568
 And actually I can type where dotnet,
-事实上我可以输入 `where dotnet` 
+事实上我可以输入 `where dotnet`
 
 17
 00:00:29,568 --> 00:00:31,424
@@ -116,7 +116,7 @@ So we're on 2.0.
 24
 00:00:38,976 --> 00:00:40,925
 So dotnet --version.
-输入 `dotnet --version` 
+输入 `dotnet --version`
 
 25
 00:00:41,300 --> 00:00:42,277
@@ -961,7 +961,7 @@ But that is something that you want to say yes
 193
 00:07:39,355 --> 00:07:43,529
 So if someone's doing this for the first time, say yes, but don't touch?
-如果有人这样做了在第一次的时候，问你 yse 的时候，如果没有选?
+如果有人这样做了在第一次的时候，问你 yse 的时候，如果没有选
 
 194
 00:07:43,529 --> 00:07:45,161
@@ -1231,7 +1231,7 @@ I think our Spanish friends would not call it that
 247
 00:09:57,843 --> 00:09:59,571
 But yes-
-但，还真是！
+但，还真是
 
 248
 00:09:59,571 --> 00:10:01,395
