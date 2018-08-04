@@ -826,722 +826,720 @@ But it's more fun to do, no no,it's more fun to do it ourselves, don't you think
 166
 00:10:17,958 --> 00:10:20,006
 People can fast forward if they don't like it.
-People can fast forward if they don't like it.
+如果你们不喜欢，他们可以快进
 
 167
 00:10:21,900 --> 00:10:24,294
 The page name would be create.
-The page name would be create.
+页面名称将被创建
 
 168
 00:10:24,294 --> 00:10:26,854
 Uh-huh, and then we're gonna use a layout, we saw that.
-Uh-huh, and then we're gonna use a layout, we saw that.
+我们会使用布局，我们看到
 
 169
 00:10:26,854 --> 00:10:31,014
 And then, here it says Generate PageModel,that's that code behind of that page model.
-And then, here it says Generate PageModel,that's that code behind of that page model.
+然后，在这里生成 PageModel ，那就是那个页面模型背后的代码。
 
 170
 00:10:31,014 --> 00:10:34,075
 We could say no and then do that in line, if we wanted to.
-We could say no and then do that in line, if we wanted to.
+如果我们愿意，我们可以选择“不”，然后就这样做
 
 171
 00:10:35,375 --> 00:10:36,886
 All right. So let's see if that works.
-All right. So let's see if that works.
+好的。让我们看看这是否可行
 
 172
 00:10:37,590 --> 00:10:39,425
 Thinking, thinking, thinking.
-Thinking, thinking, thinking.
+思考思考
 
 173
 00:10:39,900 --> 00:10:42,966
 We're gonna watch in the right hand side here as create should appear.
-We're gonna watch in the right hand side here as create should appear.
+我们将在右边观看，因为创造应该出现
 
 174
 00:10:42,966 --> 00:10:45,590
 And sticking well because it's doing quite a bit of scaffolding.
-And sticking well because it's doing quite a bit of scaffolding.
+而且粘得很好，因为它做了很多脚手架
 
 175
 00:10:45,654 --> 00:10:50,902
 Well, it's scaffolding up some workforce but it's also gonna build the application to see if it still builds.
-Well, it's scaffolding up some workforce but it's also gonna build the application to see if it still builds.
+嗯，它正在架起一些员工的架子，但它也将构建应用程序来查看它是否仍在构建
 
 176
 00:10:52,100 --> 00:10:54,422
 And if it's running a scarf-folder.
-And if it's running a scarf-folder.
+如果它正在运行一个 scarf 文件夹
 
 177
 00:10:54,422 --> 00:10:57,650
 And scar folder is something that you can go on a nd read about and write your own if you feel like it.
-And scar folder is something that you can go on a nd read about and write your own if you feel like it.
+SCAR文件夹是一种你可以去读和写你自己的东西，如果你喜欢它
 
 178
 00:10:58,650 --> 00:10:59,875
 So here we gotta create.
-So here we gotta create.
+所以我们必须创造
 
 179
 00:11:00,374 --> 00:11:03,574
 -So let's see what we have in there -Let's see it gives us a page
--So let's see what we have in there -Let's see it gives us a page
+-让我们看看里面有什么 -让我们看看它给了我们一个页面
 
 180
 00:11:04,475 --> 00:11:17,525
 It gave us a default model, a title, looks like a header, and then some validation scripts, and then presumably we can just start typing our pages or whatever.
-It gave us a default model, a title, looks like a header, and then some validation scripts, and then presumably we can just start typing our pages or whatever.
+它给了我们一个默认模型，一个标题，看起来像一个标题，然后是一些验证脚本，然后大概我们可以开始打字我们的页面或其他什么
 
 181
 00:11:17,525 --> 00:11:23,478
 Let's look at the backend,It made a create model that has a get.
-Let's look at the backend,It made a create model that has a get.
+让我们看看后端，它创建了一个具有 get 的创建模型
 
 182
 00:11:23,478 --> 00:11:26,422
 So this is the function that happens when we get stuff.
-So this is the function that happens when we get stuff.
+这就是我们得到东西时的作用
 
 183
 00:11:26,422 --> 00:11:27,254
 Okay.
-Okay.
+好的
 
 184
 00:11:27,254 --> 00:11:30,198
 All right, so we're gonna need to make form code.
-All right, so we're gonna need to make form code.
+好的，所以我们需要制作表格代码
 
 185
 00:11:30,262 --> 00:11:36,650
 All right, so form that would have actually just one entry?
-All right, so form that would have actually just one entry?
+好吧，那么表格实际上只有一个条目？
 
 186
 00:11:36,650 --> 00:11:41,974
 Yeah, so we'll say enter your name, figure, all right.
-Yeah, so we'll say enter your name, figure, all right.
+是的，所以我们说输入你的名字，数字，好吧
 
 187
 00:11:41,974 --> 00:11:44,079
 And who knows if this will work, again, we're gonna learn.
-And who knows if this will work, again, we're gonna learn.
+谁知道这是否可行，我们将再次学习
 
 188
 00:11:44,079 --> 00:11:48,431
 Now, this is interesting, noticed that when I typed form Why is it in purple?
-Now, this is interesting, noticed that when I typed form Why is it in purple?
+现在，这很有趣，注意到当我输入表格为什么它是紫色的？
 
 189
 00:11:48,431 --> 00:12:02,433
 Turns purple, so that is a tag helper, this is some related elements that are gonna be on the server for processing so the server knows about purple elements, and ill do some processing of them.
-Turns purple, so that is a tag helper, this is some related elements that are gonna be on the server for processing so the server knows about purple elements, and ill do some processing of them.
+变成紫色，所以这是一个标签助手，这是一些相关的元素，将在服务器上进行处理，这样服务器就知道紫色元素，并且我会对它们进行一些处理
 
 190
 00:12:02,433 --> 00:12:12,545
 Typically when you're in HTML, you have like a P tag or an image tag or div, and that's just strings that get sent off to the client.
-Typically when you're in HTML, you have like a P tag or an image tag or div, and that's just strings that get sent off to the client.
-
+通常，当你在HTML中时，你有一个P标签或一个图像标签或div，而这只是被发送到客户端的字符串
 191
 00:12:12,929 --> 00:12:22,785
 But when we're generating this stuff on the server side,there might be an opportunity for ASP.NET Core to improve it,to change it, to add stuff.
-But when we're generating this stuff on the server side,there might be an opportunity for ASP.NET Core to improve it,to change it, to add stuff.
+但是当我们在服务器端生成这些东西时，ASP.NET核心可能会有机会改进它，改变它，添加一些东西
 
 192
 00:12:22,785 --> 00:12:24,385
 So it knows about form.
-So it knows about form.
+所以它知道形式
 
 193
 00:12:24,385 --> 00:12:27,969
 Form is a magic tag and we can go and type things like this,you see it says asp colon.
-Form is a magic tag and we can go and type things like this,you see it says asp colon.
+表格是一个魔术标签，我们可以去键入这样的东西，你看到它显示 ASP 冒号
 
 194
 00:12:28,033 --> 00:12:33,281
 Yeah, so is that indication that that is a tag helper or some sort of action?
-Yeah, so is that indication that that is a tag helper or some sort of action?
+是的，这是一个标记助手还是某种动作？
 
 195
 00:12:33,281 --> 00:12:36,025
 Right these things aren't html.
-Right these things aren't html.
+这些东西不是HTML
 
 196
 00:12:36,025 --> 00:12:37,569
 -No -Those are tag helpers
--No -Those are tag helpers
+-并不是 -那些是标签助手
 
 197
 00:12:37,569 --> 00:12:43,265
 You'll never see asp hyphen something being sent all the way out to the browser.
-You'll never see asp hyphen something being sent all the way out to the browser.
+你将永远不会看到 ASP 连字符被发送到浏览器
 
 198
 00:12:43,265 --> 00:12:45,953
 These are not HTML,They're hints to the server.
-These are not HTML,They're hints to the server.
+这些不是HTML，它们是服务器的提示
 
 199
 00:12:45,953 --> 00:12:52,225
 So if when we run this application, and we go into the F12 tools, we will not see- You shouldn't see those.
-So if when we run this application, and we go into the F12 tools, we will not see- You shouldn't see those.
+因此，如果我们运行这个应用程序，我们进入F12工具，我们将看不到-你不应该看到那些
 
 200
 00:12:52,225 --> 00:12:53,300
 -Okay -Exactly
--Okay -Exactly
+-Okay -确切地
 
 201
 00:12:53,700 --> 00:12:58,750
--So we're gonna say form, this is gonna be basic method= a,yep see Get, post, put, delete
--So we're gonna say form, this is gonna be basic method= a,yep see Get, post, put, delete
+So we're gonna say form, this is gonna be basic method= a,yep see Get, post, put, delete
+所以我们要说形式，这是基本方法= a ，看 GET,POST,PUT,delete
 
 202
 00:12:58,750 --> 00:13:01,422
 We'll say post So we're gonna go and post.
-We'll say post So we're gonna go and post.
+我们会用 post ，所以我们要使用 go 和 post
 
 203
 00:13:01,700 --> 00:13:02,761
 Here's the end of our form.
-Here's the end of our form.
+这是我们形式的结束
 
 204
 00:13:03,200 --> 00:13:08,025
 Say div, name, and then we'll need a text box.
-Say div, name, and then we'll need a text box.
+div 名字，然后我们需要一个文本框
 
 205
 00:13:08,025 --> 00:13:09,313
 Yep so some sort of input tag.
-Yep so some sort of input tag.
+是的，某种输入标签
 
 206
 00:13:09,313 --> 00:13:11,617
 Yep input,Now, this is interesting.
-Yep input,Now, this is interesting.
+现在输入，这很有趣
 
 207
 00:13:12,100 --> 00:13:17,441
 We could do an input tag the way we usually do or we could say ASP.NET4.
-We could do an input tag the way we usually do or we could say ASP.NET4.
+我们可以按通常的方式做输入标记，也可以说是ASP.NET4
 
 208
 00:13:17,441 --> 00:13:22,817
 -Okay -And we're gonna say Customer.Name.
--Okay -And we're gonna say Customer.Name.
+-Okay -我们要用 Customer.Name
 
 209
 00:13:22,817 --> 00:13:25,313
 -Okay -See how it's all purple?
--Okay -See how it's all purple?
+-Okay -看它怎么都是紫色的？
 
 210
 00:13:26,050 --> 00:13:30,825
 That ASP 4 is gonna look at that model, okay?
-That ASP 4 is gonna look at that model, okay?
+ASP 4会使用那个模型，好吗？
 
 211
 00:13:31,275 --> 00:13:34,950
 Now, it's saying here, I don't know what a Customer is.
-Now, it's saying here, I don't know what a Customer is.
+现在，这里说的是，我不知道 Customer 是什么
 
 212
 00:13:35,875 --> 00:13:37,441
 What's going on with that?
-What's going on with that?
+这是怎么回事？
 
 213
 00:13:37,441 --> 00:13:38,465
 It's never heard of Customer before.
-It's never heard of Customer before.
+以前从来没有听说过 Customer
 
 214
 00:13:38,875 --> 00:13:40,923
 We'll come back and fix that in a second.
-We'll come back and fix that in a second.
+我们一会儿再来解决
 
 215
 00:13:40,923 --> 00:13:45,225
 Then we'll have an input for submitting that form, okay?
-Then we'll have an input for submitting that form, okay?
+然后我们输入一张表格，好吗？
 
 216
 00:13:45,225 --> 00:13:48,735
 But we have a problem here,where it doesn't know what Customer is.
-But we have a problem here,where it doesn't know what Customer is.
+但我们在这里遇到了一个问题，就是不知道 Customer 是什么
 
 217
 00:13:49,350 --> 00:13:51,625
 What is the model for this page?
-What is the model for this page?
+这个页面的模型是什么？
 
 218
 00:13:53,050 --> 00:13:54,687
 -Right, it's the -The Create
--Right, it's the -The Create
+-好的，这是 -是创建
 
 219
 00:13:54,687 --> 00:13:57,275
 CreateModel, so let's go look at that.
-CreateModel, so let's go look at that.
+CreateModel, 让我们来看一看
 
 220
 00:13:58,225 --> 00:13:59,871
 Peek into Definition, okay.
-Peek into Definition, okay.
+查看一下定义，好的
 
 221
 00:13:59,871 --> 00:14:01,343
 I wanna point out how I'm moving around.
-I wanna point out how I'm moving around.
+我想指出我是怎么四处走动的
 
 222
 00:14:01,343 --> 00:14:05,300
 I'm right clicking and saying Go To Definition is also a hotkey for that.
-I'm right clicking and saying Go To Definition is also a hotkey for that.
+我右击，对此定义一个热键
 
 223
 00:14:05,758 --> 00:14:11,839
 So this is an important reminder, just as a programmer,you don't wanna necessarily find yourself going over and looking around all the files all the time.
-So this is an important reminder, just as a programmer,you don't wanna necessarily find yourself going over and looking around all the files all the time.
+这是一个重要的提醒，就像一个程序员一样，你不需要发现自己到处都在浏览所有的文件
 
 224
 00:14:11,839 --> 00:14:14,719
 -You can navigate -To it, right?
--You can navigate -To it, right?
+-你可以导航 -对吧？
 
 225
 00:14:14,719 --> 00:14:17,750
 To it directly, you can navigate logically, as they say.
-To it directly, you can navigate logically, as they say.
+直接说，你可以像他们所说的那样在逻辑上进行导航
 
 226
 00:14:18,559 --> 00:14:21,183
 -Okay, all right. -Did you?
--Okay, all right. -Did you?
+-Okay, 好吧. -你呢？
 
 227
 00:14:21,183 --> 00:14:23,871
 -Cut something out from -Yeah
--Cut something out from -Yeah
+-从这里剪掉 -好的
 
 228
 00:14:23,871 --> 00:14:25,855
 -Okay -Great.
--Okay -Great.
+-好的 -不错.
 
 229
 00:14:25,855 --> 00:14:28,275
 -There we go -I cut out CreateModel, thank you.
--There we go -I cut out CreateModel, thank you.
+-我们继续 -我剪下了 CreateModel ，谢谢你
 
 230
 00:14:28,550 --> 00:14:36,725
 Right so, our create model is gonna need to know about customers, because that's gonna show up on the page.
-Right so, our create model is gonna need to know about customers, because that's gonna show up on the page.
+好的那么，我们的创建模型需要了解客户，因为这会出现在页面上
 
 231
 00:14:36,982 --> 00:14:39,675
 So public Customer, that's a type.
-So public Customer, that's a type.
+所以公众客户，这是一种类型
 
 232
 00:14:40,302 --> 00:14:42,990
 -That's a name -You can tell by the color.
--That's a name -You can tell by the color.
+-这是名字 -你可以根据颜色辨别
 
 233
 00:14:42,990 --> 00:14:44,334
 It's a little confusing.
-It's a little confusing.
+这有点混乱
 
 234
 00:14:44,334 --> 00:14:49,390
 But, the property is called Customer, and the type is called Customer.
-But, the property is called Customer, and the type is called Customer.
+但是，该属性称为 Customer ，类型称为 Customer
 
 235
 00:14:49,800 --> 00:14:59,822
 And, this is going to need that database context,so we are going to make a little Database here.
-And, this is going to need that database context,so we are going to make a little Database here.
+而且，这将需要数据库上下文，所以我们将在这里制作一个小数据库
 
 236
 00:14:59,822 --> 00:15:03,982
 And this is just being the voice of the person doing this at home.
-And this is just being the voice of the person doing this at home.
+而这正是在家里做这件事的人的声音
 
 237
 00:15:03,982 --> 00:15:07,725
 Why have you made it private read only?
-Why have you made it private read only?
+为什么你只让它成为私人阅读？
 
 238
 00:15:08,525 --> 00:15:09,934
 So that's a great point.
-So that's a great point.
+这是一个很好的观点
 
 239
 00:15:09,998 --> 00:15:16,782
 I don't want people who get a hold of create model to be poking around and talking directly to the database.
-I don't want people who get a hold of create model to be poking around and talking directly to the database.
+我不想让那些持有创建模型的人四处乱转，直接与数据库对话
 
 240
 00:15:16,782 --> 00:15:21,774
 So, it's gonna be private, just for me where me is CreateModel.
-So, it's gonna be private, just for me where me is CreateModel.
+所以，它将是私人的，就我而言，我就是CreateModel
 
 241
 00:15:21,774 --> 00:15:27,790
 And it's read only which means I'm gonna assign it once, and I don't want anyone to touch it after that.
-And it's read only which means I'm gonna assign it once, and I don't want anyone to touch it after that.
+它是只读的，这意味着我要把它分配一次，我不想让任何人在那之后接触它
 
 242
 00:15:27,790 --> 00:15:32,590
 -Yeah. Okay -So I'm making it just for me and making sure I can't mess with it afterwards.
--Yeah. Okay -So I'm making it just for me and making sure I can't mess with it afterwards.
+-Yeah. Okay -所以我只是为我做，确保我以后不会弄乱它
 
 243
 00:15:33,600 --> 00:15:34,894
 Excellent, excellent question.
-Excellent, excellent question.
+确实是个好问题
 
 244
 00:15:35,875 --> 00:15:41,934
 -So then, we'll make our -CreateModel Our constructor.
--So then, we'll make our -CreateModel Our constructor.
+-那么，我们将制造 -CreateModel 我们的构造器
 
 245
 00:15:43,662 --> 00:15:46,350
 And remember how dependency injection works.
-And remember how dependency injection works.
+还记住依赖注入是如何工作的
 
 246
 00:15:46,350 --> 00:15:49,422
 We don't make an AppDbContext we ask for one.
-We don't make an AppDbContext we ask for one.
+我们不要求一个 AppDB 上下文
 
 247
 00:15:49,742 --> 00:15:55,054
 We ask for it by putting it in our constructor.
-We ask for it by putting it in our constructor.
+我们把它放在我们的构造函数中
 
 248
 00:15:55,118 --> 00:15:58,638
 We can have as many of these as we want,We can have food and bar, etc, etc, etc.
-We can have as many of these as we want,We can have food and bar, etc, etc, etc.
+我们可以有很多我们想要的，我们可以有食物和酒吧等等
 
 249
 00:15:58,975 --> 00:16:00,366
 This is the one we want for now.
-This is the one we want for now.
+这就是我们现在想要的
 
 250
 00:16:01,125 --> 00:16:06,391
 And then I'm just going to say hey, this one equals this one.
-And then I'm just going to say hey, this one equals this one.
+然后我要说，嘿，这个等于这个
 
 251
 00:16:06,391 --> 00:16:09,655
 I'm going to squirrel it away and hang onto it, so now I've got one.
-I'm going to squirrel it away and hang onto it, so now I've got one.
+我要松开它然后挂上它，所以现在我有一个
 
 252
 00:16:12,700 --> 00:16:16,425
 So that says there's this database, and I want to know about it.
-So that says there's this database, and I want to know about it.
+所以说有这个数据库，我想知道
 
 253
 00:16:17,050 --> 00:16:20,206
 This says there's a customer.
-This says there's a customer.
+这说明有一个 customer
 
 254
 00:16:20,206 --> 00:16:29,934
 If I go back over to create, I can hover over that and see it's getting me probably IntelliSense too.
-If I go back over to create, I can hover over that and see it's getting me probably IntelliSense too.
+如果我回去创造，我可以在上面徘徊，看到它也让我很有智慧
 
 255
 00:16:29,934 --> 00:16:31,662
 Yep, see. Now, it is.
-Yep, see. Now, it is.
+是的，明白了。现在，它是的
 
 256
 00:16:31,662 --> 00:16:36,654
 So, it knows about customer because it's hanging off of the model.
-So, it knows about customer because it's hanging off of the model.
+所以，它知道客户是因为它脱离了模型
 
 257
 00:16:37,870 --> 00:16:40,110
 So as we're running the application.
-So as we're running the application.
+所以我们正在运行应用程序
 
 258
 00:16:40,110 --> 00:16:45,486
 Technically, I should be able to go to this page,hover over customer name and see what names we've put in there?
-Technically, I should be able to go to this page,hover over customer name and see what names we've put in there?
+从技术上讲，我应该能够到这个页面，悬停在客户的名字上，看看我们放在那里的名字？
 
 259
 00:16:45,486 --> 00:16:48,942
 You should be able to click on that,you should be able to have IntelliSense.
-You should be able to click on that,you should be able to have IntelliSense.
+你应该能够点击它，你应该能够拥有智能感知
 
 260
 00:16:48,942 --> 00:16:54,958
 If you did a break point,you should be able to stop in here at some point and look at that, and we'll do that in a little bit.
-If you did a break point,you should be able to stop in here at some point and look at that, and we'll do that in a little bit.
+如果你做了一个突破点，你应该能够在这里停留在某个点，看看，我们会做一点点
 
 261
 00:16:55,675 --> 00:17:01,422
 What we need, though, is we need to bind this form.
-What we need, though, is we need to bind this form.
+我们需要的是，我们需要约束这种形式
 
 262
 00:17:01,422 --> 00:17:04,686
 We're saying this input for customer name.
-We're saying this input for customer name.
+我们说的是客户姓名的输入
 
 263
 00:17:04,686 --> 00:17:10,830
 When I hit submit, we need to catch it on the server side.
-When I hit submit, we need to catch it on the server side.
+当我点击提交时，我们需要在服务器端捕获它
 
 264
 00:17:10,830 --> 00:17:13,070
 I call it surviving the journey.
-I call it surviving the journey.
+我称之为旅途中的幸存
 
 265
 00:17:13,070 --> 00:17:14,414
 Okay. Yeah, it's a good point.
-Okay. Yeah, it's a good point.
+可以。是的，这是一个很好的观点
 
 266
 00:17:14,414 --> 00:17:15,310
 It does need to survive the journey.
-It does need to survive the journey.
+它确实需要在旅途中幸存下来
 
 267
 00:17:15,310 --> 00:17:17,038
 So I'm gonna get rid of this OnGet here.
-So I'm gonna get rid of this OnGet here.
+所以我要把这件东西扔掉
 
 268
 00:17:17,038 --> 00:17:18,574
 So we're gonna do a post.
-So we're gonna do a post.
+所以我们要做一个帖子
 
 269
 00:17:19,470 --> 00:17:21,902
 You can say OnPost.
-You can say OnPost.
+你可以在 OnPost
 
 270
 00:17:22,414 --> 00:17:26,550
 You could do it like this but the right way to do it is like this.
-You could do it like this but the right way to do it is like this.
+你可以这样做，但是正确的方法就是这样
 
 271
 00:17:27,425 --> 00:17:36,238
 -Async? -Async, which means don't block, and we're gonna have a task that returns some action.
--Async? -Async, which means don't block, and we're gonna have a task that returns some action.
+-异步？ -异步，这意味着不阻塞，我们将有一个任务返回一些动作
 
 272
 00:17:36,238 --> 00:17:41,806
 We might be doing something after this and I'm gonna say on OnPostAsync.
-We might be doing something after this and I'm gonna say on OnPostAsync.
+我们可能在这之后做点什么，我会在事后说
 
 273
 00:17:48,750 --> 00:17:50,885
 And it's giving me a little complaint here saying!
-And it's giving me a little complaint here saying!
+它给我一个小小的抱怨！
 
 274
 00:17:51,293 --> 00:17:53,789
 You didn't do a wait and you haven't returned a value.
-You didn't do a wait and you haven't returned a value.
+你没有等待，你还没有返回数值
 
 275
 00:17:53,789 --> 00:17:59,805
 Code paths, not all code paths return a value.
-Code paths, not all code paths return a value.
+代码路径，并非所有代码路径返回值
 
 276
 00:17:59,805 --> 00:18:01,405
 That's cuz we haven't done anything yet.
-That's cuz we haven't done anything yet.
+这是因为我们还没有做任何事情
 
 277
 00:18:02,365 --> 00:18:08,125
 So, when someone posts back, they hit submit,and it posts back to here.
-So, when someone posts back, they hit submit,and it posts back to here.
+所以，当有人发布帖子时，他们会点击提交，然后返回到这里
 
 278
 00:18:08,573 --> 00:18:11,350
 We would really like customer to have stuff in it.
-We would really like customer to have stuff in it.
+我们真的希望客户有东西在里面
 
 279
 00:18:11,350 --> 00:18:14,845
 -Yes -And so there's a couple things here.
--Yes -And so there's a couple things here.
+-是的 -所以这里有两件事
 
 280
 00:18:14,845 --> 00:18:18,975
 And then we need to make sure that the state of that model is valid, that someone hasn't messed with it.
-And then we need to make sure that the state of that model is valid, that someone hasn't messed with it.
+然后我们需要确保那个模型的状态是有效的，有人没有弄错它
 
 281
 00:18:19,450 --> 00:18:30,280
 So I'm gonna say if ModelState.IsValid,or if it's not, pardon me- I was about to say something.
-So I'm gonna say if ModelState.IsValid,or if it's not, pardon me- I was about to say something.
+所以我要说，如果MealStal.是有效的，或者如果不是，请原谅我——我要说点什么
 
 282
 00:18:30,280 --> 00:18:36,168
 No I appreciate that,Then return the page back to itself to say now I'm done.
-No I appreciate that,Then return the page back to itself to say now I'm done.
-
+不，我很感激，然后把页面还给自己，说现在我完了
 283
 00:18:36,168 --> 00:18:43,016
 If I hover over page you can see it returns a page result,which is a kind of action.
-If I hover over page you can see it returns a page result,which is a kind of action.
+如果我在页面上徘徊，你会看到它返回一个页面结果，这是一种行为
 
 284
 00:18:43,016 --> 00:18:44,600
 Returning a page is an action.
-Returning a page is an action.
+返回页面是一个动作
 
 285
 00:18:45,750 --> 00:18:50,696
 If we get this far, now I'm gonna say db,remember when I say db?
-If we get this far, now I'm gonna say db,remember when I say db?
+如果我们走这么远，现在我要说 DB ，记得我说 DB 吗
 
 286
 00:18:50,696 --> 00:18:52,040
 -Yes -What is db?
--Yes -What is db?
+-是的 -什么是DB？
 
 287
 00:18:52,040 --> 00:18:58,440
 It is a applicationDB context.
-It is a applicationDB context.
+它是 AppultDB 上下文
 
 288
 00:18:58,504 --> 00:19:01,832
 In there is customers, plural.
-In there is customers, plural.
+里面有 customers ，复数
 
 289
 00:19:01,832 --> 00:19:04,072
 -And we want to add one. -.Add()
--And we want to add one. -.Add()
+-我们想增加一个 -.Add()
 
 290
 00:19:04,136 --> 00:19:08,040
 We'll pass in the customer that we just got handed.
-We'll pass in the customer that we just got handed.
+我们会把刚才交给的顾客交给我们
 
 291
 00:19:09,200 --> 00:19:13,160
 And then we'll say, hang out for a minute, await.
-And then we'll say, hang out for a minute, await.
+然后我们说，等一会儿，等等
 
 292
 00:19:14,500 --> 00:19:20,328
 And we'll say, db.SaveChanges,And async means don't wait
-And we'll say, db.SaveChanges,And async means don't wait
+我们会说, db.SaveChanges,async 意味着不需要等待
 
 293
 00:19:21,425 --> 00:19:26,152
 Then we will go and return,not a page, because we're on the create page.
-Then we will go and return,not a page, because we're on the create page.
+然后我们会返回，而不是一页，因为我们在创建页面
 
 294
 00:19:26,152 --> 00:19:28,264
 We really wanna return to the list.
-We really wanna return to the list.
+我们真的想回到名单上
 
 295
 00:19:28,264 --> 00:19:29,736
 Yeah, so you're doing a redirect?
-Yeah, so you're doing a redirect?
+是的，所以你在重定向？
 
 296
 00:19:29,736 --> 00:19:31,976
 We're gonna do a redirect, exactly.
-We're gonna do a redirect, exactly.
+我们要做一个重定向
 
 297
 00:19:32,325 --> 00:19:35,950
 And we haven't got a place to go yet,But we'll say redirect to page
-And we haven't got a place to go yet,But we'll say redirect to page
+我们还没有地方可去，但是我们会说重定向到页面
 
 298
 00:19:36,264 --> 00:19:41,675
 Okay. And you can see that there's options like redirect to page permanent, which would be a 301.
-Okay. And you can see that there's options like redirect to page permanent, which would be a 301.
+可以。你可以看到有重定向到页面永久性的选项，这将是301
 
 299
 00:19:41,675 --> 00:19:43,437
 -Okay -Http 301
--Okay -Http 301
+-Okay -HTTP 301
 
 300
 00:19:43,437 --> 00:19:48,875
 We're gonna do a 302 because this is just a standard kind of redirect,Let's just say /Index
-We're gonna do a 302 because this is just a standard kind of redirect,Let's just say /Index
+我们要做一个302，因为这只是一种标准的重定向
 
 301
 00:19:48,875 --> 00:19:52,988
 And I think we should probably just say /,but we'll see what happens.
-And I think we should probably just say /,but we'll see what happens.
+我想我们应该说/，我想我们应该说一下，但是我们看看会发生什么
 
 302
 00:19:52,988 --> 00:19:56,999
 If people wanted to learn more about 301s,302s, do you have any recommendations?
-If people wanted to learn more about 301s,302s, do you have any recommendations?
+如果人们想了解更多关于301S、302S的信息，你有什么建议吗？
 
 303
 00:19:56,999 --> 00:19:58,983
 -The Internet. -Correct
--The Internet. -Correct
+-互联网 -正确
 
 304
 00:20:00,119 --> 00:20:01,479
 I would search around for that kind of stuff.
-I would search around for that kind of stuff.
+我会到处寻找这种东西
 
 305
 00:20:01,479 --> 00:20:03,143
 Ultimately look at the docs.
-Ultimately look at the docs.
+最后看看文档
 
 306
 00:20:03,143 --> 00:20:12,679
 -Yeah -But redirect to page is a standard thing and again if you hover over it, it says right there Status302Found.
--Yeah -But redirect to page is a standard thing and again if you hover over it, it says right there Status302Found.
+-是的 -但是重定向到PAGE是一个标准的事情，如果你在它上面徘徊，它会在那里找到STATES302
 
 307
 00:20:12,679 --> 00:20:18,759
 But if I said RedirectToPagePermanent.
-But if I said RedirectToPagePermanent.
+但是如果我说 RedirectToPagePermanent
 
 308
 00:20:18,759 --> 00:20:19,975
 We would change it?
-We would change it?
+我们会改变它吗?
 
 309
 00:20:19,975 --> 00:20:25,927
 Change it to a 301, which would tell the search engine,don't ever come back here and ask me about this again.
-Change it to a 301, which would tell the search engine,don't ever come back here and ask me about this again.
+将它改为301，这将告诉搜索引擎，不要再回来这里问我这个问题了
 
 310
 00:20:25,927 --> 00:20:28,423
