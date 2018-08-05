@@ -1544,32 +1544,32 @@ Change it to a 301, which would tell the search engine,don't ever come back here
 310
 00:20:25,927 --> 00:20:28,423
 Don't ever talk to me again go here.
-Don't ever talk to me again go here.
+不说了，继续吧
 
 311
 00:20:28,423 --> 00:20:29,050
 -All right -That's what that means
--All right -That's what that means
+-好的 -就是那个意思
 
 312
 00:20:31,879 --> 00:20:35,137
 I'm paranoid so anyway,you never wanna do that when you're doing database work.
-I'm paranoid so anyway,you never wanna do that when you're doing database work.
+我是偏执狂，无论如何，当你做数据库工作的时候，你从来都不想这么做
 
 313
 00:20:35,137 --> 00:20:37,249
 You always wanna be temporary, okay?
-You always wanna be temporary, okay?
+你总是想要临时的，好吗？
 
 314
 00:20:37,249 --> 00:20:41,729
 Okay. All right, and if you really,really, really wanna upset your coworkers.
-Okay. All right, and if you really,really, really wanna upset your coworkers.
+好吧，如果你真的真的真的想打扰你的同事
 
 315
 00:20:41,729 --> 00:20:47,299
 You could move your curly braces.
-You could move your curly braces.
+你可以移动你的大括号
 
 316
 00:20:47,299 --> 00:20:48,000
@@ -1579,137 +1579,133 @@ Yeah.
 317
 00:20:48,475 --> 00:20:50,025
 And do stuff like this.
-And do stuff like this.
+然后做这样的事情
 
 318
 00:20:50,627 --> 00:20:57,027
 And if you really wanna be possibly buggy,you could even do stuff like this.
-And if you really wanna be possibly buggy,you could even do stuff like this.
+如果你真的想做一辆车，你甚至可以做这样的事情
 
 319
 00:20:59,900 --> 00:21:01,825
 -Where that's all one line -Yeah?
--Where that's all one line -Yeah?
+-这就是一条线 -是吗?
 
 320
 00:21:02,250 --> 00:21:05,411
 But you might have other stuff that you wanna do.
-But you might have other stuff that you wanna do.
+但你可能还有其他的事情要做
 
 321
 00:21:05,411 --> 00:21:08,850
 Okay. Some people that really bothers them, some people it doesn't.
-Okay. Some people that really bothers them, some people it doesn't.
+可以。有些人真的很烦他们，有些人不喜欢
 
 322
 00:21:09,225 --> 00:21:10,979
-For me- Does it bother you?
-For me- Does it bother you?
+-For me- Does it bother you?
+-对我来说 -打扰你了吗？
 
 323
 00:21:10,979 --> 00:21:13,731
 I kinda like it on one line if it's not that big of a deal.
-I kinda like it on one line if it's not that big of a deal.
+我喜欢它在一行如果它不是那么大的交易
 
 324
 00:21:14,425 --> 00:21:20,003
 You know what I mean,but as soon as you have an extra line then you're gonna go and undo it and take it apart.
-You know what I mean,but as soon as you have an extra line then you're gonna go and undo it and take it apart.
+你知道我的意思,但是一旦你有一个额外的线，那么你会去解开它，并把它拆开
 
 325
 00:21:20,003 --> 00:21:24,227
 It's stylistic,so it's not really a best practice for someone to know of right now.
-It's stylistic,so it's not really a best practice for someone to know of right now.
+它是风格化的，所以对于现在知道的人来说这不是最好的练习
 
 326
 00:21:24,675 --> 00:21:28,579
 No, for right now, I just think it's nice to have everything fit on one line like that.
-No, for right now, I just think it's nice to have everything fit on one line like that.
+不，现在，我认为把每件事情都放在这样一条线上是很好的
 
 327
 00:21:28,579 --> 00:21:32,227
 But using the curly mustaches.
-But using the curly mustaches.
+但要用卷曲的胡子
 
 328
 00:21:33,250 --> 00:21:37,325
 Is curly braces,they look like a mustache if you turn your head.
-Is curly braces,they look like a mustache if you turn your head.
+是卷发，如果你转个头，他们看起来像胡子
 
 329
 00:21:37,325 --> 00:21:38,933
 That's a best practice.
-That's a best practice.
+这是最好的做法
 
 330
 00:21:38,933 --> 00:21:43,059
 It still gets us, that when people say curly braces, and I don't know what they're talking about
-It still gets us, that when people say curly braces, and I don't know what they're talking about
+当人们说花括号，我不知道他们在说什么的时候，我们还是用括号
 
 331
 00:21:43,059 --> 00:21:43,750
 -What do you call them? -cuz I use brackets
--What do you call them? -cuz I use brackets
+-你怎么称呼他们？ -因为我使用括号
 
 332
 00:21:43,750 --> 00:21:44,902
 You call them brackets?
-You call them brackets?
+你称它们为括号？
 
 333
 00:21:44,902 --> 00:21:47,278
 So you have brackets, curly brackets, square brackets, so.
-So you have brackets, curly brackets, square brackets, so.
+所以你有括号，卷筒，方括号
 
 334
 00:21:47,278 --> 00:21:49,600
 -Scandalous -Okay
--Scandalous -Okay
+-不好听 -好吧
 
 335
 00:21:50,094 --> 00:21:52,206
 -You're fancy -That is pretty intense.
--You're fancy -That is pretty intense.
+-你很喜欢 -这是相当刺激的
 
 336
 00:21:52,206 --> 00:21:56,814
 -Yeah -Okay, now I'm going to put a break point here.
--Yeah -Okay, now I'm going to put a break point here.
+-Yeah -Okay, 现在我要在这里放一个断点
 
 337
 00:21:56,814 --> 00:21:59,650
 -Okay. And we'll see if this works -All right.
--Okay. And we'll see if this works -All right.
+-Okay ，我们看看这是否行得通
 
 338
 00:21:59,650 --> 00:22:01,422
 It might very well not work.
-It might very well not work.
+这很可能不起作用
 
 339
 00:22:03,275 --> 00:22:05,650
 -Fingers crossed and toes -No, it's probably not gonna work
--Fingers crossed and toes -No, it's probably not gonna work
+-双手合十祈祷 -不, 它可能不会工作
 
 340
 00:22:05,650 --> 00:22:07,634
 Lower your expectations now.
-Lower your expectations now.
+降低你的期望
 
-341
-00:22:09,593 --> 00:22:11,257
--All right -Okay.
--All right -Okay.
 
 342
 00:22:13,100 --> 00:22:14,457
 This is in create, right?
-This is in create, right?
+这是创建，对吧？
 
 343
 00:22:14,457 --> 00:22:15,800
 -So I have to hit /create -Yep
--So I have to hit /create -Yep
+-所以我必须点击/创建 -是的
 
 344
 00:22:23,043 --> 00:22:23,875
@@ -1719,427 +1715,427 @@ Okay
 345
 00:22:31,000 --> 00:22:32,000
 Did we bind it?
-Did we bind it?
+我们绑定好了吗？
 
 346
 00:22:33,200 --> 00:22:35,715
 -Yeah see what's happening? -Nothing.
--Yeah see what's happening? -Nothing.
+-是的，看到发生什么事了吗？ -没有
 
 347
 00:22:35,715 --> 00:22:38,339
 -No -And if we go and do a view source.
--No -And if we go and do a view source.
+-啥都没有 -如果我们去做一个视图源
 
 348
 00:22:39,025 --> 00:22:41,795
 -And you go to? -Okay.
--And you go to? -Okay.
+-你要再怎么做? -Okay
 
 349
 00:22:41,859 --> 00:22:44,419
 I just want to show the people the form first.
-I just want to show the people the form first.
+我只是想先给大家看一下表格
 
 350
 00:22:48,550 --> 00:22:51,779
 Some things showed up on the input that's kinda cool.
-Some things showed up on the input that's kinda cool.
+一些东西出现在输入上，这有点酷
 
 351
 00:22:55,107 --> 00:22:57,219
 -That's kinda nice -That is
--That's kinda nice -That is
+-那很不错 -就是啊
 
 352
 00:22:57,219 --> 00:22:58,755
 We didn't type that, right, remember?
-We didn't type that, right, remember?
+我们没有打字，对吗？记得吗？
 
 353
 00:22:58,755 --> 00:23:03,363
 So we're getting stuff on the input that we did not expect,which is cool.
-So we're getting stuff on the input that we did not expect,which is cool.
+所以我们在输入中得到了我们没有预料到的东西，这很酷
 
 354
 00:23:03,427 --> 00:23:05,667
 I bet there's some request verification.
-I bet there's some request verification.
+我打赌有一些请求验证
 
 355
 00:23:05,667 --> 00:23:08,611
 Yeah, they put a request verification token to keep people from tampering with our stuff.
-Yeah, they put a request verification token to keep people from tampering with our stuff.
+是的，他们提出了一个请求验证令牌来防止人们篡改我们的东西
 
 356
 00:23:09,325 --> 00:23:12,625
 There is your name=Customer.Name.
-There is your name=Customer.Name.
+这里是你的 name=Customer.Name.
 
 357
 00:23:12,963 --> 00:23:15,587
 And it generated an id for us as well.
-And it generated an id for us as well.
+它也产生了我们的身份证
 
 358
 00:23:16,355 --> 00:23:18,083
 But you can see that nothing's happening.
-But you can see that nothing's happening.
+但你可以看到什么都没有发生
 
 359
 00:23:20,195 --> 00:23:28,140
 On Customer, actually I wanna put a break point a little higher up, and then I'll explain to you what's going on.
-On Customer, actually I wanna put a break point a little higher up, and then I'll explain to you what's going on.
+对客户来说，实际上我想把一个突破点提高一点，然后我会向你解释发生了什么
 
 360
 00:23:28,716 --> 00:23:31,020
 Let's see if we can even get to the post.
-Let's see if we can even get to the post.
+让我们看看我们能不能通过 post
 
 361
 00:23:33,836 --> 00:23:40,556
 Okay, do a debug session again /create.
-Okay, do a debug session again /create.
+好，再试一次调试/创建
 
 362
 00:23:47,575 --> 00:23:49,414
 So I would've expected.
-So I would've expected.
+所以我早就料到了
 
 363
 00:23:49,750 --> 00:23:54,606
 -To hit that break point -To hit that break point, so that's concerning.
--To hit that break point -To hit that break point, so that's concerning.
+-击中那个断点 -击中那个断点，这就是问题所在
 
 364
 00:23:57,840 --> 00:24:13,072
 But I know that I need to say BindProperty on the customer which is to tell it I want this customer object filled out with the form information, right?
-But I know that I need to say BindProperty on the customer which is to tell it I want this customer object filled out with the form information, right?
+但我知道我需要对客户说BDIN属性，告诉客户我希望这个客户对象填写表单信息，对吧？
 
 365
 00:24:13,072 --> 00:24:15,376
 -Yeah. -And right now I don't have that.
--Yeah. -And right now I don't have that.
+-Yeah. -现在我没有
 
 366
 00:24:17,040 --> 00:24:22,352
 So let's take a look, and try this again.
-So let's take a look, and try this again.
+让我们来看一看，然后再试一次
 
 367
 00:24:22,352 --> 00:24:32,175
 The customer is gonna get created and filled up with information bound to those form fields.
-The customer is gonna get created and filled up with information bound to those form fields.
+客户将被创建并填写与这些字段绑定的信息
 
 368
 00:24:35,250 --> 00:24:39,925
 If that doesn't work then I've forgotten something and we will go and have a little debugging which will be fun as well.
-If that doesn't work then I've forgotten something and we will go and have a little debugging which will be fun as well.
+如果这不起作用，那么我就忘记了什么，我们会去做一个小调试，这将是有趣的
 
 369
 00:24:46,864 --> 00:24:51,728
 They say the definition of insanity is doing the same thing over and over and expecting a different result.
-They say the definition of insanity is doing the same thing over and over and expecting a different result.
+他们说精神错乱的定义是一遍又一遍地做同样的事情，期望得到不同的结果
 
 370
 00:24:51,728 --> 00:24:54,352
 So let's take a look.
-So let's take a look.
+让我们来看一看
 
 371
 00:24:54,352 --> 00:24:56,272
 It's probably something obvious.
-It's probably something obvious.
+这可能是显而易见的事情
 
 372
 00:24:59,408 --> 00:25:03,625
 So we've got a form, we've got our input, we've got our method.
-So we've got a form, we've got our input, we've got our method.
+所以我们有一张表格，我们有我们的输入，我们有我们的方法
 
 373
 00:25:04,272 --> 00:25:06,704
 I said post, does it matter if it's all caps?
-I said post, does it matter if it's all caps?
+我说，如果所有的帽子都有关系吗？
 
 374
 00:25:07,856 --> 00:25:09,328
 That would be odd if it did.
-That would be odd if it did.
+如果真是这样，那就太奇怪了
 
 375
 00:25:14,384 --> 00:25:15,792
 So it doesn't matter.
-So it doesn't matter.
+所以没关系
 
 376
 00:25:17,392 --> 00:25:23,920
 The tag helper exists already in view imports,the form is there.
-The tag helper exists already in view imports,the form is there.
+标签助手已经存在于视图导入中，表单就在那里
 
 377
 00:25:23,920 --> 00:25:28,272
 The only thing l didn't add is the validation summary, okay?
-The only thing l didn't add is the validation summary, okay?
+我唯一没有添加的是验证摘要，好吗？
 
 378
 00:25:37,103 --> 00:25:44,719
 -Okay -All right, so l am putting in a long name, Fancy Pants, and nothing's happening.
--Okay -All right, so l am putting in a long name, Fancy Pants, and nothing's happening.
+-Okay -好吧，所以我要穿一个长长的名字，华丽的裤子，什么也没发生
 
 379
 00:25:44,783 --> 00:25:57,625
 -No -No, and am realizing that I've got my form with my input for customer name,but I put my validation summary outside the form.
--No -No, and am realizing that I've got my form with my input for customer name,but I put my validation summary outside the form.
+-不 -不，我意识到我已经有了我的客户姓名输入表格，但是我把我的验证总结放在表格之外
 
 380
 00:25:57,625 --> 00:26:02,553
 -Okay -So I am gonna put it inside the form,cuz it's validating the form.
--Okay -So I am gonna put it inside the form,cuz it's validating the form.
+-好的 -所以我会把它放在表单里面，因为它正在验证表单
 
 381
 00:26:02,975 --> 00:26:15,519
 And then I'm gonna hit Refresh, Fancy Pants, see and it says the Field Name, must be a string with maximum length of 10.
-And then I'm gonna hit Refresh, Fancy Pants, see and it says the Field Name, must be a string with maximum length of 10.
+然后我要刷新，华丽的裤子，看到它说的是字段名称，必须是一个最大长度为10的字符串
 
 382
 00:26:15,519 --> 00:26:20,383
 I'm getting that validation for free, right?
-I'm getting that validation for free, right?
+我免费得到验证，对吧？
 
 383
 00:26:20,383 --> 00:26:22,111
 And where did that 10 come from?
-And where did that 10 come from?
+那10人来自哪里？
 
 384
 00:26:24,159 --> 00:26:27,871
 We set it in, yep, right there.
-We set it in, yep, right there.
+我们把它放进去了，没错，就在那里
 
 385
 00:26:27,935 --> 00:26:29,279
 We set it right there.
-We set it right there.
+我们把它放在那里
 
 386
 00:26:29,279 --> 00:26:33,695
 So maybe we'll change that to like 25, or something like that.
-So maybe we'll change that to like 25, or something like that.
+也许我们会把它变成25，或者类似的东西
 
 387
 00:26:33,695 --> 00:26:38,495
 Some people have really long names like in my country who have names which are 50, so maybe 100?
-Some people have really long names like in my country who have names which are 50, so maybe 100?
+有些人在我的国家有很长的名字，名字有50个，也许是100个？
 
 388
 00:26:38,495 --> 00:26:40,991
 I'll make 49 and then that one 50 person,they're gonna suffer.
-I'll make 49 and then that one 50 person,they're gonna suffer.
+我要49，然后50个人，他们会受罪
 
 389
 00:26:41,600 --> 00:26:45,000
 -Man -inclusion. But the point is it's driven by
--Man -inclusion. But the point is it's driven by
+-人 -包括。但关键是它是由它们驱动的
 
 390
 00:26:45,275 --> 00:26:46,623
-- By them -By them, okay?
-- By them -By them, okay?
+-By them -By them, okay?
+-通过他们 -通过他们, 好吗?
 
 391
 00:26:46,623 --> 00:26:52,959
 And then one other thing- So it'd be the same if someone did entered something that wasn't an email, right?
-And then one other thing- So it'd be the same if someone did entered something that wasn't an email, right?
+-还有一件事 -如果有人输入了不是电子邮件的东西，情况也会一样，对吧？
 
 392
 00:26:52,959 --> 00:27:01,279
 Yeah, it could be an email, it could be,you can put in validation information however you want,and you could even put in custom, regular expressions, or even write your own custom validators.
-Yeah, it could be an email, it could be,you can put in validation information however you want,and you could even put in custom, regular expressions, or even write your own custom validators.
+是的，它可以是电子邮件，它可以是，你可以放入验证信息，不管你想要什么，你甚至可以放入自定义，正则表达式，甚至写自己的自定义验证器
 
 393
 00:27:01,279 --> 00:27:02,751
 So they could be as sophisticated as you want.
-So they could be as sophisticated as you want.
+所以他们可以像你想要的那样复杂
 
 394
 00:27:02,751 --> 00:27:09,215
 -Okay -You could also, I believe, say, I want a span.
--Okay -You could also, I believe, say, I want a span.
+-好吧 -你也可以说，我想要一个跨距
 
 395
 00:27:09,279 --> 00:27:18,303
 And say asp-validation-for, and you could go and do a field by field validation, okay.
-And say asp-validation-for, and you could go and do a field by field validation, okay.
+并用ASP验证，你可以去做一个实地验证，好吧
 
 396
 00:27:18,751 --> 00:27:26,303
 So here I'm saying this is my summary of all the different things, this is a specific validation for Customer Name.
-So here I'm saying this is my summary of all the different things, this is a specific validation for Customer Name.
+所以我说这是我对所有不同事物的总结，这是对客户名称的具体验证
 
 397
 00:27:27,375 --> 00:27:36,725
 Okay, let's see what that looks like And that might look a little different so if I come over here, come back over here and hit Refresh,oops I actually don't hit Refresh.
-Okay, let's see what that looks like And that might look a little different so if I come over here, come back over here and hit Refresh,oops I actually don't hit Refresh.
+好吧，让我们看看这是什么样子，这可能看起来有点不同，所以如果我来到这里，回到这里，点击刷新，OOP，我实际上不刷新
 
 398
 00:27:36,725 --> 00:27:38,700
 I need to run my app again cuz I stopped it.
-I need to run my app again cuz I stopped it.
+我需要再次运行我的应用程序，因为我停止了它
 
 399
 00:27:39,875 --> 00:27:40,835
 Okay.
-Okay.
+Okay
 
 400
 00:27:43,907 --> 00:27:45,059
 Run that again.
-Run that again.
+再跑一遍
 
 401
 00:27:48,003 --> 00:27:48,899
 Go to Create.
-Go to Create.
+去创建
 
 402
 00:27:50,051 --> 00:27:52,611
 I think we made it really long this time, right?
-I think we made it really long this time, right?
+我想这次视频我们做的真的很长，对吧？（您二位还知道呀，累死我啦~）
 
 403
 00:27:54,723 --> 00:27:59,651
 And I tab away and it says it must be a string with a maximum length of 49.
-And I tab away and it says it must be a string with a maximum length of 49.
+我把它拿走，它说它必须是一个最大长度为49的绳子
 
 404
 00:28:00,227 --> 00:28:00,675
 Okay.
-Okay.
+Okay
 
 405
 00:28:01,443 --> 00:28:07,011
 But I like the main validation stuff so we'll leave that like that, okay?
-But I like the main validation stuff so we'll leave that like that, okay?
+但是我喜欢主要的验证，所以我们就这样离开，好吗？
 
 406
 00:28:07,971 --> 00:28:18,723
 Now, let's go back to our break points and run our debugger this time, and see if we can see the customer get found.
-Now, let's go back to our break points and run our debugger this time, and see if we can see the customer get found.
+现在，让我们回到我们的断点，并运行我们的调试器这次，看看我们是否可以看到客户找到
 
 407
 00:28:18,723 --> 00:28:19,491
 Okay.
-Okay.
+Okay
 
 408
 00:28:20,850 --> 00:28:29,411
 We had looked in the F12 developer tools before,we could see what's happening on the wire.
-We had looked in the F12 developer tools before,we could see what's happening on the wire.
+我们以前看过F12开发工具，我们可以看到电线上发生了什么
 
 409
 00:28:29,411 --> 00:28:33,315
 This is a good way to kinda just see what's happening as you do your posts.
-This is a good way to kinda just see what's happening as you do your posts.
+这是一个很好的方式，看看你做什么，当你做你的帖子
 
 410
 00:28:34,339 --> 00:28:38,243
 -So when you're looking, so you went to Developer Tools -Yeah. And the network?
--So when you're looking, so you went to Developer Tools -Yeah. And the network?
+-所以当你在看的时候，你就去开发工具了 -是啊。网络呢？
 
 411
 00:28:38,243 --> 00:28:40,099
 I went to dot dot dot Developer Tools and we're under Network.
-I went to dot dot dot Developer Tools and we're under Network.
+我想用 dot 开发工具，在网络下
 
 412
 00:28:40,099 --> 00:28:48,900
 Okay. I will go and probably and clear it out, and then we'll put in Maria, okay.
-Okay. I will go and probably and clear it out, and then we'll put in Maria, okay.
+可以。我会去把它弄清楚，然后我们就去Maria，好吗？
 
 413
 00:28:48,900 --> 00:28:53,411
 Yep, there we go, so if you hover over that.
-Yep, there we go, so if you hover over that.
+是的，我们走了，所以如果你悬停在上面
 
 414
 00:28:53,475 --> 00:29:02,051
 If we hover over Customer, see,because customer has a name.
-If we hover over Customer, see,because customer has a name.
+如果我们悬停在客户身上，请看，因为客户有名字
 
 415
 00:29:02,051 --> 00:29:08,963
 Yeah. Customer.name, and we name the field Customer.name, and we told it, hey,bind, we want you to participate.
-Yeah. Customer.name, and we name the field Customer.name, and we told it, hey,bind, we want you to participate.
+是啊。客户。名称，我们命名字段客户。名称，我们告诉它，嘿，BIN，我们希望你参与
 
 416
 00:29:10,075 --> 00:29:12,775
 You automatically showed up in there.
-You automatically showed up in there.
+你会自动出现在那里
 
 417
 00:29:12,775 --> 00:29:15,043
 -Okay -And I can put a little pin there as well
--Okay -And I can put a little pin there as well
+-Okay -我也可以放一个小别针
 
 418
 00:29:15,875 --> 00:29:23,171
 If I was gonna do lots of debugging sessions,then I can keep you there as a post to note and watch customer name change over time.
-If I was gonna do lots of debugging sessions,then I can keep you there as a post to note and watch customer name change over time.
+如果我要做很多调试会话，那么我可以把你放在那里作为一个帖子来记录和观察客户名称的变化
 
 419
 00:29:23,171 --> 00:29:28,400
 -That's a good one -We can go and see if the model state is valid, it is.
--That's a good one -We can go and see if the model state is valid, it is.
+-那是一个不错的选择 -我们可以去看看模型状态是否有效
 
 420
 00:29:28,881 --> 00:29:33,790
 -What is the green button, that's a play like -Yeah, go to that point.
--What is the green button, that's a play like -Yeah, go to that point.
+-什么是绿色按钮，这是一个游戏 -是的，到那一点
 
 421
 00:29:34,400 --> 00:29:37,959
 Play up to that point, and then stop.
-Play up to that point, and then stop.
+玩到那一点，然后停下来
 
 422
 00:29:39,025 --> 00:29:42,574
 So here, I'm gonna go and Add that customer to the database.
-So here, I'm gonna go and Add that customer to the database.
+所以，我要把这个客户添加到数据库中
 
 423
 00:29:42,574 --> 00:29:45,646
 Save it to the database,which of course is an in-memory database.
-Save it to the database,which of course is an in-memory database.
+将其保存到数据库中，这当然是内存数据库
 
 424
 00:29:45,646 --> 00:29:52,401
 And then we'll redirect Now we had put in slash, but I'm not sure that's gonna work.
-And then we'll redirect Now we had put in slash, but I'm not sure that's gonna work.
+嗯，然后我们重定向，现在我们已经投入了斜杠，但我不确定这会起作用
 
 425
 00:29:52,401 --> 00:29:55,473
 Should we should we see about their pages, just in case?
-Should we should we see about their pages, just in case?
+我们应该看看他们的网页，以防万一吗？
 
 426
 00:29:55,473 --> 00:29:56,325
 -Yeah, see? -Okay.
--Yeah, see? -Okay.
+-是的，看到了吗？ -Okay
 
 427
 00:29:56,325 --> 00:30:00,677
 It's says no page / matches this value.
-It's says no page / matches this value.
+它没有页面/匹配这个值
 
 428
 00:30:00,677 --> 00:30:02,252
 So you have to give the specific name
-So you have to give the specific name
+所以你必须给出具体的名字
 
 429
 00:30:02,252 --> 00:30:08,798
 I need to say index, which was what our main page is here
-I need to say index, which was what our main page is here
+我需要 index ，在这里这是我们的主页
 
 430
 00:30:08,798 --> 00:30:10,654
@@ -2149,12 +2145,12 @@ So index, okay?
 431
 00:30:11,934 --> 00:30:13,662
 Now we'll confirm if that that works.
-Now we'll confirm if that that works.
+现在我们确认这是否可行
 
 432
 00:30:13,726 --> 00:30:22,366
 I can hit F5 to go and debug, or I can hit Ctrl+F5,which I like to do, cuz it starts up a little faster,if I know that I'm not gonna do a debugging session.
-I can hit F5 to go and debug, or I can hit Ctrl+F5,which I like to do, cuz it starts up a little faster,if I know that I'm not gonna do a debugging session.
+我可以命中F5去调试，或者我可以点击CTRL+F5，我喜欢这样做，因为它启动得快一点，如果我知道我不会做调试会话
 
 433
 00:30:23,774 --> 00:30:25,118
