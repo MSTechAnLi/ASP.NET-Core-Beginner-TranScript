@@ -2155,177 +2155,178 @@ I can hit F5 to go and debug, or I can hit Ctrl+F5,which I like to do, cuz it st
 433
 00:30:23,774 --> 00:30:25,118
 But this time you hit F5?
-But this time you hit F5?
+但这次你击中了F5？
 
 434
 00:30:25,118 --> 00:30:27,102
 I hit Ctrl+F5 to go faster.
-I hit Ctrl+F5 to go faster.
+我点击Ctrl +F5以加快速度
 
 435
 00:30:28,382 --> 00:30:33,566
 Okay, so it redirected me to index but of course I haven't done anything on index that's interesting yet.
-Okay, so it redirected me to index but of course I haven't done anything on index that's interesting yet.
+好的，它让我重定向到索引，当然我还没有做任何有意思的索引
 
 436
 00:30:33,850 --> 00:30:35,294
 That will be the next part, right.
-That will be the next part, right.
+这将是下一个部分，对
 
 437
 00:30:35,294 --> 00:30:38,700
 So you could also probably send a message saying
-So you could also probably send a message saying
+所以你也可以发送一个信息说
 
 438
 00:30:38,700 --> 00:30:40,670
 I can say customer updated,or whatever.
-I can say customer updated,or whatever.
+我可以说客户更新，或者什么
 
 439
 00:30:40,734 --> 00:30:43,486
 But let's rip out this whole section here.
-But let's rip out this whole section here.
+但是让我们把整个部分撕掉
 
 440
 00:30:43,486 --> 00:30:46,046
 -Okay, very nice -And put a list of contents.
--Okay, very nice -And put a list of contents.
+-Okay ，非常好 -并列一个目录
+
 
 441
 00:30:46,046 --> 00:30:47,326
 -Okay -Is that cool?
--Okay -Is that cool?
+-Okay -酷吗？
 
 442
 00:30:49,075 --> 00:30:50,782
 So where's our index?
-So where's our index?
+那么我们的索引在哪里呢？
 
 443
 00:30:51,975 --> 00:30:54,558
 So this is all this carousel and all this stuff.
-So this is all this carousel and all this stuff.
+这就是所有的旋转木马和所有这些东西
 
 444
 00:30:54,558 --> 00:30:55,902
 All the fancy bootstrap.
-All the fancy bootstrap.
+所有的花样引导
 
 445
 00:30:55,966 --> 00:30:58,910
 I'm gonna actually collect this.
-I'm gonna actually collect this.
+我要收集这个
 
 446
 00:30:58,910 --> 00:31:00,446
 And then you comment it out?
-And then you comment it out?
+然后你评论一下？
 
 447
 00:31:00,446 --> 00:31:04,030
 Actually, no, I'm just gonna be awesome and just like toss it.
-Actually, no, I'm just gonna be awesome and just like toss it.
+事实上，不会的，我会就像扔硬币一样棒棒
 
 448
 00:31:04,094 --> 00:31:12,800
 Wow. Yeah, but this is a way,if you wanna go hunting for the other side of the div,you can just fold these up, see that this matches this.
-Wow. Yeah, but this is a way,if you wanna go hunting for the other side of the div,you can just fold these up, see that this matches this.
+真的。是的，但是这是一种方式，如果你想去寻找另一个DIV，你可以把它们折叠起来，看看这与这个匹配
 
 449
 00:31:13,769 --> 00:31:17,545
 Fold it up, select over it and toss it.
-Fold it up, select over it and toss it.
+把它折叠起来，选择它并扔它
 
 450
 00:31:21,001 --> 00:31:22,537
 Cool, all right.
-Cool, all right.
+酷，好吧
 
 451
 00:31:22,537 --> 00:31:24,905
 So let's make our form.
-So let's make our form.
+所以，让我们形成自己的形式
 
 452
 00:31:28,361 --> 00:31:31,433
 And this will be on the index page, right?
-And this will be on the index page, right?
+这将在索引页上，对吗？
 
 453
 00:31:31,433 --> 00:31:37,425
 We'll have method="post", and this will be a table.
-We'll have method="post", and this will be a table.
+是的。我们将有方法=“POST”，这将是一个表
 
 454
 00:31:37,900 --> 00:31:39,564
 All right.
-All right.
+好的
 
 455
 00:31:40,450 --> 00:31:43,721
 It's okay to use tables, if it is a table of data.
-It's okay to use tables, if it is a table of data.
+如果表是数据表，可以使用表
 
 456
 00:31:43,785 --> 00:31:47,650
 So many people complain about tables being a bad idea.
-So many people complain about tables being a bad idea.
+很多人抱怨表是个坏主意
 
 457
 00:31:48,000 --> 00:31:51,825
 I think that's kind of funny,It's a table,It's okay to have a table.
-I think that's kind of funny,It's a table,It's okay to have a table.
+我觉得这很有趣，这是一张表，有一张表是可以的
 
 458
 00:31:52,125 --> 00:31:56,192
 So we'll have a head for our table, and we'll have our ID row.
-So we'll have a head for our table, and we'll have our ID row.
+所以我们有一张表，我们会有 ID 行
 
 459
 00:31:57,920 --> 00:32:08,096
 -Yep -Oops, and we'll have ID.
--Yep -Oops, and we'll have ID.
+-Yep -哎呀，我们会有 ID 的
 
 460
 00:32:09,632 --> 00:32:14,675
 Then we'll have Name, we don't really need to show the database ID but for now let's show it.
-Then we'll have Name, we don't really need to show the database ID but for now let's show it.
+然后我们将有名字，我们不需要显示数据库ID，但是现在让我们来展示它
 
 461
 00:32:15,475 --> 00:32:19,950
 All right,So do you have to create a tbody, okay yeah,you're way ahead of me.
-All right,So do you have to create a tbody, okay yeah,you're way ahead of me.
+所以你必须创建一个 tbody ，好吧，是的，你在我前面
 
 462
 00:32:19,950 --> 00:32:22,048
 No, it's okay. Table body
-No, it's okay. Table body
+不，没关系 Table body
 
 463
 00:32:22,048 --> 00:32:26,080
 But now I need a row for each.
-But now I need a row for each.
+但现在我需要每一行
 
 464
 00:32:27,040 --> 00:32:33,900
 So would you put it in the row, or would you,so I am presumed that you need to go for every contact within.
-So would you put it in the row, or would you,so I am presumed that you need to go for every contact within.
+所以你会把它放在队列中，还是你，所以我推测你需要去寻找里面的每一个联系人
 
 465
 00:32:33,900 --> 00:32:34,555
 Exactly.
-Exactly.
+确切地
 
 466
 00:32:34,950 --> 00:32:40,352
 So I'm gonna have like a FOR SOMETHING HERE.
-So I'm gonna have like a FOR SOMETHING HERE.
+所以我会有类似于 FOR SOMETHING HERE 的东西
 
 467
 00:32:40,416 --> 00:32:53,675
 Then a couple of cells, table cells, and then maybe a, I don't know,like a link to edit and a delete button.
-Then a couple of cells, table cells, and then maybe a, I don't know,like a link to edit and a delete button.
+然后是两个单元格，表格单元格，也许是A，我不知道，像一个编辑和删除按钮的链接
 
 468
 00:32:53,675 --> 00:32:54,507
@@ -2335,522 +2336,522 @@ Yeah.
 469
 00:32:54,800 --> 00:32:57,952
 -Okay, you see how I'm kind of sketching it out -You're sketching it out
--Okay, you see how I'm kind of sketching it out -You're sketching it out
+-好吧，你看我是怎么画出来的 -你正在描绘它
 
 470
 00:32:57,952 --> 00:32:59,448
 -Okay. Wild -what's it called?
--Okay. Wild -what's it called?
+-Okay. 野生 -它叫什么？
 
 471
 00:32:59,448 --> 00:33:02,925
 -Pseudocode or something? -Pseudocode,It's a little pseudocode here
--Pseudocode or something? -Pseudocode,It's a little pseudocode here
+-Pseudocode 或者 something? -Pseudocode ,这里有点伪代码
 
 472
 00:33:02,925 --> 00:33:04,050
 So now I wanna say at.
-So now I wanna say at.
+所以现在我想说
 
 473
 00:33:04,525 --> 00:33:08,100
 For each yeah. And this is a snippet-
-For each yeah. And this is a snippet-
+对每个人来说是的。这是一个片段
 
 474
 00:33:08,100 --> 00:33:20,096
 -Yeah -Tab, Tab, and then I'm gonna say for each,contact, oops, contact in, in what?
--Yeah -Tab, Tab, and then I'm gonna say for each,contact, oops, contact in, in what?
+-Yeah -Tab, Tab, 然后我会说，每个人，联系，OOP，联系进来，在什么？
 
 475
 00:33:20,096 --> 00:33:21,056
 In Model.
-In Model.
+在模型中
 
 476
 00:33:21,650 --> 00:33:23,232
 Now where is our customers?
-Now where is our customers?
+现在我们的客户在哪里？
 
 477
 00:33:24,768 --> 00:33:31,104
 Okay, so remember before when we were doing our create model?
-Okay, so remember before when we were doing our create model?
+好的，所以记得在我们做我们的创建模型之前吗？
 
 478
 00:33:31,104 --> 00:33:34,752
 We needed to have the customers come from somewhere.
-We needed to have the customers come from somewhere.
+我们需要让顾客从某个地方来
 
 479
 00:33:34,752 --> 00:33:36,352
 Yeah. Now we're in a totally different page.
-Yeah. Now we're in a totally different page.
+是啊。现在我们完全不一样了
 
 480
 00:33:36,725 --> 00:33:38,100
 Yeah, so we have to have the customers.
-Yeah, so we have to have the customers.
+是的，所以我们必须有顾客
 
 481
 00:33:38,100 --> 00:33:39,125
 We have to have the customers, right?
-We have to have the customers, right?
+我们必须有客户，对吧？
 
 482
 00:33:39,125 --> 00:33:41,075
 Yeah. So I'm gonna just take a break here.
-Yeah. So I'm gonna just take a break here.
+是啊。所以我要在这里休息一下
 
 483
 00:33:42,112 --> 00:33:49,472
 And I'm gonna jump over to the index model cuz we can't really make our table till we have a little bit more, okay?
-And I'm gonna jump over to the index model cuz we can't really make our table till we have a little bit more, okay?
+我要跳到 index 模型，因为我们不能真的做我们的表，直到我们有多一点，好吗？
 
 484
 00:33:49,536 --> 00:33:59,520
 And I'm gonna break a couple of cardinal rules that I'm gonna copy paste a little code,because I'm gonna need this similar app database.
-And I'm gonna break a couple of cardinal rules that I'm gonna copy paste a little code,because I'm gonna need this similar app database.
+我要打破一些基本规则，我要复制粘贴一个小代码，因为我需要这个类似的应用程序数据库
 
 485
 00:33:59,520 --> 00:34:02,656
 This app db context which is gonna save myself a moment of time here.
-This app db context which is gonna save myself a moment of time here.
+这个App DB上下文将在这里节省我自己的时间
 
 486
 00:34:04,064 --> 00:34:08,736
 So we've got our app context, right?
-So we've got our app context, right?
+所以我们有了应用程序上下文，对吧？
 
 487
 00:34:08,736 --> 00:34:10,976
 We're gonna have our index page model.
-We're gonna have our index page model.
+我们将有索引页模型
 
 488
 00:34:11,360 --> 00:34:15,904
 Now before, when we create a customer,we create one customer.
-Now before, when we create a customer,we create one customer.
+现在，当我们创建一个客户时，我们创建了一个客户
 
 489
 00:34:16,288 --> 00:34:24,416
 But here our model is different cuz we're gonna have a list of customers on this page, right?
-But here our model is different cuz we're gonna have a list of customers on this page, right?
+但在这里我们的模型不同，因为我们会在这一页上有一个客户列表，对吧？
 
 490
 00:34:24,416 --> 00:34:25,504
 So our model is different.
-So our model is different.
+所以我们的模型是不同的
 
 491
 00:34:25,952 --> 00:34:31,136
 And we'll do a get and then a private set so that only we can set it.
-And we'll do a get and then a private set so that only we can set it.
+我们会做一个GET，然后是一个私有集合，这样我们才可以设置它
 
 492
 00:34:31,712 --> 00:34:40,736
 -All right, and then, in the OnGet, We'll say OnGet -One line below, OnGetAsync, okay
--All right, and then, in the OnGet, We'll say OnGet -One line below, OnGetAsync, okay
+-好的,然后在 OnGet 我们会在 OnGet -One 下面一行, OnGetAsync, okay
 
 493
 00:34:42,450 --> 00:34:48,480
 -OnGetAsync, right? -We're gonna load up customers.
--OnGetAsync, right? -We're gonna load up customers.
+-OnGetAsync, 是吗? -我们要去接客户
 
 494
 00:34:48,480 --> 00:34:49,568
 Where do we get them from?
-Where do we get them from?
+我们从哪里得到它们？
 
 495
 00:34:50,075 --> 00:34:51,168
 The database and this is right there.
-The database and this is right there.
+数据库就在这里
 
 496
 00:34:52,650 --> 00:34:54,525
 We're getting them out of customers.
-We're getting them out of customers.
+我们把他们从客户那里弄出来
 
 497
 00:34:54,525 --> 00:35:01,400
 And then there's this other little bit of thing that you can add on to make things a little bit faster.
-And then there's this other little bit of thing that you can add on to make things a little bit faster.
+还有另外一点你可以补充的东西让事情稍微快一点
 
 498
 00:35:01,400 --> 00:35:05,875
 You can say AsNoTracking.
-You can say AsNoTracking.
+你可以 AsNoTracking.
 
 499
 00:35:08,808 --> 00:35:11,496
 And I'll show you what that means in a second.
-And I'll show you what that means in a second.
+我会告诉你这意味着什么
 
 500
 00:35:11,496 --> 00:35:16,609
 And we're gonna turn these customers into a list of customers.
-And we're gonna turn these customers into a list of customers.
+我们会把这些客户变成客户名单
 
 501
 00:35:16,609 --> 00:35:19,808
 So we're chaining things together,we're saying give me these customers.
-So we're chaining things together,we're saying give me these customers.
+所以我们把事情联系在一起，我们是说给我这些客户
 
 502
 00:35:20,192 --> 00:35:24,032
 And we're not gonna keep track of them changing.
-And we're not gonna keep track of them changing.
+我们不会跟踪他们的变化
 
 503
 00:35:24,032 --> 00:35:28,960
 You see it says disabling change tracking is useful for read-only scenarios.
-You see it says disabling change tracking is useful for read-only scenarios.
+您可以看到禁用更改跟踪对于只读场景是有用的
 
 504
 00:35:29,975 --> 00:35:37,400
 Change tracking is watching like keeping a track of all the different things you could change so that you know how to make a database update.
-Change tracking is watching like keeping a track of all the different things you could change so that you know how to make a database update.
+就像跟踪所有你可以改变的事物的轨迹，这样你就知道如何进行数据库更新
 
 505
 00:35:37,925 --> 00:35:53,575
 So if I had a list of customers, and I wanted to watch all of them and change their names, that would give the database system entity framework that we're gonna learn about later all the information it needs about how to only change the bits that change, how to only change the database.
-So if I had a list of customers, and I wanted to watch all of them and change their names, that would give the database system entity framework that we're gonna learn about later all the information it needs about how to only change the bits that change, how to only change the database.
+所以，如果我有一个客户列表，我想看所有的人，并改变他们的名字，这将给出数据库系统实体框架，我们稍后将了解所有关于如何只更改这些位的信息，如何只更改数据库
 
 506
 00:35:53,575 --> 00:35:58,976
 But we're just getting a list, so we're gonna say, don't track these, just give me a list.
-But we're just getting a list, so we're gonna say, don't track these, just give me a list.
+但我们只是得到一个列表，所以我们要说，不要跟踪这些，只要给我一个清单
 
 507
 00:35:58,976 --> 00:36:03,712
 So customers, no tracking, give me a list, so that's cool.
-So customers, no tracking, give me a list, so that's cool.
+所以客户，没有跟踪，给我一个清单，所以很酷
 
 508
 00:36:04,928 --> 00:36:07,424
 And I think we'll leave that like that for now.
-And I think we'll leave that like that for now.
+我想我们现在就这样离开
 
 509
 00:36:07,744 --> 00:36:09,984
 We'll go back over to index.
-We'll go back over to index.
+我们将回到 index
 
 510
 00:36:11,968 --> 00:36:17,591
 And now that model, the page behind us has customers.
-And now that model, the page behind us has customers.
+现在这个模型，我们后面的页面有客户
 
 511
 00:36:17,591 --> 00:36:20,840
 Look, customers shows up, see, which is nice.
-Look, customers shows up, see, which is nice.
+看，顾客出现了，看，哪一个很好
 
 512
 00:36:21,400 --> 00:36:24,950
 So then I think I can put my tr in here.
-So then I think I can put my tr in here.
+所以我想我可以把我的 tr 放在这里
 
 513
 00:36:26,280 --> 00:36:30,120
 And I'm hoping, remember, I said contact, I should say customer.
-And I'm hoping, remember, I said contact, I should say customer.
+我希望，记住，我说联系，我应该说客户
 
 514
 00:36:31,848 --> 00:36:43,944
 Customer singular, foreach customer,that means that the customer variable is now available to me customer.Id.
-Customer singular, foreach customer,that means that the customer variable is now available to me customer.Id.
+客户单数，前额客户，这意味着客户变量现在可以给我客户
 
 515
 00:36:46,025 --> 00:36:50,152
 -Everything's connected -Yep, cool, let's try that.
--Everything's connected -Yep, cool, let's try that.
+-一切都是相连的 -酷，让我们试试看.
 
 516
 00:36:50,152 --> 00:36:53,550
 Okay. And then we'll do the rest,cuz I don't know if this is gonna work yet.
-Okay. And then we'll do the rest,cuz I don't know if this is gonna work yet.
+然后我们做剩下的事情，因为我不知道这是否可行
 
 517
 00:36:55,550 --> 00:36:59,496
 Now I'm using an in-memory database, so every time I run this, it's gonna go away.
-Now I'm using an in-memory database, so every time I run this, it's gonna go away.
+现在我使用的是内存数据库，所以每次运行这个数据库，它都会消失
 
 518
 00:36:59,496 --> 00:37:01,352
 So it's just a throw away database.
-So it's just a throw away database.
+所以这是一个一次性数据库
 
 519
 00:37:01,352 --> 00:37:10,440
 -I need to do better -I need to maybe make tests later, and I survived the journey.
--I need to do better -I need to maybe make tests later, and I survived the journey.
+-我需要做得更好 -我需要以后再做测试，我在旅途中幸存下来
 
 520
 00:37:10,504 --> 00:37:16,000
 -You did -Let's see, but as soon as I shut you down, it's gonna be gone.
--You did -Let's see, but as soon as I shut you down, it's gonna be gone.
+-你需要这么做 -让我看看，但是一旦我把你关了，它就不见了
 
 521
 00:37:16,000 --> 00:37:19,784
-So if you refresh the page- You're here,you're still there, right?
-So if you refresh the page- You're here,you're still there, right?
+-So if you refresh the page -You're here,you're still there, right?
+-如果你刷新页面 -你在这里，你还在那里，对吧？
 
 522
 00:37:19,784 --> 00:37:22,920
 You're there until I close it, until I close this browser.
-You're there until I close it, until I close this browser.
+你在那里直到我关闭它，直到我关闭这个浏览器
 
 523
 00:37:23,375 --> 00:37:27,464
 Or not if I close the browser, pardon me,until I stop the web server.
-Or not if I close the browser, pardon me,until I stop the web server.
+或者，如果我关闭浏览器，请原谅我，直到我停止Web服务器
 
 524
 00:37:27,464 --> 00:37:33,032
 -So, okay -Yeah, thanks, cool, so now we've got create.
--So, okay -Yeah, thanks, cool, so now we've got create.
+-好了 -谢谢，很酷，所以现在我们有了创建功能
 
 525
 00:37:33,825 --> 00:37:36,680
 We should probably put a button down there at the bottom somewhere.
-We should probably put a button down there at the bottom somewhere.
+我们应该把按钮放在下面的某个地方
 
 526
 00:37:36,680 --> 00:37:49,224
 We've got some validation, we've got our database,looking at our friends And this is doing a thing called Post Redirect Get.
-We've got some validation, we've got our database,looking at our friends And this is doing a thing called Post Redirect Get.
+我们有一些验证，我们有我们的数据库，看我们的朋友，这是做一个叫做邮政重定向的东西
 
 527
 00:37:49,875 --> 00:37:54,792
 So I'm here, I hit a post, we do a redirect, and then we do a get, and then we would get this stuff here.
-So I'm here, I hit a post, we do a redirect, and then we do a get, and then we would get this stuff here.
+所以我在这里，我打了一个帖子，我们做了一个重定向，然后我们做了一个get，然后我们得到了这个东西
 
 528
 00:37:55,400 --> 00:37:57,800
 So this is a PRG, Post Redirect Get.
-So this is a PRG, Post Redirect Get.
+所以这是一个PRG，邮政重定向获得
 
 529
 00:37:57,800 --> 00:38:00,424
 There's lots of articles on the Internet about that.
-There's lots of articles on the Internet about that.
+网上有很多关于这方面的文章
 
 530
 00:38:00,825 --> 00:38:05,608
 Now let's make a link to theoretically go and edit these things.
-Now let's make a link to theoretically go and edit these things.
+现在让我们从理论上链接并编辑这些东西
 
 531
 00:38:05,608 --> 00:38:08,050
 -Okay -And then we'll have a button for Delete.
--Okay -And then we'll have a button for Delete.
+-Okay -然后我们有一个删除按钮
 
 532
 00:38:08,050 --> 00:38:10,994
 These things don't exist on the backend yet,but we can- So yeah,so we don't have an edit page yet.
-These things don't exist on the backend yet,but we can- So yeah,so we don't have an edit page yet.
+这些东西在后端还不存在，但是我们可以——所以是的，所以我们还没有编辑页面
 
 533
 00:38:10,994 --> 00:38:13,089
 -We don't -Okay. We can make a link
--We don't -Okay. We can make a link
+-我们没有 -可以。我们可以建立联系
 
 534
 00:38:13,089 --> 00:38:14,753
 Now I could go and put in a link, href.
-Now I could go and put in a link, href.
+现在我可以走了，把一个链接，HREF
 
 535
 00:38:14,753 --> 00:38:16,825
 You've done this before a million times.
-You've done this before a million times.
+你已经做过一百万次了
 
 536
 00:38:17,175 --> 00:38:21,857
 And say /edit and then put in strings and stuff.
-And say /edit and then put in strings and stuff.
+然后说/编辑，然后把字符串和东西
 
 537
 00:38:21,857 --> 00:38:24,289
 But remember we talked about how great tag helpers are.
-But remember we talked about how great tag helpers are.
+但是记住，我们谈到了标签助手的伟大之处
 
 538
 00:38:24,289 --> 00:38:34,721
 -Yeah -What if we went and said asp-page and then we could go and say there's an edit page and then it would figure out what the URL would look like.
--Yeah -What if we went and said asp-page and then we could go and say there's an edit page and then it would figure out what the URL would look like.
+-Yeah -如果我们去说ASP页面，然后我们可以说有一个编辑页面，然后它就会知道URL会是什么样子
 
 539
 00:38:34,721 --> 00:38:41,450
 -Okay -All right, and then it could even express the route a certain way.
--Okay -All right, and then it could even express the route a certain way.
+-Okay -然后它甚至可以以某种方式表达路线
 
 540
 00:38:42,875 --> 00:38:44,775
 And we'll talk about routes in a minute.
-And we'll talk about routes in a minute.
+我们将在一分钟内谈论路线
 
 541
 00:38:46,325 --> 00:38:48,450
 I think it's route-id.
-I think it's route-id.
+我认为这是路由器ID
 
 542
 00:38:51,500 --> 00:38:53,729
 And I think we called it customer.Id.
-And I think we called it customer.Id.
+我想我们命名为 customer.Id
 
 543
 00:38:53,729 --> 00:39:04,000
 So it's gonna take that customer's id so we want to basically make a page that looks like /edit/2, /edit/3, right?
-So it's gonna take that customer's id so we want to basically make a page that looks like /edit/2, /edit/3, right?
+所以它将采取客户的ID，所以我们想基本上制作一个页面，看起来像/编辑/ 2，/编辑/ 3，对吗？
 
 544
 00:39:05,175 --> 00:39:11,075
 And that's the route id that's gonna get added onto that.
-And that's the route id that's gonna get added onto that.
+这就是将要添加到那个的路径ID
 
 545
 00:39:11,075 --> 00:39:13,761
 Okay, so the next thing you have is a button?
-Okay, so the next thing you have is a button?
+好吧，那么接下来你有一个按钮？
 
 546
 00:39:13,761 --> 00:39:22,900
 Yeah, we'll do a button type="submit" and this is going to be handled by the page.
-Yeah, we'll do a button type="submit" and this is going to be handled by the page.
+是的，我们会做一个按钮类型=“提交”，这将由页面来处理
 
 547
 00:39:22,900 --> 00:39:25,409
 -Okay -Button's gonna be a little different.
--Okay -Button's gonna be a little different.
+-Okay -按钮会有点不同
 
 548
 00:39:25,409 --> 00:39:31,937
 The reason that we're doing a button in an href is so you can see the difference between a link,and how links behave, and buttons.
-The reason that we're doing a button in an href is so you can see the difference between a link,and how links behave, and buttons.
+我们在HREF中做一个按钮的原因是，你可以看到一个链接和链接的行为和按钮之间的区别
 
 549
 00:39:31,937 --> 00:39:34,177
 A link is gonna navigate somewhere.
-A link is gonna navigate somewhere.
+一个链接将导航到某处
 
 550
 00:39:34,177 --> 00:39:36,929
 -Yep -And a button's gonna cause a post, right?
--Yep -And a button's gonna cause a post, right?
+-Yep -一个按钮会引起一个帖子，对吧？
 
 551
 00:39:36,929 --> 00:39:42,375
 So this will go and be handled by the delete handler.
-So this will go and be handled by the delete handler.
+这将由删除处理程序处理
 
 552
 00:39:42,950 --> 00:39:47,800
 But we also need that route information, we need that id because we're gonna delete a particular customer.
-But we also need that route information, we need that id because we're gonna delete a particular customer.
+但是我们也需要那个路线信息，我们需要那个ID，因为我们要删除一个特定的客户
 
 553
 00:39:47,800 --> 00:39:51,009
 -So you need the content ID, yep -Customer ID, exactly
--So you need the content ID, yep -Customer ID, exactly
+-所以你需要内容ID，是吧 -确切地说是客户ID
 
 554
 00:39:52,275 --> 00:39:54,913
 All right, and then none of this is hooked up.
-All right, and then none of this is hooked up.
+好吧，然后这些都没有连接起来
 
 555
 00:39:54,977 --> 00:40:01,275
 So you mentioned something, voice of the people at home,about the button being a post.
-So you mentioned something, voice of the people at home,about the button being a post.
+所以你提到了一些东西，家里人的声音，关于按钮的帖子
 
 556
 00:40:01,700 --> 00:40:11,550
 Yes, it is going to post back and then we're gonna need to handle that behavior differently than the Create page.
-Yes, it is going to post back and then we're gonna need to handle that behavior differently than the Create page.
+是的，它将发布回，然后我们需要处理不同于创建页面的行为
 
 557
 00:40:11,550 --> 00:40:13,250
 So then I'll just put a link at the bottom there for Create.
-So then I'll just put a link at the bottom there for Create.
+然后我会在底部放置一个链接来创建
 
 558
 00:40:13,975 --> 00:40:15,125
 So I'm just gonna hit Refresh.
-So I'm just gonna hit Refresh.
+所以我只需要刷新一下
 
 559
 00:40:15,875 --> 00:40:18,725
-So let's see if the Create- Here's our Create.
-So let's see if the Create- Here's our Create.
+-So let's see if the Create -Here's our Create.
+-我们看看是不是创造 -这是我们的创造
 
 560
 00:40:21,450 --> 00:40:22,689
 That still works.
-That still works.
+这仍然有效
 
 561
 00:40:22,689 --> 00:40:25,825
 -Okay -I hover over that.
--Okay -I hover over that.
+-Okay -我犹豫了一下
 
 562
 00:40:26,125 --> 00:40:28,625
 Nothing's happening because we don't have an edit.
-Nothing's happening because we don't have an edit.
+没有任何事情发生，因为我们没有编辑
 
 563
 00:40:29,600 --> 00:40:33,505
 We never made an edit page, and I hit Delete You should.
-We never made an edit page, and I hit Delete You should.
+我们从来没有编辑页面，我点击删除你应该
 
 564
 00:40:33,505 --> 00:40:38,400
 It's gonna crash cuz it's like I don't know what you're doing, right?
-It's gonna crash cuz it's like I don't know what you're doing, right?
+它会崩溃，因为我不知道你在做什么，对吧？
 
 565
 00:40:38,400 --> 00:40:43,125
 It's just in the middle of something and it's confused cuz that's not what I asked it to do.
-It's just in the middle of something and it's confused cuz that's not what I asked it to do.
+它只是在某个事物的中间，它很混乱，因为这不是我要它做的
 
 566
 00:40:44,125 --> 00:40:46,225
 Okay, so we've got some fixing up to do.
-Okay, so we've got some fixing up to do.
+好的，所以我们有一些修复工作要做
 
 567
 00:40:46,225 --> 00:40:51,460
--Let's try Delete first -Okay. All right, so let's go over here.
--Let's try Delete first -Okay. All right, so let's go over here.
+Let's try Delete first -Okay. All right, so let's go over here.
+让我们先试着删除，好吧。好的，让我们过去
 
 568
 00:40:51,460 --> 00:40:58,450
--We made an OnGet -Let's go and make an OnDelete.
--We made an OnGet -Let's go and make an OnDelete.
+We made an OnGet -Let's go and make an OnDelete.
+我们制作了一个 OnGET ，让我们去做一个 OnDelphi
 
 569
 00:40:58,450 --> 00:41:08,932
 -Okay -Same thing as before with an IActionResult, except now we're gonna say on and this is kinda weird, OnPostDelete.
--Okay -Same thing as before with an IActionResult, except now we're gonna say on and this is kinda weird, OnPostDelete.
+-Okay -和以前一样，除了现在我们要说，这有点奇怪，OnPostDelete
 
 570
 00:41:09,764 --> 00:41:20,964
 The verb delete is a real HTTP verb,but it's not really often used from a browser's perspective.
-The verb delete is a real HTTP verb,but it's not really often used from a browser's perspective.
+动词删除是一个真正的HTTP动词，但它实际上并不经常从浏览器的角度使用
 
 571
 00:41:20,964 --> 00:41:25,700
 It's usually done as it's piggybacked on post.
-It's usually done as it's piggybacked on post.
+它通常是背负在 post
 
 572
 00:41:25,700 --> 00:41:29,732
 We use post to pass in basically all kinds of information.
-We use post to pass in basically all kinds of information.
+我们利用 post 基本上传递各种信息
 
 573
 00:41:30,400 --> 00:41:34,980
