@@ -18,1345 +18,1342 @@ Yep
 We have explored the documentation.We've installed the .NET Core SDK and Visual Studio Code.
 我们也接触了文档。并且安装了 .NET Core SDK 和 Visual Studio Code
 
-6
+5
 00:00:09,681 --> 00:00:10,065
 Yes
 是的
 
-7
+6
 00:00:10,353 --> 00:00:13,155
 All right, next, let's make a Web Application.
 好了，那接下来，我们要制作一个 Web 应用
 
-8
+7
 00:00:13,155 --> 00:00:13,675
 Exactly.
 没错
 
-9
+8
 00:00:13,990 --> 00:00:19,702
 All right, so if we look at my screen here,we have the folder that I have my console app.
 现在看着我的屏幕哈，在文件夹中已经有我们的控制台应用了
 
-
-11
+9
 00:00:19,702 --> 00:00:22,438
 And so let's so we have to create a brand new folder.
 所以我们必须创建一个全新的文件夹
 
-12
+10
 00:00:22,438 --> 00:00:23,206
 All right. Yeah.
 嗯，是这样
 
-13
+11
 00:00:23,206 --> 00:00:28,294
 I just wanna point out that all that did was a WriteLine, and it output it to the console
 我们要做一个什么样的程序呢？最起码应该做到通过 WriteLine() ，并内容输出到控制台
 
-15
+12
 00:00:28,294 --> 00:00:33,142
 not particularly impressive, there's no web browser here.
 但其实这也没啥特殊的，也没有用到浏览器
 
-16
+13
 00:00:33,142 --> 00:00:35,158
 There's just, Hello Scott.
 只是做了一个 "Hello Scott"
 
-17
+14
 00:00:35,302 --> 00:00:42,797
 Yeah, we need to when you're learning about a Web Framework, you want to do something on the web. Absolutely
 嗯，如果你正在学习 Web 框架的话，你肯定会想通过 Web 做一些有趣的事嘛
 
-20
+15
 00:00:42,797 --> 00:00:44,189
 So let's do it.
 我们一定要搞一个大新闻！
 
-21
+16
 00:00:44,189 --> 00:00:46,603
 I just wanna juxtapose the difference between the two, so let's take a look at that
 我想先比较一下这两个程序有啥区别，让我们来看看那个吧
 
-23
+17
 00:00:46,603 --> 00:00:47,446
 all right? Yeah.
 好吗？ 好的
 
-24
+18
 00:00:47,446 --> 00:00:49,654
 So what do you want me to do?
 我们应该怎么开始，你有好的建议吗？
 
-25
+19
 00:00:49,654 --> 00:00:51,910
 So can I teach you a new trick?
 没准我可以教你一个新的技巧？
 
-26
+20
 00:00:51,910 --> 00:00:52,726
 Let's do it.
 可以，来吧
 
-27
+21
 00:00:52,726 --> 00:00:58,822
 That you can create your web application and a directory at the same time? Are you sure?
 你可以在同时创建你的 Web 应用和目录吗？嗯，你确定？
 
-
-30
+22
 00:00:58,822 --> 00:01:00,310
 I can do it.Cuz I like making directories.
 可以是可以，但我喜欢直接创建目录哎~
 
-32
+23
 00:01:00,310 --> 00:01:02,758
 I know, I know, but like try something new. All right, all right.
 我知道，但尝试一下新的东西总是好的吧，对吧？
 
-34
+24
 00:01:02,758 --> 00:01:03,382
 Try something
 那来吧
 
-35
+25
 00:01:03,382 --> 00:01:04,006
 new, okay. I'll try.
 撸起袖子就是干
 
-36
+26
 00:01:04,006 --> 00:01:08,518
 So dotnet new web -o.
 dotnet new web -o
 
-37
+27
 00:01:08,518 --> 00:01:09,238
 -o
 -o
 
-38
+28
 00:01:09,238 --> 00:01:09,958
 Yeah
 是的
 
-39
+29
 00:01:09,958 --> 00:01:12,502
 And let's call it mywebapp.
 起个名字叫 mywebapp 吧
 
-40
+30
 00:01:12,502 --> 00:01:18,598
 So we, in the previous video,we looked at the different .NET templates that are available.
 其实在之前的视频中我们就查看了各类可用的 .N​​ET 模板
 
-42
+31
 00:01:18,598 --> 00:01:21,190
 Web is just one of the templates.So we looked at console,
 Web 只是其中的一个模板，来看一下控制台
 
-44
+32
 00:01:21,190 --> 00:01:25,030
 and now we're looking at web, just for people who might be tuning in now. Okay.
 稍等一下，我觉得有必要等一下屏幕前的小伙伴。OK~
 
-
-46
+33
 00:01:25,030 --> 00:01:25,942
 So hit Enter.
 敲下 Enter
 
-47
+34
 00:01:25,942 --> 00:01:27,430
 So it says,
 欸，你看
 
-48
+35
 00:01:27,430 --> 00:01:31,798
 the template core empty, been created successfully, and it put in a folder called mywebapp.
 模板 ASP.NET Core Empty ，已创建成功，并放在了名为 mywebapp 的文件夹中
 
-50
+36
 00:01:34,054 --> 00:01:37,510
 So I like to go and make the directory, and then go into the directory, and you're
 你喜欢先创建目录，然后进入目录
 
-51
+37
 00:01:37,510 --> 00:01:42,577
 saying I can go -o, it'll make the folder and name the thing,all at the same time At the same time.
 但是使用 -o 命令，它会同时创建文件夹和同名项目，这两任务同时给你整好了
 
-53
+38
 00:01:42,577 --> 00:01:43,512
 And if you think about it
 等会哈
 
-54
+39
 00:01:43,512 --> 00:01:49,300
 if somebody's following this outside of Windows,the way they created directory there might be a different.
 如果有人在 Windows 之外使用这种方法，他们创建目录的方式可能会有所不同
 
-56
+40
 00:01:49,300 --> 00:01:53,350
 That is a valid point you're right cuz I said, md and they might say, mkdir
 说的好，确实是这样，因为我用 md 他们可能会用 mkdir
 
-58
+41
 00:01:53,350 --> 00:01:53,950
 Yeah
 是的
 
-59
+42
 00:01:53,950 --> 00:01:55,414
 And that's a good point.
 提醒一下小伙伴们
 
-60
+43
 00:01:55,414 --> 00:01:56,086
 All right, and
 好的
 
-61
+44
 00:01:56,086 --> 00:02:00,665
 when I did that, just as you said, we did a .NET new web.
 当我这样做时，就像你说的，我们完成了一个新的 .NET 网站
 
-62
+45
 00:02:00,665 --> 00:02:01,318
 Yeah
 嗯
 
-63
+46
 00:02:01,366 --> 00:02:07,222
 Which is this one this is an empty one. Anyway there's different web options that we'll explore later.
 这个程序哈，是一个没有内容的程序，虽然还有别的可创建网站的选项，那个我们等会说
 
-66
+47
 00:02:07,222 --> 00:02:11,062
 But right now we made the simplest possible web application.
 但现在我们完成了最简单的 Web 应用程序
 
-68
+48
 00:02:11,062 --> 00:02:16,341
 Exactly, just like the step just above a console right at the line. Okay Just right above it
 确切的说，创建的时候只用了命令行的一行命令就给解决了 
 
-72
+49
 00:02:16,341 --> 00:02:18,885
 We can go into let's go into the mywebapp, and
 我们可以进入这个程序看看，让我们进入 mywebapp （目录），然后
 
-74
+50
 00:02:18,885 --> 00:02:25,797
 I see a csproj which makes sense, I see a Program.cs,
 我看到一个 csproj （文件），这是必须有的哈，我还看到了 Program.cs
 
-75
+51
 00:02:25,797 --> 00:02:30,549
 which I had before. But this is something different. I see a Startup.cs and a wwwroot.
 之前我们就见过这些文件了，但是这些是与之前不同的。我看到 Startup.cs 和 wwwroot
  
-78
+52
 00:02:30,549 --> 00:02:33,429
 Now we could poke around here at the command line, but you showed me
 现在我们可以在命令行中试一下，但是若能打开
 
-79
+53
 00:02:33,429 --> 00:02:36,741
 that VS code is better. It's pretty good.
 VS Code 就更好了，他是最方便的
 
-80
+54
 00:02:36,741 --> 00:02:38,037
 It is better, so
 完美~
 
-81
+55
 00:02:38,037 --> 00:02:42,981
 let's go into there.Now, this is interesting, by the way, I tagged code dot
 让我们进入（目录），这就好玩了，顺便说一下，我键入了 "code ."
 
-83
+56
 00:02:42,981 --> 00:02:45,237
 it opened up my web application.
 它打开了我的 Web 应用程序（目录）
 
-84
+57
 00:02:45,237 --> 00:02:47,781
 It's worth pointing out that if you notice in the background
 你看到了没，如果你注意到背景
 
-85
+58
 00:02:47,781 --> 00:02:50,325
 there, it also opened my previous windows.
 在那里，它也打开了我以前的窗口
 
-86
+59
 00:02:50,757 --> 00:02:57,045
 VS code likes to put things back the way it was so it's restoring my session.
 VS Code 能够记录你的工作状态并且恢复了上次工作的记录
 
-88
+60
 00:02:57,429 --> 00:03:00,309
 I'm gonna go and close the console app from earlier.
 但是我们要先关闭之前的控制台应用
 
-89
+61
 00:03:00,309 --> 00:03:04,485
 And we'll just say, there's that warning again,
 欸，它又出现了这种警告
 
-90
+62
 00:03:04,581 --> 00:03:08,805
 required assets to build, it's totally okay to say yes, because
 为构建添加所需的资源，这毫无疑问的选 yes ，因为
 
-91
+63
 00:03:08,853 --> 00:03:13,797
 we wanna be able to debug our web application, all right
 我们希望能够调试我们的 Web 应用程序，对吧？
 
-92
+64
 00:03:13,989 --> 00:03:15,957
 So I noticed you have a couple of things down there,
 我注意到你在右下角有一些额外的东西
 
-93
+65
 00:03:15,957 --> 00:03:17,925
 are those additional Yeah, that's a great point.
 是那些东西确实是一个值得关注的地方
 
-94
+66
 00:03:17,925 --> 00:03:21,957
 So down here, I've got some extensions,these are like a little accordion extensions.
 在下方这里，我有一些扩展，这些像小手风琴一样的扩展
 
-96
+67
 00:03:21,957 --> 00:03:28,725
 If I want to play with Docker, or if I'm gonna be using Git, so GitLens and Docker are extensions.
 如果我想玩 Docker ，或者如果我要使用 Git ，那么GitLens 和 Docker 是（所需的）扩展
 
-98
+68
 00:03:28,725 --> 00:03:36,549
 If I click here on the left, you can see my installed extensions,and recommended extensions.
 如果我点击左边这里，你可以看到我的安装扩展和推荐的扩展
 
-100
+69
 00:03:36,885 --> 00:03:41,541
 And I could go and search for extensions here as opposed to using the web.
 我可以在这里搜索扩展，而不是使用网页版
 
-102
+70
 00:03:41,589 --> 00:03:42,117
 All right.
 嗯
 
-103
+71
 00:03:42,165 --> 00:03:44,085
 Cuz I was just moving them out of the way.
 这里我就把他们移开了哦
 
-104
+72
 00:03:44,085 --> 00:03:45,765
 All right, cuz I just noticed something different, so
 好的，因为我刚注意到一些不同的东西，所以
 
-105
+73
 00:03:45,765 --> 00:03:47,637
 I was asking questions for the people at home.
 我想帮屏幕前的童鞋问一下
 
-106
+74
 00:03:47,733 --> 00:03:48,645
 Definitely useful.
 不错的提问
 
-107
+75
 00:03:48,981 --> 00:03:51,429
 So let's just move that out of the way, here we go.
 我们先不理他了，继续吧
 
-108
+76
 00:03:51,525 --> 00:03:55,701
 So Program.cs, this is a little bit bigger than it was before.
 Program.cs ，这比以前的稍大一些
 
-109
+77
 00:03:56,085 --> 00:03:59,589
 Cuz it's bringing a bunch of stuff that if we look at the previous one
 因为它多了一堆东西，如果我们对比一下前一个程序
 
-111
+78
 00:03:59,589 --> 00:04:03,333
 while we putting much only had using systems and maybe IO.
 而我们很多时候只使用 systems （指以 System 开头的名称空间），可能还有 IO
 
-112
+79
 00:04:03,477 --> 00:04:06,165
 Actually, that's a good point, let's open up the csproj.
 说的好，我们来打开 csproj （文件）
 
-113
+80
 00:04:06,213 --> 00:04:09,045
 Yeah. If you recall earlier,
 嗯 你可以回忆下先前的内容
 
-114
+81
 00:04:09,045 --> 00:04:16,677
 our SDK was Microsoft.NET.Sdk.Web,this is a web application.
 而在这我们所用的 SDK 是 Microsoft.NET.Sdk.Web ，这是一个 Web 应用
 
-116
+82
 00:04:17,829 --> 00:04:23,589
 This is new, indicating that there as a folder called,wwwroot, that we'll talk about in a little bit.
 这是新的，还有一个文件夹叫做 wwwroot ，我们稍后再谈它
 
-118
+83
 00:04:23,589 --> 00:04:28,476
 And we have our first package reference, Asp.NetCore,
 这是我们第一个引用的包， Asp.NetCore
 
-119
+84
 00:04:29,175 --> 00:04:30,650
 specifically .All.
 注意到是 .All （完整为 Microsoft.AspNetCore.All ）了吗？
 
-120
+85
 00:04:32,268 --> 00:04:33,891
 So literary everything?
 它能包含所有的内容？
 
-121
+86
 00:04:33,891 --> 00:04:34,350
 Right.
 没错
 
-122
+87
 00:04:34,350 --> 00:04:38,988
 Now, it could in fact be listed one item at a time,
 现在，它可以把一个个的项目分开
 
-123
+88
 00:04:38,988 --> 00:04:41,244
 ASP.NET Core broken up in a lot of different pieces.
 ASP.NET Core 能分成许多​​不同的部分
 
-124
+89
 00:04:41,292 --> 00:04:43,260
 So it's kind of a cafeteria plan.
 这些都可以随意组合
 
-125
+90
 00:04:43,260 --> 00:04:45,996
 Okay. This is a package of packages, so rather than having a list of dozens of different
 嗯，这是一个由许多小包组成的大包，有些框架包含了几十个包
 
-127
+91
 00:04:49,884 --> 00:04:52,332
 packages, and having to pick ones I want, ones I don't want,
 不管我用不用得到，都给集成上了
 
-128
+92
 00:04:52,332 --> 00:04:56,604
 this makes it much, much simpler.It just gives me everything by default.
 当然这也是为了免去麻烦的配置，使得它使用更方便，在默认情况下，它给了我所有的东西
 
-130
+93
 00:04:56,604 --> 00:05:00,444
 So for learning, it's easier for getting started, it's easier.
 对于学习来说，这能使得入门更加简单
 
-131
+94
 00:05:00,444 --> 00:05:03,996
 If you're familiar with ASP.NET,it's easier because everything you expect is there.
 如果您熟悉 ASP.NET 这就更容易了，因为所有你想用的都已经添加上了
 
-133
+95
 00:05:03,996 --> 00:05:07,500
 I was also, one thing I've also noticed,it is one version now
 我也这么觉得，我还注意到了一件事，这里有一个版本号
 
-135
+96
 00:05:07,692 --> 00:05:10,332
 It's nice and simple, you just say, I want 2.0 and
 这点很好呀，也很简单，你只需说，我想要2.0（版本）
 
-136
+97
 00:05:10,332 --> 00:05:13,020
 it brings in everything that hangs off of it.
 它将决定所有未指定的（版本号）
 
-137
+98
 00:05:13,020 --> 00:05:13,932
 Of 2.0, okay
 2.0，好吧
 
-138
+99
 00:05:13,932 --> 00:05:16,140
 I call it a metapackage or a package of packages.
 我称之为元包（ metapackage ）或者由程序包组成的包（ package of packages ）
 
-139
+100
 00:05:16,140 --> 00:05:19,116
 I like that term, packages of packages.
 我喜欢这个词， package of packages
 
-140
+101
 00:05:19,116 --> 00:05:20,556
 Yeah, nice and simple.
 嗯，简单明了
 
-141
+102
 00:05:20,556 --> 00:05:25,625
 So if we go into Program.cs, you saw before we had Using System
 让我们打开 Program.cs ，你会看到我们之前用过的 System
 
-142
+103
 00:05:25,625 --> 00:05:26,556
 Yep.
 是的
 
-143
+104
 00:05:26,556 --> 00:05:34,572
 And when we say Using System, that was what allowed us to type Console.WriteLine cuz System.Console.WriteLine.
 在我们键入了 Using System 后，这将允许我们使用 Console.WriteLine 哦不 System.Console.WriteLine
 
-145
+105
 00:05:34,620 --> 00:05:41,292
 But here this is a web application, and we have other stuff, we've brought in some threading and
 但这是一个 Web 应用程序，并且还加入了其他的东西，我们引入了一些有关线程以及
 
-147
+106
 00:05:41,292 --> 00:05:44,844
 some IO stuff, but this is the ASP.NET Core stuff that's added.
 IO 的东西，这些就是 ASP.NET Core 所添加的东西
 
-148
+107
 00:05:44,844 --> 00:05:48,252
 What's worth pointing out those,
 值得指出的是
 
-149
+108
 00:05:48,252 --> 00:05:52,572
 our Main here is different than our console Main.
 我们在这里的 Main（函数）和我们控制台中的 Main（函数）不同
 
-150
+109
 00:05:52,572 --> 00:05:55,020
 Before we had a Console.WriteLine,
 之前我们有一个 Console.WriteLine()
 
-151
+110
 00:05:55,020 --> 00:05:55,836
 and that was it.
 就是这样
 
-152
+111
 00:05:55,836 --> 00:05:56,364
 Yep.
 嗯
 
-153
+112
 00:05:56,364 --> 00:06:00,204
 And actually, this is totally off-script,
 其实，这些都是脚本（生成的）
 
-154
+113
 00:06:00,204 --> 00:06:02,748
 which implies of course, that we actually have a script, right?
 这当然意味着我们确实有一个脚本，对吧？
 
-155
+114
 00:06:02,748 --> 00:06:04,750
 I wonder if I could do this.
 不知道我能不能这么做
 
-156
+115
 00:06:10,075 --> 00:06:11,801
 Okay, I just have a Main,
 欸，我只是有一个 Main （函数）
 
-157
+116
 00:06:12,900 --> 00:06:15,614
 and I've commented out all the web stuff.
 我已经把所有与 Web 相关的注释掉了
 
-158
+117
 00:06:16,520 --> 00:06:17,816
 So, what would happen?
 那么，会发生什么？
 
-159
+118
 00:06:18,248 --> 00:06:20,096
 Let's find out.I wonder if it'll work.
 让我们来试一试，我想知道它是否能运行
 
-161
+119
 00:06:20,675 --> 00:06:21,632
 Remember I've typed, control~?
 记得我已经按下了键盘， "Ctrl + ~" ？
 
-162
+120
 00:06:24,050 --> 00:06:26,621
 I think it's tilda.I think if you say, tildi
 我认为这是波浪号，如果你说， tildi
 
-164
+121
 00:06:26,621 --> 00:06:28,475
 you might have an accent of some sort, yeah.
 你可能就会有某种口音
 
-165
+122
 00:06:28,475 --> 00:06:30,956
 I think it would be an accent that is completely and
 我认为这将是一个彻彻底底的口音
 
-166
+123
 00:06:30,956 --> 00:06:31,777
 totally incorrect.
 且完全不正确
 
-167
+124
 00:06:32,086 --> 00:06:32,518
 Okay
 好吧
 
-168
+125
 00:06:32,518 --> 00:06:36,934
 so it actually switched it over to a Console Application.
 所以它实际上它将形如一个控制台应用程序
 
-169
+126
 00:06:36,934 --> 00:06:39,286
 Right. Well, it didn't really switch it
 对。 其实，它并没有真正地发生改变
 
-170
+127
 00:06:39,286 --> 00:06:40,630
 over because it always was a Console Application.
 因为它总是一个控制台应用程序
 
-171
+128
 00:06:40,630 --> 00:06:41,254
 Yes
 对吖
 
-172
+129
 00:06:41,302 --> 00:06:44,902
 The idea being that they are the same thing, right?
 这和他们想的是同一件事，对吗？
 
-173
+130
 00:06:44,902 --> 00:06:49,750
 A .NET application has a main entry point, and
 .NET 应用程序有一个主要入口点
 
-174
+131
 00:06:49,750 --> 00:06:52,198
 then it does some stuff.
 能做一些程序
 
-175
+132
 00:06:52,246 --> 00:06:55,462
 And I just wanted to kinda juxtapose that it can do some
 我只是想说明它可以做一些程序
 
-176
+133
 00:06:55,462 --> 00:06:58,630
 consoley stuff or it can do some webby stuff.
 控制台的程序，或者做一些 Web 的程序
 
-177
+134
 00:06:58,630 --> 00:06:59,878
 So let's do some webby stuff.
 来做一些有关 Web 的程序吧
 
-178
+135
 00:06:59,878 --> 00:07:01,654
 Like what would it look like out of the box?
 就像现成的盒子一样？
 
-179
+136
 00:07:01,846 --> 00:07:03,334
 Yeah, well, that's a good point.
 是的，这很好
 
-180
+137
 00:07:03,382 --> 00:07:06,214
 So let's go back, dotnet run,
 所以让我们回到（命令行）， "dotnet run"
 
-181
+138
 00:07:06,214 --> 00:07:09,478
 this time having changed it to say BuildWebHost.
 这次改变后使用了 BuildWebHost
 
-182
+139
 00:07:12,262 --> 00:07:14,134
 And it's gonna run and build.
 它会编译再运行起来
 
-183
+140
 00:07:14,134 --> 00:07:17,446
 And it says a couple of things.
 输出了许多信息呢
 
-184
+141
 00:07:19,510 --> 00:07:21,094
 It's running in production.
 （程序）正在生产（环境）中运行
 
-185
+142
 00:07:21,718 --> 00:07:25,174
 It's listening on localhost 5000, so
 （程序）在 localhost 5000（端口）上监听
 
-186
+143
 00:07:25,174 --> 00:07:27,718
 we have started a little web server.
 我们启动了一个小型的网络服务器
 
-187
+144
 00:07:27,766 --> 00:07:28,102
 Okay
 嗯
 
-188
+145
 00:07:28,102 --> 00:07:31,078
 Now it says, listening at localhost:5000.
 现在它显示，正在监听 localhost:5000
 
-189
+146
 00:07:31,078 --> 00:07:35,494
 Let's open up browser, and let's localhost:5000 it.
 让我们打开浏览器，让我们转到 localhost:5000
 
-190
+147
 00:07:37,558 --> 00:07:40,294
 Can't you also just click on the link within the terminal?
 你是不是可以点击终端内的链接？
 
-191
+148
 00:07:40,294 --> 00:07:41,734
 Yeah, that is a good point.
 对，说得好
 
-192
+149
 00:07:47,590 --> 00:07:50,614
 I guess I could or not.
 欸?能不能呀？
 
-193
+150
 00:07:50,614 --> 00:07:52,582
 Or not, okay.
 不可以，好吧 （译者注：其实是可以的，按住 Ctrl 再点击）
 
-194
+151
 00:07:52,582 --> 00:07:54,550
 I don't know, yes.
 我不知道哎
 
-195
+152
 00:07:54,598 --> 00:07:56,662
 It should.
 它应该可以呢
 
-196
+153
 00:07:56,806 --> 00:07:57,670
 It should work.
 它应该能这样使用
 
-197
+154
 00:07:57,670 --> 00:07:58,774
 Except that's Hello World
 除了 Hello World
 
-198
+155
 00:07:58,774 --> 00:08:00,070
 That's Hello World!, exactly.
 这就是 Hello World! ，确实是这样
 
-199
+156
 00:08:00,070 --> 00:08:02,710
 So where is that, Hello World, coming from?
 那么， Hello World 是从哪里来的？
 
-200
+157
 00:08:02,710 --> 00:08:03,526
 Where is?
 等一下
 
-201
+158
 00:08:04,294 --> 00:08:05,590
 Where is that text?
 这些文字从哪里来的？
 
-202
+159
 00:08:05,590 --> 00:08:06,694
 There's the text itself, so.
 对，这些文字在哪里
 
-203
+160
 00:08:06,694 --> 00:08:09,862
 Yeah, let's find out, so let's follow it through.
 好的，让我们一起来看看吧~
 
-204
+161
 00:08:09,862 --> 00:08:12,886
 So BuildWebHost passes these arguments in and says .Run.
 BuildWebHost 将这些参数传入并执行了 .Run （ Method ）
 
-205
+162
 00:08:12,886 --> 00:08:15,958
 What does BuildWebHost do?
 BuildWebHost 做了些什么？
 
-206
+163
 00:08:15,958 --> 00:08:17,926
 That's right here.
 看到这儿
 
-207
+164
 00:08:17,926 --> 00:08:18,406
 Yep
 是的
 
-208
+165
 00:08:18,406 --> 00:08:22,390
 Looks like it CreatesDefaultBuilder, and then it says, UseStartup.
 看起来像 CreatesDefaultBuilder ，然后它调用了， UseStartup (Method)
 
-210
+166
 00:08:22,390 --> 00:08:23,974
 And then And
 然后呢
 
-211
+167
 00:08:23,974 --> 00:08:26,614
 you can see here that the Startup text here is in blue,
 你可以在这里看到这里的 Startup 文本是蓝色的
 
-212
+168
 00:08:27,286 --> 00:08:31,126
 that means it's not a, it's a keyword basically.
 这意味着它不是一个 …… 它像是一个关键词 （并不是关键词）
 
-213
+169
 00:08:31,126 --> 00:08:37,318
 This here, these word, Startup, is telling it used this class.
 在这里，这个词 Startup 告诉它使用这个类
 
-214
+170
 00:08:38,758 --> 00:08:41,206
 This class's name is not magic
 这个类的名称并没有什么特别的
 
-215
+171
 00:08:42,166 --> 00:08:45,478
 if I changed it to Foo, It would not-
 如果我将它改为Foo， 它不会……
 
-216
+172
 00:08:45,478 --> 00:08:46,918
 Well, let's find out
 好吧，让我们来找出答案
 
-217
+173
 00:08:47,014 --> 00:08:54,825
 Let's go ahead and change it to Foo,hit dotnet run, See what happens.
 让我们将其更改为 Foo 并继续键入 dotnet run ，看看会发生什么
 
-219
+174
 00:08:56,854 --> 00:09:00,525
 The type or namespace Startup could not be found, okay?
 类型或名称空间 Startup 无法找到，这样的吗？
 
-220
+175
 00:09:02,350 --> 00:09:04,250
 But what if I change this to Foo?
 那如果我将这个改为 Foo 呢？
 
-221
+176
 00:09:06,475 --> 00:09:07,200
 There we go
 我们来试下咯
 
-222
+177
 00:09:13,654 --> 00:09:15,334
 Pause, runs just fine.
 没有输出错误，运行成功了
 
-223
+178
 00:09:15,622 --> 00:09:20,038
 The point there being that the name Startup isn't magic.
 这里要说的一点是， Startup 这个名字并没有什么特别的
 
-224
+179
 00:09:20,038 --> 00:09:21,375
 It isn't magic. Right.
 这不是魔术，对
 
-225
+180
 00:09:21,375 --> 00:09:22,630
 It does not have to be Startup.
 它不一定非要是 Startup
 
-226
+181
 00:09:22,630 --> 00:09:25,030
 Nope, what it's saying is, again if we look at the docs,
 它的意思是，然我们再看看文档吧
 
-227
+182
 00:09:25,078 --> 00:09:27,718
 and this is what's nice with Visual Studio code,
 这对于 Visual Studio Code 来说很方便
 
-228
+183
 00:09:27,718 --> 00:09:32,422
 it says specify the startup type to be used by the web host.
 它表示指定要由 Web 主机使用的启动类型
 
-229
+184
 00:09:32,422 --> 00:09:36,070
 So it's just saying go and use this class.
 所以它只是说去使用这个类
 
-230
+185
 00:09:36,070 --> 00:09:39,766
 And this class here that we called Startup or Foo, or
 像这里我们称之为 Startup 或 Foo 的这个类，或者
 
-231
+186
 00:09:39,766 --> 00:09:42,742
 whatever, has to be just be shaped a certain way,
 任意名称，但都必须以正确的形式填入
 
-232
+187
 00:09:42,742 --> 00:09:43,654
 it has to look a certain way.
 它必须看起来是种正确的形式（这里应该是指没有错误提示）
 
-233
+188
 00:09:43,654 --> 00:09:45,094
 Okay, so you could call it Beyonce,
 好的，你可以称它为 Beyonce
 
-234
+189
 00:09:45,094 --> 00:09:46,054
 you could call it anything.
 你可以给它任意的名称
 
-235
+190
 00:09:46,054 --> 00:09:48,982
 Yeah, it has to be a Beyonce.
 好，它必须是 Beyonce
 
-236
+191
 00:09:53,000 --> 00:09:55,798
 I am afraid I should probably have [FOREIGN],
 也许我们有别的选择吧
 
-237
+192
 00:09:55,798 --> 00:09:59,014
 but we'll just have Beyonce without an accent.
 但我们只是用了 Beyonce
 
-238
+193
 00:09:59,014 --> 00:10:01,270
 And it should work just fine.
 它应该运行得很好
 
-239
+194
 00:10:01,270 --> 00:10:03,142
 Beyonce should be a key word.
 Beyonce 应该是一个关键词 （译者注：真的不是关键词 emmmmm···）
 
-240
+195
 00:10:03,142 --> 00:10:04,390
 It should be.
 应该是
 
-241
+196
 00:10:04,390 --> 00:10:05,494
 A reserved word.
 保留字
 
-242
+197
 00:10:05,494 --> 00:10:07,942
 It should be, it should be. But its not, sadly.
 它一定是的 可惜的是，它并不是
 
-243
+198
 00:10:07,942 --> 00:10:08,998
 So this is an important point though.
 这是非常重要的一点
 
-244
+199
 00:10:08,998 --> 00:10:10,438
 It's saying use this startup type.
 这说使用这种启动类型
 
-245
+200
 00:10:10,438 --> 00:10:14,710
 And that startup type has to have certain Method s.
 并且该启动类型必须具有某些方法
 
-246
+201
 00:10:14,710 --> 00:10:17,830
 So Beyonce, in this case, has to have a Method
 所以 Beyonce ，在这种情况下，必须有一种方法
 
-247
+202
 00:10:17,830 --> 00:10:20,230
 called ConfigureServices and one called Configure.
 称为 ConfigureServices ，另一个称为 Configure
 
-248
+203
 00:10:20,374 --> 00:10:20,806
 Okay
 好的
 
-249
+204
 00:10:20,806 --> 00:10:25,366
 And that's the requirements for Beyonce in this context for
 这就是 Beyonce 在这一上下文中的要求
 
-250
+205
 00:10:25,366 --> 00:10:26,470
 the startup class.
 作为启动类型
 
-251
+206
 00:10:27,430 --> 00:10:28,870
 So what's going on in these?
 那么这些是怎么回事？
 
-252
+207
 00:10:30,358 --> 00:10:34,390
 We've got- And you have the nice little instructions at the top, which I've always appreciated.
 我们在界面的顶端会有一些提示，这是很赞的功能
 
-254
+208
 00:10:34,390 --> 00:10:38,326
 Yeah, I like it when templates include a little bit of instruction, a little bit of comments.
 是的，当模板包含一些提示，或一些注释时会让开发人员很省劲
 
-256
+209
 00:10:38,326 --> 00:10:42,262
 So this Method it's called by the runtime and
 所以这个方法是在运行时调用的
 
-257
+210
 00:10:42,262 --> 00:10:48,262
 it adds services to a collection called the ServiceCollection.
 它将服务添加到名为 ServiceCollection 的集合中
 
-258
+211
 00:10:48,262 --> 00:10:52,294
 And services are just stuff you might wanna use later in your app
 而服务是指你稍后想要在程序中使用的任意程序
 
-260
+212
 00:10:52,294 --> 00:10:54,934
 So it could be things like authentication,
 这些可能是认证吧，服务认证
 
-261
+213
 00:10:54,934 --> 00:10:58,630
 so using a service like Facebook or Google, like which we'll
 使用像 Facebook 或 Google 这样的服务的时候，我们以后可能会用得到
 
-262
+214
 00:10:58,630 --> 00:11:02,134
 look at later dates, but- So if I just type services.,
 如果我只是输入 "services."
 
-263
+215
 00:11:02,134 --> 00:11:04,870
 you've got AddAuthentication, AddCaching,
 你就能看到 AddAuthentication,AddCaching
 
-264
+216
 00:11:04,870 --> 00:11:08,902
 AddIdentity, AddLogin, AddMemory, add whatever.
 AddIdentity,AddLogin,AddMemory 以及添加任何内容
 
-265
+217
 00:11:08,902 --> 00:11:13,174
 And even things that don't appear like you pointed out.Like maybe Facebook authentication
 甚至一些说不上来的东西，就像 Facebook 认证一样
 
-267
+218
 00:11:13,174 --> 00:11:17,734
 different kinds of those are all other third party things that could be added on as well.
 和这些不同的其他第三方的服务都可以添加上来
 
-269
+219
 00:11:17,734 --> 00:11:24,454
 So those services get configured here,get added to this collection.
 所以这些服务在这里配置被添加到这个集合
 
-271
+220
 00:11:24,454 --> 00:11:25,702
 Yeah. And it's a little confusing
 是的，这有点令人疑惑
 
-272
+221
 00:11:25,702 --> 00:11:29,302
 because you've got ConfigureServices.And then you have Configure.
 因为你有 ConfigureServices（方法）还有 Configure（方法）
 
-274
+222
 00:11:29,350 --> 00:11:32,374
 Like that is something that confused me when I first started.
 就像我第一次接触时一样，让我一开始感到非常困惑
 
-275
+223
 00:11:32,374 --> 00:11:33,430
 Yeah, it is confusing.
 是的，这是会让人感到困惑
 
-276
+224
 00:11:33,430 --> 00:11:35,830
 This is the get everything ready,
 这是把一切都准备就绪
 
-277
+225
 00:11:35,830 --> 00:11:38,806
 load up the collection of stuff I want to play with.
 加载我想要使用的程序的集合
 
-278
+226
 00:11:38,806 --> 00:11:39,382
 Yeah
 对
 
-279
+227
 00:11:39,382 --> 00:11:43,894
 And then configure them.Set them up.
 然后配置它们，设置好
 
-281
+228
 00:11:43,894 --> 00:11:51,718
 Like you could've maybe, maybe they could've named it AddServices or DoTheStuffWithTheServices.
 你可以像这样命名它： AddServices 或者 DoTheStuffWithTheServices
 
-283
+229
 00:11:51,718 --> 00:11:52,438
 Okay
 好的
 
-284
+230
 00:11:52,486 --> 00:11:54,022
 And then configure them.
 然后配置它们
 
-285
+231
 00:11:54,022 --> 00:11:54,646
 Yeah, okay.
 嗯呢
 
-286
+232
 00:11:54,646 --> 00:12:01,846
 But the point is one is prep your environment, and then do specific things to set your environment up.
 但重点在于准备好你的环境，并且然后做特定的事情来设置你的环境
 
-288
+233
 00:12:01,846 --> 00:12:06,358
 Like, in this case, if we are doing development,not production
 就像在这种情况下，如果我们正在进行开发而不是生产
 
-290
+234
 00:12:06,358 --> 00:12:09,430
 then when you get an exception you'd like a nice friendly page.
 那么当你得到一个异常时，你会喜欢上这个友好的页面
 
-291
+235
 00:12:09,430 --> 00:12:11,590
 Okay, not a page of horror.
 嗯哼，而不是满页的恐惧
 
-292
+236
 00:12:11,638 --> 00:12:13,654
 Yes, not the scary page.
 是的，不是可怕的页面
 
-293
+237
 00:12:13,654 --> 00:12:19,000
 This here is the app.Run,this is the default cuz you said we wanted to do empty.
 这里是 app.Run （方法）这里是默认的，因为你说了我们想要一个空的（模板）
 
-295
+238
 00:12:20,350 --> 00:12:21,870
 And you asked where Hello World!, was.
 你问了 Hello World! 是来自哪里的
 
-296
+239
 00:12:21,870 --> 00:12:22,918
 And there it is
 它就在那里
 
-297
+240
 00:12:22,918 --> 00:12:23,926
 There it is.
 对，它就在那
 
-298
+241
 00:12:25,366 --> 00:12:29,358
 So we've change that text, and dotnet run.
 所以我们已经改变了这个文本，并且运行 dotnet run
 
-299
+242
 00:12:30,475 --> 00:12:31,790
 It should still run.
 它应该仍然可以运行
 
-300
+243
 00:12:32,902 --> 00:12:35,830
 Now if I come back over here, and notice it still says Hello World!
 现在，如果我回到这里，注意它仍然输出了 Hello World!
 
-302
+244
 00:12:35,878 --> 00:12:36,358
 Yeah.
 是的
 
-303
+245
 00:12:36,406 --> 00:12:37,990
 That's because we haven't hit refresh.
 这是因为我们没有刷新
 
-304
+246
 00:12:39,100 --> 00:12:40,088
 And there it is
 看，出现了
 
-305
+247
 00:12:40,088 --> 00:12:41,398
 Yeah, that's a good one.
 是的，这很棒
 
-306
+248
 00:12:41,398 --> 00:12:41,900
 You like that?
 你喜欢这个吗？
 
-307
+249
 00:12:41,900 --> 00:12:42,598
 Yeah.
 是的
 
-308
+250
 00:12:42,598 --> 00:12:44,470
 Excellent. I think the Beyhive would be happy.
 太棒了，我认为 Beyhive 将会很开心
 
-309
+251
 00:12:44,470 --> 00:12:45,094
 They would be.
 肯定会呀
 
-310
+252
 00:12:45,094 --> 00:12:46,870
 Alright, cool.
 总之，很酷
 
-311
+253
 00:12:46,870 --> 00:12:48,358
 This is cool. Mm-hm.
 确实很酷
 
-312
+254
 00:12:48,358 --> 00:12:51,550
 One of the things that, when you are working, so
 事情正是如此，当你完成到这里
 
-313
+255
 00:12:51,550 --> 00:12:56,925
 we've seen hello world or hello beehive in honor of Beyonce.
 我们已经看见了 hello world 或者是 hello beehive 以纪念 Beyonce
 
-314
+256
 00:12:56,925 --> 00:13:00,200
 But as a person who's building their webpage for
 但是，作为一个第一次建立网页的人
 
-315
+257
 00:13:00,200 --> 00:13:04,012
 the very first time, you want to see a page.
 你想看到一个页面
 
-316
+258
 00:13:04,012 --> 00:13:05,596
 Like, you actually want to see something that's a little bit
 就像，你实际上想看到一些别的
 
-317
+259
 00:13:05,596 --> 00:13:09,628
 more than just- A string.
 而不仅仅是 - 字符串
 
-318
+260
 00:13:09,628 --> 00:13:10,492
 Just a string.
 仅仅是字符串
 
-319
+261
 00:13:10,492 --> 00:13:12,316
 Right, and certainly, having a string,
 对，当然，若想看到字符串，
 
-320
+262
 00:13:12,316 --> 00:13:15,244
 like doing all of your work inside of a Response.Write is
 若你想在 Response.Write 中完成你所有的工作
 
-321
+263
 00:13:15,244 --> 00:13:17,212
 gonna break down pretty quickly.
 你很快就会崩溃的
 
-322
+264
 00:13:17,212 --> 00:13:17,740
 Yeah. Right.
 是的 对
 
-323
+265
 00:13:17,740 --> 00:13:20,716
 So in the next section, we're going to go an add some pages
 所以在下一节中，我们将添加一些页面
 
-324
+266
 00:13:20,716 --> 00:13:23,644
 and build, take this, and we're gonna start from empty, though.
 我们将从 empty （模板）开始
 
-325
+267
 00:13:23,644 --> 00:13:24,892
 Yeah. We're not gonna cheat,
 是的，我们不会作弊
 
-326
+268
 00:13:24,892 --> 00:13:25,948
 we're gonna build on top of empty.
 我们要建立在 empty （模板）之上
 
-327
+269
 00:13:25,948 --> 00:13:27,340
 So we've seen a console app,
 所以我们写了一个控制台应用程序
 
-328
+270
 00:13:27,340 --> 00:13:29,020
 we've seen an app that does a single string,
 我们已经写了一个应用程序可以返回单个字符串
 
-329
+271
 00:13:29,020 --> 00:13:30,575
 next section we'll do pages.
 下一节我们将会制做页面
 
-330
+272
 00:13:30,595 --> 00:13:31,555
 Yes we will.
 是的，我们会的！敬请期待~
