@@ -35,7 +35,7 @@ If you go to docs.microsoft.com we can click on .NET, or
 
 8
 00:00:21,579 --> 00:00:24,027
-you can go /.NET, there's a ton of documentation here.
+you can go /dotnet, there's a ton of documentation here.
 或者你可以转到 /dotnet ，这有大量有关的文档
 
 9
@@ -51,7 +51,7 @@ talk about ASP.NET Core that we're gonna talk about as well.
 11
 00:00:30,843 --> 00:00:33,850
 And it's worth pointing out the difference between the .NET
-值得指出的是， .NET 指南
+值得指出的是， .NET Core 指南
 
 12
 00:00:33,850 --> 00:00:36,315
@@ -100,12 +100,12 @@ then the .NET core framework itself.
 
 21
 00:00:50,283 --> 00:00:53,451
-And all of those methods are available from C#,
+And all of those methods are available from C#, F#
 所有的这些方法都可以在 C# ， F#
 
 22
 00:00:53,595 --> 00:00:55,275
-F# and in Visual Basic
+and in Visual Basic
 以及 Visual Basic 中调用
 
 23
@@ -130,7 +130,7 @@ Absolutely, absolutely
 
 27
 00:01:02,235 --> 00:01:05,691
-And we did a hello world, I installed the .NET core SDK.
+And we did a Hello World, I installed the .NET core SDK.
 我们此前做了一个 Hello World ，我安装了 .NET Core SDK
 
 28
@@ -165,17 +165,17 @@ If you go over to Quick Starts under C#.
 
 34
 00:01:18,843 --> 00:01:20,859
-So C#
-那么， C#
+So C# Quick Starts,
+那么， C# Quick Starts
 
 35
 00:01:20,989 --> 00:01:23,927
-Quick Starts, it will drop you right into the Quick Start page.
-Quick Starts ， 它会直接进入 Quick Starts 的页面
+it will drop you right into the Quick Start page.
+它会直接进入 Quick Starts 的页面
 
 36
 00:01:24,425 --> 00:01:26,750
-And this shows you from the hello world experience
+And this shows you from the Hello World experience
 它会向你展示 Hello World 的体验
 
 37
@@ -206,7 +206,7 @@ Yeah
 42
 00:01:38,700 --> 00:01:42,115
 I'll go and copy Console.WriteLine over here
-我将从这里拷贝 `Console.WriteLine()`
+我将从这里复制 `Console.WriteLine`
 
 43
 00:01:42,163 --> 00:01:43,747
@@ -321,12 +321,12 @@ The editor that's working in the browser right now is in preview.
 65
 00:02:31,027 --> 00:02:35,443
 So if people see any bugs, we're really excited for
-所以如果人们发现任何错误，我们真的很
+所以如果人们发现任何错误，我们真的
 
 66
 00:02:35,443 --> 00:02:37,231
 you guys to give us any feedback then.
-期待你们给我们的任何反馈
+很期待你们给我们的任何反馈
 
 67
 00:02:37,267 --> 00:02:39,823
@@ -656,17 +656,17 @@ And you can do that with Skype interviews as well?
 132
 00:05:04,049 --> 00:05:05,633
 That's true, all right
-没错，好
+没错
 
 133
 00:05:05,633 --> 00:05:09,617
-So just a reminder, you can go to docs.microsoft.com, check out
-所以只是提醒一下，你可以去 docs.microsoft.com ，看看
+So just a reminder, you can go to docs.microsoft.com,
+所以只是提醒一下，你可以去 docs.microsoft.com
 
 134
 00:05:09,617 --> 00:05:12,833
-the Quick Starts to run your C# programs in the browser.
-快速入门，且在浏览器中运行 C# 程序
+check out the Quick Starts to run your C# programs in the browser.
+看看快速入门，且在浏览器中运行 C# 程序
 
 135
 00:05:12,833 --> 00:05:16,433
