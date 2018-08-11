@@ -6,7 +6,7 @@ Hey friends, we're glad you're still with us here at Microsoft Virtual Academy a
 2
 00:00:07,123 --> 00:00:09,672
 We're learning all about razor pages and our application.
-我们将继续学习关于 razor 页面和应用程序的内容
+并且继续学习有关 razor 页面和应用程序的内容
 
 3
 00:00:09,875 --> 00:00:12,371
@@ -16,22 +16,22 @@ We're learning all about razor pages and our application.
 4
 00:00:12,371 --> 00:00:16,975
 And it will probably have us making some mistakes together,and that's okay.
-它可能会误导我们犯一些错误,但这没关系
+ 我们可能会不小心犯一些错误,但这没关系
 
 5
 00:00:17,257 --> 00:00:19,219
 And we're gonna try not to hide anything from you.
-我们要尽量不遗漏下任何东西
+我们尽量会不漏讲任何内容
 
 6
 00:00:19,219 --> 00:00:24,339
 We are following the documentation as we hope that are, and maybe you can follow along.
-我们会跟着文档去一步步操作,你也要这么做，并且可能会花更长时间
+我们会跟着教学大纲去一步步操作,你可能要花更长的时间去跟着我们一步一步去做
 
 7
 00:00:24,339 --> 00:00:27,987
 Pause, try stuff out, and maybe Google with Bing.
-暂停一下,尝试去做,也许谷歌和必应一下是少不了的
+暂停一下,敲敲代码,也许谷歌和必应一下是少不了的
 
 8
 00:00:28,051 --> 00:00:28,883
@@ -51,12 +51,12 @@ Yeah, and we will have links to the documentation right underneath this recordin
 11
 00:00:34,323 --> 00:00:39,281
 All right, so we're gonna try to make a CRUD page.
-好吧,所以我们要试着做一个 CRUD 页面
+那好,接下来我们要试着做一个 CRUD 页面
 
 12
 00:00:39,281 --> 00:00:39,971
 What is CRUD?
-什么是 CRUD?
+什么是 CRUD ？
 
 13
 00:00:40,300 --> 00:00:45,777
@@ -66,7 +66,7 @@ Create,read, update, delete.
 14
 00:00:45,777 --> 00:00:54,675
 All right, so a CRUD application maps verbs from CRUD to verbs that we're used to using,like get is a get, so it would be like a read.
-All right, so a CRUD application maps verbs from CRUD to verbs that we're used to using,like get is a get, so it would be like a read.
+好的, 所以 CRUD 应用把我们执行的操作这些动词编成了一个名词，就像“获取”是 get 一样，有助于阅读的理解
 
 15
 00:00:54,675 --> 00:00:57,358
@@ -76,12 +76,12 @@ And if you're gonna create something, it would be a post.
 16
 00:00:57,358 --> 00:01:06,126
 So you'd fill out a form, you'd hit submit, and it would post the data, that's a create Then you can maybe read it back and look at in edit page or then maybe delete it.
-当你在填写表格时,点击提交, post 请求将发送数据,经过一个创建过程后你可以在页面看到它,同样也可以编辑或删除
+当你在填写表格点击提交时, post 请求将发送数据,经过一个创建过程后你可以在页面看到它,同样数据也可以编辑或删除
 
 17
 00:01:06,126 --> 00:01:12,718
 So if we succeed, we'll have the simple form,maybe create some customers, put them in a fake database And we'll be okay
-如果顺利的话,我们会通过简单的形式创造一些虚拟信息,并把它们放在一个假的数据库,我们有信心~
+如果顺利的话,我们会通过简单的形式创造一些虚拟信息,并把它们放在一个假的数据库,我们有信心做到~
 
 18
 00:01:12,718 --> 00:01:16,625
@@ -101,7 +101,7 @@ So for now, we're gonna be doing it in an in-memory database.
 21
 00:01:20,846 --> 00:01:23,598
 Okay, so let's do the best we can.
-好吧,让我们尽我们所能来做吧
+好吧,让我们尽我们所能做出来吧
 
 22
 00:01:23,598 --> 00:01:26,862
@@ -111,12 +111,12 @@ We're gonna use the same web application one that we created before.
 23
 00:01:26,862 --> 00:01:39,225
 We saw in the previous modules where we added MVC, but of course all of that stuff was added for us because we went File > New Project,and we picked Web Application, all right?
-我们看下之前的模块,我们添加了 MVC ,当然我们之所以这么做是因为我们通过 文件>新项目 ,选择了 Web 应用程序,对吧?
+看下之前的模块,我们添加了 MVC ,当然我们之所以这么做是因为我们通过 文件>新项目 ,选择了 Web 应用程序,对吧?
 
 24
 00:01:39,975 --> 00:01:44,782
 So here in configure services, we've got AddMvc.
-所以在配置服务,我们加上 AddMvc
+所以在 configureServices 类里,我们加上 AddMvc
 
 25
 00:01:44,782 --> 00:01:47,672
@@ -171,17 +171,17 @@ I wanna go ahead and say yes.
 35
 00:02:14,670 --> 00:02:18,190
 So it's gone and done that, and we'll deal with that in a minute.
-这样系统会去生成了,我们会在一分钟内处理掉它
+这样系统会去生成了,我们会马上去添加代码
 
 36
 00:02:18,190 --> 00:02:22,414
 And again, I will very likely make mistakes, so you'll bear with me I hope.
-我很有可能再次犯错误,所以我希望你能原谅我
+很有可能我会再次犯错误,所以我希望你能原谅我
 
 37
 00:02:22,414 --> 00:02:27,214
 I opened up the parentheses there.
-我在括号中添加内容
+括号中要添加内容
 
 38
 00:02:27,214 --> 00:02:28,942
@@ -226,27 +226,27 @@ So we need to use
 46
 00:02:49,150 --> 00:02:51,006
 And I probably should have added that first, and
-可能应该说是补充,第一点
+我是应该先进行添加，还有
 
 47
 00:02:51,006 --> 00:02:52,158
 I would have gotten IntelliSense.
-我们利用智能感知
+我们应该会得到一个智能提示
 
 48
 00:02:52,158 --> 00:02:53,758
 -True -Let's try that.
--尝试 -让我们试一下
+-确实 -再试一下
 
 49
 00:02:53,758 --> 00:02:56,254
 If we go back up to the top.
-如果我们回去了
+如果我们回到顶部
 
 50
 00:03:00,222 --> 00:03:02,590
 So we add the EntityFrameworkCore beforehand.
-所以我们事先添加 Entity Framework Core
+预先添加上 Entity Framework Core
 
 51
 00:03:06,300 --> 00:03:11,614
@@ -256,7 +256,7 @@ Look, you see that little arrow there that's pointing down?
 52
 00:03:12,350 --> 00:03:19,166
 That means that this method came in was included by the fact that we just did that UseIn.
- 这意味着,该方法包括了我们刚才添加进来的 UseIn
+这意味着,该方法包括了我们刚才添加进来的 UseIn
 
 53
 00:03:19,625 --> 00:03:22,425
