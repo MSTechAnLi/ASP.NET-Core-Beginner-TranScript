@@ -2420,57 +2420,57 @@ Yeah. So I'm gonna just take a break here.
 486
 00:33:42,112 --> 00:33:49,472
 And I'm gonna jump over to the index model cuz we can't really make our table till we have a little bit more, okay?
-转到 index model ，我们把这一部分做出来再去完成表格？
+转到 index model ，我们把这一部分做出来再去完成表格，好嘛？
 
 487
 00:33:49,536 --> 00:33:59,520
 And I'm gonna break a couple of cardinal rules that I'm gonna copy paste a little code,because I'm gonna need this similar app database.
-我要打破一些基本规则，我要复制粘贴一个小代码，因为我需要这个类似的应用程序数据库
+我要做一些不同的事，复制粘贴这一小块代码，因为我需要这个类似的应用程序数据库
 
 488
 00:33:59,520 --> 00:34:02,656
 This app db context which is gonna save myself a moment of time here.
-这个App DB上下文将在这里节省我自己的时间
+app db 上下文放在这个地方会节省我的时间
 
 489
 00:34:04,064 --> 00:34:08,736
 So we've got our app context, right?
-所以我们有了应用程序上下文，对吧？
+所以我们有了 app 上下文，对吧？
 
 490
 00:34:08,736 --> 00:34:10,976
 We're gonna have our index page model.
-我们将有索引页模型
+我们将有 Index 页面的 Model
 
 491
 00:34:11,360 --> 00:34:15,904
 Now before, when we create a customer,we create one customer.
-现在，当我们创建一个客户时，我们创建了一个客户
+现在，当我们创建一个客户数据时，我们创建了一个 customer
 
 492
 00:34:16,288 --> 00:34:24,416
 But here our model is different cuz we're gonna have a list of customers on this page, right?
-但在这里我们的模型不同，因为我们会在这一页上有一个客户列表，对吧？
+但在这里我们的 model 不同，因为我们会在这一页上有一个客户列表，对吧？
 
 493
 00:34:24,416 --> 00:34:25,504
 So our model is different.
-所以我们的模型是不同的
+所以这的 model 是不同的
 
 494
 00:34:25,952 --> 00:34:31,136
 And we'll do a get and then a private set so that only we can set it.
-我们会做一个GET，然后是一个私有集合，这样我们才可以设置它
+我们会做一个 get ，然后是一个 private 的 set ，这样我们才可以设置它
 
 495
 00:34:31,712 --> 00:34:40,736
 -All right, and then, in the OnGet, We'll say OnGet -One line below, OnGetAsync, okay
--好的,然后在 OnGet 我们会在 OnGet -One 下面一行, OnGetAsync, okay
+-好的,然后在 OnGet 我们把 OnGet -修改为 OnGetAsync, 好的
 
 496
 00:34:42,450 --> 00:34:48,480
 -OnGetAsync, right? -We're gonna load up customers.
--OnGetAsync, 是吗? -我们要去接客户
+-OnGetAsync, 是吗? -我们要去接收 customer
 
 497
 00:34:48,480 --> 00:34:49,568
@@ -2485,32 +2485,32 @@ The database and this is right there.
 499
 00:34:52,650 --> 00:34:54,525
 We're getting them out of customers.
-我们把他们从客户那里弄出来
+我们把他们从 customer 提取出来
 
 500
 00:34:54,525 --> 00:35:01,400
 And then there's this other little bit of thing that you can add on to make things a little bit faster.
-还有另外一点你可以补充的东西让事情稍微快一点
+另外你这么做可以让这个过程进行得快一些
 
 501
 00:35:01,400 --> 00:35:05,875
 You can say AsNoTracking.
-你可以 AsNoTracking.
+你可以用 AsNoTracking
 
 502
 00:35:08,808 --> 00:35:11,496
 And I'll show you what that means in a second.
-我会告诉你这意味着什么
+我会告诉你这是啥意思
 
 503
 00:35:11,496 --> 00:35:16,609
 And we're gonna turn these customers into a list of customers.
-我们会把这些客户变成客户名单
+我们会把这些 customer 转换成一个 list 列表
 
 504
 00:35:16,609 --> 00:35:19,808
 So we're chaining things together,we're saying give me these customers.
-所以我们把事情联系在一起，我们是说给我这些客户
+我们把过程连接在了一起，这样我们就获取了 customer
 
 505
 00:35:20,192 --> 00:35:24,032
@@ -2525,42 +2525,42 @@ You see it says disabling change tracking is useful for read-only scenarios.
 507
 00:35:29,975 --> 00:35:37,400
 Change tracking is watching like keeping a track of all the different things you could change so that you know how to make a database update.
-就像跟踪所有你可以改变的事物的轨迹，这样你就知道如何进行数据库更新
+感知到发生变化的事件，这样你就知道如何进行数据库更新
 
 508
 00:35:37,925 --> 00:35:53,575
 So if I had a list of customers, and I wanted to watch all of them and change their names, that would give the database system entity framework that we're gonna learn about later all the information it needs about how to only change the bits that change, how to only change the database.
-所以，如果我有一个客户列表，我想看所有的人，并改变他们的名字，这将给出数据库系统实体框架，我们稍后将了解所有关于如何只更改这些位的信息，如何只更改数据库
+如果我有一个客户列表，我想看所有人的信息并改变他们的名字，这将需要数据库系统实体框架，稍后会讲如何只更改数据库的部分信息
 
 509
 00:35:53,575 --> 00:35:58,976
 But we're just getting a list, so we're gonna say, don't track these, just give me a list.
-但我们只是得到一个列表，所以我们要说，不要跟踪这些，只要给我一个清单
+所以我们只要一个 list 列表，不要附带那么多，只要给我一个 list 列表就行了
 
 510
 00:35:58,976 --> 00:36:03,712
 So customers, no tracking, give me a list, so that's cool.
-所以客户，没有跟踪，给我一个清单，所以很酷
+Customer ，没有冗余的东西，只有一个 list 清单，很酷吧
 
 511
 00:36:04,928 --> 00:36:07,424
 And I think we'll leave that like that for now.
-我想我们现在就这样离开
+做到这里就可以了
 
 512
 00:36:07,744 --> 00:36:09,984
 We'll go back over to index.
-我们将回到 index
+我们回到 index
 
 513
 00:36:11,968 --> 00:36:17,591
 And now that model, the page behind us has customers.
-现在这个模型，我们后面的页面有客户
+现在 model 里有我们写好的 customer
 
 514
 00:36:17,591 --> 00:36:20,840
 Look, customers shows up, see, which is nice.
-看，顾客出现了，看，哪一个很好
+看， customer 出现了，棒棒哒
 
 515
 00:36:21,400 --> 00:36:24,950
@@ -2570,12 +2570,12 @@ So then I think I can put my tr in here.
 516
 00:36:26,280 --> 00:36:30,120
 And I'm hoping, remember, I said contact, I should say customer.
-我希望，记住，我说联系，我应该说客户
+我希望，把这个 contact 改为 customer
 
 517
 00:36:31,848 --> 00:36:43,944
 Customer singular, foreach customer,that means that the customer variable is now available to me customer.Id.
-客户单数，前额客户，这意味着客户变量现在可以给我客户
+遍历 customer ，这意味着 customer 变量现在可以给我数据了
 
 518
 00:36:46,025 --> 00:36:50,152
@@ -2585,7 +2585,7 @@ Customer singular, foreach customer,that means that the customer variable is now
 519
 00:36:50,152 --> 00:36:53,550
 Okay. And then we'll do the rest,cuz I don't know if this is gonna work yet.
-然后我们做剩下的事情，因为我不知道这是否可行
+先做完剩下的事情，因为我不知道这是否可行
 
 520
 00:36:55,550 --> 00:36:59,496
@@ -2600,7 +2600,7 @@ So it's just a throw away database.
 522
 00:37:01,352 --> 00:37:10,440
 -I need to do better -I need to maybe make tests later, and I survived the journey.
--我需要做得更好 -我需要以后再做测试，我在旅途中幸存下来
+-我需要做得更好 -我需要以后再做测试，在过程中保留下来
 
 523
 00:37:10,504 --> 00:37:16,000
