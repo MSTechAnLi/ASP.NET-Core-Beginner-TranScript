@@ -1,7 +1,7 @@
-Alright, we survived the crud.
+﻿Alright, we survived the crud.
 Yeah, we did.
-Create, re-update, delete.
-We are going to add in some logging, do a little application insights locally, and then in the process of doing logging, I also want to add a little thing called Temp Data.
+Create, read, update, delete.
+We are going to add in some logging, do a little Application Insights locally, and then in the process of doing logging, I also want to add a little thing called Temp Data.
 Because I was noticing that when we did the create, it'd be nice to have a little message that said the answer was created or whatever.
 Yeah, that would be nice.
 But that's not really part of the model cuz that brings up some interesting questions.
@@ -17,19 +17,21 @@ Yes.
 This is part of the PageModel which is kinda like a view model.
 This is really a temporary piece of data.
 It's Tempdata and they're gonna have their values stored and then they'll be right back around in the side.
-So it's a side car, it's a little post it note.
+So it's a sidecar, it's a little post it note.
 That's a good way to think about those. Yeah.
 Cool, so it's a place to put stuff.
-So I'm gonna save the database, save the data right here like we did before and then- >> You're gonna have a message.
-I'm gonna have a little message, and we'll say hey, customer and this is where you can personalize stuff.
-Customer.Name added.
+So I'm gonna save the database, save the data right here like we did before and then- 
+You're gonna have a message.
+I'm gonna have a little message, and we'll say hey, Customer and this is where you can personalize stuff.
+Customer.Name.
+added.
 It's a message, right?
 And it can come out of whatever you want.
 It can be generated, but here we're mixing and matching text with the data from the form.
 Then scrolling in a way in this message which is not part of the database.
 So by simple fact that you had the TempData said, you're not going into the database.
 Right because I posted, well because I actually never picked it up and put it anywhere near the database.
-If I did not put TempData data on it, that would never get saved and it would be no [CROSSTALK]
+If I did not put TempData on it, that would never get saved and it would be no
 Okay.
 But because it's public and it's on the page model, it's available to me, you know, elsewhere, okay?
 So let's go over to, let me think about this.
@@ -41,28 +43,33 @@ That's gonna catch that temp data, right?
 Yep.
 And then here, maybe we'll have some, we'll just take it at the top of the form for now and we'll say, maybe an H3.
 And some sort of message?
-Model.Message.
->> Okay. >> So it'd be or
-maybe we'd wanna hide it if it wasn't there, there is lots of things that we could could potentially do but for now.
-Now, just a second, we'll be fine but this is just an example where it's not quite database stuff.
+@Model.Message.
+Okay.
+So it'd be or maybe we'd wanna hide it if it wasn't there, there is lots of things that we could could potentially do but for now.
+Now, just a second, we'll be fine.
+But this is just an example where it's not quite database stuff.
 You don't want to stick it in the database temporarily, you just want it to be somewhere temporarily.
 Some sort of acknowledgement for the user.
 Mm-hm, yep and the general idea of being able to, there you go.
 They are.
 And that could look whatever you want it, you can do whatever.
-It could fade in with jQuery or animation, or whatever makes you happy and that's different from there, which is your default state, right?
+It could fade in with jQuery or animation, or whatever makes you happy.
+And that's different from there, which is your default state, right?
 So do it again, See?
 Mm-hm.
 And it's because it was called temp data and we had the same name here and where it started.
 So it found its way magically over into the index area as well, which is pretty sweet.
->> Cool. >> Cool, all right.
+Cool.
+Cool, all right.
 Now we talked a little bit about logging, very, very briefly.
 We didn't really do anything with it.
 Well we looked at this.
 Well we saw it up here.
 We saw it there.
 We saw two different kinds of logging.
-We saw this one and then we saw a little bit more there, so there was warning, and then there was.
+We saw this one. 
+And then we saw a little bit more there.
+so there was warning, and then there was.
 Oops, pardon me.
 It was, yeah there you go.
 There's warning, and then there's debug and then you can have different subsections.
@@ -73,24 +80,24 @@ Do you can you tell me how?
 You've gotta try to remember?
 Well, you know.
 I just want to do it right, and I don't have all this stuff in my head all the time.
->> So it should be I logger >> G U?
-Is it I's you probably need to add it as a service.
+So it should be ILogger.
+Is it, you probably need to add it as a service.
 Yes, add it as a service.
 Okay, and then we have to use it.
-Yeah, just add logging.
-And then we've got app dot I don't think it's used... 
+Yeah, just AddLogging.
+And then we've got app. I don't think it's used... 
 Do you put it up so, ILogger?
 Yeah, I think it's ILoggerFactory.
 I think it's, yeah.
 See?
 Yes, you have to add the extension.
 Comes out of extensions, that's good.
-Guesswork makes for the best work.
-Yeah, there you go Okay.
+Geeks' work makes for the best work.
+Yeah, there you go, Okay.
 Then we'll say hey, loggerFactory, And you can say, well if I'm running it at the console, I can add the console.
-Cuz you can log to all kinds of places, right, you can log to files, you can log it into application insights if you will, all kinds of things.
-And if you go and do ApplicationInsights that's going to ask you all kinds of questions as well.
-Right now for now, I'm going to add console, I'm going to add debug.
+Cuz you can log to all kinds of places, right, you can log to files, you can log it into Application Insights if you will, all kinds of things.
+And if you go and do Application Insights that's going to ask you all kinds of questions as well.
+Right now for now, I'm going to AddConsole, I'm going to AddDebug.
 Okay.
 Now.
 Do you need the first one any more?
@@ -106,8 +113,8 @@ It'd be weird.
 But I could do that.
 So right now I'm sending logging to two places, pardon me.
 Yeah so yeah it's cool to do that and then, in a place that I might wanna use it, remember how we put everything on one line there before?
-We're gonna take it out and I think I would say, private ILogger And I think it would be of type CreateModel and I'll just say Log, and then we say ILogger CreateModel.
-Log, and then again we squirrel it away.
+We're gonna take it out and I think I would say, private ILogger.
+And I think it would be of type CreateModel and I'll just say Log, and then we say ILogger<CreateModel> Log, and then again we squirrel it away.
 Now here I am mixing things, here this person went underscore db, and I said capital L, you should pick a style and stick with it.
 So is the underscore really just a style?
 It's just a style.
@@ -125,7 +132,7 @@ Okay?
 This string right here.
 I could maybe reuse.
 And then, make it for log, okay?
-And I could say log- >> Label.
+And I could say log-  Level.
 Yeah, I could say LogInformation, LogDebug, LogCritical.
 Let's say, that that's critical.
 It's totally not critical.
@@ -140,7 +147,7 @@ So let's go over to that location.
 Yeah.
 And I'll try dotnet run in the command line.
 This is a good reminder that you can do these things in Visual Studio, or you can jump back out into the command line, that's cool, too.
-So it's giving you- >> 6405.
+So it's giving you- 64005.
 Oops, so I put that there, I put this here.
 There it was, critical.
 Aah!
@@ -222,8 +229,7 @@ And then it has this really good icons, so you know what's right, yeah.
 See, remember how we made adding a customer a critical.
 Yeah.
 So I can double-click on that individual trace, okay?
-So then, we can see the name of the computer.
-And the operation.
+So then, we can see the name of the computer and the operation.
 See, the severity, the operations.
 And I can use, then show me all telemetry for this user.
 So then you could say, well, I've got a bunch of users hitting this.
@@ -233,8 +239,7 @@ Yeah.
 Beyonce has been added.
 Show me telemetry five minutes before and after.
 Okay.
-All right,
-cuz the bug might not be near her, it might be- >> Around her.
+All right, cuz the bug might not be near her, it might be- >> Around her.
 Around her, elsewhere on the elevator.
 Okay?
 Yep.
@@ -260,8 +265,7 @@ Isn't that fantastic?
 That is fantastic, that's pretty impressive.
 I really like Application Insights.
 Cool, so, I think that puts us in a pretty good spot, doesn't it?
-We've got a nice little cloud application.
-Basic bootstrap, it's talking to Application Insights, we've got logging.
+We've got a nice little cloud application, basic Bootstrap, it's talking to Application Insights, we've got logging.
 I think that's a pretty good beginner start, wouldn't you say?
 Yeah, we've accomplished quiet a bit over the past couple of hours.
 Where should they go now?
