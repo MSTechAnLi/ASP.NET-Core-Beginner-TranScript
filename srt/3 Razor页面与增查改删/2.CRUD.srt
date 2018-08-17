@@ -64,4099 +64,4317 @@ Create,read, update, delete.
 创建、读取、更新、删除
 
 14
-00:00:45,777 --> 00:00:54,675
-All right, so a CRUD application maps verbs from CRUD to verbs that we're used to using,like get is a get, so it would be like a read.
-好的, 所以 CRUD 应用把我们执行的操作这些动词编成了一个名词，就像“获取”是 get 一样，有助于阅读的理解
+00:00:45,777 --> 00:00:52,350
+All right, so a CRUD application maps verbs from CRUD to verbs that we're used to using
+好的, 所以 CRUD 应用把我们执行的操作这些动词编成了一个名词
 
 15
+00:00:52,350 --> 00:00:54,675
+like get is a get, so it would be like a read.
+就像“获取”是 get 一样，有助于阅读的理解
+
+16
 00:00:54,675 --> 00:00:57,358
 And if you're gonna create something, it would be a post.
 如果你要创造一些数据,这就要用到 post 请求
 
-16
-00:00:57,358 --> 00:01:06,126
-So you'd fill out a form, you'd hit submit, and it would post the data, that's a create Then you can maybe read it back and look at in edit page or then maybe delete it.
-当你在填写表格点击提交时, post 请求将发送数据,经过一个创建过程后你可以在页面看到它,同样数据也可以编辑或删除
-
 17
-00:01:06,126 --> 00:01:12,718
-So if we succeed, we'll have the simple form,maybe create some customers, put them in a fake database And we'll be okay
-如果顺利的话,我们会通过简单的形式创造一些虚拟信息,并把它们放在一个假的数据库,我们有信心做到~
+00:00:57,358 --> 00:01:00,578
+So you'd fill out a form, you'd hit submit, and it would post the data
+当你在填写表格点击提交时, post 请求将发送数据
 
 18
+00:01:00,900 --> 00:01:06,126
+that's a create Then you can maybe read it back and look at in edit page or then maybe delete it.
+经过一个创建过程后你可以在页面看到它,同样数据也可以编辑或删除
+
+19
+00:01:06,126 --> 00:01:09,988
+So if we succeed, we'll have the simple form,maybe create some customers
+如果顺利的话,我们会通过简单的形式创造一些虚拟信息
+
+20
+00:01:09,988 --> 00:01:12,718
+put them in a fake database And we'll be okay
+并把它们放在一个假的数据库,我们有信心做到~
+
+21
 00:01:12,718 --> 00:01:16,625
 Yeah, and I will be learning more about databases in the intermediate course as well
 是的,我们以后将会学习更多关于数据库中间层的内容
 
-19
+22
 00:01:16,625 --> 00:01:18,606
 Yes,well like a whole section on databases.
 是的,他就像一个数据库整体的一部分
 
-20
+23
 00:01:18,606 --> 00:01:20,846
 So for now, we're gonna be doing it in an in-memory database.
 所以现在,我们会在内存中创建一个数据库
 
-21
+24
 00:01:20,846 --> 00:01:23,598
 Okay, so let's do the best we can.
 好吧,让我们尽我们所能做出来吧
 
-22
+25
 00:01:23,598 --> 00:01:26,862
 We're gonna use the same web application one that we created before.
 我们将使用与之前创建的 web 应用相同的程序
 
-23
-00:01:26,862 --> 00:01:39,225
-We saw in the previous modules where we added MVC, but of course all of that stuff was added for us because we went File > New Project,and we picked Web Application, all right?
-看下之前的模块,我们添加了 MVC ,当然我们之所以这么做是因为我们通过 文件>新项目 ,选择了 Web 应用程序,对吧?
+26
+00:01:26,862 --> 00:01:34,700
+We saw in the previous modules where we added MVC, but of course all of that stuff was added for us 
+看下之前的模块,我们添加了 MVC ,当然我们之所以这么做是
 
-24
+27
+00:01:34,700 --> 00:01:39,225
+because we went File > New Project,and we picked Web Application, all right?
+因为我们通过 文件>新项目 ,选择了 Web 应用程序,对吧?
+
+28
 00:01:39,975 --> 00:01:44,782
 So here in configure services, we've got AddMvc.
 所以在 configureServices 类里,我们加上 AddMvc
 
-25
+29
 00:01:45,325 --> 00:01:47,672
 But we're gonna make our little in-memory database here.
 但我们需要有一个小的内存数据库
 
-26
-00:01:48,000 --> 00:01:53,358
+30
+00:01:47,958 --> 00:01:53,358
 We're gonna say services.AddDbContext<>
 我们在这里输入 services.AddDbContext<>
 
-27
+31
 00:01:53,358 --> 00:01:55,150
 Yeah, and give it name
 好的，给它一个名字
 
-28
+32
 00:01:55,150 --> 00:01:58,030
 And we gonna create a thing called AppDbContext.
 我们将创建一个名为 AppDbContext 的类
 
-29
+33
 00:01:58,030 --> 00:01:59,630
 We can name it whatever we want to.
 并把他命名成喜欢的名字
 
-30
+34
 00:01:59,630 --> 00:02:02,638
 We haven't written this yet, but we will.
 这件事我们以后会去完成
 
-31
+35
 00:02:02,638 --> 00:02:05,902
 I'm gonna hit Ctrl+dot.
 摁下 Ctrl + .
 
-32
+36
 00:02:06,550 --> 00:02:10,382
 And it's saying, hey, do you need an AppDbContext?
 它会提示,嘿,你需要一个AppDbContext吗?
 
-33
+37
 00:02:10,382 --> 00:02:12,878
 Do you wanna go and generate one of those?
 你要去生成一个吗?
 
-34
+38
 00:02:12,878 --> 00:02:14,025
 I wanna go ahead and say yes.
 我们选择,是的
 
-35
+39
 00:02:14,025 --> 00:02:18,190
 So it's gone and done that, and we'll deal with that in a minute.
 这样系统会去生成了,我们会一会儿去添加代码
 
-36
+40
 00:02:18,190 --> 00:02:22,414
 And again, I will very likely make mistakes, so you'll bear with me I hope.
 我很有可能会再次犯错误,所以我希望你能原谅我
 
-37
+41
 00:02:23,625 --> 00:02:27,214
 I opened up the parentheses there.
 括号中要添加内容
 
-38
+42
 00:02:27,214 --> 00:02:28,942
 And I'm gonna pass in some options.
 我将通过一些选项
 
-39
+43
 00:02:28,942 --> 00:02:35,470
 -And the option I'm gonna pass in for my database context are options -UseInmemory.
 -我要在 options 中进入数据库的上下文 -UseInmemory
 
-40
+44
 00:02:35,470 --> 00:02:37,966
 -Use -In.
 -Use -In.
 
-41
+45
 00:02:38,670 --> 00:02:40,270
 MemoryDatabase.
 MemoryDatabase
 
-42
+46
 00:02:40,462 --> 00:02:43,406
 Yes, but the reason why that's not showing,that perfect.
 是的,但这样写肯定是不完全的
 
-43
+47
 00:02:43,406 --> 00:02:44,942
 -We need to add -why is that not showing up?
 -我们需要添加 -为什么没有提示?
 
-44
+48
 00:02:44,942 --> 00:02:47,806
 So we need to add the entity framework.
 所以我们需要添加 entity framework
 
-45
+49
 00:02:47,806 --> 00:02:49,150
 So we need to use
 所以我们需要使用
 
-46
+50
 00:02:49,150 --> 00:02:51,006
 And I probably should have added that first, and
 我是应该先进行添加，还有
 
-47
+51
 00:02:51,006 --> 00:02:52,158
 I would have gotten IntelliSense.
 我们应该会得到一个智能提示
 
-48
+52
 00:02:52,158 --> 00:02:53,758
 -True -Let's try that.
 -确实 -再试一下
 
-49
+53
 00:02:53,758 --> 00:02:56,254
 If we go back up to the top.
 如果我们回到顶部
 
-50
+54
 00:03:00,222 --> 00:03:02,590
 So we add the EntityFrameworkCore beforehand.
 预先添加上 Entity Framework Core
 
-51
+55
 00:03:06,300 --> 00:03:11,614
 Look, you see that little arrow there that's pointing down?
 看,你看到那个向下的小箭头?
 
-52
+56
 00:03:12,350 --> 00:03:19,166
 That means that this method came in was included by the fact that we just did that UseIn.
 这意味着,该方法包括了我们刚才添加进来的 UseIn
 
-53
+57
 00:03:19,625 --> 00:03:22,425
 That's called an extension method,it's along for the ride.
 他是这些方法中的拓展方法
 
-54
+58
 00:03:23,070 --> 00:03:26,334
 And you see it actually says extension,that wasn't there seconds ago
 你看它实际就是一个拓展，那不是几秒钟之前的事
 
-55
+59
 00:03:26,334 --> 00:03:27,614
 No, it wasn't.
 不,它不是
 
-56
+60
 00:03:27,934 --> 00:03:37,406
 Add InMemoryDatabase, some name All right,And then we look at the squiggle and we worry.
 添加 InMemoryDatabase 的名字,下面有的波浪线，真叫人担心
 
-57
+61
 00:03:37,406 --> 00:03:39,582
 Does the squiggle mean something?
 为什么会出现波浪线呢？
 
-58
+62
 00:03:41,600 --> 00:03:43,550
 So, here it's saying AddDbContext.
 这里是在提示 AddDbContext 的错误
 
-59
+63
 00:03:43,550 --> 00:03:45,598
 Well, we never really went and did anything with that AddDbContext.
 因为我们从没有真正去引用 AddDbContext
 
-60
+64
 00:03:45,598 --> 00:03:48,158
 Let's go over there and fix that,I'm gonna right click and say go to definition.
 我们去解决它吧,点击右键去自定义
 
-61
+65
 00:03:49,700 --> 00:03:52,359
 And let's work on our database context.
 让我们搭建一个数据库环境
 
-62
+66
 00:03:52,359 --> 00:03:55,134
 This is kind of standard stuff, so don't worry about it too much.
 代码都是即成的,所以不要担心太多
 
-63
+67
 00:03:55,134 --> 00:03:58,206
 But basically this is representing the database.
 基本上可以搭建一个代表性的数据库
 
-64
+68
 00:03:59,486 --> 00:04:01,278
 I'm hitting Ctrl+dot there.
 我现在摁下 Ctrl+.
 
-65
+69
 00:04:01,925 --> 00:04:07,900
 And I'll say make it an AppDbContext,this is an constructor, all right?
 并且建一个 AppDbContext 类,这是一个构造函数,对吧?
 
-66
+70
 00:04:08,225 --> 00:04:14,078
 Okay, and we're gonna take in some options.
 好的,我们会通过一些选项
 
-67
+71
 00:04:17,950 --> 00:04:22,375
 -ContextOptions,Oops, optoons -Options?
 -ContextOptions optoons -Options?
 
-68
+72
 00:04:22,375 --> 00:04:27,011
 Options, pass up to the base class those options.
 options ,通过 options 的基类
 
-69
+73
 00:04:27,011 --> 00:04:28,419
 I'm gonna put that.
 把它放进去
 
-70
+74
 00:04:29,075 --> 00:04:33,150
 What I'm trying to zoom and make it helpful for you, I end up making it worse for myself.
 我想放的更大一点,让你能看清楚,但是那样我自己就很难受了
 
-71
+75
 00:04:34,238 --> 00:04:36,675
 -Well, at least you have other people in mind -I do
 -哇，你这么照顾大家的感受 -那必须的
 
-72
+76
 00:04:38,000 --> 00:04:41,278
 -And then -You have to set it of some sort.
 -我这么做了 -你必须这么设置它
 
-73
+77
 00:04:41,278 --> 00:04:45,054
 We have a set of, we're gonna say customers?
 我们要对它进行设置，怎么命名？
 
-74
+78
 00:04:45,118 --> 00:04:46,684
 So we have a set of customer.
 我们命名为 Customer
 
-75
+79
 00:04:46,684 --> 00:04:47,900
 Customer does not exist here.
 Customer 并不存在
 
-76
+80
 00:04:47,900 --> 00:04:49,576
 That's why it's squiggled out.
 这就是为什么会出现下划线
 
-77
+81
 00:04:50,075 --> 00:04:54,393
 And then we do a getter, setter, get ; set, okay?
 然后我们做一个控制器和访问器,好吗?
 
-78
+82
 00:04:54,648 --> 00:04:56,248
 Customer is squiggled out.
 Customer 出现波浪线了
 
-79
+83
 00:04:56,248 --> 00:04:59,192
 The type or namespace 'Customer' could not be found.
 类型或命名空间 Customer 不存在
 
-80
+84
 00:04:59,192 --> 00:05:01,560
 Well, that's true cuz we haven't made one yet.
 事实上我们还没有去做呢！
 
-81
+85
 00:05:01,624 --> 00:05:02,648
 We had not made it up.
 没做怎么会有~
 
-82
+86
 00:05:02,648 --> 00:05:06,424
 l could type control dot, but l am gonna click show potential fixes.
 我可以输入控制点,但我点击显示潜在的修复
 
-83
+87
 00:05:07,300 --> 00:05:08,664
 This is kind of interesting.
 这是很有趣的
 
-84
+88
 00:05:08,664 --> 00:05:11,224
 Here it's saying, well, I can go and make customer for you.
 这里显示,我可以去为你去创建 customer
 
-85
+89
 00:05:11,224 --> 00:05:12,696
 But look at this here.
 但是看看这个
 
-86
+90
 00:05:12,696 --> 00:05:18,392
 It's suggesting other packages that have the word customer and the name customer in it.
 它建议了存在这个词和名称的开发包
 
-87
+91
 00:05:18,392 --> 00:05:21,784
 So these are other NuGet packages,packages up in the world.
 在世界上有其他 NuGet 包
 
-88
+92
 00:05:21,784 --> 00:05:22,744
 Yeah, ain't that cool?
 是的,这不是很棒吗?
 
-89
+93
 00:05:22,744 --> 00:05:23,448
 That's very cool.
 这是非常酷的
 
-90
+94
 00:05:23,448 --> 00:05:26,275
 -Package out there that has the word customer in it -Has the word customer in it
 -包里面有 "customer" 这个词 -有 "customer" 这个词吗？
 
-91
+95
 00:05:26,275 --> 00:05:27,102
 No, I don't want those.
 不,我不想要这些
 
-92
-00:05:27,800 --> 00:05:37,464
-But if I was doing something with JSON or doing something with some technology that I knew I will need the NuGet packages, later it will go get it for me.
-但如果我要用 json 或一些已知的 Nuget 包的技术,它就会主动为我添加
+96
+00:05:27,800 --> 00:05:32,875
+But if I was doing something with JSON or doing something with some technology
+但如果我要用 json 或一些已知的 Nuget 包的技术
 
-93
+97
+00:05:32,875 --> 00:05:37,464
+that I knew I will need the NuGet packages, later it will go get it for me.
+它就会主动为我添加
+
+98
 00:05:37,464 --> 00:05:40,792
 So I'm gonna say generate in new file, that seems reasonable.
 所以我合理的生成了新的文件
 
-94
+99
 00:05:40,792 --> 00:05:43,800
 -It does -All right, this generated that.
 -是的 -那么来生成它吧
 
-95
+100
 00:05:43,800 --> 00:05:45,528
 Now notice it just appeared.
 现在注意到它就出现了
 
-96
+101
 00:05:46,025 --> 00:05:52,225
 -There it is -And now I'm gonna right click and say go to definition
 -这是 -现在点击右键要去定义
 
-97
+102
 00:05:52,516 --> 00:05:56,975
 It is worth pointing out that I could also right click and say Peak Definition.
 值得指出的是,我也可以右击然后选择 Peak Definition
 
-98
+103
 00:05:56,975 --> 00:06:00,130
 -And could you write in there? -I could.
 -你可以写在这里吗? -可以啊
 
-99
+104
 00:06:00,130 --> 00:06:01,225
 I think that would be a little weird.
 我觉得会有点奇怪
 
-100
-00:06:01,499 --> 00:06:10,300
-But then I can click on this little tab right here Promote to Document, and now I've jumped into that document.
-但我可以通过点击这个小标签来拓展窗口,现在我已经跳转进来了
+105
+00:06:01,499 --> 00:06:05,393
+But then I can click on this little tab right here 
+但我可以通过点击这个小标签
 
-101
-00:06:10,300 --> 00:06:16,175
-So I can peek and then if I type a little bit,I was like this is tiresome, then I could jump even higher.
-那个小窗口适合速览内容,但如果用来敲代码我就觉得不方便了，然后我可以跳转到这边来
+106
+00:06:06,225 --> 00:06:10,300
+Promote to Document, and now I've jumped into that document.
+来拓展窗口,现在我已经跳转进来了
 
-102
+107
+00:06:10,300 --> 00:06:14,500
+So I can peek and then if I type a little bit,I was like this is tiresome
+那个小窗口适合速览内容,但如果用来敲代码我就觉得不方便了
+
+108
+00:06:14,925 --> 00:06:16,175
+then I could jump even higher.
+然后我可以跳转到这边来
+
+109
 00:06:16,175 --> 00:06:17,757
 -That's pretty smooth. -It is pretty smooth.
 -操作起来很流畅 -确实很舒服
 
-103
+110
 00:06:17,821 --> 00:06:21,405
 -All right, I'll show you another smooth tip. -I know it.
 -好的,我将向你展示另一个提示方式 -我知道是什么
 
-104
+111
 00:06:21,405 --> 00:06:24,413
 -Yeah? You wanna suggest? -The tab tab thing?
 -是吗，你有建议吗? -使用 tab tab
 
-105
+112
 00:06:24,413 --> 00:06:27,741
 -Yes, ready? -Prop Tab.
 -是的,准备好了吗? -支持 tab
 
-106
+113
 00:06:27,741 --> 00:06:36,325
 Tab, tab int Tab Id Enter Enter prop Tab Tab string Enter Tab Name.
 Tab, tab int Tab Id 回车 回车 prop Tab Tab string 回车 Tab Name
 
-107
+114
 00:06:36,325 --> 00:06:40,480
 -How cool is that? -It's cool, and I always forget to use it.
 -这太酷了,不是吗? -是很酷,我总是忘记
 
-108
+115
 00:06:40,480 --> 00:06:43,850
 -You gotta use it,There's so much good stuff in there -I always forget to use it and it's awesome.
 -你必须使用它,在里边有这么好用的东西 -我总是忘记使用它,它太棒了
 
-109
+116
 00:06:43,850 --> 00:06:46,880
 There's also propfull.
 还有 propfull
 
-110
+117
 00:06:47,650 --> 00:06:50,080
 -What does that do? -That gives you a backing variable.
 -这做什么呢? -给你一个支持变量
 
-111
+118
 00:06:50,080 --> 00:06:56,350
 There's propa,which I don't know what it does but it's crazy.
 还有 propa ,我不太了解了，这是什么鬼！
 
-112
+119
 00:06:58,825 --> 00:07:02,750
 There's propg for a getter with a private setter.
 这个控制器有一个 get 和一个私有的 set
 
-113
+120
 00:07:03,200 --> 00:07:04,225
 Yeah, a bunch of stuff.
 是的,很多东西
 
-114
+121
 00:07:04,225 --> 00:07:07,624
 Have you done a blog post on all the properties
 你做了一个博客上该有的属性
 
-115
+122
 00:07:07,624 --> 00:07:10,312
 There's a bunch of snippets,I could go all day.
 有很多属性,我可以做一整天
 
-116
+123
 00:07:10,312 --> 00:07:12,680
 But I'm just gonna use prop for now.
 但是现在我要用道具
 
-117
+124
 00:07:12,680 --> 00:07:16,584
 So this is customer, so customers have an ID,a unique ID.
 这是客户,所以客户有一个ID、一个惟一的ID
 
-118
+125
 00:07:16,584 --> 00:07:18,184
 And they have a name.
 他们有一个名称
 
-119
+126
 00:07:18,184 --> 00:07:20,552
 And they could probably have an email,they could have all these things.
 他们可能有一个电子邮件,这些东西都有可能有
 
-120
+127
 00:07:20,939 --> 00:07:24,392
 We'll start with name for now, but should name have some constraints?
 我们从名字开始,但名字应该有限制吗?
 
-121
+128
 00:07:24,392 --> 00:07:28,040
 It should,we have an idea of data annotation.
 应该是有的,我们应该做一个数据的注释
 
-122
+129
 00:07:28,040 --> 00:07:30,088
 There's annotation on that data, yes.
 有注释的数据,是的
 
-123
+130
 00:07:30,088 --> 00:07:33,096
 So one of the things is that you probably want someone to enter their name, right?
 要做的事情中有一件事就是想让某人输入他们的名字,对吧?
 
-124
-00:07:33,096 --> 00:07:38,408
--We wanna force them. -We wanna force them, so we want to make sure it some sort of required, right?
-我们想强迫他们，来确保这个需要被满足,对吗?
+131
+00:07:33,096 --> 00:07:34,400
+We wanna force them
+我们想强迫他们
 
-125
+132
+00:07:34,400 --> 00:07:38,408
+We wanna force them, so we want to make sure it some sort of required, right?
+来确保这个需要被满足,对吗?
+
+133
 00:07:38,408 --> 00:07:43,650
 So required, and I'm putting that as a notation here and I'm gonna hit Ctrl+dot, again.
 所以需要我把这作为一个符号,再点击 Ctrl+. 一下
 
-126
+134
 00:07:43,650 --> 00:07:43,656
 So required, and I'm putting that as a notation here and I'm gonna hit Ctrl+dot, again.
 当这些补全出来时你要想一下需要哪个，而不是一股脑都添加上，你只需键入需要的东西
 
-127
-00:07:43,656 --> 00:07:50,690
-When you learn that these things exist and you're thinking about them rather than typing in all this stuff for the using,you're just gonna type required.
-当这些补全出来时你要想一下需要哪个，而不是一股脑都添加上，你只需键入需要的东西
+135
+00:07:43,656 --> 00:07:48,100
+When you learn that these things exist and you're thinking about them
+当这些补全出来时你要想一下需要哪个
 
-128
+136
+00:07:48,100 --> 00:07:50,690
+rather than typing in all this stuff for the using,you're just gonna type required.
+而不是一股脑都添加上，你只需键入需要的东西
+
+137
 00:07:50,690 --> 00:07:50,696
 When you learn that these things exist and you're thinking about them rather than typing in all this stuff for the using,you're just gonna type required.
 
-129
+138
 00:07:50,696 --> 00:07:54,600
 Hit Ctrl+dot, and then hit Enter.
 点击 Ctrl+. 然后回车
 
-130
+139
 00:07:54,900 --> 00:08:00,296
 Line 1 just appeared there And then we'll force the length as well.
 第一行就出现了,然后我们也会限定长度
 
-131
+140
 00:08:00,296 --> 00:08:05,032
 We'll be silly for a moment, we'll say a length of 10.
 我想一会儿,设定长度为10吧
 
-132
+141
 00:08:05,032 --> 00:08:06,824
 That's not a very good length.
 这不是一个很好的长度
 
-133
+142
 00:08:06,824 --> 00:08:08,104
 That is not a good length at all.
 这不是一个合适的长度
 
-134
+143
 00:08:08,104 --> 00:08:10,024
 But that might allow us to do some validation later.
 我们先用它做一些验证
 
-135
+144
 00:08:10,024 --> 00:08:12,072
 And then we'll change it to a longer length.
 再回来调整
 
-136
+145
 00:08:12,072 --> 00:08:15,592
 All right, so let's back up for a second and see what we did here.
 好吧,让我们回到了第二个,看看我们在这里做什么
 
-137
+146
 00:08:15,592 --> 00:08:20,520
 So we have in our start up an InMemoryDatabase.
 所以我们在启动一个 InMemoryDatabase
 
-138
+147
 00:08:20,825 --> 00:08:22,824
 Not a SQLserver or a.
 没有 SQL Server
 
-139
+148
 00:08:22,824 --> 00:08:25,256
 Whatever just in memory database.
 没关系了，数据库只是在内存里
 
-140
-00:08:25,256 --> 00:08:37,401
-We have a beginnings of a customer, unique ID and a name Some annotations on it, and then a little class here that's kind of empty.
-我们有一个初始化的客户,他有惟一 ID 和名称，一些注释,然后在这里有一个空的小类
+149
+00:08:25,256 --> 00:08:31,276
+We have a beginnings of a customer, unique ID and a name
+我们有一个初始化的客户,他有惟一 ID 和名称
 
-141
+150
+00:08:32,575 --> 00:08:37,401
+Some annotations on it, and then a little class here that's kind of empty.
+一些注释,然后在这里有一个空类
+
+151
 00:08:37,401 --> 00:08:43,850
 That is our a list of customers and actually what's customer Singular here.
-这是我们的 Customer 列表实际上这里的 Customer 有点错误
+这是我们的 Customer 列表，实际上这里的 Customer 有点错误
 
-142
+152
 00:08:43,850 --> 00:08:45,578
 -Yeah. -That should be customers.
 -是的. -应该是 customers
 
-143
+153
 00:08:45,578 --> 00:08:49,375
 -Okay, because, you have a set. -This is a set of customers.
 -好吧,因为有一个 set -这是 customers 的 set
 
-144
+154
 00:08:49,375 --> 00:08:54,474
 So the one thing, how are we going to see this information?
 还有一件事,我们怎么看到这个 customer 信息?
 
-145
-00:08:54,474 --> 00:09:01,514
-Well, we're going to need to probably put some in the database and then,once we have them in the database, list them out.
-我们需要在数据库中添加一些数据，一旦我们把它们放在数据库中就会被列出来
+155
+00:08:54,474 --> 00:08:58,125
+Well, we're going to need to probably put some in the database and then,
+我们需要在数据库中添加一些数据
 
-146
-00:09:01,514 --> 00:09:02,922
+156
+00:08:58,125 --> 00:09:00,450
+once we have them in the database, list them out.
+一旦我们把它们放在数据库中就会被列出来
+
+157
+00:09:00,775 --> 00:09:02,922
 Like how are we going to visually see it?
 我们如何直观地看到?
 
-147
+158
 00:09:02,922 --> 00:09:05,610
 Yeah, so there's a bit of a chicken and the egg problem there.
 是的,像一个鸡和蛋的问题
 
-148
+159
 00:09:05,610 --> 00:09:09,550
 Do we make the listing page first and list them out?
 我们首先做出列表并显示出它们吗？
 
-149
+160
 00:09:09,550 --> 00:09:10,975
 But we really can't cuz we don't have any.
 但我们不能，因为我们没有
 
-150
+161
 00:09:10,975 --> 00:09:13,802
 -You don't anything, yeah. -Or we make a create page first.
 -我们啥都没有呀 -或者我们先做一个页面出来
 
-151
+162
 00:09:13,802 --> 00:09:17,194
 -So it's CRUD. -We'll do the C first, okay?
 -这是 CRUD. -我们先把创建功能实现
 
-152
+163
 00:09:18,225 --> 00:09:20,266
 -So over in -The pages folder.
 -所以在 -页面文件夹
 
-153
+164
 00:09:20,266 --> 00:09:23,274
 Pages, let's do create.
 页面,我们来创建
 
-154
+165
 00:09:23,274 --> 00:09:25,650
 Now, we're not going to say new file like we did before.
 现在，我们不会像以前那样建立新文件
 
-155
+166
 00:09:25,650 --> 00:09:29,546
 No, you're going to create a new Razor Page or if you go to New File.
 不,你要创建一个新的 Razor 页面或者如果你创建新文件
 
-156
+167
 00:09:29,546 --> 00:09:30,954
 Let me do that again.
 让我做一遍
 
-157
+168
 00:09:30,954 --> 00:09:34,026
 Right click and I have two choices I have new.
 右键点击和我有新有两个选择
 
-158
+169
 00:09:34,026 --> 00:09:35,818
 -And then. -Page or I can say item.
 -然后 -页面或者说子项
 
-159
+170
 00:09:35,818 --> 00:09:36,650
 Yeah, New Item.
 是的,新子项
 
-160
+171
 00:09:36,650 --> 00:09:39,594
 And they should be the option to pick Razor Page.
 应该选择 Razor 页面的选项
 
-161
+172
 00:09:39,594 --> 00:09:43,306
 Right, so you got a couple different options here and this is all the different things that you could make.
 对，你有两种途径，可以完成这件事情
 
-162
-00:09:44,077 --> 00:09:56,685
-I'm gonna go and right click and say add Razor page, and I wanna point out that I'm not gonna do it for this because it will be a little bit cheating but after we're all done, first, we make you suffer.
-右击选择添加 Razor 页，这个方法其实更简单但我不想上来就教你，是想让你在开始的时候熟悉难点
+173
+00:09:44,077 --> 00:09:48,529
+I'm gonna go and right click and say add Razor page, and I wanna point out that 
+右击选择添加 Razor 页，这个方法其实更简单
 
-163
+174
+00:09:49,325 --> 00:09:56,685
+I'm not gonna do it for this because it will be a little bit cheating but after we're all done, first, we make you suffer.
+但我不想上来就教你，是想让你在开始的时候熟悉难点
+
+175
 00:09:56,685 --> 00:09:59,053
 And then we show you the easy way
 然后告诉你最简单的方法
 
-164
-00:09:59,334 --> 00:10:07,462
-We could create that model and say Razor page is using entity framework CRUD, and then it will then scaffold or generate.
-我们可以使用 CRUD 实体框架创建 Model 和 Razor 页面,之后这些会进行构架或者生成
+176
+00:09:59,334 --> 00:10:04,175
+We could create that model and say Razor page is using entity framework CRUD
+我们可以使用 CRUD 实体框架创建 Model 和 Razor 页面
 
-165
+177
+00:10:04,875 --> 00:10:07,462
+and then it will then scaffold or generate.
+之后这些会进行构架或者生成
+
+178
 00:10:07,462 --> 00:10:10,342
 -Every single -All the hard parts that we're about to do.
 -每一个 -我们要完成所有的困难部分
 
-166
+179
 00:10:10,342 --> 00:10:14,825
 But it's more fun to do, no no,it's more fun to do it ourselves, don't you think?
 但做起来更有趣,不不,我们自己做这件事更有趣,你是这么觉得吗?
 
-167
+180
 00:10:15,575 --> 00:10:17,958
 -All right. -All right, lets do it ourselves.
 -当然 -好吧,让我们自己做吧
 
-168
+181
 00:10:17,958 --> 00:10:20,006
 People can fast forward if they don't like it.
 如果你们不喜欢，他们可以快进
 
-169
+182
 00:10:21,900 --> 00:10:24,294
 The page name would be create.
 创建页面名称
 
-170
+183
 00:10:24,294 --> 00:10:26,854
 Uh-huh, and then we're gonna use a layout, we saw that.
 我们会使用布局
 
-171
+184
 00:10:26,854 --> 00:10:31,014
 And then, here it says Generate PageModel,that's that code behind of that page model.
 然后，在这里生成 PageModel ，那就是那个页面模型背后的代码
 
-172
+185
 00:10:31,014 --> 00:10:34,075
 We could say no and then do that in line, if we wanted to.
 如果我们愿意，我们可以选择“不”，然后就这样做
 
-173
+186
 00:10:35,375 --> 00:10:36,886
 All right. So let's see if that works.
 好的。让我们看看这是否可行
 
-174
+187
 00:10:37,590 --> 00:10:39,425
 Thinking, thinking, thinking.
 加载一下
 
-175
+188
 00:10:39,900 --> 00:10:42,966
 We're gonna watch in the right hand side here as create should appear.
 创建出文件后应该在右边可以看到
 
-176
+189
 00:10:42,966 --> 00:10:45,590
 And sticking well because it's doing quite a bit of scaffolding.
 因为做了很多的架构，所以模块之间契合度很高
 
-177
+190
 00:10:45,654 --> 00:10:50,902
 Well, it's scaffolding up some workforce but it's also gonna build the application to see if it still builds.
 他正在搭建起整个部分的架构，同时也将构建一个查看自己是否在构建的应用
 
-178
+191
 00:10:52,100 --> 00:10:54,422
 And if it's running a scarf-folder.
 如果它正在运行一个 scarf 文件夹
 
-179
+192
 00:10:54,422 --> 00:10:57,650
 And scar folder is something that you can go on a nd read about and write your own if you feel like it.
 scar 文件夹中可以去读写你自己的内容，如果你允许的话
 
-180
+193
 00:10:58,650 --> 00:10:59,875
 So here we gotta create.
 所以我们必须创造
 
-181
+194
 00:11:00,374 --> 00:11:03,574
 -So let's see what we have in there -Let's see it gives us a page
 -让我们看看里面有什么 -让我们看看它给我们的一个页面
 
-182
-00:11:04,475 --> 00:11:17,525
-It gave us a default model, a title, looks like a header, and then some validation scripts, and then presumably we can just start typing our pages or whatever.
-它给了我们一个默认模型，一个标题，看起来像一个标题，然后是一些验证脚本，然后我们就可以开始在页面里输入内容什么的了
+195
+00:11:04,475 --> 00:11:12,149
+It gave us a default model, a title, looks like a header, and then some validation scripts
+它给了我们一个默认模型，一个标题，看起来像一个标题，然后是一些验证脚本
 
-183
+196
+00:11:12,149 --> 00:11:17,525
+and then presumably we can just start typing our pages or whatever.
+然后我们就可以开始在页面里输入内容什么的了
+
+197
 00:11:17,525 --> 00:11:23,478
 Let's look at the backend,It made a create model that has a get.
 让我们看看后端，它创建了一个具有 get 的创建模型
 
-184
+198
 00:11:23,478 --> 00:11:26,422
 So this is the function that happens when we get stuff.
 这就是我们获取内容的方法
 
-185
+199
 00:11:26,422 --> 00:11:27,254
 Okay.
 好的
 
-186
+200
 00:11:27,254 --> 00:11:30,198
 All right, so we're gonna need to make form code.
 好的，所以我们需要制作表格代码
 
-187
+201
 00:11:30,262 --> 00:11:36,650
 All right, so form that would have actually just one entry?
 好吧，那么表格实际上只有一个条目？
 
-188
+202
 00:11:36,650 --> 00:11:41,974
 Yeah, so we'll say enter your name, figure, all right.
 是的，所以我们说输入你的名字，数字，好吧
 
-189
+203
 00:11:41,974 --> 00:11:44,079
 And who knows if this will work, again, we're gonna learn.
 谁知道这是否可行，我们得再添点东西
 
-190
+204
 00:11:44,079 --> 00:11:48,431
 Now, this is interesting, noticed that when I typed form Why is it in purple?
 现在，这很有趣，注意到当我输入表格为什么它是紫色的？
 
-191
-00:11:48,431 --> 00:12:02,433
-Turns purple, so that is a tag helper, this is some related elements that are gonna be on the server for processing so the server knows about purple elements, and ill do some processing of them.
-变成紫色是因为这是一个标签助手，服务器将对一些相关的元素进行处理，这样服务器就会索引紫色元素，并对其进行一些处理
+205
+00:11:48,431 --> 00:11:57,000
+Turns purple, so that is a tag helper, this is some related elements that are gonna be on the server for processing
+变成紫色是因为这是一个标签助手，服务器将对一些相关的元素进行处理
 
-192
-00:12:02,433 --> 00:12:12,545
-Typically when you're in HTML, you have like a P tag or an image tag or div, and that's just strings that get sent off to the client.
-通常， HTML 中的 p 标签、图像标签或 div 只是被发送到客户端的字符串
+206
+00:11:57,000 --> 00:12:02,433
+so the server knows about purple elements, and ill do some processing of them.
+这样服务器就会索引紫色元素，并对其进行一些处理
 
-193
-00:12:12,929 --> 00:12:22,785
-But when we're generating this stuff on the server side,there might be an opportunity for ASP.NET Core to improve it,to change it, to add stuff.
-但是当我们在服务器端生成这些东西时，ASP.NET Core 可能会有机会改进它，改变它，添加一些东西
+207
+00:12:02,433 --> 00:12:07,625
+Typically when you're in HTML, you have like a P tag or an image tag or div
+通常， HTML 中的 p 标签、图像标签或 div
 
-194
+208
+00:12:08,100 --> 00:12:12,545
+and that's just strings that get sent off to the client.
+只是被发送到客户端的字符串
+
+209
+00:12:12,929 --> 00:12:16,548
+But when we're generating this stuff on the server side
+但是当我们在服务器端生成这些东西时
+
+210
+00:12:16,825 --> 00:12:22,785
+there might be an opportunity for ASP.NET Core to improve it,to change it, to add stuff.
+ASP.NET Core 可能会有机会改进它，改变它，添加一些东西
+
+211
 00:12:22,785 --> 00:12:24,385
 So it knows about form.
 所以它知道 from
 
-195
+212
 00:12:24,385 --> 00:12:29,925
 Form is a magic tag and we can go and type things like this,you see it says asp colon.
 from 是一个魔术标签，我们可以输入 asp ，你看到它显示 ASP-
 
-196
+213
 00:12:30,075 --> 00:12:33,281
 Yeah, so is that indication that that is a tag helper or some sort of action?
 是的，这是一个标记帮助还是某种动作？
 
-197
+214
 00:12:33,281 --> 00:12:36,025
 Right these things aren't html.
 这些东西不是 HTML
 
-198
+215
 00:12:36,025 --> 00:12:37,569
 -No -Those are tag helpers
 -并不是 -那些是标签助手
 
-199
+216
 00:12:37,569 --> 00:12:43,265
 You'll never see asp hyphen something being sent all the way out to the browser.
 你将永远不会看到 ASP 的字符被发送到浏览器
 
-200
+217
 00:12:43,265 --> 00:12:45,953
 These are not HTML,They're hints to the server.
 这些不是 HTML ，它们是服务器的提示
 
-201
-00:12:45,953 --> 00:12:52,225
--So if when we run this application, and we go into the F12 tools, we will not see -You shouldn't see those.
--因此，如果我们运行这个应用程序，我们进入F12工具，我们将看不到 -你应该看不到那些东西
+218
+00:12:45,953 --> 00:12:51,575
+So if when we run this application, and we go into the F12 tools, we will not see
+因此，如果我们运行这个应用程序，我们进入F12工具，我们将看不到
 
-202
+219
+00:12:51,575 --> 00:12:51,613
+你应该看不到那些东西
+
+220
+00:12:51,613 --> 00:12:52,225
+You shouldn't see those.
+你应该看不到那些东西
+
+221
 00:12:52,225 --> 00:12:53,300
 -Okay -Exactly
 -Okay -不骗你
 
-203
+222
 00:12:53,700 --> 00:12:58,750
 So we're gonna say form, this is gonna be basic method= a,yep see Get, post, put, delete
 回到 from 上， method 应该是，看下面这几个： get,post,put,delete
 
-204
+223
 00:12:58,750 --> 00:13:01,422
 We'll say post So we're gonna go and post.
 我们会用 post ，所以我们要使用 go 和 post
 
-205
+224
 00:13:01,700 --> 00:13:02,761
 Here's the end of our form.
 这是我们 form 的结束标签
 
-206
+225
 00:13:03,200 --> 00:13:08,025
 Say div, name, and then we'll need a text box.
 div 名字，然后我们需要一个文本框
 
-207
+226
 00:13:08,025 --> 00:13:09,313
 Yep so some sort of input tag.
 是的，某种输入标签
 
-208
+227
 00:13:09,313 --> 00:13:12,100
 Yep input,Now, this is interesting.
 input，现在这很有趣了
 
-209
+228
 00:13:12,100 --> 00:13:17,441
 We could do an input tag the way we usually do or we could say ASP.NET4.
 我们可以按通常的方式做输入标记，也可以使用ASP.NET4
 
-210
+229
 00:13:17,441 --> 00:13:22,817
 -Okay -And we're gonna say Customer.Name.
 -Okay -我们要用 Customer.Name
 
-211
+230
 00:13:22,817 --> 00:13:25,313
 -Okay -See how it's all purple?
 -Okay -看它怎么都是紫色的？
 
-212
+231
 00:13:26,050 --> 00:13:30,825
 That ASP 4 is gonna look at that model, okay?
 ASP 4会使用那个模型，好吗？
 
-213
+232
 00:13:31,275 --> 00:13:34,950
 Now, it's saying here, I don't know what a Customer is.
 这里的提示说的是，我不知道 Customer 是什么
 
-214
+233
 00:13:35,875 --> 00:13:36,975
 What's going on with that?
 这是怎么回事？
 
-215
+234
 00:13:36,975 --> 00:13:38,465
 It's never heard of Customer before.
 以前从来没有听说过 Customer
 
-216
+235
 00:13:38,875 --> 00:13:40,923
 We'll come back and fix that in a second.
 我们一会儿再来解决
 
-217
+236
 00:13:40,923 --> 00:13:45,225
 Then we'll have an input for submitting that form, okay?
 然后我们输入一张表格，好吗？
 
-218
+237
 00:13:45,225 --> 00:13:48,735
 But we have a problem here,where it doesn't know what Customer is.
 但我们在这里遇到了一个问题，就是不知道 Customer 是什么
 
-219
+238
 00:13:49,350 --> 00:13:51,625
 What is the model for this page?
 这个页面的模型是什么？
 
-220
+239
 00:13:53,050 --> 00:13:54,687
 -Right, it's the -The Create
 -好的，这是 -是 Create
 
-221
+240
 00:13:54,687 --> 00:13:57,275
 CreateModel, so let's go look at that.
 CreateModel , 让我们来看一看
 
-222
+241
 00:13:58,225 --> 00:13:59,871
 Peek into Definition, okay.
 查看一下定义
 
-223
+242
 00:13:59,871 --> 00:14:01,343
 I wanna point out how I'm moving around.
 我想教大家我是怎么追根溯源的
 
-224
+243
 00:14:01,343 --> 00:14:05,300
 I'm right clicking and saying Go To Definition is also a hotkey for that.
 右击，选择 Go To Definition ，这是一个快捷键
 
-225
-00:14:05,758 --> 00:14:11,839
-So this is an important reminder, just as a programmer,you don't wanna necessarily find yourself going over and looking around all the files all the time.
-这是一个重要的提醒，一个程序员怎么可以做到处浏览所有的文件这么不优雅的事情呢？
+244
+00:14:05,758 --> 00:14:07,875
+So this is an important reminder, just as a programmer
+这是一个重要的提醒
 
-226
+245
+00:14:07,875 --> 00:14:11,839
+you don't wanna necessarily find yourself going over and looking around all the files all the time.
+一个程序员怎么可以做到处浏览所有的文件这么不优雅的事情呢
+
+246
 00:14:11,839 --> 00:14:14,719
 -You can navigate -To it, right?
 -你可以导航 -到需要的地方，对吧？
 
-227
+247
 00:14:14,719 --> 00:14:17,750
 To it directly, you can navigate logically, as they say.
 正如她所说，在逻辑上直接到所需要的地方
 
-228
+248
 00:14:20,700 --> 00:14:23,871
 -Did you cut something out from? -Yeah
 -你把东西剪出来了吗？ -好的
 
-229
+249
 00:14:23,871 --> 00:14:25,855
 -Okay -Great.
 -好的 -不错.
 
-230
+250
 00:14:25,855 --> 00:14:28,275
 There we go,I cut out CreateModel, thank you.
 我们继续，我剪下了 CreateModel ，谢谢你
 
-231
-00:14:28,550 --> 00:14:36,725
-Right so, our create model is gonna need to know about customers, because that's gonna show up on the page.
-我们创建的 Model 需要了解 customers ，因为这样数据才会出现在页面上
+251
+00:14:28,550 --> 00:14:34,503
+Right so, our create model is gonna need to know about customers
+我们创建的 Model 需要了解 customers
 
-232
+252
+00:14:34,775 --> 00:14:36,725
+because that's gonna show up on the page.
+因为这样数据才会出现在页面上
+
+253
 00:14:36,982 --> 00:14:39,675
 So public Customer, that's a type.
 所以选择 Public 属性来修饰 Customer
 
-233
+254
 00:14:40,302 --> 00:14:42,990
 -That's a name -You can tell by the color.
 -这是名字 -你可以根据颜色辨别
 
-234
+255
 00:14:42,990 --> 00:14:44,334
 It's a little confusing.
 这有点混乱
 
-235
+256
 00:14:44,334 --> 00:14:49,390
 But, the property is called Customer, and the type is called Customer.
 但是，该属性称为 Customer ，类型称为 Customer
 
-236
+257
 00:14:49,800 --> 00:14:59,822
 And, this is going to need that database context,so we are going to make a little Database here.
 而且，这将需要数据库上下文，所以我们将在这里制作一个小数据库
 
-237
+258
 00:14:59,822 --> 00:15:03,982
 And this is just being the voice of the person doing this at home.
 只有经常这么些的人才会这么表达
 
-238
+259
 00:15:03,982 --> 00:15:07,725
 Why have you made it private read only?
 为什么你把他设置为 private readonly 类型？
 
-239
+260
 00:15:08,525 --> 00:15:09,934
 So that's a great point.
 这是一个很好的观点
 
-240
+261
 00:15:09,998 --> 00:15:16,782
 I don't want people who get a hold of create model to be poking around and talking directly to the database.
 我不想让别人获取 CreateModel 来捣乱，或直接与数据库连接
 
-241
+262
 00:15:16,782 --> 00:15:21,774
 So, it's gonna be private, just for me where me is CreateModel.
 所以，它将是私人的，就我而言，我就是 CreateModel
 
-242
+263
 00:15:21,774 --> 00:15:28,196
 And it's read only which means I'm gonna assign it once, and I don't want anyone to touch it after that.
 它是只读的，这意味着我只把它分配一次，我不想让任何人在那之后接触它
 
-243
+264
 00:15:28,775 --> 00:15:32,590
 So I'm making it just for me and making sure I can't mess with it afterwards.
 所以我这么做是为自己，确保数据不会出错
 
-244
+265
 00:15:33,600 --> 00:15:34,894
 Excellent, excellent question.
 确实是个好问题
 
-245
+266
 00:15:35,875 --> 00:15:41,934
 -So then, we'll make our -CreateModel Our constructor.
 -那么，我们将创建 -CreateModel 我们的构造器
 
-246
+267
 00:15:43,662 --> 00:15:46,350
 And remember how dependency injection works.
 还记住依赖注入是如何工作的嘛？
 
-247
+268
 00:15:46,350 --> 00:15:49,422
 We don't make an AppDbContext we ask for one.
 我们不用做一个 AppDB 上下文
 
-248
+269
 00:15:49,742 --> 00:15:54,775
 We ask for it by putting it in our constructor.
 我们把它放在我们的构造函数中
 
-249
+270
 00:15:54,775 --> 00:15:58,638
 We can have as many of these as we want,We can have food and bar, etc, etc, etc.
 我们可以有很多我们想要的，我们可以有食物和酒吧等等
 
-250
+271
 00:15:58,975 --> 00:16:00,366
 This is the one we want for now.
 但这就是我们现在想要的
 
-251
+272
 00:16:01,125 --> 00:16:06,391
 And then I'm just going to say hey, this one equals this one.
 然后我要说，嘿，这个等于这个
 
-252
+273
 00:16:06,391 --> 00:16:09,655
 I'm going to squirrel it away and hang onto it, so now I've got one.
 把接收到内容传入我们已有的属性
 
-253
+274
 00:16:12,700 --> 00:16:16,425
 So that says there's this database, and I want to know about it.
 所以说有这个数据库，我想知道
 
-254
+275
 00:16:17,050 --> 00:16:20,206
 This says there's a customer.
 这有一个 customer
 
-255
+276
 00:16:20,206 --> 00:16:29,934
 If I go back over to create, I can hover over that and see it's getting me probably IntelliSense too.
 如果我在创建的地方停一下，大概会有一个智能感知
 
-256
+277
 00:16:29,934 --> 00:16:31,662
 -Yep, see！ -Now, it is
 -没错，看！ -现在有了
 
-257
+278
 00:16:31,662 --> 00:16:36,654
 So, it knows about customer because it's hanging off of the model.
 所以，它识别出 customer 是因为它脱离了 Model
 
-258
+279
 00:16:37,870 --> 00:16:40,110
 So as we're running the application.
 所以我们正在运行应用程序
 
-259
-00:16:40,110 --> 00:16:45,486
-Technically, I should be able to go to this page,hover over customer name and see what names we've put in there?
-从技术上讲，在页面里的 customer 上悬停，可以看出引用自哪里
+280
+00:16:40,110 --> 00:16:42,425
+Technically, I should be able to go to this page
+技术上讲我能到这个页面
 
-260
+281
+00:16:42,425 --> 00:16:45,486
+hover over customer name and see what names we've put in there?
+拿鼠标悬停在 customer 上可以看到其对应的 name
+
+282
 00:16:45,486 --> 00:16:48,942
 You should be able to click on that,you should be able to have IntelliSense.
-你应该能够点击它并拥有智能感知
+你应该能够点击它并触发智能感知
 
-261
-00:16:48,942 --> 00:16:54,958
-If you did a break point,you should be able to stop in here at some point and look at that, and we'll do that in a little bit.
-如果你做到一定程度，应该在某个时候停下来回顾一下，然后我们再进行下一步
+283
+00:16:48,942 --> 00:16:53,707
+If you did a break point,you should be able to stop in here at some point and look at that
+如果你做到一定程度，应该在某个时候停下来回顾一下
 
-262
+284
+00:16:53,707 --> 00:16:53,726
+If you did a break point,you should be able to stop in here at some point and look at that
+然后我们再进行下一步
+
+285
+00:16:53,726 --> 00:16:54,958
+and we'll do that in a little bit.
+然后我们再进行下一步
+
+286
 00:16:55,675 --> 00:17:01,422
 What we need, though, is we need to bind this form.
 我们需要的是，我们需要约束这种形式
 
-263
+287
 00:17:01,422 --> 00:17:04,686
 We're saying this input for customer name.
 我们说的是客户姓名的输入
 
-264
+288
 00:17:04,686 --> 00:17:10,830
 When I hit submit, we need to catch it on the server side.
 当我点击提交时，我们需要在服务器端捕获它
 
-265
+289
 00:17:10,830 --> 00:17:13,070
 I call it surviving the journey.
 我称之为旅途中的小确幸（不知道该怎么翻译，这不重要了···）
 
-266
+290
 00:17:13,070 --> 00:17:14,100
 Okay. Yeah, it's a good point.
 可以。是的，这是一个很好的观点
 
-267
+291
 00:17:14,100 --> 00:17:15,310
 It does need to survive the journey.
 它确实需要在旅途中幸存下来
 
-268
+292
 00:17:15,310 --> 00:17:17,038
 So I'm gonna get rid of this OnGet here.
 所以我要把这部分删掉
 
-269
+293
 00:17:17,038 --> 00:17:18,574
 So we're gonna do a post.
 我们要做一个 post
 
-270
+294
 00:17:19,470 --> 00:17:21,902
 You can say OnPost.
 你可以命名为 OnPost
 
-271
+295
 00:17:22,414 --> 00:17:26,550
 You could do it like this but the right way to do it is like this.
 你可以这样做，但是正确的方法就是这样
 
-272
-00:17:27,425 --> 00:17:36,238
--Async? -Async, which means don't block, and we're gonna have a task that returns some action.
--Async? -Async ，这意味着不会阻塞，我们将有一个返回一些动作的任务
+296
+00:17:27,425 --> 00:17:30,148
+-Async? -Async, which means don't block
+-Async? -Async ，这意味着不会阻塞
 
-273
+297
+00:17:31,075 --> 00:17:36,238
+and we're gonna have a task that returns some action.
+我们将有一个返回一些动作的任务
+
+298
 00:17:36,238 --> 00:17:41,806
 We might be doing something after this and I'm gonna say on OnPostAsync.
 我们可能在这之后做点什么，我会在事后说
 
-274
+299
 00:17:48,750 --> 00:17:50,885
 And it's giving me a little complaint here saying!
 它给我一个小小的抱怨！
 
-275
+300
 00:17:51,293 --> 00:17:53,789
 You didn't do a wait and you haven't returned a value.
 你没有等待，你还没有返回数值
 
-276
+301
 00:17:53,789 --> 00:17:59,805
 Code paths, not all code paths return a value.
 代码路径，并非所有代码路径返回值
 
-277
+302
 00:17:59,805 --> 00:18:01,405
 That's cuz we haven't done anything yet.
 这是因为我们在里面还没有做任何事情
 
-278
+303
 00:18:02,365 --> 00:18:08,125
 So, when someone posts back, they hit submit,and it posts back to here.
 所以，当有人发布帖子时，他们会点击提交，然后返回到这里
 
-279
+304
 00:18:08,573 --> 00:18:11,350
 We would really like customer to have stuff in it.
 我们真的希望在里面客户有数据
 
-280
+305
 00:18:11,350 --> 00:18:14,300
 -Yes -And so there's a couple things here.
 -是的 -所以这里有两件事
 
-281
+306
 00:18:14,300 --> 00:18:18,975
 And then we need to make sure that the state of that model is valid, that someone hasn't messed with it.
 然后我们需要确保那个模型的状态是有效的，没有人会弄错它
 
-282
-00:18:19,450 --> 00:18:30,280
--So I'm gonna say if ModelState.IsValid,or if it's not, pardon me -I was about to say something.
--所以我要写 if(MealStal.IsValid) ，我说反了，请原谅我 -我要说点什么
+307
+00:18:19,450 --> 00:18:28,103
+So I'm gonna say if ModelState.IsValid,or if it's not, pardon me
+所以我要写 if(MealStal.IsValid) ，我说反了，请原谅我
 
-283
+308
+00:18:28,450 --> 00:18:30,280
+I was about to say something.
+我要说点什么
+
+309
 00:18:30,280 --> 00:18:36,168
 No I appreciate that,Then return the page back to itself to say now I'm done.
-不，我很感激，然后 return Page() ，说现在我完了
+不，我很感激，然后 return Page() 表示完成了
 
-284
+310
 00:18:36,168 --> 00:18:43,016
 If I hover over page you can see it returns a page result,which is a kind of action.
 如果我在页面上悬停，你会看到它返回一个页面结果，这是一种响应动作
 
-285
+311
 00:18:43,016 --> 00:18:44,600
 Returning a page is an action.
 返回页面是一个动作
 
-286
+312
 00:18:45,750 --> 00:18:50,696
 If we get this far, now I'm gonna say db,remember when I say db?
 如果我们进行到这里，现在要用 _db 了 ，记得什么是 _db 嘛?
 
-287
+313
 00:18:50,696 --> 00:18:52,040
 -Yes -What is db?
 -是的 -什么是 _db？
 
-288
+314
 00:18:52,040 --> 00:18:58,440
 It is a applicationDB context.
-它是 AppultDB 上下文
+它是 applicationDB 上下文
 
-289
+315
 00:18:58,504 --> 00:19:01,832
 In there is customers, plural.
 里面有 customers,plural
 
-290
+316
 00:19:01,832 --> 00:19:04,072
 -And we want to add one. -.Add()
 -我们想添加 -.Add()
 
-291
+317
 00:19:04,125 --> 00:19:04,136
 我们会把刚才建的 customer 属性传入
 
-292
+318
 00:19:04,136 --> 00:19:08,029
 We'll pass in the customer that we just got handed.
 我们会把刚才建的 customer 属性传入
 
-293
+319
 00:19:08,029 --> 00:19:08,040
 We'll pass in the customer that we just got handed.
 
-294
+320
 00:19:09,200 --> 00:19:13,160
 And then we'll say, hang out for a minute, await.
 然后会延迟一段时间， await
 
-295
+321
 00:19:14,500 --> 00:19:20,328
 And we'll say, db.SaveChanges,And async means don't wait
 接着, db.SaveChanges,async 意味着不需要等待
 
-296
+322
 00:19:21,425 --> 00:19:26,152
 Then we will go and return,not a page, because we're on the create page.
 然后在这我们返回的可就不是一个页面了，因为我们在创建页面呢
 
-297
+323
 00:19:26,152 --> 00:19:28,264
 We really wanna return to the list.
 我们真的想返回一个信息列表
 
-298
+324
 00:19:28,264 --> 00:19:29,736
 Yeah, so you're doing a redirect?
 是的，所以你在重定向？
 
-299
+325
 00:19:29,736 --> 00:19:31,976
 We're gonna do a redirect, exactly.
 很明显我要做一个重定向
 
-300
+326
 00:19:32,325 --> 00:19:35,950
 And we haven't got a place to go yet,But we'll say redirect to page
 我们还没有地方可去，但是我们会说重定向到页面
 
-301
+327
 00:19:36,264 --> 00:19:41,675
 Okay. And you can see that there's options like redirect to page permanent, which would be a 301.
 可以。你可以看到有重定向到页面永久性的选项，这将是301
 
-302
+328
 00:19:41,675 --> 00:19:43,437
 -Okay -Http 301
 -Okay -HTTP 301
 
-303
+329
 00:19:43,437 --> 00:19:48,875
 We're gonna do a 302 because this is just a standard kind of redirect,Let's just say /Index
 我们要做一个302，因为这只是一种标准的重定向
 
-304
+330
 00:19:48,875 --> 00:19:52,988
 And I think we should probably just say /,but we'll see what happens.
 这应该是 /，看看会发生什么
 
-305
+331
 00:19:52,988 --> 00:19:56,999
 If people wanted to learn more about 301s,302s, do you have any recommendations?
 如果人们想了解更多关于301S、302S的信息，你有什么建议吗？
 
-306
+332
 00:19:56,999 --> 00:19:58,983
 -The Internet. -Correct
 -互联网 -正确
 
-307
+333
 00:19:59,350 --> 00:20:01,479
 I would search around for that kind of stuff.
 我会到处寻找这种东西
 
-308
+334
 00:20:01,479 --> 00:20:03,143
 Ultimately look at the docs.
 最后看看文档
 
-309
-00:20:03,143 --> 00:20:12,679
--Yeah -But redirect to page is a standard thing and again if you hover over it, it says right there Status302Found.
--是的 -但是重定向到 page 是一个标准化的事情，如果你在其上悬停，你可以看到 states302
+335
+00:20:03,600 --> 00:20:07,525
+But redirect to page is a standard thing and again if you hover over it
+但是重定向到 page 是一个标准化的事情，如果你在其上悬停
 
-310
+336
+00:20:07,525 --> 00:20:12,679
+it says right there Status302Found.
+你可以看到 states302
+
+337
 00:20:12,679 --> 00:20:18,759
 But if I said RedirectToPagePermanent.
 但是如果输入 RedirectToPagePermanent
 
-311
+338
 00:20:18,759 --> 00:20:19,975
 We would change it?
 我们会改变它吗?
 
-312
-00:20:19,975 --> 00:20:25,927
-Change it to a 301, which would tell the search engine,don't ever come back here and ask me about this again.
-将它改为301，对这个感兴趣的话去问搜索引擎，不要再回来这里问我这个问题了
+339
+00:20:19,975 --> 00:20:23,525
+Change it to a 301, which would tell the search engine
+将它改为301，对这个感兴趣的话去问搜索引擎
 
-313
-00:20:25,927 --> 00:20:27,904
+340
+00:20:23,775 --> 00:20:25,927
+don't ever come back here and ask me about this again.
+不要再回来这里问我这个问题了
+
+341
+00:20:26,250 --> 00:20:27,904
 Don't ever talk to me again go here.
 不说这个了，继续吧
 
-314
+342
 00:20:27,904 --> 00:20:29,050
 -All right -That's what that means
 -好的 -就是那个意思
 
-315
+343
 00:20:31,879 --> 00:20:35,137
 I'm paranoid so anyway,you never wanna do that when you're doing database work.
 无论什么情况下我都很较真，当你做数据库工作时，你永远不要那样做
 
-316
+344
 00:20:35,137 --> 00:20:37,249
 You always wanna be temporary, okay?
 短暂的跟你说一下，好吗？
 
-317
+345
 00:20:37,249 --> 00:20:41,729
 Okay. All right, and if you really,really, really wanna upset your coworkers.
 好吧，如果你真的真的真的想打扰你的同事
 
-318
+346
 00:20:41,729 --> 00:20:47,299
 You could move your curly braces.
 你可以移动你的大括号
 
-319
+347
 00:20:48,475 --> 00:20:50,025
 And do stuff like this.
 然后做这样的事情
 
-320
+348
 00:20:50,627 --> 00:20:57,027
 And if you really wanna be possibly buggy,you could even do stuff like this.
 如果你真想出错，你可以这么做
 
-321
+349
 00:20:59,900 --> 00:21:01,825
 -Where that's all one line -Yeah?
 -这样就变成一行了 -是吗?
 
-322
+350
 00:21:02,250 --> 00:21:05,411
 But you might have other stuff that you wanna do.
 但你可能还有其他的内容要添加
 
-323
+351
 00:21:05,411 --> 00:21:08,850
 Okay. Some people that really bothers them, some people it doesn't.
 是的。有些人真的很烦这种形式，他们不喜欢
 
-324
+352
 00:21:09,225 --> 00:21:10,979
 -For me- Does it bother you?
 -对我来说 -打扰你了吗？
 
-325
+353
 00:21:10,979 --> 00:21:13,731
 I kinda like it on one line if it's not that big of a deal.
 如果不是大量代码的话我喜欢它在一行
 
-326
-00:21:14,425 --> 00:21:20,003
-You know what I mean,but as soon as you have an extra line then you're gonna go and undo it and take it apart.
-你知道我的意思,一旦你遇到这种情况你就会这么去做
+354
+00:21:14,425 --> 00:21:17,983
+You know what I mean,but as soon as you have an extra line
+你知道我的意思,一旦遇到这种情况
 
-327
+355
+00:21:17,983 --> 00:21:20,003
+then you're gonna go and undo it and take it apart.
+你就要这么去做
+
+356
 00:21:20,003 --> 00:21:24,227
 It's stylistic,so it's not really a best practice for someone to know of right now.
 这是一种风格化，对于现在知道的人来说这不不是个好习惯
 
-328
-00:21:24,675 --> 00:21:28,579
+357
+00:21:24,675 --> 00:21:28,575
 No, for right now, I just think it's nice to have everything fit on one line like that.
 不，现在，我认为把代码都放在这样一条线上是很好的
 
-329
-00:21:28,579 --> 00:21:32,227
-But using the curly mustaches.
-但要用卷曲的胡子
+358
+00:21:28,575 --> 00:21:28,579
+No, for right now, I just think it's nice to have everything fit on one line like that.
+但要用括号做包围
 
-330
+359
+00:21:28,579 --> 00:21:32,223
+But using the curly mustaches.
+但要用括号做包围
+
+360
+00:21:32,223 --> 00:21:32,227
+But using the curly mustaches.
+
+361
 00:21:33,250 --> 00:21:37,325
 Is curly braces,they look like a mustache if you turn your head.
-是卷发，如果你转个头，他们看起来像胡子
+是大括号，如果你转一下，他们看起来像胡子
 
-331
+362
 00:21:37,325 --> 00:21:38,933
 That's a best practice.
 这是最好的做法
 
-332
+363
 00:21:38,933 --> 00:21:43,059
 It still gets us, that when people say curly braces, and I don't know what they're talking about
 当人们说花括号，我不知道他们在说什么的时候，我们还是用括号
 
-333
+364
 00:21:43,059 --> 00:21:43,750
 -What do you call them? -cuz I use brackets
 -你怎么称呼他们？ -因为我使用括号
 
-334
+365
 00:21:43,750 --> 00:21:44,902
 You call them brackets?
 你称它们为括号？
 
-335
+366
 00:21:44,902 --> 00:21:47,278
 So you have brackets, curly brackets, square brackets, so.
 所以你有括号，卷筒，方括号
 
-336
+367
 00:21:47,278 --> 00:21:49,600
 Scandalous,Okay
 不好听
 
-337
+368
 00:21:50,094 --> 00:21:52,206
 -You're fancy -That is pretty intense.
 -你很喜欢 -这是相当刺激的
 
-338
+369
 00:21:52,206 --> 00:21:56,814
 -Yeah -Okay, now I'm going to put a break point here.
 -Yeah -Okay, 现在我要在这里放一个断点
 
-339
+370
 00:21:56,814 --> 00:21:59,650
 -Okay. And we'll see if this works -All right.
 -Okay ，我们看看这是否行得通
 
-340
+371
 00:21:59,650 --> 00:22:01,422
 It might very well not work.
 这很可能不起作用
 
-341
+372
 00:22:03,275 --> 00:22:05,650
 -Fingers crossed and toes -No, it's probably not gonna work
 -双手合十祈祷 -不, 它可能不会工作
 
-342
+373
 00:22:05,650 --> 00:22:07,634
 Lower your expectations now.
 降低你的期望
 
-343
+374
 00:22:13,100 --> 00:22:14,457
 This is in create, right?
 这是 create ，对吧？
 
-344
+375
 00:22:14,457 --> 00:22:15,800
 -So I have to hit /create -Yep
 -所以路径补全 /create -是的
 
-345
+376
 00:22:23,043 --> 00:22:23,875
 Okay
 Okay
 
-346
+377
 00:22:31,000 --> 00:22:32,000
 Did we bind it?
 我们绑定好了吗？
 
-347
+378
 00:22:33,200 --> 00:22:35,715
 -Yeah see what's happening? -Nothing.
 -是的，看到发生什么事了吗？ -没有
 
-348
+379
 00:22:35,715 --> 00:22:38,339
 -No -And if we go and do a view source.
 -啥都没有 -如果我们去做一个视图源
 
-349
+380
 00:22:39,025 --> 00:22:41,795
 -And you go to? -Okay.
 -你要再怎么做? -Okay
 
-350
+381
 00:22:41,859 --> 00:22:44,419
 I just want to show the people the form first.
 我只是想先给大家看一下表格
 
-351
+382
 00:22:48,550 --> 00:22:51,779
 Some things showed up on the input that's kinda cool.
 一些东西出现在 input 上，这有点酷
 
-352
+383
 00:22:55,107 --> 00:22:57,219
 -That's kinda nice -That is
 -那很不错 -就是啊
 
-353
+384
 00:22:57,219 --> 00:22:58,755
 We didn't type that, right, remember?
 我们没有输入，对吗？记得吗？
 
-354
+385
 00:22:58,755 --> 00:23:03,363
 So we're getting stuff on the input that we did not expect,which is cool.
 所以我们在 input 中得到了我们没有预料到的东西，这很酷
 
-355
+386
 00:23:03,427 --> 00:23:05,667
 I bet there's some request verification.
 我打赌有一些请求验证
 
-356
+387
 00:23:05,667 --> 00:23:08,611
 Yeah, they put a request verification token to keep people from tampering with our stuff.
 是的，他们提出了一个请求验证令牌来防止人们篡改我们的东西
 
-357
+388
 00:23:09,325 --> 00:23:12,625
 There is your name=Customer.Name.
 这里是你的 name=Customer.Name.
 
-358
+389
 00:23:12,963 --> 00:23:15,587
 And it generated an id for us as well.
 它也产生了我们的身份证
 
-359
+390
 00:23:16,355 --> 00:23:18,083
 But you can see that nothing's happening.
 但你可以看到什么都没有发生
 
-360
+391
 00:23:20,195 --> 00:23:28,140
 On Customer, actually I wanna put a break point a little higher up, and then I'll explain to you what's going on.
 对 customer 来说，我想在上面一句打一个断点，然后我会向你解释发生了什么
 
-361
+392
 00:23:28,716 --> 00:23:31,020
 Let's see if we can even get to the post.
 让我们看看我们能不能通过 post
 
-362
+393
 00:23:33,836 --> 00:23:40,556
 Okay, do a debug session again /create.
 好，再试一次 /create
 
-363
+394
 00:23:47,575 --> 00:23:49,414
 So I would've expected.
 所以我早就料到了
 
-364
+395
 00:23:49,750 --> 00:23:54,606
 -To hit that break point -To hit that break point, so that's concerning.
 -击中那个断点 -击中那个断点，这就是问题所在
 
-365
-00:23:57,840 --> 00:24:13,072
-But I know that I need to say BindProperty on the customer which is to tell it I want this customer object filled out with the form information, right?
-但我知道我需要对 customer 赋予 绑定属性，告诉 customer 我希望这个 customer 对象填写表单信息，对吧？
+396
+00:23:57,840 --> 00:24:03,825
+But I know that I need to say BindProperty on the customer
+但我知道我需要对 customer 赋予绑定属性
 
-366
+397
+00:24:04,575 --> 00:24:13,072
+which is to tell it I want this customer object filled out with the form information, right?
+告诉 customer 我希望这个 customer 对象填写表单信息，对吧？
+
+398
 00:24:13,072 --> 00:24:15,376
 -Yeah. -And right now I don't have that.
 -Yeah. -现在我没有
 
-367
+399
 00:24:17,040 --> 00:24:22,352
 So let's take a look, and try this again.
 让我们来看一看，然后再试一次
 
-368
+400
 00:24:22,352 --> 00:24:32,175
 The customer is gonna get created and filled up with information bound to those form fields.
 customer 将被创建并填写与这些字段绑定的信息
 
-369
-00:24:35,250 --> 00:24:39,925
-If that doesn't work then I've forgotten something and we will go and have a little debugging which will be fun as well.
-如果这不起作用，那么我就忘记了什么，我会去做一个有趣的小调试
+401
+00:24:35,250 --> 00:24:37,550
+If that doesn't work then I've forgotten something
+如果这不起作用，那么我就忘记了什么
 
-370
-00:24:46,864 --> 00:24:51,728
-They say the definition of insanity is doing the same thing over and over and expecting a different result.
-人们说偏执狂就是一遍又一遍地做同样的事情，期望得到不同的结果
+402
+00:24:37,550 --> 00:24:39,925
+and we will go and have a little debugging which will be fun as well.
+我会去做一个有趣的小调试
 
-371
+403
+00:24:46,864 --> 00:24:50,225
+They say the definition of insanity is doing the same thing over and over
+人们说偏执狂就是一遍又一遍地做同样的事情
+
+404
+00:24:50,225 --> 00:24:51,728
+and expecting a different result.
+期望得到不同的结果
+
+405
 00:24:52,675 --> 00:24:53,900
 So let's take a look.
 让我们来看一看
 
-372
+406
 00:24:54,352 --> 00:24:56,272
 It's probably something obvious.
 这可能是显而易见的事情
 
-373
+407
 00:24:59,408 --> 00:25:03,625
 So we've got a form, we've got our input, we've got our method.
 所以我们有一张表格，我们有我们的输入，我们有我们的方法
 
-374
+408
 00:25:04,272 --> 00:25:06,704
 I said post, does it matter if it's all caps?
 我说，如果所有的帽子都有关系吗？
 
-375
+409
 00:25:07,856 --> 00:25:09,328
 That would be odd if it did.
 如果真是这样，那就太奇怪了
 
-376
+410
 00:25:14,384 --> 00:25:15,792
 So it doesn't matter.
 所以没关系
 
-377
+411
 00:25:17,392 --> 00:25:23,920
 The tag helper exists already in view imports,the form is there.
 标签助手已经存在于视图导入中，表单就在那里
 
-378
+412
 00:25:23,920 --> 00:25:28,272
 The only thing l didn't add is the validation summary, okay?
 我唯一没有添加的是验证摘要，好吗？
 
-379
+413
 00:25:37,103 --> 00:25:44,719
--Okay -All right, so l am putting in a long name, Fancy Pants, and nothing's happening.
--Okay -好吧，我填了一个长长的名字， Fancy Pants ，什么也没发生
+All right, so l am putting in a long name, Fancy Pants, and nothing's happening.
+好了，我填了一个长长的名字， Fancy Pants ，什么也没发生
 
-380
-00:25:44,783 --> 00:25:57,625
--No -No, and am realizing that I've got my form with my input for customer name,but I put my validation summary outside the form.
--不 -不，我意识到已经有数据输入表格，但是验证总结放在表格之外了
+414
+00:25:46,641 --> 00:25:52,341
+and am realizing that I've got my form with my input for customer name
+我意识到已经有数据输入表格
 
-381
-00:25:57,625 --> 00:26:02,553
--Okay -So I am gonna put it inside the form,cuz it's validating the form.
--好的 -所以我会把它放在表单里面，因为它用来验证表单
+415
+00:25:52,341 --> 00:25:57,625
+but I put my validation summary outside the form.
+但是验证总结放在表格之外了
 
-382
-00:26:02,975 --> 00:26:15,519
-And then I'm gonna hit Refresh, Fancy Pants, see and it says the Field Name, must be a string with maximum length of 10.
-然后刷新， Fancy Pants ，看到上面的提示：字段名称，必须是一个最大长度为10的字符串
+416
+00:25:58,225 --> 00:26:02,553
+So I am gonna put it inside the form,cuz it's validating the form.
+所以我会把它放在表单里面，因为它用来验证表单
 
-383
+417
+00:26:02,975 --> 00:26:12,322
+And then I'm gonna hit Refresh, Fancy Pants, see and it says the Field Name
+然后刷新， Fancy Pants ，看到上面的提示：字段名称
+
+418
+00:26:12,900 --> 00:26:15,519
+must be a string with maximum length of 10.
+必须是一个最大长度为10的字符串
+
+419
 00:26:15,519 --> 00:26:20,383
 I'm getting that validation for free, right?
 数据得到了验证，对吧？
 
-384
+420
 00:26:20,383 --> 00:26:22,111
 And where did that 10 come from?
 那10个字符的标准来自哪里？
 
-385
+421
 00:26:24,159 --> 00:26:27,871
 We set it in, yep, right there.
 我们把它放进去了，没错，就在那里
 
-386
+422
 00:26:27,935 --> 00:26:29,279
 We set it right there.
 我们把它放在那里
 
-387
+423
 00:26:29,279 --> 00:26:33,695
 So maybe we'll change that to like 25, or something like that.
 也许我们会把它变成25，或者其他的数值
 
-388
+424
 00:26:33,695 --> 00:26:38,495
 Some people have really long names like in my country who have names which are 50, so maybe 100?
 有些人在我的国家有很长的名字，50个，还可能有100个？
 
-389
+425
 00:26:38,495 --> 00:26:40,991
 I'll make 49 and then that one 50 person,they're gonna suffer.
 我要设置49，然后50个字符以上长度的名字就无法注册了
 
-390
+426
 00:26:41,600 --> 00:26:45,000
 -Man -inclusion. But the point is it's driven by
 -你怎么这么坏 -关键是条件是由这个限定的
 
-391
+427
 00:26:45,275 --> 00:26:46,623
 -By them -By them, okay?
 -通过他们 -通过他们, 好吗?
 
-392
-00:26:46,623 --> 00:26:52,959
-And then one other thing- So it'd be the same if someone did entered something that wasn't an email, right?
--还有一件事 -如果有人输入了不是电子邮件的东西，情况也会一样，对吧？
+428
+00:26:46,623 --> 00:26:48,825
+And then one other thing
+还有一件事
 
-393
-00:26:52,959 --> 00:27:01,056
-Yeah, it could be an email, it could be,you can put in validation information however you want,and you could even put in custom, regular expressions, or even write your own custom validators.
-是的，它可以验证是否是电子邮件地址，不管是什么都可以放入验证信息，你甚至可以使用自定义，正则表达式，甚至写自己的自定义验证器
+429
+00:26:48,825 --> 00:26:52,959
+So it'd be the same if someone did entered something that wasn't an email, right?
+如果有人输入了不是电子邮件的东西，情况也会一样，对吧？
 
-394
+430
+00:26:52,959 --> 00:26:56,787
+Yeah, it could be an email, it could be,you can put in validation information however you want,
+是的，它可以验证是否是电子邮件地址，不管是什么都可以放入验证信息
+
+431
+00:26:56,787 --> 00:27:01,056
+and you could even put in custom, regular expressions, or even write your own custom validators.
+你甚至可以使用自定义，正则表达式，甚至写自己的自定义验证器
+
+432
 00:27:01,056 --> 00:27:02,751
 So they could be as sophisticated as you want.
 所以他们的复杂性可以满足你的需要
 
-395
+433
 00:27:02,751 --> 00:27:09,215
 -Okay -You could also, I believe, say, I want a span.
 -好吧 -你也许会需要 span 标签
 
-396
+434
 00:27:09,279 --> 00:27:18,303
 And say asp-validation-for, and you could go and do a field by field validation, okay?
 填入 asp-validation-for ，你可以做一个逐字行的验证，对吧？
 
-397
-00:27:18,751 --> 00:27:26,303
-So here I'm saying this is my summary of all the different things, this is a specific validation for Customer Name.
-这是我对 Customer Name 具体验证方式的部分总结
+435
+00:27:18,751 --> 00:27:22,847
+So here I'm saying this is my summary of all the different things
+我总结了很多不同事务
 
-398
-00:27:27,375 --> 00:27:36,725
-Okay, let's see what that looks like And that might look a little different so if I come over here, come back over here and hit Refresh,oops I actually don't hit Refresh.
-好吧，让我们看看会怎么样，可能跟预想的有不同，回到这里点击刷新，哦~，其实不用刷新的
+436
+00:27:23,325 --> 00:27:26,303
+this is a specific validation for Customer Name.
+这是对 customer.name 的具体验证
 
-399
+437
+00:27:27,375 --> 00:27:31,668
+Okay, let's see what that looks like And that might look a little different so if I come over here
+好吧，让我们看看会怎么样，可能跟预想的有不同
+
+438
+00:27:31,668 --> 00:27:36,725
+come back over here and hit Refresh,oops I actually don't hit Refresh.
+回到这里点击刷新，哦~，其实不用刷新的
+
+439
 00:27:36,725 --> 00:27:38,700
 I need to run my app again cuz I stopped it.
 因为我把它停止了，我需要再重新启动它
 
-400
+440
 00:27:43,907 --> 00:27:45,059
 Run that again.
 再跑一遍
 
-401
+441
 00:27:48,003 --> 00:27:48,899
 Go to Create.
 去 create 页面
 
-402
+442
 00:27:50,051 --> 00:27:53,250
 I think we made it really long this time, right?
 我想这次视频我们做的真的很长，对吧？（您二位还知道呀，累死我啦~）
 
-403
+443
 00:27:54,723 --> 00:27:59,651
 And I tab away and it says it must be a string with a maximum length of 49.
 看到提示说必须是一个最大长度为49的字符串
 
-404
+444
 00:28:01,443 --> 00:28:07,011
 But I like the main validation stuff so we'll leave that like that, okay?
 但是我喜欢刚才的验证方式，所以我们改回去好吗？
 
-405
-00:28:07,971 --> 00:28:18,723
-Now, let's go back to our break points and run our debugger this time, and see if we can see the customer get found.
-现在，让我们回到断点处运行我们的程序，看看我们能否创建信息
+445
+00:28:07,971 --> 00:28:12,037
+Now, let's go back to our break points
+现在，让我们回到断点处
 
-406
-00:28:18,723 --> 00:28:19,491
-Okay.
-Okay
+446
+00:28:14,300 --> 00:28:18,723
+and run our debugger this time, and see if we can see the customer get found.
+运行我们的程序，看看我们能否创建信息
 
-407
+447
 00:28:20,850 --> 00:28:29,411
 We had looked in the F12 developer tools before,we could see what's happening on the wire.
 我们以前看过 F12 开发工具，我们可以看到那一行上发生了什么
 
-408
+448
 00:28:29,411 --> 00:28:33,315
 This is a good way to kinda just see what's happening as you do your posts.
 这是一个不错的看你执行 post 操作会发生什么事情的方式
 
-409
+449
 00:28:34,339 --> 00:28:38,800
 -So when you're looking, so you went to Developer Tools -Yeah. And the network?
 -你看的时候，使用了开发工具 -是啊，网络呢？
 
-410
+450
 00:28:38,800 --> 00:28:41,125
 I went to dot dot dot Developer Tools and we're under Network.
 我想在网络下用 dot 开发工具
 
-411
+451
 00:28:41,125 --> 00:28:48,900
 Okay. I will go and probably and clear it out, and then we'll put in Maria, okay.
 可以。我会把它弄清楚，输入 Maria可以吗？
 
-412
+452
 00:28:48,900 --> 00:28:53,411
 Yep, there we go, so if you hover over that.
 数据被发走了，所以如果你悬停在上面
 
-413
+453
 00:28:53,475 --> 00:29:02,051
 If we hover over Customer, see,because customer has a name.
 如果我们悬停在 Customer 上，看到了吗， customer 的名字
 
-414
-00:29:02,051 --> 00:29:08,963
-Yeah. Customer.name, and we name the field Customer.name, and we told it, hey,bind, we want you to participate.
-Customer.name ，我们命名字段 Customer.name ，我们告诉绑定参与进来
+454
+00:29:02,051 --> 00:29:06,373
+Yeah. Customer.name, and we name the field Customer.name, and we told it
+Customer.name ，我们命名字段 Customer.name，并且通知 bind
 
-415
+455
+00:29:06,725 --> 00:29:08,963
+hey,bind, we want you to participate.
+嘿， bind ，我们要你参加进来
+
+456
 00:29:10,075 --> 00:29:12,775
 You automatically showed up in there.
 你会自动出现在那里
 
-416
+457
 00:29:12,775 --> 00:29:15,043
 -Okay -And I can put a little pin there as well
 -Okay -我也可以把这部分钉出来
 
-417
-00:29:15,875 --> 00:29:23,171
-If I was gonna do lots of debugging sessions,then I can keep you there as a post to note and watch customer name change over time.
-如果我要做很多调试会话，则可以这么做来记录和观察客户名称的变化
+458
+00:29:15,875 --> 00:29:20,370
+If I was gonna do lots of debugging sessions,then I can keep you there as a post to note and watch 
+如果我要做很多调试会话，则可以这么做来记录和观察
 
-418
+459
+00:29:20,370 --> 00:29:23,171
+customer name change over time.
+customer.name 的变化
+
+460
 00:29:23,171 --> 00:29:28,400
 -That's a good one -We can go and see if the model state is valid, it is.
 -那是一个不错的选择 -我们可以去看看 Model 状态是否有效
 
-419
+461
 00:29:28,881 --> 00:29:33,790
 -What is the green button, that's a play like -Yeah, go to that point.
 -绿色按钮是干嘛的?这是继续运行 -是的，到那一点
 
-420
+462
 00:29:34,400 --> 00:29:37,959
 Play up to that point, and then stop.
 运行到那一点，然后停下来
 
-421
+463
 00:29:39,025 --> 00:29:42,574
 So here, I'm gonna go and Add that customer to the database.
 所以，我要把这个 Customer 添加到数据库中
 
-422
+464
 00:29:42,574 --> 00:29:45,646
 Save it to the database,which of course is an in-memory database.
 将其保存到数据库中，这当然是内存数据库
 
-423
+465
 00:29:45,646 --> 00:29:52,401
 And then we'll redirect Now we had put in slash, but I'm not sure that's gonna work.
 然后实现重定向，现在我们已经加入了斜杠，但我不确定这会起作用
 
-424
+466
 00:29:52,401 --> 00:29:55,473
 Should we should we see about their pages, just in case?
 我们应该看看他们的网页，以防万一吗？
 
-425
+467
 00:29:55,473 --> 00:29:56,325
 -Yeah, see? -Okay.
 -是的，看到了吗？ -Okay
 
-426
+468
 00:29:56,325 --> 00:30:00,677
 It's says no page / matches this value.
 它没有页面/匹配这个值
 
-427
+469
 00:30:00,677 --> 00:30:02,252
 So you have to give the specific name
 所以你必须给出具体的名字
 
-428
+470
 00:30:02,252 --> 00:30:08,775
 I need to say index, which was what our main page is here
 我需要 index ，在这里是我们的主页
 
-429
+471
 00:30:08,775 --> 00:30:08,798
 I need to say index, which was what our main page is here
 加上index
 
-430
+472
 00:30:08,798 --> 00:30:10,631
 So index, okay?
 加上index
 
-431
+473
 00:30:10,631 --> 00:30:10,654
 So index, okay?
 
-432
+474
 00:30:11,934 --> 00:30:13,662
 Now we'll confirm if that that works.
 现在我们确认这是否可行
 
-433
-00:30:13,726 --> 00:30:22,366
-I can hit F5 to go and debug, or I can hit Ctrl+F5,which I like to do, cuz it starts up a little faster,if I know that I'm not gonna do a debugging session.
-我可以点击 F5 去调试，或者我可以 CTRL+F5 ，我喜欢这样后者在不需要调试会话的情况下会启动得快一点
+475
+00:30:13,726 --> 00:30:17,456
+I can hit F5 to go and debug, or I can hit Ctrl+F5
+我可以点击 F5 去调试，或者我可以 CTRL+F5 
 
-434
+476
+00:30:17,456 --> 00:30:22,366
+which I like to do, cuz it starts up a little faster,if I know that I'm not gonna do a debugging session.
+我喜欢这样后者在不需要调试会话的情况下会启动得快一点
+
+477
 00:30:23,774 --> 00:30:25,118
 But this time you hit F5?
 但这次你使用了 F5 ？
 
-435
+478
 00:30:25,118 --> 00:30:27,102
 I hit Ctrl+F5 to go faster.
 我点击了 Ctrl +F5 以加快速度
 
-436
+479
 00:30:28,382 --> 00:30:33,566
 Okay, so it redirected me to index but of course I haven't done anything on index that's interesting yet.
 它将我重定向到 index ，我还没有创建有趣的 index 页面
 
-437
+480
 00:30:33,850 --> 00:30:35,294
 That will be the next part, right.
 这将是下一个部分的内容，对
 
-438
+481
 00:30:35,294 --> 00:30:38,700
 So you could also probably send a message saying
 你可以显示一个消息表示
 
-439
+482
 00:30:38,700 --> 00:30:40,670
 I can say customer updated,or whatever.
 我可以说客户更新，或者什么
 
-440
+483
 00:30:40,734 --> 00:30:43,486
 But let's rip out this whole section here.
 让我把整个部分穿起来
 
-441
+484
 00:30:43,486 --> 00:30:46,046
 -Okay, very nice -And put a list of contents.
 -Okay ，非常好 -并列一个目录
 
-442
+485
 00:30:46,046 --> 00:30:47,326
 -Okay -Is that cool?
 -Okay -酷吗？
 
-443
+486
 00:30:49,075 --> 00:30:50,782
 So where's our index?
 那么我的 index 在哪里呢？
 
-444
+487
 00:30:51,975 --> 00:30:54,558
 So this is all this carousel and all this stuff.
 这里面就是所有的现实的内容
 
-445
+488
 00:30:54,558 --> 00:30:55,902
 All the fancy bootstrap.
 所有的页面内容
 
-446
+489
 00:30:55,966 --> 00:30:58,910
 I'm gonna actually collect this.
 我要收集这个
 
-447
+490
 00:30:58,910 --> 00:31:00,446
 And then you comment it out?
 你要评价一下这些代码嘛？
 
-448
+491
 00:31:00,446 --> 00:31:04,030
 Actually, no, I'm just gonna be awesome and just like toss it.
 事实上，不会的，我会就像扔硬币一样棒棒
 
-449
-00:31:04,094 --> 00:31:12,800
-Wow. Yeah, but this is a way,if you wanna go hunting for the other side of the div,you can just fold these up, see that this matches this.
-是的，但这只是其中一种方式，如果你想去寻找另一个 div ，你可以把它们折叠起来来匹配
+492
+00:31:04,094 --> 00:31:08,746
+Wow. Yeah, but this is a way,if you wanna go hunting for the other side of the div
+是的，但这只是其中一种方式，如果你想去寻找另一个 div 
 
-450
+493
+00:31:09,125 --> 00:31:12,800
+you can just fold these up, see that this matches this.
+你可以把它们折叠起来来匹配
+
+494
 00:31:13,750 --> 00:31:13,769
 把它折叠起来，选择它并删掉
 
-451
+495
 00:31:13,769 --> 00:31:17,526
 Fold it up, select over it and toss it.
 把它折叠起来，选择它并删掉
 
-452
+496
 00:31:17,526 --> 00:31:17,545
 Fold it up, select over it and toss it.
 
-453
+497
 00:31:21,001 --> 00:31:22,537
 Cool, all right.
 酷，好吧
 
-454
+498
 00:31:22,537 --> 00:31:24,905
 So let's make our form.
 所以，让我们打造自己的风格
 
-455
+499
 00:31:28,361 --> 00:31:31,433
 And this will be on the index page, right?
 这将在 xindex 上显示，对吗？
 
-456
+500
 00:31:31,433 --> 00:31:37,425
 We'll have method="post", and this will be a table.
 是的。我们用到 method="post" ，和一个表格
 
-457
+501
 00:31:37,900 --> 00:31:39,564
 All right.
 好的
 
-458
+502
 00:31:40,450 --> 00:31:43,721
 It's okay to use tables, if it is a table of data.
 如果用来存放数据这个表是没问题的
 
-459
+503
 00:31:43,785 --> 00:31:47,650
 So many people complain about tables being a bad idea.
 很多人抱怨表格并不好用
 
-460
+504
 00:31:48,000 --> 00:31:51,825
 I think that's kind of funny,It's a table,It's okay to have a table.
 我觉得这很有趣，有一张表是好事
 
-461
+505
 00:31:52,125 --> 00:31:56,192
 So we'll have a head for our table, and we'll have our ID row.
 所以我们有一张表，我们会有 ID 行
 
-462
+506
 00:31:57,920 --> 00:32:08,096
 -Yep -Oops, and we'll have ID.
 -Yep -哎呀，我们会有 ID 的
 
-463
+507
 00:32:09,632 --> 00:32:14,675
 Then we'll have Name, we don't really need to show the database ID but for now let's show it.
 我们有名字，我们不需要显示数据库 id ，但这里我们还是显示它
 
-464
+508
 00:32:15,475 --> 00:32:19,950
 All right,So do you have to create a tbody, okay yeah,you're way ahead of me.
 所以你必须创建一个 tbody ，好吧，是的，你在我前面
 
-465
+509
 00:32:19,950 --> 00:32:22,048
 No, it's okay. Table body
 不，没关系 Table body
 
-466
+510
 00:32:22,048 --> 00:32:26,080
 But now I need a row for each.
 但现在我需要每一行
 
-467
+511
 00:32:27,040 --> 00:32:33,900
 So would you put it in the row, or would you,so I am presumed that you need to go for every contact within.
 所以你会把它放在队列中，我以为你需要去寻找里面的每一个联系人
 
-468
+512
 00:32:33,900 --> 00:32:34,555
 Exactly.
 确切地
 
-469
+513
 00:32:34,950 --> 00:32:40,352
 So I'm gonna have like a FOR SOMETHING HERE.
 所以我会有类似于 FOR SOMETHING HERE 的东西
 
-470
+514
 00:32:40,416 --> 00:32:53,675
 Then a couple of cells, table cells, and then maybe a, I don't know,like a link to edit and a delete button.
 然后是两个单元格，表格单元格，也许是A，我不知道，像一个编辑和删除按钮的链接
 
-471
+515
 00:32:53,675 --> 00:32:54,507
 Yeah.
 Yeah.
 
-472
+516
 00:32:54,800 --> 00:32:57,952
 -Okay, you see how I'm kind of sketching it out -You're sketching it out
 -好吧，你看我是怎么画出来的 -你正在描绘它
 
-473
+517
 00:32:57,952 --> 00:32:59,448
 -Okay. Wild -what's it called?
 -Okay. 原生的 -它叫什么？
 
-474
+518
 00:32:59,448 --> 00:33:02,925
 -Pseudocode or something? -Pseudocode,It's a little pseudocode here
 -Pseudocode 或者 something? -Pseudocode ,这里有点伪代码
 
-475
+519
 00:33:02,925 --> 00:33:04,050
 So now I wanna say at.
 所以现在我想用
 
-476
+520
 00:33:04,525 --> 00:33:08,100
 -Foreach yeah -And this is a snippet
 -遍历 -这是一个片段
 
-477
+521
 00:33:08,100 --> 00:33:20,096
 -Yeah -Tab, Tab, and then I'm gonna say for each,contact, oops, contact in, in what?
 -Yeah -Tab, Tab, 然后逐个把 contact 取出来，从哪里取出来？
 
-478
+522
 00:33:20,096 --> 00:33:21,056
 In Model.
 从 Model 中
 
-479
+523
 00:33:21,650 --> 00:33:23,232
 Now where is our customers
 我们的 customer 就在其中
 
-480
+524
 00:33:24,768 --> 00:33:31,104
 Okay, so remember before when we were doing our create model?
 好的，所以记得之前我们做的 CreateModel 吗？
 
-481
+525
 00:33:31,104 --> 00:33:34,752
 We needed to have the customers come from somewhere.
 customer 需要从某处获取
 
-482
+526
 00:33:34,752 --> 00:33:36,352
 Yeah. Now we're in a totally different page.
 是啊。现在完全不一样了
 
-483
+527
 00:33:36,725 --> 00:33:38,100
 Yeah, so we have to have the customers.
 是的，所以我们必须要有 Customer
 
-484
+528
 00:33:38,100 --> 00:33:39,125
 We have to have the customers, right?
 我们必须有客户，对吧？
 
-485
+529
 00:33:39,125 --> 00:33:41,075
 Yeah. So I'm gonna just take a break here.
 是啊。所以这部分要停一下
 
-486
+530
 00:33:42,112 --> 00:33:49,472
 And I'm gonna jump over to the index model cuz we can't really make our table till we have a little bit more, okay?
 转到 index model ，我们把这一部分做出来再去完成表格，好嘛？
 
-487
+531
 00:33:49,536 --> 00:33:59,520
 And I'm gonna break a couple of cardinal rules that I'm gonna copy paste a little code,because I'm gonna need this similar app database.
 我要做一些不同的事，复制粘贴这一小块代码，因为我需要这个类似的应用程序数据库
 
-488
+532
 00:33:59,520 --> 00:34:02,656
 This app db context which is gonna save myself a moment of time here.
 app db 上下文放在这个地方会节省我的时间
 
-489
+533
 00:34:04,064 --> 00:34:08,736
 So we've got our app context, right?
 所以我们有了 app 上下文，对吧？
 
-490
+534
 00:34:08,736 --> 00:34:10,976
 We're gonna have our index page model.
 我们将有 Index 页面的 Model
 
-491
+535
 00:34:11,360 --> 00:34:15,904
 Now before, when we create a customer,we create one customer.
 现在，当我们创建一个客户数据时，我们创建了一个 customer
 
-492
+536
 00:34:16,288 --> 00:34:24,416
 But here our model is different cuz we're gonna have a list of customers on this page, right?
 但在这里我们的 model 不同，因为我们会在这一页上有一个客户列表，对吧？
 
-493
+537
 00:34:24,416 --> 00:34:25,504
 So our model is different.
 所以这的 model 是不同的
 
-494
+538
 00:34:25,952 --> 00:34:31,136
 And we'll do a get and then a private set so that only we can set it.
 我们会做一个 get ，然后是一个 private 的 set ，这样我们才可以设置它
 
-495
+539
 00:34:31,712 --> 00:34:40,736
 -All right, and then, in the OnGet, We'll say OnGet -One line below, OnGetAsync, okay
 -好的,然后在 OnGet 我们把 OnGet -修改为 OnGetAsync, 好的
 
-496
+540
 00:34:42,450 --> 00:34:48,480
 -OnGetAsync, right? -We're gonna load up customers.
 -OnGetAsync, 是吗? -我们要去接收 customer
 
-497
+541
 00:34:48,480 --> 00:34:49,568
 Where do we get them from?
 我们从哪里得到它们？
 
-498
+542
 00:34:50,075 --> 00:34:51,168
 The database and this is right there.
 数据库就在这里
 
-499
+543
 00:34:52,650 --> 00:34:54,525
 We're getting them out of customers.
 我们把他们从 customer 提取出来
 
-500
+544
 00:34:54,525 --> 00:35:01,400
 And then there's this other little bit of thing that you can add on to make things a little bit faster.
 另外你这么做可以让这个过程进行得快一些
 
-501
+545
 00:35:01,400 --> 00:35:05,875
 You can say AsNoTracking.
 你可以用 AsNoTracking
 
-502
+546
 00:35:08,808 --> 00:35:11,496
 And I'll show you what that means in a second.
 我会告诉你这是啥意思
 
-503
+547
 00:35:11,496 --> 00:35:16,609
 And we're gonna turn these customers into a list of customers.
 我们会把这些 customer 转换成一个 list 列表
 
-504
+548
 00:35:16,609 --> 00:35:19,808
 So we're chaining things together,we're saying give me these customers.
 我们把过程连接在了一起，这样我们就获取了 customer
 
-505
+549
 00:35:20,192 --> 00:35:24,032
 And we're not gonna keep track of them changing.
 我们不会跟踪他们的变化
 
-506
+550
 00:35:24,032 --> 00:35:28,960
 You see it says disabling change tracking is useful for read-only scenarios.
 您可以看到禁用更改跟踪对于只读场景是有用的
 
-507
+551
 00:35:29,975 --> 00:35:37,400
 Change tracking is watching like keeping a track of all the different things you could change so that you know how to make a database update.
 感知到发生变化的事件，这样你就知道如何进行数据库更新
 
-508
+552
 00:35:37,925 --> 00:35:53,575
 So if I had a list of customers, and I wanted to watch all of them and change their names, that would give the database system entity framework that we're gonna learn about later all the information it needs about how to only change the bits that change, how to only change the database.
 如果我有一个客户列表，我想看所有人的信息并改变他们的名字，这将需要数据库系统实体框架，稍后会讲如何只更改数据库的部分信息
 
-509
+553
 00:35:53,575 --> 00:35:58,976
 But we're just getting a list, so we're gonna say, don't track these, just give me a list.
 所以我们只要一个 list 列表，不要附带那么多，只要给我一个 list 列表就行了
 
-510
+554
 00:35:58,976 --> 00:36:03,712
 So customers, no tracking, give me a list, so that's cool.
 Customer ，没有冗余的东西，只有一个 list 清单，很酷吧
 
-511
+555
 00:36:04,928 --> 00:36:07,424
 And I think we'll leave that like that for now.
 做到这里就可以了
 
-512
+556
 00:36:07,744 --> 00:36:09,984
 We'll go back over to index.
 我们回到 index
 
-513
+557
 00:36:11,968 --> 00:36:17,591
 And now that model, the page behind us has customers.
 现在 model 里有我们写好的 customer
 
-514
+558
 00:36:17,591 --> 00:36:20,840
 Look, customers shows up, see, which is nice.
 看， customer 出现了，棒棒哒
 
-515
+559
 00:36:21,400 --> 00:36:24,950
 So then I think I can put my tr in here.
 所以我想我可以把我的 tr 放在这里
 
-516
+560
 00:36:26,280 --> 00:36:30,120
 And I'm hoping, remember, I said contact, I should say customer.
 我希望，把这个 contact 改为 customer
 
-517
+561
 00:36:31,848 --> 00:36:43,944
 Customer singular, foreach customer,that means that the customer variable is now available to me customer.Id.
 遍历 customer ，这意味着 customer 变量现在可以给我数据了
 
-518
+562
 00:36:46,025 --> 00:36:50,152
 -Everything's connected -Yep, cool, let's try that.
 -一切都是相连的 -酷，让我们试试看.
 
-519
+563
 00:36:50,152 --> 00:36:53,550
 Okay. And then we'll do the rest,cuz I don't know if this is gonna work yet.
 先做完剩下的事情，因为我不知道这是否可行
 
-520
+564
 00:36:55,550 --> 00:36:59,496
 Now I'm using an in-memory database, so every time I run this, it's gonna go away.
 现在我使用的是内存数据库，所以每次运行这个数据库，它都会消失
 
-521
+565
 00:36:59,496 --> 00:37:01,350
 So it's just a throw away database.
 这是一个一次性数据库
 
-522
+566
 00:37:01,350 --> 00:37:01,352
 So it's just a throw away database.
 -我需要再完善些 -以后需要做测试，并且保留下数据来
 
-523
+567
 00:37:01,352 --> 00:37:10,438
 -I need to do better -I need to maybe make tests later, and I survived the journey.
 -我需要再完善些 -以后需要做测试，并且保留下数据来
 
-524
+568
 00:37:10,438 --> 00:37:10,440
 -I need to do better -I need to maybe make tests later, and I survived the journey.
 
-525
+569
 00:37:10,504 --> 00:37:16,000
 -You did -Let's see, but as soon as I shut you down, it's gonna be gone.
 -你需要这么做 -让我看看，但是一旦我关闭，数据就没有了
 
-526
+570
 00:37:16,000 --> 00:37:19,784
 -So if you refresh the page -You're here,you're still there, right?
 -如果你刷新页面 -数据还在这里，对吧？
 
-527
+571
 00:37:19,784 --> 00:37:22,920
 You're there until I close it, until I close this browser.
 数据会一直存在，直到我关闭这个浏览器
 
-528
+572
 00:37:23,375 --> 00:37:27,464
 Or not if I close the browser, pardon me,until I stop the web server.
 我说错了，是直到我停止Web服务器
 
-529
+573
 00:37:27,464 --> 00:37:33,032
 -So, okay -Yeah, thanks, cool, so now we've got create.
 -好了 -嗯嗯，现在我们有了创建功能
 
-530
+574
 00:37:33,825 --> 00:37:36,680
 We should probably put a button down there at the bottom somewhere.
 我们应该把按钮放在下面的某个地方
 
-531
+575
 00:37:36,680 --> 00:37:49,224
 We've got some validation, we've got our database,looking at our friends And this is doing a thing called Post Redirect Get.
 我们实现了验证，创建了数据库数据库，注意这儿，这是做一个叫 post 重定向的东西
 
-532
+576
 00:37:49,875 --> 00:37:54,792
 So I'm here, I hit a post, we do a redirect, and then we do a get, and then we would get this stuff here.
 我在这里提交了一个 post ，完成了一个重定向，通过 get 创建了这个信息
 
-533
+577
 00:37:55,400 --> 00:37:57,800
 So this is a PRG, Post Redirect Get.
 这是 PRG ，Post Redirect Get
 
-534
+578
 00:37:57,800 --> 00:38:00,424
 There's lots of articles on the Internet about that.
 网上有很多关于这方面的文章
 
-535
+579
 00:38:00,825 --> 00:38:05,608
 Now let's make a link to theoretically go and edit these things.
 现在让我们编辑这个实现跳转的超链接功能
 
-536
+580
 00:38:05,608 --> 00:38:08,050
 -Okay -And then we'll have a button for Delete.
 -Okay -然后我们有一个删除按钮
 
-537
+581
 00:38:08,050 --> 00:38:10,994
 -These things don't exist on the backend yet,but we can -So yeah,so we don't have an edit page yet.
 -这些东西在后端还不存在，但是我们可以 -是的，所以我们还没有编辑页面
 
-538
+582
 00:38:10,994 --> 00:38:13,089
 -We don't -Okay. We can make a link
 -我们没有 -我们可以建立联系
 
-539
+583
 00:38:13,089 --> 00:38:14,753
 Now I could go and put in a link, href.
 现在我可以做了，放一个超链接，HREF
 
-540
+584
 00:38:14,753 --> 00:38:16,825
 You've done this before a million times.
 你已经做过一百万次了
 
-541
+585
 00:38:17,175 --> 00:38:21,857
 And say /edit and then put in strings and stuff.
 键入 /edit ，然后填入字符串或者内容
 
-542
+586
 00:38:21,857 --> 00:38:24,289
 But remember we talked about how great tag helpers are.
 但是记住，我们说过好用的标签
 
-543
+587
 00:38:24,289 --> 00:38:34,721
 -Yeah -What if we went and said asp-page and then we could go and say there's an edit page and then it would figure out what the URL would look like.
 -Yeah -键入 asp-page ，我们就有了一个编辑页面，然后标签就知道URL是什么样子
 
-544
+588
 00:38:34,721 --> 00:38:41,450
 -Okay -All right, and then it could even express the route a certain way.
 -Okay -它甚至可以以某种方式表达路径
 
-545
+589
 00:38:42,875 --> 00:38:44,775
 And we'll talk about routes in a minute.
 我们一会谈论路径
 
-546
+590
 00:38:46,325 --> 00:38:48,450
 I think it's route-id.
 我认为这是路由器 ID
 
-547
+591
 00:38:51,500 --> 00:38:53,729
 And I think we called it customer.Id.
 命名为 customer.Id
 
-548
+592
 00:38:53,729 --> 00:39:04,000
 So it's gonna take that customer's id so we want to basically make a page that looks like /edit/2, /edit/3, right?
 所以它将获取 customer 的 ID ，我们想制作一个页面，看起来像 /edit/2, /edit/3 ，好嘛？
 
-549
+593
 00:39:05,175 --> 00:39:11,075
 And that's the route id that's gonna get added onto that.
 这就是那个要添加的路径 ID
 
-550
+594
 00:39:11,075 --> 00:39:13,761
 Okay, so the next thing you have is a button?
 好吧，那么接下来你有一个按钮？
 
-551
+595
 00:39:13,761 --> 00:39:22,900
 Yeah, we'll do a button type="submit" and this is going to be handled by the page.
 是的，我们会写一个 button type="submit" ，这将由页面来处理
 
-552
+596
 00:39:22,900 --> 00:39:25,409
 -Okay -Button's gonna be a little different.
 -Okay -按钮会有点不一样的地方
 
-553
+597
 00:39:25,409 --> 00:39:31,937
 The reason that we're doing a button in an href is so you can see the difference between a link,and how links behave, and buttons.
 我们在 href 中做一个按钮是因为，你可以看到一个链接和按钮之间的区别
 
-554
+598
 00:39:31,937 --> 00:39:34,177
 A link is gonna navigate somewhere.
 一个链接将导航到某处
 
-555
+599
 00:39:34,177 --> 00:39:37,800
 -Yep -And a button's gonna cause a post, right?
 -Yep -一个按钮会引起 post 请求 ，好吧？
 
-556
+600
 00:39:38,825 --> 00:39:42,375
 So this will go and be handled by the delete handler.
 这将由删除处理程序处理
 
-557
+601
 00:39:42,950 --> 00:39:47,800
 But we also need that route information, we need that id because we're gonna delete a particular customer.
 但是我们也需要那个路径信息，我们需要那个 ID 来删除一个特定的 customer
 
-558
+602
 00:39:47,800 --> 00:39:51,009
 -So you need the content ID, yep -Customer ID, exactly
 -所以你需要 content id ，是吧 -确切地说是 customer id
 
-559
+603
 00:39:52,275 --> 00:39:54,913
 All right, and then none of this is hooked up.
 好吧，然后这些都没有连接起来
 
-560
+604
 00:39:54,977 --> 00:40:01,275
 So you mentioned something, voice of the people at home,about the button being a post.
 你刚才提到了 home 下 customer 的内容，以及关于发起 post 请求的按钮
 
-561
+605
 00:40:01,700 --> 00:40:11,550
 Yes, it is going to post back and then we're gonna need to handle that behavior differently than the Create page.
 是的，它将返回 post 信息，然后我们需要处理许多创建页面的行为
 
-562
+606
 00:40:11,550 --> 00:40:13,250
 So then I'll just put a link at the bottom there for Create.
 我会在底部放置一个链接来创建
 
-563
+607
 00:40:13,975 --> 00:40:15,125
 So I'm just gonna hit Refresh.
 我只需要刷新一下
 
-564
+608
 00:40:15,875 --> 00:40:18,725
 -So let's see if the Create -Here's our Create.
 -我们看看是不是 create -这是我们的 create
 
-565
+609
 00:40:21,450 --> 00:40:22,689
 That still works.
 这仍然有效
 
-566
+610
 00:40:22,689 --> 00:40:25,825
 -Okay -I hover over that.
 -Okay -我在这点一下
 
-567
+611
 00:40:26,125 --> 00:40:28,625
 Nothing's happening because we don't have an edit.
 没有任何事情发生，因为我们没有编辑
 
-568
+612
 00:40:29,600 --> 00:40:33,505
 We never made an edit page, and I hit Delete You should.
 我们从来没有编辑页面，我点击删除应该···
 
-569
+613
 00:40:33,505 --> 00:40:38,400
 It's gonna crash cuz it's like I don't know what you're doing, right?
 它崩溃了，因为程序不知道我们要干什么，对吧？
 
-570
+614
 00:40:38,400 --> 00:40:43,125
 It's just in the middle of something and it's confused cuz that's not what I asked it to do.
 程序在某个进行的过程中崩掉了，这可不是我要它做的
 
-571
+615
 00:40:44,125 --> 00:40:46,225
 Okay, so we've got some fixing up to do.
 好的，所以我们有一些修复工作要做
 
-572
+616
 00:40:46,225 --> 00:40:51,460
 Let's try Delete first.All right, so let's go over here.
 让我们先试着删除，来吧，让我们来这里
 
-573
+617
 00:40:51,460 --> 00:40:58,450
 We made an OnGet -Let's go and make an OnDelete.
 我们制作了一个 OnGET ，再去做一个 OnDelete
 
-574
+618
 00:41:01,375 --> 00:41:08,932
 Same thing as before with an IActionResult, except now we're gonna say on and this is kinda weird, OnPostDelete.
 和以前一样，除了现在我们要用 OnPostDelete 了
 
-575
+619
 00:41:09,764 --> 00:41:20,964
 The verb delete is a real HTTP verb,but it's not really often used from a browser's perspective.
 动词删除是一个真正的 HTTP 动词，但它实际上并不经常在浏览器使用
 
-576
+620
 00:41:20,964 --> 00:41:25,700
 It's usually done as it's piggybacked on post.
 常用的是 post
 
-577
+621
 00:41:25,700 --> 00:41:29,732
 We use post to pass in basically all kinds of information.
 我们大多利用 post 传递各种信息
 
-578
+622
 00:41:30,400 --> 00:41:34,980
 Whenever we hit Submit on a form, we're posting that form.
 每当我们在一个表单上点击提交时，我们就发布了这个表单
 
-579
+623
 00:41:34,980 --> 00:41:38,884
 We're adding in, I think we said, page-handler delete.
 我们添加一个页面处理删除
 
-580
+624
 00:41:39,140 --> 00:41:43,492
 So that is gonna be here, OnPostDelete.
 那就在这里，OnPostDelete
 
-581
+625
 00:41:44,388 --> 00:41:53,092
 And now we're going to say,a customer, customer singular.
 现在开始敲代码，customer 没有 "s"
 
-582
+626
 00:41:53,092 --> 00:41:56,484
 And we'll go and get that customer out of the database.
 我们去把 customer 从数据库中拿出来
 
-583
+627
 00:41:57,550 --> 00:42:04,600
 Before we delete it we gotta go and get it to make sure it's there,I say find, by that ID that got passed in.
 在删除之前，我们必须确保它存在，我们要通过ID来找到它
 
-584
+628
 00:42:05,709 --> 00:42:10,314
 So now we gotta check to see if that customer's null or not, cuz if it's null, then we don't even bother.
 我们必须检查这个客户是否为空，因为如果它不存在，那么我们就不用删除了
 
-585
+629
 00:42:10,634 --> 00:42:12,746
 If it's not null, do something.
 如果它不是空的，我们要这么做
 
-586
+630
 00:42:14,410 --> 00:42:17,354
 And then we can go and Redirect.
 这里可以重定向
 
-587
+631
 00:42:17,674 --> 00:42:18,442
 To a page.
 到另一个页面
 
-588
+632
 00:42:18,634 --> 00:42:20,362
 To a page, exactly, thank you.
 转到一个页面，是的
 
-589
+633
 00:42:20,490 --> 00:42:24,138
 So here, we're gonna remove it from the database.
 那么，我们将从数据库中删除它
 
-590
+634
 00:42:24,400 --> 00:42:32,983
 And we are doing it in a memory database but it doesn't matter because if it was a regular database it would remove it for us, as well, that's what's nice about any framework.
 现在我们在内存数据库中这么做没问题，就算它是一个常规的数据库也会移除相应数据，这就是 any framework 的好处
 
-591
+635
 00:42:33,495 --> 00:42:34,775
 I'm not a very good typer.
 打字不顺手
 
-592
+636
 00:42:35,927 --> 00:42:43,543
 So we remove the customer and then we go and we save those changes.
 接着，我们删除了 customer 信息并保存这些变化
 
-593
+637
 00:42:46,935 --> 00:42:51,159
 -Okay -And then I would expect it would then redirect to the page,the same page.
 -Okay -然后我觉得它会重定向到原来的页面
 
-594
+638
 00:42:51,725 --> 00:42:56,598
 And I would expect that it would disappear from that list because it's going to go back to the database and build the list again.
 我希望它会从那个列表中消失，因为它将回到数据库并重新构建列表
 
-595
+639
 00:42:57,150 --> 00:42:59,646
 -Does that make sense? -It does, it sure does.
 -这有道理吗？ -是的，的确如此
 
-596
+640
 00:42:59,646 --> 00:43:01,182
 I think that's what it will do.
 我想这就是它所要做的
 
-597
+641
 00:43:03,038 --> 00:43:05,022
 So we cross our fingers and hope that it works.
 所以我们等一会，希望它能起作用
 
-598
+642
 00:43:07,646 --> 00:43:08,926
 And if it doesn't, we learn.
 手动跳转
 
-599
+643
 00:43:10,334 --> 00:43:15,291
 -Okay -That's not a good name.
 -Okay -把这个删掉
 
-600
+644
 00:43:20,600 --> 00:43:22,050
 All right, we're deleting you.
 好吧，这个也删掉
 
-601
+645
 00:43:22,050 --> 00:43:24,059
 Okay, I'm fine with that.
 好吧，我被删掉了
 
-602
+646
 00:43:24,400 --> 00:43:27,536
 -It does work the way you want -Yeah, it does work
 -它可以实现你的要求 -是的，它确实有效
 
-603
+647
 00:43:29,525 --> 00:43:32,700
 -Fancy pants -But now if we edit it.
 -还挺不错 -但现在如果我们编辑它
 
-604
+648
 00:43:32,700 --> 00:43:35,125
 Doesn't work because Edit doesn't exist.
 不起作用，因为编辑不存在
 
-605
+649
 00:43:35,125 --> 00:43:36,475
 And it is not there.
 它不在那里
 
-606
+650
 00:43:36,475 --> 00:43:38,025
 All right, so let's go and do edit, then.
 好吧，那么我们去编辑一下吧
 
-607
+651
 00:43:39,150 --> 00:43:43,196
 So we'll do what you said before, add razor page.
 现在我们开始做之前提到的，添加 Razor Page
 
-608
+652
 00:43:44,860 --> 00:43:49,800
 Call it Edit, now I know you like routing.
 命名为 Edit，现在我知道你喜欢路由
 
-609
+653
 00:43:49,800 --> 00:43:52,604
 Routing is one of your favorite things about ASP.NET.
 路由是 ASP.NET 最擅长的事情之一
 
-610
+654
 00:43:52,604 --> 00:44:00,284
 So this Edit page is gonna be the first time that we've ever had a page that took in information.
 所以这个编辑页面将是我们第一个信息页面
 
-611
+655
 00:44:00,284 --> 00:44:03,548
 -Okay -Where does that go to pass in the ID?
 -Okay -好吧，在哪里通过 id 呢？
 
-612
+656
 00:44:04,124 --> 00:44:09,819
 -So up there at page? -Right, quote quotes.
 -在页面的上面吗？ -是呀，加上引号
 
-613
+657
 00:44:09,819 --> 00:44:11,932
 Yeah, and curly brackets.
 是的，还有卷曲的括号
 
-614
+658
 00:44:12,450 --> 00:44:15,575
 -Yeah -ID.
 -是的 -ID
 
-615
+659
 00:44:15,575 --> 00:44:16,919
 I mean int.
 我的意思是 INT
 
-616
+660
 00:44:16,919 --> 00:44:19,378
 Okay so the ID is of type int.
 好的，ID 是 int 型的
 
-617
+661
 00:44:19,378 --> 00:44:21,042
 That's the type hint.
 这就是类型提示
 
-618
+662
 00:44:21,675 --> 00:44:25,030
 So this is saying edit slash 3.
 这里放 edit/3
 
-619
+663
 00:44:25,030 --> 00:44:27,782
 So you'd see it in the browser,that's what it would look like.
 所以你会在浏览器中看到它，这就是它的样子
 
-620
+664
 00:44:27,782 --> 00:44:28,425
 Okay.
 可以
 
-621
+665
 00:44:28,742 --> 00:44:36,125
 We have our Edit model, and then here, at the top, we might have Edit, we could actually add a little bit of text here.
 我们有我们的 Edit model ，然后在顶部这里可能进行 model ，我们实际上可以在这里添加一点文本
 
-622
+666
 00:44:36,125 --> 00:44:37,341
 We could say Edit Customer.
 我们可以输入 Edit Customer
 
-623
+667
 00:44:38,493 --> 00:44:41,373
 And then we could say -Dash Model?
 -然后我们可以输入 -Model？
 
-624
+668
 00:44:41,373 --> 00:44:46,045
 @Model.Customer, but again, we're not getting IntelliSense,why not?
 @Model.Customer, 但是，我们没有得到智能感知，为什么不呢？
 
-625
+669
 00:44:46,045 --> 00:44:49,693
 Because the page model is different for each page.
 因为页面 Model 对于每个页面都是不同的
 
-626
+670
 00:44:49,693 --> 00:44:54,621
 -Exactly -So let's go look at the one for Edit
 -确实 -让我们看看 Edit 的那个
 
-627
+671
 00:45:00,125 --> 00:45:01,789
 So I'm gonna.
 所以我要去
 
-628
+672
 00:45:01,789 --> 00:45:02,855
 -You're gonna take, yeah -Borrow again
 -你要做 -再拷贝
 
-629
+673
 00:45:03,648 --> 00:45:13,440
 Certainly I could make another class, a base class, that would pull that AppDBContext in so I wouldn't have to keep copy-pasting that because at some point the copy-pasting becomes tedious.
 当然，我可以做另一个基类，它将拉取 AppDBContext ，那样就不用复制粘贴了，因为有时一直复制粘贴太乏味
 
-630
+674
 00:45:15,875 --> 00:45:18,688
 And you want to keep it dry, right.
 你想保持创造性，对吧？
 
-631
+675
 00:45:18,688 --> 00:45:20,224
 Don't repeat yourself.
 不要重复你自己
 
-632
+676
 00:45:21,632 --> 00:45:24,125
 You probably want that to survive the journey right?
 你希望他们能坚持的学习下去对吧？
 
-633
+677
 00:45:24,425 --> 00:45:24,925
 Yeah.
 是啊
 
-634
+678
 00:45:24,925 --> 00:45:25,404
 Okay.
 Okay.
 
-635
+679
 00:45:26,075 --> 00:45:31,168
 So we want to survive the journey,with bindproperty, okay.
 我希望大家能坚持学完这个教程
 
-636
+680
 00:45:32,875 --> 00:45:38,675
 So I go back over to our page, and let's see if that worked.
 所以我回到我们的页面，让我们看看这是否有效
 
-637
+681
 00:45:39,552 --> 00:45:40,832
 And it did, that's nice.
 的确如此，那很好
 
-638
+682
 00:45:40,832 --> 00:45:41,856
 Yes, it did.
 是的，的确如此
 
-639
+683
 00:45:41,856 --> 00:45:51,200
 So now we can say, we are Model.Customer.Id, so we can say, Edit Customer for, or whatever.
 现在我们输入 Model.Customer.ID ，现在我们可以编辑 customer 或者其它的事
 
-640
+684
 00:45:52,925 --> 00:46:00,425
 And then form, and then a form post, and there's some lots of cool ways to make your forms easier to write.
 再完成一个表单，还有一些很酷的写表单的方法
 
-641
+685
 00:46:00,425 --> 00:46:06,179
 If you find writing forms tedious, there's a really great way to write forms that is called Emmet.
 如果你觉得书写形式冗长乏味，有一种叫做 Emmet 的表单可以被很好的编写
 
-642
+686
 00:46:07,325 --> 00:46:09,123
 -What is Emmet? -You've never heard of Emmet?
 -Emmet 是什么？ -你从没听说过 Emmet 吗？
 
-643
+687
 00:46:09,450 --> 00:46:14,122
 E-m-m-e-t, it's like the name, the person's name Emmet.
 E-m-m-e-t , 就像名字，人的名字 Emmet
 
-644
+688
 00:46:14,122 --> 00:46:20,600
 Okay. And it's a way of describing what you want like a feel like trt.
 Okay. 这是一种描述你想要的感觉的方式
 
-645
+689
 00:46:21,225 --> 00:46:30,091
 TR TD times three and then you'd hit tab and then it would go and expand it, it's a way to write tags for HTML really really fast.
 td.tr*3 ，然后点击标签，它就会自动去拓展，这是一个非常快的写 HTML 标签的方法
 
-646
+690
 00:46:30,091 --> 00:46:37,046
 -Is it built in? -It's built into Visual Studio code but it is not built in to Visual Studio yet.
 -它是内置的吗？ -它内置到 Visual Studio code 中，但尚未在 Visual Studio 中内置
 
-647
+691
 00:46:37,174 --> 00:46:41,270
 -Okay -Notice how I got this here, soon as I said ASP net four.
 -Okay -注意我是如何得到这个的，很快我就说了ASP NET four
 
-648
+692
 00:46:41,270 --> 00:46:44,662
 Yeah, it gave you Input four, rather.
 是的，它给了你输入四，而不是
 
-649
+693
 00:46:44,662 --> 00:46:46,774
 It got that, this is really nice, right?
 这真是太好了，对吧？
 
-650
+694
 00:46:46,838 --> 00:46:52,342
 So I can go and fill out these forms really quickly and I don't have to worry about that's gonna happen on the server side.
 所以我可以很快地填写这些表格，不必担心会发生在服务器端
 
-651
+695
 00:46:52,918 --> 00:46:58,294
 Okay, so then we'll say a label, and this is a label also for.
 好的，那我们就输入一个标签，这也是一个标签
 
-652
+696
 00:46:58,294 --> 00:46:59,574
 The customer.
 customer
 
-653
+697
 00:46:59,574 --> 00:47:10,518
 Customer's name which is nice and then we'll say, give you another div, And then within there we'll have an input.
 Customer's name ，再添加 div，在里面我们会有一个输入
 
-654
+698
 00:47:12,700 --> 00:47:15,638
 For Customer.Name.
 Customer.Name
 
-655
+699
 00:47:18,134 --> 00:47:19,650
 And then you can do the validation again, right?
 然后你再做验证，对吧？
 
-656
+700
 00:47:19,650 --> 00:47:21,625
 Yeah I'll do some, but I can do validation two different ways.
 是的，我会做一些，但是我可以用两种不同的方式来验证
 
-657
+701
 00:47:21,625 --> 00:47:27,736
 I could do the validation summary or we can do it like this, which is nice.
 我可以做验证总结，或者我们可以这样做，我有个想法
 
-658
+702
 00:47:28,525 --> 00:47:30,166
 And what are the key differences?
 区别的关键是什么？
 
-659
+703
 00:47:30,166 --> 00:47:32,854
 This one is, you have total control of what it looks like.
 这是，你完全控制它的样子
 
-660
+704
 00:47:32,854 --> 00:47:34,710
 You can put it anywhere up or down.
 你可以把它放在任何地方
 
-661
+705
 00:47:34,710 --> 00:47:37,846
 And this is just a bulleted list that's a roll up.
 而这只是一个清单，需要选定范围
 
-662
+706
 00:47:37,846 --> 00:47:42,250
 Of all of the stuff.Totally up to you how you wanna do things.
 选定的范围完全取决于你的选择
 
-663
+707
 00:47:44,182 --> 00:47:46,934
 This is all inside of a form, right?
 内部所有的表单，对吧？
 
-664
+708
 00:47:46,934 --> 00:47:48,150
 So you want to save it, right?
 所以你想保存它，对吧？
 
-665
+709
 00:47:48,150 --> 00:47:51,775
 Yeah, we're going to need a save button.
 是的，我们需要一个保存按钮
 
-666
+710
 00:47:53,526 --> 00:47:58,150
 So we'll put our button at the bottom,and it's just a regular old submit, nothing fancy about it.
 所以我们把按钮放在底部，它只是一个普通的提交按钮，没有什么新奇之处
 
-667
+711
 00:47:59,775 --> 00:48:02,475
 We're going to want to load this up and save it.
 我们要把它装入并保存
 
-668
+712
 00:48:02,875 --> 00:48:04,475
 And have validation.
 并进行验证
 
-669
+713
 00:48:04,475 --> 00:48:14,225
 We've done all that very nicely like this, and we just wanna confirm like you said on the backend that we do the right thing.
 这了非常好写，我们只想确认在后端写的代码是否正确
 
-670
+714
 00:48:14,725 --> 00:48:17,270
 So on the get, actually let's do this.
 所以在 GET 上，实际上让我们这样做
 
-671
+715
 00:48:17,270 --> 00:48:20,598
 Let's run it first and then we'll try it again because right now we haven't hooked anything up.
 让我们先运行它，然后我们再试试，因为现在我们还没有关联任何数据
 
-672
+716
 00:48:20,598 --> 00:48:23,050
 We haven't got it from the database we haven't updated from the database.
 我们没有从数据库中得到数据，也没有从数据库中更新
 
-673
+717
 00:48:23,375 --> 00:48:25,925
 But I would expect the links to at least work.
 但我希望这些链接至少能起作用
 
-674
+718
 00:48:27,150 --> 00:48:29,366
 Cuz now there is an Edit page.
 因为现在有一个编辑页面
 
-675
+719
 00:48:31,670 --> 00:48:33,846
 If there's not, then maybe I forgot something.
 如果没有，那么也许我忘了什么
 
-676
+720
 00:48:34,294 --> 00:48:36,342
 Okay, look in the corner there.
 好的，看看那边的角落
 
-677
+721
 00:48:36,470 --> 00:48:39,798
 -Okay -It's kind of hard for me to do that.
 -Okay -这对我来说有点难
 
-678
+722
 00:48:39,798 --> 00:48:45,558
 I can take a screenshot but I can't really take a screenshot.
 我可以截屏，但我真的不能截图
 
-679
+723
 00:48:45,622 --> 00:48:48,502
 -Let's do this -We'll take a snipping tool.
 -让我们这样做 -我们将采取剪断工具
 
-680
+724
 00:48:49,526 --> 00:48:51,894
 Give it a delay of two seconds.
 耽搁两秒钟
 
-681
+725
 00:48:52,982 --> 00:48:55,478
 You're that fast? I am.
 你那么快？我是
 
-682
+726
 00:48:59,638 --> 00:49:07,382
 So Edit/1 right,so the route got built by the fact that it was in the Edit.
 Edit/1 出现了，所以这条路线是在 Edit 中建立起来的。
 
-683
+727
 00:49:07,382 --> 00:49:09,878
 And then you had added that ID at the top there.
 然后你在上面添加了 ID
 
-684
+728
 00:49:09,878 --> 00:49:17,174
 So this is nice because we didn't have to hard code what a link looked like.
 所以这很好，那样我们就不需要硬编码一个链接的样子。
 
-685
+729
 00:49:17,174 --> 00:49:18,326
 That's really important.
 这很重要
 
-686
+730
 00:49:18,326 --> 00:49:22,358
 We said, make me a link that takes me here.
 这正是能让我跳转的链接
 
-687
+731
 00:49:23,100 --> 00:49:26,522
 We didn't say make me a link that looks like this.
 我们并没有说让我成为这样的一个链接
 
-688
+732
 00:49:27,670 --> 00:49:31,638
 And if we changed our things later, then it would change for us, which is nice.
 如果我们以后有变动，那么它也会有改变，这很好
 
-689
+733
 00:49:32,950 --> 00:49:37,142
 So here,if I click on that, I assume it'll just do, yeah, nothing.
 在这里，如果我点击它，我想它会···是的，什么也没有
 
-690
+734
 00:49:37,850 --> 00:49:39,700
 So it's like, , I don't have anything there.
 就这样，什么都没有
 
-691
+735
 00:49:40,325 --> 00:49:47,050
 It doesn't know about customer yet because we have the bind,but we never loaded the customers.
 它不认识 customer ，虽然有绑定，但我们从来没有加载 customer
 
-692
+736
 00:49:48,275 --> 00:49:55,625
 So let's go and do our stuff again, we're gonna have our action result and here we're gonna say OnGet, of course
 让我们继续做吧，这会返回执行的结果，这个方法命名为 OnGet
 
-693
+737
 00:49:56,850 --> 00:50:02,475
 int id, that's gonna get passed in automatically because of the way we set up our routes, that's nice.
 INT ID，这将自动设置好路径，看起来很棒
 
-694
+738
 00:50:03,625 --> 00:50:14,710
 By default, will just return to page, but here we'll say Customer, the one above Go and get it from the database.
 默认情况下将只返回页面，但在之前还会从数据库中获取 customer
 
-695
+739
 00:50:15,375 --> 00:50:22,750
 -And find it, okay -Yeah, so FindAsync, kind of a standard thing, you could pass in more complicated queries, and get it other ways.
 -异步索引 ,okay -是的 FindAsync, 这是一个标准化的步骤，你可以用其他方法传递更复杂的查询
 
-696
+740
 00:50:22,750 --> 00:50:24,566
 If it's null, freak out.
 如果它是空的，也要进行处理
 
-697
+741
 00:50:26,675 --> 00:50:31,926
 If (Customers == null),I don't know, let's put them back to index.
 如果 (Customers == null),他将回到 index 页面
 
-698
+742
 00:50:32,975 --> 00:50:34,486
 It's Customer, right?
 那是 Customer, 对吧?
 
-699
+743
 00:50:34,550 --> 00:50:36,825
 Yes, pardon me, Customer.
 是啊，对不起 Customer
 
-700
+744
 00:50:38,646 --> 00:50:54,390
 Okay, RedirectToPage("/Index"); a lot of typing,but we don't wanna hide anything from you.
 Okay, RedirectToPage("/Index"); 这么多代码可不要有遗漏的
 
-701
+745
 00:50:54,454 --> 00:50:55,670
 Keeping it 100.
 100%正确
 
-702
+746
 00:50:55,670 --> 00:51:05,398
 We are absolutely keeping it 100,so this should that up and give us a form, with the customer in it.
 绝对100%正确率 ，应该会给我们一个放有 customer 数据的表单
 
-703
+747
 00:51:06,806 --> 00:51:10,966
 Let's see if it does, cuz we added that bind property,which you said, what did you call it?
 因为我们添加了绑定属性，看它能不能正确运行，那句话怎么说来着？
 
-704
+748
 00:51:10,966 --> 00:51:11,664
 Surviving the journey.
 在旅途中幸存
 
-705
+749
 00:51:11,664 --> 00:51:13,000
 Surviving the journey.
 在旅途中幸存
 
-706
+750
 00:51:14,875 --> 00:51:16,929
 You saw that interest movie really survive the journey.
 你看那部有趣的电影真的能在旅途中幸存下来
 
-707
+751
 00:51:16,929 --> 00:51:18,337
 Don't tell me what happens at the end?
 不要告诉我最后会发生什么？
 
-708
+752
 00:51:18,337 --> 00:51:19,810
 -So I've been -I don't wanna know
 -我看过 -我不想知道
 
-709
+753
 00:51:19,810 --> 00:51:21,570
 Okay, and then I hit Edit, and then it works.
 Okay, 然后我点击编辑，然后它就工作了
 
-710
+754
 00:51:21,570 --> 00:51:22,825
 -Exactly -Right.
 -没问题 -是呀
 
-711
+755
 00:51:22,825 --> 00:51:25,874
 -So what happens if you change it around? -If I change it
 -如果你改写内容会发生什么？ -如果我改写它
 
-712
+756
 00:51:25,874 --> 00:51:30,610
 probably nothing Right,cuz we don't have our post.
 可能没有什么反应，因为我们没有 post 指令
 
-713
+757
 00:51:30,610 --> 00:51:32,675
 -Exactly -Exactly, so we've got our get.
 -没错 -没错，我们获取了数据
 
-714
+758
 00:51:34,834 --> 00:51:39,275
 But we don't have our post.
 但是我们没有 post 指令
 
-715
+759
 00:51:39,275 --> 00:51:40,616
 You could kind of copy that.
 你可以拷贝一下
 
-716
+760
 00:51:41,768 --> 00:51:47,100
 Yes, I think there's a way to actually link that whole thing quickly
 是的，我认为有一种方法可以很快地把这些代码联系起来
 
-717
+761
 00:51:47,725 --> 00:51:58,642
 but we'll say, OnPostAsync All right,the very end we will do that Redirect.
 但我会键入 OnPostAsync 后进行重定向
 
-718
+762
 00:51:59,000 --> 00:52:01,266
 -To the index page? -To the index page, exactly
 -指向 index 页？ -没错
 
-719
+763
 00:52:03,950 --> 00:52:07,050
 -Okay -What do we do?
 -Okay -我们该怎么办？
 
-720
+764
 00:52:07,050 --> 00:52:09,458
 Well, we've got that model state valid issue.
 我们得到了模型状态有效的问题
 
-721
+765
 00:52:09,458 --> 00:52:11,314
 Yeah, so if not model.
 是的，如果不是 model
 
-722
+766
 00:52:11,314 --> 00:52:15,922
 Not ModelState.IsValid.
 不是 ModelState.IsValid.
 
-723
+767
 00:52:15,986 --> 00:52:17,970
 Yeah, we want it to return to the page.
 是的，我们希望它回到页面
 
-724
+768
 00:52:24,700 --> 00:52:28,875
 See, if you try to type too fast to impress people, and it just ends up making you look silly.
 看，如果你想打字太快，给人留下深刻印象，那最终会让你看起来很傻
 
-725
+769
 00:52:30,125 --> 00:52:31,538
 Okay, now this one is an interesting one.
 好的，现在这个很有趣
 
-726
+770
 00:52:31,538 --> 00:52:33,074
 Cuz you want to attach it to the database.
 因为你想把它附加到数据库
 
-727
+771
 00:52:33,074 --> 00:52:37,700
 Yeah, so what we're doing is,we're modifying something that's all ready in the database.
 是的，我们正在做的是，我们正在修改数据库中已经准备好的东西
 
-728
+772
 00:52:38,225 --> 00:52:41,586
 So what we're trying to do is take this customer that we are recurrently editing.
 这里要做的就是转递编辑的 customer 数据
 
-729
+773
 00:52:42,900 --> 00:52:44,425
 So it's in a cart state.
 所以它是一个待处理的状态
 
-730
+774
 00:52:44,425 --> 00:52:53,925
 Attach that customer in the state of it in the database,we're going to mark that as Modified.
 在数据库中附加 customer 数据，我们将把它标记为修改
 
-731
+775
 00:52:53,925 --> 00:52:55,000
 And this bit here.
 还有这一点
 
-732
+776
 00:52:55,275 --> 00:52:59,375
 -It shouldn't be there, yeah -Add the using statement, there we go.
 -它不应该在那里，是的 -添加 using 语句
 
-733
+777
 00:52:59,375 --> 00:53:01,050
 And now it's turned blue, okay.
 现在它变成蓝色了，好吧
 
-734
+778
 00:53:01,925 --> 00:53:11,900
 Now, we don't know if it's going to work, because someone else could be simultaneously editing at the same time.
 现在，我们不知道它是否会起作用，因为其他人可以同时编辑
 
-735
+779
 00:53:11,900 --> 00:53:14,025
 Exactly, so you want to do a try and catch.
 没错，所以你想试试看
 
-736
+780
 00:53:14,025 --> 00:53:16,530
 Can do a try, maybe it'll work, maybe it won't.
 可以试一试，也许会奏效，也许不会
 
-737
+781
 00:53:16,530 --> 00:53:24,875
 And the exception that we're gonna catch for,is called aDbUpdateConcurrencyException.
 我们要捕获被称为 AdBudDeNoCurrCuryExcExp 的异常
 
-738
+782
 00:53:25,200 --> 00:53:27,922
 So just in case someone's doing If someone's in there at the same time
 以防万一有人同时在编辑
 
-739
+783
 00:53:28,925 --> 00:53:31,383
 Okay, so you're going to wait for changes?
 好的，那么你会用 await 来处理嘛？
 
-740
+784
 00:53:31,383 --> 00:53:38,675
 Go on 'await' and say SaveChangesAsync, and presumably that'll work fine.
 继续 'await' 然后用 SaveChangesAsync ，说不定那会很好
 
-741
+785
 00:53:39,200 --> 00:53:41,450
 If it doesn't- We'll have to throw an exception?
 如果没有，我们就必须抛出一个异常吗？
 
-742
+786
 00:53:41,450 --> 00:53:50,027
 Now there's different arguments about the right way to do this, but for now I'm gonna go and say, Customer, and this is kind of cool.
 这里有很多处理方式，但我在这写 Customer ，感觉不错
 
-743
+787
 00:53:50,411 --> 00:53:54,750
 Customer.Id, see how I'm getting IntelliSense inside the string?
 Customer.Id, 看看我是如何在字符串中获得智能感知的吗？
 
-744
+788
 00:53:59,000 --> 00:54:04,047
 We can do whatever we want to about that concurrency exception, maybe even pass it in as an inner exception.
 我们可以了解任何的并发异常，甚至可以把它作为一个内部异常传递
 
-745
+789
 00:54:04,047 --> 00:54:10,831
 But the fact is, actually, that would be a good idea,we'll pass that in, along for the ride.
 但事实上，这是个好主意，我们会把它传递进去
 
-746
+790
 00:54:12,687 --> 00:54:16,591
 We wanna give a message to somebody that bad stuff has happened.
 我们想留言给出现报错信息的人
 
-747
+791
 00:54:17,807 --> 00:54:23,631
 All right,that should be, I think we always gonna create only.
 好吧，我想我们永远只会 create
 
-748
+792
 00:54:23,631 --> 00:54:26,383
 -And we do,We've done the create -Let's go see
 -我们已经完成了 create -让我们去看看
 
-749
+793
 00:54:27,599 --> 00:54:29,903
 I think the create was a post.
 我觉得 create 是 post
 
-750
+794
 00:54:29,903 --> 00:54:33,359
 -Yeah -The read is the for loop.
 -Yeah -从 for 循环中读取
 
-751
+795
 00:54:34,127 --> 00:54:39,695
 The delete was also a post, but with a delete sidecar,along for the ride.
 delete 也是 post ，但是有删除的边角线
 
-752
+796
 00:54:40,399 --> 00:54:48,591
 -So, Create, Dan -Break points from before.
 -Create -从之前的点返回
 
-753
+797
 00:54:49,150 --> 00:54:52,675
 -I will remove those -I think you still have, okay.
 -我会删除那些 -我想你还是有的，好吧
 
-754
+798
 00:54:52,675 --> 00:54:55,025
 Continue, we'll bump into them if we have more.
 继续，如果我们有更多，我们会撞到他们
 
-755
+799
 00:54:55,450 --> 00:54:58,959
 -Fancy pants -Beyonce.
 -Fancy pants -Beyonce
 
-756
+800
 00:54:58,959 --> 00:55:06,703
 -That's a good point -Edit
 -这是一个目标 -Edit
 
-757
+801
 00:55:08,687 --> 00:55:11,311
 -Carter -Carter Knowles.
 -Carter -Carter Knowles.
 
-758
+802
 00:55:14,511 --> 00:55:16,025
 Don't get it twisted.
 不要出错
 
-759
+803
 00:55:17,450 --> 00:55:19,600
 -Delete everyone else who is not worthy
 -删除其他没用的人~
 
-760
+804
 00:55:23,050 --> 00:55:25,071
 -See, it works -It does work.
 -看，它有效 -它确实有效
 
-761
+805
 00:55:25,650 --> 00:55:30,063
 There you go, taking care of business, cool.
 希望能不出问题，酷！
 
-762
+806
 00:55:30,063 --> 00:55:32,625
 -So, let's think about that -So, that's pretty sweet.
 -所以，让我们回顾一下 -这很好
 
-763
+807
 00:55:32,625 --> 00:55:41,711
 -It is -If we go back, and just kind of review particularly,this bit here we've got our edit.
 -好的 -如果返回，特别是回顾一下编辑功能我们是怎么实现的
 
-764
+808
 00:55:44,800 --> 00:55:47,471
 With the route id where we did not see
 用不可视的路径 ID
 
-765
+809
 00:55:47,535 --> 00:55:49,135
 -Where are we reaching -out right now?
 -我们现在在哪里？ -现在出来了？
 
-766
+810
 00:55:49,135 --> 00:55:50,863
 I'm sorry this is index.
 抱歉这是 index
 
-767
+811
 00:55:50,863 --> 00:55:52,847
 -Okay -Right?
 -Okay -好吧?
 
-768
+812
 00:55:52,847 --> 00:55:56,075
 So here we got an edit.
 所以我们得到了一个 edit
 
-769
+813
 00:55:56,815 --> 00:56:06,530
 I wanna point out how it looks in the code, and then compare that to how it looks ultimately in the code, right?
 我想指出它在代码中的样子，然后将它与它最终在代码中的外观进行比较，对吗？
 
-770
+814
 00:56:06,900 --> 00:56:11,075
 When it makes it all the way back to the browser.
 当它回到浏览器的时候
 
-771
+815
 00:56:13,314 --> 00:56:15,150
 -See? -It's in.
 -看到了吗？ -在里面
 
-772
+816
 00:56:15,150 --> 00:56:20,065
 So that came from, this seems like a little more.
 因此，这似乎是多一点
 
-773
+817
 00:56:20,065 --> 00:56:22,500
 You might be asking yourself,why you don't just hard code that?
 你可能会问，为什么不直接用代码肝呢？
 
-774
+818
 00:56:22,875 --> 00:56:26,150
 But routes change, pages change, things get moved around..
 路径改变，页面改变，事件到处乱窜…
 
-775
+819
 00:56:26,650 --> 00:56:34,725
 Now, this one is a little bit more interesting here,because you might have multiple buttons on the page that do different stuff.
 这里有一个有趣的地方，因为页面上可能有多个按钮来做不同的事情
 
-776
+820
 00:56:35,650 --> 00:56:37,450
 So then, you can give them a handler name
 那么，你可以给他们一个处理程序名称
 
-777
+821
 00:56:39,225 --> 00:56:40,514
 Right? I could have delete.
 对吗？我本来可以删除的
 
-778
+822
 00:56:40,514 --> 00:56:43,778
 I could have bold face Beyonce, I could have all caps
 我可以大胆的面对 Beyonce ，我可以拥有所有的 caps
 
-779
+823
 00:56:43,842 --> 00:56:44,802
 We could have whatever.
 我们可以拥有一切
 
-780
+824
 00:56:44,802 --> 00:56:49,026
 You're not limited to one button.
 不单单是一个按钮
 
-781
+825
 00:56:50,725 --> 00:56:59,325
 A submit button can have, you could have multiple submits,still passing numbers, like in this case id.
 提交按钮可以有多个提交，仍然传递数字，如在这种情况下ID
 
-782
+826
 00:57:00,125 --> 00:57:01,954
 And this is an ampersand.
 这是一个记号
 
-783
+827
 00:57:03,175 --> 00:57:06,946
 Multiple handlers, delete, promote whatever.
 多个处理程序，删除，或者其他的
 
-784
+828
 00:57:06,946 --> 00:57:08,162
 -Save -Save exactly
 -保存 -准确保存
 
-785
+829
 00:57:08,742 --> 00:57:18,530
 And what's cool about that, is that then that word delete If we look at the behind is this word.
 酷的是什么，这就是那个显示的删除键，如果我们看后面是这个词
 
-786
+830
 00:57:19,850 --> 00:57:27,362
 So I think you could even go like on post "foo" async, or whatever, as long as it lines up because you're saying on post and then some handler.
 我觉得你甚至可以 post "foo" async，让 list 列表通过 post 去进行处理
 
-787
+831
 00:57:27,362 --> 00:57:29,090
 -Yes -That cool?
 -Yes -很酷？
 
-788
+832
 00:57:29,090 --> 00:57:37,800
 And the handler is literally you could say Let me stop our debugging here.
 处理程序实际上可以让我在这里停止调试
 
-789
+833
 00:57:42,978 --> 00:57:44,075
 You gonna try the foo?
 你要试试 foo 吗？
 
-790
+834
 00:57:46,375 --> 00:57:48,098
 Right I can do whatever, it doesn't matter.
 我可以做任何事，没关系
 
-791
+835
 00:57:48,098 --> 00:57:50,978
 That word is totally up to you.
 那个词完全取决于你
 
-792
+836
 00:57:50,978 --> 00:57:53,410
 So I don't need to test that.
 所以我不需要测试
 
-793
+837
 00:57:54,370 --> 00:57:56,738
 You don't trust me?
 你不相信我？
 
-794
+838
 00:57:56,738 --> 00:57:58,466
 -Yeah, sure -All right let's test it then.
 -我拒绝~ -好吧，让我们测试一下
 
-795
+839
 00:57:58,466 --> 00:58:05,890
 -Let's test it -That gives you a lot of flexibility with buttons, so I say foo right there.
 -让我们来测试一下 -这使得按钮拥有了很大的灵活性， foo 就在那里
 
-796
+840
 00:58:05,890 --> 00:58:09,154
 -I go over here -We say foo.
 -我到这里 -输入 foo
 
-797
+841
 00:58:09,975 --> 00:58:10,625
 And there you go.
 你走了
 
-798
+842
 00:58:10,625 --> 00:58:12,275
 So while that's loading? What were you gonna say?
 那么，这是什么呢？你要说什么？
 
-799
+843
 00:58:14,400 --> 00:58:17,425
 No, no, no, I trust you ish.
 不，不，不，我相信你
 
-800
+844
 00:58:17,425 --> 00:58:18,512
 -Trust you ish? -Yeah.
 -相信你？ -是的
 
-801
+845
 00:58:19,350 --> 00:58:20,802
 That's pretty good, I'll take that.
 那太好了，我做了
 
-802
+846
 00:58:21,058 --> 00:58:26,498
 Let's go and add people.
 我们来添加些数据吧
 
-803
+847
 00:58:29,826 --> 00:58:30,725
 That was foo.
 那是 foo
 
-804
+848
 00:58:31,800 --> 00:58:33,410
 How did f oo know it was delete?
 f 知道它是怎么删除的？
 
-805
+849
 00:58:34,178 --> 00:58:38,658
 Because it doesn't matter that it was named Foo.
 因为它被命名为 foo 并不重要
 
-806
+850
 00:58:38,722 --> 00:58:40,386
 It's just a handler name.
 这只是一个处理程序名称
 
-807
+851
 00:58:41,218 --> 00:58:46,475
 And if we confirm it Did I pass it?
 如果我们确认了，我通过了吗？
 
-808
+852
 00:58:49,700 --> 00:58:51,675
 -Nope -This is create, sorry.
 -Nope -这是 create ，抱歉
 
-809
+853
 00:58:55,170 --> 00:58:56,770
 There you go there's a delete.
 你看，有一个 delete
 
-810
+854
 00:58:57,075 --> 00:58:59,700
 Okay see it says handler equals foo.
 好吧，看这儿显示 handler 等于 foo
 
-811
+855
 00:58:59,700 --> 00:59:06,434
 -Yes, okay, yes -And then, I just happened to name this handler foo also.
 -嗯嗯 - handlers 恰好也被命名 foo
 
-812
+856
 00:59:06,434 --> 00:59:09,300
 -Yes, yeah -So the point is, it lined up.
 -Yes, yeah -所以重点是，它排成一行
 
-813
+857
 00:59:11,125 --> 00:59:14,114
 And that's how you can have unlimited verbs.
 这就是你可以有无限动词的方式
 
-814
+858
 00:59:14,114 --> 00:59:17,506
 And then at that point, it just did the thing and removed it from the database.
 然后，在那他执行代码并从数据库中删除它
 
-815
+859
 00:59:17,900 --> 00:59:25,725
 -Cool? -Cool. So,we saw lots of different handlers, like gets and posts, and custom handlers like delete.
 -酷吗 ? -酷. 因此，我们看到了很多不同的 handlers ，如 get 和 post ，以及自定义处理程序，如 delete
 
-816
+860
 00:59:25,725 --> 00:59:31,150
 -Yeah -We saw some tag helpers, that will generate buttons and links for us.
 -Yeah -我们看到了一些标签助手，它会为我们生成按钮和链接
 
-817
+861
 00:59:32,550 --> 00:59:36,322
 -We saw layout pages -We saw validation.
 -我们看到了布局页面 -我们看到了验证
 
-818
+862
 00:59:36,322 --> 00:59:39,842
 We saw validation both summary and individual.
 我们看到了总结和个人的验证
 
-819
+863
 00:59:40,875 --> 00:59:45,730
 -And yeah -Yeah lots of little bit about routing and a little bit more detail.
 -还有 -很多关于路由的一些细节
 
-820
+864
 00:59:46,275 --> 00:59:50,444
 We saw routing,and then specifically, actually one important thing we can point out about routing as well.
 我们看到了路由，然后具体地说，实际上我们也可以指出路由的一个重要问题
 
-821
+865
 00:59:50,750 --> 01:00:00,578
 If I click edit Did we, I shut the app down again.
 如果我点击编辑，emmmmm我又把程序给关了
 
-822
+866
 01:00:01,075 --> 01:00:05,175
 You had said ID:int
 你说过ID:int
 
-823
+867
 01:00:05,175 --> 01:00:09,154
 -Yes -Where int was a number, correct?
 -Yes -int 是一个数字，对吗？
 
-824
+868
 01:00:09,625 --> 01:00:11,025
 It would be interesting.
 这很有趣
 
-825
+869
 01:00:11,700 --> 01:00:19,010
 So just confirm that, if we put in Submit Query, edit, she is one.
 所以只要确认，如果我们提交提交查询。这显示1
 
-826
+870
 01:00:21,442 --> 01:00:24,322
 Put in an ID that is not an int.
 输入一个不是 int 的 ID
 
-827
+871
 01:00:24,322 --> 01:00:28,636
 You should get a You simply get a 404,you don't get a 500.
 你应该得到404，你不会得到500
 
-828
+872
 01:00:28,636 --> 01:00:29,275
 It's not an error.
 这不是一个错误
 
-829
+873
 01:00:29,950 --> 01:00:31,600
 It's a route that doesn't exist.
 这是一条不存在的路线
 
-830
+874
 01:00:31,908 --> 01:00:33,525
 We don't have an edit that takes a string.
 我们没有一个带字符串的编辑
 
-831
+875
 01:00:34,350 --> 01:00:43,074
 So that's another really,really important thing to point out about routing, and why that little bit up there was so significant?
 所以这是另一个非常重要的事情，指出路由的原因，为什么会有那么大的意义呢？
 
-832
+876
 01:00:43,074 --> 01:00:51,500
 And then soon, in the intermediate sections, we will learn a little bit more about web APIs, and url, and mixing and matching pages as well Yeah.
 然后很快，在中级教程，我们将了解更多关于 Web API 和 URL ，以及混合和匹配页面
 
-833
+877
 01:00:51,500 --> 01:00:54,075
 Can we take a break and come back with a little bit of logging?
 我们可以休息一下，带点干货回来吗？
 
-834
+878
 01:00:54,075 --> 01:00:55,227
 Yes we will
 是的，我们会
