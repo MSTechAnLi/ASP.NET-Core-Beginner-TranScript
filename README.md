@@ -21,7 +21,7 @@
 ### 3. Razor页面与增查改删
 
 - [x] Razor页面
-- [ ] CRUD - WinFanChen 翻译中
+- [x] CRUD
 
 ### 4. 日志和诊断
 
