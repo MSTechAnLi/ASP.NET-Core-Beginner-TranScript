@@ -1,182 +1,182 @@
 ﻿1
+00:00:00,000 --> 00:00:01,000
+翻译+校对 - 遗落星痕 Ice北极熊
+时间轴 - Ice北极熊
+
+2
 00:00:01,000 --> 00:00:02,000
 Hey friends, I'm Scott Hanselman.
 Hey 大家好，我是 Scott Hanselman
 
-2
+3
 00:00:02,000 --> 00:00:04,000
 And I'm Maria Naggaga.
 我是 Maria Naggaga
 
-3
+4
 00:00:04,000 --> 00:00:06,000
 And this is Microsoft Virtual Academy.
 这里是微软虚拟学院
 
-4
+5
 00:00:06,000 --> 00:00:09,000
 We're gonna be talking about ASP.NET Core 2.
 我们将会讨论有关 ASP.NET Core 2.0 的内容
 
-5
+6
 00:00:09,000 --> 00:00:10,000
->> Yes, we are.
+Yes, we are.
 是的
 
-6
+7
 00:00:10,000 --> 00:00:13,000
 Right, we've got three days of great content for you
 那么，我们将用三天的时间给你展现精彩的内容
 
-7
+8
 00:00:13,000 --> 00:00:16,000
 This is the beginner day, we're gonna have beginner
 这是第一天，我们会从初学者开始
 
-8
+9
 00:00:16,000 --> 00:00:19,000
 getting started, a little bit about .NET and C#, and
-开始前，你需要一点有关 .NET 和 C# 的知识，
+开始前，你需要一点有关 .NET 和 C# 的知识
 
-9
+10
 00:00:19,000 --> 00:00:21,000
 the resources that you'll need.
 已经一些必需的资源
 
-10
+11
 00:00:21,000 --> 00:00:24,000
 Maria and I will explore creating a web application.
 Maria 与我将会探索如何创建一个 Web 应用
 
-11
+12
 00:00:24,000 --> 00:00:27,000
 And by the end of these three days, you should be ready to go
 在这三天结束后，你应当能够
 
-12
+13
 00:00:27,000 --> 00:00:29,000
 and make a web application for yourself.
 为你自己制作一个 Web 应用程序
 
-13
+14
 00:00:29,000 --> 00:00:32,000
 Exactly, and a good place to get started here is for
 准确的说，这是一个让你们知道在哪里
 
-14
+15
 00:00:32,000 --> 00:00:35,000
 people to figure out where to get the tools they need
 可以找到你们所需要工具的
 
-15
-00:00:35,000 --> 00:00:37,000
-to get started   Yeah, so if you go to
-好地方！            是的，如果你转到
-
 16
+00:00:35,000 --> 00:00:37,000
+to get started Yeah, so if you go to
+好地方！ 是的，如果你转到
+
+17
 00:00:37,000 --> 00:00:43,000
 dot.net, we made a little fun domain for you here d-o-t.net.
 "http://dot.net"，我们为你们准备了一个有趣的域名
 
-17
+18
 00:00:43,000 --> 00:00:45,000
 Or if you go out there and
 或者你离开这里
 
-18
+19
 00:00:45,000 --> 00:00:48,000
 search with your favorite search engine for learn C# or
 通过你最喜爱的搜索引擎去搜索 "C#" 或者
 
-19
+20
 00:00:48,000 --> 00:00:52,000
 download .NET you will probably end up showing up here.
 "下载.NET"，你也能找到这个网址
 
-20
+21
 00:00:52,000 --> 00:00:54,000
-The page might look something like this,
+The page might look something like this
 页面可能看起来可能与这个很相似
 
-21
+22
 00:00:54,000 --> 00:00:59,000
 might be a little different by the time time has passed.
 也可能随着时间的推移有所改变
 
-22
+23
 00:00:59,000 --> 00:01:01,000
 But you'll click on Download and
 但是，你点击下载
 
-23
+24
 00:01:01,000 --> 00:01:05,000
 you're gonna see three different .NETs to choose from.
 你将会看到三个不同的 .NET 选项
 
-24
+25
 00:01:05,000 --> 00:01:08,000
 There is the .NET Framework, that comes with Windows.
 这是 .NET Framework ，它运行在 Windows 上
 
-25
+26
 00:01:08,000 --> 00:01:12,000
 There is Xamarin, which let's you make IOS, and Android, and
-这是 Xamarin ，它能让你制作 iOS，Android，以及
+这是 Xamarin ，它能让你制作 iOS Android 以及
 
-26
+27
 00:01:12,000 --> 00:01:14,000
 Windows applications.
 Windows 应用
 
-27
+28
 00:01:14,000 --> 00:01:17,000
 We're gonna be focusing on .NET Core, aren't we?
-但我们的重点应该是 .NET Core ，对吧？
-
-28
-00:01:17,000 --> 00:01:17,500
->> Yes, we are.
-是呀！
+但我们的重点应该是 .NET Core 对吧？
 
 29
+00:01:17,000 --> 00:01:17,500
+Yes, we are.
+是的
+
+30
 00:01:17,500 --> 00:01:20,000
 So if you click on that it should show you a couple
 所以，如果你点击这的话，应该会给你展示几个
 
-30
+31
 00:01:20,000 --> 00:01:22,000
 of options on how to get started.
 关于如何开始的选项
 
-31
+32
 00:01:22,000 --> 00:01:24,000
 And then a lot of things that come up, especially for
 然后，很多内容出现了，值得注意的是
 
-32
+33
 00:01:24,000 --> 00:01:27,000
 new people to our platform, is do they download the SDK or
-对于使用我们平台的新人来说，应该选择下载 SDK 
+对于使用我们平台的新人来说，应该选择下载 SDK
 
-33
+34
 00:01:27,000 --> 00:01:28,000
 the Runtime?
 还是 Runtime 呢？
 
-34
+35
 00:01:28,000 --> 00:01:31,000
 Right, so the SDK, that's the tools, the compiler, the stuff I
-Emmm ，像 SDK ，其实是种工具，或者说是编译器，
+Emmm 像 SDK 其实是种工具，或者说是编译器
 
-35
+36
 00:01:31,000 --> 00:01:35,000
 need as a developer because it's the software development kit
 是作为开发人员所必需的东西，它是软件开发的工具包
-
-36
-00:01:35,000 --> 00:01:35,500
-Yeah.
-嗯
 
 37
 00:01:35,500 --> 00:01:38,000
@@ -211,7 +211,7 @@ Click on the Windows one and you should see not only a step
 43
 00:01:51,000 --> 00:01:53,000
 by step, but also a few videos in between.
-而且还能看到中间有说明的视频。
+而且还能看到中间有说明的视频
 
 44
 00:01:53,000 --> 00:01:56,000
@@ -240,7 +240,7 @@ And then by the end of this little three or
 
 49
 00:02:04,000 --> 00:02:07,000
-four step process, you will have written your first .NET app,
+four step process, you will have written your first .NET app
 四个步骤，你就可以编写你的第一个 .NET 应用程序
 
 50
@@ -250,7 +250,7 @@ which I think we will do in a little bit.
 
 51
 00:02:09,000 --> 00:02:11,000
-All right, so you can also of course,
+All right, so you can also of course
 好的，其实你也可以
 
 52
@@ -321,7 +321,7 @@ show you some of the fun things inside.
 65
 00:02:51,000 --> 00:02:55,000
 But remember, we're focusing on .NET Core, C# and ASP.NET.
-但是请记住，我们关注的是 .Net Core ， C# 和 ASP.NET
+但是请记住，我们关注的是 .Net Core C# 和 ASP.NET
 
 66
 00:02:55,000 --> 00:02:56,000
@@ -376,21 +376,21 @@ You have Visual Studio for Mac now as well, and
 76
 00:03:16,000 --> 00:03:18,000
 you can build your ASP.NET Core application there.
-你可以在 Mac 上创建 ASP.NET Core  应用
+你可以在 Mac 上创建 ASP.NET Core 应用
 
 77
 00:03:18,000 --> 00:03:20,000
-So anything that we're doing today,
+So anything that we're doing today
 所以，我们今天所做的所有事
 
 78
 00:03:20,000 --> 00:03:23,000
-people can do this on their Mac.
+people can do this on their Mac
 大家都可以在你们的 Mac 上完成
 
 79
 00:03:23,000 --> 00:03:25,000
-Good point, so even though I'm on a Surface book,
+Good point, so even though I'm on a Surface book
 说得好，即使我用的是运行着 Windows 的
 
 80
@@ -401,7 +401,7 @@ Surface Book，但我们想展示的是
 81
 00:03:27,000 --> 00:03:31,000
 gonna show you today, you should be able to follow along on your Mac
-我们可以很方便的完成同样的事，不论是在你的 Mac 、
+我们可以很方便的完成同样的事，不论是在你的 Mac
 
 82
 00:03:31,000 --> 00:03:34,000
@@ -432,3 +432,4 @@ Yeah.
 00:03:42,000 --> 00:03:45,000
 Cool, we'll take a quick pause and we'll come back with the next module.
 太棒啦，让我们休息一会儿，即将进入下一个模块
+
