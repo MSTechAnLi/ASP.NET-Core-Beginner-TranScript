@@ -1,0 +1,1182 @@
+﻿1
+-00:00:00,084 --> 00:00:00,000
+时间轴-Ice北极熊
+
+2
+00:00:00,000 --> 00:00:01,000
+翻译-遗落星痕 Ice北极熊
+时间轴-Ice北极熊
+
+3
+00:00:01,000 --> 00:00:04,416
+-Alright, we survived the crud -Yeah, we did
+-终于，我们完成了 CRUD -是的，我们做到了
+
+4
+00:00:04,416 --> 00:00:05,952
+Create, read, update, delete
+创建，读取，更新，删除
+
+5
+00:00:06,080 --> 00:00:10,304
+We are going to add in some logging, do a little Application Insights locally
+接下来，我们将来添加日志功能，并在本地执行 Application Insights
+
+6
+00:00:10,304 --> 00:00:15,808
+and then in the process of doing logging, I also want to add a little thing called Temp Data
+然后在记录日志的过程中，我还想添加一个名为 Temp Data 的小东西
+
+7
+00:00:15,872 --> 00:00:19,392
+Because I was noticing that when we did the create
+因为我注意到，若在我们进行创建的时候
+
+8
+00:00:20,032 --> 00:00:24,640
+it'd be nice to have a little message that said the answer was created or whatever
+能有一条消息表示正在创建或者其他提示，这样会更友好
+
+9
+00:00:24,704 --> 00:00:25,600
+Yeah, that would be nice.
+嗯嗯，听起来不错
+
+10
+00:00:25,650 --> 00:00:25,664
+但这并不是模型的一部分，因此这会带来一些有趣的问题
+
+11
+00:00:25,664 --> 00:00:30,130
+But that's not really part of the model cuz that brings up some interesting questions
+但这并不是模型的一部分，因此这会带来一些有趣的问题
+
+12
+00:00:30,130 --> 00:00:30,144
+But that's not really part of the model cuz that brings up some interesting questions
+
+13
+00:00:30,144 --> 00:00:36,800
+So, for example, if we go back to Create and just refamiliarize ourself with that, right?
+例如，如果我们回到 Create 页面，对此我们都还有印象，是吧
+
+14
+00:00:37,440 --> 00:00:47,232
+We type in the name and we hit submit, and then if we look at the page model behind
+我们输入名称，然后点击提交，在让我们看下相关的页面模型
+
+15
+00:00:47,488 --> 00:00:48,960
+that it's pretty straightforward, right?
+一目了然，对吧
+
+16
+00:00:49,024 --> 00:00:53,184
+We have the customer that as you say with the BindProperty survives
+我们有使用了 BindProperty 属性的用户，就像你说的
+
+17
+00:00:54,125 --> 00:00:55,175
+Survives the journey.
+幸存的旅程
+
+18
+00:00:55,175 --> 00:00:59,904
+Survives the journey but it'd be nice to have a message that would be some temporary piece of data
+幸存下来的旅程，但我们希望有一些像临时数据之类的
+
+19
+00:00:59,904 --> 00:01:02,464
+that would say, yeah customer got added
+消息提示我们，用户添加成功了
+
+20
+00:01:02,656 --> 00:01:05,856
+So we could go and have a string and call it message.
+所以我们可以添加一个字符串变量叫做 message
+
+21
+00:01:06,112 --> 00:01:13,088
+This is interesting though because it's part of the PageModel, but not part of the database.
+这很有趣，因为它是页面模型的一部分，但不是数据库的一部分
+
+22
+00:01:13,152 --> 00:01:17,632
+This is part of the PageModel which is kinda like a view model.
+这是页面模型的一部分，它有点像视图模型
+
+23
+00:01:17,888 --> 00:01:21,280
+This is really a temporary piece of data.
+这实际上是一段临时的数据
+
+24
+00:01:22,112 --> 00:01:28,192
+It's Tempdata and they're gonna have their values stored and then they'll be right back around in the side.
+这就是 Tempdata ，他们将在这储存相应的值，然后可以在另一个页面中访问
+
+25
+00:01:28,192 --> 00:01:29,600
+So it's a sidecar, it's a little post it note.
+所以这就像是一个车斗，或者说是便利贴
+
+26
+00:01:29,600 --> 00:01:33,056
+That's a good way to think about those. Yeah.
+这种思考问题的角度很不错。是的
+
+27
+00:01:33,056 --> 00:01:34,848
+Cool, so it's a place to put stuff.
+很好，这就是一个放东西的地方
+
+28
+00:01:34,848 --> 00:01:39,072
+So I'm gonna save the database, save the data right here like we did before and then-
+首先，我要保存数据库，就像我们之前那样保存数据，然后
+
+29
+00:01:39,072 --> 00:01:40,992
+You're gonna have a message.
+你会收到一条消息
+
+30
+00:01:40,992 --> 00:01:46,240
+I'm gonna have a little message, and we'll say hey, Customer and this is where you can personalize stuff.
+我将收到一些消息并提示，嘿，Customer ，在这里你可以自定义一些东西
+
+31
+00:01:46,240 --> 00:01:48,800
+-Customer.Name -added
+-Customer.Name -added
+
+32
+00:01:48,928 --> 00:01:53,024
+-It's a message, right? -And it can come out of whatever you want
+-这是一条消息，对吗？ -它可以来自你想要的任何东西
+
+33
+00:01:53,024 --> 00:01:58,144
+It can be generated, but here we're mixing and matching text with the data from the form.
+它可以是生成的，而在这里我们将拼接文本与来自表单的数据
+
+34
+00:01:58,144 --> 00:02:03,136
+Then scrolling in a way in this message which is not part of the database.
+然后回过头我们再来看下这个 message ， message 并不是数据库的一部分
+
+35
+00:02:03,136 --> 00:02:08,128
+So by simple fact that you had the TempData said, you're not going into the database.
+所以，在这个简单的实例中，你使用的是 TempData ，而不必访问数据库
+
+36
+00:02:08,192 --> 00:02:12,736
+Right because I posted, well because I actually never picked it up and put it anywhere near the database.
+是的，因为我提交了表单，而实际上我从来没有把它存到数据库的任何地方
+
+37
+00:02:12,800 --> 00:02:19,475
+If I did not put TempData on it, that would never get saved and it would be no
+如果我没有在上面添加 TempData ，那它永远都不会保存下来，也不会
+
+38
+00:02:19,750 --> 00:02:28,096
+But because it's public and it's on the page model, it's available to me, you know, elsewhere, okay?
+但是因为它是在页面模型上的 public 属性，所以我可以在其他地方使用它，对吗？
+
+39
+00:02:28,608 --> 00:02:32,832
+So let's go over to, let me think about this.
+让我们回过头来，想一想
+
+40
+00:02:34,944 --> 00:02:38,080
+-Would you go to your index page? -Yeah, thank you
+-是该到你的索引页面了吧？ -是的，谢谢
+
+41
+00:02:38,080 --> 00:02:39,872
+It took me a second to get my head right
+我花了一秒钟让我的头脑清醒了一下
+
+42
+00:02:40,225 --> 00:02:45,184
+So on the index page, we're gonna go and make a message as well
+所以在索引页面上，我们也会添加一条消息
+
+43
+00:02:49,664 --> 00:02:52,736
+That's gonna catch that temp data, right?
+那会获得那些临时数据吧？
+
+44
+00:02:53,475 --> 00:03:04,512
+And then here, maybe we'll have some, we'll just take it at the top of the form for now and we'll say, maybe an H3.
+然后在这里，也许我们需要一些，就把它放在表格的顶部，比如说是 H3 标签
+
+45
+00:03:05,550 --> 00:03:10,592
+-And some sort of message? -@Model.Message
+-以及一些消息？ -@Model.Message
+
+46
+00:03:11,750 --> 00:03:13,918
+So it'd be or maybe we'd wanna hide it if it wasn't there
+所以它将是这样，也许在消息不存在的时候
+
+47
+00:03:13,918 --> 00:03:17,151
+there is lots of things that we could could potentially do but for now
+我们会想隐藏它，我们可以做很多的事情，但现在
+
+48
+00:03:17,151 --> 00:03:18,784
+Now, just a second, we'll be fine.
+现在，只需一秒钟，我们这样就可以了
+
+49
+00:03:20,025 --> 00:03:23,600
+But this is just an example where it's not quite database stuff.
+但这只是一个例子，它与数据库无关
+
+50
+00:03:23,600 --> 00:03:26,848
+You don't want to stick it in the database temporarily, you just want it to be somewhere temporarily
+你并不想把数据临时保存到数据库中，仅仅是想找个地方临时保存下数据
+
+51
+00:03:27,775 --> 00:03:29,600
+Some sort of acknowledgement for the user
+一些用户的操作信息
+
+52
+00:03:29,600 --> 00:03:35,163
+-Mm-hm, yep and the general idea of being able to, there you go -They are
+-嗯，是的，这是一种常见的想法，这就可以了 -这些就是了
+
+53
+00:03:35,163 --> 00:03:36,603
+And that could look whatever you want it, you can do whatever.
+这可以你想要的任意的东西，或者你想对它做任何操作都行
+
+54
+00:03:36,603 --> 00:03:42,464
+It could fade in with jQuery or animation, or whatever makes you happy.
+它可以通过 jQuery 或动画添加淡入效果，或任何你喜欢的东西
+
+55
+00:03:42,950 --> 00:03:52,192
+-And that's different from there, which is your default state, right? -So do it again, See?
+-（刷新后）这与刚才不同，这是默认状态，对吗 -让我们再来试一次，看到了吗
+
+56
+00:03:54,304 --> 00:04:02,624
+And it's because it was called temp data and we had the same name here and where it started
+这是因为它被称为临时数据，我们在这里和它最初定义的地方有相同的名称
+
+57
+00:04:02,624 --> 00:04:08,896
+So it found its way magically over into the index area as well, which is pretty sweet
+所以它就很神奇地来到了索引页面，多么贴心的功能啊
+
+58
+00:04:11,025 --> 00:04:14,976
+Now we talked a little bit about logging, very, very briefly
+现在我们非常非常简短地来谈谈有关日志的事
+
+59
+00:04:14,976 --> 00:04:18,125
+-We didn't really do anything with it -Well we looked at this
+-我们不会在日志中真正的做什么 -让我们来看下这个
+
+60
+00:04:18,125 --> 00:04:20,800
+-Well we saw it up here -We saw two different kinds of logging
+-在这我们可以看到了 -我们看到了两种不同的日志记录
+
+61
+00:04:20,864 --> 00:04:28,288
+-We saw this one -And then we saw a little bit more there.
+-我们看完了这个 -然后我们看到了更多信息
+
+62
+00:04:28,288 --> 00:04:32,050
+so there was warning, and then there was.
+这些是警告的等级，然后这些是
+
+63
+00:04:34,225 --> 00:04:36,575
+Oops, pardon me.
+哎呀，原谅我
+
+64
+00:04:36,575 --> 00:04:39,104
+It was, yeah there you go.
+哦，这就是了
+
+65
+00:04:39,104 --> 00:04:42,691
+There's warning, and then there's debug and then you can have different subsections.
+这里有警告，有调试，而且你可以有不同的小节
+
+66
+00:04:42,691 --> 00:04:48,768
+You can say, I just want information from Microsoft but I want debug from everyone else, right?
+你可以说，我只想要来自微软的信息，但我希望得到其他人的调试信息，对吧？
+
+67
+00:04:49,275 --> 00:04:51,328
+So let's go see if we can figure out how to do logging.
+那么我们来看看，我们是否可以弄清楚如何记录日志
+
+68
+00:04:54,656 --> 00:05:02,464
+All right, so we'll go back over to here, and I'm going to try to remember how to do this from scratch.
+好的，我们回到了这里，我将尝试记住如何从头开始
+
+69
+00:05:03,275 --> 00:05:04,960
+Do you can you tell me how?
+你能告诉我该怎么做嘛
+
+70
+00:05:04,960 --> 00:05:06,560
+You've gotta try to remember?
+你要试着记住吗
+
+71
+00:05:06,560 --> 00:05:07,584
+Well, you know.
+嗯，你懂得
+
+72
+00:05:08,075 --> 00:05:12,192
+I just want to do it right, and I don't have all this stuff in my head all the time.
+我只是想做得对，而我一直没有把所有这些东西都放在脑海里
+
+73
+00:05:13,088 --> 00:05:15,050
+So it should be ILogger.
+这里应该是 ILogger 吧
+
+74
+00:05:15,908 --> 00:05:18,848
+Is it, you probably need to add it as a service.
+是的，但你可能需要添加相应的服务
+
+75
+00:05:18,848 --> 00:05:20,650
+Yes, add it as a service.
+好的，添加服务
+
+76
+00:05:20,650 --> 00:05:22,432
+and then we have to use it.
+我们必须使用它
+
+77
+00:05:22,496 --> 00:05:24,864
+Yeah, just AddLogging.
+`AddLogging` 就好了
+
+78
+00:05:27,552 --> 00:05:33,504
+And then we've got app. I don't think it's used...
+然后我们可以用 app ，我不认为它是这样用的
+
+79
+00:05:33,568 --> 00:05:37,088
+Do you put it up so, ILogger?
+你把它搞定了吗，是 ILogger 吗
+
+80
+00:05:37,152 --> 00:05:38,076
+Yeah, I think it's ILoggerFactory.
+我认为这应该是 ILoggerFactory
+
+81
+00:05:38,076 --> 00:05:39,200
+I think it's, yeah.
+我想是的
+
+82
+00:05:42,925 --> 00:05:44,832
+-See? -Yes, you have to add the extension.
+-看到了吗？ -是的，你必须添加扩展
+
+83
+00:05:44,832 --> 00:05:46,496
+Comes out of extensions, that's good.
+这部分脱离出来变成了拓展，这很好
+
+84
+00:05:47,456 --> 00:05:49,888
+Geeks' work makes for the best work.
+极客们的工作是它变得更好
+
+85
+00:05:49,888 --> 00:05:51,040
+Yeah, there you go, Okay.
+那这样就好了
+
+86
+00:05:55,456 --> 00:06:04,160
+Then we'll say hey, loggerFactory, And you can say, well if I'm running it at the console, I can add the console.
+然后我们只需这样，嘿， loggerFactory ，如果我在控制台中记录日志，我可以添加控制台
+
+87
+00:06:04,992 --> 00:06:07,040
+Cuz you can log to all kinds of places, right, you can log to files
+而且你可以记录到各种各样的地方，比如说文件
+
+88
+00:06:07,040 --> 00:06:10,048
+you can log it into Application Insights if you will, all kinds of things
+或者 Application Insights ，如果你愿意的话，各种东西都行
+
+89
+00:06:10,048 --> 00:06:17,088
+And if you go and do Application Insights that's going to ask you all kinds of questions as well.
+如果你使用 Application Insights ，那它会需要一些参数
+
+90
+00:06:17,152 --> 00:06:20,608
+Right now for now, I'm going to AddConsole, I'm going to AddDebug.
+现在，我就使用了 `AddConsole` 和 `AddDebug`
+
+91
+00:06:24,256 --> 00:06:26,432
+Do you need the first one any more?
+你还需要第一行代码吗？
+
+92
+00:06:26,925 --> 00:06:34,304
+The console one is if I'm running it from the command line and if I ever want to, I'd think I'd like to have that
+这行代码是在我从命令行运行的时候想要输出日志，那我想我会需要它
+
+93
+00:06:34,432 --> 00:06:36,480
+-So it's a choice? -Well it's a
+-那么这是一个选择吗 -嗯，是的
+
+94
+00:06:36,480 --> 00:06:40,875
+I'm gonna be doing stuff or someone on my team works on the console and I'd like to be able to spit at them
+若我或者我团队中的某人在控制台中运行时，我希望向他们输出些信息
+
+95
+00:06:40,875 --> 00:06:42,475
+To the console when possible
+在有可能的情况下，向控制台输出
+
+96
+00:06:42,475 --> 00:06:44,775
+So what I'm trying to point out is that you don't need both of them, right?
+所以我想说的是你不需要同时有两个，对吗
+
+97
+00:06:44,775 --> 00:06:50,496
+No, one, I'm pointing the I'm pointing the logging to multiple locations.
+不不，在这我指的是我正在将日志输出到多个位置
+
+98
+00:06:50,875 --> 00:06:53,824
+I could point it out to app insights, I could put it in text file, I could put it in database.
+我可以把它输出到 app insights ，文本文件，或者是数据库
+
+99
+00:06:54,150 --> 00:06:56,192
+It'd be weird,but I could do that
+这很奇怪，但我能做到这一点
+
+100
+00:06:56,192 --> 00:07:00,700
+So right now I'm sending logging to two places, pardon me.
+所以现在我把日志输出到了两个地方，原谅我
+
+101
+00:07:01,300 --> 00:07:08,350
+Yeah so yeah it's cool to do that and then, in a place that I might wanna use it
+是的，这样做很酷，然后，在一个我可能想要使用它的地方
+
+102
+00:07:09,575 --> 00:07:11,872
+remember how we put everything on one line there before?
+还记得我们之前如何把所有东西放在一行代码中嘛
+
+103
+00:07:13,408 --> 00:07:19,616
+We're gonna take it out and I think I would say, private ILogger.
+我们要把它展开，我想我会用 private ILogger
+
+104
+00:07:22,880 --> 00:07:40,425
+And I think it would be of type CreateModel and I'll just say Log, and then we say ILogger<CreateModel> Log
+我认为它将是 CreateModel 类型，我只需键入 Log ，然后我们需要 ILogger<CreateModel> log
+
+105
+00:07:40,425 --> 00:07:42,208
+and then again we squirrel it away
+之后我们再次换行
+
+106
+00:07:42,784 --> 00:07:48,550
+Now here I am mixing things, here this person went underscore db, and I said capital L
+现在这里我用了不同的风格，这里这个人使用的 _db ，我用的大写的 L
+
+107
+00:07:48,550 --> 00:07:51,296
+you should pick a style and stick with it
+你应该选择一种风格并坚持下去
+
+108
+00:07:51,296 --> 00:07:54,475
+-So is the underscore really just a style? -It's just a style
+-那么下划线真的只是一种风格吗？ -这只是一种风格
+
+109
+00:07:54,475 --> 00:07:57,150
+It's like saying this is private or it's read only, or it's internal.
+就是说这是私有的，或者它是只读的，或是内部的
+
+110
+00:07:57,150 --> 00:07:58,656
+Lots of people have different styles.
+很多人都有不同的风格
+
+111
+00:07:59,200 --> 00:08:01,800
+You tend to use capitals for publics.
+公开属性最好以大写开头
+
+112
+00:08:02,500 --> 00:08:06,784
+There is a time when we used to say m_ for secret member.
+曾经有一段时间我们使用 m_ 来标记私有成员
+
+113
+00:08:06,912 --> 00:08:11,712
+Now sometimes people put _ for internal, or read only.
+现在人们有时把 _ 用于内部或只读变量
+
+114
+00:08:12,032 --> 00:08:15,808
+I'm just, I should be more responsible in the way I name my things.
+我只想说我应该对我命名的方式更负责任
+
+115
+00:08:15,808 --> 00:08:16,832
+-Yes you should -I should
+-是的，你应该的 -我会的
+
+116
+00:08:20,950 --> 00:08:22,720
+This string right here
+这个字符串就在这里
+
+117
+00:08:28,608 --> 00:08:32,384
+I could maybe reuse And then, make it for log, okay?
+我可以重用它，然后把它换成日志，对吗
+
+118
+00:08:32,384 --> 00:08:34,624
+-And I could say log -Level.
+-我可以用 log -不同的日志等级
+
+119
+00:08:34,624 --> 00:08:37,750
+Yeah, I could say LogInformation, LogDebug, LogCritical.
+是的，我可以用 LogInformation ， LogDebug ， LogCritical
+
+120
+00:08:38,175 --> 00:08:40,256
+Let's say, that that's critical It's totally not critical.
+让我们用 critical 级别吧，虽然这完全不重要
+
+121
+00:08:40,675 --> 00:08:42,368
+But I could say, that's a bad thing.
+但我可以说，这里出现了一些问题
+
+122
+00:08:42,432 --> 00:08:44,352
+My goodness, customer added.
+客户也会说，我的天哪
+
+123
+00:08:44,675 --> 00:08:47,872
+Right and then, it might come out red, right?
+对，然后，它可能会变红，对吧
+
+124
+00:08:49,344 --> 00:08:50,880
+And actually that would be cool to try.
+实际上这值得我们去尝试一下
+
+125
+00:08:51,520 --> 00:08:53,625
+So, if I am a web application.
+所以，如果是一个 Web 应用
+
+126
+00:08:54,925 --> 00:09:01,025
+-And where is my web application? -It is down here
+-我的 Web 应用在哪里 -它在这儿
+
+127
+00:09:01,425 --> 00:09:05,284
+So let's go over to that location.
+那么让我们去那个地方
+
+128
+00:09:06,375 --> 00:09:08,164
+And I'll try dotnet run in the command line.
+我将尝试在命令行中执行 dotnet run
+
+129
+00:09:10,200 --> 00:09:13,575
+This is a good reminder that you can do these things in Visual Studio
+这是一个很好的提醒，你可以在 Visual Studio 中做这些事情
+
+130
+00:09:13,875 --> 00:09:16,864
+or you can jump back out into the command line
+或者你可以跳回命令行操作
+
+131
+00:09:16,864 --> 00:09:19,872
+-that's cool, too -So it's giving you 64005.
+-这也很酷 -它给了你 64005端口
+
+132
+00:09:29,075 --> 00:09:33,760
+Oops, so I put that there, I put this here.
+哦不，让我把它放在那里，把它放在这里
+
+133
+00:09:38,688 --> 00:09:46,304
+-There it was, critical -All right, that's the console one
+-它在那， critical -很好，这是控制台的形式
+
+134
+00:09:47,000 --> 00:09:50,912
+So the idea there is that that information could go lots of different places.
+之前提到过的想法，就是信息可以向多个不同的地方输出
+
+135
+00:09:51,975 --> 00:09:56,200
+-So let's close that up -We can see it in the debug
+-所以让我们关闭它 -我们可以在调试中看到它
+
+136
+00:09:56,200 --> 00:10:01,216
+And and let's go and do it in Application Insights.
+然后让我们在 Application Insights 中进行操作
+
+137
+00:10:02,625 --> 00:10:04,416
+And you can see the debugger as well, right?
+你也可以看到调试器，对吗
+
+138
+00:10:04,480 --> 00:10:08,320
+The point is that, that stream of information is going out into the world
+关键是，这条信息流正在向外传播
+
+139
+00:10:08,320 --> 00:10:10,816
+it can go out into the command line, it can go out into a window
+它可以进入命令行，一个窗口
+
+140
+00:10:10,816 --> 00:10:13,632
+it can go into Windows Debug text file, totally up to you.
+或是 Windows Debug 文本文件，这完全取决于你
+
+141
+00:10:17,200 --> 00:10:23,488
+All right, so, I'm gonna declare tab bankruptcy.
+好吧，所以，我要关掉一下标签页
+
+142
+00:10:23,936 --> 00:10:29,056
+-This is too much, stressed me out Okay, go back over here
+-这太多了，已经影响到我了 -好的，回到这里
+
+143
+00:10:29,056 --> 00:10:35,456
+And I'm gonna right-click, and I'm gonna say, Add > Application Insights
+我要点击右键使用，添加 > Application Insights
+
+144
+00:10:35,456 --> 00:10:40,896
+-And you've done this before many times -Here's the trick, though
+-而且你已经做过好几次了 -不过这是诀窍
+
+145
+00:10:40,960 --> 00:10:46,528
+You can do this and sign up in Azure, you can use it for free, you get like what, a gigabyte?
+你可以这样做，注册一个 Azure 账号，你会发现这是免费的，大概会有 1G 的流量
+
+146
+00:10:46,528 --> 00:10:52,224
+-Something like that -There, we'll go and register your app
+-就是这样 -在那里，我们将注册你的应用
+
+147
+00:10:52,224 --> 00:10:55,744
+And even though you're running your app locally, send the telemetry up into the cloud.
+即使你在本地运行应用，也可以将遥测数据发送到云端
+
+148
+00:10:55,808 --> 00:10:57,664
+We'll do this a bit a little bit later.
+我们稍后会这样做
+
+149
+00:10:57,950 --> 00:11:02,848
+But I wanna point out to people that you don't have to do it that way, okay?
+但我希望向大家指出的是这并不是必须的，是吧
+
+150
+00:11:02,912 --> 00:11:04,640
+They would like you to sign up.
+他们希望你注册
+
+151
+00:11:04,704 --> 00:11:06,560
+And l think that you would get value if you sign up.
+而且我认为你注册是值得的
+
+152
+00:11:07,000 --> 00:11:11,424
+-But, you can also try local only -It's a little subtle.
+-但是，你只尝试在本地运行也没问题的 -这也不错
+
+153
+00:11:11,808 --> 00:11:15,968
+So you can try local only which means none of your data would be sent up into the cloud.
+因此，你可以尝试只在本地运行，这意味着你的数据不会被发送到云端
+
+154
+00:11:16,224 --> 00:11:20,192
+But it's a data that you can export and put somewhere else.
+但你可以把这些数据导出来放到任意地方
+
+155
+00:11:20,192 --> 00:11:21,408
+Like, you can send a report to someone.
+比如，你可以向某人发送报告
+
+156
+00:11:21,472 --> 00:11:28,512
+Sure, the point is that the cloud can give you a lot more insight, it's gonna apply all the analytics.
+当然，重点是云可以为你提供更多洞察力，它可以提供所有的分析功能
+
+157
+00:11:28,512 --> 00:11:31,008
+And you have kinda an unlimited amount of space in the cloud.
+而且你在云中拥有无限的空间
+
+158
+00:11:31,008 --> 00:11:32,864
+I think it's a gig for free.
+我记得这些都是免费的
+
+159
+00:11:32,864 --> 00:11:37,216
+And then, beyond that, you can do all kinds of things in the cloud you can't do locally
+然后，除此之外，你还可以在云中执行各种不能在本地执行的操作
+
+160
+00:11:37,216 --> 00:11:42,336
+But the point I'm making is that there's no reason not to try it out locally.
+但我要说的是，没有理由不在本地尝试
+
+161
+00:11:42,336 --> 00:11:45,024
+You can do amazing stuff with it even on an airplane.
+这样即使在没有网络的飞机上，你也可以用它做出惊奇的东西
+
+162
+00:11:45,024 --> 00:11:48,544
+-You know what I mean? -So, lets go and run this
+-你知道我的意思吧 -所以，让我们去运行它
+
+163
+00:11:48,608 --> 00:11:52,576
+-And you just added the app inside some -Yeah, that's a good point
+-你刚刚在一些应用内部添加了些什么 -嗯，问得好
+
+164
+00:11:52,640 --> 00:11:59,296
+By running that, I just added that package, and it plugged itself into the pipeline, okay?
+通过执行前面的步骤，我添加了一个包，且它会将它自己添加到 pipeline 中
+
+165
+00:12:01,025 --> 00:12:03,840
+So you didn't have to manually add it into your pipeline at all.
+因此，你不必手动将其添加到 pipeline 中
+
+166
+00:12:03,840 --> 00:12:07,168
+-It's automatically added by default? -Yeah, it's magic.
+-它会默认自动添加 -是的，这很神奇
+
+167
+00:12:07,168 --> 00:12:13,504
+I think we can actually look at the, Let's go out to where that was
+我想实际上我们可以看看它，让我们转到那里
+
+168
+00:12:17,152 --> 00:12:18,624
+Where is that file located?
+这个文件在什么地方呢
+
+169
+00:12:21,888 --> 00:12:25,728
+The csproj is here, and we can open it up
+csproj 在这里，我们可以打开它
+
+170
+00:12:27,456 --> 00:12:29,184
+-There it is -There, okay
+-它就是了 -好的，好的
+
+171
+00:12:29,184 --> 00:12:30,784
+So it's just a package.
+所以它只是一个包
+
+172
+00:12:30,784 --> 00:12:34,752
+And once it gets in there, it's plugged into the pipeline.
+一旦它添加之后，就会添加到 pipeline
+
+173
+00:12:34,752 --> 00:12:36,672
+And it's gonna collect all kinds of stuff.
+它会收集各种东西
+
+174
+00:12:36,672 --> 00:12:40,768
+But now I can go, and really query my application.
+现在我可以去真正地查询我的应用
+
+175
+00:12:40,768 --> 00:12:43,008
+-So it's running right now -Should be clear
+-它现在正在运行 -应该清理一下
+
+176
+00:12:43,750 --> 00:12:46,775
+Let's go and do our create stuff.
+我们去创建一些内容
+
+177
+00:12:49,125 --> 00:12:52,608
+And I'll come in here, and I'll say look, see the numbers getting higher?
+我会进入到这，注意看，这些数字正在逐渐增加
+
+178
+00:12:53,100 --> 00:12:54,336
+Let me do that again.
+让我再来一遍
+
+179
+00:12:54,336 --> 00:12:55,500
+So add a new one.
+添加一个新的东西
+
+180
+00:13:00,000 --> 00:13:01,888
+So these events are happening.
+这些事件正在发生
+
+181
+00:13:03,100 --> 00:13:04,768
+So I can click on that, and this is what you wanna get.
+我可以点击它，这就是你想要的
+
+182
+00:13:05,472 --> 00:13:11,232
+-This is sweet -I can see the number of requests, the number of traces
+-这很贴心 -我可以看到请求以及跟踪的数量
+
+183
+00:13:12,832 --> 00:13:14,432
+You can filter it?
+你可以对它进行过滤吗
+
+184
+00:13:14,496 --> 00:13:22,304
+Yeah, you can filter by, just show me creates, just show me people on this version, just show me people on Chrome
+当然，你可以过滤，只是告诉我创建的信息，或是使用这个版本的人，或是使用 Chrome 的人
+
+185
+00:13:22,304 --> 00:13:28,192
+just show me people on Firefox, just show me things that took longer than a second, right?
+或是使用 Firefox 的人，或是执行超过一秒的事情，对吧
+
+186
+00:13:28,768 --> 00:13:30,688
+You can go through this whole list here.
+你可以在这里查看整个列表
+
+187
+00:13:31,008 --> 00:13:32,608
+And I could look for, look
+我可以进行查找，看
+
+188
+00:13:32,736 --> 00:13:35,488
+And then it has this really good icons, so you know what's right, yeah.
+然后它有这个非常友好的图标，让你你知道什么是对的
+
+189
+00:13:35,488 --> 00:13:38,112
+See, remember how we made adding a customer a critical.
+看，还记得我们是怎样为添加客户添加一条 critical 日志的吗
+
+190
+00:13:38,825 --> 00:13:43,552
+So I can double-click on that individual trace, okay?
+我还能双击这一条独立的追踪，对吧
+
+191
+00:13:43,552 --> 00:13:48,032
+So then, we can see the name of the computer and the operation.
+那么，我们可以看到计算机的名称和操作
+
+192
+00:13:51,650 --> 00:13:53,536
+See, the severity, the operations.
+看，这些是问题的严重程度和操作
+
+193
+00:13:53,536 --> 00:13:57,312
+And I can use, then show me all telemetry for this user.
+我还可以这样做，显示这个用户的所有遥测数据
+
+194
+00:13:57,312 --> 00:14:01,100
+So then you could say, well, I've got a bunch of users hitting this.
+你可以会有这样的情况，比如，我有一堆的用户触发了这个事件
+
+195
+00:14:01,425 --> 00:14:05,696
+This is where the local stuff will fall down at some point and then, you're gonna wanna go into the cloud.
+在这一些有共同点的本地信息将会出现，然后你就知道云端的好处了
+
+196
+00:14:05,696 --> 00:14:08,448
+But one of the great options is, something's occurred.
+但其中一个很好的选项是，当发送一些事时
+
+197
+00:14:08,875 --> 00:14:10,240
+Beyonce has been added.
+Beyonce 已被添加
+
+198
+00:14:10,240 --> 00:14:13,440
+Show me telemetry five minutes before and after.
+向我展示前后5分钟的遥测数据
+
+199
+00:14:14,300 --> 00:14:18,176
+All right, cuz the bug might not be near her, it might be around her.
+对吧，因为 bug 可能不是她的问题，而是环境的问题
+
+200
+00:14:18,176 --> 00:14:19,904
+Around her, elsewhere on the elevator.
+在她周围，或者更远的地方
+
+201
+00:14:22,825 --> 00:14:26,155
+Then, I can go and chart these things over time.
+然后，我可以随着时间的推移去绘制这些东西
+
+202
+00:14:26,155 --> 00:14:27,499
+Again, this is all local.
+同样，这都是本地的
+
+203
+00:14:27,499 --> 00:14:28,461
+This is the stuff you get locally.
+这是你在当地获得的东西
+
+204
+00:14:28,461 --> 00:14:34,176
+And then when you wanna go beyond that, there's all kinds of great stuff in the Application Insights Portal.
+然后，当你想要更多的信息时， Application Insights 门户中有各种各样的好东西
+
+205
+00:14:34,240 --> 00:14:35,525
+And this would link you, right?
+这会帮你打开一个链接，对吧
+
+206
+00:14:35,525 --> 00:14:37,760
+Link you right there, and you can go and check it out.
+链接就在那里，你可以去试一下
+
+207
+00:14:37,760 --> 00:14:43,840
+And we will explore a bunch of that stuff in another talk, see?
+我们将在另一个谈话中探讨一堆这些东西，看这儿
+
+208
+00:14:44,100 --> 00:14:49,408
+Here, when you sign in, you can pick your resource and then, see dependencies
+在这里，当你登录时，你可以选择你的资源，然后查看依赖项
+
+209
+00:14:49,408 --> 00:14:53,120
+how your application talks to the database, calls another web API
+你的应用如何与数据库交互，调用另一个 Web API
+
+210
+00:14:53,184 --> 00:14:55,744
+Stuff you wouldn't be able to do if you didn't put it in the cloud
+如果你没有把它放在云中，你就无法做到
+
+211
+00:14:55,808 --> 00:14:59,027
+And here I've just added a filter, and I've said Create
+在这里，我刚刚添加了一个过滤器，我只选中了 Create 页面的数据
+
+212
+00:14:59,027 --> 00:15:00,225
+I can turn that filter off
+我可以关闭那个过滤器
+
+213
+00:15:01,125 --> 00:15:03,360
+Just show me the longest ones
+只展示花时最长的操作
+
+214
+00:15:03,750 --> 00:15:04,960
+Filter on those.
+过滤掉那些
+
+215
+00:15:05,728 --> 00:15:07,342
+There's the record, there you go.
+这些就是记录，你可以进一步查看
+
+216
+00:15:07,342 --> 00:15:10,144
+One of the requests took a long time, click on that.
+其中一个请求花了很长时间，点击它
+
+217
+00:15:10,550 --> 00:15:12,192
+That was the initial get.
+这是最初的请求
+
+218
+00:15:12,256 --> 00:15:15,776
+The very first time it compiled that page.
+它第一次编译该页面
+
+219
+00:15:16,544 --> 00:15:17,632
+Isn't that fantastic?
+这样是不是很棒
+
+220
+00:15:17,632 --> 00:15:20,433
+That is fantastic, that's pretty impressive.
+这真是太棒了，令人印象深刻
+
+221
+00:15:20,433 --> 00:15:21,900
+I really like Application Insights.
+我非常喜欢 Application Insights
+
+222
+00:15:22,496 --> 00:15:26,450
+Cool, so, I think that puts us in a pretty good spot, doesn't it?
+很酷，所以，我觉得这让我们处于一个很好的观察视角，不是吗
+
+223
+00:15:26,450 --> 00:15:33,312
+We've got a nice little cloud application, basic Bootstrap, it's talking to Application Insights, we've got logging.
+我们完成了一个不错的小型云应用，基本的 Bootstrap ，它正在与 Application Insights 交互，我们已经有了日志记录
+
+224
+00:15:33,312 --> 00:15:36,064
+I think that's a pretty good beginner start, wouldn't you say?
+我认为这是一个非常好的初学者入门教程，你不觉得嘛
+
+225
+00:15:36,128 --> 00:15:39,776
+Yeah, we've accomplished quiet a bit over the past couple of hours.
+是的，在过去的几个小时里，我们已经完成了很多的工作
+
+226
+00:15:39,776 --> 00:15:40,544
+Where should they go now?
+那他们现在应该去哪
+
+227
+00:15:40,608 --> 00:15:42,976
+-The docs? -The docs, go to the docs.
+-文档 -文档，去看文档吧
+
+228
+00:15:42,976 --> 00:15:45,728
+Go to docs.microsoft.com, get started.
+转到 docs.microsoft.com ，开始吧
+
+229
+00:15:45,728 --> 00:15:49,696
+Great samples, great interactive experiences.
+那有很棒的样例以及很棒的互动体验
+
+230
+00:15:49,696 --> 00:15:53,792
+And if you see this, send Hanselman an applause.
+如果你看到了这里，请给 Hanselman 一个掌声
+
+231
+00:15:53,792 --> 00:15:56,600
+Yeah, say applause to us on Twitter.
+是的，在推特上给予我们鼓励
+
+232
+00:15:56,600 --> 00:15:57,425
+On Twitter.
+在 Twitter 上
+
+233
+00:15:57,425 --> 00:15:59,104
+Myself and Maria.
+我和 Maria
+
+234
+00:15:59,104 --> 00:16:02,880
+And be sure to explore all the different great courses that are here at Microsoft Virtual Academy.
+并且一定要浏览 Microsoft Virtual Academy 中的所有不同的优秀课程
+
+235
+00:16:02,880 --> 00:16:05,056
+This is just beginner ASP.NET Core.
+这只是对于初学者的 ASP.NET Core 教程
+
+236
+00:16:05,056 --> 00:16:13,888
+We've got beginner C#, we've got all sorts of great cloud-based content, there's intermediate and advanced and on and on.
+我们有面向初学者的 C＃ ，各种基于云的很棒的内容，以及中级和高级的内容等等
+
+237
+00:16:14,016 --> 00:16:17,600
+Thank you so much for spending your day with us here on Microsoft Virtual Academy.
+非常感谢你在 Microsoft Virtual Academy 上与我们共度一天
+
