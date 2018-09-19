@@ -1,7 +1,7 @@
 ﻿1
 00:00:00,000 --> 00:00:01,041
 翻译+校对 - 遗落星痕 Ice北极熊
-时间轴 - Ice北极熊
+时间轴 - Ice 北极熊
 
 2
 00:00:01,041 --> 00:00:01,761
@@ -11,7 +11,7 @@ Hey, friends!
 3
 00:00:01,761 --> 00:00:04,113
 All right, so we have made a console app.
-现在我们已经制作了一个控制台应用程序
+现在我们已经制作了一个控制台应用
 
 4
 00:00:04,641 --> 00:00:09,489
@@ -55,8 +55,8 @@ There's just, Hello Scott.
 
 12
 00:00:35,302 --> 00:00:42,797
-Yeah, we need to when you're learning about a Web Framework, you want to do something on the web. Absolutely
-嗯，如果你正在学习 Web 框架的话，你肯定会想通过 Web 做一些有趣的事嘛
+-Yeah, we need to when you're learning about a Web Framework, you want to do something on the web. -Absolutely
+-嗯，如果你正在学习 Web 框架的话，你肯定会想通过 Web 做一些有趣的事嘛 -当然喽
 
 13
 00:00:42,797 --> 00:00:44,189
@@ -71,7 +71,7 @@ I just wanna juxtapose the difference between the two, so let's take a look at t
 15
 00:00:46,603 --> 00:00:47,446
 all right?
-好吗？
+好吗
 
 16
 00:00:47,446 --> 00:00:49,654
@@ -90,8 +90,8 @@ Let's do it.
 
 19
 00:00:52,726 --> 00:00:58,822
--That you can create your web application and a directory at the same time?Are you sure?
--你可以在同时创建你的 Web 应用和目录吗？你确定？
+-That you can create your web application and a directory at the same time? -Are you sure?
+-你可以在同时创建你的 Web 应用和目录吗 -你确定吗
 
 20
 00:00:58,822 --> 00:01:00,310
@@ -100,8 +100,8 @@ I can do it.Cuz I like making directories.
 
 21
 00:01:00,310 --> 00:01:02,758
-I know, I know, but like try something new. All right, all right.
-我知道，但尝试一下新的东西总是好的吧，对吧
+-I know, I know, but like try something new. -All right, all right.
+-我知道，但尝试一下新的东西总是好的吧 -对吧
 
 22
 00:01:02,758 --> 00:01:04,006
@@ -125,13 +125,13 @@ So we, in the previous video,we looked at the different .NET templates that are 
 
 26
 00:01:18,598 --> 00:01:21,190
-Web is just one of the templates.So we looked at console,
-Web 只是其中的一个模板，来看一下控制台
+Web is just one of the templates. So we looked at console, and now we're looking at web,
+Web 只是其中的一个模板，我们已经了解了 console ，现在我们需要看下 web
 
 27
 00:01:21,190 --> 00:01:25,030
-and now we're looking at web, just for people who might be tuning in now. Okay.
-稍等一下，我觉得有必要等一下屏幕前的小伙伴。好的
+just for people who might be tuning in now. -Okay.
+稍等一下，我觉得有必要等一下屏幕前的小伙伴。 -好的
 
 28
 00:01:25,030 --> 00:01:25,942
@@ -150,12 +150,12 @@ the template core empty, been created successfully, and it put in a folder calle
 
 31
 00:01:34,054 --> 00:01:37,510
-So I like to go and make the directory, and then go into the directory, and you're
+So I like to go and make the directory, and then go into the directory,
 你喜欢先创建目录，然后进入目录
 
 32
 00:01:37,510 --> 00:01:42,577
-saying I can go -o, it'll make the folder and name the thing,all at the same time At the same time.
+and you're saying I can go -o, it'll make the folder and name the thing,all at the same time At the same time.
 但是使用 -o 命令，它会同时创建文件夹和同名项目，这两任务同时给你整好了
 
 33
@@ -196,28 +196,27 @@ Which is this one this is an empty one. Anyway there's different web options tha
 40
 00:02:07,222 --> 00:02:11,062
 But right now we made the simplest possible web application.
-但现在我们完成了最简单的 Web 应用程序
+但现在我们完成了最简单的 Web 应用
 
 41
 00:02:11,062 --> 00:02:16,341
 Exactly, just like the step just above a console right at the line. Okay Just right above it
-确切的说，创建的时候只用了命令行的一行命令就给解决了
+确切的说，创建的时候只用了一行命令就给解决了
 
 42
 00:02:16,341 --> 00:02:18,885
 We can go into let's go into the mywebapp, and
-我们可以进入这个程序看看，让我们进入 mywebapp （目录），然后
+让我们来看看这个程序，先进入 mywebapp （目录），然后
 
 43
 00:02:18,885 --> 00:02:25,797
 I see a csproj which makes sense, I see a Program.cs,
-我看到一个 csproj （文件），这是必须有的哈，我还看到了 Program.cs
+我看到了 csproj ，这是必须有的哈，我还看到了 Program.cs
 
 44
 00:02:25,797 --> 00:02:30,549
 which I had before. But this is something different. I see a Startup.cs and a wwwroot.
 之前我们就见过这些文件了，但是这些是与之前不同的。我看到 Startup.cs 和 wwwroot
- 
 
 45
 00:02:30,549 --> 00:02:33,429
@@ -237,7 +236,7 @@ It is better, so
 48
 00:02:38,037 --> 00:02:42,981
 let's go into there.Now, this is interesting, by the way, I tagged code dot
-让我们进入（目录），这就好玩了，顺便说一下，我键入的是 code .
+让我们在这打开，这就好玩了，顺便说一下，我键入的是 code .
 
 49
 00:02:42,981 --> 00:02:45,237
@@ -257,7 +256,7 @@ there, it also opened my previous windows.
 52
 00:02:50,757 --> 00:02:57,045
 VS Code likes to put things back the way it was so it's restoring my session.
-VS Code 能够记录你的工作状态并且恢复了上次的会话
+VS Code 能够记录你的工作状态并且恢复上次的会话
 
 53
 00:02:57,429 --> 00:03:00,309
@@ -277,7 +276,7 @@ required assets to build, it's totally okay to say yes,
 56
 00:03:08,853 --> 00:03:13,797
 because we wanna be able to debug our web application, all right
-因为我们总希望能够调试我们的 Web 应用程序，对吧
+因为我们总希望能够调试我们的 Web 应用，对吧
 
 57
 00:03:13,989 --> 00:03:15,957
@@ -287,7 +286,7 @@ So I noticed you have a couple of things down there
 58
 00:03:15,957 --> 00:03:17,925
 are those additional Yeah, that's a great point.
-是那些东西确实是一个值得关注的地方
+是那些确实是一个值得关注的地方
 
 59
 00:03:17,925 --> 00:03:21,957
@@ -297,7 +296,7 @@ So down here, I've got some extensions,these are like a little accordion extensi
 60
 00:03:21,957 --> 00:03:28,725
 If I want to play with Docker, or if I'm gonna be using Git, so GitLens and Docker are extensions.
-如果我想玩 Docker ，或者如果我要使用 Git ，那么 GitLens 和 Docker 是（所需的）扩展
+如果我想玩 Docker ，或者如果我要使用 Git ，那么 GitLens 和 Docker 就是所需的扩展
 
 61
 00:03:28,725 --> 00:03:36,549
@@ -307,7 +306,7 @@ If I click here on the left, you can see my installed extensions,and recommended
 62
 00:03:36,885 --> 00:03:41,541
 And I could go and search for extensions here as opposed to using the web.
-我可以在这里搜索扩展，而不是使用网页版
+我可以在这里搜索扩展，而不必使用网页版
 
 63
 00:03:42,165 --> 00:03:44,085
@@ -477,12 +476,12 @@ And when we say Using System, that was what allowed us to type Console.WriteLine
 96
 00:05:34,620 --> 00:05:41,292
 But here this is a web application, and we have other stuff, we've brought in some threading and
-但这是一个 Web 应用程序，并且还加入了其他的东西，我们引入了一些有关线程以及
+但这是一个 Web 应用，并且还加入了其他的东西，我们引入了一些有关线程以及
 
 97
 00:05:41,292 --> 00:05:44,844
 some IO stuff, but this is the ASP.NET Core stuff that's added.
-IO 的东西，这些就是 ASP.NET Core 所添加的东西
+IO 相关的东西，这些就是 ASP.NET Core 所添加的东西
 
 98
 00:05:44,844 --> 00:05:48,252
@@ -567,42 +566,42 @@ totally incorrect.
 114
 00:06:32,518 --> 00:06:36,934
 so it actually switched it over to a Console Application.
-所以它实际上它将形如一个控制台应用程序
+所以它实际上就像是一个控制台应用
 
 115
 00:06:36,934 --> 00:06:39,286
-Right. Well, it didn't really switch it
-对。 其实，它并没有真正地发生改变
+Right. Well, it didn't really switch it over
+对的。 其实，它并没有真正地发生改变
 
 116
 00:06:39,286 --> 00:06:40,630
-over because it always was a Console Application.
-因为它总是一个控制台应用程序
+because it always was a Console Application.
+因为它终究是一个控制台应用
 
 117
 00:06:41,302 --> 00:06:44,902
 The idea being that they are the same thing, right?
-这和他们想的是同一件事，对吗
+可以把他们当作一样的东西，是吧
 
 118
 00:06:44,902 --> 00:06:49,750
 A .NET application has a main entry point, and
-.NET 应用程序有一个主要入口点
+.NET 应用程序有一个主入口点
 
 119
 00:06:49,750 --> 00:06:52,198
 then it does some stuff.
-能做一些程序
+然后它能完成一些工作
 
 120
 00:06:52,246 --> 00:06:55,462
-And I just wanted to kinda juxtapose that it can do some
-我只是想说明它可以做一些程序
+And I just wanted to kinda juxtapose that it can do some consoley stuff
+我只是想说明它可以作为控制台应用
 
 121
 00:06:55,462 --> 00:06:58,630
-consoley stuff or it can do some webby stuff.
-控制台的程序，或者做一些 Web 的程序
+or it can do some webby stuff.
+也可以作为 Web 应用
 
 122
 00:06:58,630 --> 00:06:59,878
@@ -612,7 +611,7 @@ So let's do some webby stuff.
 123
 00:06:59,878 --> 00:07:01,654
 Like what would it look like out of the box?
-就像现成的盒子一样
+就像是开箱即用
 
 124
 00:07:01,846 --> 00:07:03,334
@@ -687,7 +686,7 @@ I guess I could or not.
 138
 00:07:50,614 --> 00:07:52,582
 Or not, okay.
-不可以，好吧 （ Ps ：其实是可以的，按住 Ctrl 再点击）
+不可以，好吧 （注：其实是可以的，按住 Ctrl 再点击）
 
 139
 00:07:52,582 --> 00:07:54,550
@@ -707,7 +706,7 @@ It should work.
 142
 00:07:57,670 --> 00:07:58,774
 Except that's Hello World
-除了 Hello World
+除了那个 Hello World
 
 143
 00:07:58,774 --> 00:08:00,070
@@ -777,7 +776,7 @@ you can see here that the Startup text here is in blue,
 156
 00:08:27,286 --> 00:08:31,126
 that means it's not a, it's a keyword basically.
-这意味着它不是一个，它像是一个关键词
+这意味着它有些不同，它像是一个关键词
 
 157
 00:08:31,126 --> 00:08:37,318
@@ -792,7 +791,7 @@ This class's name is not magic
 159
 00:08:42,166 --> 00:08:45,478
 if I changed it to Foo, It would not-
-如果我将它改为Foo， 它会不会
+如果我将它改为 Foo ， 它会不会
 
 160
 00:08:45,478 --> 00:08:46,918
@@ -822,7 +821,7 @@ There we go
 165
 00:09:13,654 --> 00:09:15,334
 Pause, runs just fine.
-没有输出错误，运行成功了
+它停了一下，运行成功了
 
 166
 00:09:15,622 --> 00:09:20,038
@@ -832,7 +831,7 @@ The point there being that the name Startup isn't magic.
 167
 00:09:20,038 --> 00:09:21,375
 It isn't magic. Right.
-这不是魔术，对
+这并不是魔术
 
 168
 00:09:21,375 --> 00:09:22,630
@@ -921,8 +920,8 @@ A reserved word.
 
 185
 00:10:05,494 --> 00:10:07,942
-It should be, it should be. But its not, sadly.
-它一定是的。可惜的是，它并不是
+-It should be, it should be. -But its not, sadly.
+-它一定是的。-可惜的是，它并不是
 
 186
 00:10:07,942 --> 00:10:08,998
@@ -936,12 +935,12 @@ It's saying use this startup type.
 
 188
 00:10:10,438 --> 00:10:14,710
-And that startup type has to have certain Method s.
+And that startup type has to have certain methods.
 并且该启动类型必须具有某些方法
 
 189
 00:10:14,710 --> 00:10:17,830
-So Beyonce, in this case, has to have a Method
+So Beyonce, in this case, has to have a method
 所以 Beyonce ，在这种情况下，必须有一种方法
 
 190
@@ -967,7 +966,7 @@ So what's going on in these?
 194
 00:10:30,358 --> 00:10:34,390
 We've got- And you have the nice little instructions at the top, which I've always appreciated.
-我们在界面的顶端会有一些提示，这是很赞的功能
+在上方我们会有一些提示，这是很赞的功能
 
 195
 00:10:34,390 --> 00:10:38,326
@@ -981,23 +980,23 @@ So this Method it's called by the runtime and
 
 197
 00:10:42,262 --> 00:10:48,262
-it adds services to a collection called the ServiceCollection.
-它将服务添加到名为 ServiceCollection 的集合中
+it adds services to a collection called the services collection.
+它将服务添加到名为 services 的集合中
 
 198
 00:10:48,262 --> 00:10:52,294
 And services are just stuff you might wanna use later in your app
-而服务是指你稍后想要在程序中使用的任意程序
+而服务是指你稍后想在程序中使用的任意内容
 
 199
 00:10:52,294 --> 00:10:54,934
 So it could be things like authentication,
-服务可以包括像是认证之类的
+可以是认证之类的
 
 200
 00:10:54,934 --> 00:10:58,630
 so using a service like Facebook or Google, like which we'll
-使用像 Facebook 或 Google 这样的服务的时候，我们可能会用到
+在使用像 Facebook 或 Google 服务的时候，我们可能会用到
 
 201
 00:10:58,630 --> 00:11:02,134
@@ -1027,7 +1026,7 @@ different kinds of those are all other third party things that could be added on
 206
 00:11:17,734 --> 00:11:24,454
 So those services get configured here,get added to this collection.
-所以这些服务在这里配置被添加到这个集合
+所以这些服务在这里配置并被添加到这个集合中
 
 207
 00:11:24,454 --> 00:11:25,702
@@ -1036,13 +1035,13 @@ Yeah. And it's a little confusing
 
 208
 00:11:25,702 --> 00:11:29,302
-because you've got ConfigureServices.And then you have Configure.
-因为你有 ConfigureServices 还有 Configure
+-because you've got ConfigureServices. -And then you have Configure.
+-因为你即有 ConfigureServices -还有 Configure
 
 209
 00:11:29,350 --> 00:11:32,374
 Like that is something that confused me when I first started.
-就像我第一次接触时一样，让我一开始感到非常困惑
+就像我初学时一样，这让我非常困惑
 
 210
 00:11:32,374 --> 00:11:33,430
@@ -1052,7 +1051,7 @@ Yeah, it is confusing.
 211
 00:11:33,430 --> 00:11:35,830
 This is the get everything ready
-这是把一切都准备就绪
+这是为了做好一切准备
 
 212
 00:11:35,830 --> 00:11:38,806
@@ -1061,7 +1060,7 @@ load up the collection of stuff I want to play with.
 
 213
 00:11:39,382 --> 00:11:43,894
-And then configure them.Set them up.
+And then configure them. Set them up.
 然后配置它们，设置好
 
 214
@@ -1097,7 +1096,7 @@ then when you get an exception you'd like a nice friendly page.
 220
 00:12:09,430 --> 00:12:11,590
 Okay, not a page of horror.
-嗯哼，而不是满页的恐惧
+嗯嗯，而不是满页的恐惧
 
 221
 00:12:11,638 --> 00:12:13,654
@@ -1122,12 +1121,12 @@ And there it is
 225
 00:12:22,918 --> 00:12:23,926
 There it is.
-对，它就在那
+哦，那就是啊
 
 226
 00:12:25,366 --> 00:12:29,358
 So we've change that text, and dotnet run.
-所以我们已经改变了这个文本，并且运行 `dotnet run`
+所以我们已经改变了这个文本，并且运行 dotnet run
 
 227
 00:12:30,475 --> 00:12:31,790
@@ -1186,13 +1185,13 @@ One of the things that, when you are working, so
 
 238
 00:12:51,550 --> 00:12:56,925
-we've seen hello world or hello beehive in honor of Beyonce.
-我们已经看见了 hello world 或者是 hello beehive 以纪念 Beyonce
+we've seen hello world or hello Beyhive in honor of Beyonce.
+我们已经看见了 Hello world 或者是 Hello Beyhive 以纪念 Beyonce
 
 239
 00:12:56,925 --> 00:13:00,200
 But as a person who's building their webpage for
-但是，作为一个第一次建立网页的人
+但对第一次建立网页的人来说
 
 240
 00:13:00,200 --> 00:13:04,012
@@ -1232,7 +1231,7 @@ gonna break down pretty quickly.
 247
 00:13:17,212 --> 00:13:17,740
 Yeah. Right.
-是的 对
+是这样的
 
 248
 00:13:17,740 --> 00:13:20,716
@@ -1242,7 +1241,7 @@ So in the next section, we're going to go an add some pages
 249
 00:13:20,716 --> 00:13:23,644
 and build, take this, and we're gonna start from empty, though.
-我们将从零开始
+以及如何构建和运行，我们将从零开始
 
 250
 00:13:23,644 --> 00:13:24,892
@@ -1257,12 +1256,12 @@ we're gonna build on top of empty.
 252
 00:13:25,948 --> 00:13:27,340
 So we've seen a console app,
-所以我们写了一个控制台应用程序
+所以我们写了一个控制台应用
 
 253
 00:13:27,340 --> 00:13:29,020
 we've seen an app that does a single string,
-我们已经写了一个应用程序可以返回单个字符串
+我们已经写了一个应用可以返回单个字符串
 
 254
 00:13:29,020 --> 00:13:30,575
