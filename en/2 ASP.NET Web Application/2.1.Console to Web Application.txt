@@ -1,181 +1,120 @@
 ﻿Hey, friends!
 All right, so we have made a console app.
-Yep.
-We have explored the documentation.
-We've installed the .NET Core SDK and Visual Studio Code.
-Yes.
-All right, next, let's make a Web Application.
+We have explored the documentation.We've installed the .NET Core SDK and Visual Studio Code.
+All right, next, let's make a Web Application
 Exactly.
-All right, so if we look at my screen here,
-we have the folder that I have my console app.
+All right, so if we look at my screen here,we have the folder that I have my console app.
 And so let's so we have to create a brand new folder.
-All right.    Yeah.
-I just wanna point out that
-all that did was a WriteLine, and it output it to the console,
+All right. Yeah.
+I just wanna point out that all that did was a WriteLine, and it output it to the console
 not particularly impressive, there's no web browser here.
 There's just, Hello Scott.
-Yeah, we need to,
-when you're learning about a Web Framework, you want to do
-something on the web. Absolutely,
-[CROSSTALK] So let's do it.
-I just wanna juxtapose
-the difference between the two, so let's take a look at that,
-all right?    Yeah.
+Yeah, we need to when you're learning about a Web Framework, you want to do something on the web. -Absolutely
+So let's do it.
+I just wanna juxtapose the difference between the two, so let's take a look at that, all right? -Yeah
 So what do you want me to do?
 So can I teach you a new trick?
 Let's do it.
-That you can create
-your web application and
-a directory at the same time?    Are you sure?
-I can do it.
-Cuz I like making directories.
-I know, I know, but
-like try something new.    All right, all right.
-Try something
-new, okay.    I'll try.
+That you can create your web application and a directory at the same time? -Are you sure?
+I can do it.Cuz I like making directories.
+I know, I know, but like try something new. -All right, all right, I'll try.
 So dotnet new web -o.
--o.
-Yeah.
 And let's call it mywebapp.
-So we, in the previous video,
-we looked at the different .NET templates that are available.
-Web is just one of the templates.
-So we looked at console,
-and now we're looking at web, just for people who might
-be tuning in now.    Okay.
+So we, in the previous video,we looked at the different .NET templates that are available.
+Web is just one of the templates. So we looked at console, and now we're looking at web,
+just for people who might be tuning in now. -Okay.
 So hit Enter.
-So it says,
-the template core empty, been created successfully, and it put
-in a folder called mywebapp. So I like to go and
-make the directory, and then go into the directory, and you're
-saying I can go -o, it'll make the folder and name the thing,
-all at the same time    At the same time.
-And if you think about it,
-if somebody's following this outside of Windows,
-the way they created directory there might be a different.
-That is a valid point,
-you're right cuz I said, md and they might say, mkdir
-Yeah.
+So it says the template core empty, been created successfully, and it put in a folder called mywebapp.
+So I like to go and make the directory, and then go into the directory,
+and you're saying I can go -o, it'll make the folder and name the thing,all at the same time At the same time.
+And if you think about it
+if somebody's following this outside of Windows,the way they created directory there might be a different.
+That is a valid point you're right cuz I said, md and they might say, mkdir
 And that's a good point.
-All right, and
-when I did that, just as you said, we did a .NET new web.
-Yeah.
-Which is this one,
-this is an empty one.    Anyway,
-there's different web options that we'll explore later.
-But right now we made
-the simplest possible web application.
-Exactly, just like the step,
-just above
-a console right at the line.    Okay.
-Just right above it.
-We can go into,
-let's go into the mywebapp, and
-I see a csproj which makes sense, I see a Program.cs,
-which I had before.    But
-this is something different.    I see a Startup.cs and
-a wwwroot. Now,
-we could poke around here at the command line, but you showed me
-that VS code is better.    It's pretty good.
-It is better, so
-let's go into there.
-Now, this is interesting, by the way, I tagged code dot,
+All right, and when I did that, just as you said, we did a .NET new web.
+Which is this one this is an empty one. Anyway there's different web options that we'll explore later.
+But right now we made the simplest possible web application.
+Exactly, just like the step just above a console right at the line. Okay Just right above it
+We can go into let's go into the mywebapp,
+and I see a csproj which makes sense, I see a Program.cs,
+which I had before. -But this is something different. -I see a Startup.cs and a wwwroot.
+Now we could poke around here at the command line, but you showed me
+that VS code is better.
+It's pretty good.
+It is better, so let's go into there.
+Now, this is interesting, by the way, I tagged code dot
 it opened up my web application.
 It's worth pointing out that if you notice in the background
 there, it also opened my previous windows.
-VS code likes to put things back the way it was so
-it's restoring my session.
+VS Code likes to put things back the way it was so it's restoring my session.
 I'm gonna go and close the console app from earlier.
-And we'll just say, there's that warning again,
-required assets to build, it's totally okay to say yes, because
-we wanna be able to debug our web application, all right.
-So I noticed you have a couple of things down there,
-are those additional    Yeah, that's a great point.
-So down here, I've got some extensions,
-these are like a little accordion extensions.
-If I want to play with Docker, or if I'm gonna be using Git, so
-GitLens and Docker are extensions.
-If I click here on the left, you can see my installed extensions,
-and recommended extensions.
-And I could go and search for
-extensions here as opposed to using the web.
-All right.
+And we'll just say, there's that warning again
+required assets to build, it's totally okay to say yes,
+because we wanna be able to debug our web application, all right
+So I noticed you have a couple of things down there are those additional.
+Yeah, that's a great point.
+So down here, I've got some extensions,these are like a little accordion extensions
+If I want to play with Docker, or if I'm gonna be using Git, so GitLens and Docker are extensions.
+If I click here on the left, you can see my installed extensions,and recommended extensions.
+And I could go and search for extensions here as opposed to using the web.
 Cuz I was just moving them out of the way.
-All right, cuz I just noticed something different, so
-I was asking questions for the people at home.
+All right, cuz I just noticed something different
+so I was asking questions for the people at home.
 Definitely useful.
 So let's just move that out of the way, here we go.
 So Program.cs, this is a little bit bigger than it was before.
-Cuz it's bringing a bunch of stuff that if we look at
-the previous one,
+Cuz it's bringing a bunch of stuff that if we look at the previous one
 while we putting much only had using systems and maybe IO.
 Actually, that's a good point, let's open up the csproj.
-Yeah.    If you recall earlier,
-our SDK was Microsoft.NET.Sdk.Web,
-this is a web application.
-This is new, indicating that there as a folder called,
-wwwroot, that we'll talk about in a little bit.
-And we have our first package reference, Asp.NetCore,
+Yeah. -If you recall earlier
+our SDK was Microsoft.NET.Sdk.Web,this is a web application.
+This is new, indicating that there as a folder called,wwwroot, that we'll talk about in a little bit.
+And we have our first package reference, Asp.NetCore
 specifically .All.
 So literary everything?
-Right.
-Now, it could in fact be listed one item at a time,
+Right. Now, it could in fact be listed one item at a time,
 ASP.NET Core broken up in a lot of different pieces.
 So it's kind of a cafeteria plan.
-Okay.    This is a package of
-packages, so rather than having a list of dozens of different
-packages, and having to pick ones I want, ones I don't want,
-this makes it much, much simpler.
-It just gives me everything by default.
+Okay. -This is a package of packages, so rather than having a list of dozens of different
+packages, and having to pick ones I want, ones I don't want
+this makes it much, much simpler.It just gives me everything by default.
 So for learning, it's easier for getting started, it's easier.
-If you're familiar with ASP.NET,
-it's easier because everything you expect is there.
-I was also, one thing I've also noticed,
-it is one version now.
+If you're familiar with ASP.NET,it's easier because everything you expect is there.
+I was also, one thing I've also noticed,it is one version now
 It's nice and simple, you just say, I want 2.0 and
 it brings in everything that hangs off of it.
-Of 2.0, okay.
+Of 2.0, okay
 I call it a metapackage or a package of packages.
 I like that term, packages of packages.
 Yeah, nice and simple.
 So if we go into Program.cs, you saw before we had Using System
-Yep.
-And when we say Using System, that was what allowed us to type
-Console.WriteLine cuz System.Console.WriteLine.
-But here this is a web application, and
-we have other stuff, we've brought in some threading and
+And when we say Using System, that was what allowed us to type Console.WriteLine cuz System.Console.WriteLine.
+But here this is a web application, and we have other stuff, we've brought in some threading and
 some IO stuff, but this is the ASP.NET Core stuff that's added.
-What's worth pointing out those,
+What's worth pointing out those
 our Main here is different than our console Main.
 Before we had a Console.WriteLine,
 and that was it.
-Yep.
-And actually, this is totally off-script,
+And actually, this is totally off-script
 which implies of course, that we actually have a script, right?
-[LAUGH] I wonder if I could do this.
-Okay, I just have a Main,
+I wonder if I could do this.
+Okay, I just have a Main
 and I've commented out all the web stuff.
 So, what would happen?
-Let's find out.
-I wonder if it'll work.
+Let's find out.I wonder if it'll work.
 Remember I've typed, control~?
-I think it's tilda.
-I think if you say, tildi,
+I think it's tilda.I think if you say, tildi
 you might have an accent of some sort, yeah.
 I think it would be an accent that is completely and
 totally incorrect.
-Yes.
-Yes.
-Okay,
 so it actually switched it over to a Console Application.
-Right. Well, it didn't really switch it
-over because it always was a Console Application.
-Yes [LAUGH].
+Right. Well, it didn't really switch it over
+because it always was a Console Application.
 The idea being that they are the same thing, right?
 A .NET application has a main entry point, and
 then it does some stuff.
-And I just wanted to kinda juxtapose that it can do some
-consoley stuff or it can do some webby stuff.
+And I just wanted to kinda juxtapose that it can do some consoley stuff
+or it can do some webby stuff.
 So let's do some webby stuff.
 Like what would it look like out of the box?
 Yeah, well, that's a good point.
@@ -184,17 +123,17 @@ this time having changed it to say BuildWebHost.
 And it's gonna run and build.
 And it says a couple of things.
 It's running in production.
-It's listening on localhost 5000, so
+It's listening on localhost:5000, so
 we have started a little web server.
-Okay.
+Okay
 Now it says, listening at localhost:5000.
 Let's open up browser, and let's localhost:5000 it.
 Can't you also just click on the link within the terminal?
 Yeah, that is a good point.
-I guess I could [LAUGH] or not.
+I guess I could or not.
 Or not, okay.
 I don't know, yes.
-[LAUGH] It should.
+It should.
 It should work.
 Except that's Hello World
 That's Hello World!, exactly.
@@ -206,125 +145,105 @@ Yeah, let's find out, so let's follow it through.
 So BuildWebHost passes these arguments in and says .Run.
 What does BuildWebHost do?
 That's right here.
-Yep.
-Looks like it CreatesDefaultBuilder, and
-then it says, UseStartup.
-And then    And
+Yep
+Looks like it CreatesDefaultBuilder, and then it says, UseStartup.
+And then And
 you can see here that the Startup text here is in blue,
 that means it's not a, it's a keyword basically.
 This here, these word, Startup, is telling it used this class.
-This class's name is not magic,
-if I changed it to Foo,    It would not-
-Well, let's find out.
-Let's go ahead and change it to Foo,
-hit dotnet run, See what happens.
+This class's name is not magic
+if I changed it to Foo, It would not-
+Well, let's find out
+Let's go ahead and change it to Foo,hit dotnet run, See what happens.
 The type or namespace Startup could not be found, okay?
 But what if I change this to Foo?
-There we go.
+There we go
 Pause, runs just fine.
 The point there being that the name Startup isn't magic.
-It isn't magic.    Right.
+It isn't magic. Right.
 It does not have to be Startup.
 Nope, what it's saying is, again if we look at the docs,
 and this is what's nice with Visual Studio code,
 it says specify the startup type to be used by the web host.
 So it's just saying go and use this class.
 And this class here that we called Startup or Foo, or
-whatever, has to be just be shaped a certain way,
+whatever, has to be just be shaped a certain way
 it has to look a certain way.
-Okay, so you could call it Beyonce,
+Okay, so you could call it Beyonce
 you could call it anything.
 Yeah, it has to be a Beyonce.
-[LAUGH] I am afraid I should probably have [FOREIGN],
+I am afraid I should probably have
 but we'll just have Beyonce without an accent.
 And it should work just fine.
 Beyonce should be a key word.
 It should be.
 A reserved word.
-It should be, it should be.    But its not, sadly.
+-It should be, it should be. -But its not, sadly.
 So this is an important point though.
 It's saying use this startup type.
-And that startup type has to have certain  Method s.
-So Beyonce, in this case, has to have a  Method 
+And that startup type has to have certain methods.
+So Beyonce, in this case, has to have a method
 called ConfigureServices and one called Configure.
-Okay.
 And that's the requirements for Beyonce in this context for
 the startup class.
 So what's going on in these?
-We've got-    And you have the nice
-little instructions at the top, which I've always appreciated.
-Yeah, I like it when templates include a little bit
-of instruction, a little bit of comments.
-So this  Method  it's called by the runtime and
-it adds services to a collection called the ServiceCollection.
-And services are just stuff you might wanna use
-later in your app.
+We've got- And you have the nice little instructions at the top, which I've always appreciated.
+Yeah, I like it when templates include a little bit of instruction, a little bit of comments.
+So this Method it's called by the runtime and
+it adds services to a collection called the services collection.
+And services are just stuff you might wanna use later in your app
 So it could be things like authentication,
 so using a service like Facebook or Google, like which we'll
-look at later dates, but-    So if I just type services.,
+look at later dates, but- So if I just type services.,
 you've got AddAuthentication, AddCaching,
 AddIdentity, AddLogin, AddMemory, add whatever.
-And even things that don't appear like you pointed out.
-Like maybe Facebook authentication,
-different kinds of those are all other third party things that
-could be added on as well.
-So those services get configured here,
-get added to this collection.
-Yeah.    And it's a little confusing
-because you've got ConfigureServices.
-And then you have Configure.
+And even things that don't appear like you pointed out.Like maybe Facebook authentication
+different kinds of those are all other third party things that could be added on as well.
+So those services get configured here,get added to this collection.
+Yeah. And it's a little confusing
+-because you've got ConfigureServices. -And then you have Configure.
 Like that is something that confused me when I first started.
 Yeah, it is confusing.
-This is the get everything ready,
+This is the get everything ready
 load up the collection of stuff I want to play with.
-Yeah.
+And then configure them. Set them up.
+Like you could've maybe, maybe they could've named it AddServices or DoTheStuffWithTheServices.
 And then configure them.
-Set them up.
-Like you could've maybe, maybe they could've named it AddServices
-or DoTheStuffWithTheServices.
-[LAUGH] Okay.
-[LAUGH] And then configure them.
 Yeah, okay.
-But the point is one is prep your environment, and
-then do specific things to set your environment up.
-Like, in this case, if we are doing development,
-not production,
+But the point is one is prep your environment, and then do specific things to set your environment up.
+Like, in this case, if we are doing development,not production
 then when you get an exception you'd like a nice friendly page.
 Okay, not a page of horror.
 Yes, not the scary page.
-This here is the app.Run,
-this is the default cuz you said we wanted to do empty.
+This here is the app.Run,this is the default cuz you said we wanted to do empty.
 And you asked where Hello World!, was.
-And there it is.
+And there it is
 There it is.
 So we've change that text, and dotnet run.
 It should still run.
-Now if I come back over here, and
-notice it still says Hello World!
-Yeah.
+Now if I come back over here, and notice it still says Hello World!
 That's because we haven't hit refresh.
-And there it is.
+And there it is
 Yeah, that's a good one.
 You like that?
-Yeah.
-Excellent.    I think the Beyhive would be happy.
+Excellent. I think the Beyhive would be happy.
 They would be.
 Alright, cool.
-This is cool.    Mm-hm.
+This is cool. Mm-hm.
 One of the things that, when you are working, so
-we've seen hello world or hello beehive in honor of Beyonce.
+we've seen hello world or hello Beyhive in honor of Beyonce.
 But as a person who's building their webpage for
 the very first time, you want to see a page.
 Like, you actually want to see something that's a little bit
-more than just-    A string.
+more than just- A string.
 Just a string.
 Right, and certainly, having a string,
 like doing all of your work inside of a Response.Write is
 gonna break down pretty quickly.
-Yeah.    Right.
+Yeah. Right.
 So in the next section, we're going to go an add some pages
 and build, take this, and we're gonna start from empty, though.
-Yeah.    We're not gonna cheat,
+Yeah. We're not gonna cheat,
 we're gonna build on top of empty.
 So we've seen a console app,
 we've seen an app that does a single string,
