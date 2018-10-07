@@ -1,4 +1,4 @@
-﻿1
+﻿﻿1
 00:00:00,000 --> 00:00:00,975
 翻译+校对 - 遗落星痕 Ice北极熊
 时间轴 - Ice 北极熊
@@ -374,7 +374,7 @@ So literary everything?
 它能包含所有的内容
 
 76
-00:04:33,950 --> 00:04:38,988
+00:04:33,950 --> 00:04:38,987
 Right. Now, it could in fact be listed one item at a time,
 没错，现在，它可以把一个个的项目分开
 
@@ -459,27 +459,27 @@ And when we say Using System, that was what allowed us to type Console.WriteLine
 在我们键入了 Using System 后，这将允许我们使用 Console.WriteLine 哦不 System.Console.WriteLine
 
 93
-00:05:34,700 --> 00:05:41,292
+00:05:34,700 --> 00:05:41,291
 But here this is a web application, and we have other stuff, we've brought in some threading and
 但这是一个 Web 应用，并且还加入了其他的东西，我们引入了一些有关线程以及
 
 94
-00:05:41,292 --> 00:05:44,844
+00:05:41,292 --> 00:05:44,843
 some IO stuff, but this is the ASP.NET Core stuff that's added.
 IO 相关的东西，这些就是 ASP.NET Core 所添加的东西
 
 95
-00:05:44,844 --> 00:05:48,252
+00:05:44,844 --> 00:05:48,251
 What's worth pointing out those
 值得指出的是
 
 96
-00:05:48,252 --> 00:05:52,572
+00:05:48,252 --> 00:05:52,571
 our Main here is different than our console Main.
 我们在这里的 Main 和我们控制台中的 Main 不同
 
 97
-00:05:52,572 --> 00:05:55,020
+00:05:52,572 --> 00:05:55,019
 Before we had a Console.WriteLine,
 之前我们有一个 Console.WriteLine
 
@@ -489,12 +489,12 @@ and that was it.
 就是这样
 
 99
-00:05:56,364 --> 00:06:00,204
+00:05:56,364 --> 00:06:00,203
 And actually, this is totally off-script
 其实，这些都是脚本生成的
 
 100
-00:06:00,204 --> 00:06:02,748
+00:06:00,204 --> 00:06:02,747
 which implies of course, that we actually have a script, right?
 这当然意味着我们确实有一个脚本，对吧
 
@@ -529,17 +529,17 @@ Remember I've typed, control~?
 记得我已经按下了键盘， Ctrl + ~
 
 107
-00:06:24,050 --> 00:06:26,621
+00:06:24,050 --> 00:06:26,620
 I think it's tilda.I think if you say, tildi
 我认为这是波浪号，如果你说， tildi
 
 108
-00:06:26,621 --> 00:06:28,475
+00:06:26,621 --> 00:06:28,474
 you might have an accent of some sort, yeah.
 你可能就会有某种口音
 
 109
-00:06:28,475 --> 00:06:30,956
+00:06:28,475 --> 00:06:30,955
 I think it would be an accent that is completely and
 我认为这将是一个彻彻底底的口音
 
@@ -549,12 +549,12 @@ totally incorrect.
 且完全不正确
 
 111
-00:06:32,518 --> 00:06:36,934
+00:06:32,518 --> 00:06:36,933
 so it actually switched it over to a Console Application.
 所以它实际上就像是一个控制台应用
 
 112
-00:06:36,934 --> 00:06:39,286
+00:06:36,934 --> 00:06:39,285
 Right. Well, it didn't really switch it over
 对的。 其实，它并没有真正地发生改变
 
@@ -564,12 +564,12 @@ because it always was a Console Application.
 因为它终究是一个控制台应用
 
 114
-00:06:41,302 --> 00:06:44,902
+00:06:41,302 --> 00:06:44,901
 The idea being that they are the same thing, right?
 可以把他们当作一样的东西，是吧
 
 115
-00:06:44,902 --> 00:06:49,750
+00:06:44,902 --> 00:06:49,749
 A .NET application has a main entry point, and
 .NET 应用程序有一个主入口点
 
@@ -579,17 +579,17 @@ then it does some stuff.
 然后它能完成一些工作
 
 117
-00:06:52,246 --> 00:06:55,462
+00:06:52,246 --> 00:06:55,461
 And I just wanted to kinda juxtapose that it can do some consoley stuff
 我只是想说明它可以作为控制台应用
 
 118
-00:06:55,462 --> 00:06:58,630
+00:06:55,462 --> 00:06:58,629
 or it can do some webby stuff.
 也可以作为 Web 应用
 
 119
-00:06:58,630 --> 00:06:59,878
+00:06:58,630 --> 00:06:59,877
 So let's do some webby stuff.
 来做一些有关 Web 的程序吧
 
@@ -604,7 +604,7 @@ Yeah, well, that's a good point.
 是的，这很好
 
 122
-00:07:03,382 --> 00:07:06,214
+00:07:03,382 --> 00:07:06,213
 So let's go back, dotnet run,
 所以让我们回到命令行， dotnet run
 
@@ -614,7 +614,7 @@ this time having changed it to say BuildWebHost.
 这次改变后使用了 BuildWebHost
 
 124
-00:07:12,262 --> 00:07:14,134
+00:07:12,262 --> 00:07:14,133
 And it's gonna run and build.
 它会编译再运行起来
 
@@ -629,7 +629,7 @@ It's running in production.
 程序正在生产环境中运行
 
 127
-00:07:21,718 --> 00:07:25,174
+00:07:21,718 --> 00:07:25,173
 It's listening on localhost:5000, so
 正在监听 localhost:5000
 
@@ -639,12 +639,12 @@ we have started a little web server.
 我们启动了一个小型的网络服务器
 
 129
-00:07:27,766 --> 00:07:28,102
+00:07:27,766 --> 00:07:28,101
 Okay
 嗯
 
 130
-00:07:28,102 --> 00:07:31,078
+00:07:28,102 --> 00:07:31,077
 Now it says, listening at localhost:5000.
 现在它显示，正在监听 localhost:5000
 
@@ -654,7 +654,7 @@ Let's open up browser, and let's localhost:5000 it.
 让我们打开浏览器，让我们转到 localhost:5000
 
 132
-00:07:37,558 --> 00:07:40,294
+00:07:37,558 --> 00:07:40,293
 Can't you also just click on the link within the terminal?
 你是不是可以点击终端内的链接
 
@@ -664,12 +664,12 @@ Yeah, that is a good point.
 对，说得好
 
 134
-00:07:47,590 --> 00:07:50,614
+00:07:47,590 --> 00:07:50,613
 I guess I could or not.
 欸?不能嘛
 
 135
-00:07:50,614 --> 00:07:52,582
+00:07:50,614 --> 00:07:52,581
 Or not, okay.
 不可以，好吧 （注：其实是可以的，按住 Ctrl 再点击）
 
@@ -684,22 +684,22 @@ It should.
 它应该可以的
 
 138
-00:07:56,806 --> 00:07:57,670
+00:07:56,806 --> 00:07:57,669
 It should work.
 它应该能这样使用
 
 139
-00:07:57,670 --> 00:07:58,774
+00:07:57,670 --> 00:07:58,773
 Except that's Hello World
 除了那个 Hello World
 
 140
-00:07:58,774 --> 00:08:00,070
+00:07:58,774 --> 00:08:00,069
 That's Hello World!, exactly.
 这就是 Hello World! ，确实是这样
 
 141
-00:08:00,070 --> 00:08:02,710
+00:08:00,070 --> 00:08:02,709
 So where is that, Hello World, coming from?
 那么， Hello World 是从哪里来的
 
@@ -709,47 +709,47 @@ Where is?
 等一下
 
 143
-00:08:04,294 --> 00:08:05,590
+00:08:04,294 --> 00:08:05,589
 Where is that text?
 这些文字从哪里来的
 
 144
-00:08:05,590 --> 00:08:06,694
+00:08:05,590 --> 00:08:06,693
 There's the text itself, so.
 对，这些文字在哪里
 
 145
-00:08:06,694 --> 00:08:09,862
+00:08:06,694 --> 00:08:09,861
 Yeah, let's find out, so let's follow it through.
 好的，让我们一起来看看吧
 
 146
-00:08:09,862 --> 00:08:12,886
+00:08:09,862 --> 00:08:12,885
 So BuildWebHost passes these arguments in and says .Run.
 BuildWebHost 将这些参数传入并执行了 .Run
 
 147
-00:08:12,886 --> 00:08:15,958
+00:08:12,886 --> 00:08:15,957
 What does BuildWebHost do?
 BuildWebHost 做了些什么
 
 148
-00:08:15,958 --> 00:08:17,926
+00:08:15,958 --> 00:08:17,925
 That's right here.
 看到这儿
 
 149
-00:08:17,926 --> 00:08:18,406
+00:08:17,926 --> 00:08:18,405
 Yep
 是的
 
 150
-00:08:18,406 --> 00:08:22,390
+00:08:18,406 --> 00:08:22,389
 Looks like it CreatesDefaultBuilder, and then it says, UseStartup.
 看起来像 CreatesDefaultBuilder ，然后它调用了 UseStartup
 
 151
-00:08:22,390 --> 00:08:23,974
+00:08:22,390 --> 00:08:23,973
 And then And
 然后呢
 
@@ -759,7 +759,7 @@ you can see here that the Startup text here is in blue,
 你可以在这里看到这里的 Startup 文本是蓝色的
 
 153
-00:08:27,286 --> 00:08:31,126
+00:08:27,286 --> 00:08:31,125
 that means it's not a, it's a keyword basically.
 这意味着它有些不同，它像是一个关键词
 
@@ -774,7 +774,7 @@ This class's name is not magic
 这个类的名称并没有什么特别的
 
 156
-00:08:42,166 --> 00:08:45,478
+00:08:42,166 --> 00:08:45,477
 if I changed it to Foo, It would not-
 如果我将它改为 Foo ， 它会不会
 
@@ -809,17 +809,17 @@ Pause, runs just fine.
 它停了一下，运行成功了
 
 163
-00:09:15,622 --> 00:09:20,038
+00:09:15,622 --> 00:09:20,037
 The point there being that the name Startup isn't magic.
 这里要说的一点是， Startup 这个名字并没有什么特别的
 
 164
-00:09:20,038 --> 00:09:21,375
+00:09:20,038 --> 00:09:21,374
 It isn't magic. Right.
 这并不是魔术
 
 165
-00:09:21,375 --> 00:09:22,630
+00:09:21,375 --> 00:09:22,629
 It does not have to be Startup.
 它不一定非要是 Startup
 
@@ -829,42 +829,42 @@ Nope, what it's saying is, again if we look at the docs,
 它的意思是，然我们再看看文档吧
 
 167
-00:09:25,078 --> 00:09:27,718
+00:09:25,078 --> 00:09:27,717
 and this is what's nice with Visual Studio code,
 这对于 Visual Studio Code 来说很方便
 
 168
-00:09:27,718 --> 00:09:32,422
+00:09:27,718 --> 00:09:32,421
 it says specify the startup type to be used by the web host.
 它表示指定要由 Web 主机使用的启动类型
 
 169
-00:09:32,422 --> 00:09:36,070
+00:09:32,422 --> 00:09:36,069
 So it's just saying go and use this class.
 所以它只是说去使用这个类
 
 170
-00:09:36,070 --> 00:09:39,766
+00:09:36,070 --> 00:09:39,765
 And this class here that we called Startup or Foo, or
 像这里我们称之为 Startup 或 Foo 的这个类，或者
 
 171
-00:09:39,766 --> 00:09:42,742
+00:09:39,766 --> 00:09:42,741
 whatever, has to be just be shaped a certain way
 任意名称，但都必须以正确的形式填入
 
 172
-00:09:42,742 --> 00:09:43,654
+00:09:42,742 --> 00:09:43,653
 it has to look a certain way.
 它必须是正确的形式
 
 173
-00:09:43,654 --> 00:09:45,094
+00:09:43,654 --> 00:09:45,093
 Okay, so you could call it Beyonce
 好的，你可以称它为 Beyonce
 
 174
-00:09:45,094 --> 00:09:46,054
+00:09:45,094 --> 00:09:46,053
 you could call it anything.
 你可以给它任意的名称
 
@@ -874,57 +874,57 @@ Yeah, it has to be a Beyonce.
 好，它必须是 Beyonce
 
 176
-00:09:53,000 --> 00:09:55,798
+00:09:53,000 --> 00:09:55,797
 I am afraid I should probably have
 也许我们有别的选择吧
 
 177
-00:09:55,798 --> 00:09:59,014
+00:09:55,798 --> 00:09:59,013
 but we'll just have Beyonce without an accent.
 但我们只是用了 Beyonce
 
 178
-00:09:59,014 --> 00:10:01,270
+00:09:59,014 --> 00:10:01,269
 And it should work just fine.
 它应该运行得很好
 
 179
-00:10:01,270 --> 00:10:03,142
+00:10:01,270 --> 00:10:03,141
 Beyonce should be a key word.
 Beyonce 应该是一个关键词
 
 180
-00:10:03,142 --> 00:10:04,390
+00:10:03,142 --> 00:10:04,389
 It should be.
 应该是
 
 181
-00:10:04,390 --> 00:10:05,494
+00:10:04,390 --> 00:10:05,493
 A reserved word.
 保留字
 
 182
-00:10:05,494 --> 00:10:07,942
+00:10:05,494 --> 00:10:07,941
 -It should be, it should be. -But its not, sadly.
 -它一定是的。-可惜的是，它并不是
 
 183
-00:10:07,942 --> 00:10:08,998
+00:10:07,942 --> 00:10:08,997
 So this is an important point though.
 这是非常重要的一点
 
 184
-00:10:08,998 --> 00:10:10,438
+00:10:08,998 --> 00:10:10,437
 It's saying use this startup type.
 这说使用这种启动类型
 
 185
-00:10:10,438 --> 00:10:14,710
+00:10:10,438 --> 00:10:14,709
 And that startup type has to have certain methods.
 并且该启动类型必须具有某些方法
 
 186
-00:10:14,710 --> 00:10:17,830
+00:10:14,710 --> 00:10:17,829
 So Beyonce, in this case, has to have a method
 所以 Beyonce ，在这种情况下，必须有一种方法
 
@@ -934,7 +934,7 @@ called ConfigureServices and one called Configure.
 称为 ConfigureServices ，另一个称为 Configure
 
 188
-00:10:20,806 --> 00:10:25,366
+00:10:20,806 --> 00:10:25,365
 And that's the requirements for Beyonce in this context for
 这就是 Beyonce 在这一上下文中的要求
 
@@ -949,72 +949,72 @@ So what's going on in these?
 那么这些是怎么回事
 
 191
-00:10:30,358 --> 00:10:34,390
+00:10:30,358 --> 00:10:34,389
 We've got- And you have the nice little instructions at the top, which I've always appreciated.
 在上方我们会有一些提示，这是很赞的功能
 
 192
-00:10:34,390 --> 00:10:38,326
+00:10:34,390 --> 00:10:38,325
 Yeah, I like it when templates include a little bit of instruction, a little bit of comments.
 是的，当模板包含一些提示或一些注释时会让开发人员很省劲
 
 193
-00:10:38,326 --> 00:10:42,262
+00:10:38,326 --> 00:10:42,261
 So this Method it's called by the runtime and
 所以这个方法是在运行时调用的
 
 194
-00:10:42,262 --> 00:10:48,262
+00:10:42,262 --> 00:10:48,261
 it adds services to a collection called the services collection.
 它将服务添加到名为 services 的集合中
 
 195
-00:10:48,262 --> 00:10:52,294
+00:10:48,262 --> 00:10:52,293
 And services are just stuff you might wanna use later in your app
 而服务是指你稍后想在程序中使用的任意内容
 
 196
-00:10:52,294 --> 00:10:54,934
+00:10:52,294 --> 00:10:54,933
 So it could be things like authentication,
 可以是认证之类的
 
 197
-00:10:54,934 --> 00:10:58,630
+00:10:54,934 --> 00:10:58,629
 so using a service like Facebook or Google, like which we'll
 在使用像 Facebook 或 Google 服务的时候，我们可能会用到
 
 198
-00:10:58,630 --> 00:11:02,134
+00:10:58,630 --> 00:11:02,133
 look at later dates, but- So if I just type services.,
 如果我只是输入 services.
 
 199
-00:11:02,134 --> 00:11:04,870
+00:11:02,134 --> 00:11:04,869
 you've got AddAuthentication, AddCaching,
 你就能看到 AddAuthentication ， AddCaching
 
 200
-00:11:04,870 --> 00:11:08,902
+00:11:04,870 --> 00:11:08,901
 AddIdentity, AddLogin, AddMemory, add whatever.
 AddIdentity ， AddLogin ， AddMemory 以及添加任何内容
 
 201
-00:11:08,902 --> 00:11:13,174
+00:11:08,902 --> 00:11:13,173
 And even things that don't appear like you pointed out.Like maybe Facebook authentication
 甚至一些说不上来的东西，就像 Facebook 认证一样
 
 202
-00:11:13,174 --> 00:11:17,734
+00:11:13,174 --> 00:11:17,733
 different kinds of those are all other third party things that could be added on as well.
 和这些不同的其他第三方的服务都可以添加上来
 
 203
-00:11:17,734 --> 00:11:24,454
+00:11:17,734 --> 00:11:24,453
 So those services get configured here,get added to this collection.
 所以这些服务在这里配置并被添加到这个集合中
 
 204
-00:11:24,454 --> 00:11:25,702
+00:11:24,454 --> 00:11:25,701
 Yeah. And it's a little confusing
 是的，这有点令人疑惑
 
@@ -1024,17 +1024,17 @@ Yeah. And it's a little confusing
 -因为你即有 ConfigureServices -还有 Configure
 
 206
-00:11:29,350 --> 00:11:32,374
+00:11:29,350 --> 00:11:32,373
 Like that is something that confused me when I first started.
 就像我初学时一样，这让我非常困惑
 
 207
-00:11:32,374 --> 00:11:33,430
+00:11:32,374 --> 00:11:33,429
 Yeah, it is confusing.
 是的，这是会让人感到困惑
 
 208
-00:11:33,430 --> 00:11:35,830
+00:11:33,430 --> 00:11:35,829
 This is the get everything ready
 这是为了做好一切准备
 
@@ -1044,7 +1044,7 @@ load up the collection of stuff I want to play with.
 加载我想要使用的程序的集合
 
 210
-00:11:39,382 --> 00:11:43,894
+00:11:39,382 --> 00:11:43,893
 And then configure them. Set them up.
 然后配置它们，设置好
 
@@ -1054,27 +1054,27 @@ Like you could've maybe, maybe they could've named it AddServices or DoTheStuffW
 你可以像这样命名它： AddServices 或者 DoTheStuffWithTheServices
 
 212
-00:11:52,486 --> 00:11:54,022
+00:11:52,486 --> 00:11:54,021
 And then configure them.
 然后配置它们
 
 213
-00:11:54,022 --> 00:11:54,646
+00:11:54,022 --> 00:11:54,645
 Yeah, okay.
 嗯呢
 
 214
-00:11:54,646 --> 00:12:01,846
+00:11:54,646 --> 00:12:01,845
 But the point is one is prep your environment, and then do specific things to set your environment up.
 但重点在于准备好你的环境，并且然后做特定的事情来设置你的环境
 
 215
-00:12:01,846 --> 00:12:06,358
+00:12:01,846 --> 00:12:06,357
 Like, in this case, if we are doing development,not production
 就像在这种情况下，如果我们正在进行开发而不是生产
 
 216
-00:12:06,358 --> 00:12:09,430
+00:12:06,358 --> 00:12:09,429
 then when you get an exception you'd like a nice friendly page.
 那么当你得到一个异常时，你会喜欢上这个友好的页面
 
@@ -1084,7 +1084,7 @@ Okay, not a page of horror.
 嗯嗯，而不是满页的恐惧
 
 218
-00:12:11,638 --> 00:12:13,654
+00:12:11,638 --> 00:12:13,653
 Yes, not the scary page.
 是的，不是可怕的页面
 
@@ -1094,12 +1094,12 @@ This here is the app.Run,this is the default cuz you said we wanted to do empty.
 这里是 app.Run 这里是默认的，因为你说了我们想要一个空的模板
 
 220
-00:12:20,350 --> 00:12:21,870
+00:12:20,350 --> 00:12:21,869
 And you asked where Hello World!, was.
 你问了 Hello World! 是来自哪里的
 
 221
-00:12:21,870 --> 00:12:22,918
+00:12:21,870 --> 00:12:22,917
 And there it is
 它就在那里
 
@@ -1129,12 +1129,12 @@ That's because we haven't hit refresh.
 这是因为我们没有刷新
 
 227
-00:12:39,100 --> 00:12:40,088
+00:12:39,100 --> 00:12:40,087
 And there it is
 看，出现了
 
 228
-00:12:40,088 --> 00:12:41,398
+00:12:40,088 --> 00:12:41,397
 Yeah, that's a good one.
 是的，这很棒
 
@@ -1144,107 +1144,107 @@ You like that?
 你喜欢这个吗
 
 230
-00:12:42,598 --> 00:12:44,470
+00:12:42,598 --> 00:12:44,469
 Excellent. I think the Beyhive would be happy.
 太棒了，我认为 Beyhive 将会很开心
 
 231
-00:12:44,470 --> 00:12:45,094
+00:12:44,470 --> 00:12:45,093
 They would be.
 肯定会呀
 
 232
-00:12:45,094 --> 00:12:46,870
+00:12:45,094 --> 00:12:46,869
 Alright, cool.
 总之，很酷
 
 233
-00:12:46,870 --> 00:12:48,358
+00:12:46,870 --> 00:12:48,357
 This is cool. Mm-hm.
 确实很酷
 
 234
-00:12:48,358 --> 00:12:51,550
+00:12:48,358 --> 00:12:51,549
 One of the things that, when you are working, so
 事情正是如此，当你完成到这里
 
 235
-00:12:51,550 --> 00:12:56,925
+00:12:51,550 --> 00:12:56,924
 we've seen hello world or hello Beyhive in honor of Beyonce.
 我们已经看见了 Hello world 或者是 Hello Beyhive 以纪念 Beyonce
 
 236
-00:12:56,925 --> 00:13:00,200
+00:12:56,925 --> 00:13:00,199
 But as a person who's building their webpage for
 但对第一次建立网页的人来说
 
 237
-00:13:00,200 --> 00:13:04,012
+00:13:00,200 --> 00:13:04,011
 the very first time, you want to see a page.
 你想看到一个页面
 
 238
-00:13:04,012 --> 00:13:05,596
+00:13:04,012 --> 00:13:05,595
 Like, you actually want to see something that's a little bit
 就像，你实际上想看到一些别的
 
 239
-00:13:05,596 --> 00:13:09,628
+00:13:05,596 --> 00:13:09,627
 more than just- A string.
 而不仅仅是字符串
 
 240
-00:13:09,628 --> 00:13:10,492
+00:13:09,628 --> 00:13:10,491
 Just a string.
 仅仅是字符串
 
 241
-00:13:10,492 --> 00:13:12,316
+00:13:10,492 --> 00:13:12,315
 Right, and certainly, having a string,
 对，当然，若想看到字符串
 
 242
-00:13:12,316 --> 00:13:15,244
+00:13:12,316 --> 00:13:15,243
 like doing all of your work inside of a Response.Write is
 若你想在 Response.Write 中完成你所有的工作
 
 243
-00:13:15,244 --> 00:13:17,212
+00:13:15,244 --> 00:13:17,211
 gonna break down pretty quickly.
 你很快就会崩溃的
 
 244
-00:13:17,212 --> 00:13:17,740
+00:13:17,212 --> 00:13:17,739
 Yeah. Right.
 是这样的
 
 245
-00:13:17,740 --> 00:13:20,716
+00:13:17,740 --> 00:13:20,715
 So in the next section, we're going to go an add some pages
 所以在下一节中，我们将添加一些页面
 
 246
-00:13:20,716 --> 00:13:23,644
+00:13:20,716 --> 00:13:23,643
 and build, take this, and we're gonna start from empty, though.
 以及如何构建和运行，我们将从零开始
 
 247
-00:13:23,644 --> 00:13:24,892
+00:13:23,644 --> 00:13:24,891
 Yeah. We're not gonna cheat,
 是的，我们不会作弊
 
 248
-00:13:24,892 --> 00:13:25,948
+00:13:24,892 --> 00:13:25,947
 we're gonna build on top of empty.
 我们要建立在零基础之上
 
 249
-00:13:25,948 --> 00:13:27,340
+00:13:25,948 --> 00:13:27,339
 So we've seen a console app,
 所以我们写了一个控制台应用
 
 250
-00:13:27,340 --> 00:13:29,020
+00:13:27,340 --> 00:13:29,019
 we've seen an app that does a single string,
 我们已经写了一个应用可以返回单个字符串
 
