@@ -2,7 +2,7 @@
 And I'm Maria Naggaga.
 And this is Microsoft Virtual Academy.
 We're gonna be talking about ASP.NET Core 2.
->> Yes, we are.
+Yes, we are.
 Right, we've got three days of great content for you
 This is the beginner day, we're gonna have beginner
 getting started, a little bit about .NET and C#, and
@@ -12,12 +12,12 @@ And by the end of these three days, you should be ready to go
 and make a web application for yourself.
 Exactly, and a good place to get started here is for
 people to figure out where to get the tools they need
-to get started   Yeah, so if you go to
+to get started Yeah, so if you go to
 dot.net, we made a little fun domain for you here d-o-t.net.
 Or if you go out there and
 search with your favorite search engine for learn C# or
 download .NET you will probably end up showing up here.
-The page might look something like this,
+The page might look something like this
 might be a little different by the time time has passed.
 But you'll click on Download and
 you're gonna see three different .NETs to choose from.
@@ -25,7 +25,7 @@ There is the .NET Framework, that comes with Windows.
 There is Xamarin, which let's you make IOS, and Android, and
 Windows applications.
 We're gonna be focusing on .NET Core, aren't we?
->> Yes, we are.
+Yes, we are.
 So if you click on that it should show you a couple
 of options on how to get started.
 And then a lot of things that come up, especially for
@@ -33,7 +33,6 @@ new people to our platform, is do they download the SDK or
 the Runtime?
 Right, so the SDK, that's the tools, the compiler, the stuff I
 need as a developer because it's the software development kit
-Yeah.
 So you probably will never want the runtime unless you're
 gonna put that into production.
 And then if you really want more information, you can follow step
@@ -46,9 +45,9 @@ two or three minutes, not as fun as this video, but still.
 By you download the .NET SDK,
 it will pick the right version for you.
 And then by the end of this little three or
-four step process, you will have written your first .NET app,
+four step process, you will have written your first .NET app
 which I think we will do in a little bit.
-All right, so you can also of course,
+All right, so you can also of course
 get your different versions of Linux, you can do it on a Mac,
 and you can also use Docker, so there's a lot of options.
 .NET Core runs everywhere.
@@ -74,9 +73,9 @@ And if you scroll just a little bit down on to the next level,
 you'll see the different options.
 You have Visual Studio for Mac now as well, and
 you can build your ASP.NET Core application there.
-So anything that we're doing today,
-people can do this on their Mac.
-Good point, so even though I'm on a Surface book,
+So anything that we're doing today
+people can do this on their Mac
+Good point, so even though I'm on a Surface book
 I'm running Windows, literally every single thing that we're
 gonna show you today, you should be able to follow along on your Mac
 on your Ubuntu machine, on your Windows machine.

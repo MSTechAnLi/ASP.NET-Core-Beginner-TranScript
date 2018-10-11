@@ -1,67 +1,55 @@
 ﻿So let's build our first app Scott do you trust me?
 I do trust you.
-Okay
-All right so I've installed the .Net Core SDK, I just downloaded this and
-I went through the installer.
+All right so I've installed the .Net Core SDK, I just downloaded this and I went through the installer.
 So you've done this so
 it's one of these things, we did it in the past.
 But how do I know it worked?
-Okay so go over on to your command line,
-Okay.
-And type dotnet-version.
+Okay, so go over on to your command line.
+And type dotnet --version.
 You already did it.
 Well I just typed dotnet by itself.
 So it actually shows that it exists.
 Otherwise you would have got some error.
 That's a good point.
-And actually I can type where dotnet, and it'll tell me not
-only that it exists,Where it is.
+And actually I can type where dotnet,
+and it'll tell me not only that it exists, where it is.
 But where it is on the disc.
 You see it's in program files.
-Okay.
-Okay? So
-let's make sure that you're using the right version
-So we're on 2.0
-So dotnet-version.
-Okay.
-Okay. And I got 202
-You'll get 2.0.something
-Yeah
+So let's make sure that you're using the right version.
+So we're on 2.0.
+So dotnet --version.
+Okay. And I got 2.0.2.
+You'll get 2.0.something.
 And this is a patch version.
-It's like a.
-Like some minor changes have happened.
+It's like a like some minor changes have happened
 Mm-hm. But 2.0 is what matters
-Okay
-Okay, so I've done that, what else can I do?
-So let's, some people are comfortable
-let's do a dotnet help because it's always good for
-people to know that there's a place where they can go and
-see what's happening
-So if you type dotnet help, let's just see what happens
-Right, so I can type dotnet-- help, and
+so I've done that, what else can I do?
+So let's, some people are comfortable, let's do a dotnet --help
+because it's always good for people to know that
+there's a place where they can go and see what's happening
+So if you type dotnet --help, let's just see what happens
+Right, so I can type dotnet --help, and
 any of these commands have help
 There's help through the whole time
 Everything
-So it tells you, if you want to do something new
-restore packages, run them.
+So it tells you, if you want to do something new, restore packages, run them.
 This is a good rundown of everything you need to know
-that you can use with a .NET command
+that you can use with a dotnet command
 Now a lot of this might not be familiar
 Some of it might be confusing.
-But we're gonna focus kind of on basics and
-I think that making stuff and running stuff and
+But we're gonna focus kind of on basics
+and I think that making stuff and running stuff and
 building stuff is probably where we'll start for this.
 That's where we would be right now.
 For this module.
-For this module.
 That's where we'll be right now.
 Okay. One of the cool things
-especially with dot.net 2.0 is the number of the templates that
+especially with dotnet 2.0 is the number of the templates that
 have come out of the box in the command line.
 Okay, what is a template?
 So a template is, I think of it as a starting ground.
-Something that gives you a form or
-structure that helps you write your code eventually.
+Something that gives you a form or structure
+that helps you write your code eventually.
 So for those of you who are out there and
 you've used PowerPoint and PowerPoint
 has different templates that gives you styles and guidelines.
@@ -73,14 +61,14 @@ So should we go and see what kind of apps they give us?
 All right, let's do it
 So let's have a look at dotnet new
 That's what I always type
-d、otnet new, all right, I get a nice table
+dotnet new, all right, I get a nice table
 And actually some stuff scroll by
 So these are options for dotnet new and it's worth pointing out
 that we've got help again which is actually help for new and
 this is little interesting thing to point out very briefly,
 when I type dotnet --help, I get top level help.
 When I type dotnet new --help I get help for new.
-That is actually the first time
+That is actually not the first time
 I've done this all the time but I've never noticed that.
 Isn't that great?
 Well, what's also interest is if I type dotnet new something
@@ -88,28 +76,26 @@ I can get the help for that template.
 Could you run that, and we could see?
 So this is the console application template
 And here's help options specifically for the console
-And why this is useful is, let's say that I go and
-get a third party template
-I get a template from somewhere else, That template might have
-a lot complicated options and switches of its own
+And why this is useful is
+let's say that I go and get a third party template
+I get a template from somewhere else.
+That template might have a lot complicated options and switches of its own
 So dotnet --help is top level.
 dotnet new --help is help for new.
-And then if I put --help for a specific template name,
+And then if I put --help for a specific template name
 I'm gonna get a help for that.
 It's pretty cool.
 That is pretty cool.
-All right.
 I have literary found that out during this recording.
-I'm gonna learn from you and you're gonna learn from me. See and
-We're gonna have a great time.
+I'm gonna learn from you and you're gonna learn from me.
+See and We're gonna have a great time.
 So I just went back to what you told me dotnet new.
 I see a list of templates, I see a list of short names.
-Names, and you also see a different,
-languages as well that are supported
+Names, and you also see a different languages as well that are supported
 Mm-hm, and in this case, C# is in brackets
 that's indicating that it is the default
-But we can also do F#, which is a great functional language, or
-VB, which is a good language for beginners to try out, okay?
+But we can also do F#, which is a great functional language
+or VB, which is a good language for beginners to try out, okay?
 All right so, lets make one, you wanna make a folder then?
 Yeah, yes, so lets make a folder
 Myconsoleapp
@@ -117,7 +103,7 @@ All right.
 So I have an empty folder here
 Exactly
 And cuz we're gonna build a contact, dotnet new console
-dotnet new console.
+dotnet new console
 And a console app is one that just kinda in text mode here
 Exactly
 So let's have a look at what happen when you type
@@ -125,34 +111,29 @@ dotnet new console over there.
 So it says the template was created.
 Successfully.
 And then it ran dotnet restore for me
-So in the past
-after I typed dotnet new I used to have to say restore.
+So in the past, after I typed dotnet new I used to have to say restore.
 What is it restoring?
-So, it's
-restoring some of the packages which we'll have a look at.
+So, it's restoring some of the packages which we'll have a look at.
 What comes in there.
-And the packages are those libraries,
-those dependencies, the things that it needs.
+And the packages are those libraries, those dependencies, the things that it needs.
 To actually be a console app.
-And then it generated a file, and
-told me that it took a certain numbers of millisecond.
+And then it generated a file, and told me that it took a certain numbers of millisecond.
 So we got a Program.cs, and we got a csproj, or C# project.
 And the C# project is that's where all our packages are?
 That's where our references to those packages are
 so let's go and just look at that.
 I'm just gonna say Type.
-Okay. And
-output that cuz this is a very small file.
+Okay.
+And output that cuz this is a very small file.
 It's really small.
-It says that it's using the .NET.Sdk,
+It says that it's using the .NET SDK,
 the software development kit
-It's an executable and it's a .NET2 app and
-it doesn't have any dependencies beyond the basics.
-It does have some dependencies.
-For outputting to the console, and things like that, but for
-the most part, it includes the .Sdk
+It's an executable and it's a .NET Core 2.0 app
+and it doesn't have any dependencies beyond the basics.
+It does have some dependencies for outputting to the console, and things like that.
+But for the most part, it includes the SDK
 and we have no additional references
-Okay. Okay
+Okay. Okay.
 So, how do I do something with this
 like what does it actually do let's see it with the code?
 Here's the code, Hello World.
@@ -164,31 +145,30 @@ One one thousand, two one thousand, three.
 Do you know what I was doing?
 Why did it take 3 seconds to say 'hello world'?
 This is the first time you're running the application.
-It's got to build it Yes
+It's got to build it. Yes
 I've been doing this at the command line
 We don't want to spend a lot of time with the command line
 No.
 So shall we look at it at code?
 So we'll use Visual Studio Code.
-It's worth pointing out if I zoom in down here,
+It's worth pointing out if I zoom in down here
 that I've got both Visual Studio 2017 which is a Windows IDE
 And I've got Visual Studio Code which is across platform IDE
 If you're on a Mac it's a text editor, it's a code editor
 Yeah. It's a little bit less stuff
 but it's very light weight and
 it's crossed platforms so we use that.
-Now I'm gonna type code., and dot is the current folder.
+Now I'm gonna type code ., and dot is the current folder.
 And, it's actually built in now, right, correct?
 Yeah, I'll show you actually.
 We'll go ahead and run that
 And then there's a command inside of Visual Studio Code
 that adds it to the path.
-So it's something that you wanna do after you've run code
-the first time.
+So it's something that you wanna do after you've run code the first time.
 So we'll go ahead and run that.
-Okay, Visual Studio code opens that up, and then this is
-interesting Visual Studio code pops up a warning here, hey,
-stuff I need to build this is missing,
+Okay, Visual Studio Code opens that up, and then this is
+interesting Visual Studio code pops up a warning here
+hey, stuff I need to build this is missing,
 do you want me to add them?
 And then it's got a yes and no over here.
 So watch on the left side here where it says bin and obj.
@@ -200,9 +180,8 @@ It's not about C#, just about .vscode.
 In order to be able to launch this app,
 these are just configuration files
 So you don't need to worry about those
-But that is something that you want to say yes to
-So if someone's doing this for
-the first time, say yes, but don't touch?
+But that is something that you want to say yes
+So if someone's doing this for the first time, say yes, but don't touch?
 Don't touch, don't worry about it.
 Nothing you need to do in there.
 And then you had mentioned about the path.
@@ -210,7 +189,7 @@ If you hit Ctrl+P.
 I think it's Cmd+P or fancy macintosh button p
 It is Cmd+P
 Cmd+P, is that what it's called?
-Cmd+P, is that what it's called?Yeah.
+Cmd+P, is that what it's called? Yeah.
 There's a bunch of actions, so that brings up this palette.
 I just think P for pallet, and
 then if you say what is this here?
@@ -220,8 +199,7 @@ is it add path?
 Where is it?
 There's a bunch of commands in here and
 one of them adds code to the path
-Maybe it's happening automatically now, but
-I did that once
+Maybe it's happening automatically now, but I did that once
 You can see also here that there's other options like your
 color theme and the default shell and things like that
 Yeah, and the VS code website has really good documentation
@@ -253,7 +231,7 @@ one of the options was Terminal: Select Default Shell.
 Yeah
 I can hit Ctrl and I think it's called the tilde
 Yeah, you mean the squiggly thing?
-The squiggly thing Yeah, it's a tilde
+The squiggly thing. Yeah, it's a tilde
 I always called it
 the squiggly thing until I saw it in a documentation
 I think our Spanish friends would not call it that
@@ -264,8 +242,7 @@ Yeah. So, you hit Ctrl+~ and
 you can, of course Select your shell.
 Select that your own way, you can pick your own shell.
 I am using PowerShell in this case.
-Now I'm actually in a little command line prompt within
-Visual Studio Code itself
+Now I'm actually in a little command line prompt within Visual Studio Code itself.
 So now, rather than having to go and say, Alt+Tab, and
 then do that, I can do it all from here, okay?
 So there's my Hello Scott right there, okay?
@@ -274,7 +251,7 @@ but still I'd like to do some interactive debugging
 I'd like to do something a little bit more sophisticated
 than that, wouldn't I?
 Yeah.
-So I'm just gonna move the mouse over in the left hand,
+So I'm just gonna move the mouse over in the left hand
 you see this red dot.
 Yeah, that's a breakpoint.
 Yeah, and I click on it and make a break point right here.
@@ -287,7 +264,7 @@ this .NET Core launch,
 the way that it knows to do that is because I said yes earlier.
 To the launch.
 If I didn't say yes, I would not be able to do the debugging.
-Okay, and Visual Studio Code can do other languages as well,
+Okay, and Visual Studio Code can do other languages as well
 like Node and Python and things like that.
 So that file will be different depending on what
 language you're using.
@@ -301,12 +278,12 @@ I can hover over different variables.
 I can see if there's any local variables.
 Actually, we can do this real quick.
 Let's hit Stop.
-We'll say var i = "Maria", var j = 9
+We'll say var i = "Maria"; var j = 9;
 Hit Debug again.
 See?
-Yeah. And
-then we've got debugging, can look at our call stack and
-it's a whole interactive experience.
+Yeah.
+And then we've got debugging, can look at our call stack
+and it's a whole interactive experience.
 It's pretty rich.
 It is pretty rich, okay,
 given that it is a cross platform code editor,
@@ -329,11 +306,10 @@ And in this case, it will fix it by removing you entirely.
 Sorry.
 That sounded rather intentional.
 That was not intentional.
-All right, so
-Visual Studio Code will be what we'll use for a little while and
+All right
+so Visual Studio Code will be what we'll use for a little while and
 then we'll eventually graduate to Visual Studio proper.
-Yeah. Which has even more
-features, all right?
+Yeah. Which has even more features, all right?
 So that gives you a sense of, and actually, I'm sorry.
 We never talked about IntelliSense.
 Yes so, let's add a read line, cuz one of the first
@@ -344,99 +320,95 @@ you'll notice that it's Some, yeah, Console.
 It's giving me IntelliSense
 Not only that, it's also for beginners.
 It's great to see, it also shows you what that means.
-Yeah, you're getting like a little bit of
-documentation there, that's right.
-它会打出 Console ,看到这个
-它会打出 Console ,看到这个
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Yeah, you're getting like a little bit of documentation there, that's right.
+It will say Console., see this is nice.
+And you said ReadLine, and this is coming out of the docs here
+and it will tell you the things that could go wrong.
+ReadLine, reads the next characters from the input stream.
+Yeah, and notice the squiggly, expected a semicolon, go like that, cool
+and then I'll do this from the command line over here.
+I'll say dotnet run
+One second, two seconds, three, and
+now it's paused right cuz it's waiting for me to read the line.
+And it did
+Okay, so you've got IntelliSense,
+you've got debugging.
+All of that, of course, being driven by this here.
+And just very briefly,
+cuz it's nice to see some of the internals.
+When we clicked here, remember that this text here,
+.NET Core Launch, comes out of this config file right here.
+Right, the reason I'm showing you that is it's important to
+know that there's no magic
+We are not hiding anything from you, all right?
+You might not necessarily ever wanna change that,
+but it's nice to know that the thing that drives
+the drives the debugger underneath is just a text file.
+And here it's going to go and run our program.
+When we say dotnet run, our program is really here,
+myconsoleapp.dll
+And it's gonna go and call that.
+And then if we wanna go and
+attach to the debugger, there's also the ability to run the app.
+And then after the fact, attach to it and
+then debug it once it's already running.
+All of that is possible with Visual Studio Code.
+I think it's also worth showing the audience where
+to go and read more about what's happening with Visual Studio Code.
+So Visual Studio Code is up at code.visualstudio.com.
+And this is a really rich marketplace as well for
+extensions.
+There's lots of stuff.
+So you can Visual Studio for C# like we are,
+or Python or C++ or Go or a million different things,
+and their docs are really lovely.
+There's lots of different things you can learn about.
+You can change styles, you can change behavior.
+You can integrate it with your source control like Git or VSTS.
+You can create your own extensions as well?
+Yep, there's a whole section here,
+exactly, on extension authoring.
+I think my favorite extension would have to be
+the Slides Extension.
+Have you seen that one?
+Slides? I like the one with
+the funky icons.
+This one here gives you fun
+icons for all of your I think they've moved some of
+those experiences into actual Visual Studio now.
+Some of these
+extensions end up becoming a part of Visual Studio itself.
+So what's the one you like, slides?
+Yeah, so, you can actually write your PowerPoint slides.
+Where'd it go?
+I don't know.
+Uh-oh.
+The one I like is Git Lens, G-I-T-L-E-N-S.
+So that's weird.
+Maybe their search isn't working today.
+It's actually Git Lens, with a space in between.
+So Git Lens is a great one that lets you have
+annotations of who changed your code and when.
+Okay. So
+similar to how you can do it in Visual Studio where you can
+actually look at everyone.
+Yeah, like blame, if you wanna see whose fault it was.
+So here you can see that it was Eric's fault two days ago, and
+he made a change from this to this.
+Yeah, I've seen your name on a couple of those, too.
+I'm kidding.
+I have not.
+The one I was talking about was reveal.
+Reveal?
+So if anyone sort of revealed JS, it enables you to actually
+have a slide experience in the browser, so.
+Yeah, so you've got the ability to edit, markdown,
+do all kinds of things.
+Exactly
+So really can't recommend VS Code enough.
+But if you're just getting started like we are today,
+Visual Studio Code is gonna be your best bet for
+your editing and your debugging experience.
+And it is.
+All right. All right.
+We'll take a short break and we'll be right back.
